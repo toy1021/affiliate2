@@ -187,4 +187,4 @@ python run_all.py
 
 ---
 
-**🎉 準備完了！** コミット・プッシュ後、GitHub Actionsが自動実行されます。
+**🎉 準備完了！** コミット・プッシュ後、GitHub Actionsが自動実行されます。# Manual trigger for GitHub Actions

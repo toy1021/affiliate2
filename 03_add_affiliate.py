@@ -36,43 +36,111 @@ def generate_rakuten_link(keyword, config):
         "display_text": f"{keyword}を検索 - 楽天市場"
     }
 
+def get_smart_product_recommendations(keywords, category):
+    """キーワードとカテゴリに基づく高精度商品推薦"""
+    
+    # キーワード → 商品マッピング（より詳細）
+    keyword_product_map = {
+        # AI・プログラミング関連
+        "AI": ["AI プログラミング 本", "Python 機械学習 本", "ChatGPT 活用法"],
+        "ChatGPT": ["ChatGPT 本", "AI 活用 ガイドブック", "プロンプト エンジニアリング"],
+        "Python": ["Python 入門書", "データ分析 本", "プログラミング 学習本"],
+        "JavaScript": ["JavaScript 本", "Web開発 教本", "React 入門書"],
+        "React": ["React 開発本", "フロントエンド 開発書", "JavaScript フレームワーク"],
+        
+        # Apple製品
+        "iPhone": ["iPhone ケース", "iPhone 充電器", "iPhone アクセサリー", "ワイヤレス充電器"],
+        "iPad": ["iPad ケース", "Apple Pencil", "iPad キーボード", "タブレット スタンド"],
+        "MacBook": ["MacBook ケース", "USB-C ハブ", "外付けSSD", "ワイヤレスマウス"],
+        "AirPods": ["AirPods ケース", "ワイヤレスイヤホン", "イヤホン 収納"],
+        
+        # Android・Google
+        "Android": ["Android ケース", "Android 充電器", "スマホ アクセサリー"],
+        "Pixel": ["Pixel ケース", "Google Pixel アクセサリー", "Android 本"],
+        
+        # ガジェット
+        "ヘッドホン": ["ノイズキャンセリング ヘッドホン", "ワイヤレス ヘッドホン", "ゲーミング ヘッドセット"],
+        "カメラ": ["ミラーレス カメラ", "カメラ レンズ", "三脚", "カメラ ストラップ"],
+        "スマートウォッチ": ["Apple Watch バンド", "スマートウォッチ 充電器", "フィットネス トラッカー"],
+        
+        # ビジネス・投資
+        "投資": ["投資 入門書", "株式投資 本", "資産運用 ガイド"],
+        "スタートアップ": ["起業 本", "ビジネス書", "経営戦略 本"],
+        "Bitcoin": ["仮想通貨 本", "ブロックチェーン 解説書", "投資 ガイド"],
+        
+        # 自動車
+        "Tesla": ["電気自動車 本", "Tesla グッズ", "EV 充電器"],
+        "電気自動車": ["EV 充電ケーブル", "電気自動車 本", "カー アクセサリー"],
+        
+        # ゲーム
+        "PlayStation": ["PS5 アクセサリー", "ゲーミング ヘッドセット", "コントローラー"],
+        "Nintendo Switch": ["Switch ケース", "Pro コントローラー", "ゲームソフト"],
+        "Steam": ["ゲーミング キーボード", "ゲーミング マウス", "PC ゲーム"]
+    }
+    
+    recommended_products = []
+    
+    # キーワードベースの推薦
+    for keyword in keywords[:5]:
+        if keyword in keyword_product_map:
+            products = keyword_product_map[keyword][:2]  # 各キーワードから最大2商品
+            recommended_products.extend(products)
+    
+    # カテゴリベースの追加推薦
+    category_defaults = {
+        "tech": ["プログラミング 本", "開発者 ツール"],
+        "AI・機械学習": ["AI 入門書", "機械学習 実践書"],
+        "Apple製品": ["Apple アクセサリー", "iPhone グッズ"],
+        "ガジェット": ["最新 ガジェット", "スマホ アクセサリー"],
+        "ビジネス": ["ビジネス書 ランキング", "自己啓発 本"],
+        "ゲーム": ["ゲーミング デバイス", "ゲーム グッズ"],
+        "general": ["人気商品 ランキング", "おすすめ グッズ"]
+    }
+    
+    if category in category_defaults:
+        recommended_products.extend(category_defaults[category])
+    
+    # 重複除去と優先度調整
+    unique_products = list(dict.fromkeys(recommended_products))
+    
+    return unique_products[:4]  # 最大4つの商品推薦
+
 def match_keywords_to_affiliates(keywords, category):
-    """キーワードとカテゴリに基づいてアフィリエイトリンクを生成"""
+    """高精度アフィリエイトリンク生成"""
     affiliate_links = []
     
-    # カテゴリ別のアフィリエイト戦略
+    # 商品推薦を取得
+    recommended_products = get_smart_product_recommendations(keywords, category)
+    
+    # カテゴリ別プラットフォーム戦略
     category_strategies = {
         "tech": ["amazon", "rakuten"],
-        "gadget": ["amazon", "rakuten"],  
-        "book": ["amazon"],
-        "business": ["amazon"],
+        "AI・機械学習": ["amazon"],
+        "Apple製品": ["amazon", "rakuten"],
+        "ガジェット": ["amazon", "rakuten"],  
+        "ビジネス": ["amazon"],
+        "ゲーム": ["amazon", "rakuten"],
+        "書籍・教育": ["amazon"],
         "general": ["amazon"]
     }
     
     platforms = category_strategies.get(category, ["amazon"])
     
-    for keyword in keywords[:3]:  # 上位3つのキーワード
-        for platform in platforms:
-            if platform == "amazon" and any(k in keyword.lower() for k in AFFILIATE_CONFIGS["amazon"]["keywords"]):
-                link = generate_amazon_link(keyword, AFFILIATE_CONFIGS["amazon"])
+    # 推薦商品からアフィリエイトリンク生成
+    for product in recommended_products:
+        for platform in platforms[:2]:  # 最大2プラットフォーム
+            if platform == "amazon":
+                link = generate_amazon_link(product, AFFILIATE_CONFIGS["amazon"])
+                link["display_text"] = f"🛒 {product}"
                 affiliate_links.append(link)
-                
-            elif platform == "rakuten" and any(k in keyword for k in AFFILIATE_CONFIGS["rakuten"]["keywords"]):
-                link = generate_rakuten_link(keyword, AFFILIATE_CONFIGS["rakuten"])
+                break  # 同じ商品で複数プラットフォームは避ける
+            elif platform == "rakuten":
+                link = generate_rakuten_link(product, AFFILIATE_CONFIGS["rakuten"])
+                link["display_text"] = f"🛒 {product}"
                 affiliate_links.append(link)
+                break
     
-    # キーワードがマッチしない場合は、カテゴリに基づいて汎用的なリンクを生成
-    if not affiliate_links:
-        if category == "tech":
-            affiliate_links.append(generate_amazon_link("プログラミング本", AFFILIATE_CONFIGS["amazon"]))
-        elif category == "gadget":
-            affiliate_links.append(generate_amazon_link("スマホアクセサリー", AFFILIATE_CONFIGS["amazon"]))
-        elif category == "book":
-            affiliate_links.append(generate_amazon_link("ビジネス書", AFFILIATE_CONFIGS["amazon"]))
-        else:
-            affiliate_links.append(generate_amazon_link("おすすめ商品", AFFILIATE_CONFIGS["amazon"]))
-    
-    return affiliate_links[:2]  # 最大2つのアフィリエイトリンク
+    return affiliate_links[:3]  # 最大3つのアフィリエイトリンク
 
 def generate_category_recommendations(category):
     """カテゴリに基づいた関連商品推薦を生成"""

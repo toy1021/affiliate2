@@ -28,24 +28,80 @@ def load_template():
     template = env.get_template(template_file)
     return template
 
+def calculate_article_importance(article):
+    """記事の重要度を計算"""
+    importance_score = 0
+    
+    # キーワードベースの重要度
+    high_priority_keywords = ["AI", "ChatGPT", "iPhone", "Tesla", "Bitcoin", "IPO", "買収", "新機能"]
+    keywords = article.get("keywords", [])
+    
+    for keyword in keywords:
+        if keyword in high_priority_keywords:
+            importance_score += 3
+        else:
+            importance_score += 1
+    
+    # カテゴリベースの重要度
+    category_weights = {
+        "AI・機械学習": 10,
+        "Apple製品": 8,
+        "Google・Android": 7,
+        "ビジネス・投資": 6,
+        "テクノロジー": 5,
+        "ガジェット": 4,
+        "プログラミング": 4,
+        "ゲーム": 3,
+        "自動車・EV": 6,
+        "暗号通貨・ブロックチェーン": 5
+    }
+    
+    category = article.get("category", "")
+    importance_score += category_weights.get(category, 2)
+    
+    # タイトルに重要キーワードがある場合
+    title = article.get("title", "").lower()
+    if any(word in title for word in ["新機能", "発表", "リリース", "画期的", "世界初"]):
+        importance_score += 5
+    
+    # アフィリエイトリンク数による調整
+    affiliate_links = article.get("affiliate_links", {})
+    importance_score += affiliate_links.get("total_links", 0)
+    
+    return importance_score
+
 def sort_articles(articles):
-    """記事をソート（新しい順、重要度順）"""
+    """記事を重要度と新しさでソート"""
     def sort_key(article):
-        # 公開日時でソート（新しい順）
+        # 重要度スコア（主要基準）
+        importance = calculate_article_importance(article)
+        
+        # 公開日時（副次基準）
         published = article.get("published", "")
+        fetched = article.get("fetched_at", "")
+        
+        # タイムスタンプの正規化
         try:
-            # ISO形式の日時があれば使用
             if "T" in published:
-                return published
-            # なければ取得時刻を使用
-            return article.get("fetched_at", "")
+                time_score = published
+            elif fetched:
+                time_score = fetched
+            else:
+                time_score = "1970-01-01T00:00:00"
         except:
-            return article.get("fetched_at", "")
+            time_score = "1970-01-01T00:00:00"
+        
+        # 重要度を主要基準、時刻を副次基準とする複合キー
+        return (importance, time_score)
     
     sorted_articles = sorted(articles, key=sort_key, reverse=True)
     
     if VERBOSE:
-        print(f"Sorted {len(sorted_articles)} articles by publication date")
+        print(f"Sorted {len(sorted_articles)} articles by importance and recency")
+        # トップ5記事の重要度を表示
+        for i, article in enumerate(sorted_articles[:5]):
+            importance = calculate_article_importance(article)
+            print(f"  #{i+1}: {article.get('title', 'Unknown')[:50]}... (Score: {importance})")
     
     return sorted_articles
 

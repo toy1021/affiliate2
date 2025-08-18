@@ -1,0 +1,165 @@
+name: Daily RSS Affiliate Update
+
+on:
+  schedule:
+    # 毎日朝6時（UTC 21:00 = JST 06:00）に実行
+    - cron: '0 21 * * *'
+  workflow_dispatch:  # 手動実行も可能
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'rss_affiliate/**'
+
+jobs:
+  update-content:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('rss_affiliate/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: Install dependencies
+      working-directory: ./rss_affiliate
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Create necessary directories
+      working-directory: ./rss_affiliate
+      run: |
+        mkdir -p data output
+        
+    - name: Run RSS Affiliate Pipeline
+      working-directory: ./rss_affiliate
+      run: |
+        echo "🚀 Starting RSS Affiliate Pipeline..."
+        python run_all.py
+        
+    - name: Verify generated files
+      working-directory: ./rss_affiliate
+      run: |
+        echo "📁 Generated files:"
+        ls -la output/
+        ls -la data/
+        
+        # HTMLファイルの存在と最小サイズをチェック
+        if [ -f "output/index.html" ]; then
+          SIZE=$(stat -f%z "output/index.html" 2>/dev/null || stat -c%s "output/index.html")
+          echo "✅ Generated HTML size: $SIZE bytes"
+          if [ $SIZE -lt 1000 ]; then
+            echo "❌ HTML file too small, something went wrong"
+            exit 1
+          fi
+        else
+          echo "❌ HTML file not generated"
+          exit 1
+        fi
+        
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+      
+    - name: Upload to GitHub Pages
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./rss_affiliate/output
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v3
+      
+    - name: Save execution logs
+      if: always()
+      working-directory: ./rss_affiliate
+      run: |
+        # 実行ログを保存（デバッグ用）
+        echo "=== Execution Summary ===" > execution_log.txt
+        echo "Date: $(date)" >> execution_log.txt
+        echo "Status: ${{ job.status }}" >> execution_log.txt
+        
+        if [ -f "data/rss_raw.json" ]; then
+          echo "RSS articles fetched: $(jq '.total_articles // 0' data/rss_raw.json)" >> execution_log.txt
+        fi
+        
+        if [ -f "data/articles_with_affiliate.json" ]; then
+          echo "Affiliate links added: $(jq '.total_affiliate_links // 0' data/articles_with_affiliate.json)" >> execution_log.txt
+        fi
+        
+        if [ -f "output/index.html" ]; then
+          SIZE=$(stat -f%z "output/index.html" 2>/dev/null || stat -c%s "output/index.html")
+          echo "Final HTML size: $SIZE bytes" >> execution_log.txt
+        fi
+        
+    - name: Commit and push logs (if any changes)
+      if: always()
+      working-directory: ./rss_affiliate
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # ログファイルがある場合のみコミット
+        if [ -f "execution_log.txt" ]; then
+          git add execution_log.txt
+          if ! git diff --staged --quiet; then
+            git commit -m "📊 Update execution log - $(date '+%Y-%m-%d %H:%M')"
+            git push
+          fi
+        fi
+        
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "❌ RSS Affiliate Pipeline failed!"
+        echo "Check the logs above for details."
+        echo "Common issues:"
+        echo "  - RSS feeds temporarily unavailable"
+        echo "  - Network timeout"
+        echo "  - Template rendering error"
+        echo "  - Missing dependencies"
+
+  # ヘルスチェック（オプション）
+  health-check:
+    needs: update-content
+    runs-on: ubuntu-latest
+    if: success()
+    
+    steps:
+    - name: Check deployed site
+      run: |
+        # GitHub Pagesのデプロイを待つ
+        sleep 30
+        
+        # サイトが正常にデプロイされているかチェック
+        REPO_OWNER="${{ github.repository_owner }}"
+        REPO_NAME="${{ github.event.repository.name }}"
+        SITE_URL="https://${REPO_OWNER}.github.io/${REPO_NAME}"
+        
+        echo "🔍 Checking deployed site: $SITE_URL"
+        
+        # HTTP ステータスコードをチェック
+        STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL" || echo "000")
+        
+        if [ "$STATUS" = "200" ]; then
+          echo "✅ Site is live and accessible!"
+          echo "🌐 Visit: $SITE_URL"
+        else
+          echo "⚠️ Site returned status code: $STATUS"
+          echo "Site might still be deploying..."
+        fi

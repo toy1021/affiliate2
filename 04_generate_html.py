@@ -11,6 +11,7 @@ from config import (
     SITE_TITLE, 
     SITE_DESCRIPTION, 
     UPDATE_TIME,
+    ARTICLES_PER_PAGE,
     DEBUG, 
     VERBOSE
 )
@@ -176,16 +177,83 @@ def enhance_articles_for_display(articles):
     
     return enhanced
 
-def generate_sitemap(articles):
+def paginate_articles(articles, page=1):
+    """記事をページネーション"""
+    total_articles = len(articles)
+    total_pages = (total_articles + ARTICLES_PER_PAGE - 1) // ARTICLES_PER_PAGE
+    
+    start_index = (page - 1) * ARTICLES_PER_PAGE
+    end_index = start_index + ARTICLES_PER_PAGE
+    
+    page_articles = articles[start_index:end_index]
+    
+    pagination_info = {
+        "current_page": page,
+        "total_pages": total_pages,
+        "total_articles": total_articles,
+        "has_prev": page > 1,
+        "has_next": page < total_pages,
+        "prev_page": page - 1 if page > 1 else None,
+        "next_page": page + 1 if page < total_pages else None,
+        "articles_per_page": ARTICLES_PER_PAGE
+    }
+    
+    return page_articles, pagination_info
+
+def generate_sitemap(articles, total_pages=1):
     """簡単なサイトマップ情報を生成（将来の拡張用）"""
     sitemap_data = {
         "generated_at": datetime.now().isoformat(),
-        "total_pages": 1,  # 現在は1ページのみ
+        "total_pages": total_pages,
         "articles_count": len(articles),
         "last_updated": UPDATE_TIME
     }
     
     return sitemap_data
+
+def generate_multiple_pages(enhanced_articles, stats, template):
+    """複数ページを生成"""
+    total_articles = len(enhanced_articles)
+    total_pages = (total_articles + ARTICLES_PER_PAGE - 1) // ARTICLES_PER_PAGE
+    
+    generated_files = []
+    
+    for page_num in range(1, total_pages + 1):
+        # ページネーション
+        page_articles, pagination_info = paginate_articles(enhanced_articles, page_num)
+        
+        # テンプレートに渡すデータを準備
+        template_data = {
+            "site_title": SITE_TITLE,
+            "site_description": SITE_DESCRIPTION,
+            "update_time": UPDATE_TIME,
+            "articles": page_articles,
+            "pagination": pagination_info,
+            "total_articles": stats["total_articles"],
+            "total_affiliate_links": stats["total_affiliate_links"],
+            "total_feeds": stats["total_feeds"],
+            "generation_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }
+        
+        # HTML生成
+        html_content = template.render(**template_data)
+        
+        # ファイル名決定
+        if page_num == 1:
+            output_file = FINAL_HTML_FILE
+        else:
+            output_file = os.path.join(OUTPUT_DIR, f"page{page_num}.html")
+        
+        # HTMLファイル保存
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+        
+        generated_files.append(output_file)
+        
+        if VERBOSE:
+            print(f"Generated page {page_num}/{total_pages}: {output_file}")
+    
+    return generated_files, total_pages
 
 def main():
     """メイン処理"""
@@ -213,36 +281,26 @@ def main():
     if VERBOSE:
         print(f"Processing {len(enhanced_articles)} articles for HTML generation")
     
-    # テンプレートに渡すデータを準備
-    template_data = {
-        "site_title": SITE_TITLE,
-        "site_description": SITE_DESCRIPTION,
-        "update_time": UPDATE_TIME,
-        "articles": enhanced_articles,
-        "total_articles": stats["total_articles"],
-        "total_affiliate_links": stats["total_affiliate_links"],
-        "total_feeds": stats["total_feeds"],
-        "generation_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    }
+    # 出力ディレクトリ作成
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
     
-    # HTML生成
+    # 複数ページ生成
     try:
-        html_content = template.render(**template_data)
-        
-        # 出力ディレクトリ作成
-        os.makedirs(OUTPUT_DIR, exist_ok=True)
-        
-        # HTMLファイル保存
-        with open(FINAL_HTML_FILE, 'w', encoding='utf-8') as f:
-            f.write(html_content)
+        generated_files, total_pages = generate_multiple_pages(enhanced_articles, stats, template)
         
         print(f"\n=== Summary ===")
-        print(f"HTML generated successfully: {FINAL_HTML_FILE}")
+        print(f"HTML pages generated: {len(generated_files)}")
         print(f"Total articles: {stats['total_articles']}")
+        print(f"Articles per page: {ARTICLES_PER_PAGE}")
+        print(f"Total pages: {total_pages}")
         print(f"Total affiliate links: {stats['total_affiliate_links']}")
         print(f"Categories: {', '.join(stats['categories'].keys())}")
         
         if DEBUG:
+            print(f"\nGenerated files:")
+            for file_path in generated_files:
+                print(f"  {file_path}")
+            
             print(f"\nCategory breakdown:")
             for category, count in stats["categories"].items():
                 print(f"  {category}: {count}")
@@ -251,8 +309,8 @@ def main():
             for platform, count in stats["platforms"].items():
                 print(f"  {platform}: {count}")
         
-        # サイトマップ情報生成（将来の拡張用）
-        sitemap = generate_sitemap(enhanced_articles)
+        # サイトマップ情報生成
+        sitemap = generate_sitemap(enhanced_articles, total_pages)
         sitemap_file = os.path.join(OUTPUT_DIR, "sitemap.json")
         with open(sitemap_file, 'w', encoding='utf-8') as f:
             json.dump(sitemap, f, ensure_ascii=False, indent=2)
@@ -261,8 +319,8 @@ def main():
             print(f"Sitemap data saved: {sitemap_file}")
         
         # ファイルサイズ確認
-        file_size = os.path.getsize(FINAL_HTML_FILE)
-        print(f"Generated HTML size: {file_size:,} bytes")
+        main_file_size = os.path.getsize(FINAL_HTML_FILE)
+        print(f"Main page size: {main_file_size:,} bytes")
         
         print(f"\n✅ Ready for GitHub Pages deployment!")
         

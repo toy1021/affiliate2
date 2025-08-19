@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News & Affiliate Hub</title>
+    <meta name="description" content="Latest tech news with curated product recommendations">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --border-color: #e5e7eb;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .main-content {
+            min-width: 0;
+        }
+        
+        .sidebar {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            height: auto;
+        }
+        
+        .sidebar h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .sidebar-menu {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .sidebar-menu li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .sidebar-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        
+        .sidebar-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+        }
+        
+        .category-list {
+            margin-bottom: 2rem;
+        }
+        
+        .category-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.3rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.85rem;
+        }
+        
+        .category-name {
+            color: var(--text-primary);
+        }
+        
+        .category-count {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .affiliate-section {
+            margin-bottom: 2rem;
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .pagination-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .pagination-btn:hover {
+            background: #1e40af;
+            transform: translateY(-1px);
+        }
+        
+        .pagination-numbers {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .pagination-number {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+        
+        .pagination-number:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .pagination-current {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        /* Simple header */
+        header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+        
+        /* Simple info section */
+        .update-info {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        /* Compact articles list */
+        .articles-grid {
+            display: block;
+            margin: 2rem 0;
+        }
+        
+        .article-card {
+            background: var(--bg-primary);
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-bottom: none;
+        }
+        
+        .article-card:first-child {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        
+        .article-card:last-child {
+            border-bottom: 1px solid var(--border-color);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        
+        .article-card:hover {
+            background: var(--bg-secondary);
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .category-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        
+        .article-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .article-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .article-title a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .article-summary {
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .keywords {
+            margin-bottom: 0.8rem;
+        }
+        
+        .keyword-tag {
+            background: var(--bg-secondary);
+            padding: 0.2rem 0.5rem;
+            margin: 0 0.3rem 0.3rem 0;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            display: inline-block;
+            border: 1px solid var(--border-color);
+        }
+        
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+        }
+        
+        .affiliate-links-compact {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .affiliate-link {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .affiliate-link:hover {
+            opacity: 0.9;
+        }
+        
+        .amazon-link {
+            background: #ff9500;
+        }
+        
+        .rakuten-link {
+            background: #bf0000;
+        }
+        
+        .source-info {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        footer {
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .source-link {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .source-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .main-layout {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .sidebar {
+                position: static;
+                order: -1;
+            }
+            
+            .article-card {
+                padding: 1rem;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tech News & Affiliate Hub</h1>
+            <p class="subtitle">Latest tech news with curated product recommendations</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="update-info">
+            <p><strong>最終更新:</strong> 2025-08-19 17:13:09</p>
+            <p>毎日朝6時に自動更新されます</p>
+            
+            <p><strong>ページ:</strong> 5 / 5 (全55記事)</p>
+            
+        </div>
+
+        <div class="main-layout">
+            <div class="main-content">
+                <div class="articles-grid">
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">書籍・教育</span>
+                            <span>ASCII.jp － トップ</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://ascii.jp/elem/000/004/310/4310890/?rss" target="_blank" rel="noopener">
+                                ひたすら頑丈！水と埃に強い米軍規格のポータブルSSDが欲しすぎる
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">エレコムの「ESD-EHBシリーズ」は、防水・防塵性能を持つ外付けSSD。さまざまな場所で使うことを想定し、丈夫な本体設計やカラビナなどで持ち歩けるデザインを採用している。アウトドアや建設現場など、タブな環境に持ち出すなら検討したい製品だ。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">本</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://ascii.jp/elem/000/004/310/4310890/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">書籍・教育</span>
+                            <span>ASCII.jp － トップ</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://ascii.jp/elem/000/004/313/4313488/?rss" target="_blank" rel="noopener">
+                                「ネプテューヌ」シリーズが15周年！イラストレーター・つなこさんの記念イラストを公開
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">コンパイルハートは、本日2025年8月19日の「ネプテューヌ」シリーズ15周年を記念し、さまざまな15周年プロジェクトが進行中であると発表。また、シリーズのキャラクターデザインを手掛ける、つなこさんの記念イラストを公開した。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">本</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://ascii.jp/elem/000/004/313/4313488/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">書籍・教育</span>
+                            <span>ASCII.jp － トップ</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://ascii.jp/elem/000/004/313/4313484/?rss" target="_blank" rel="noopener">
+                                シャオミ、2380円の電動シェーバー　「18枚刃」でサッと早剃り
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">小米技術日本（シャオミ・ジャパン）は8月19日、充電式電動シェーバー「S101」を発表した。価格は2380円。同日より、国内のXiaomi StoreやAmazon.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">本</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://ascii.jp/elem/000/004/313/4313484/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">書籍・教育</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236781/" target="_blank" rel="noopener">
+                                セブン銀行、ファミマ親会社の伊藤忠商事と資本業務提携を協議
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">セブン銀行は8月18日、伊藤忠商事と幅広い金融分野での協業を含めた資本業務提携の検討を開始することで合意したと発表した。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">本</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236781/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">書籍・教育</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236850/" target="_blank" rel="noopener">
+                                PayPayに強力な対抗馬？ 日本円連動ステーブルコイン「JPYC」を金融庁が認可、今秋始動
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">ステーブルコイン発行を手がけるJPYCは8月18日、資金決済法に基づく「資金移動業者」の登録を取得したと発表した。これにより、同社は日本円と1対1で価値が連動する「円建てステーブルコイン」の発行が国内で初めて可能となった。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">本</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236850/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">書籍・教育</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236858/" target="_blank" rel="noopener">
+                                総務省、楽天モバイルに行政指導--「コンプラ体制の抜本的見直し」要求　理由は？
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">総務省は8月19日、楽天モバイルに対し文書による行政指導を実施したと発表した。通信の秘密に関わる情報漏えいを認知していたにも関わらず、総務省への報告が3カ月以上遅れたことが問題視された。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">本</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236858/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">書籍・教育</span>
+                            <span>Publickey</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://www.publickey1.jp/blog/25/post_307.html" target="_blank" rel="noopener">
+                                インプレス、上場廃止後の新体制に。新社長には塚本慶一郎氏の子である塚本由紀氏が就任
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">先月末（2025年7月末）に上場を廃止したインプレスホールディングスが新たな経営陣を発表しました。 6人いた取締役は3人となり、代表取締役には同社ファウンダーである塚本慶一郎氏の子である塚本由紀氏が就任しました。 代表取締役に塚本由紀氏 塚.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">本</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://www.publickey1.jp/blog/25/post_307.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                </div>
+                
+                
+                <div class="pagination">
+                    
+                    <a href="page4.html" class="pagination-btn prev-btn">
+                        ← 前のページ
+                    </a>
+                    
+                    
+                    <div class="pagination-numbers">
+                        
+                        
+                        <a href="index.html" class="pagination-number">1</a>
+                        
+                        
+                        
+                        <a href="page2.html" class="pagination-number">2</a>
+                        
+                        
+                        
+                        <a href="page3.html" class="pagination-number">3</a>
+                        
+                        
+                        
+                        <a href="page4.html" class="pagination-number">4</a>
+                        
+                        
+                        
+                        <span class="pagination-current">5</span>
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+            
+            <aside class="sidebar">
+                <h3>メニュー</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#tech">テクノロジー記事</a></li>
+                    <li><a href="#trending">人気記事</a></li>
+                    <li><a href="#latest">最新記事</a></li>
+                    <li><a href="#categories">カテゴリ一覧</a></li>
+                </ul>
+                
+                <div class="category-list">
+                    <h3>カテゴリ</h3>
+                    
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                    
+                    <div class="category-item">
+                        <span class="category-name">書籍・教育</span>
+                        <span class="category-count">7</span>
+                    </div>
+                    
+                </div>
+                
+                <div class="affiliate-section">
+                    <h3>情報源</h3>
+                    <ul class="sidebar-menu">
+                        <li><a href="https://japan.cnet.com/" target="_blank" rel="noopener">CNET Japan</a></li>
+                        <li><a href="https://www.publickey1.jp/" target="_blank" rel="noopener">Publickey</a></li>
+                        <li><a href="https://ascii.jp/" target="_blank" rel="noopener">ASCII.jp</a></li>
+                        <li><a href="https://www.itmedia.co.jp/" target="_blank" rel="noopener">ITmedia</a></li>
+                        <li><a href="https://www.watch.impress.co.jp/" target="_blank" rel="noopener">Impress Watch</a></li>
+                        <li><a href="https://gihyo.jp/" target="_blank" rel="noopener">技術評論社</a></li>
+                        <li><a href="https://jp.techcrunch.com/" target="_blank" rel="noopener">TechCrunch Japan</a></li>
+                        <li><a href="https://news.mynavi.jp/" target="_blank" rel="noopener">マイナビニュース</a></li>
+                        <li><a href="https://www.4gamer.net/" target="_blank" rel="noopener">4Gamer</a></li>
+                        <li><a href="https://diamond.jp/" target="_blank" rel="noopener">ダイヤモンドオンライン</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tech News & Affiliate Hub. 自動生成されたコンテンツです。</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                GitHub Actions + RSS + Affiliate Links
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

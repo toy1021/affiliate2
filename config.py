@@ -30,7 +30,7 @@ SUMMARY_LENGTH = 350  # より詳細な要約
 # Affiliate Settings
 AFFILIATE_CONFIGS = {
     "amazon": {
-        "tag": "your-amazon-tag-20",
+        "tag": "toy1021-22",
         "keywords": ["book", "kindle", "device", "gadget"],
         "search_base_url": "https://www.amazon.co.jp/s?k="
     },

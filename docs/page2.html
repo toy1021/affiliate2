@@ -91,11 +91,23 @@
         }
         
         .category-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .category-link {
             display: flex;
             justify-content: space-between;
-            padding: 0.3rem 0;
-            border-bottom: 1px solid var(--border-color);
+            padding: 0.5rem 0.3rem;
+            text-decoration: none;
+            color: inherit;
             font-size: 0.85rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        
+        .category-link:hover {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
         }
         
         .category-name {
@@ -105,6 +117,10 @@
         .category-count {
             color: var(--text-secondary);
             font-weight: 500;
+        }
+        
+        .article-card.hidden {
+            display: none;
         }
         
         .affiliate-section {
@@ -419,7 +435,7 @@
 
     <main class="container">
         <div class="update-info">
-            <p><strong>最終更新:</strong> 2025-08-19 10:03:42</p>
+            <p><strong>最終更新:</strong> 2025-08-19 10:24:49</p>
             <p>毎日朝6時に自動更新されます</p>
             
             <p><strong>ページ:</strong> 2 / 5 (全55記事)</p>
@@ -430,7 +446,7 @@
             <div class="main-content">
                 <div class="articles-grid">
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="ゲーム">
                         <div class="article-meta">
                             <span class="category-tag">ゲーム</span>
                             <span>ASCII.jp － トップ</span>
@@ -492,7 +508,7 @@
                         </div>
                     </article>
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="Google・Android">
                         <div class="article-meta">
                             <span class="category-tag">Google・android</span>
                             <span>Publickey</span>
@@ -530,7 +546,7 @@
                         </div>
                     </article>
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="テクノロジー">
                         <div class="article-meta">
                             <span class="category-tag">テクノロジー</span>
                             <span>Publickey</span>
@@ -574,7 +590,7 @@
                         </div>
                     </article>
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="テクノロジー">
                         <div class="article-meta">
                             <span class="category-tag">テクノロジー</span>
                             <span>CNET Japan 最新情報　総合</span>
@@ -612,7 +628,7 @@
                         </div>
                     </article>
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="テクノロジー">
                         <div class="article-meta">
                             <span class="category-tag">テクノロジー</span>
                             <span>Publickey</span>
@@ -670,7 +686,7 @@
                         </div>
                     </article>
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="プログラミング">
                         <div class="article-meta">
                             <span class="category-tag">プログラミング</span>
                             <span>Publickey</span>
@@ -730,7 +746,7 @@
                         </div>
                     </article>
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="ビジネス・投資">
                         <div class="article-meta">
                             <span class="category-tag">ビジネス・投資</span>
                             <span>CNET Japan 最新情報　総合</span>
@@ -788,7 +804,7 @@
                         </div>
                     </article>
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="Google・Android">
                         <div class="article-meta">
                             <span class="category-tag">Google・android</span>
                             <span>Publickey</span>
@@ -834,7 +850,7 @@
                         </div>
                     </article>
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="Google・Android">
                         <div class="article-meta">
                             <span class="category-tag">Google・android</span>
                             <span>Publickey</span>
@@ -880,7 +896,7 @@
                         </div>
                     </article>
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="プログラミング">
                         <div class="article-meta">
                             <span class="category-tag">プログラミング</span>
                             <span>Publickey</span>
@@ -938,7 +954,7 @@
                         </div>
                     </article>
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="テクノロジー">
                         <div class="article-meta">
                             <span class="category-tag">テクノロジー</span>
                             <span>CNET Japan 最新情報　総合</span>
@@ -982,7 +998,7 @@
                         </div>
                     </article>
                     
-                    <article class="article-card">
+                    <article class="article-card" data-category="テクノロジー">
                         <div class="article-meta">
                             <span class="category-tag">テクノロジー</span>
                             <span>CNET Japan 最新情報　総合</span>
@@ -1072,10 +1088,11 @@
             <aside class="sidebar">
                 <h3>メニュー</h3>
                 <ul class="sidebar-menu">
-                    <li><a href="index.html">最新記事</a></li>
+                    <li><a href="#" onclick="showAllArticles()">全記事</a></li>
+                    <li><a href="#" onclick="showCategory('テクノロジー')">テクノロジー記事</a></li>
+                    <li><a href="#" onclick="showCategory('AI・機械学習')">AI・機械学習</a></li>
+                    <li><a href="#" onclick="showCategory('Apple製品')">Apple製品</a></li>
                     <li><a href="#categories">カテゴリ一覧</a></li>
-                    <li><a href="#sources">情報源一覧</a></li>
-                    <li><a href="#about">サイトについて</a></li>
                 </ul>
                 
                 <div class="category-list" id="categories">
@@ -1108,28 +1125,38 @@
                     
                     
                     <div class="category-item">
-                        <span class="category-name">ゲーム</span>
-                        <span class="category-count">1</span>
+                        <a href="#" onclick="showCategory('ゲーム')" class="category-link">
+                            <span class="category-name">ゲーム</span>
+                            <span class="category-count">1</span>
+                        </a>
                     </div>
                     
                     <div class="category-item">
-                        <span class="category-name">Google・Android</span>
-                        <span class="category-count">3</span>
+                        <a href="#" onclick="showCategory('Google・Android')" class="category-link">
+                            <span class="category-name">Google・Android</span>
+                            <span class="category-count">3</span>
+                        </a>
                     </div>
                     
                     <div class="category-item">
-                        <span class="category-name">テクノロジー</span>
-                        <span class="category-count">5</span>
+                        <a href="#" onclick="showCategory('テクノロジー')" class="category-link">
+                            <span class="category-name">テクノロジー</span>
+                            <span class="category-count">5</span>
+                        </a>
                     </div>
                     
                     <div class="category-item">
-                        <span class="category-name">プログラミング</span>
-                        <span class="category-count">2</span>
+                        <a href="#" onclick="showCategory('プログラミング')" class="category-link">
+                            <span class="category-name">プログラミング</span>
+                            <span class="category-count">2</span>
+                        </a>
                     </div>
                     
                     <div class="category-item">
-                        <span class="category-name">ビジネス・投資</span>
-                        <span class="category-count">1</span>
+                        <a href="#" onclick="showCategory('ビジネス・投資')" class="category-link">
+                            <span class="category-name">ビジネス・投資</span>
+                            <span class="category-count">1</span>
+                        </a>
                     </div>
                     
                 </div>
@@ -1171,5 +1198,44 @@
             </p>
         </div>
     </footer>
+    
+    <script>
+        function showAllArticles() {
+            const articles = document.querySelectorAll('.article-card');
+            articles.forEach(article => {
+                article.classList.remove('hidden');
+            });
+            updateTitle('全記事');
+        }
+        
+        function showCategory(category) {
+            const articles = document.querySelectorAll('.article-card');
+            let visibleCount = 0;
+            
+            articles.forEach(article => {
+                const articleCategory = article.getAttribute('data-category');
+                if (articleCategory === category) {
+                    article.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    article.classList.add('hidden');
+                }
+            });
+            
+            updateTitle(category + ' (' + visibleCount + '件)');
+        }
+        
+        function updateTitle(filterText) {
+            const titleElement = document.querySelector('.update-info p:first-child strong');
+            if (titleElement) {
+                titleElement.textContent = 'フィルター: ' + filterText;
+            }
+        }
+        
+        // ページロード時は全記事表示
+        document.addEventListener('DOMContentLoaded', function() {
+            showAllArticles();
+        });
+    </script>
 </body>
 </html>

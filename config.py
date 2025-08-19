@@ -3,24 +3,43 @@
 import os
 from datetime import datetime
 
-# RSS Feed URLs - 日本語メディアのみ
+# RSS Feed URLs - 日本語メディア
 RSS_FEEDS = [
-    # 日本語テック・ITメディア
+    # 主要テック・ITメディア
     "https://japan.cnet.com/rss/index.rdf",
     "https://www.publickey1.jp/atom.xml",
     "https://feeds.feedburner.com/itmedia/all",
     "https://feeds.feedburner.com/impressWatch", 
     "https://gihyo.jp/feed/rss",
-    "https://diamond.jp/list/feed/",
     "https://feeds.feedburner.com/TechCrunchJapan",
-    
-    # 追加の日本語メディア
     "https://news.mynavi.jp/rss/techplus",
     "https://ascii.jp/rss.xml",
     "https://www.4gamer.net/games/999/G999902/rss.xml",
-    "https://car.watch.impress.co.jp/data/rss.rdf",
+    
+    # Watch系メディア
     "https://pc.watch.impress.co.jp/data/rss.rdf",
-    "https://k-tai.watch.impress.co.jp/data/rss.rdf"
+    "https://k-tai.watch.impress.co.jp/data/rss.rdf",
+    "https://car.watch.impress.co.jp/data/rss.rdf",
+    "https://av.watch.impress.co.jp/data/rss.rdf",
+    "https://game.watch.impress.co.jp/data/rss.rdf",
+    "https://internet.watch.impress.co.jp/data/rss.rdf",
+    
+    # ビジネス・経済メディア
+    "https://diamond.jp/list/feed/",
+    "https://toyokeizai.net/list/feed.rss",
+    "https://newspicks.com/topics/rss",
+    
+    # エンジニア向けメディア
+    "https://zenn.dev/feed",
+    "https://qiita.com/popular-items/feed.atom",
+    
+    # Apple・ガジェット系
+    "https://iphone-mania.jp/feed/",
+    "https://taisy0.com/feed",
+    
+    # 総合ニュースサイト
+    "https://www.sankei.com/xml/rss/economy.xml",
+    "https://news.yahoo.co.jp/rss/topics/it.xml"
 ]
 
 # Content Processing

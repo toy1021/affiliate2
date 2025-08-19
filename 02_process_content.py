@@ -162,46 +162,46 @@ def categorize_article(title, content, keywords):
     """高精度記事カテゴリ分類"""
     combined_text = f"{title} {content}".lower()
     
-    # より詳細なカテゴリ分類
+    # シンプルなカテゴリ分類
     categories = {
         "AI・機械学習": {
-            "keywords": ["ai", "人工知能", "machine learning", "chatgpt", "openai", "claude", "gpt", "llm", "深層学習", "neural network", "tensorflow", "pytorch"],
+            "keywords": ["ai", "人工知能", "chatgpt", "openai", "claude", "gpt", "llm", "機械学習", "深層学習", "生成ai", "エージェント"],
             "score_threshold": 1
         },
         "Apple製品": {
-            "keywords": ["iphone", "ipad", "macbook", "mac", "apple watch", "airpods", "ios", "macos", "apple", "tim cook"],
+            "keywords": ["iphone", "ipad", "macbook", "mac", "apple watch", "airpods", "ios", "macos", "apple", "アップル"],
             "score_threshold": 1
         },
         "Google・Android": {
-            "keywords": ["android", "google", "chrome", "pixel", "youtube", "gmail", "search", "alphabet"],
-            "score_threshold": 1
-        },
-        "テクノロジー": {
-            "keywords": ["technology", "tech", "software", "app", "cloud", "サーバー", "api", "database", "セキュリティ", "encryption"],
-            "score_threshold": 2
-        },
-        "ガジェット": {
-            "keywords": ["device", "smartphone", "tablet", "laptop", "camera", "headphone", "speaker", "watch", "ガジェット", "デバイス"],
+            "keywords": ["android", "google", "chrome", "pixel", "youtube", "gmail", "グーグル"],
             "score_threshold": 1
         },
         "プログラミング": {
-            "keywords": ["programming", "code", "developer", "python", "javascript", "react", "node", "github", "プログラミング", "開発"],
+            "keywords": ["programming", "code", "developer", "python", "javascript", "github", "プログラミング", "開発", "エンジニア", "ソフトウェア"],
             "score_threshold": 1
         },
-        "ビジネス・投資": {
-            "keywords": ["business", "startup", "investment", "ipo", "funding", "market", "economy", "stock", "ビジネス", "投資", "スタートアップ"],
+        "ビジネス・経済": {
+            "keywords": ["business", "startup", "investment", "ipo", "funding", "economy", "stock", "ビジネス", "投資", "企業", "経営", "売上", "業績", "上場"],
             "score_threshold": 1
         },
         "ゲーム": {
-            "keywords": ["game", "gaming", "playstation", "nintendo", "xbox", "steam", "esports", "ゲーム"],
+            "keywords": ["game", "gaming", "playstation", "nintendo", "xbox", "ゲーム", "出荷"],
             "score_threshold": 1
         },
-        "自動車・EV": {
-            "keywords": ["tesla", "electric vehicle", "ev", "自動運転", "autonomous", "car", "automotive", "電気自動車"],
+        "ガジェット": {
+            "keywords": ["device", "smartphone", "tablet", "laptop", "camera", "headphone", "watch", "ガジェット", "デバイス"],
             "score_threshold": 1
         },
-        "暗号通貨・ブロックチェーン": {
-            "keywords": ["bitcoin", "ethereum", "cryptocurrency", "blockchain", "nft", "defi", "crypto", "仮想通貨"],
+        "セキュリティ": {
+            "keywords": ["security", "セキュリティ", "hack", "vulnerability", "暗号化", "脆弱性"],
+            "score_threshold": 1
+        },
+        "金融・決済": {
+            "keywords": ["fintech", "payment", "bank", "金融", "決済", "電子マネー", "ステーブルコイン", "jpyc", "paypal"],
+            "score_threshold": 1
+        },
+        "通信・ネットワーク": {
+            "keywords": ["network", "通信", "mobile", "楽天", "docomo", "softbank", "au", "wifi", "5g"],
             "score_threshold": 1
         }
     }
@@ -229,11 +229,13 @@ def categorize_article(title, content, keywords):
         best_category = max(category_scores, key=category_scores.get)
         return best_category
     
-    # フォールバック分類
-    if any(word in combined_text for word in ["book", "本", "書籍", "author", "読書"]):
-        return "書籍・教育"
-    elif any(word in combined_text for word in ["news", "politics", "world", "国際", "政治"]):
-        return "ニュース・国際"
+    # シンプルなフォールバック分類
+    if any(word in combined_text for word in ["料理", "天丼", "寿司", "ラーメン", "レストラン", "味", "食材", "キャンペーン"]):
+        return "その他"
+    elif any(word in combined_text for word in ["規制", "政府", "総務省", "行政", "法律", "指導"]):
+        return "その他"
+    elif any(word in combined_text for word in ["本", "書籍", "出版", "インプレス"]):
+        return "その他"
     
     return "テクノロジー"  # デフォルトカテゴリ
 

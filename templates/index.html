@@ -94,7 +94,7 @@
             font-size: 0.9rem;
         }
         
-        /* Simple articles list */
+        /* Compact articles list */
         .articles-grid {
             display: block;
             margin: 2rem 0;
@@ -102,10 +102,24 @@
         
         .article-card {
             background: var(--bg-primary);
-            padding: 1.5rem;
+            padding: 1rem;
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
+            border-bottom: none;
+        }
+        
+        .article-card:first-child {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        
+        .article-card:last-child {
+            border-bottom: 1px solid var(--border-color);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        
+        .article-card:hover {
+            background: var(--bg-secondary);
         }
         
         .article-meta {
@@ -126,9 +140,10 @@
         }
         
         .article-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
             color: var(--text-primary);
+            font-weight: 600;
         }
         
         .article-title a {
@@ -138,55 +153,56 @@
         
         .article-title a:hover {
             color: var(--primary-color);
+            text-decoration: underline;
         }
         
         .article-summary {
             color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
         
         .keywords {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
         
         .keyword-tag {
             background: var(--bg-secondary);
-            padding: 0.3rem 0.6rem;
+            padding: 0.2rem 0.5rem;
             margin: 0 0.3rem 0.3rem 0;
-            border-radius: 4px;
-            font-size: 0.8rem;
+            border-radius: 3px;
+            font-size: 0.75rem;
             display: inline-block;
             border: 1px solid var(--border-color);
         }
         
-        .affiliate-section {
-            border-top: 1px solid var(--border-color);
-            padding-top: 1.5rem;
-            margin-top: 1.5rem;
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
         }
         
-        .affiliate-title {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            font-weight: bold;
-        }
-        
-        .affiliate-links {
-            display: grid;
-            gap: 0.8rem;
+        .affiliate-links-compact {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
         }
         
         .affiliate-link {
-            display: block;
+            display: inline-block;
             background: var(--primary-color);
             color: white;
-            padding: 0.8rem 1.2rem;
+            padding: 0.3rem 0.8rem;
             border-radius: 4px;
             text-decoration: none;
-            text-align: center;
-            font-weight: bold;
+            font-size: 0.8rem;
+            font-weight: 500;
         }
         
         .affiliate-link:hover {
@@ -199,6 +215,11 @@
         
         .rakuten-link {
             background: #bf0000;
+        }
+        
+        .source-info {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
         }
         
         footer {
@@ -271,20 +292,23 @@
                 </div>
                 {% endif %}
                 
-                {% if article.affiliate_links and (article.affiliate_links.keyword_based or article.affiliate_links.category_recommendations) %}
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        {% for link in article.affiliate_links.keyword_based %}
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="{{ article.original_link }}" class="source-link" target="_blank" rel="noopener">{{ article.source_name }}</a>
+                    </div>
+                    
+                    {% if article.affiliate_links and (article.affiliate_links.keyword_based or article.affiliate_links.category_recommendations) %}
+                    <div class="affiliate-links-compact">
+                        {% for link in article.affiliate_links.keyword_based[:2] %}
                         <a href="{{ link.url }}" 
                            class="affiliate-link {{ link.platform }}-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            {{ link.display_text }}
+                            {{ link.display_text.replace('🛒 ', '') }}
                         </a>
                         {% endfor %}
                         
-                        {% for link in article.affiliate_links.category_recommendations %}
+                        {% for link in article.affiliate_links.category_recommendations[:1] %}
                         <a href="{{ link.url }}" 
                            class="affiliate-link {{ link.platform }}-link"
                            target="_blank" 
@@ -293,12 +317,8 @@
                         </a>
                         {% endfor %}
                     </div>
+                    {% endif %}
                 </div>
-                {% endif %}
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="{{ article.original_link }}" class="source-link" target="_blank" rel="noopener">{{ article.source_name }}</a>
-                </p>
             </article>
             {% endfor %}
         </div>

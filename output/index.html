@@ -94,7 +94,7 @@
             font-size: 0.9rem;
         }
         
-        /* Simple articles list */
+        /* Compact articles list */
         .articles-grid {
             display: block;
             margin: 2rem 0;
@@ -102,10 +102,24 @@
         
         .article-card {
             background: var(--bg-primary);
-            padding: 1.5rem;
+            padding: 1rem;
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
+            border-bottom: none;
+        }
+        
+        .article-card:first-child {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        
+        .article-card:last-child {
+            border-bottom: 1px solid var(--border-color);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        
+        .article-card:hover {
+            background: var(--bg-secondary);
         }
         
         .article-meta {
@@ -126,9 +140,10 @@
         }
         
         .article-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
             color: var(--text-primary);
+            font-weight: 600;
         }
         
         .article-title a {
@@ -138,55 +153,56 @@
         
         .article-title a:hover {
             color: var(--primary-color);
+            text-decoration: underline;
         }
         
         .article-summary {
             color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
         
         .keywords {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
         
         .keyword-tag {
             background: var(--bg-secondary);
-            padding: 0.3rem 0.6rem;
+            padding: 0.2rem 0.5rem;
             margin: 0 0.3rem 0.3rem 0;
-            border-radius: 4px;
-            font-size: 0.8rem;
+            border-radius: 3px;
+            font-size: 0.75rem;
             display: inline-block;
             border: 1px solid var(--border-color);
         }
         
-        .affiliate-section {
-            border-top: 1px solid var(--border-color);
-            padding-top: 1.5rem;
-            margin-top: 1.5rem;
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
         }
         
-        .affiliate-title {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            font-weight: bold;
-        }
-        
-        .affiliate-links {
-            display: grid;
-            gap: 0.8rem;
+        .affiliate-links-compact {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
         }
         
         .affiliate-link {
-            display: block;
+            display: inline-block;
             background: var(--primary-color);
             color: white;
-            padding: 0.8rem 1.2rem;
+            padding: 0.3rem 0.8rem;
             border-radius: 4px;
             text-decoration: none;
-            text-align: center;
-            font-weight: bold;
+            font-size: 0.8rem;
+            font-weight: 500;
         }
         
         .affiliate-link:hover {
@@ -199,6 +215,11 @@
         
         .rakuten-link {
             background: #bf0000;
+        }
+        
+        .source-info {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
         }
         
         footer {
@@ -243,7 +264,7 @@
 
     <main class="container">
         <div class="update-info">
-            <p><strong>最終更新:</strong> 2025-08-19 16:18:54</p>
+            <p><strong>最終更新:</strong> 2025-08-19 16:22:50</p>
             <p>毎日朝6時に自動更新されます</p>
         </div>
 
@@ -275,30 +296,26 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://japan.cnet.com/article/35236816/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 AI プログラミング 本
+                            AI プログラミング 本
                         </a>
                         
                         <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 Python 機械学習 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI 入門書
+                            Python 機械学習 本
                         </a>
                         
                         
@@ -310,20 +327,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://japan.cnet.com/article/35236816/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -352,30 +358,26 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://japan.cnet.com/article/35236821/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 AI プログラミング 本
+                            AI プログラミング 本
                         </a>
                         
                         <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 Python 機械学習 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Android%20%E3%82%B1%E3%83%BC%E3%82%B9&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 Android ケース
+                            Python 機械学習 本
                         </a>
                         
                         
@@ -387,20 +389,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://japan.cnet.com/article/35236821/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -427,30 +418,26 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313514/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 AI プログラミング 本
+                            AI プログラミング 本
                         </a>
                         
                         <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 Python 機械学習 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI 入門書
+                            Python 機械学習 本
                         </a>
                         
                         
@@ -462,20 +449,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://ascii.jp/elem/000/004/313/4313514/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -502,30 +478,26 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://japan.cnet.com/article/35236830/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         <a href="https://www.amazon.co.jp/s?k=iPhone%20%E3%82%B1%E3%83%BC%E3%82%B9&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 iPhone ケース
+                            iPhone ケース
                         </a>
                         
                         <a href="https://www.amazon.co.jp/s?k=iPhone%20%E5%85%85%E9%9B%BB%E5%99%A8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 iPhone 充電器
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Apple%20%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B5%E3%83%AA%E3%83%BC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 Apple アクセサリー
+                            iPhone 充電器
                         </a>
                         
                         
@@ -537,20 +509,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://japan.cnet.com/article/35236830/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -569,10 +530,13 @@
                 
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://www.publickey1.jp/blog/25/googlejulesjules_critic.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -583,20 +547,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.publickey1.jp/blog/25/googlejulesjules_critic.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -615,10 +568,13 @@
                 
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://japan.cnet.com/article/35236838/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -629,20 +585,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://japan.cnet.com/article/35236838/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -667,23 +612,26 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://www.publickey1.jp/blog/25/google_cloudoracle_cloudgemini.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 AI プログラミング 本
+                            AI プログラミング 本
                         </a>
                         
                         <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 Python 機械学習 本
+                            Python 機械学習 本
                         </a>
                         
                         
@@ -695,20 +643,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.publickey1.jp/blog/25/google_cloudoracle_cloudgemini.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -735,23 +672,26 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://www.publickey1.jp/blog/25/githubcoreaiceo.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 AI プログラミング 本
+                            AI プログラミング 本
                         </a>
                         
                         <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 Python 機械学習 本
+                            Python 機械学習 本
                         </a>
                         
                         
@@ -763,20 +703,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.publickey1.jp/blog/25/githubcoreaiceo.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -801,23 +730,26 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://japan.cnet.com/article/35236814/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         <a href="https://www.amazon.co.jp/s?k=%E6%8A%95%E8%B3%87%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 投資 入門書
+                            投資 入門書
                         </a>
                         
                         <a href="https://www.amazon.co.jp/s?k=%E6%A0%AA%E5%BC%8F%E6%8A%95%E8%B3%87%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 株式投資 本
+                            株式投資 本
                         </a>
                         
                         
@@ -829,20 +761,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://japan.cnet.com/article/35236814/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -869,10 +790,13 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://www.publickey1.jp/blog/25/awsazuregoogle_cloudnutanixpr.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -883,20 +807,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.publickey1.jp/blog/25/awsazuregoogle_cloudnutanixpr.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -921,23 +834,26 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313486/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         <a href="https://www.amazon.co.jp/s?k=%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%AC%E3%82%B9%20%E3%82%AB%E3%83%A1%E3%83%A9&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 ミラーレス カメラ
+                            ミラーレス カメラ
                         </a>
                         
                         <a href="https://www.amazon.co.jp/s?k=%E3%82%AB%E3%83%A1%E3%83%A9%20%E3%83%AC%E3%83%B3%E3%82%BA&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 カメラ レンズ
+                            カメラ レンズ
                         </a>
                         
                         
@@ -949,20 +865,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://ascii.jp/elem/000/004/313/4313486/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -987,23 +892,26 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://www.publickey1.jp/blog/25/google_cloudpythoncode_interpreter.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         <a href="https://www.amazon.co.jp/s?k=Python%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 Python 入門書
+                            Python 入門書
                         </a>
                         
                         <a href="https://www.amazon.co.jp/s?k=%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
                            class="affiliate-link amazon-link"
                            target="_blank" 
                            rel="noopener sponsored">
-                            🛒 データ分析 本
+                            データ分析 本
                         </a>
                         
                         
@@ -1015,20 +923,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.publickey1.jp/blog/25/google_cloudpythoncode_interpreter.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1053,10 +950,13 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://japan.cnet.com/article/35236853/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1067,20 +967,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://japan.cnet.com/article/35236853/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1099,10 +988,13 @@
                 
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313120/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1113,20 +1005,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://ascii.jp/elem/000/004/313/4313120/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1145,10 +1026,13 @@
                 
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313485/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1159,20 +1043,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://ascii.jp/elem/000/004/313/4313485/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1191,10 +1064,13 @@
                 
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313515/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1205,20 +1081,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://ascii.jp/elem/000/004/313/4313515/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1237,10 +1102,13 @@
                 
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313496/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1251,20 +1119,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://ascii.jp/elem/000/004/313/4313496/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1283,10 +1140,13 @@
                 
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://japan.cnet.com/article/35236831/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1297,20 +1157,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://japan.cnet.com/article/35236831/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1329,10 +1178,13 @@
                 
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://www.publickey1.jp/blog/25/it_2025_1.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1343,20 +1195,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.publickey1.jp/blog/25/it_2025_1.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1375,10 +1216,13 @@
                 
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://www.publickey1.jp/blog/25/exadataoracle_globally_distributed_exadata_database_on_exascale_infrastructure.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1389,20 +1233,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.publickey1.jp/blog/25/exadataoracle_globally_distributed_exadata_database_on_exascale_infrastructure.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1427,10 +1260,13 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313488/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1441,20 +1277,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://ascii.jp/elem/000/004/313/4313488/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1479,10 +1304,13 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313484/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1493,20 +1321,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://ascii.jp/elem/000/004/313/4313484/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1531,10 +1348,13 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://japan.cnet.com/article/35236850/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1545,20 +1365,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://japan.cnet.com/article/35236850/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                </p>
             </article>
             
             <article class="article-card">
@@ -1583,10 +1392,13 @@
                 </div>
                 
                 
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">関連商品をチェック</h3>
-                    <div class="affiliate-links">
+                <div class="article-footer">
+                    <div class="source-info">
+                        元記事: <a href="https://www.publickey1.jp/blog/25/post_307.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                    </div>
+                    
+                    
+                    <div class="affiliate-links-compact">
                         
                         
                         
@@ -1597,20 +1409,9 @@
                             今週のおすすめ商品
                         </a>
                         
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
                     </div>
+                    
                 </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.publickey1.jp/blog/25/post_307.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                </p>
             </article>
             
         </div>

@@ -7,6 +7,23 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from config import RSS_RAW_FILE, PROCESSED_ARTICLES_FILE, SUMMARY_LENGTH, DEBUG, VERBOSE
 
+def is_japanese_text(text):
+    """日本語テキストかどうかを判定"""
+    if not text:
+        return False
+    
+    # ひらがな、カタカナ、漢字の正規表現
+    japanese_pattern = re.compile(r'[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]')
+    japanese_chars = len(japanese_pattern.findall(text))
+    total_chars = len(re.sub(r'\s+', '', text))
+    
+    # 全体の30%以上が日本語文字なら日本語テキストと判定
+    if total_chars > 0:
+        japanese_ratio = japanese_chars / total_chars
+        return japanese_ratio >= 0.3
+    
+    return False
+
 def clean_html(html_text):
     """HTMLタグを除去してクリーンなテキストを取得"""
     if not html_text:
@@ -267,6 +284,18 @@ def main():
         
         for article in feed.get("articles", []):
             try:
+                # 日本語記事のみフィルタリング
+                title = article.get("title", "")
+                description = article.get("description", "")
+                summary = article.get("summary", "")
+                content = description if len(description) > len(summary) else summary
+                
+                # タイトルまたはコンテンツが日本語でない場合はスキップ
+                if not is_japanese_text(title) and not is_japanese_text(content):
+                    if DEBUG:
+                        print(f"  - Skipped (non-Japanese): {title[:30]}...")
+                    continue
+                
                 processed = process_article(article)
                 processed_articles.append(processed)
                 

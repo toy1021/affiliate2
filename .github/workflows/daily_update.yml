@@ -18,6 +18,8 @@ jobs:
       contents: write
       pages: write
       id-token: write
+      deployments: write
+      actions: read
     
     steps:
     - name: Checkout repository
@@ -69,17 +71,24 @@ jobs:
           exit 1
         fi
         
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-      
-    - name: Upload to GitHub Pages
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: ./output
+    - name: Deploy to GitHub Pages (simple)
+      run: |
+        # Configure git
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v3
+        # Copy output to docs directory for GitHub Pages
+        mkdir -p docs
+        cp -r output/* docs/
+        
+        # Add and commit
+        git add docs/
+        if ! git diff --staged --quiet; then
+          git commit -m "🚀 Auto-update affiliate content - $(date '+%Y-%m-%d %H:%M')"
+          git push
+        else
+          echo "No changes to commit"
+        fi
       
     - name: Save execution logs
       if: always()

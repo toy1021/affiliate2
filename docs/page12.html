@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本のテックニュース速報</title>
+    <meta name="description" content="最新のテクノロジーニュースと関連商品をお届け">
+    <meta name="keywords" content="テクノロジーニュース,AI,機械学習,Apple製品,プログラミング,最新技術,IT情報,ガジェット">
+    <meta name="author" content="日本のテックニュース速報">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="日本のテックニュース速報">
+    <meta property="og:description" content="最新のテクノロジーニュースと関連商品をお届け">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toy1021.github.io/affiliate2/">
+    <meta property="og:image" content="https://toy1021.github.io/affiliate2/favicon-192x192.png">
+    <meta property="og:site_name" content="日本のテックニュース速報">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="日本のテックニュース速報">
+    <meta name="twitter:description" content="最新のテクノロジーニュースと関連商品をお届け">
+    <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/favicon-192x192.png">
+    <link rel="canonical" href="https://toy1021.github.io/affiliate2/">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8010SR0ZW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-C8010SR0ZW');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7886055685797359"
+     crossorigin="anonymous"></script>
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --border-color: #e5e7eb;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .main-content {
+            min-width: 0;
+        }
+        
+        .sidebar {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            height: auto;
+        }
+        
+        .sidebar h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .sidebar-menu {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .sidebar-menu li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .sidebar-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        
+        .sidebar-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+        }
+        
+        .category-list {
+            margin-bottom: 2rem;
+        }
+        
+        .category-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .category-link {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0.3rem;
+            text-decoration: none;
+            color: inherit;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        
+        .category-link:hover {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+        }
+        
+        .category-name {
+            color: var(--text-primary);
+        }
+        
+        .category-count {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .article-card.hidden {
+            display: none;
+        }
+        
+        .affiliate-section {
+            margin-bottom: 2rem;
+        }
+        
+        .about-section {
+            margin-bottom: 1rem;
+        }
+        
+        .about-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .pagination-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .pagination-btn:hover {
+            background: #1e40af;
+            transform: translateY(-1px);
+        }
+        
+        .pagination-numbers {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .pagination-number {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+        
+        .pagination-number:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .pagination-current {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        /* Simple header */
+        header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+        
+        /* Simple info section */
+        .update-info {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        /* Compact articles list */
+        .articles-grid {
+            display: block;
+            margin: 2rem 0;
+        }
+        
+        .article-card {
+            background: var(--bg-primary);
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-bottom: none;
+        }
+        
+        .article-card:first-child {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        
+        .article-card:last-child {
+            border-bottom: 1px solid var(--border-color);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        
+        .article-card:hover {
+            background: var(--bg-secondary);
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .category-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        
+        .article-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .article-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .article-title a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .article-summary {
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .keywords {
+            margin-bottom: 0.8rem;
+        }
+        
+        .keyword-tag {
+            background: var(--bg-secondary);
+            padding: 0.2rem 0.5rem;
+            margin: 0 0.3rem 0.3rem 0;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            display: inline-block;
+            border: 1px solid var(--border-color);
+        }
+        
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+        }
+        
+        .affiliate-links-compact {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .affiliate-link {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .affiliate-link:hover {
+            opacity: 0.9;
+        }
+        
+        .amazon-link {
+            background: #ff9500;
+        }
+        
+        .rakuten-link {
+            background: #bf0000;
+        }
+        
+        .source-info {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        footer {
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .source-link {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .source-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .main-layout {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .sidebar {
+                position: static;
+                order: -1;
+            }
+            
+            .article-card {
+                padding: 1rem;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>日本のテックニュース速報</h1>
+            <p class="subtitle">最新のテクノロジーニュースと関連商品をお届け</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="update-info">
+            <p><strong>最終更新:</strong> 2025-08-19 15:52:07</p>
+            <p>毎日朝6時に自動更新されます</p>
+            
+            <p><strong>ページ:</strong> 12 / 12 (全138記事)</p>
+            
+        </div>
+
+        <div class="main-layout">
+            <div class="main-content">
+                <div class="articles-grid">
+                    
+                    <article class="article-card" data-category="通信・ネットワーク">
+                        <div class="article-meta">
+                            <span class="category-tag">通信・ネットワーク</span>
+                            <span>Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://news.yahoo.co.jp/pickup/6549569?source=rss" target="_blank" rel="noopener">
+                                報告遅れ 楽天モバイルに行政指導
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary"></p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://news.yahoo.co.jp/pickup/6549569?source=rss" class="source-link" target="_blank" rel="noopener">Yahoo!ニュース・トピックス - IT</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card" data-category="セキュリティ">
+                        <div class="article-meta">
+                            <span class="category-tag">セキュリティ</span>
+                            <span>Zennのトレンド</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://zenn.dev/alphe/articles/b28bc4e6983d41" target="_blank" rel="noopener">
+                                セキュリティ・キャンプ2025 全国大会 Bクラス チューター参加記
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">はじめに 今年はチューターとして人生2回目のセキュリティキャンプに参加させていただきました！！ 私をチューターに選んでくださった方には大感謝です！ このブログでは、各講義で学んだこと、LTイベントの様子、チューター業務などなど、今年のセキュキャンで経験したことを伝えていきます！ 今年のセキュキャン修了生の参加記もまとめているので、ぜひご覧ください！（随時更新します） 今年のセキュキャン修了生の参加記 セキュリティキャンプを乗り切る技術(@PenguinCabinet) セキュリティ・キャンプ2025 全国大会参加記(@kattyancmp) セキュリティ・キャンプB.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://zenn.dev/alphe/articles/b28bc4e6983d41" class="source-link" target="_blank" rel="noopener">Zennのトレンド</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card" data-category="金融・決済">
+                        <div class="article-meta">
+                            <span class="category-tag">金融・決済</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236787/" target="_blank" rel="noopener">
+                                三井住友カード、タッチ決済乗車で20%還元--東急や京王など13社で　対象路線一覧
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">三井住友カードは8月15日から、鉄道のタッチ決済を対象としたキャンペーンを開始した。対象路線で3日間タッチ決済で乗車すると、利用金額合計の最大20％のVポイントを付与する。還元上限は500ポイントで、特典の付与は11月末を予定している。.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236787/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card" data-category="セキュリティ">
+                        <div class="article-meta">
+                            <span class="category-tag">セキュリティ</span>
+                            <span>Qiita - 人気の記事</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://qiita.com/whoami_priv/items/748169d79e532fc8793a?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items" target="_blank" rel="noopener">
+                                SSL/TLS の変遷と代表的な脆弱性
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">初めに こんにちは、新卒二年目のセキュリティエンジニアです。 普段は Qiita で主にHackTheBox の WriteUp などを投稿しています。 大学時代は非情報系の専攻だったこともあり、今まであまり暗号系の勉強はしてこなかったのですが、セキュリティを生業にしてい.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://qiita.com/whoami_priv/items/748169d79e532fc8793a?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items" class="source-link" target="_blank" rel="noopener">Qiita - 人気の記事</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card" data-category="ビジネス・経済">
+                        <div class="article-meta">
+                            <span class="category-tag">ビジネス・経済</span>
+                            <span>Publickey</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://www.publickey1.jp/blog/25/it_2025_si.html" target="_blank" rel="noopener">
+                                IT系上場企業の平均年収を業種別にみてみた 2025年版［後編］ ～ パッケージソフトウェア系、SI／システム開発系、クラウド／通信キャリア系企業
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">IT系企業で平均年収が高いのは、勢いのあるネットベンチャー系企業なのか、それとも伝統的なSIerなのでしょうか。毎年恒例の記事を今年も公開します。 上場企業は毎年「有価証券報告書」の発行を義務づけられており、そこには従業員の人数や平均年齢.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://www.publickey1.jp/blog/25/it_2025_si.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card" data-category="ビジネス・経済">
+                        <div class="article-meta">
+                            <span class="category-tag">ビジネス・経済</span>
+                            <span>Publickey</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://www.publickey1.jp/blog/25/nutanix_cloud_clustersnc2pr.html" target="_blank" rel="noopener">
+                                オンプレミスのクラウドへの拡張と移行を簡単低コストで実現するプラットフォームソリューション「Nutanix Cloud Clusters」（NC2）とは？［PR］
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">オンプレミスのシステムを発展させる手段として、クラウドとの連携や移行を検討している企業は多いことでしょう。 例えば、災害や障害を想定したオンプレミスのディザスタリカバリ用システムとしてのクラウド利用は非常に有効です。 あるいは、月末処理やソ.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://www.publickey1.jp/blog/25/nutanix_cloud_clustersnc2pr.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                </div>
+                
+                
+                <div class="pagination">
+                    
+                    <a href="page11.html" class="pagination-btn prev-btn">
+                        ← 前のページ
+                    </a>
+                    
+                    
+                    <div class="pagination-numbers">
+                        
+                        
+                        <a href="index.html" class="pagination-number">1</a>
+                        
+                        
+                        
+                        <a href="page2.html" class="pagination-number">2</a>
+                        
+                        
+                        
+                        <a href="page3.html" class="pagination-number">3</a>
+                        
+                        
+                        
+                        <a href="page4.html" class="pagination-number">4</a>
+                        
+                        
+                        
+                        <a href="page5.html" class="pagination-number">5</a>
+                        
+                        
+                        
+                        <a href="page6.html" class="pagination-number">6</a>
+                        
+                        
+                        
+                        <a href="page7.html" class="pagination-number">7</a>
+                        
+                        
+                        
+                        <a href="page8.html" class="pagination-number">8</a>
+                        
+                        
+                        
+                        <a href="page9.html" class="pagination-number">9</a>
+                        
+                        
+                        
+                        <a href="page10.html" class="pagination-number">10</a>
+                        
+                        
+                        
+                        <a href="page11.html" class="pagination-number">11</a>
+                        
+                        
+                        
+                        <span class="pagination-current">12</span>
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+            
+            <aside class="sidebar">
+                <div class="category-list" id="categories">
+                    <h3>カテゴリ</h3>
+                    
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                    
+                    <div class="category-item">
+                        <a href="#" onclick="showCategory('通信・ネットワーク')" class="category-link">
+                            <span class="category-name">通信・ネットワーク</span>
+                            <span class="category-count">1</span>
+                        </a>
+                    </div>
+                    
+                    <div class="category-item">
+                        <a href="#" onclick="showCategory('セキュリティ')" class="category-link">
+                            <span class="category-name">セキュリティ</span>
+                            <span class="category-count">2</span>
+                        </a>
+                    </div>
+                    
+                    <div class="category-item">
+                        <a href="#" onclick="showCategory('金融・決済')" class="category-link">
+                            <span class="category-name">金融・決済</span>
+                            <span class="category-count">1</span>
+                        </a>
+                    </div>
+                    
+                    <div class="category-item">
+                        <a href="#" onclick="showCategory('ビジネス・経済')" class="category-link">
+                            <span class="category-name">ビジネス・経済</span>
+                            <span class="category-count">2</span>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="affiliate-section" id="sources">
+                    <h3>情報源</h3>
+                    <ul class="sidebar-menu">
+                        <li><a href="https://japan.cnet.com/" target="_blank" rel="noopener">CNET Japan</a></li>
+                        <li><a href="https://www.publickey1.jp/" target="_blank" rel="noopener">Publickey</a></li>
+                        <li><a href="https://ascii.jp/" target="_blank" rel="noopener">ASCII.jp</a></li>
+                        <li><a href="https://www.itmedia.co.jp/" target="_blank" rel="noopener">ITmedia</a></li>
+                        <li><a href="https://www.watch.impress.co.jp/" target="_blank" rel="noopener">Impress Watch</a></li>
+                        <li><a href="https://gihyo.jp/" target="_blank" rel="noopener">技術評論社</a></li>
+                        <li><a href="https://jp.techcrunch.com/" target="_blank" rel="noopener">TechCrunch Japan</a></li>
+                        <li><a href="https://news.mynavi.jp/" target="_blank" rel="noopener">マイナビニュース</a></li>
+                        <li><a href="https://www.4gamer.net/" target="_blank" rel="noopener">4Gamer</a></li>
+                        <li><a href="https://diamond.jp/" target="_blank" rel="noopener">ダイヤモンドオンライン</a></li>
+                    </ul>
+                </div>
+                
+                <div class="about-section" id="about">
+                    <h3>サイトについて</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 1rem;">
+                        日本の主要なテクノロジーメディアから最新ニュースを自動収集し、関連商品と共にお届けしています。
+                    </p>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);">
+                        毎日朝6時に自動更新されます
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 日本のテックニュース速報. 自動生成されたコンテンツです。</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                GitHub Actions + RSS + Affiliate Links
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        function showAllArticles() {
+            const articles = document.querySelectorAll('.article-card');
+            articles.forEach(article => {
+                article.classList.remove('hidden');
+            });
+            updateTitle('全記事');
+        }
+        
+        function showCategory(category) {
+            const articles = document.querySelectorAll('.article-card');
+            let visibleCount = 0;
+            
+            articles.forEach(article => {
+                const articleCategory = article.getAttribute('data-category');
+                if (articleCategory === category) {
+                    article.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    article.classList.add('hidden');
+                }
+            });
+            
+            updateTitle(category + ' (' + visibleCount + '件)');
+        }
+        
+        function updateTitle(filterText) {
+            const titleElement = document.querySelector('.update-info p:first-child strong');
+            if (titleElement) {
+                titleElement.textContent = 'フィルター: ' + filterText;
+            }
+        }
+        
+        // ページロード時は全記事表示
+        document.addEventListener('DOMContentLoaded', function() {
+            showAllArticles();
+        });
+    </script>
+</body>
+</html>

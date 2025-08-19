@@ -30,9 +30,128 @@
         }
         
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+        
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .main-content {
+            min-width: 0;
+        }
+        
+        .sidebar {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+        }
+        
+        .sidebar h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .sidebar-menu {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .sidebar-menu li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .sidebar-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        
+        .sidebar-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+        }
+        
+        .category-list {
+            margin-bottom: 2rem;
+        }
+        
+        .category-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.3rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.85rem;
+        }
+        
+        .category-name {
+            color: var(--text-primary);
+        }
+        
+        .category-count {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .affiliate-section {
+            margin-bottom: 2rem;
+        }
+        
+        .affiliate-banner {
+            background: linear-gradient(135deg, var(--primary-color), #1e40af);
+            color: white;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .affiliate-banner h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .affiliate-banner p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        .quick-links {
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .quick-link {
+            display: block;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 0.8rem;
+            border-radius: 4px;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            font-size: 0.85rem;
+        }
+        
+        .quick-link:hover {
+            background: var(--primary-color);
+            color: white;
         }
         
         /* Simple header */
@@ -244,6 +363,16 @@
                 font-size: 2rem;
             }
             
+            .main-layout {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .sidebar {
+                position: static;
+                order: -1;
+            }
+            
             .article-card {
                 padding: 1rem;
             }
@@ -268,59 +397,109 @@
             <p>毎日朝6時に自動更新されます</p>
         </div>
 
-        <div class="articles-grid">
-            {% for article in articles %}
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">{{ article.category|title }}</span>
-                    <span>{{ article.source_name }}</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="{{ article.original_link }}" target="_blank" rel="noopener">
-                        {{ article.title }}
-                    </a>
-                </h2>
-                
-                <p class="article-summary">{{ article.summary }}</p>
-                
-                {% if article.keywords %}
-                <div class="keywords">
-                    {% for keyword in article.keywords %}
-                    <span class="keyword-tag">{{ keyword }}</span>
+        <div class="main-layout">
+            <div class="main-content">
+                <div class="articles-grid">
+                    {% for article in articles %}
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">{{ article.category|title }}</span>
+                            <span>{{ article.source_name }}</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="{{ article.original_link }}" target="_blank" rel="noopener">
+                                {{ article.title }}
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">{{ article.summary }}</p>
+                        
+                        {% if article.keywords %}
+                        <div class="keywords">
+                            {% for keyword in article.keywords %}
+                            <span class="keyword-tag">{{ keyword }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="{{ article.original_link }}" class="source-link" target="_blank" rel="noopener">{{ article.source_name }}</a>
+                            </div>
+                            
+                            {% if article.affiliate_links and (article.affiliate_links.keyword_based or article.affiliate_links.category_recommendations) %}
+                            <div class="affiliate-links-compact">
+                                {% for link in article.affiliate_links.keyword_based[:2] %}
+                                <a href="{{ link.url }}" 
+                                   class="affiliate-link {{ link.platform }}-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    {{ link.display_text.replace('🛒 ', '') }}
+                                </a>
+                                {% endfor %}
+                                
+                                {% for link in article.affiliate_links.category_recommendations[:1] %}
+                                <a href="{{ link.url }}" 
+                                   class="affiliate-link {{ link.platform }}-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    {{ link.display_text }}
+                                </a>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </article>
                     {% endfor %}
                 </div>
-                {% endif %}
+            </div>
+            
+            <aside class="sidebar">
+                <h3>メニュー</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#tech">テクノロジー記事</a></li>
+                    <li><a href="#trending">人気記事</a></li>
+                    <li><a href="#latest">最新記事</a></li>
+                    <li><a href="#categories">カテゴリ一覧</a></li>
+                </ul>
                 
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="{{ article.original_link }}" class="source-link" target="_blank" rel="noopener">{{ article.source_name }}</a>
+                <div class="category-list">
+                    <h3>カテゴリ</h3>
+                    {% set category_counts = {} %}
+                    {% for article in articles %}
+                        {% if category_counts.update({article.category: category_counts.get(article.category, 0) + 1}) %}{% endif %}
+                    {% endfor %}
+                    {% for category, count in category_counts.items() %}
+                    <div class="category-item">
+                        <span class="category-name">{{ category }}</span>
+                        <span class="category-count">{{ count }}</span>
                     </div>
-                    
-                    {% if article.affiliate_links and (article.affiliate_links.keyword_based or article.affiliate_links.category_recommendations) %}
-                    <div class="affiliate-links-compact">
-                        {% for link in article.affiliate_links.keyword_based[:2] %}
-                        <a href="{{ link.url }}" 
-                           class="affiliate-link {{ link.platform }}-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            {{ link.display_text.replace('🛒 ', '') }}
-                        </a>
-                        {% endfor %}
-                        
-                        {% for link in article.affiliate_links.category_recommendations[:1] %}
-                        <a href="{{ link.url }}" 
-                           class="affiliate-link {{ link.platform }}-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            {{ link.display_text }}
-                        </a>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
+                    {% endfor %}
                 </div>
-            </article>
-            {% endfor %}
+                
+                <div class="affiliate-section">
+                    <div class="affiliate-banner">
+                        <h4>おすすめ商品</h4>
+                        <p>厳選されたテック商品をチェック</p>
+                    </div>
+                    <div class="quick-links">
+                        <a href="https://www.amazon.co.jp/s?k=プログラミング&tag=toy1021-22" class="quick-link" target="_blank" rel="noopener sponsored">プログラミング書籍</a>
+                        <a href="https://www.amazon.co.jp/s?k=ガジェット&tag=toy1021-22" class="quick-link" target="_blank" rel="noopener sponsored">最新ガジェット</a>
+                        <a href="https://www.amazon.co.jp/s?k=AI&tag=toy1021-22" class="quick-link" target="_blank" rel="noopener sponsored">AI関連商品</a>
+                        <a href="https://search.rakuten.co.jp/search/mall/プログラミング/" class="quick-link" target="_blank" rel="noopener sponsored">楽天で検索</a>
+                    </div>
+                </div>
+                
+                <div class="affiliate-section">
+                    <h3>情報源</h3>
+                    <ul class="sidebar-menu">
+                        <li><a href="https://japan.cnet.com/" target="_blank" rel="noopener">CNET Japan</a></li>
+                        <li><a href="https://www.publickey1.jp/" target="_blank" rel="noopener">Publickey</a></li>
+                        <li><a href="https://ascii.jp/" target="_blank" rel="noopener">ASCII.jp</a></li>
+                    </ul>
+                </div>
+            </aside>
         </div>
     </main>
 

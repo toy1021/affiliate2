@@ -8,19 +8,12 @@
     <style>
         :root {
             --primary-color: #2563eb;
-            --secondary-color: #7c3aed;
-            --accent-color: #06b6d4;
             --text-primary: #1f2937;
             --text-secondary: #6b7280;
-            --text-light: #9ca3af;
             --bg-primary: #ffffff;
             --bg-secondary: #f8fafc;
-            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            --border-radius: 12px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-color: #e5e7eb;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         * {
@@ -30,168 +23,89 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
             background: var(--bg-secondary);
-            overflow-x: hidden;
         }
         
         .container {
-            max-width: 1400px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
         
-        /* Header with animated background */
+        /* Simple header */
         header {
-            background: var(--bg-gradient);
-            color: white;
-            padding: 4rem 0 3rem;
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><rect width="100" height="20" fill="url(%23a)"/></svg>');
-            animation: shimmer 3s ease-in-out infinite;
-        }
-        
-        @keyframes shimmer {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
         }
         
         h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ffffff, #e5e7eb);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-            z-index: 1;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
         }
         
         .subtitle {
-            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-            opacity: 0.95;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
             font-weight: 400;
-            position: relative;
-            z-index: 1;
         }
         
-        /* Modern info cards */
+        /* Simple info section */
         .update-info {
             background: var(--bg-primary);
-            padding: 2rem;
-            margin: -2rem 0 3rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-lg);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             text-align: center;
-            position: relative;
-            border: 1px solid rgba(255,255,255,0.1);
         }
         
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
         }
         
         .stat-card {
             background: var(--bg-primary);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-md);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             text-align: center;
-            border: 1px solid #e5e7eb;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-color);
-        }
-        
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
         }
         
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
         
         .stat-label {
             color: var(--text-secondary);
             font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
             font-size: 0.9rem;
         }
         
-        /* Enhanced articles grid */
+        /* Simple articles list */
         .articles-grid {
-            display: grid;
-            gap: 2rem;
-            margin: 3rem 0;
+            display: block;
+            margin: 2rem 0;
         }
         
         .article-card {
             background: var(--bg-primary);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            border: 1px solid #e5e7eb;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .article-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-color);
-        }
-        
-        .article-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
-            transform: scaleX(0);
-            transition: var(--transition);
-        }
-        
-        .article-card:hover::before {
-            transform: scaleX(1);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
         }
         
         .article-meta {
@@ -199,22 +113,22 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1rem;
-            color: #666;
+            color: var(--text-secondary);
             font-size: 0.9rem;
         }
         
         .category-tag {
-            background: #667eea;
+            background: var(--primary-color);
             color: white;
             padding: 0.3rem 0.8rem;
-            border-radius: 20px;
+            border-radius: 4px;
             font-size: 0.8rem;
         }
         
         .article-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #333;
+            color: var(--text-primary);
         }
         
         .article-title a {
@@ -223,11 +137,11 @@
         }
         
         .article-title a:hover {
-            color: #667eea;
+            color: var(--primary-color);
         }
         
         .article-summary {
-            color: #666;
+            color: var(--text-secondary);
             margin-bottom: 1.5rem;
             line-height: 1.7;
         }
@@ -237,16 +151,17 @@
         }
         
         .keyword-tag {
-            background: #f0f0f0;
+            background: var(--bg-secondary);
             padding: 0.3rem 0.6rem;
             margin: 0 0.3rem 0.3rem 0;
-            border-radius: 15px;
+            border-radius: 4px;
             font-size: 0.8rem;
             display: inline-block;
+            border: 1px solid var(--border-color);
         }
         
         .affiliate-section {
-            border-top: 2px solid #f0f0f0;
+            border-top: 1px solid var(--border-color);
             padding-top: 1.5rem;
             margin-top: 1.5rem;
         }
@@ -254,7 +169,7 @@
         .affiliate-title {
             font-size: 1.1rem;
             margin-bottom: 1rem;
-            color: #667eea;
+            color: var(--text-primary);
             font-weight: bold;
         }
         
@@ -265,39 +180,37 @@
         
         .affiliate-link {
             display: block;
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            background: var(--primary-color);
             color: white;
             padding: 0.8rem 1.2rem;
-            border-radius: 6px;
+            border-radius: 4px;
             text-decoration: none;
             text-align: center;
             font-weight: bold;
-            transition: all 0.2s;
         }
         
         .affiliate-link:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+            opacity: 0.9;
         }
         
         .amazon-link {
-            background: linear-gradient(135deg, #ff9500, #ff7b00);
+            background: #ff9500;
         }
         
         .rakuten-link {
-            background: linear-gradient(135deg, #bf0000, #8b0000);
+            background: #bf0000;
         }
         
         footer {
-            background: #333;
+            background: var(--text-primary);
             color: white;
             text-align: center;
             padding: 2rem 0;
-            margin-top: 4rem;
+            margin-top: 3rem;
         }
         
         .source-link {
-            color: #667eea;
+            color: var(--primary-color);
             text-decoration: none;
         }
         
@@ -311,11 +224,11 @@
             }
             
             .article-card {
-                padding: 1.5rem;
+                padding: 1rem;
             }
             
-            .affiliate-links {
-                grid-template-columns: 1fr;
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -330,26 +243,26 @@
 
     <main class="container">
         <div class="update-info">
-            <p><strong>最終更新:</strong> 2025-08-19 03:24:40</p>
+            <p><strong>最終更新:</strong> 2025-08-19 06:28:35</p>
             <p>毎日朝6時に自動更新されます</p>
         </div>
 
         <div class="stats">
             <div class="stat-card">
                 <div class="stat-number">136</div>
-                <div class="stat-label">📰 記事数</div>
+                <div class="stat-label">記事数</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">517</div>
-                <div class="stat-label">🛒 関連商品リンク</div>
+                <div class="stat-number">506</div>
+                <div class="stat-label">関連商品リンク</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">17</div>
-                <div class="stat-label">📡 情報源</div>
+                <div class="stat-label">情報源</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">2025-08-19 03:24:40</div>
-                <div class="stat-label">⚡ 最新更新</div>
+                <div class="stat-number">2025-08-19 06:28:35</div>
+                <div class="stat-label">最新更新</div>
             </div>
         </div>
 
@@ -389,7 +302,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -472,7 +385,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -549,7 +462,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -632,7 +545,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -684,6 +597,85 @@
             <article class="article-card">
                 <div class="article-meta">
                     <span class="category-tag">Ai・機械学習</span>
+                    <span>TechCrunch</span>
+                </div>
+                
+                <h2 class="article-title">
+                    <a href="https://techcrunch.com/2025/08/18/openai-launches-a-sub-5-chatgpt-plan-in-india/" target="_blank" rel="noopener">
+                        OpenAI launches a sub $5 ChatGPT plan in India
+                    </a>
+                </h2>
+                
+                <p class="article-summary">This plan will offer 10x more messages and image generation than the free tier, among other benefits.</p>
+                
+                
+                <div class="keywords">
+                    
+                    <span class="keyword-tag">AI</span>
+                    
+                    <span class="keyword-tag">ChatGPT</span>
+                    
+                    <span class="keyword-tag">OpenAI</span>
+                    
+                    <span class="keyword-tag">GPT</span>
+                    
+                </div>
+                
+                
+                
+                <div class="affiliate-section">
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
+                    <div class="affiliate-links">
+                        
+                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            🛒 AI プログラミング 本
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            🛒 Python 機械学習 本
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=ChatGPT%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            🛒 ChatGPT 本
+                        </a>
+                        
+                        
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            今週のおすすめ商品
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            人気ランキング
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    元記事: <a href="https://techcrunch.com/2025/08/18/openai-launches-a-sub-5-chatgpt-plan-in-india/" class="source-link" target="_blank" rel="noopener">TechCrunch</a>
+                </p>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="category-tag">Ai・機械学習</span>
                     <span>Crunch Hype</span>
                 </div>
                 
@@ -713,7 +705,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -794,7 +786,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -873,7 +865,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -950,7 +942,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1027,7 +1019,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1104,7 +1096,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1181,7 +1173,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1258,7 +1250,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1335,7 +1327,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1412,7 +1404,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1489,7 +1481,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1566,7 +1558,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1643,7 +1635,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1695,87 +1687,12 @@
             <article class="article-card">
                 <div class="article-meta">
                     <span class="category-tag">Ai・機械学習</span>
-                    <span>BizToc</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://biztoc.com/x/f3d238df01d0d573?ref=ff" target="_blank" rel="noopener">
-                        FTC Sues Ticket Resale Company, Alleging Eras Tour Price Gouging Scheme
-                    </a>
-                </h2>
-                
-                <p class="article-summary">The Federal Trade Commission filed a lawsuit against a Maryland-based ticket resale company on Monday, alleging that the company broke federal law to obtain hundreds of thousands of tickets to Taylor Swift‘s Eras tour and other major concerts and scalp them for millions of dollars in profit.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                    <span class="keyword-tag">AWS</span>
-                    
-                </div>
-                
-                
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 Python 機械学習 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI 入門書
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
-                    </div>
-                </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://biztoc.com/x/f3d238df01d0d573?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
-                </p>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Ai・機械学習</span>
                     <span>BBC News</span>
                 </div>
                 
                 <h2 class="article-title">
                     <a href="https://www.bbc.com/news/articles/c5yp4jggrj2o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">
-                        Key takeaways from Ukraine talks in Washington
+                        Four key takeaways from Ukraine talks in Washington
                     </a>
                 </h2>
                 
@@ -1793,7 +1710,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1868,7 +1785,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -1943,7 +1860,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2018,7 +1935,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2069,81 +1986,6 @@
             
             <article class="article-card">
                 <div class="article-meta">
-                    <span class="category-tag">Ai・機械学習</span>
-                    <span>BBC News</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.bbc.com/news/articles/cz60y7npl32o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">
-                        Spain and Portugal fires kill two more as Spanish troops battle blazes
-                    </a>
-                </h2>
-                
-                <p class="article-summary">Spain has sent 500 more troops to wildfire-affected regions, bringing the total deployed to 1,900.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                    <span class="keyword-tag">Fire</span>
-                    
-                </div>
-                
-                
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 Python 機械学習 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI 入門書
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
-                    </div>
-                </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.bbc.com/news/articles/cz60y7npl32o?at_medium=RSS&at_campaign=rss" class="source-link" target="_blank" rel="noopener">BBC News</a>
-                </p>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
                     <span class="category-tag">Apple製品</span>
                     <span>9to5Mac</span>
                 </div>
@@ -2172,7 +2014,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2251,7 +2093,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2326,7 +2168,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2405,7 +2247,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2486,7 +2328,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2561,7 +2403,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2636,7 +2478,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2711,7 +2553,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2786,7 +2628,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2842,8 +2684,8 @@
                 </div>
                 
                 <h2 class="article-title">
-                    <a href="https://biztoc.com/x/0a581b5dd791616c?ref=ff" target="_blank" rel="noopener">
-                        Air Canada, cabin crew union hold first talks since strike began
+                    <a href="https://biztoc.com/x/729306385375fb3b?ref=ff" target="_blank" rel="noopener">
+                        African Union Back Campaign to Adopt More Realistic World Map
                     </a>
                 </h2>
                 
@@ -2859,7 +2701,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2904,7 +2746,7 @@
                 
                 
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://biztoc.com/x/0a581b5dd791616c?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
+                    元記事: <a href="https://biztoc.com/x/729306385375fb3b?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
                 </p>
             </article>
             
@@ -2915,12 +2757,12 @@
                 </div>
                 
                 <h2 class="article-title">
-                    <a href="https://biztoc.com/x/e7884d296ad06155?ref=ff" target="_blank" rel="noopener">
-                        Asia-Pacific mixed after Trump's Ukraine summit
+                    <a href="https://biztoc.com/x/fa1d542f80714f54?ref=ff" target="_blank" rel="noopener">
+                        Mark Cuban Slams Health Insurance 'Scam,' Says High Deductibles Make Coverage Useless And Directly Paying Doctors Could Be Cheaper
                     </a>
                 </h2>
                 
-                <p class="article-summary">Major stock market indexes in the Asia-Pacific region traded on Tuesday after Vladimir Putin and Volodymyr Zelensky, the respective presidents of Russia and Ukraine, indicated willingness for in-perso.</p>
+                <p class="article-summary">Billionaire entrepreneur Mark Cuban is aiming for America's health insurance industry, warning that high deductibles are leaving millions of people effectively uninsured despite paying monthly premiums. Cuban Says Rising Deductibles Leave Patients Effectively Uninsured In a post on Monday on X,….</p>
                 
                 
                 <div class="keywords">
@@ -2932,7 +2774,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -2977,23 +2819,23 @@
                 
                 
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://biztoc.com/x/e7884d296ad06155?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
+                    元記事: <a href="https://biztoc.com/x/fa1d542f80714f54?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
                 </p>
             </article>
             
             <article class="article-card">
                 <div class="article-meta">
                     <span class="category-tag">Ai・機械学習</span>
-                    <span>BizToc</span>
+                    <span>NYT > Technology</span>
                 </div>
                 
                 <h2 class="article-title">
-                    <a href="https://biztoc.com/x/9796f99a6a24938f?ref=ff" target="_blank" rel="noopener">
-                        US would help assure Ukraine's security in a peace deal, Trump tells Zelenskiy
+                    <a href="https://www.nytimes.com/2025/08/19/technology/britain-apple-back-door.html" target="_blank" rel="noopener">
+                        Britain Drops Request That Apple Create a Back Door
                     </a>
                 </h2>
                 
-                <p class="article-summary"></p>
+                <p class="article-summary">The Trump administration says that law enforcement organizations in Britain would back off asking the company for a tool to access customers’ data.</p>
                 
                 
                 <div class="keywords">
@@ -3005,7 +2847,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -3050,80 +2892,7 @@
                 
                 
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://biztoc.com/x/9796f99a6a24938f?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
-                </p>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Ai・機械学習</span>
-                    <span>BizToc</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://biztoc.com/x/46ba5e29e08d1984?ref=ff" target="_blank" rel="noopener">
-                        Air Canada flight attendant union refuses to end 'unlawful' strike
-                    </a>
-                </h2>
-                
-                <p class="article-summary">Air Canada flight attendant union refuses to end 'unlawful' strike The union representing Air Canada flight attendants says it will continue to defy a back-to-work order despite the Canada Industrial Relations Board ruling their strike "unlawful". The independent federal tribunal deemed the job….</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                </div>
-                
-                
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 Python 機械学習 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI 入門書
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
-                    </div>
-                </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://biztoc.com/x/46ba5e29e08d1984?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
+                    元記事: <a href="https://www.nytimes.com/2025/08/19/technology/britain-apple-back-door.html" class="source-link" target="_blank" rel="noopener">NYT > Technology</a>
                 </p>
             </article>
             
@@ -3151,7 +2920,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -3224,7 +2993,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -3297,7 +3066,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -3370,7 +3139,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -3443,7 +3212,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -3495,225 +3264,6 @@
             <article class="article-card">
                 <div class="article-meta">
                     <span class="category-tag">Ai・機械学習</span>
-                    <span>BBC News</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.bbc.com/news/articles/c939v7gejlpo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">
-                        Man guilty over gangland shooting that left girl, 9, with bullet lodged in brain
-                    </a>
-                </h2>
-                
-                <p class="article-summary">Javon Riley is found guilty over his role in the shooting of a girl at a restaurant in east London.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                </div>
-                
-                
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 Python 機械学習 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI 入門書
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
-                    </div>
-                </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.bbc.com/news/articles/c939v7gejlpo?at_medium=RSS&at_campaign=rss" class="source-link" target="_blank" rel="noopener">BBC News</a>
-                </p>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Ai・機械学習</span>
-                    <span>BBC News</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.bbc.com/news/articles/cj4wlpvdzjyo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">
-                        Love Island will not be investigated by Ofcom despite 14,000 complaints
-                    </a>
-                </h2>
-                
-                <p class="article-summary">Bullying and concerns for contestants' mental health were among the main issues in the complaints.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                </div>
-                
-                
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 Python 機械学習 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI 入門書
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
-                    </div>
-                </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.bbc.com/news/articles/cj4wlpvdzjyo?at_medium=RSS&at_campaign=rss" class="source-link" target="_blank" rel="noopener">BBC News</a>
-                </p>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Ai・機械学習</span>
-                    <span>BBC News</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.bbc.com/weather/articles/cg7jy3jk2e4o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">
-                        Will UK feel the effect of Hurricane Erin?
-                    </a>
-                </h2>
-                
-                <p class="article-summary">Will the remnants of Hurricane Erin have an impact on the UK's weather? Shireen Jordan explains.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                </div>
-                
-                
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 Python 機械学習 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI 入門書
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
-                    </div>
-                </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.bbc.com/weather/articles/cg7jy3jk2e4o?at_medium=RSS&at_campaign=rss" class="source-link" target="_blank" rel="noopener">BBC News</a>
-                </p>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Ai・機械学習</span>
                     <span>MachineLearningMastery.com</span>
                 </div>
                 
@@ -3735,7 +3285,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -3808,7 +3358,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -3881,7 +3431,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -3960,7 +3510,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4033,7 +3583,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4106,7 +3656,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4179,7 +3729,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4252,7 +3802,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4325,7 +3875,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4400,7 +3950,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4475,7 +4025,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=iPhone%20%E3%82%B1%E3%83%BC%E3%82%B9&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4550,7 +4100,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=iPhone%20%E3%82%B1%E3%83%BC%E3%82%B9&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4627,7 +4177,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4704,7 +4254,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4779,7 +4329,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4845,7 +4395,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=iPhone%20%E3%82%B1%E3%83%BC%E3%82%B9&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4924,7 +4474,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -4990,7 +4540,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5056,7 +4606,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5122,7 +4672,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5167,76 +4717,6 @@
             <article class="article-card">
                 <div class="article-meta">
                     <span class="category-tag">自動車・ev</span>
-                    <span>9to5Mac</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://9to5mac.com/2025/08/18/severance-season-3-heres-everything-we-know-so-far/" target="_blank" rel="noopener">
-                        Severance season 3 is coming: Here’s everything we know right now
-                    </a>
-                </h2>
-                
-                <p class="article-summary">Severance’s season 2 finale left viewers reeling when it aired earlier this year, leading to a lot of questions about what’s coming for Mark S. Here’s everything we know so far about Severance season 3 on Apple TV+. and company in season 3.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                    <span class="keyword-tag">Apple TV</span>
-                    
-                    <span class="keyword-tag">EV</span>
-                    
-                </div>
-                
-                
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 Python 機械学習 本
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
-                    </div>
-                </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://9to5mac.com/2025/08/18/severance-season-3-heres-everything-we-know-so-far/" class="source-link" target="_blank" rel="noopener">9to5Mac</a>
-                </p>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">自動車・ev</span>
                     <span>Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
                 </div>
                 
@@ -5262,7 +4742,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5330,7 +4810,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5396,7 +4876,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5466,7 +4946,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5541,7 +5021,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5585,74 +5065,6 @@
             
             <article class="article-card">
                 <div class="article-meta">
-                    <span class="category-tag">ビジネス・投資</span>
-                    <span>TechCrunch</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://techcrunch.com/2025/08/18/the-wait-is-almost-over-the-2025-startup-battlefield-200-list-drops-august-27/" target="_blank" rel="noopener">
-                        The wait is almost over: The 2025 Startup Battlefield 200 list drops August 27
-                    </a>
-                </h2>
-                
-                <p class="article-summary">After reviewing thousands of groundbreaking applications from around the globe, we're just days away from announcing the 2025 Startup Battlefield 200.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                    <span class="keyword-tag">EV</span>
-                    
-                </div>
-                
-                
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            🛒 Python 機械学習 本
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
-                    </div>
-                </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://techcrunch.com/2025/08/18/the-wait-is-almost-over-the-2025-startup-battlefield-200-list-drops-august-27/" class="source-link" target="_blank" rel="noopener">TechCrunch</a>
-                </p>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
                     <span class="category-tag">Google・android</span>
                     <span>Publickey</span>
                 </div>
@@ -5669,7 +5081,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -5721,7 +5133,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5789,7 +5201,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5864,7 +5276,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5930,7 +5342,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=Apple%20%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B5%E3%83%AA%E3%83%BC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -5998,7 +5410,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=Android%20%E3%82%B1%E3%83%BC%E3%82%B9&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6043,6 +5455,138 @@
             <article class="article-card">
                 <div class="article-meta">
                     <span class="category-tag">テクノロジー</span>
+                    <span>BizToc</span>
+                </div>
+                
+                <h2 class="article-title">
+                    <a href="https://biztoc.com/x/43df827313870883?ref=ff" target="_blank" rel="noopener">
+                        Japan’s SoftBank to take $2-billion stake in chipmaker Intel
+                    </a>
+                </h2>
+                
+                <p class="article-summary">semiconductor manufacturing and other advanced technology in the United States, the companies said Monday. Japanese technology giant SoftBank Group plans to take a US$2-billion stake in chipmaker Intel INTC-Q as it deepens its involvement in U. Shares in both companies fell Tuesday after the….</p>
+                
+                
+                <div class="keywords">
+                    
+                    <span class="keyword-tag">AI</span>
+                    
+                </div>
+                
+                
+                
+                <div class="affiliate-section">
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
+                    <div class="affiliate-links">
+                        
+                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            🛒 AI プログラミング 本
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            🛒 Python 機械学習 本
+                        </a>
+                        
+                        
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            今週のおすすめ商品
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            人気ランキング
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    元記事: <a href="https://biztoc.com/x/43df827313870883?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
+                </p>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="category-tag">テクノロジー</span>
+                    <span>9to5Mac</span>
+                </div>
+                
+                <h2 class="article-title">
+                    <a href="https://9to5mac.com/2025/08/18/apple-wont-have-to-build-a-backdoor-for-uk-access-to-american-data/" target="_blank" rel="noopener">
+                        Apple won’t have to build an iCloud backdoor for UK access to American data
+                    </a>
+                </h2>
+                
+                <p class="article-summary">The UK has retreated from a controversial order that would have forced Apple to provide a backdoor to American users’ data, according to a statement from US Director of National Intelligence Tulsi Gabbard.</p>
+                
+                
+                <div class="keywords">
+                    
+                    <span class="keyword-tag">AI</span>
+                    
+                </div>
+                
+                
+                
+                <div class="affiliate-section">
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
+                    <div class="affiliate-links">
+                        
+                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            🛒 AI プログラミング 本
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            🛒 Python 機械学習 本
+                        </a>
+                        
+                        
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            今週のおすすめ商品
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            人気ランキング
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    元記事: <a href="https://9to5mac.com/2025/08/18/apple-wont-have-to-build-a-backdoor-for-uk-access-to-american-data/" class="source-link" target="_blank" rel="noopener">9to5Mac</a>
+                </p>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="category-tag">テクノロジー</span>
                     <span>The Next Web</span>
                 </div>
                 
@@ -6064,7 +5608,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6130,7 +5674,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=Android%20%E3%82%B1%E3%83%BC%E3%82%B9&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6196,7 +5740,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6241,6 +5785,52 @@
             <article class="article-card">
                 <div class="article-meta">
                     <span class="category-tag">テクノロジー</span>
+                    <span>CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title">
+                    <a href="https://japan.cnet.com/article/35236838/" target="_blank" rel="noopener">
+                        リストバンド操作のMeta新型スマートグラス「Hypernova」、9月発表か
+                    </a>
+                </h2>
+                
+                <p class="article-summary">Metaが9月に次世代スマートグラス「Hypernova」を発表する予定だと報じられている。.</p>
+                
+                
+                
+                
+                <div class="affiliate-section">
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
+                    <div class="affiliate-links">
+                        
+                        
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            今週のおすすめ商品
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            人気ランキング
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    元記事: <a href="https://japan.cnet.com/article/35236838/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                </p>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="category-tag">テクノロジー</span>
                     <span>Ars Technica</span>
                 </div>
                 
@@ -6262,7 +5852,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6328,7 +5918,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6394,7 +5984,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6460,7 +6050,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6528,7 +6118,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6573,58 +6163,6 @@
             <article class="article-card">
                 <div class="article-meta">
                     <span class="category-tag">ビジネス・投資</span>
-                    <span>BizToc</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://biztoc.com/x/196610744a6a498c?ref=ff" target="_blank" rel="noopener">
-                        Vietnam's VPBank plans IPO for securities unit in November, sources say
-                    </a>
-                </h2>
-                
-                <p class="article-summary"></p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">IPO</span>
-                    
-                </div>
-                
-                
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
-                    </div>
-                </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://biztoc.com/x/196610744a6a498c?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
-                </p>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">ビジネス・投資</span>
                     <span>CNET Japan 最新情報　総合</span>
                 </div>
                 
@@ -6646,7 +6184,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=%E6%8A%95%E8%B3%87%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6714,7 +6252,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -6768,7 +6306,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=Python%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6834,7 +6372,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -6864,6 +6402,58 @@
             
             <article class="article-card">
                 <div class="article-meta">
+                    <span class="category-tag">自動車・ev</span>
+                    <span>BBC News</span>
+                </div>
+                
+                <h2 class="article-title">
+                    <a href="https://www.bbc.com/news/articles/c99mkd3xm9po?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">
+                        Lineker nominated for National Television Awards
+                    </a>
+                </h2>
+                
+                <p class="article-summary">Lineker receives his first NTA nomination since 2017 in the wake of his exit from Match of the Day.</p>
+                
+                
+                <div class="keywords">
+                    
+                    <span class="keyword-tag">EV</span>
+                    
+                </div>
+                
+                
+                
+                <div class="affiliate-section">
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
+                    <div class="affiliate-links">
+                        
+                        
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            今週のおすすめ商品
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            人気ランキング
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    元記事: <a href="https://www.bbc.com/news/articles/c99mkd3xm9po?at_medium=RSS&at_campaign=rss" class="source-link" target="_blank" rel="noopener">BBC News</a>
+                </p>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">
                     <span class="category-tag">プログラミング</span>
                     <span>MachineLearningMastery.com</span>
                 </div>
@@ -6886,7 +6476,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=Python%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -6952,7 +6542,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=Python%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -7012,7 +6602,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7064,7 +6654,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7118,7 +6708,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7170,7 +6760,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7222,7 +6812,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=Python%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -7266,23 +6856,83 @@
             
             <article class="article-card">
                 <div class="article-meta">
-                    <span class="category-tag">ビジネス・投資</span>
+                    <span class="category-tag">ガジェット</span>
                     <span>BizToc</span>
                 </div>
                 
                 <h2 class="article-title">
-                    <a href="https://biztoc.com/x/78298dc439f10cbb?ref=ff" target="_blank" rel="noopener">
-                        SoftBank makes $2B investment in Intel
+                    <a href="https://biztoc.com/x/a2aa53c4ca2431a6?ref=ff" target="_blank" rel="noopener">
+                        International Breakouts To Watch
                     </a>
                 </h2>
                 
-                <p class="article-summary">Japanese conglomerate SoftBank has agreed to make a $2 billion investment in Intel in a deal described as a commitment to advanced technology and semiconductors in the United States. The agreement, in which SoftBank will buy Intel common stock, was announced Monday after markets closed.</p>
+                <p class="article-summary"></p>
                 
                 
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
+                    <div class="affiliate-links">
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E6%9C%80%E6%96%B0%20%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            🛒 最新 ガジェット
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%9E%E3%83%9B%20%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B5%E3%83%AA%E3%83%BC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            🛒 スマホ アクセサリー
+                        </a>
+                        
+                        
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            今週のおすすめ商品
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            人気ランキング
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    元記事: <a href="https://biztoc.com/x/a2aa53c4ca2431a6?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
+                </p>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="category-tag">ビジネス・投資</span>
+                    <span>BizToc</span>
+                </div>
+                
+                <h2 class="article-title">
+                    <a href="https://biztoc.com/x/3f96b23938c61936?ref=ff" target="_blank" rel="noopener">
+                        The Credit Market Outlook
+                    </a>
+                </h2>
+                
+                <p class="article-summary"></p>
+                
+                
+                
+                
+                <div class="affiliate-section">
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7306,7 +6956,67 @@
                 
                 
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://biztoc.com/x/78298dc439f10cbb?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
+                    元記事: <a href="https://biztoc.com/x/3f96b23938c61936?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
+                </p>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="category-tag">ガジェット</span>
+                    <span>BBC News</span>
+                </div>
+                
+                <h2 class="article-title">
+                    <a href="https://www.bbc.com/news/articles/cn438z3ejxyo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">
+                        Stop children using VPNs to watch porn, ministers told
+                    </a>
+                </h2>
+                
+                <p class="article-summary">The children's commissioner for England tells the BBC virtual private networks are a "loophole that needs closing.</p>
+                
+                
+                
+                
+                <div class="affiliate-section">
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
+                    <div class="affiliate-links">
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E6%9C%80%E6%96%B0%20%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            🛒 最新 ガジェット
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%9E%E3%83%9B%20%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B5%E3%83%AA%E3%83%BC&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            🛒 スマホ アクセサリー
+                        </a>
+                        
+                        
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            今週のおすすめ商品
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            人気ランキング
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    元記事: <a href="https://www.bbc.com/news/articles/cn438z3ejxyo?at_medium=RSS&at_campaign=rss" class="source-link" target="_blank" rel="noopener">BBC News</a>
                 </p>
             </article>
             
@@ -7328,7 +7038,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7374,7 +7084,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7420,7 +7130,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7472,7 +7182,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7524,7 +7234,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7570,7 +7280,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7622,7 +7332,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7674,7 +7384,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7726,7 +7436,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7778,7 +7488,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7824,7 +7534,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7876,7 +7586,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -7928,7 +7638,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%20%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -7994,7 +7704,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8029,8 +7739,8 @@
                 </div>
                 
                 <h2 class="article-title">
-                    <a href="https://biztoc.com/x/9a70c8a47104df59?ref=ff" target="_blank" rel="noopener">
-                        Home builders boost sales incentives to 5-year high as they struggle to sell newly built homes
+                    <a href="https://biztoc.com/x/0fb2bf4c10df6bf5?ref=ff" target="_blank" rel="noopener">
+                        A Big Check From Uncle Sam Won't Fix Intel
                     </a>
                 </h2>
                 
@@ -8040,7 +7750,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8064,7 +7774,191 @@
                 
                 
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://biztoc.com/x/9a70c8a47104df59?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
+                    元記事: <a href="https://biztoc.com/x/0fb2bf4c10df6bf5?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
+                </p>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="category-tag">テクノロジー</span>
+                    <span>BizToc</span>
+                </div>
+                
+                <h2 class="article-title">
+                    <a href="https://biztoc.com/x/01b499ead47a78e4?ref=ff" target="_blank" rel="noopener">
+                        Oil trader Cathay Petroleum hires ex-ABN Amro banker as CFO
+                    </a>
+                </h2>
+                
+                <p class="article-summary"></p>
+                
+                
+                
+                
+                <div class="affiliate-section">
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
+                    <div class="affiliate-links">
+                        
+                        
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            今週のおすすめ商品
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            人気ランキング
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    元記事: <a href="https://biztoc.com/x/01b499ead47a78e4?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
+                </p>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="category-tag">テクノロジー</span>
+                    <span>BizToc</span>
+                </div>
+                
+                <h2 class="article-title">
+                    <a href="https://biztoc.com/x/3f626e05662e9876?ref=ff" target="_blank" rel="noopener">
+                        American Starts To Feel The Tariff/Inflation Squeeze
+                    </a>
+                </h2>
+                
+                <p class="article-summary"></p>
+                
+                
+                
+                
+                <div class="affiliate-section">
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
+                    <div class="affiliate-links">
+                        
+                        
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            今週のおすすめ商品
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            人気ランキング
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    元記事: <a href="https://biztoc.com/x/3f626e05662e9876?ref=ff" class="source-link" target="_blank" rel="noopener">BizToc</a>
+                </p>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="category-tag">テクノロジー</span>
+                    <span>BBC News</span>
+                </div>
+                
+                <h2 class="article-title">
+                    <a href="https://www.bbc.com/news/articles/c99mn51ny02o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">
+                        What results day is like when you're neurodivergent - and how parents can help
+                    </a>
+                </h2>
+                
+                <p class="article-summary">Three young people tell the BBC what support they would have liked during their recent results days.</p>
+                
+                
+                
+                
+                <div class="affiliate-section">
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
+                    <div class="affiliate-links">
+                        
+                        
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            今週のおすすめ商品
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            人気ランキング
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    元記事: <a href="https://www.bbc.com/news/articles/c99mn51ny02o?at_medium=RSS&at_campaign=rss" class="source-link" target="_blank" rel="noopener">BBC News</a>
+                </p>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">
+                    <span class="category-tag">テクノロジー</span>
+                    <span>BBC News</span>
+                </div>
+                
+                <h2 class="article-title">
+                    <a href="https://www.bbc.com/news/articles/cly6g2j67rko?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">
+                        I was sexually assaulted on a plane - now I'm fighting for compensation
+                    </a>
+                </h2>
+                
+                <p class="article-summary">The 24-year-old shares the impact of her ordeal on a flight from Qatar and being refused compensation.</p>
+                
+                
+                
+                
+                <div class="affiliate-section">
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
+                    <div class="affiliate-links">
+                        
+                        
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            今週のおすすめ商品
+                        </a>
+                        
+                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
+                           class="affiliate-link amazon-link"
+                           target="_blank" 
+                           rel="noopener sponsored">
+                            人気ランキング
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    元記事: <a href="https://www.bbc.com/news/articles/cly6g2j67rko?at_medium=RSS&at_campaign=rss" class="source-link" target="_blank" rel="noopener">BBC News</a>
                 </p>
             </article>
             
@@ -8086,7 +7980,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%20%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -8146,7 +8040,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8192,7 +8086,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8238,7 +8132,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8284,7 +8178,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8330,7 +8224,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8376,7 +8270,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8422,7 +8316,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8468,7 +8362,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8514,7 +8408,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8560,7 +8454,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         <a href="https://www.amazon.co.jp/s?k=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%20%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
@@ -8620,7 +8514,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8655,52 +8549,6 @@
                 </div>
                 
                 <h2 class="article-title">
-                    <a href="https://www.nytimes.com/2025/08/17/business/tiktok-ai-avatars.html" target="_blank" rel="noopener">
-                        He Sold His Likeness. Now His Avatar Is Shilling Supplements on TikTok.
-                    </a>
-                </h2>
-                
-                <p class="article-summary">Welcome to a new era of commercial work fueled by generative artificial intelligence.</p>
-                
-                
-                
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
-                    </div>
-                </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://www.nytimes.com/2025/08/17/business/tiktok-ai-avatars.html" class="source-link" target="_blank" rel="noopener">NYT > Technology</a>
-                </p>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>NYT > Technology</span>
-                </div>
-                
-                <h2 class="article-title">
                     <a href="https://www.nytimes.com/2025/08/18/technology/intel-trump-government-stake.html" target="_blank" rel="noopener">
                         Trump Administration Discusses Taking 10% Stake in Intel
                     </a>
@@ -8712,7 +8560,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8758,7 +8606,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8804,7 +8652,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8839,52 +8687,6 @@
                 </div>
                 
                 <h2 class="article-title">
-                    <a href="https://japan.cnet.com/article/35236790/" target="_blank" rel="noopener">
-                        タオルを畳むロボットの動画公開、人間とどちらが速いか試した結果
-                    </a>
-                </h2>
-                
-                <p class="article-summary">人型ロボット「Figure 02」がタオルを畳む最新のデモ映像が公開されたので、筆者もこれに関する動画を制作した。ぜひ見てほしい。.</p>
-                
-                
-                
-                
-                <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
-                    <div class="affiliate-links">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E4%BA%BA%E6%B0%97%20%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0&linkCode=ll2&tag=your-amazon-tag-20&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            人気ランキング
-                        </a>
-                        
-                    </div>
-                </div>
-                
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    元記事: <a href="https://japan.cnet.com/article/35236790/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                </p>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>CNET Japan 最新情報　総合</span>
-                </div>
-                
-                <h2 class="article-title">
                     <a href="https://japan.cnet.com/article/35236806/" target="_blank" rel="noopener">
                         モバイルバッテリーシェア、借りっぱなしだと発火の恐れ--「返却は義務」とChargeSPOT呼びかけ
                     </a>
@@ -8896,7 +8698,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8942,7 +8744,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -8988,7 +8790,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -9034,7 +8836,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -9080,7 +8882,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         
@@ -9132,7 +8934,7 @@
                 
                 
                 <div class="affiliate-section">
-                    <h3 class="affiliate-title">📦 関連商品をチェック</h3>
+                    <h3 class="affiliate-title">関連商品をチェック</h3>
                     <div class="affiliate-links">
                         
                         

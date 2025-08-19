@@ -30,9 +30,128 @@
         }
         
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+        
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .main-content {
+            min-width: 0;
+        }
+        
+        .sidebar {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+        }
+        
+        .sidebar h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .sidebar-menu {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .sidebar-menu li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .sidebar-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        
+        .sidebar-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+        }
+        
+        .category-list {
+            margin-bottom: 2rem;
+        }
+        
+        .category-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.3rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.85rem;
+        }
+        
+        .category-name {
+            color: var(--text-primary);
+        }
+        
+        .category-count {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .affiliate-section {
+            margin-bottom: 2rem;
+        }
+        
+        .affiliate-banner {
+            background: linear-gradient(135deg, var(--primary-color), #1e40af);
+            color: white;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .affiliate-banner h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .affiliate-banner p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        .quick-links {
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .quick-link {
+            display: block;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 0.8rem;
+            border-radius: 4px;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            font-size: 0.85rem;
+        }
+        
+        .quick-link:hover {
+            background: var(--primary-color);
+            color: white;
         }
         
         /* Simple header */
@@ -244,6 +363,16 @@
                 font-size: 2rem;
             }
             
+            .main-layout {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .sidebar {
+                position: static;
+                order: -1;
+            }
+            
             .article-card {
                 padding: 1rem;
             }
@@ -264,1186 +393,1312 @@
 
     <main class="container">
         <div class="update-info">
-            <p><strong>最終更新:</strong> 2025-08-19 07:37:45</p>
+            <p><strong>最終更新:</strong> 2025-08-19 07:43:06</p>
             <p>毎日朝6時に自動更新されます</p>
         </div>
 
-        <div class="articles-grid">
+        <div class="main-layout">
+            <div class="main-content">
+                <div class="articles-grid">
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">Ai・機械学習</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236816/" target="_blank" rel="noopener">
+                                Claude、有害な会話を強制終了する新機能--ヒトではなくAIを守るため
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">Anthropicは、人工知能（AI）モデル「Claude Opus 4」および「Claude Opus 4. 1」に対し、まれに発生する有害または虐待的な状況が続く会話を終了できる、新しい実験的な安全機能を導入したと発表した。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">AI</span>
+                            
+                            <span class="keyword-tag">人工知能</span>
+                            
+                            <span class="keyword-tag">Claude</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236816/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    AI プログラミング 本
+                                </a>
+                                
+                                <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    Python 機械学習 本
+                                </a>
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">Ai・機械学習</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236821/" target="_blank" rel="noopener">
+                                「Google翻訳」にAIモデル選択やDuolingo風ゲーム要素が登場か
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">「Google翻訳」に大きなAI強化が加わる可能性がある。異なるAIモデルを選択できる機能や、ゲーム感覚で練習できるモードが導入されると、Android Policeが米国時間8月18日に報じた。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">AI</span>
+                            
+                            <span class="keyword-tag">Android</span>
+                            
+                            <span class="keyword-tag">ゲーム</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236821/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    AI プログラミング 本
+                                </a>
+                                
+                                <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    Python 機械学習 本
+                                </a>
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">Ai・機械学習</span>
+                            <span>ASCII.jp － トップ</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://ascii.jp/elem/000/004/313/4313514/?rss" target="_blank" rel="noopener">
+                                【Zaim調査】導入が広がる「電子レシート」の認知は約4割！「スマホで確認できる」利便性が支持され、利用者の6割超が利用拡大を望む
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">【Zaim調査】導入が広がる「電子レシート」の認知は約4割！「スマホで確認できる」利便性が支持され、利用者の6割超が利用拡大を望む.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">AI</span>
+                            
+                            <span class="keyword-tag">スマホ</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://ascii.jp/elem/000/004/313/4313514/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    AI プログラミング 本
+                                </a>
+                                
+                                <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    Python 機械学習 本
+                                </a>
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">ゲーム</span>
+                            <span>ASCII.jp － トップ</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://ascii.jp/elem/000/004/313/4313518/?rss" target="_blank" rel="noopener">
+                                「シェンムーIII エンハンスド」発表　4K対応やNPC密度の増加など　アップグレードパスも提供予定
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">ININ GamesはGamescom2025の一環として、「シェンムーIII エンハンスド」を発表した。対応プラットフォームはPlayStation 5／Xbox Series X|S／PC（Steam／Epic Games Store）／Nintendo（未定）となる。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">PC</span>
+                            
+                            <span class="keyword-tag">PlayStation</span>
+                            
+                            <span class="keyword-tag">Xbox</span>
+                            
+                            <span class="keyword-tag">Steam</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://ascii.jp/elem/000/004/313/4313518/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                <a href="https://www.amazon.co.jp/s?k=PS5%20%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B5%E3%83%AA%E3%83%BC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    PS5 アクセサリー
+                                </a>
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%20%E3%83%98%E3%83%83%E3%83%89%E3%82%BB%E3%83%83%E3%83%88&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    ゲーミング ヘッドセット
+                                </a>
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">Apple製品</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236830/" target="_blank" rel="noopener">
+                                「iOS 26」パブリックベータ4が公開、iPhoneへの一般提供に一歩近づく
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">アップルは米国時間8月18日、「iOS 26」のパブリックベータ4を公開した。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">iPhone</span>
+                            
+                            <span class="keyword-tag">iOS</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236830/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                <a href="https://www.amazon.co.jp/s?k=iPhone%20%E3%82%B1%E3%83%BC%E3%82%B9&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    iPhone ケース
+                                </a>
+                                
+                                <a href="https://www.amazon.co.jp/s?k=iPhone%20%E5%85%85%E9%9B%BB%E5%99%A8&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    iPhone 充電器
+                                </a>
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">Apple製品</span>
+                            <span>ASCII.jp － トップ</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://ascii.jp/elem/000/004/313/4313494/?rss" target="_blank" rel="noopener">
+                                WindowsもMacもiPadもこれ1台！ エレコムの新型キーボード「Precisionist」がマルチOS対応でデバイスの垣根を超える
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">エレコムが8月下旬より新型キーボード「Precisionist」を発売。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">iPad</span>
+                            
+                            <span class="keyword-tag">Mac</span>
+                            
+                            <span class="keyword-tag">Windows</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://ascii.jp/elem/000/004/313/4313494/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                <a href="https://www.amazon.co.jp/s?k=iPad%20%E3%82%B1%E3%83%BC%E3%82%B9&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    iPad ケース
+                                </a>
+                                
+                                <a href="https://www.amazon.co.jp/s?k=Apple%20Pencil&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    Apple Pencil
+                                </a>
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">Google・android</span>
+                            <span>Publickey</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://www.publickey1.jp/blog/25/googlejulesjules_critic.html" target="_blank" rel="noopener">
+                                Googleのコーディングエージェント「Jules」正式版が誰でも利用可能に。コードを自己レビューする新機能「Jules Critic」追加
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">Googleはこれまでベータ版として提供していたコーディングエージェント「Jules」の正式版を公開しました。Julesには無料版が用意されているため、誰でも1日当たり15タスクまで利用可能です。 Julesは人間がプロンプトで指示した内容.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://www.publickey1.jp/blog/25/googlejulesjules_critic.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">テクノロジー</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236838/" target="_blank" rel="noopener">
+                                Metaの新型スマートグラス「Hypernova」、9月発表か
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">Metaが9月に次世代スマートグラス「Hypernova」を発表する予定だと報じられている。.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236838/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">テクノロジー</span>
+                            <span>Publickey</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://www.publickey1.jp/blog/25/google_cloudoracle_cloudgemini.html" target="_blank" rel="noopener">
+                                Google Cloudとオラクルが提携、Oracle Cloud上でGeminiを提供開始
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">5などGoogle Cloudの最新の生成AIモデルをOracle Cloudで提供することを発表しました。 Oracle GeminiWe're. Google Cloudとオラクルは生成AIにおける提携を拡大し、Gemini 2.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">AI</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://www.publickey1.jp/blog/25/google_cloudoracle_cloudgemini.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    AI プログラミング 本
+                                </a>
+                                
+                                <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    Python 機械学習 本
+                                </a>
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">プログラミング</span>
+                            <span>Publickey</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://www.publickey1.jp/blog/25/githubcoreaiceo.html" target="_blank" rel="noopener">
+                                GitHub、マイクロソフトCoreAI部門の一部になることが明らかに。CEOのトーマス・ドムケ氏は退任
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">GitHub CEO トーマス・ドムケ氏は8月11日、同社CEOからの退任を発表しました。と同時に、GitHubはマイクロソフトのCoreAI部門の一部となることが明らかにされました。 After nearly four years as.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">AI</span>
+                            
+                            <span class="keyword-tag">GitHub</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://www.publickey1.jp/blog/25/githubcoreaiceo.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    AI プログラミング 本
+                                </a>
+                                
+                                <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    Python 機械学習 本
+                                </a>
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">Google・android</span>
+                            <span>Publickey</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://www.publickey1.jp/blog/25/awsazuregoogle_cloudnutanixpr.html" target="_blank" rel="noopener">
+                                一貫したクラウド基盤をオンプレミス、AWS、Azure、Google Cloudで実現。Nutanixがインフラに依存しないアプリ実行基盤をオンプレミス、クラウド問わず提供へ［PR］
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">スケーラブルな仮想化統合基盤を実現するベンダとして登場したNutanixは、その技術を拡張してオンプレミス、クラウドなどのあらゆるインフラをモダナイズし、特定のベンダやインフラに依存しないアプリケーション実行基盤を提供するプラットフォームベ.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">Azure</span>
+                            
+                            <span class="keyword-tag">AWS</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://www.publickey1.jp/blog/25/awsazuregoogle_cloudnutanixpr.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">テクノロジー</span>
+                            <span>ASCII.jp － トップ</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://ascii.jp/elem/000/004/313/4313486/?rss" target="_blank" rel="noopener">
+                                Elgato「Facecam 4K」登場！滑らか4K60fpsで配信サポート
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">SB C&S株式会社がElgatoブランドから新しいWebカメラ「Facecam 4K」を発売する。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">カメラ</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://ascii.jp/elem/000/004/313/4313486/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%AC%E3%82%B9%20%E3%82%AB%E3%83%A1%E3%83%A9&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    ミラーレス カメラ
+                                </a>
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%82%AB%E3%83%A1%E3%83%A9%20%E3%83%AC%E3%83%B3%E3%82%BA&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    カメラ レンズ
+                                </a>
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">プログラミング</span>
+                            <span>Publickey</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://www.publickey1.jp/blog/25/google_cloudpythoncode_interpreter.html" target="_blank" rel="noopener">
+                                Google Cloud、自然言語からデータ分析用のPythonコードを生成し実行する「Code Interpreter」をプレビュー公開
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">Google Cloudは、ビジネスユーザーからの自然言語による質問を基にデータ分析用のPythonコードを生成し実行する新機能「Code Interpreter」をプレビュー公開しました。 SQLよりも複雑なデータ分析やグラフを用いての可.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">Python</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://www.publickey1.jp/blog/25/google_cloudpythoncode_interpreter.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                <a href="https://www.amazon.co.jp/s?k=Python%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    Python 入門書
+                                </a>
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    データ分析 本
+                                </a>
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">テクノロジー</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236853/" target="_blank" rel="noopener">
+                                KDDIが「一級建築士事務所」を開設、一体なぜ？　納得の理由
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">従来は建物完成後に検討されていた通信インフラやロボット動線を、建築の企画段階から設計に組み込むオフィス構築サービスをKDDIが開始。スマホで食堂の混雑状況を確認し、配送ロボットがエレベーターを自動操作する次世代オフィスが現実に。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">スマホ</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236853/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">テクノロジー</span>
+                            <span>ASCII.jp － トップ</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://ascii.jp/elem/000/004/313/4313463/?rss" target="_blank" rel="noopener">
+                                電動シェーバーに自撮り棒！ シャオミらしい便利製品が4つも登場
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">シャオミは今日19日、電動シェーバー「電動シェーバー S101」、いわゆる自撮り棒の「ズームセルフィースティック三脚」「セルフィースティック三脚 Mini」、Eインクディスプレー搭載の「スマート温湿度計 Pro」、スマートバンド「Smart Band 9 Active」の新色（パープル、グリーン）を発売する。.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://ascii.jp/elem/000/004/313/4313463/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">テクノロジー</span>
+                            <span>ASCII.jp － トップ</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://ascii.jp/elem/000/004/313/4313120/?rss" target="_blank" rel="noopener">
+                                ついに、Noctuaから120mm冷却ファン第2世代モデルが登場！ 冷却性能と静音性は折り紙付き：ツクモLABI1なんば店
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">冷却も静音も妥協なし。Noctuaファン待望の第2世代120mmファン「NF-A12x25 G2 PWM」が登場！.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://ascii.jp/elem/000/004/313/4313120/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">テクノロジー</span>
+                            <span>ASCII.jp － トップ</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://ascii.jp/elem/000/004/313/4313485/?rss" target="_blank" rel="noopener">
+                                L字より便利！サンワサプライの540度動くUSB-C変換アダプタ「500-USB095」登場
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">サンワサプライ株式会社が発表した新製品「500-USB095」は、ケーブルの取り回しにお悩みのユーザーに最適なUSB-C変換アダプタ。.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://ascii.jp/elem/000/004/313/4313485/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">テクノロジー</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236831/" target="_blank" rel="noopener">
+                                ファミリーマート、「QUOカード」の取り扱いを12月終了
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">ファミリーマートは8月19日、QUOカードの取り扱いを12月22日で終了すると発表した。あわせて、QUOカードの販売も11月23日で終了する。.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236831/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">テクノロジー</span>
+                            <span>Publickey</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://www.publickey1.jp/blog/25/it_2025_1.html" target="_blank" rel="noopener">
+                                無料で読めるITまんが 2025年版
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">ネット上にはたくさんのIT系のコンテンツがあふれています。そのほとんどは文章として書かれていますが、一部にはマンガの形で面白く分かりやすくしたものもあります。 ここでは、マンガ化されたITコンテンツを集めてみました。毎年夏休みの恒例企画、I.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://www.publickey1.jp/blog/25/it_2025_1.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">テクノロジー</span>
+                            <span>Publickey</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://www.publickey1.jp/blog/25/exadataoracle_globally_distributed_exadata_database_on_exascale_infrastructure.html" target="_blank" rel="noopener">
+                                オラクル、Exadataをサーバレスかつ分散データベースにした「Oracle Globally Distributed Exadata Database on Exascale Infrastructure」提供開始
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">オラクルは同社のフラッグシップデータベースとなるExadataを、サーバレス形式かつグローバルな分散データベースで提供する「Oracle Globally Distributed Exadata Database on Exascale I.</p>
+                        
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://www.publickey1.jp/blog/25/exadataoracle_globally_distributed_exadata_database_on_exascale_infrastructure.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">書籍・教育</span>
+                            <span>ASCII.jp － トップ</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://ascii.jp/elem/000/004/313/4313488/?rss" target="_blank" rel="noopener">
+                                「ネプテューヌ」シリーズが15周年！イラストレーター・つなこさんの記念イラストを公開
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">コンパイルハートは、本日2025年8月19日の「ネプテューヌ」シリーズ15周年を記念し、さまざまな15周年プロジェクトが進行中であると発表。また、シリーズのキャラクターデザインを手掛ける、つなこさんの記念イラストを公開した。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">本</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://ascii.jp/elem/000/004/313/4313488/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">書籍・教育</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236850/" target="_blank" rel="noopener">
+                                PayPayに強力な対抗馬？ 日本円連動ステーブルコイン「JPYC」を金融庁が認可、今秋始動
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">ステーブルコイン発行を手がけるJPYCは8月18日、資金決済法に基づく「資金移動業者」の登録を取得したと発表した。これにより、同社は日本円と1対1で価値が連動する「円建てステーブルコイン」の発行が国内で初めて可能となった。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">本</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236850/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">書籍・教育</span>
+                            <span>CNET Japan 最新情報　総合</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://japan.cnet.com/article/35236858/" target="_blank" rel="noopener">
+                                総務省、楽天モバイルに行政指導--「コンプラ体制の抜本的見直し」要求　理由は？
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">総務省は8月19日、楽天モバイルに対し文書による行政指導を実施したと発表した。通信の秘密に関わる情報漏えいを認知していたにも関わらず、総務省への報告が3カ月以上遅れたことが問題視された。.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">本</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://japan.cnet.com/article/35236858/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-meta">
+                            <span class="category-tag">書籍・教育</span>
+                            <span>Publickey</span>
+                        </div>
+                        
+                        <h2 class="article-title">
+                            <a href="https://www.publickey1.jp/blog/25/post_307.html" target="_blank" rel="noopener">
+                                インプレス、上場廃止後の新体制に。新社長には塚本慶一郎氏の子である塚本由紀氏が就任
+                            </a>
+                        </h2>
+                        
+                        <p class="article-summary">先月末（2025年7月末）に上場を廃止したインプレスホールディングスが新たな経営陣を発表しました。 6人いた取締役は3人となり、代表取締役には同社ファウンダーである塚本慶一郎氏の子である塚本由紀氏が就任しました。 代表取締役に塚本由紀氏 塚.</p>
+                        
+                        
+                        <div class="keywords">
+                            
+                            <span class="keyword-tag">本</span>
+                            
+                        </div>
+                        
+                        
+                        <div class="article-footer">
+                            <div class="source-info">
+                                元記事: <a href="https://www.publickey1.jp/blog/25/post_307.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
+                            </div>
+                            
+                            
+                            <div class="affiliate-links-compact">
+                                
+                                
+                                
+                                <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
+                                   class="affiliate-link amazon-link"
+                                   target="_blank" 
+                                   rel="noopener sponsored">
+                                    今週のおすすめ商品
+                                </a>
+                                
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
             
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Ai・機械学習</span>
-                    <span>CNET Japan 最新情報　総合</span>
-                </div>
+            <aside class="sidebar">
+                <h3>メニュー</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#tech">テクノロジー記事</a></li>
+                    <li><a href="#trending">人気記事</a></li>
+                    <li><a href="#latest">最新記事</a></li>
+                    <li><a href="#categories">カテゴリ一覧</a></li>
+                </ul>
                 
-                <h2 class="article-title">
-                    <a href="https://japan.cnet.com/article/35236816/" target="_blank" rel="noopener">
-                        Claude、有害な会話を強制終了する新機能--ヒトではなくAIを守るため
-                    </a>
-                </h2>
-                
-                <p class="article-summary">Anthropicは、人工知能（AI）モデル「Claude Opus 4」および「Claude Opus 4. 1」に対し、まれに発生する有害または虐待的な状況が続く会話を終了できる、新しい実験的な安全機能を導入したと発表した。.</p>
-                
-                
-                <div class="keywords">
+                <div class="category-list">
+                    <h3>カテゴリ</h3>
                     
-                    <span class="keyword-tag">AI</span>
                     
-                    <span class="keyword-tag">人工知能</span>
+                        
                     
-                    <span class="keyword-tag">Claude</span>
+                        
                     
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://japan.cnet.com/article/35236816/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                    
+                    <div class="category-item">
+                        <span class="category-name">AI・機械学習</span>
+                        <span class="category-count">3</span>
                     </div>
                     
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            Python 機械学習 本
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
+                    <div class="category-item">
+                        <span class="category-name">ゲーム</span>
+                        <span class="category-count">1</span>
                     </div>
                     
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Ai・機械学習</span>
-                    <span>CNET Japan 最新情報　総合</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://japan.cnet.com/article/35236821/" target="_blank" rel="noopener">
-                        「Google翻訳」にAIモデル選択やDuolingo風ゲーム要素が登場か
-                    </a>
-                </h2>
-                
-                <p class="article-summary">「Google翻訳」に大きなAI強化が加わる可能性がある。異なるAIモデルを選択できる機能や、ゲーム感覚で練習できるモードが導入されると、Android Policeが米国時間8月18日に報じた。.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                    <span class="keyword-tag">Android</span>
-                    
-                    <span class="keyword-tag">ゲーム</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://japan.cnet.com/article/35236821/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
+                    <div class="category-item">
+                        <span class="category-name">Apple製品</span>
+                        <span class="category-count">2</span>
                     </div>
                     
+                    <div class="category-item">
+                        <span class="category-name">Google・Android</span>
+                        <span class="category-count">2</span>
+                    </div>
                     
-                    <div class="affiliate-links-compact">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            Python 機械学習 本
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
+                    <div class="category-item">
+                        <span class="category-name">テクノロジー</span>
+                        <span class="category-count">10</span>
+                    </div>
+                    
+                    <div class="category-item">
+                        <span class="category-name">プログラミング</span>
+                        <span class="category-count">2</span>
+                    </div>
+                    
+                    <div class="category-item">
+                        <span class="category-name">書籍・教育</span>
+                        <span class="category-count">4</span>
                     </div>
                     
                 </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Ai・機械学習</span>
-                    <span>ASCII.jp － トップ</span>
-                </div>
                 
-                <h2 class="article-title">
-                    <a href="https://ascii.jp/elem/000/004/313/4313514/?rss" target="_blank" rel="noopener">
-                        【Zaim調査】導入が広がる「電子レシート」の認知は約4割！「スマホで確認できる」利便性が支持され、利用者の6割超が利用拡大を望む
-                    </a>
-                </h2>
-                
-                <p class="article-summary">【Zaim調査】導入が広がる「電子レシート」の認知は約4割！「スマホで確認できる」利便性が支持され、利用者の6割超が利用拡大を望む.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                    <span class="keyword-tag">スマホ</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313514/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
+                <div class="affiliate-section">
+                    <div class="affiliate-banner">
+                        <h4>おすすめ商品</h4>
+                        <p>厳選されたテック商品をチェック</p>
                     </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            Python 機械学習 本
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
+                    <div class="quick-links">
+                        <a href="https://www.amazon.co.jp/s?k=プログラミング&tag=toy1021-22" class="quick-link" target="_blank" rel="noopener sponsored">プログラミング書籍</a>
+                        <a href="https://www.amazon.co.jp/s?k=ガジェット&tag=toy1021-22" class="quick-link" target="_blank" rel="noopener sponsored">最新ガジェット</a>
+                        <a href="https://www.amazon.co.jp/s?k=AI&tag=toy1021-22" class="quick-link" target="_blank" rel="noopener sponsored">AI関連商品</a>
+                        <a href="https://search.rakuten.co.jp/search/mall/プログラミング/" class="quick-link" target="_blank" rel="noopener sponsored">楽天で検索</a>
                     </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">ゲーム</span>
-                    <span>ASCII.jp － トップ</span>
                 </div>
                 
-                <h2 class="article-title">
-                    <a href="https://ascii.jp/elem/000/004/313/4313518/?rss" target="_blank" rel="noopener">
-                        「シェンムーIII エンハンスド」発表　4K対応やNPC密度の増加など　アップグレードパスも提供予定
-                    </a>
-                </h2>
-                
-                <p class="article-summary">ININ GamesはGamescom2025の一環として、「シェンムーIII エンハンスド」を発表した。対応プラットフォームはPlayStation 5／Xbox Series X|S／PC（Steam／Epic Games Store）／Nintendo（未定）となる。.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">PC</span>
-                    
-                    <span class="keyword-tag">PlayStation</span>
-                    
-                    <span class="keyword-tag">Xbox</span>
-                    
-                    <span class="keyword-tag">Steam</span>
-                    
+                <div class="affiliate-section">
+                    <h3>情報源</h3>
+                    <ul class="sidebar-menu">
+                        <li><a href="https://japan.cnet.com/" target="_blank" rel="noopener">CNET Japan</a></li>
+                        <li><a href="https://www.publickey1.jp/" target="_blank" rel="noopener">Publickey</a></li>
+                        <li><a href="https://ascii.jp/" target="_blank" rel="noopener">ASCII.jp</a></li>
+                    </ul>
                 </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313518/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=PS5%20%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B5%E3%83%AA%E3%83%BC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            PS5 アクセサリー
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%20%E3%83%98%E3%83%83%E3%83%89%E3%82%BB%E3%83%83%E3%83%88&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            ゲーミング ヘッドセット
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Apple製品</span>
-                    <span>CNET Japan 最新情報　総合</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://japan.cnet.com/article/35236830/" target="_blank" rel="noopener">
-                        「iOS 26」パブリックベータ4が公開、iPhoneへの一般提供に一歩近づく
-                    </a>
-                </h2>
-                
-                <p class="article-summary">アップルは米国時間8月18日、「iOS 26」のパブリックベータ4を公開した。.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">iPhone</span>
-                    
-                    <span class="keyword-tag">iOS</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://japan.cnet.com/article/35236830/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=iPhone%20%E3%82%B1%E3%83%BC%E3%82%B9&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            iPhone ケース
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=iPhone%20%E5%85%85%E9%9B%BB%E5%99%A8&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            iPhone 充電器
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Apple製品</span>
-                    <span>ASCII.jp － トップ</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://ascii.jp/elem/000/004/313/4313494/?rss" target="_blank" rel="noopener">
-                        WindowsもMacもiPadもこれ1台！ エレコムの新型キーボード「Precisionist」がマルチOS対応でデバイスの垣根を超える
-                    </a>
-                </h2>
-                
-                <p class="article-summary">エレコムが8月下旬より新型キーボード「Precisionist」を発売。.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">iPad</span>
-                    
-                    <span class="keyword-tag">Mac</span>
-                    
-                    <span class="keyword-tag">Windows</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313494/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=iPad%20%E3%82%B1%E3%83%BC%E3%82%B9&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            iPad ケース
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Apple%20Pencil&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            Apple Pencil
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Google・android</span>
-                    <span>Publickey</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.publickey1.jp/blog/25/googlejulesjules_critic.html" target="_blank" rel="noopener">
-                        Googleのコーディングエージェント「Jules」正式版が誰でも利用可能に。コードを自己レビューする新機能「Jules Critic」追加
-                    </a>
-                </h2>
-                
-                <p class="article-summary">Googleはこれまでベータ版として提供していたコーディングエージェント「Jules」の正式版を公開しました。Julesには無料版が用意されているため、誰でも1日当たり15タスクまで利用可能です。 Julesは人間がプロンプトで指示した内容.</p>
-                
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://www.publickey1.jp/blog/25/googlejulesjules_critic.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>CNET Japan 最新情報　総合</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://japan.cnet.com/article/35236838/" target="_blank" rel="noopener">
-                        Metaの新型スマートグラス「Hypernova」、9月発表か
-                    </a>
-                </h2>
-                
-                <p class="article-summary">Metaが9月に次世代スマートグラス「Hypernova」を発表する予定だと報じられている。.</p>
-                
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://japan.cnet.com/article/35236838/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>Publickey</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.publickey1.jp/blog/25/google_cloudoracle_cloudgemini.html" target="_blank" rel="noopener">
-                        Google Cloudとオラクルが提携、Oracle Cloud上でGeminiを提供開始
-                    </a>
-                </h2>
-                
-                <p class="article-summary">5などGoogle Cloudの最新の生成AIモデルをOracle Cloudで提供することを発表しました。 Oracle GeminiWe're. Google Cloudとオラクルは生成AIにおける提携を拡大し、Gemini 2.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://www.publickey1.jp/blog/25/google_cloudoracle_cloudgemini.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            Python 機械学習 本
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">プログラミング</span>
-                    <span>Publickey</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.publickey1.jp/blog/25/githubcoreaiceo.html" target="_blank" rel="noopener">
-                        GitHub、マイクロソフトCoreAI部門の一部になることが明らかに。CEOのトーマス・ドムケ氏は退任
-                    </a>
-                </h2>
-                
-                <p class="article-summary">GitHub CEO トーマス・ドムケ氏は8月11日、同社CEOからの退任を発表しました。と同時に、GitHubはマイクロソフトのCoreAI部門の一部となることが明らかにされました。 After nearly four years as.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">AI</span>
-                    
-                    <span class="keyword-tag">GitHub</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://www.publickey1.jp/blog/25/githubcoreaiceo.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=AI%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            AI プログラミング 本
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            Python 機械学習 本
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">Google・android</span>
-                    <span>Publickey</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.publickey1.jp/blog/25/awsazuregoogle_cloudnutanixpr.html" target="_blank" rel="noopener">
-                        一貫したクラウド基盤をオンプレミス、AWS、Azure、Google Cloudで実現。Nutanixがインフラに依存しないアプリ実行基盤をオンプレミス、クラウド問わず提供へ［PR］
-                    </a>
-                </h2>
-                
-                <p class="article-summary">スケーラブルな仮想化統合基盤を実現するベンダとして登場したNutanixは、その技術を拡張してオンプレミス、クラウドなどのあらゆるインフラをモダナイズし、特定のベンダやインフラに依存しないアプリケーション実行基盤を提供するプラットフォームベ.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">Azure</span>
-                    
-                    <span class="keyword-tag">AWS</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://www.publickey1.jp/blog/25/awsazuregoogle_cloudnutanixpr.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>ASCII.jp － トップ</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://ascii.jp/elem/000/004/313/4313486/?rss" target="_blank" rel="noopener">
-                        Elgato「Facecam 4K」登場！滑らか4K60fpsで配信サポート
-                    </a>
-                </h2>
-                
-                <p class="article-summary">SB C&S株式会社がElgatoブランドから新しいWebカメラ「Facecam 4K」を発売する。.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">カメラ</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313486/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%AC%E3%82%B9%20%E3%82%AB%E3%83%A1%E3%83%A9&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            ミラーレス カメラ
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%82%AB%E3%83%A1%E3%83%A9%20%E3%83%AC%E3%83%B3%E3%82%BA&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            カメラ レンズ
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">プログラミング</span>
-                    <span>Publickey</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.publickey1.jp/blog/25/google_cloudpythoncode_interpreter.html" target="_blank" rel="noopener">
-                        Google Cloud、自然言語からデータ分析用のPythonコードを生成し実行する「Code Interpreter」をプレビュー公開
-                    </a>
-                </h2>
-                
-                <p class="article-summary">Google Cloudは、ビジネスユーザーからの自然言語による質問を基にデータ分析用のPythonコードを生成し実行する新機能「Code Interpreter」をプレビュー公開しました。 SQLよりも複雑なデータ分析やグラフを用いての可.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">Python</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://www.publickey1.jp/blog/25/google_cloudpythoncode_interpreter.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        <a href="https://www.amazon.co.jp/s?k=Python%20%E5%85%A5%E9%96%80%E6%9B%B8&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            Python 入門書
-                        </a>
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%20%E6%9C%AC&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            データ分析 本
-                        </a>
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>CNET Japan 最新情報　総合</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://japan.cnet.com/article/35236853/" target="_blank" rel="noopener">
-                        KDDIが「一級建築士事務所」を開設、一体なぜ？　納得の理由
-                    </a>
-                </h2>
-                
-                <p class="article-summary">従来は建物完成後に検討されていた通信インフラやロボット動線を、建築の企画段階から設計に組み込むオフィス構築サービスをKDDIが開始。スマホで食堂の混雑状況を確認し、配送ロボットがエレベーターを自動操作する次世代オフィスが現実に。.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">スマホ</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://japan.cnet.com/article/35236853/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>ASCII.jp － トップ</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://ascii.jp/elem/000/004/313/4313463/?rss" target="_blank" rel="noopener">
-                        電動シェーバーに自撮り棒！ シャオミらしい便利製品が4つも登場
-                    </a>
-                </h2>
-                
-                <p class="article-summary">シャオミは今日19日、電動シェーバー「電動シェーバー S101」、いわゆる自撮り棒の「ズームセルフィースティック三脚」「セルフィースティック三脚 Mini」、Eインクディスプレー搭載の「スマート温湿度計 Pro」、スマートバンド「Smart Band 9 Active」の新色（パープル、グリーン）を発売する。.</p>
-                
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313463/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>ASCII.jp － トップ</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://ascii.jp/elem/000/004/313/4313120/?rss" target="_blank" rel="noopener">
-                        ついに、Noctuaから120mm冷却ファン第2世代モデルが登場！ 冷却性能と静音性は折り紙付き：ツクモLABI1なんば店
-                    </a>
-                </h2>
-                
-                <p class="article-summary">冷却も静音も妥協なし。Noctuaファン待望の第2世代120mmファン「NF-A12x25 G2 PWM」が登場！.</p>
-                
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313120/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>ASCII.jp － トップ</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://ascii.jp/elem/000/004/313/4313485/?rss" target="_blank" rel="noopener">
-                        L字より便利！サンワサプライの540度動くUSB-C変換アダプタ「500-USB095」登場
-                    </a>
-                </h2>
-                
-                <p class="article-summary">サンワサプライ株式会社が発表した新製品「500-USB095」は、ケーブルの取り回しにお悩みのユーザーに最適なUSB-C変換アダプタ。.</p>
-                
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313485/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>CNET Japan 最新情報　総合</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://japan.cnet.com/article/35236831/" target="_blank" rel="noopener">
-                        ファミリーマート、「QUOカード」の取り扱いを12月終了
-                    </a>
-                </h2>
-                
-                <p class="article-summary">ファミリーマートは8月19日、QUOカードの取り扱いを12月22日で終了すると発表した。あわせて、QUOカードの販売も11月23日で終了する。.</p>
-                
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://japan.cnet.com/article/35236831/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>Publickey</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.publickey1.jp/blog/25/it_2025_1.html" target="_blank" rel="noopener">
-                        無料で読めるITまんが 2025年版
-                    </a>
-                </h2>
-                
-                <p class="article-summary">ネット上にはたくさんのIT系のコンテンツがあふれています。そのほとんどは文章として書かれていますが、一部にはマンガの形で面白く分かりやすくしたものもあります。 ここでは、マンガ化されたITコンテンツを集めてみました。毎年夏休みの恒例企画、I.</p>
-                
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://www.publickey1.jp/blog/25/it_2025_1.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">テクノロジー</span>
-                    <span>Publickey</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.publickey1.jp/blog/25/exadataoracle_globally_distributed_exadata_database_on_exascale_infrastructure.html" target="_blank" rel="noopener">
-                        オラクル、Exadataをサーバレスかつ分散データベースにした「Oracle Globally Distributed Exadata Database on Exascale Infrastructure」提供開始
-                    </a>
-                </h2>
-                
-                <p class="article-summary">オラクルは同社のフラッグシップデータベースとなるExadataを、サーバレス形式かつグローバルな分散データベースで提供する「Oracle Globally Distributed Exadata Database on Exascale I.</p>
-                
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://www.publickey1.jp/blog/25/exadataoracle_globally_distributed_exadata_database_on_exascale_infrastructure.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">書籍・教育</span>
-                    <span>ASCII.jp － トップ</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://ascii.jp/elem/000/004/313/4313488/?rss" target="_blank" rel="noopener">
-                        「ネプテューヌ」シリーズが15周年！イラストレーター・つなこさんの記念イラストを公開
-                    </a>
-                </h2>
-                
-                <p class="article-summary">コンパイルハートは、本日2025年8月19日の「ネプテューヌ」シリーズ15周年を記念し、さまざまな15周年プロジェクトが進行中であると発表。また、シリーズのキャラクターデザインを手掛ける、つなこさんの記念イラストを公開した。.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">本</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://ascii.jp/elem/000/004/313/4313488/?rss" class="source-link" target="_blank" rel="noopener">ASCII.jp － トップ</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">書籍・教育</span>
-                    <span>CNET Japan 最新情報　総合</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://japan.cnet.com/article/35236850/" target="_blank" rel="noopener">
-                        PayPayに強力な対抗馬？ 日本円連動ステーブルコイン「JPYC」を金融庁が認可、今秋始動
-                    </a>
-                </h2>
-                
-                <p class="article-summary">ステーブルコイン発行を手がけるJPYCは8月18日、資金決済法に基づく「資金移動業者」の登録を取得したと発表した。これにより、同社は日本円と1対1で価値が連動する「円建てステーブルコイン」の発行が国内で初めて可能となった。.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">本</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://japan.cnet.com/article/35236850/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">書籍・教育</span>
-                    <span>CNET Japan 最新情報　総合</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://japan.cnet.com/article/35236858/" target="_blank" rel="noopener">
-                        楽天モバイルに行政指導、秘密漏洩報告が3カ月遅れ--「コンプラ体制の抜本的見直しを」と総務省
-                    </a>
-                </h2>
-                
-                <p class="article-summary">総務省は8月19日、楽天モバイルに対し文書による行政指導を実施したと発表した。通信の秘密に関わる情報漏えいを認知していたにも関わらず、総務省への報告が3カ月以上遅れたことが問題視された。.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">本</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://japan.cnet.com/article/35236858/" class="source-link" target="_blank" rel="noopener">CNET Japan 最新情報　総合</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
-            <article class="article-card">
-                <div class="article-meta">
-                    <span class="category-tag">書籍・教育</span>
-                    <span>Publickey</span>
-                </div>
-                
-                <h2 class="article-title">
-                    <a href="https://www.publickey1.jp/blog/25/post_307.html" target="_blank" rel="noopener">
-                        インプレス、上場廃止後の新体制に。新社長には塚本慶一郎氏の子である塚本由紀氏が就任
-                    </a>
-                </h2>
-                
-                <p class="article-summary">先月末（2025年7月末）に上場を廃止したインプレスホールディングスが新たな経営陣を発表しました。 6人いた取締役は3人となり、代表取締役には同社ファウンダーである塚本慶一郎氏の子である塚本由紀氏が就任しました。 代表取締役に塚本由紀氏 塚.</p>
-                
-                
-                <div class="keywords">
-                    
-                    <span class="keyword-tag">本</span>
-                    
-                </div>
-                
-                
-                <div class="article-footer">
-                    <div class="source-info">
-                        元記事: <a href="https://www.publickey1.jp/blog/25/post_307.html" class="source-link" target="_blank" rel="noopener">Publickey</a>
-                    </div>
-                    
-                    
-                    <div class="affiliate-links-compact">
-                        
-                        
-                        
-                        <a href="https://www.amazon.co.jp/s?k=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&linkCode=ll2&tag=toy1021-22&linkId=your-link-id" 
-                           class="affiliate-link amazon-link"
-                           target="_blank" 
-                           rel="noopener sponsored">
-                            今週のおすすめ商品
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </article>
-            
+            </aside>
         </div>
     </main>
 

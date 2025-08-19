@@ -224,8 +224,8 @@ def generate_multiple_pages(enhanced_articles, stats, template):
         
         # テンプレートに渡すデータを準備
         template_data = {
-            "site_title": SITE_TITLE,
-            "site_description": SITE_DESCRIPTION,
+            "site_title": "日本のテックニュース速報",
+            "site_description": "最新のテクノロジーニュースと関連商品をお届け",
             "update_time": UPDATE_TIME,
             "articles": page_articles,
             "pagination": pagination_info,

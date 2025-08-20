@@ -1,24 +1,34 @@
 User-agent: *
 Allow: /
+Disallow: /data/
+Disallow: /*.json
+Allow: /articles.json
+Allow: /sitemap.json
 
-# Allow all search engines to crawl the site
+# Prioritize important crawlers
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 2
 
-# Sitemap location
-Sitemap: https://toy1021.github.io/affiliate2/sitemap.xml
+# Block aggressive crawlers
+User-agent: AhrefsBot
+Disallow: /
 
-# Crawl delay (optional)
-Crawl-delay: 1
+User-agent: MJ12bot
+Disallow: /
 
-# Additional instructions
-# Allow crawling of CSS and JS files for proper rendering
+User-agent: DotBot
+Disallow: /
+
+# Allow resources needed for proper page rendering
 User-agent: *
 Allow: /*.css
 Allow: /*.js
@@ -32,3 +42,9 @@ Allow: /*.ico
 Allow: /*.woff
 Allow: /*.woff2
 Allow: /*.ttf
+
+# Sitemap locations
+Sitemap: https://toy1021.github.io/affiliate2/sitemap.xml
+
+# Host directive for canonical domain
+Host: https://toy1021.github.io

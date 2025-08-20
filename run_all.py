@@ -66,7 +66,7 @@ def check_requirements():
         "04_generate_html.py",
         "config.py",
         "requirements.txt",
-        "templates/index.html"
+        "templates/spa.html"
     ]
     
     missing_files = []

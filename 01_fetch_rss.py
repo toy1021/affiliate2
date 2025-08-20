@@ -12,8 +12,8 @@ def get_cache_key(url):
     """URLからキャッシュキーを生成"""
     return hashlib.md5(url.encode()).hexdigest()
 
-def is_cache_valid(cache_file, max_age_minutes=10):
-    """キャッシュが有効かチェック（15分間隔用に10分で設定）"""
+def is_cache_valid(cache_file, max_age_minutes=45):
+    """キャッシュが有効かチェック（1時間間隔用に45分で設定）"""
     if not os.path.exists(cache_file):
         return False
     

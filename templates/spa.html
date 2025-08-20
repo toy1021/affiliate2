@@ -779,6 +779,9 @@
                     this.currentPage = 1;
                     this.filterArticles();
                     this.updateURL();
+                    
+                    // サイドバーの表示も更新
+                    this.renderSidebar();
                 });
                 
                 // ソースフィルター
@@ -793,11 +796,14 @@
                 document.getElementById('category-menu').addEventListener('click', (e) => {
                     if (e.target.tagName === 'A') {
                         e.preventDefault();
-                        const category = e.target.dataset.category;
+                        const category = e.target.dataset.category || '';
                         this.currentCategory = category;
                         this.currentPage = 1;
                         this.filterArticles();
                         this.updateURL();
+                        
+                        // ドロップダウンフィルタも同期更新
+                        document.getElementById('category-filter').value = category;
                     }
                 });
             }
@@ -817,6 +823,13 @@
                 
                 if (this.data) {
                     this.filterArticles();
+                    // フィルタドロップダウンも更新
+                    if (document.getElementById('category-filter')) {
+                        document.getElementById('category-filter').value = this.currentCategory;
+                    }
+                    if (document.getElementById('source-filter')) {
+                        document.getElementById('source-filter').value = this.currentSource;
+                    }
                 }
             }
             
@@ -900,6 +913,17 @@
                 // カテゴリメニュー
                 const categoryMenu = document.getElementById('category-menu');
                 categoryMenu.innerHTML = '';
+                
+                // 「全カテゴリ」オプションを追加
+                const allCategoriesLi = document.createElement('li');
+                allCategoriesLi.innerHTML = `
+                    <a href="#" data-category="" ${!this.currentCategory ? 'class="active"' : ''}>
+                        全カテゴリ <span class="category-count">(${this.data.articles.length})</span>
+                    </a>
+                `;
+                categoryMenu.appendChild(allCategoriesLi);
+                
+                // 各カテゴリオプション
                 this.data.categories.forEach(cat => {
                     const li = document.createElement('li');
                     li.innerHTML = `

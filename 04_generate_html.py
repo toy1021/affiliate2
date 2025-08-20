@@ -2,7 +2,7 @@
 
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 from jinja2 import Template, FileSystemLoader, Environment
 from config import (
     AFFILIATE_ARTICLES_FILE, 
@@ -71,38 +71,83 @@ def calculate_article_importance(article):
     
     return importance_score
 
+def get_relative_time(timestamp):
+    """相対時間を日本語で返す"""
+    now = datetime.now(timezone.utc)
+    diff = now - timestamp
+    
+    if diff.days > 7:
+        return timestamp.strftime("%m/%d")
+    elif diff.days > 0:
+        return f"{diff.days}日前"
+    elif diff.seconds > 3600:
+        hours = diff.seconds // 3600
+        return f"{hours}時間前"
+    elif diff.seconds > 60:
+        minutes = diff.seconds // 60
+        return f"{minutes}分前"
+    else:
+        return "たった今"
+
+def parse_article_timestamp(article):
+    """記事のタイムスタンプをパースしてdatetimeオブジェクトを返す"""
+    published = article.get("published", "")
+    fetched = article.get("fetched_at", "")
+    
+    # 公開日時を優先、なければ取得日時を使用
+    timestamp_str = published if published else fetched
+    
+    if not timestamp_str:
+        return datetime(1970, 1, 1, tzinfo=timezone.utc)
+    
+    try:
+        # 既存の日付フォーマットをパース
+        if "T" in timestamp_str:
+            # ISOフォーマットの場合
+            try:
+                dt = datetime.fromisoformat(timestamp_str.replace('Z', '+00:00'))
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                return dt
+            except:
+                # シンプルISOフォーマット
+                dt = datetime.strptime(timestamp_str[:19], "%Y-%m-%dT%H:%M:%S")
+                return dt.replace(tzinfo=timezone.utc)
+        else:
+            # 簡単な日付フォーマットの場合
+            dt = datetime.strptime(timestamp_str[:19], "%Y-%m-%d %H:%M:%S")
+            return dt.replace(tzinfo=timezone.utc)
+    except:
+        try:
+            # RFC2822フォーマットの場合（RSSでよく使われる）
+            from email.utils import parsedate_to_datetime
+            dt = parsedate_to_datetime(timestamp_str)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt
+        except:
+            return datetime(1970, 1, 1, tzinfo=timezone.utc)
+
 def sort_articles(articles):
-    """記事を重要度と新しさでソート"""
+    """記事を時系列順（新しい順）でソート"""
     def sort_key(article):
-        # 重要度スコア（主要基準）
+        # タイムスタンプをパース
+        timestamp = parse_article_timestamp(article)
+        
+        # 重要度スコア（同じ時刻の記事の場合のソート用）
         importance = calculate_article_importance(article)
         
-        # 公開日時（副次基準）
-        published = article.get("published", "")
-        fetched = article.get("fetched_at", "")
-        
-        # タイムスタンプの正規化
-        try:
-            if "T" in published:
-                time_score = published
-            elif fetched:
-                time_score = fetched
-            else:
-                time_score = "1970-01-01T00:00:00"
-        except:
-            time_score = "1970-01-01T00:00:00"
-        
-        # 重要度を主要基準、時刻を副次基準とする複合キー
-        return (importance, time_score)
+        # 時系列を主要基準、重要度を副次基準とする
+        return (timestamp, importance)
     
     sorted_articles = sorted(articles, key=sort_key, reverse=True)
     
     if VERBOSE:
-        print(f"Sorted {len(sorted_articles)} articles by importance and recency")
-        # トップ5記事の重要度を表示
+        print(f"Sorted {len(sorted_articles)} articles by timestamp (newest first)")
+        # トップ5記事のタイムスタンプを表示
         for i, article in enumerate(sorted_articles[:5]):
-            importance = calculate_article_importance(article)
-            print(f"  #{i+1}: {article.get('title', 'Unknown')[:50]}... (Score: {importance})")
+            timestamp = parse_article_timestamp(article)
+            print(f"  #{i+1}: {article.get('title', 'Unknown')[:50]}... (Time: {timestamp})")
     
     return sorted_articles
 
@@ -154,41 +199,24 @@ def enhance_articles_for_display(articles):
         if len(summary) > 300:
             enhanced_article["summary"] = summary[:297] + "..."
         
-        # 日付・時刻のフォーマット
-        published = article.get("published", "")
-        fetched_at = article.get("fetched_at", "")
+        # タイムスタンプのパースとフォーマット
+        timestamp = parse_article_timestamp(article)
         
-        if published:
-            try:
-                # ISOフォーマットの日付を日本語フォーマットに変換
-                if "T" in published:
-                    date_part = published.split("T")[0]
-                    time_part = published.split("T")[1][:8] if "T" in published else ""
-                    enhanced_article["published_formatted"] = f"{date_part} {time_part}"
-                    enhanced_article["published_date_only"] = date_part
-                else:
-                    enhanced_article["published_formatted"] = published[:16]  # YYYY-MM-DD HH:MM
-                    enhanced_article["published_date_only"] = published[:10]
-            except:
-                enhanced_article["published_formatted"] = published[:16] if published else "不明"
-                enhanced_article["published_date_only"] = published[:10] if published else "不明"
-        elif fetched_at:
-            try:
-                # 取得時刻を使用
-                if "T" in fetched_at:
-                    date_part = fetched_at.split("T")[0]
-                    time_part = fetched_at.split("T")[1][:8]
-                    enhanced_article["published_formatted"] = f"{date_part} {time_part}"
-                    enhanced_article["published_date_only"] = date_part
-                else:
-                    enhanced_article["published_formatted"] = fetched_at[:16]
-                    enhanced_article["published_date_only"] = fetched_at[:10]
-            except:
-                enhanced_article["published_formatted"] = "不明"
-                enhanced_article["published_date_only"] = "不明"
-        else:
+        # API用のISOフォーマット
+        enhanced_article["timestamp"] = timestamp.isoformat()
+        enhanced_article["timestamp_unix"] = int(timestamp.timestamp())
+        
+        # 表示用フォーマット
+        try:
+            enhanced_article["published_formatted"] = timestamp.strftime("%Y-%m-%d %H:%M")
+            enhanced_article["published_date_only"] = timestamp.strftime("%Y-%m-%d")
+            enhanced_article["published_time_only"] = timestamp.strftime("%H:%M")
+            enhanced_article["published_relative"] = get_relative_time(timestamp)
+        except:
             enhanced_article["published_formatted"] = "不明"
             enhanced_article["published_date_only"] = "不明"
+            enhanced_article["published_time_only"] = ""
+            enhanced_article["published_relative"] = "不明"
         
         # アフィリエイトリンクの存在確認
         affiliate_links = article.get("affiliate_links", {})
@@ -323,57 +351,86 @@ def generate_sources_menu(all_articles):
     
     return sorted_sources
 
-def generate_multiple_pages(enhanced_articles, stats, template):
-    """複数ページを生成"""
-    total_articles = len(enhanced_articles)
-    total_pages = (total_articles + ARTICLES_PER_PAGE - 1) // ARTICLES_PER_PAGE
-    
-    # 全ページで共通のメニューを生成
+def generate_api_data(enhanced_articles, stats):
+    """記事データをJSON API用に出力"""
     category_menu = generate_category_menu(enhanced_articles)
     sources_menu = generate_sources_menu(enhanced_articles)
     
-    generated_files = []
-    
-    for page_num in range(1, total_pages + 1):
-        # ページネーション
-        page_articles, pagination_info = paginate_articles(enhanced_articles, page_num)
-        
-        # テンプレートに渡すデータを準備
-        template_data = {
-            "site_title": "日本のテックニュース速報",
-            "site_description": "最新のテクノロジーニュースと関連商品をお届け",
-            "update_time": UPDATE_TIME,
-            "articles": page_articles,
-            "pagination": pagination_info,
+    api_data = {
+        "meta": {
             "total_articles": stats["total_articles"],
+            "total_pages": (len(enhanced_articles) + ARTICLES_PER_PAGE - 1) // ARTICLES_PER_PAGE,
+            "articles_per_page": ARTICLES_PER_PAGE,
             "total_affiliate_links": stats["total_affiliate_links"],
             "total_feeds": stats["total_feeds"],
-            "generation_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "category_menu": category_menu,  # カテゴリメニューを追加
-            "sources_menu": sources_menu,  # 情報源メニューを追加
-            "current_page": page_num,
-            "total_pages": total_pages
-        }
-        
-        # HTML生成
-        html_content = template.render(**template_data)
-        
-        # ファイル名決定
-        if page_num == 1:
-            output_file = FINAL_HTML_FILE
-        else:
-            output_file = os.path.join(OUTPUT_DIR, f"page{page_num}.html")
-        
-        # HTMLファイル保存
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write(html_content)
-        
-        generated_files.append(output_file)
-        
-        if VERBOSE:
-            print(f"Generated page {page_num}/{total_pages}: {output_file}")
+            "last_updated": UPDATE_TIME,
+            "generated_at": datetime.now().isoformat()
+        },
+        "categories": [{
+            "name": category,
+            "count": count
+        } for category, count in category_menu],
+        "sources": [{
+            "name": source_name,
+            "url": source_info["url"],
+            "count": source_info["count"]
+        } for source_name, source_info in sources_menu],
+        "articles": enhanced_articles
+    }
     
-    return generated_files, total_pages
+    # JSONファイルとして出力
+    api_file = os.path.join(OUTPUT_DIR, "articles.json")
+    with open(api_file, 'w', encoding='utf-8') as f:
+        json.dump(api_data, f, ensure_ascii=False, indent=2)
+    
+    if VERBOSE:
+        print(f"API data saved: {api_file}")
+    
+    return api_data
+
+def generate_spa_as_main(enhanced_articles, stats):
+    """SPAをメインのindex.htmlとして生成"""
+    # SPA用テンプレートを読み込み
+    spa_template_path = "templates/spa.html"
+    
+    if not os.path.exists(spa_template_path):
+        print(f"Error: SPA template not found: {spa_template_path}")
+        return None
+    
+    with open(spa_template_path, 'r', encoding='utf-8') as f:
+        spa_content = f.read()
+    
+    # メインのindex.htmlとして出力
+    main_output_file = FINAL_HTML_FILE
+    with open(main_output_file, 'w', encoding='utf-8') as f:
+        f.write(spa_content)
+    
+    if VERBOSE:
+        print(f"SPA generated as main page: {main_output_file}")
+    
+    return [main_output_file]
+
+def generate_spa_version(enhanced_articles, stats):
+    """シングルページアプリケーション版を生成"""
+    # SPA用テンプレートを読み込み
+    spa_template_path = "templates/spa.html"
+    
+    if not os.path.exists(spa_template_path):
+        print(f"Warning: SPA template not found: {spa_template_path}")
+        return None
+    
+    with open(spa_template_path, 'r', encoding='utf-8') as f:
+        spa_content = f.read()
+    
+    # SPA用HTMLファイルを出力
+    spa_output_file = os.path.join(OUTPUT_DIR, "spa.html")
+    with open(spa_output_file, 'w', encoding='utf-8') as f:
+        f.write(spa_content)
+    
+    if VERBOSE:
+        print(f"SPA version generated: {spa_output_file}")
+    
+    return spa_output_file
 
 def main():
     """メイン処理"""
@@ -404,15 +461,19 @@ def main():
     # 出力ディレクトリ作成
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
-    # 複数ページ生成
+    # APIデータ生成
+    api_data = generate_api_data(enhanced_articles, stats)
+    
+    # SPA版生成
+    spa_file = generate_spa_version(enhanced_articles, stats)
+    
+    # SPA版をメインページとして生成
     try:
-        generated_files, total_pages = generate_multiple_pages(enhanced_articles, stats, template)
+        generated_files = generate_spa_as_main(enhanced_articles, stats)
         
         print(f"\n=== Summary ===")
-        print(f"HTML pages generated: {len(generated_files)}")
+        print(f"SPA page generated: {len(generated_files)}")
         print(f"Total articles: {stats['total_articles']}")
-        print(f"Articles per page: {ARTICLES_PER_PAGE}")
-        print(f"Total pages: {total_pages}")
         print(f"Total affiliate links: {stats['total_affiliate_links']}")
         print(f"Categories: {', '.join(stats['categories'].keys())}")
         
@@ -429,8 +490,8 @@ def main():
             for platform, count in stats["platforms"].items():
                 print(f"  {platform}: {count}")
         
-        # サイトマップ情報生成
-        sitemap = generate_sitemap(enhanced_articles, total_pages)
+        # サイトマップ情報生成（SPA用に調整）
+        sitemap = generate_sitemap(enhanced_articles, 1)  # SPAは1ページ
         sitemap_file = os.path.join(OUTPUT_DIR, "sitemap.json")
         with open(sitemap_file, 'w', encoding='utf-8') as f:
             json.dump(sitemap, f, ensure_ascii=False, indent=2)
@@ -440,7 +501,7 @@ def main():
         
         # ファイルサイズ確認
         main_file_size = os.path.getsize(FINAL_HTML_FILE)
-        print(f"Main page size: {main_file_size:,} bytes")
+        print(f"SPA page size: {main_file_size:,} bytes")
         
         print(f"\n✅ Ready for GitHub Pages deployment!")
         

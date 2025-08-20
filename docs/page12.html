@@ -341,6 +341,21 @@
             color: var(--primary-color);
         }
         
+        .current-page-indicator {
+            display: block;
+            padding: 0.5rem 0.8rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .category-count {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+        
         .category-list {
             margin-bottom: 2rem;
         }
@@ -811,10 +826,11 @@
         </nav>
         
         <div class="update-info">
-            <p><strong>最終更新:</strong> 2025-08-19 21:25:08</p>
+            <p><strong>最終更新:</strong> 2025-08-20 00:56:44</p>
             <p>毎日朝6時に自動更新されます</p>
             <p><strong>更新頻度:</strong> 1日1回（平日・土日問わず）</p>
-            <p><strong>RSS取得数:</strong> 25サイト</p>
+            <p><strong>RSS取得数:</strong> 8サイト</p>
+            <p><strong>アフィリエイトリンク数:</strong> 475件</p>
             
             <p><strong>ページ:</strong> 12 / 12 (全138記事)</p>
             
@@ -1122,77 +1138,180 @@
             <aside class="sidebar">
                 <div class="category-list" id="categories">
                     <h3>カテゴリ</h3>
-                    
-                    
+                    <ul class="sidebar-menu">
                         
-                    
+                        <li>
+                            <a href="#" onclick="showCategory('Apple製品')" class="category-link">
+                                <span class="category-name">Apple製品</span>
+                                <span class="category-count"> (33)</span>
+                            </a>
+                        </li>
                         
-                    
+                        <li>
+                            <a href="#" onclick="showCategory('テクノロジー')" class="category-link">
+                                <span class="category-name">テクノロジー</span>
+                                <span class="category-count"> (33)</span>
+                            </a>
+                        </li>
                         
-                    
+                        <li>
+                            <a href="#" onclick="showCategory('AI・機械学習')" class="category-link">
+                                <span class="category-name">AI・機械学習</span>
+                                <span class="category-count"> (26)</span>
+                            </a>
+                        </li>
                         
-                    
+                        <li>
+                            <a href="#" onclick="showCategory('プログラミング')" class="category-link">
+                                <span class="category-name">プログラミング</span>
+                                <span class="category-count"> (17)</span>
+                            </a>
+                        </li>
                         
-                    
+                        <li>
+                            <a href="#" onclick="showCategory('その他')" class="category-link">
+                                <span class="category-name">その他</span>
+                                <span class="category-count"> (10)</span>
+                            </a>
+                        </li>
                         
-                    
-                    
-                    <div class="category-item">
-                        <a href="#" onclick="showCategory('通信・ネットワーク')" class="category-link">
-                            <span class="category-name">通信・ネットワーク</span>
-                            <span class="category-count">1</span>
-                        </a>
-                    </div>
-                    
-                    <div class="category-item">
-                        <a href="#" onclick="showCategory('セキュリティ')" class="category-link">
-                            <span class="category-name">セキュリティ</span>
-                            <span class="category-count">2</span>
-                        </a>
-                    </div>
-                    
-                    <div class="category-item">
-                        <a href="#" onclick="showCategory('金融・決済')" class="category-link">
-                            <span class="category-name">金融・決済</span>
-                            <span class="category-count">1</span>
-                        </a>
-                    </div>
-                    
-                    <div class="category-item">
-                        <a href="#" onclick="showCategory('ビジネス・経済')" class="category-link">
-                            <span class="category-name">ビジネス・経済</span>
-                            <span class="category-count">2</span>
-                        </a>
-                    </div>
-                    
+                        <li>
+                            <a href="#" onclick="showCategory('Google・Android')" class="category-link">
+                                <span class="category-name">Google・Android</span>
+                                <span class="category-count"> (5)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" onclick="showCategory('ビジネス・経済')" class="category-link">
+                                <span class="category-name">ビジネス・経済</span>
+                                <span class="category-count"> (5)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" onclick="showCategory('セキュリティ')" class="category-link">
+                                <span class="category-name">セキュリティ</span>
+                                <span class="category-count"> (3)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" onclick="showCategory('金融・決済')" class="category-link">
+                                <span class="category-name">金融・決済</span>
+                                <span class="category-count"> (3)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" onclick="showCategory('通信・ネットワーク')" class="category-link">
+                                <span class="category-name">通信・ネットワーク</span>
+                                <span class="category-count"> (3)</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
                 </div>
                 
                 <div class="pages-section">
                     <h3>全ページ</h3>
                     <ul class="sidebar-menu">
-                        <li><a href="index.html" rel="noopener">1ページ目（最新）</a></li>
                         
-                        <li><a href="page2.html" rel="noopener">2ページ目</a></li>
+                        <li>
+                            
+                            <a href="index.html" rel="noopener">
+                                1ページ目（最新）
+                            </a>
+                            
+                        </li>
                         
-                        <li><a href="page3.html" rel="noopener">3ページ目</a></li>
+                        <li>
+                            
+                            <a href="page2.html" rel="noopener">
+                                2ページ目
+                            </a>
+                            
+                        </li>
                         
-                        <li><a href="page4.html" rel="noopener">4ページ目</a></li>
+                        <li>
+                            
+                            <a href="page3.html" rel="noopener">
+                                3ページ目
+                            </a>
+                            
+                        </li>
                         
-                        <li><a href="page5.html" rel="noopener">5ページ目</a></li>
+                        <li>
+                            
+                            <a href="page4.html" rel="noopener">
+                                4ページ目
+                            </a>
+                            
+                        </li>
                         
-                        <li><a href="page6.html" rel="noopener">6ページ目</a></li>
+                        <li>
+                            
+                            <a href="page5.html" rel="noopener">
+                                5ページ目
+                            </a>
+                            
+                        </li>
                         
-                        <li><a href="page7.html" rel="noopener">7ページ目</a></li>
+                        <li>
+                            
+                            <a href="page6.html" rel="noopener">
+                                6ページ目
+                            </a>
+                            
+                        </li>
                         
-                        <li><a href="page8.html" rel="noopener">8ページ目</a></li>
+                        <li>
+                            
+                            <a href="page7.html" rel="noopener">
+                                7ページ目
+                            </a>
+                            
+                        </li>
                         
-                        <li><a href="page9.html" rel="noopener">9ページ目</a></li>
+                        <li>
+                            
+                            <a href="page8.html" rel="noopener">
+                                8ページ目
+                            </a>
+                            
+                        </li>
                         
-                        <li><a href="page10.html" rel="noopener">10ページ目</a></li>
+                        <li>
+                            
+                            <a href="page9.html" rel="noopener">
+                                9ページ目
+                            </a>
+                            
+                        </li>
                         
-                        <li><a href="page11.html" rel="noopener">11ページ目</a></li>
+                        <li>
+                            
+                            <a href="page10.html" rel="noopener">
+                                10ページ目
+                            </a>
+                            
+                        </li>
                         
-                        <li><a href="page12.html" rel="noopener">12ページ目</a></li>
+                        <li>
+                            
+                            <a href="page11.html" rel="noopener">
+                                11ページ目
+                            </a>
+                            
+                        </li>
+                        
+                        <li>
+                            
+                            <span class="current-page-indicator">
+                                12ページ目 • 現在のページ
+                            </span>
+                            
+                        </li>
                         
                     </ul>
                 </div>

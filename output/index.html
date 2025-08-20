@@ -40,13 +40,25 @@
     <meta name="twitter:creator" content="@tech_news_jp">
     
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/">
+    
+    <!-- Performance optimization: Resource hints -->
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="//www.amazon.co.jp">
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    
+    <!-- Critical resource preloading -->
+    <link rel="preload" href="articles.json" as="fetch" crossorigin>
+    
+    <!-- Favicon with optimized loading -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
     
-    <!-- Google Analytics -->
+    <!-- Google Analytics with performance optimization -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8010SR0ZW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -55,9 +67,24 @@
         gtag('config', 'G-C8010SR0ZW');
     </script>
     
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7886055685797359"
-     crossorigin="anonymous"></script>
+    <!-- Google AdSense - deferred for performance -->
+    <script>
+        // Defer AdSense loading until page is idle
+        function loadAdSense() {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7886055685797359';
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+        }
+        
+        // Load AdSense after critical content is loaded
+        if (window.requestIdleCallback) {
+            requestIdleCallback(loadAdSense);
+        } else {
+            setTimeout(loadAdSense, 2000);
+        }
+    </script>
     
     <!-- 構造化データ（JSON-LD）- SPA対応 -->
     <script type="application/ld+json">
@@ -133,7 +160,9 @@
     }
     </script>
     
+    <!-- Critical CSS inlined for immediate rendering -->
     <style>
+        /* Critical above-the-fold styles */
         :root {
             --primary-color: #2563eb;
             --secondary-color: #1e40af;
@@ -147,22 +176,64 @@
             --error-color: #ef4444;
         }
         
-        * {
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
             background: var(--bg-secondary);
+            font-display: swap;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Critical header styles for immediate visibility */
+        header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        /* Loading optimization - critical only */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
+    <!-- Load remaining CSS asynchronously for better performance -->
+    <script>
+        function loadRemainingCSS() {
+            const style = document.createElement('style');
+            style.textContent = \`
             padding: 0 2rem;
         }
         

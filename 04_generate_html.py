@@ -211,10 +211,29 @@ def generate_sitemap(articles, total_pages=1):
     
     return sitemap_data
 
+def generate_category_menu(all_articles):
+    """全記事からカテゴリメニューを生成"""
+    category_stats = {}
+    
+    # カテゴリ別記事数をカウント
+    for article in all_articles:
+        category = article.get("category", "一般")
+        if category not in category_stats:
+            category_stats[category] = 0
+        category_stats[category] += 1
+    
+    # カテゴリを記事数の多い順でソート
+    sorted_categories = sorted(category_stats.items(), key=lambda x: x[1], reverse=True)
+    
+    return sorted_categories
+
 def generate_multiple_pages(enhanced_articles, stats, template):
     """複数ページを生成"""
     total_articles = len(enhanced_articles)
     total_pages = (total_articles + ARTICLES_PER_PAGE - 1) // ARTICLES_PER_PAGE
+    
+    # 全ページで共通のカテゴリメニューを生成
+    category_menu = generate_category_menu(enhanced_articles)
     
     generated_files = []
     
@@ -232,7 +251,10 @@ def generate_multiple_pages(enhanced_articles, stats, template):
             "total_articles": stats["total_articles"],
             "total_affiliate_links": stats["total_affiliate_links"],
             "total_feeds": stats["total_feeds"],
-            "generation_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            "generation_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "category_menu": category_menu,  # カテゴリメニューを追加
+            "current_page": page_num,
+            "total_pages": total_pages
         }
         
         # HTML生成

@@ -226,6 +226,21 @@
             color: var(--primary-color);
         }
         
+        .current-page-indicator {
+            display: block;
+            padding: 0.5rem 0.8rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .category-count {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+        
         .category-list {
             margin-bottom: 2rem;
         }
@@ -699,7 +714,8 @@
             <p><strong>最終更新:</strong> {{ update_time }}</p>
             <p>毎日朝6時に自動更新されます</p>
             <p><strong>更新頻度:</strong> 1日1回（平日・土日問わず）</p>
-            <p><strong>RSS取得数:</strong> 25サイト</p>
+            <p><strong>RSS取得数:</strong> {{ total_feeds }}サイト</p>
+            <p><strong>アフィリエイトリンク数:</strong> {{ total_affiliate_links }}件</p>
             {% if pagination %}
             <p><strong>ページ:</strong> {{ pagination.current_page }} / {{ pagination.total_pages }} (全{{ pagination.total_articles }}記事)</p>
             {% endif %}
@@ -792,26 +808,33 @@
             <aside class="sidebar">
                 <div class="category-list" id="categories">
                     <h3>カテゴリ</h3>
-                    {% set category_counts = {} %}
-                    {% for article in articles %}
-                        {% if category_counts.update({article.category: category_counts.get(article.category, 0) + 1}) %}{% endif %}
-                    {% endfor %}
-                    {% for category, count in category_counts.items() %}
-                    <div class="category-item">
-                        <a href="#" onclick="showCategory('{{ category }}')" class="category-link">
-                            <span class="category-name">{{ category }}</span>
-                            <span class="category-count">{{ count }}</span>
-                        </a>
-                    </div>
-                    {% endfor %}
+                    <ul class="sidebar-menu">
+                        {% for category, count in category_menu %}
+                        <li>
+                            <a href="#" onclick="showCategory('{{ category }}')" class="category-link">
+                                <span class="category-name">{{ category }}</span>
+                                <span class="category-count"> ({{ count }})</span>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
                 </div>
                 
                 <div class="pages-section">
                     <h3>全ページ</h3>
                     <ul class="sidebar-menu">
-                        <li><a href="index.html" rel="noopener">1ページ目（最新）</a></li>
-                        {% for page_num in range(2, pagination.total_pages + 1) if pagination and pagination.total_pages > 1 %}
-                        <li><a href="page{{ page_num }}.html" rel="noopener">{{ page_num }}ページ目</a></li>
+                        {% for page_num in range(1, total_pages + 1) %}
+                        <li>
+                            {% if page_num == current_page %}
+                            <span class="current-page-indicator">
+                                {{ page_num }}ページ目{% if page_num == 1 %}（最新）{% endif %} • 現在のページ
+                            </span>
+                            {% else %}
+                            <a href="{% if page_num == 1 %}index.html{% else %}page{{ page_num }}.html{% endif %}" rel="noopener">
+                                {{ page_num }}ページ目{% if page_num == 1 %}（最新）{% endif %}
+                            </a>
+                            {% endif %}
+                        </li>
                         {% endfor %}
                     </ul>
                 </div>

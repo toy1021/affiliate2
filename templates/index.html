@@ -241,6 +241,12 @@
             font-size: 0.8rem;
         }
         
+        .source-count {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            margin-left: 0.3rem;
+        }
+        
         .category-list {
             margin-bottom: 2rem;
         }
@@ -473,11 +479,26 @@
         
         .article-meta {
             display: flex;
-            justify-content: space-between;
+            gap: 1rem;
             align-items: center;
             margin-bottom: 1rem;
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+        }
+        
+        .article-date {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.8rem;
+            background: rgba(37, 99, 235, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .article-source {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
         }
         
         .category-tag {
@@ -712,10 +733,10 @@
         
         <div class="update-info">
             <p><strong>最終更新:</strong> {{ update_time }}</p>
-            <p>毎日朝6時に自動更新されます</p>
-            <p><strong>更新頻度:</strong> 1日1回（平日・土日問わず）</p>
-            <p><strong>RSS取得数:</strong> {{ total_feeds }}サイト</p>
-            <p><strong>アフィリエイトリンク数:</strong> {{ total_affiliate_links }}件</p>
+            <p>✨ 新しい記事が投稿されるとリアルタイムで自動更新されます</p>
+            <p><strong>RSS監視サイト:</strong> {{ total_feeds }}サイト</p>
+            <p><strong>アフィリエイトリンク:</strong> {{ total_affiliate_links }}件</p>
+            <p><strong>更新間隔:</strong> リアルタイム（新記事検知時）</p>
             {% if pagination %}
             <p><strong>ページ:</strong> {{ pagination.current_page }} / {{ pagination.total_pages }} (全{{ pagination.total_articles }}記事)</p>
             {% endif %}
@@ -727,8 +748,9 @@
                     {% for article in articles %}
                     <article class="article-card" data-category="{{ article.category }}">
                         <div class="article-meta">
+                            <span class="article-date">{{ article.published_formatted }}</span>
                             <span class="category-tag">{{ article.category|title }}</span>
-                            <span>{{ article.source_name }}</span>
+                            <span class="article-source">{{ article.source_name }}</span>
                         </div>
                         
                         <h2 class="article-title">
@@ -840,18 +862,16 @@
                 </div>
                 
                 <div class="affiliate-section" id="sources">
-                    <h3>情報源</h3>
+                    <h3>情報源 ({{ sources_menu|length }}サイト)</h3>
                     <ul class="sidebar-menu">
-                        <li><a href="https://japan.cnet.com/" target="_blank" rel="noopener">CNET Japan</a></li>
-                        <li><a href="https://www.publickey1.jp/" target="_blank" rel="noopener">Publickey</a></li>
-                        <li><a href="https://ascii.jp/" target="_blank" rel="noopener">ASCII.jp</a></li>
-                        <li><a href="https://www.itmedia.co.jp/" target="_blank" rel="noopener">ITmedia</a></li>
-                        <li><a href="https://www.watch.impress.co.jp/" target="_blank" rel="noopener">Impress Watch</a></li>
-                        <li><a href="https://gihyo.jp/" target="_blank" rel="noopener">技術評論社</a></li>
-                        <li><a href="https://jp.techcrunch.com/" target="_blank" rel="noopener">TechCrunch Japan</a></li>
-                        <li><a href="https://news.mynavi.jp/" target="_blank" rel="noopener">マイナビニュース</a></li>
-                        <li><a href="https://www.4gamer.net/" target="_blank" rel="noopener">4Gamer</a></li>
-                        <li><a href="https://diamond.jp/" target="_blank" rel="noopener">ダイヤモンドオンライン</a></li>
+                        {% for source_name, source_info in sources_menu %}
+                        <li>
+                            <a href="{{ source_info.url }}" target="_blank" rel="noopener">
+                                {{ source_name|replace('最新情報　総合', '')|replace('最新情報', '')|trim }}
+                                <span class="source-count">({{ source_info.count }})</span>
+                            </a>
+                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
                 

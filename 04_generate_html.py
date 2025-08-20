@@ -154,16 +154,41 @@ def enhance_articles_for_display(articles):
         if len(summary) > 300:
             enhanced_article["summary"] = summary[:297] + "..."
         
-        # 日付のフォーマット
+        # 日付・時刻のフォーマット
         published = article.get("published", "")
+        fetched_at = article.get("fetched_at", "")
+        
         if published:
             try:
-                # 簡単な日付フォーマット処理
-                enhanced_article["published_formatted"] = published[:10]  # YYYY-MM-DD
+                # ISOフォーマットの日付を日本語フォーマットに変換
+                if "T" in published:
+                    date_part = published.split("T")[0]
+                    time_part = published.split("T")[1][:8] if "T" in published else ""
+                    enhanced_article["published_formatted"] = f"{date_part} {time_part}"
+                    enhanced_article["published_date_only"] = date_part
+                else:
+                    enhanced_article["published_formatted"] = published[:16]  # YYYY-MM-DD HH:MM
+                    enhanced_article["published_date_only"] = published[:10]
+            except:
+                enhanced_article["published_formatted"] = published[:16] if published else "不明"
+                enhanced_article["published_date_only"] = published[:10] if published else "不明"
+        elif fetched_at:
+            try:
+                # 取得時刻を使用
+                if "T" in fetched_at:
+                    date_part = fetched_at.split("T")[0]
+                    time_part = fetched_at.split("T")[1][:8]
+                    enhanced_article["published_formatted"] = f"{date_part} {time_part}"
+                    enhanced_article["published_date_only"] = date_part
+                else:
+                    enhanced_article["published_formatted"] = fetched_at[:16]
+                    enhanced_article["published_date_only"] = fetched_at[:10]
             except:
                 enhanced_article["published_formatted"] = "不明"
+                enhanced_article["published_date_only"] = "不明"
         else:
             enhanced_article["published_formatted"] = "不明"
+            enhanced_article["published_date_only"] = "不明"
         
         # アフィリエイトリンクの存在確認
         affiliate_links = article.get("affiliate_links", {})
@@ -227,13 +252,85 @@ def generate_category_menu(all_articles):
     
     return sorted_categories
 
+def generate_sources_menu(all_articles):
+    """全記事から情報源メニューを生成"""
+    sources_info = {}
+    
+    # ソース別記事数をカウントし、URLも保存
+    for article in all_articles:
+        source_name = article.get("source_name", "Unknown")
+        source_feed = article.get("source_feed", "")
+        
+        if source_name not in sources_info:
+            # フィードURLからメインサイトURLを推定
+            main_url = ""
+            if source_feed:
+                if "cnet.com" in source_feed:
+                    main_url = "https://japan.cnet.com/"
+                elif "publickey1.jp" in source_feed:
+                    main_url = "https://www.publickey1.jp/"
+                elif "itmedia" in source_feed:
+                    main_url = "https://www.itmedia.co.jp/"
+                elif "impress" in source_feed:
+                    main_url = "https://www.watch.impress.co.jp/"
+                elif "gihyo.jp" in source_feed:
+                    main_url = "https://gihyo.jp/"
+                elif "techcrunch" in source_feed:
+                    main_url = "https://jp.techcrunch.com/"
+                elif "mynavi" in source_feed:
+                    main_url = "https://news.mynavi.jp/"
+                elif "ascii.jp" in source_feed:
+                    main_url = "https://ascii.jp/"
+                elif "4gamer" in source_feed:
+                    main_url = "https://www.4gamer.net/"
+                elif "diamond.jp" in source_feed:
+                    main_url = "https://diamond.jp/"
+                elif "toyokeizai" in source_feed:
+                    main_url = "https://toyokeizai.net/"
+                elif "newspicks" in source_feed:
+                    main_url = "https://newspicks.com/"
+                elif "zenn.dev" in source_feed:
+                    main_url = "https://zenn.dev/"
+                elif "qiita.com" in source_feed:
+                    main_url = "https://qiita.com/"
+                elif "iphone-mania" in source_feed:
+                    main_url = "https://iphone-mania.jp/"
+                elif "taisy0.com" in source_feed:
+                    main_url = "https://taisy0.com/"
+                elif "sankei" in source_feed:
+                    main_url = "https://www.sankei.com/"
+                elif "yahoo.co.jp" in source_feed:
+                    main_url = "https://news.yahoo.co.jp/"
+                else:
+                    # ドメインを抽出してメインURLを作成
+                    try:
+                        from urllib.parse import urlparse
+                        parsed = urlparse(source_feed)
+                        main_url = f"{parsed.scheme}://{parsed.netloc}/"
+                    except:
+                        main_url = source_feed
+            
+            sources_info[source_name] = {
+                "count": 0,
+                "url": main_url,
+                "feed_url": source_feed
+            }
+        
+        sources_info[source_name]["count"] += 1
+    
+    # 記事数の多い順でソート
+    sorted_sources = sorted(sources_info.items(), key=lambda x: x[1]["count"], reverse=True)
+    
+    return sorted_sources
+
 def generate_multiple_pages(enhanced_articles, stats, template):
     """複数ページを生成"""
     total_articles = len(enhanced_articles)
     total_pages = (total_articles + ARTICLES_PER_PAGE - 1) // ARTICLES_PER_PAGE
     
-    # 全ページで共通のカテゴリメニューを生成
+    # 全ページで共通のメニューを生成
     category_menu = generate_category_menu(enhanced_articles)
+    sources_menu = generate_sources_menu(enhanced_articles)
     
     generated_files = []
     
@@ -253,6 +350,7 @@ def generate_multiple_pages(enhanced_articles, stats, template):
             "total_feeds": stats["total_feeds"],
             "generation_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "category_menu": category_menu,  # カテゴリメニューを追加
+            "sources_menu": sources_menu,  # 情報源メニューを追加
             "current_page": page_num,
             "total_pages": total_pages
         }

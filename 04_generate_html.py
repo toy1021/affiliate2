@@ -17,17 +17,10 @@ from config import (
 )
 
 def load_template():
-    """HTMLテンプレートを読み込み"""
-    template_dir = "templates"
-    template_file = "index.html"
-    
-    if not os.path.exists(os.path.join(template_dir, template_file)):
-        print(f"Error: Template file not found: {template_dir}/{template_file}")
-        return None
-    
-    env = Environment(loader=FileSystemLoader(template_dir))
-    template = env.get_template(template_file)
-    return template
+    """HTMLテンプレートを読み込み（SPAのみ）"""
+    # SPAオンリーなのでテンプレート読み込みは不要
+    # 直接SPAファイルを使用
+    return None
 
 def calculate_article_quality_score(article):
     """記事の品質スコアを計算"""
@@ -571,10 +564,7 @@ def main():
         print(f"Error: {AFFILIATE_ARTICLES_FILE} not found. Run 03_add_affiliate.py first.")
         return
     
-    # テンプレート読み込み
-    template = load_template()
-    if not template:
-        return
+    # SPAオンリーのためテンプレートチェック不要
     
     # アフィリエイト処理済みデータを読み込み
     with open(AFFILIATE_ARTICLES_FILE, 'r', encoding='utf-8') as f:

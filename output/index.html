@@ -576,6 +576,12 @@
                     cursor: not-allowed;
                 }
                 
+                .pagination-btn.active {
+                    background: var(--primary-color);
+                    color: white;
+                    font-weight: 600;
+                }
+                
                 .pagination-info {
                     color: var(--text-secondary);
                     font-size: 0.9rem;
@@ -1059,18 +1065,45 @@
                 
                 // Previous button
                 if (this.currentPage > 1) {
-                    html += `<a href="#" class="pagination-btn" data-page="${this.currentPage - 1}">← 前のページ</a>`;
+                    html += `<a href="#" class="pagination-btn" data-page="${this.currentPage - 1}">← 前</a>`;
                 } else {
-                    html += `<span class="pagination-btn disabled">← 前のページ</span>`;
+                    html += `<span class="pagination-btn disabled">← 前</span>`;
                 }
                 
-                html += `<span class="pagination-info">${this.currentPage} / ${totalPages}</span>`;
+                // Page numbers (show up to 5 pages around current page)
+                const startPage = Math.max(1, this.currentPage - 2);
+                const endPage = Math.min(totalPages, this.currentPage + 2);
+                
+                // First page if not in range
+                if (startPage > 1) {
+                    html += `<a href="#" class="pagination-btn" data-page="1">1</a>`;
+                    if (startPage > 2) {
+                        html += `<span class="pagination-btn disabled">...</span>`;
+                    }
+                }
+                
+                // Page numbers in range
+                for (let i = startPage; i <= endPage; i++) {
+                    if (i === this.currentPage) {
+                        html += `<span class="pagination-btn active">${i}</span>`;
+                    } else {
+                        html += `<a href="#" class="pagination-btn" data-page="${i}">${i}</a>`;
+                    }
+                }
+                
+                // Last page if not in range
+                if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                        html += `<span class="pagination-btn disabled">...</span>`;
+                    }
+                    html += `<a href="#" class="pagination-btn" data-page="${totalPages}">${totalPages}</a>`;
+                }
                 
                 // Next button
                 if (this.currentPage < totalPages) {
-                    html += `<a href="#" class="pagination-btn" data-page="${this.currentPage + 1}">次のページ →</a>`;
+                    html += `<a href="#" class="pagination-btn" data-page="${this.currentPage + 1}">次 →</a>`;
                 } else {
-                    html += `<span class="pagination-btn disabled">次のページ →</span>`;
+                    html += `<span class="pagination-btn disabled">次 →</span>`;
                 }
                 
                 pagination.innerHTML = html;
@@ -1134,4 +1167,4 @@
         // Affiliate link styles are now loaded with non-critical CSS above
     </script>
 </body>
-</html><!-- Force rebuild Wed Aug 20 20:11:30 JST 2025 -->
+</html>

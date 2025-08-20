@@ -7,14 +7,32 @@
     <meta name="description" content="AI・機械学習、Apple製品、プログラミングなど最新テクノロジーニュースを毎時自動更新。8つの主要IT情報源から厳選した記事と関連商品をお届け。SPA対応で快適なブラウジング体験を提供。">
     <meta name="keywords" content="テクノロジーニュース,AI,機械学習,Apple,iPhone,プログラミング,Python,JavaScript,IT速報,ガジェット,SPA,毎時更新,自動収集,RSS,アフィリエイト,Amazon,楽天">
     <meta name="author" content="日本のテックニュース速報">
-    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1,noarchive">
+    <meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+    <meta name="bingbot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
     <meta name="language" content="ja">
     <meta name="geo.region" content="JP">
     <meta name="geo.country" content="JP">
-    <meta name="revisit-after" content="1 day">
+    <meta name="revisit-after" content="1 hour">
     <meta name="distribution" content="global">
     <meta name="rating" content="general">
+    <meta name="referrer" content="no-referrer-when-downgrade">
     <meta http-equiv="content-language" content="ja">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="テックニュース速報">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="news_keywords" content="AI,機械学習,Apple,iPhone,プログラミング,Python,JavaScript,テクノロジー,IT,ガジェット">
+    <meta name="article:tag" content="テクノロジーニュース">
+    <meta name="article:tag" content="IT業界">
+    <meta name="article:tag" content="人工知能">
+    <meta name="article:tag" content="Apple製品">
+    <meta name="article:tag" content="プログラミング">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="日本のテックニュース速報 | 毎時更新される最新IT情報">
@@ -50,6 +68,9 @@
     
     <!-- Critical resource preloading -->
     <link rel="preload" href="articles.json" as="fetch" crossorigin>
+    <link rel="preload" href="sitemap.xml" as="fetch">
+    <link rel="prefetch" href="performance.json">
+    <link rel="prefetch" href="sitemap.json">
     
     <!-- Favicon with optimized loading -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -157,6 +178,115 @@
           "item": "https://toy1021.github.io/affiliate2/"
         }
       ]
+    }
+    </script>
+
+    <!-- CollectionPage構造化データ - ニュース記事コレクション -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "日本のテックニュース記事一覧",
+      "description": "AI・機械学習、Apple製品、プログラミングなど最新テクノロジーニュースの記事一覧。毎時自動更新で最新情報をお届け。",
+      "url": "https://toy1021.github.io/affiliate2/",
+      "inLanguage": "ja",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "日本のテックニュース速報",
+        "url": "https://toy1021.github.io/affiliate2/"
+      },
+      "mainContentOfPage": {
+        "@type": "WebPageElement",
+        "cssSelector": ".articles-grid"
+      },
+      "significantLink": [
+        "https://toy1021.github.io/affiliate2/?category=AI・機械学習",
+        "https://toy1021.github.io/affiliate2/?category=Apple製品",
+        "https://toy1021.github.io/affiliate2/?category=プログラミング"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "日本のテックニュース速報"
+      }
+    }
+    </script>
+
+    <!-- FAQPage構造化データ - よくある質問 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "記事の更新頻度はどのくらいですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "当サイトは毎時自動的に8つの主要IT情報源からRSSフィードを取得し、新しい記事が投稿されるとリアルタイムで更新されます。通常1時間に1回の頻度で更新チェックを行っています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どのような情報源から記事を取得していますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "日本の主要テクノロジーメディア8サイトからRSSフィードを自動取得しています。AI・機械学習、Apple製品、プログラミング、Google・Android、セキュリティなど幅広いカテゴリの最新ニュースを収集しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "アフィリエイトリンクについて教えてください。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "記事に関連する商品やサービスのAmazonアフィリエイトリンクを記事の内容に基づいて自動生成しています。これらのリンクは記事の理解を深めたり、実際に商品を試してみたいユーザーに便利な情報を提供するものです。"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Organization構造化データ - 詳細情報 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "日本のテックニュース速報",
+      "alternateName": "Tech News Japan",
+      "url": "https://toy1021.github.io/affiliate2/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://toy1021.github.io/affiliate2/favicon-192x192.png",
+        "width": 192,
+        "height": 192
+      },
+      "description": "日本最大級のテクノロジーニュース自動収集・配信サービス。AI・機械学習、Apple製品、プログラミングなど最新IT情報を毎時自動更新でお届け。",
+      "foundingDate": "2025",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Japan"
+      },
+      "serviceType": "ニュース配信サービス",
+      "knowsAbout": [
+        "人工知能",
+        "機械学習",
+        "Apple製品",
+        "iPhone",
+        "プログラミング",
+        "JavaScript",
+        "Python",
+        "テクノロジーニュース",
+        "IT業界動向",
+        "ガジェット"
+      ],
+      "sameAs": [
+        "https://github.com/toy1021/affiliate2"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": ["ja", "Japanese"],
+        "areaServed": "JP"
+      }
     }
     </script>
     
@@ -824,6 +954,67 @@
                         ${this.renderAffiliateLinks(article)}
                     </article>
                 `).join('');
+                
+                // Generate structured data for articles
+                this.generateArticleStructuredData(pageArticles);
+            }
+            
+            generateArticleStructuredData(articles) {
+                // Remove existing article structured data
+                const existingStructuredData = document.querySelectorAll('script[data-article-structured-data]');
+                existingStructuredData.forEach(script => script.remove());
+                
+                // Generate ItemList structured data for current page articles
+                const itemListData = {
+                    "@context": "https://schema.org",
+                    "@type": "ItemList",
+                    "name": "テックニュース記事一覧",
+                    "description": `${this.currentCategory ? this.currentCategory + 'カテゴリの' : ''}最新テクノロジーニュース記事`,
+                    "numberOfItems": articles.length,
+                    "itemListElement": articles.map((article, index) => ({
+                        "@type": "ListItem",
+                        "position": index + 1,
+                        "item": {
+                            "@type": "Article",
+                            "@id": article.link || article.original_link,
+                            "headline": article.title,
+                            "description": article.summary || article.title,
+                            "url": article.link || article.original_link,
+                            "datePublished": article.published_at,
+                            "dateModified": article.published_at,
+                            "author": {
+                                "@type": "Organization",
+                                "name": article.source_name
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "日本のテックニュース速報",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://toy1021.github.io/affiliate2/favicon-192x192.png"
+                                }
+                            },
+                            "articleSection": article.category,
+                            "keywords": [article.category, "テクノロジー", "ニュース", "IT"],
+                            "mainEntityOfPage": {
+                                "@type": "WebPage",
+                                "@id": article.link || article.original_link
+                            },
+                            "isPartOf": {
+                                "@type": "WebSite",
+                                "name": "日本のテックニュース速報",
+                                "url": "https://toy1021.github.io/affiliate2/"
+                            }
+                        }
+                    }))
+                };
+                
+                // Create and append the structured data script
+                const script = document.createElement('script');
+                script.type = 'application/ld+json';
+                script.setAttribute('data-article-structured-data', 'true');
+                script.textContent = JSON.stringify(itemListData, null, 2);
+                document.head.appendChild(script);
             }
             
             renderAffiliateLinks(article) {

@@ -253,6 +253,63 @@ def paginate_articles(articles, page=1):
     
     return page_articles, pagination_info
 
+def generate_sitemap_xml(articles):
+    """SEO用のサイトマップXMLを生成"""
+    from xml.etree.ElementTree import Element, SubElement, tostring
+    from xml.dom import minidom
+    
+    # URLセット要素を作成
+    urlset = Element('urlset')
+    urlset.set('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
+    urlset.set('xmlns:news', 'http://www.google.com/schemas/sitemap-news/0.9')
+    
+    # メインページ
+    url = SubElement(urlset, 'url')
+    SubElement(url, 'loc').text = 'https://toy1021.github.io/affiliate2/'
+    SubElement(url, 'lastmod').text = UPDATE_TIME.replace(' ', 'T') + '+09:00'
+    SubElement(url, 'changefreq').text = 'hourly'
+    SubElement(url, 'priority').text = '1.0'
+    
+    # 各記事（最新50件のみ、検索エンジンの負荷軽減）
+    for article in articles[:50]:
+        if not article.get('link'):
+            continue
+            
+        url = SubElement(urlset, 'url')
+        SubElement(url, 'loc').text = article['link']
+        
+        # 記事の最終更新日
+        if article.get('published'):
+            try:
+                # ISO形式に変換
+                timestamp = parse_article_timestamp(article)
+                SubElement(url, 'lastmod').text = timestamp.strftime('%Y-%m-%dT%H:%M:%S+09:00')
+            except:
+                SubElement(url, 'lastmod').text = UPDATE_TIME.replace(' ', 'T') + '+09:00'
+        
+        SubElement(url, 'changefreq').text = 'daily'
+        SubElement(url, 'priority').text = '0.8'
+        
+        # Googleニュース用の追加情報（最新24時間以内の記事のみ）
+        try:
+            article_time = parse_article_timestamp(article)
+            time_diff = datetime.now(timezone.utc) - article_time
+            if time_diff.days == 0:  # 24時間以内
+                news = SubElement(url, 'news:news')
+                publication = SubElement(news, 'news:publication')
+                SubElement(publication, 'news:name').text = 'テックニュース速報'
+                SubElement(publication, 'news:language').text = 'ja'
+                SubElement(news, 'news:publication_date').text = article_time.strftime('%Y-%m-%d')
+                SubElement(news, 'news:title').text = article.get('title', '')
+        except:
+            pass  # ニュース用タグの追加に失敗しても続行
+    
+    # XMLを整形
+    rough_string = tostring(urlset, 'unicode')
+    reparsed = minidom.parseString(rough_string)
+    return reparsed.toprettyxml(indent="  ").replace('<?xml version="1.0" ?>\n', 
+                                                     '<?xml version="1.0" encoding="UTF-8"?>\n')
+
 def generate_sitemap(articles, total_pages=1):
     """簡単なサイトマップ情報を生成（将来の拡張用）"""
     sitemap_data = {
@@ -490,7 +547,16 @@ def main():
             for platform, count in stats["platforms"].items():
                 print(f"  {platform}: {count}")
         
-        # サイトマップ情報生成（SPA用に調整）
+        # サイトマップXML生成（SEO用）
+        sitemap_xml = generate_sitemap_xml(enhanced_articles)
+        sitemap_xml_file = os.path.join(OUTPUT_DIR, "sitemap.xml")
+        with open(sitemap_xml_file, 'w', encoding='utf-8') as f:
+            f.write(sitemap_xml)
+        
+        if VERBOSE:
+            print(f"Sitemap XML saved: {sitemap_xml_file}")
+        
+        # サイトマップJSON情報生成（統計用）
         sitemap = generate_sitemap(enhanced_articles, 1)  # SPAは1ページ
         sitemap_file = os.path.join(OUTPUT_DIR, "sitemap.json")
         with open(sitemap_file, 'w', encoding='utf-8') as f:

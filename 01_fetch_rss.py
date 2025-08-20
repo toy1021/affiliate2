@@ -4,14 +4,38 @@ import feedparser
 import json
 import os
 import requests
-from datetime import datetime
+import hashlib
+from datetime import datetime, timedelta
 from config import RSS_FEEDS, RSS_RAW_FILE, DATA_DIR, MAX_ARTICLES_PER_FEED, DEBUG, VERBOSE
 
+def get_cache_key(url):
+    """URLからキャッシュキーを生成"""
+    return hashlib.md5(url.encode()).hexdigest()
+
+def is_cache_valid(cache_file, max_age_minutes=10):
+    """キャッシュが有効かチェック（15分間隔用に10分で設定）"""
+    if not os.path.exists(cache_file):
+        return False
+    
+    cache_time = datetime.fromtimestamp(os.path.getmtime(cache_file))
+    return datetime.now() - cache_time < timedelta(minutes=max_age_minutes)
+
 def fetch_rss_feed(url):
-    """単一のRSSフィードを取得"""
+    """単一のRSSフィードを取得（キャッシュ機能付き）"""
     try:
+        # キャッシュファイルパス
+        cache_key = get_cache_key(url)
+        cache_file = os.path.join(DATA_DIR, f"cache_{cache_key}.json")
+        
+        # キャッシュが有効な場合は使用
+        if is_cache_valid(cache_file):
+            if VERBOSE:
+                print(f"Using cached data for: {url}")
+            with open(cache_file, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        
         if VERBOSE:
-            print(f"Fetching RSS from: {url}")
+            print(f"Fetching fresh RSS from: {url}")
         
         response = requests.get(url, timeout=10)
         response.raise_for_status()
@@ -40,13 +64,25 @@ def fetch_rss_feed(url):
         if VERBOSE:
             print(f"Fetched {len(articles)} articles from {feed.feed.get('title', url)}")
         
-        return {
+        result = {
             "feed_url": url,
             "feed_title": feed.feed.get("title", "Unknown"),
             "feed_description": feed.feed.get("description", ""),
             "articles": articles,
-            "total_articles": len(articles)
+            "total_articles": len(articles),
+            "cached_at": datetime.now().isoformat()
         }
+        
+        # キャッシュに保存
+        try:
+            os.makedirs(DATA_DIR, exist_ok=True)
+            with open(cache_file, 'w', encoding='utf-8') as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+        except Exception as cache_error:
+            if VERBOSE:
+                print(f"Cache write error for {url}: {cache_error}")
+        
+        return result
         
     except requests.RequestException as e:
         print(f"Error fetching {url}: {e}")

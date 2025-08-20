@@ -1,9 +1,9 @@
-name: Daily RSS Affiliate Update
+name: Realtime RSS Affiliate Update
 
 on:
   schedule:
-    # 毎日朝6時（UTC 21:00 = JST 06:00）に実行
-    - cron: '0 21 * * *'
+    # 15分ごとに実行（リアルタイム更新）
+    - cron: '*/15 * * * *'
   workflow_dispatch:  # 手動実行も可能
   push:
     branches: [ main, master ]
@@ -84,10 +84,10 @@ jobs:
         # Add and commit
         git add docs/
         if ! git diff --staged --quiet; then
-          git commit -m "🚀 Auto-update affiliate content - $(date '+%Y-%m-%d %H:%M')"
+          git commit -m "⚡ Realtime update affiliate content - $(date '+%Y-%m-%d %H:%M')"
           git push
         else
-          echo "No changes to commit"
+          echo "No new articles found - skipping commit"
         fi
       
     - name: Save execution logs
@@ -121,7 +121,7 @@ jobs:
         if [ -f "execution_log.txt" ]; then
           git add execution_log.txt
           if ! git diff --staged --quiet; then
-            git commit -m "📊 Update execution log - $(date '+%Y-%m-%d %H:%M')"
+            git commit -m "📊 Realtime execution log - $(date '+%Y-%m-%d %H:%M')"
             git push
           fi
         fi

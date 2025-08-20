@@ -838,6 +838,34 @@
             new NewsApp();
         });
         
+        // Service Worker registration for improved performance (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+        
+        // Add keyboard shortcuts for better UX
+        document.addEventListener('keydown', (e) => {
+            // Alt + Home: Go to top
+            if (e.altKey && e.key === 'Home') {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+                e.preventDefault();
+            }
+            
+            // Alt + R: Refresh data
+            if (e.altKey && e.key === 'r') {
+                location.reload();
+                e.preventDefault();
+            }
+        });
+        
         // Add affiliate link styles
         const style = document.createElement('style');
         style.textContent = `

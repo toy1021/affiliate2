@@ -29,18 +29,67 @@ def load_template():
     template = env.get_template(template_file)
     return template
 
+def calculate_article_quality_score(article):
+    """記事の品質スコアを計算"""
+    quality_score = 0
+    
+    # タイトル品質
+    title = article.get("title", "")
+    if len(title) >= 10:
+        quality_score += 2
+    if len(title) <= 80:  # SEO最適長
+        quality_score += 1
+    
+    # 要約品質
+    summary = article.get("summary", "")
+    if len(summary) >= 50:
+        quality_score += 2
+    if len(summary) <= 300:  # 適切な長さ
+        quality_score += 1
+    
+    # キーワードの有無
+    if article.get("keywords") and len(article.get("keywords", [])) > 0:
+        quality_score += 1
+    
+    # ソース信頼性
+    trusted_sources = ["CNET", "ITmedia", "Impress", "ASCII", "Publickey", "TechCrunch"]
+    source_name = article.get("source_name", "")
+    if any(trusted in source_name for trusted in trusted_sources):
+        quality_score += 2
+    
+    # 公開日の新しさ
+    try:
+        timestamp = parse_article_timestamp(article)
+        hours_old = (datetime.now(timezone.utc) - timestamp).total_seconds() / 3600
+        if hours_old < 24:
+            quality_score += 3
+        elif hours_old < 72:
+            quality_score += 2
+        elif hours_old < 168:
+            quality_score += 1
+    except:
+        pass
+    
+    return quality_score
+
 def calculate_article_importance(article):
-    """記事の重要度を計算"""
+    """記事の重要度を計算（品質スコア統合版）"""
     importance_score = 0
     
+    # 基本品質スコア
+    importance_score += calculate_article_quality_score(article)
+    
     # キーワードベースの重要度
-    high_priority_keywords = ["AI", "ChatGPT", "iPhone", "Tesla", "Bitcoin", "IPO", "買収", "新機能"]
+    high_priority_keywords = ["AI", "ChatGPT", "iPhone", "Tesla", "Bitcoin", "IPO", "買収", "新機能", "発表", "リリース"]
     keywords = article.get("keywords", [])
+    title = article.get("title", "").lower()
+    
+    for keyword in high_priority_keywords:
+        if keyword.lower() in title or keyword in keywords:
+            importance_score += 3
     
     for keyword in keywords:
-        if keyword in high_priority_keywords:
-            importance_score += 3
-        else:
+        if keyword not in high_priority_keywords:
             importance_score += 1
     
     # カテゴリベースの重要度
@@ -59,11 +108,6 @@ def calculate_article_importance(article):
     
     category = article.get("category", "")
     importance_score += category_weights.get(category, 2)
-    
-    # タイトルに重要キーワードがある場合
-    title = article.get("title", "").lower()
-    if any(word in title for word in ["新機能", "発表", "リリース", "画期的", "世界初"]):
-        importance_score += 5
     
     # アフィリエイトリンク数による調整
     affiliate_links = article.get("affiliate_links", {})
@@ -489,8 +533,38 @@ def generate_spa_version(enhanced_articles, stats):
     
     return spa_output_file
 
+def generate_performance_report(enhanced_articles, stats, execution_time):
+    """パフォーマンスレポートを生成"""
+    report = {
+        "generated_at": datetime.now().isoformat(),
+        "execution_time_seconds": execution_time,
+        "articles_processed": len(enhanced_articles),
+        "processing_rate": len(enhanced_articles) / execution_time if execution_time > 0 else 0,
+        "total_affiliate_links": stats["total_affiliate_links"],
+        "categories_count": len(stats["categories"]),
+        "memory_usage": {
+            "articles_size_kb": len(json.dumps(enhanced_articles, ensure_ascii=False)) / 1024,
+            "total_files_generated": 4  # index.html, spa.html, articles.json, sitemap.xml
+        },
+        "health_status": "healthy" if execution_time < 120 else "slow",
+        "warnings": []
+    }
+    
+    # 警告の追加
+    if execution_time > 90:
+        report["warnings"].append("Execution time over 90 seconds")
+    if len(enhanced_articles) < 50:
+        report["warnings"].append("Low article count (less than 50)")
+    if stats["total_affiliate_links"] < 100:
+        report["warnings"].append("Low affiliate link count (less than 100)")
+    
+    return report
+
 def main():
     """メイン処理"""
+    import time
+    start_time = time.time()
+    
     print("=== HTML Generator ===")
     
     if not os.path.exists(AFFILIATE_ARTICLES_FILE):
@@ -568,6 +642,24 @@ def main():
         # ファイルサイズ確認
         main_file_size = os.path.getsize(FINAL_HTML_FILE)
         print(f"SPA page size: {main_file_size:,} bytes")
+        
+        # パフォーマンスレポート生成
+        execution_time = time.time() - start_time
+        perf_report = generate_performance_report(enhanced_articles, stats, execution_time)
+        
+        perf_report_file = os.path.join(OUTPUT_DIR, "performance.json")
+        with open(perf_report_file, 'w', encoding='utf-8') as f:
+            json.dump(perf_report, f, ensure_ascii=False, indent=2)
+        
+        if VERBOSE:
+            print(f"Performance report saved: {perf_report_file}")
+            print(f"Execution time: {execution_time:.2f}s")
+            print(f"Processing rate: {perf_report['processing_rate']:.1f} articles/sec")
+            print(f"Health status: {perf_report['health_status']}")
+            if perf_report['warnings']:
+                print("⚠️  Warnings:")
+                for warning in perf_report['warnings']:
+                    print(f"   - {warning}")
         
         print(f"\n✅ Ready for GitHub Pages deployment!")
         

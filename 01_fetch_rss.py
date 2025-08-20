@@ -86,6 +86,20 @@ def fetch_rss_feed(url):
         
     except requests.RequestException as e:
         print(f"Error fetching {url}: {e}")
+        # 既存キャッシュがあれば古いデータでも返す（フォールバック）
+        try:
+            cache_key = get_cache_key(url)
+            fallback_cache = os.path.join(DATA_DIR, f"cache_{cache_key}.json")
+            if os.path.exists(fallback_cache):
+                if VERBOSE:
+                    print(f"Using stale cache as fallback for: {url}")
+                with open(fallback_cache, 'r', encoding='utf-8') as f:
+                    fallback_data = json.load(f)
+                    fallback_data["is_fallback"] = True
+                    return fallback_data
+        except Exception as fallback_error:
+            if VERBOSE:
+                print(f"Fallback cache read error: {fallback_error}")
         return None
     except Exception as e:
         print(f"Unexpected error processing {url}: {e}")

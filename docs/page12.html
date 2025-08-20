@@ -356,6 +356,12 @@
             font-size: 0.8rem;
         }
         
+        .source-count {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            margin-left: 0.3rem;
+        }
+        
         .category-list {
             margin-bottom: 2rem;
         }
@@ -588,11 +594,26 @@
         
         .article-meta {
             display: flex;
-            justify-content: space-between;
+            gap: 1rem;
             align-items: center;
             margin-bottom: 1rem;
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+        }
+        
+        .article-date {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.8rem;
+            background: rgba(37, 99, 235, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .article-source {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
         }
         
         .category-tag {
@@ -826,11 +847,11 @@
         </nav>
         
         <div class="update-info">
-            <p><strong>最終更新:</strong> 2025-08-20 00:56:44</p>
-            <p>毎日朝6時に自動更新されます</p>
-            <p><strong>更新頻度:</strong> 1日1回（平日・土日問わず）</p>
-            <p><strong>RSS取得数:</strong> 8サイト</p>
-            <p><strong>アフィリエイトリンク数:</strong> 475件</p>
+            <p><strong>最終更新:</strong> 2025-08-20 01:26:10</p>
+            <p>✨ 新しい記事が投稿されるとリアルタイムで自動更新されます</p>
+            <p><strong>RSS監視サイト:</strong> 8サイト</p>
+            <p><strong>アフィリエイトリンク:</strong> 475件</p>
+            <p><strong>更新間隔:</strong> リアルタイム（新記事検知時）</p>
             
             <p><strong>ページ:</strong> 12 / 12 (全138記事)</p>
             
@@ -842,8 +863,9 @@
                     
                     <article class="article-card" data-category="通信・ネットワーク">
                         <div class="article-meta">
+                            <span class="article-date"> ue, 19 A</span>
                             <span class="category-tag">通信・ネットワーク</span>
-                            <span>Yahoo!ニュース・トピックス - IT</span>
+                            <span class="article-source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
                         
                         <h2 class="article-title">
@@ -880,8 +902,9 @@
                     
                     <article class="article-card" data-category="セキュリティ">
                         <div class="article-meta">
+                            <span class="article-date">Mon, 18 Aug 2025 20:43:32 GM </span>
                             <span class="category-tag">セキュリティ</span>
-                            <span>Zennのトレンド</span>
+                            <span class="article-source">Zennのトレンド</span>
                         </div>
                         
                         <h2 class="article-title">
@@ -918,8 +941,9 @@
                     
                     <article class="article-card" data-category="金融・決済">
                         <div class="article-meta">
+                            <span class="article-date">2025-08-20 01:25:53</span>
                             <span class="category-tag">金融・決済</span>
-                            <span>CNET Japan 最新情報　総合</span>
+                            <span class="article-source">CNET Japan 最新情報　総合</span>
                         </div>
                         
                         <h2 class="article-title">
@@ -956,8 +980,9 @@
                     
                     <article class="article-card" data-category="セキュリティ">
                         <div class="article-meta">
+                            <span class="article-date">2025-08-17 10:34:44</span>
                             <span class="category-tag">セキュリティ</span>
-                            <span>Qiita - 人気の記事</span>
+                            <span class="article-source">Qiita - 人気の記事</span>
                         </div>
                         
                         <h2 class="article-title">
@@ -994,8 +1019,9 @@
                     
                     <article class="article-card" data-category="ビジネス・経済">
                         <div class="article-meta">
+                            <span class="article-date">2025-08-04 15:25:14</span>
                             <span class="category-tag">ビジネス・経済</span>
-                            <span>Publickey</span>
+                            <span class="article-source">Publickey</span>
                         </div>
                         
                         <h2 class="article-title">
@@ -1032,8 +1058,9 @@
                     
                     <article class="article-card" data-category="ビジネス・経済">
                         <div class="article-meta">
+                            <span class="article-date">2025-08-03 16:02:40</span>
                             <span class="category-tag">ビジネス・経済</span>
-                            <span>Publickey</span>
+                            <span class="article-source">Publickey</span>
                         </div>
                         
                         <h2 class="article-title">
@@ -1141,6 +1168,13 @@
                     <ul class="sidebar-menu">
                         
                         <li>
+                            <a href="#" onclick="showCategory('テクノロジー')" class="category-link">
+                                <span class="category-name">テクノロジー</span>
+                                <span class="category-count"> (34)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
                             <a href="#" onclick="showCategory('Apple製品')" class="category-link">
                                 <span class="category-name">Apple製品</span>
                                 <span class="category-count"> (33)</span>
@@ -1148,23 +1182,16 @@
                         </li>
                         
                         <li>
-                            <a href="#" onclick="showCategory('テクノロジー')" class="category-link">
-                                <span class="category-name">テクノロジー</span>
-                                <span class="category-count"> (33)</span>
-                            </a>
-                        </li>
-                        
-                        <li>
                             <a href="#" onclick="showCategory('AI・機械学習')" class="category-link">
                                 <span class="category-name">AI・機械学習</span>
-                                <span class="category-count"> (26)</span>
+                                <span class="category-count"> (25)</span>
                             </a>
                         </li>
                         
                         <li>
                             <a href="#" onclick="showCategory('プログラミング')" class="category-link">
                                 <span class="category-name">プログラミング</span>
-                                <span class="category-count"> (17)</span>
+                                <span class="category-count"> (16)</span>
                             </a>
                         </li>
                         
@@ -1207,6 +1234,13 @@
                             <a href="#" onclick="showCategory('通信・ネットワーク')" class="category-link">
                                 <span class="category-name">通信・ネットワーク</span>
                                 <span class="category-count"> (3)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" onclick="showCategory('ガジェット')" class="category-link">
+                                <span class="category-name">ガジェット</span>
+                                <span class="category-count"> (1)</span>
                             </a>
                         </li>
                         
@@ -1317,18 +1351,65 @@
                 </div>
                 
                 <div class="affiliate-section" id="sources">
-                    <h3>情報源</h3>
+                    <h3>情報源 (8サイト)</h3>
                     <ul class="sidebar-menu">
-                        <li><a href="https://japan.cnet.com/" target="_blank" rel="noopener">CNET Japan</a></li>
-                        <li><a href="https://www.publickey1.jp/" target="_blank" rel="noopener">Publickey</a></li>
-                        <li><a href="https://ascii.jp/" target="_blank" rel="noopener">ASCII.jp</a></li>
-                        <li><a href="https://www.itmedia.co.jp/" target="_blank" rel="noopener">ITmedia</a></li>
-                        <li><a href="https://www.watch.impress.co.jp/" target="_blank" rel="noopener">Impress Watch</a></li>
-                        <li><a href="https://gihyo.jp/" target="_blank" rel="noopener">技術評論社</a></li>
-                        <li><a href="https://jp.techcrunch.com/" target="_blank" rel="noopener">TechCrunch Japan</a></li>
-                        <li><a href="https://news.mynavi.jp/" target="_blank" rel="noopener">マイナビニュース</a></li>
-                        <li><a href="https://www.4gamer.net/" target="_blank" rel="noopener">4Gamer</a></li>
-                        <li><a href="https://diamond.jp/" target="_blank" rel="noopener">ダイヤモンドオンライン</a></li>
+                        
+                        <li>
+                            <a href="https://zenn.dev/" target="_blank" rel="noopener">
+                                Zennのトレンド
+                                <span class="source-count">(20)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://japan.cnet.com/" target="_blank" rel="noopener">
+                                CNET Japan
+                                <span class="source-count">(20)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://iphone-mania.jp/" target="_blank" rel="noopener">
+                                iPhone Mania
+                                <span class="source-count">(20)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://qiita.com/" target="_blank" rel="noopener">
+                                Qiita - 人気の記事
+                                <span class="source-count">(19)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://ascii.jp/" target="_blank" rel="noopener">
+                                ASCII.jp － トップ
+                                <span class="source-count">(19)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://taisy0.com/" target="_blank" rel="noopener">
+                                気になる、記になる…
+                                <span class="source-count">(17)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.publickey1.jp/" target="_blank" rel="noopener">
+                                Publickey
+                                <span class="source-count">(15)</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://news.yahoo.co.jp/" target="_blank" rel="noopener">
+                                Yahoo!ニュース・トピックス - IT
+                                <span class="source-count">(8)</span>
+                            </a>
+                        </li>
+                        
                     </ul>
                 </div>
                 

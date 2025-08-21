@@ -1,9 +1,9 @@
-name: Hourly RSS Affiliate Update
+name: RSS Affiliate Update (Every 2 Hours)
 
 on:
   schedule:
-    # 1時間ごとに実行（毎時0分）
-    - cron: '0 * * * *'
+    # 2時間ごとに実行（偶数時の0分）
+    - cron: '0 */2 * * *'
   workflow_dispatch:  # 手動実行も可能
   push:
     branches: [ main, master ]
@@ -81,13 +81,19 @@ jobs:
         mkdir -p docs
         cp -r output/* docs/
         
-        # Add and commit
+        # Add and commit (always commit to update timestamp)
         git add docs/
         if ! git diff --staged --quiet; then
-          git commit -m "🕐 Hourly update affiliate content - $(date '+%Y-%m-%d %H:%M')"
+          git commit -m "🕐 Update affiliate content with new articles - $(date '+%Y-%m-%d %H:%M')"
           git push
         else
-          echo "No new articles found - skipping commit"
+          # Force timestamp update even without new articles
+          echo "No new articles found - updating timestamp only"
+          touch docs/last_updated.txt
+          echo "Last updated: $(date '+%Y-%m-%d %H:%M:%S')" > docs/last_updated.txt
+          git add docs/last_updated.txt
+          git commit -m "⏰ Update timestamp - $(date '+%Y-%m-%d %H:%M')"
+          git push
         fi
       
     - name: Save execution logs
@@ -121,7 +127,7 @@ jobs:
         if [ -f "execution_log.txt" ]; then
           git add execution_log.txt
           if ! git diff --staged --quiet; then
-            git commit -m "📊 Hourly execution log - $(date '+%Y-%m-%d %H:%M')"
+            git commit -m "📊 Execution log - $(date '+%Y-%m-%d %H:%M')"
             git push
           fi
         fi

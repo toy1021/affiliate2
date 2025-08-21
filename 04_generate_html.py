@@ -353,7 +353,8 @@ def generate_sitemap(articles, total_pages=1):
         "generated_at": datetime.now().isoformat(),
         "total_pages": total_pages,
         "articles_count": len(articles),
-        "last_updated": UPDATE_TIME
+        "last_updated": UPDATE_TIME,
+        "cache_buster": int(datetime.now().timestamp())
     }
     
     return sitemap_data

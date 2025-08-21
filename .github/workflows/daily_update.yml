@@ -84,13 +84,16 @@ jobs:
         # Copy ALL files from output to docs directory for GitHub Pages
         cp -r output/* docs/
         
+        # Also copy to root directory for immediate GitHub Pages deployment
+        cp -r output/* ./
+        
         # Add cache busting timestamp to ensure updates are reflected
         TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
         echo "Last updated: $TIMESTAMP" > docs/last_updated.txt
         echo "Cache buster: $(date +%s)" >> docs/last_updated.txt
         
         # Always add and commit to trigger GitHub Pages rebuild
-        git add docs/ -A
+        git add . -A
         git commit -m "🕐 Update affiliate content - $TIMESTAMP"
         git push
       

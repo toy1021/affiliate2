@@ -452,7 +452,7 @@ def generate_api_data(enhanced_articles, stats):
     sources_menu = generate_sources_menu(enhanced_articles)
     
     api_data = {
-        "meta": {
+        "metadata": {
             "total_articles": stats["total_articles"],
             "total_pages": (len(enhanced_articles) + ARTICLES_PER_PAGE - 1) // ARTICLES_PER_PAGE,
             "articles_per_page": ARTICLES_PER_PAGE,

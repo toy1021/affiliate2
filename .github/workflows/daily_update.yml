@@ -95,6 +95,7 @@ jobs:
         # Always add and commit to trigger GitHub Pages rebuild
         git add . -A
         git commit -m "🕐 Update affiliate content - $TIMESTAMP"
+        git pull --rebase
         git push
       
     - name: Save execution logs
@@ -129,6 +130,7 @@ jobs:
           git add execution_log.txt
           if ! git diff --staged --quiet; then
             git commit -m "📊 Execution log - $(date '+%Y-%m-%d %H:%M')"
+            git pull --rebase
             git push
           fi
         fi

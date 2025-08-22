@@ -1,7 +1,7 @@
 # RSS Affiliate System Configuration
 
 import os
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 # RSS Feed URLs - 日本語メディア
 RSS_FEEDS = [
@@ -75,7 +75,9 @@ FINAL_HTML_FILE = os.path.join(OUTPUT_DIR, "index.html")
 # Site Info
 SITE_TITLE = "Tech News & Affiliate Hub"
 SITE_DESCRIPTION = "Latest tech news with curated product recommendations"
-UPDATE_TIME = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+# 日本時間（JST）でUPDATE_TIMEを生成
+JST = timezone(timedelta(hours=9))
+UPDATE_TIME = datetime.now(JST).strftime("%Y-%m-%d %H:%M:%S")
 
 # Debug Settings
 DEBUG = True

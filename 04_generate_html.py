@@ -488,17 +488,25 @@ def copy_static_files():
     import shutil
     
     static_files = [
-        "favicon.ico"
+        "favicon.ico",
+        "templates/sw.js",
+        "templates/404.html"
     ]
     
     copied_files = []
     
     for file_name in static_files:
         if os.path.exists(file_name):
-            output_path = os.path.join(OUTPUT_DIR, file_name)
+            # Determine output filename
+            if file_name.startswith("templates/"):
+                output_filename = os.path.basename(file_name)
+            else:
+                output_filename = file_name
+                
+            output_path = os.path.join(OUTPUT_DIR, output_filename)
             try:
                 shutil.copy2(file_name, output_path)
-                copied_files.append(file_name)
+                copied_files.append(output_filename)
                 if VERBOSE:
                     print(f"Static file copied: {file_name} → {output_path}")
             except Exception as e:
@@ -507,6 +515,68 @@ def copy_static_files():
             print(f"Warning: Static file not found: {file_name}")
     
     return copied_files
+
+def generate_amp_version(enhanced_articles, stats):
+    """AMP版HTMLを生成"""
+    amp_template_path = "templates/amp.html"
+    
+    if not os.path.exists(amp_template_path):
+        print(f"Warning: AMP template not found: {amp_template_path}")
+        return None
+    
+    with open(amp_template_path, 'r', encoding='utf-8') as f:
+        amp_content = f.read()
+    
+    # 最新20記事のみAMP版に含める
+    latest_articles = enhanced_articles[:20]
+    
+    # 記事コンテンツを生成
+    articles_html = ""
+    for article in latest_articles:
+        article_html = f"""
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="{article.get('published_at', '')}" itemprop="datePublished">{article.get('published_relative', '')}</time>
+                    <span class="category-tag" itemprop="articleSection">{article.get('category', '')}</span>
+                    <span class="article-source" itemprop="author">{article.get('source_name', '')}</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="{article.get('link', article.get('original_link', ''))}" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        {article.get('title', '')}
+                    </a>
+                </h2>
+                
+                {f'<p class="article-summary" itemprop="description">{article.get("summary", "")}</p>' if article.get('summary') else ''}
+                
+                <meta itemprop="dateModified" content="{article.get('published_at', '')}">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        """
+        articles_html += article_html
+    
+    # テンプレート変数を置換
+    amp_content = amp_content.replace('{{LAST_UPDATED}}', UPDATE_TIME)
+    amp_content = amp_content.replace('{{TOTAL_FEEDS}}', str(stats['total_feeds']))
+    amp_content = amp_content.replace('{{ARTICLES_CONTENT}}', articles_html)
+    
+    # AMP版HTMLファイルを出力
+    amp_output_file = os.path.join(OUTPUT_DIR, "amp.html")
+    with open(amp_output_file, 'w', encoding='utf-8') as f:
+        f.write(amp_content)
+    
+    if VERBOSE:
+        print(f"AMP version generated: {amp_output_file}")
+    
+    return amp_output_file
 
 def generate_spa_as_main(enhanced_articles, stats):
     """SPAをメインのindex.htmlとして生成"""
@@ -616,6 +686,9 @@ def main():
     
     # SPA版生成
     spa_file = generate_spa_version(enhanced_articles, stats)
+    
+    # AMP版生成
+    amp_file = generate_amp_version(enhanced_articles, stats)
     
     # SPA版をメインページとして生成
     try:

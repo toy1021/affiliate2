@@ -728,6 +728,30 @@
                     <div class="pagination-info" id="page-info"></div>
                 </div>
                 
+                <div class="affiliate-section" id="sources">
+                    <h3>情報源</h3>
+                    <ul class="sidebar-menu" id="sources-menu">
+                        <!-- RSS情報源リスト -->
+                        <li><a href="https://japan.cnet.com/" target="_blank" rel="noopener">CNET Japan</a> - ITニュース・レビュー</li>
+                        <li><a href="https://www.publickey1.jp/" target="_blank" rel="noopener">Publickey</a> - エンタープライズIT</li>
+                        <li><a href="https://www.itmedia.co.jp/" target="_blank" rel="noopener">ITmedia</a> - 総合ITメディア</li>
+                        <li><a href="https://www.watch.impress.co.jp/" target="_blank" rel="noopener">Impress Watch</a> - デジタル機器情報</li>
+                        <li><a href="https://gihyo.jp/" target="_blank" rel="noopener">技術評論社</a> - 技術書・開発情報</li>
+                        <li><a href="https://jp.techcrunch.com/" target="_blank" rel="noopener">TechCrunch Japan</a> - スタートアップ</li>
+                        <li><a href="https://news.mynavi.jp/" target="_blank" rel="noopener">マイナビニュース</a> - テクノロジー</li>
+                        <li><a href="https://ascii.jp/" target="_blank" rel="noopener">ASCII.jp</a> - デジタル総合</li>
+                        <li><a href="https://www.4gamer.net/" target="_blank" rel="noopener">4Gamer.net</a> - ゲーム情報</li>
+                        <li><a href="https://diamond.jp/" target="_blank" rel="noopener">ダイヤモンド・オンライン</a> - ビジネス</li>
+                        <li><a href="https://toyokeizai.net/" target="_blank" rel="noopener">東洋経済オンライン</a> - 経済</li>
+                        <li><a href="https://newspicks.com/" target="_blank" rel="noopener">NewsPicks</a> - 経済メディア</li>
+                        <li><a href="https://zenn.dev/" target="_blank" rel="noopener">Zenn</a> - エンジニア向け</li>
+                        <li><a href="https://qiita.com/" target="_blank" rel="noopener">Qiita</a> - プログラミング</li>
+                        <li><a href="https://iphone-mania.jp/" target="_blank" rel="noopener">iPhone Mania</a> - Apple情報</li>
+                        <li><a href="https://taisy0.com/" target="_blank" rel="noopener">taisyo.com</a> - ガジェット</li>
+                        <li><a href="https://www.sankei.com/" target="_blank" rel="noopener">産経新聞</a> - 経済ニュース</li>
+                        <li><a href="https://news.yahoo.co.jp/" target="_blank" rel="noopener">Yahoo!ニュース</a> - IT総合</li>
+                    </ul>
+                </div>
             </aside>
         </div>
     </main>
@@ -930,6 +954,18 @@
                     categoryMenu.appendChild(li);
                 });
                 
+                // ソースメニュー
+                const sourcesMenu = document.getElementById('sources-menu');
+                sourcesMenu.innerHTML = '';
+                this.data.sources.forEach(source => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <a href="${source.url}" target="_blank" rel="noopener">
+                            ${source.name} <span class="source-count">(${source.count})</span>
+                        </a>
+                    `;
+                    sourcesMenu.appendChild(li);
+                });
                 
                 // ページ情報
                 const totalPages = Math.ceil(this.filteredArticles.length / this.articlesPerPage);

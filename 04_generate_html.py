@@ -588,7 +588,7 @@ def generate_structured_data(enhanced_articles, stats):
         article_data = {
             "@type": "NewsArticle",
             "headline": article["title"],
-            "url": article["link"],
+            "url": article.get("original_link", article.get("link", "")),
             "datePublished": article.get("published") or article["fetched_at"],
             "dateModified": article.get("processed_at", article["fetched_at"]),
             "author": {

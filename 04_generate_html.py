@@ -490,7 +490,8 @@ def copy_static_files():
     static_files = [
         "favicon.ico",
         "templates/sw.js",
-        "templates/404.html"
+        "templates/404.html",
+        "images/og-image.svg"
     ]
     
     copied_files = []
@@ -498,7 +499,7 @@ def copy_static_files():
     for file_name in static_files:
         if os.path.exists(file_name):
             # Determine output filename
-            if file_name.startswith("templates/"):
+            if file_name.startswith("templates/") or file_name.startswith("images/"):
                 output_filename = os.path.basename(file_name)
             else:
                 output_filename = file_name

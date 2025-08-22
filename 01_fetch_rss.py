@@ -6,6 +6,7 @@ import os
 import requests
 import hashlib
 from datetime import datetime, timedelta
+from time import mktime
 from config import RSS_FEEDS, RSS_RAW_FILE, DATA_DIR, MAX_ARTICLES_PER_FEED, DEBUG, VERBOSE
 
 def get_cache_key(url):
@@ -47,12 +48,23 @@ def fetch_rss_feed(url):
         
         articles = []
         for entry in feed.entries[:MAX_ARTICLES_PER_FEED]:
+            # 公開日時を正しく処理
+            published_date = ""
+            if entry.get("published_parsed"):
+                try:
+                    published_timestamp = mktime(entry.published_parsed)
+                    published_date = datetime.fromtimestamp(published_timestamp).isoformat()
+                except:
+                    published_date = entry.get("published", "")
+            else:
+                published_date = entry.get("published", "")
+            
             article = {
                 "title": entry.get("title", "No title"),
                 "link": entry.get("link", ""),
                 "description": entry.get("description", ""),
                 "summary": entry.get("summary", ""),
-                "published": entry.get("published", ""),
+                "published": published_date,
                 "published_parsed": entry.get("published_parsed", None),
                 "source_feed": url,
                 "source_name": feed.feed.get("title", url),

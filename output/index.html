@@ -723,10 +723,6 @@
                     <ul class="sidebar-menu" id="category-menu"></ul>
                 </div>
                 
-                <div class="pages-section">
-                    <h3>ページ</h3>
-                    <div class="pagination-info" id="page-info"></div>
-                </div>
                 
                 <div class="affiliate-section" id="sources">
                     <h3>情報源</h3>
@@ -967,11 +963,6 @@
                     sourcesMenu.appendChild(li);
                 });
                 
-                // ページ情報
-                const totalPages = Math.ceil(this.filteredArticles.length / this.articlesPerPage);
-                document.getElementById('page-info').innerHTML = `
-                    ページ: ${this.currentPage} / ${totalPages} (全${this.filteredArticles.length}記事)
-                `;
             }
             
             renderArticles() {

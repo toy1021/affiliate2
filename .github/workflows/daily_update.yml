@@ -95,7 +95,13 @@ jobs:
         # Always add and commit to trigger GitHub Pages rebuild
         git add . -A
         git commit -m "🕐 Update affiliate content - $TIMESTAMP"
-        git pull --rebase
+        
+        # Pull and rebase with automatic conflict resolution (use ours strategy for conflicts)
+        git pull --rebase -X ours || {
+          echo "Merge conflicts detected. Resolving automatically..."
+          git add . -A
+          git rebase --continue
+        }
         git push
       
     - name: Save execution logs
@@ -130,7 +136,11 @@ jobs:
           git add execution_log.txt
           if ! git diff --staged --quiet; then
             git commit -m "📊 Execution log - $(date '+%Y-%m-%d %H:%M')"
-            git pull --rebase
+            git pull --rebase -X ours || {
+              echo "Merge conflicts in logs. Resolving automatically..."
+              git add . -A
+              git rebase --continue
+            }
             git push
           fi
         fi

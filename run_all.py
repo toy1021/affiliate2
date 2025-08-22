@@ -136,7 +136,8 @@ def generate_report(results):
         "fetch": "RSS Feed Fetching",
         "process": "Content Processing", 
         "affiliate": "Affiliate Link Addition",
-        "html": "HTML Generation"
+        "html": "HTML Generation",
+        "sitemap": "Enhanced Sitemap Generation"
     }
     
     for step, success in results.items():
@@ -151,7 +152,10 @@ def generate_report(results):
         ("data/articles_processed.json", "Processed Articles"),
         ("data/articles_with_affiliate.json", "Articles with Affiliate Links"),
         ("output/index.html", "Final HTML Page"),
-        ("output/sitemap.json", "Sitemap Data")
+        ("output/sitemap.json", "Sitemap Data"),
+        ("output/sitemap.xml", "Main Sitemap"),
+        ("output/news_sitemap.xml", "News Sitemap"),
+        ("output/sitemap_index.xml", "Sitemap Index")
     ]
     
     for file_path, description in output_files:
@@ -184,7 +188,8 @@ def main():
         ("01_fetch_rss.py", "RSS Feed Fetching", "fetch"),
         ("02_process_content.py", "Content Processing & Summarization", "process"),
         ("03_add_affiliate.py", "Affiliate Link Addition", "affiliate"),
-        ("04_generate_html.py", "HTML Page Generation", "html")
+        ("04_generate_html.py", "HTML Page Generation", "html"),
+        ("05_generate_sitemap.py", "Enhanced Sitemap Generation", "sitemap")
     ]
     
     results = {}

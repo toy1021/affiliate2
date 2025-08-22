@@ -483,6 +483,31 @@ def generate_api_data(enhanced_articles, stats):
     
     return api_data
 
+def copy_static_files():
+    """静的ファイル（favicon等）をoutputディレクトリにコピー"""
+    import shutil
+    
+    static_files = [
+        "favicon.ico"
+    ]
+    
+    copied_files = []
+    
+    for file_name in static_files:
+        if os.path.exists(file_name):
+            output_path = os.path.join(OUTPUT_DIR, file_name)
+            try:
+                shutil.copy2(file_name, output_path)
+                copied_files.append(file_name)
+                if VERBOSE:
+                    print(f"Static file copied: {file_name} → {output_path}")
+            except Exception as e:
+                print(f"Warning: Could not copy {file_name}: {e}")
+        else:
+            print(f"Warning: Static file not found: {file_name}")
+    
+    return copied_files
+
 def generate_spa_as_main(enhanced_articles, stats):
     """SPAをメインのindex.htmlとして生成"""
     # SPA用テンプレートを読み込み
@@ -499,6 +524,9 @@ def generate_spa_as_main(enhanced_articles, stats):
     main_output_file = FINAL_HTML_FILE
     with open(main_output_file, 'w', encoding='utf-8') as f:
         f.write(spa_content)
+    
+    # 静的ファイルもコピー
+    copy_static_files()
     
     if VERBOSE:
         print(f"SPA generated as main page: {main_output_file}")

@@ -578,6 +578,58 @@ def generate_amp_version(enhanced_articles, stats):
     
     return amp_output_file
 
+def generate_structured_data(enhanced_articles, stats):
+    """構造化データ（JSON-LD）を生成"""
+    import json
+    
+    # NewsArticle構造化データを生成
+    articles_structured = []
+    for article in enhanced_articles[:10]:  # 上位10記事のみ
+        article_data = {
+            "@type": "NewsArticle",
+            "headline": article["title"],
+            "url": article["link"],
+            "datePublished": article.get("published") or article["fetched_at"],
+            "dateModified": article.get("processed_at", article["fetched_at"]),
+            "author": {
+                "@type": "Organization",
+                "name": article["source_name"]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Tech News Hub"
+            },
+            "description": article.get("summary", article["title"]),
+            "articleSection": article.get("category", "テクノロジー"),
+            "inLanguage": "ja"
+        }
+        articles_structured.append(article_data)
+    
+    # BreadcrumbList構造化データ
+    breadcrumb_data = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "ホーム",
+                "item": "https://toy1021.github.io/affiliate2/"
+            },
+            {
+                "@type": "ListItem", 
+                "position": 2,
+                "name": "テックニュース",
+                "item": "https://toy1021.github.io/affiliate2/"
+            }
+        ]
+    }
+    
+    return {
+        "articles": articles_structured,
+        "breadcrumb": breadcrumb_data
+    }
+
 def generate_spa_as_main(enhanced_articles, stats):
     """SPAをメインのindex.htmlとして生成"""
     # SPA用テンプレートを読み込み
@@ -589,6 +641,13 @@ def generate_spa_as_main(enhanced_articles, stats):
     
     with open(spa_template_path, 'r', encoding='utf-8') as f:
         spa_content = f.read()
+    
+    # 構造化データを生成
+    structured_data = generate_structured_data(enhanced_articles, stats)
+    
+    # テンプレート変数を置換
+    spa_content = spa_content.replace("{{ ARTICLE_COUNT }}", str(stats.get("total_articles", 0)))
+    spa_content = spa_content.replace("{{ UPDATE_TIME }}", stats.get("last_updated", ""))
     
     # メインのindex.htmlとして出力
     main_output_file = FINAL_HTML_FILE

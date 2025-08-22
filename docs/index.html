@@ -26,6 +26,29 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="テックニュース速報">
     
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self' https:;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://pagead2.googlesyndication.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        img-src 'self' data: https: http:;
+        font-src 'self' https://fonts.gstatic.com;
+        connect-src 'self' https://www.google-analytics.com https://analytics.google.com;
+        frame-src 'self' https://www.youtube.com https://player.vimeo.com;
+        media-src 'self' https:;
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        upgrade-insecure-requests;
+    ">
+    
     <!-- Enhanced SEO Meta Tags -->
     <meta name="news_keywords" content="AI,機械学習,Apple,iPhone,プログラミング,Python,JavaScript,テクノロジー,IT,ガジェット">
     <meta name="article:tag" content="テクノロジーニュース">
@@ -734,6 +757,147 @@
                 .pagination-btn {
                     contain: layout style paint;
                 }
+                
+                /* Related Articles Styling */
+                .related-articles {
+                    margin-top: 1.5rem;
+                    padding-top: 1.5rem;
+                    border-top: 2px solid var(--border-color);
+                }
+                
+                .related-title {
+                    font-size: 1rem;
+                    color: var(--primary-color);
+                    margin-bottom: 1rem;
+                    font-weight: 600;
+                }
+                
+                .related-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.8rem;
+                }
+                
+                .related-article-link {
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                }
+                
+                .related-article {
+                    background: var(--bg-secondary);
+                    padding: 0.8rem 1rem;
+                    border-radius: 6px;
+                    border-left: 3px solid var(--primary-color);
+                    transition: all 0.2s ease;
+                }
+                
+                .related-article:hover {
+                    background: var(--border-color);
+                    transform: translateX(2px);
+                }
+                
+                .related-category {
+                    display: inline-block;
+                    background: var(--primary-color);
+                    color: white;
+                    font-size: 0.7rem;
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 3px;
+                    margin-bottom: 0.4rem;
+                    font-weight: 500;
+                }
+                
+                .related-article-title {
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    line-height: 1.3;
+                    margin-bottom: 0.3rem;
+                    color: var(--text-primary);
+                }
+                
+                .related-source {
+                    font-size: 0.75rem;
+                    color: var(--text-secondary);
+                }
+                
+                /* Breadcrumb Navigation */
+                .breadcrumb {
+                    background: var(--bg-primary);
+                    padding: 0.8rem 0;
+                    border-bottom: 1px solid var(--border-color);
+                    font-size: 0.9rem;
+                }
+                
+                .breadcrumb-list {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    list-style: none;
+                }
+                
+                .breadcrumb-item {
+                    display: flex;
+                    align-items: center;
+                }
+                
+                .breadcrumb-link {
+                    color: var(--text-secondary);
+                    text-decoration: none;
+                    transition: color 0.2s ease;
+                }
+                
+                .breadcrumb-link:hover {
+                    color: var(--primary-color);
+                }
+                
+                .breadcrumb-separator {
+                    color: var(--text-secondary);
+                    margin: 0 0.3rem;
+                }
+                
+                .breadcrumb-current {
+                    color: var(--text-primary);
+                    font-weight: 500;
+                }
+                
+                /* Page Navigation */
+                .page-navigation {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 2rem 0;
+                    padding: 1rem;
+                    background: var(--bg-primary);
+                    border: 1px solid var(--border-color);
+                    border-radius: 8px;
+                }
+                
+                .nav-link {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    color: var(--primary-color);
+                    text-decoration: none;
+                    font-weight: 500;
+                    padding: 0.5rem 1rem;
+                    border-radius: 6px;
+                    transition: all 0.2s ease;
+                }
+                
+                .nav-link:hover {
+                    background: var(--bg-secondary);
+                }
+                
+                .nav-link.disabled {
+                    color: var(--text-secondary);
+                    cursor: not-allowed;
+                    opacity: 0.5;
+                }
+                
+                .nav-link.disabled:hover {
+                    background: none;
+                }
             `);
             document.head.appendChild(link);
         }
@@ -757,6 +921,9 @@
             </div>
         </div>
     </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div id="breadcrumb"></div>
 
     <main class="container">
         <div class="update-info" id="update-info">
@@ -783,6 +950,9 @@
                 </div>
                 
                 <div class="pagination" id="pagination" style="display: none;"></div>
+                
+                <!-- Page Navigation -->
+                <div id="page-navigation" style="display: none;"></div>
             </div>
             
             <aside class="sidebar" id="sidebar" style="display: none;">
@@ -947,15 +1117,193 @@
             }
             
             render() {
+                this.renderBreadcrumb();
                 this.renderUpdateInfo();
                 this.renderFilters();
                 this.renderSidebar();
                 this.renderArticles();
                 this.renderPagination();
+                this.renderPageNavigation();
+                this.updateDynamicMeta();
                 
                 // Show all elements
                 document.getElementById('filters').style.display = 'flex';
                 document.getElementById('sidebar').style.display = 'block';
+            }
+            
+            updateDynamicMeta() {
+                // Update page title and meta description based on current view
+                let title = '日本のテックニュース速報 | 2時間ごとに更新される最新IT情報';
+                let description = 'AI・機械学習、Apple製品、プログラミングなど最新テクノロジーニュースを2時間ごとに自動更新。18の主要IT情報源から厳選した記事と関連商品をお届け。';
+                
+                if (this.currentCategory) {
+                    title = `${this.currentCategory}の最新ニュース | 日本のテックニュース速報`;
+                    description = `${this.currentCategory}に関する最新テクノロジーニュースを2時間ごとに自動更新。専門的な情報と関連商品をお届けします。`;
+                    
+                    if (this.currentPage > 1) {
+                        title += ` - ページ ${this.currentPage}`;
+                        description += ` (ページ ${this.currentPage})`;
+                    }
+                }
+                
+                // Update document title
+                document.title = title;
+                
+                // Update meta description
+                let metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', description);
+                }
+                
+                // Update Open Graph tags
+                let ogTitle = document.querySelector('meta[property="og:title"]');
+                if (ogTitle) {
+                    ogTitle.setAttribute('content', title);
+                }
+                
+                let ogDesc = document.querySelector('meta[property="og:description"]');
+                if (ogDesc) {
+                    ogDesc.setAttribute('content', description);
+                }
+                
+                // Update canonical URL
+                let canonical = document.querySelector('link[rel="canonical"]');
+                if (canonical) {
+                    const currentUrl = new URL(window.location);
+                    canonical.setAttribute('href', currentUrl.href);
+                }
+                
+                // Update keywords based on current category
+                if (this.currentCategory) {
+                    let keywords = document.querySelector('meta[name="keywords"]');
+                    if (keywords) {
+                        const baseKeywords = 'テクノロジーニュース,IT速報,最新技術,ガジェット,自動更新,RSS';
+                        keywords.setAttribute('content', `${this.currentCategory},${baseKeywords}`);
+                    }
+                }
+            }
+            
+            renderBreadcrumb() {
+                const breadcrumbContainer = document.getElementById('breadcrumb');
+                if (!breadcrumbContainer) return;
+                
+                let breadcrumbHTML = `
+                    <nav class="breadcrumb">
+                        <div class="container">
+                            <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a href="/" class="breadcrumb-link" itemprop="item">
+                                        <span itemprop="name">ホーム</span>
+                                    </a>
+                                    <meta itemprop="position" content="1">
+                                </li>
+                `;
+                
+                if (this.currentCategory) {
+                    breadcrumbHTML += `
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-separator">›</span>
+                        </li>
+                        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a href="/?category=${encodeURIComponent(this.currentCategory)}" class="breadcrumb-link" itemprop="item">
+                                <span itemprop="name">${this.currentCategory}</span>
+                            </a>
+                            <meta itemprop="position" content="2">
+                        </li>
+                    `;
+                }
+                
+                if (this.currentPage > 1) {
+                    breadcrumbHTML += `
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-separator">›</span>
+                        </li>
+                        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <span class="breadcrumb-current" itemprop="name">ページ ${this.currentPage}</span>
+                            <meta itemprop="position" content="${this.currentCategory ? 3 : 2}">
+                        </li>
+                    `;
+                }
+                
+                breadcrumbHTML += `
+                            </ol>
+                        </div>
+                    </nav>
+                `;
+                
+                breadcrumbContainer.innerHTML = breadcrumbHTML;
+            }
+            
+            renderPageNavigation() {
+                const totalPages = Math.ceil(this.filteredArticles.length / this.articlesPerPage);
+                const navContainer = document.getElementById('page-navigation');
+                
+                if (!navContainer || totalPages <= 1) {
+                    if (navContainer) navContainer.style.display = 'none';
+                    return;
+                }
+                
+                navContainer.style.display = 'flex';
+                
+                const prevPage = this.currentPage - 1;
+                const nextPage = this.currentPage + 1;
+                
+                let navHTML = '<div class="page-navigation">';
+                
+                // Previous page link
+                if (prevPage >= 1) {
+                    navHTML += `
+                        <a href="#" class="nav-link" data-page="${prevPage}">
+                            <span>←</span>
+                            <span>前のページ</span>
+                        </a>
+                    `;
+                } else {
+                    navHTML += `
+                        <span class="nav-link disabled">
+                            <span>←</span>
+                            <span>前のページ</span>
+                        </span>
+                    `;
+                }
+                
+                // Current page info
+                navHTML += `
+                    <span class="page-info">
+                        ページ ${this.currentPage} / ${totalPages}
+                    </span>
+                `;
+                
+                // Next page link
+                if (nextPage <= totalPages) {
+                    navHTML += `
+                        <a href="#" class="nav-link" data-page="${nextPage}">
+                            <span>次のページ</span>
+                            <span>→</span>
+                        </a>
+                    `;
+                } else {
+                    navHTML += `
+                        <span class="nav-link disabled">
+                            <span>次のページ</span>
+                            <span>→</span>
+                        </span>
+                    `;
+                }
+                
+                navHTML += '</div>';
+                navContainer.innerHTML = navHTML;
+                
+                // Add event listeners for navigation
+                navContainer.querySelectorAll('a[data-page]').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        this.currentPage = parseInt(e.currentTarget.dataset.page);
+                        this.updateURL();
+                        this.render();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                });
             }
             
             renderUpdateInfo() {
@@ -1055,16 +1403,22 @@
                         
                         ${article.image_url ? `
                         <div class="article-image-container">
-                            <img class="article-image lazy-load" 
-                                 data-src="${article.image_url}" 
-                                 alt="${article.title}"
-                                 loading="lazy"
-                                 decoding="async"
-                                 itemprop="image"
-                                 width="300" 
-                                 height="200">
+                            <picture>
+                                <source data-srcset="${this.generateWebPUrl(article.image_url)}" type="image/webp">
+                                <img class="article-image lazy-load" 
+                                     data-src="${article.image_url}" 
+                                     alt="${this.generateDynamicAlt(article)}"
+                                     loading="lazy"
+                                     decoding="async"
+                                     itemprop="image"
+                                     width="300" 
+                                     height="200">
+                            </picture>
                             <noscript>
-                                <img src="${article.image_url}" alt="${article.title}" itemprop="image">
+                                <picture>
+                                    <source srcset="${this.generateWebPUrl(article.image_url)}" type="image/webp">
+                                    <img src="${article.image_url}" alt="${this.generateDynamicAlt(article)}" itemprop="image">
+                                </picture>
                             </noscript>
                         </div>
                         ` : ''}
@@ -1089,45 +1443,15 @@
                         </div>
                         
                         ${this.renderAffiliateLinks(article)}
+                        ${this.renderRelatedArticles(article)}
                     </article>
                 `).join('');
                 
                 // Generate structured data for articles
                 this.generateArticleStructuredData(pageArticles);
                 
-                // Initialize lazy loading for images
-                this.initLazyLoading();
-            }
-            
-            initLazyLoading() {
-                // Modern Intersection Observer API for lazy loading
-                if ('IntersectionObserver' in window) {
-                    const imageObserver = new IntersectionObserver((entries, observer) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                const img = entry.target;
-                                img.src = img.dataset.src;
-                                img.classList.remove('lazy-load');
-                                img.classList.add('loaded');
-                                observer.unobserve(img);
-                            }
-                        });
-                    }, {
-                        rootMargin: '50px 0px',
-                        threshold: 0.01
-                    });
-                    
-                    document.querySelectorAll('.lazy-load').forEach(img => {
-                        imageObserver.observe(img);
-                    });
-                } else {
-                    // Fallback for older browsers
-                    document.querySelectorAll('.lazy-load').forEach(img => {
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy-load');
-                        img.classList.add('loaded');
-                    });
-                }
+                // Initialize optimized image loading
+                this.optimizeImageLoading();
             }
             
             generateArticleStructuredData(articles) {
@@ -1302,6 +1626,176 @@
                 
                 html += '</div>';
                 return html;
+            }
+            
+            generateRelatedArticles(currentArticle, allArticles, maxResults = 3) {
+                // Calculate similarity scores based on category, keywords, and content
+                const relatedScores = allArticles
+                    .filter(article => article.link !== currentArticle.link)
+                    .map(article => {
+                        let score = 0;
+                        
+                        // Category match (highest weight)
+                        if (article.category === currentArticle.category) {
+                            score += 50;
+                        }
+                        
+                        // Source similarity
+                        if (article.source_name === currentArticle.source_name) {
+                            score += 20;
+                        }
+                        
+                        // Title keyword similarity
+                        const currentWords = currentArticle.title.toLowerCase().split(/\s+/);
+                        const articleWords = article.title.toLowerCase().split(/\s+/);
+                        const commonWords = currentWords.filter(word => 
+                            word.length > 3 && articleWords.includes(word)
+                        );
+                        score += commonWords.length * 5;
+                        
+                        // Summary keyword similarity
+                        if (currentArticle.summary && article.summary) {
+                            const currentSummaryWords = currentArticle.summary.toLowerCase().split(/\s+/);
+                            const articleSummaryWords = article.summary.toLowerCase().split(/\s+/);
+                            const commonSummaryWords = currentSummaryWords.filter(word => 
+                                word.length > 3 && articleSummaryWords.includes(word)
+                            );
+                            score += commonSummaryWords.length * 2;
+                        }
+                        
+                        // Recency bonus (newer articles get slight boost)
+                        const daysDiff = Math.abs(
+                            new Date(article.published_at) - new Date(currentArticle.published_at)
+                        ) / (1000 * 60 * 60 * 24);
+                        if (daysDiff < 1) score += 10;
+                        else if (daysDiff < 7) score += 5;
+                        
+                        return { article, score };
+                    })
+                    .filter(item => item.score > 10) // Minimum relevance threshold
+                    .sort((a, b) => b.score - a.score)
+                    .slice(0, maxResults);
+                
+                return relatedScores.map(item => item.article);
+            }
+            
+            renderRelatedArticles(article) {
+                const relatedArticles = this.generateRelatedArticles(article, this.data.articles);
+                
+                if (relatedArticles.length === 0) {
+                    return '';
+                }
+                
+                return `
+                    <div class="related-articles">
+                        <h3 class="related-title">関連記事</h3>
+                        <div class="related-list">
+                            ${relatedArticles.map(related => `
+                                <a href="${related.link || related.original_link}" 
+                                   class="related-article-link" 
+                                   target="_blank" 
+                                   rel="noopener">
+                                    <div class="related-article">
+                                        <span class="related-category">${related.category}</span>
+                                        <h4 class="related-article-title">${related.title}</h4>
+                                        <span class="related-source">${related.source_name}</span>
+                                    </div>
+                                </a>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            generateDynamicMetaDescription(article) {
+                // Generate optimized meta description (max 160 characters)
+                let description = '';
+                
+                if (article.summary) {
+                    description = article.summary.substring(0, 140);
+                    if (article.summary.length > 140) {
+                        description += '...';
+                    }
+                } else {
+                    description = `${article.category}に関する最新ニュース - ${article.title.substring(0, 100)}`;
+                    if (article.title.length > 100) {
+                        description += '...';
+                    }
+                }
+                
+                // Add category and source for SEO
+                description += ` | ${article.category} | ${article.source_name}`;
+                
+                return description.substring(0, 160);
+            }
+            
+            generateDynamicAlt(article) {
+                // Generate descriptive alt text for accessibility and SEO
+                const category = article.category || 'テクノロジー';
+                const source = article.source_name || 'ニュース';
+                
+                // Extract key terms from title
+                const titleWords = article.title.split(/\s+/).slice(0, 8).join(' ');
+                
+                return `${category}ニュース: ${titleWords} - ${source}より`;
+            }
+            
+            generateWebPUrl(originalUrl) {
+                // For now, return original URL
+                // In production, you could use a service like Cloudinary or implement server-side WebP conversion
+                if (!originalUrl) return '';
+                
+                // Check if the URL already supports WebP
+                if (originalUrl.includes('cloudinary.com') || originalUrl.includes('imagekit.io')) {
+                    // Add WebP format parameter for supported services
+                    const separator = originalUrl.includes('?') ? '&' : '?';
+                    return `${originalUrl}${separator}f_webp,q_auto`;
+                }
+                
+                // For other URLs, return original (could be enhanced with server-side conversion)
+                return originalUrl;
+            }
+            
+            optimizeImageLoading() {
+                // Enhanced lazy loading with WebP support
+                if ('IntersectionObserver' in window) {
+                    const imageObserver = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                const picture = img.parentElement;
+                                
+                                // Handle picture element with WebP source
+                                if (picture.tagName === 'PICTURE') {
+                                    const sources = picture.querySelectorAll('source[data-srcset]');
+                                    sources.forEach(source => {
+                                        if (source.dataset.srcset) {
+                                            source.srcset = source.dataset.srcset;
+                                            source.removeAttribute('data-srcset');
+                                        }
+                                    });
+                                }
+                                
+                                // Load the main image
+                                if (img.dataset.src) {
+                                    img.src = img.dataset.src;
+                                    img.removeAttribute('data-src');
+                                }
+                                
+                                img.classList.remove('lazy-load');
+                                img.classList.add('loaded');
+                                observer.unobserve(img);
+                            }
+                        });
+                    }, {
+                        rootMargin: '50px 0px',
+                        threshold: 0.01
+                    });
+                    
+                    document.querySelectorAll('.lazy-load').forEach(img => {
+                        imageObserver.observe(img);
+                    });
+                }
             }
             
             renderPagination() {

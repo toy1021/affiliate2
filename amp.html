@@ -1,0 +1,820 @@
+<!doctype html>
+<html ⚡ lang="ja">
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>日本のテックニュース速報 | AMP版</title>
+    <link rel="canonical" href="https://toy1021.github.io/affiliate2/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description" content="AI・機械学習、Apple製品、プログラミングなど最新テクノロジーニュースを2時間ごとに自動更新。AMP対応で高速表示。">
+    
+    <!-- AMP Analytics -->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    
+    <!-- AMP Social Share -->
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsMediaOrganization",
+        "name": "日本のテックニュース速報",
+        "url": "https://toy1021.github.io/affiliate2/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://toy1021.github.io/affiliate2/favicon.ico"
+        },
+        "description": "最新のテクノロジーニュースと関連商品をお届け"
+    }
+    </script>
+    
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    
+    <style amp-custom>
+        :root {
+            --primary-color: #2563eb;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.2rem;
+        }
+        
+        .update-info {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .update-info p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .articles-grid {
+            display: block;
+            margin: 2rem 0;
+        }
+        
+        .article-card {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-bottom: none;
+        }
+        
+        .article-card:first-child {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        
+        .article-card:last-child {
+            border-bottom: 1px solid var(--border-color);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+        }
+        
+        .article-date {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.8rem;
+            background: rgba(37, 99, 235, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .category-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .article-source {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+        
+        .article-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+        
+        .article-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        
+        .article-summary {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .social-share {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .social-share h3 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        amp-social-share {
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .amp-notice {
+            background: #e0f2fe;
+            color: #01579b;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .amp-notice a {
+            color: #0277bd;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .article-card {
+                padding: 1rem;
+            }
+            
+            .article-meta {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>日本のテックニュース速報</h1>
+            <p class="subtitle">最新のテクノロジーニュースと関連商品をお届け (AMP版)</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="amp-notice">
+            ⚡ 高速表示のAMP版をご覧いただいています。
+            <a href="/">通常版はこちら</a>
+        </div>
+        
+        <div class="update-info">
+            <p><strong>最終更新:</strong> 2025-08-22 11:12:54</p>
+            <p>✨ 2時間ごとに自動更新で最新IT情報をお届けします</p>
+            <p><strong>RSS監視サイト:</strong> 8サイト</p>
+            <p><strong>更新間隔:</strong> 2時間ごとに自動更新（24時間365日）</p>
+        </div>
+
+        <div class="articles-grid">
+            
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">テクノロジー</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236918/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        「X」のアイコンが変わった--あなたは変化に気づけますか？
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">X（旧Twitter）のアイコンが変わった。従来は「X」の文字にひび割れや擦れのような質感が加えられていたが、新アイコンは純粋に黒と白だけで構成された、シンプルでミニマルな仕上がりになった。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">その他</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236921/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        スマホを欲しがる子どもに親が抱く「最大の懸念」を根本解決したスマホ登場
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">子どもにスマートフォンを持たせることへの最大の懸念の一つは、ネット上に氾濫する裸や性的なコンテンツに触れてしまうことだろう。さらに深刻なのは、子ども自身がそうした画像や動画を撮影し、拡散してしまう危険性だ。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">通信・ネットワーク</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236928/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        UQモバイル値上げへ、物価高騰が理由　データ容量は増量
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">KDDIは、携帯ブランド「UQ mobile」の月額料金を11月1日に改定すると発表した。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">その他</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236929/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        テスラ自動運転、日本上陸へ--「一般車より9.5倍衝突事故が少ない」システムが本格試験開始
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">テスラが日本で「Full Self-Driving (Supervised)」の本格テストを開始。カメラのみのTesla Visionで自動運転を実現し、日本市場投入時期にも注目が集まる。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">ゲーム</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236933/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        マクドナルド、ワンピースのハッピーセット中止--前回ポケモンの混乱受け
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">日本マクドナルドは8月20日、8月29日から実施予定だったハッピーセット「ワンピースカードゲーム」を中止すると発表した。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">Google・Android</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236888/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        グーグル、新スマホ「Pixel 10」シリーズ発表--カメラは「100倍ズーム」や「構図アドバイス」に対応
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">グーグルは、8月21日、「Google Pixel」シリーズの新製品を発表した。「Google Pixel 10/10 Pro/10 Pro XL/10 Pro Fold」の4種類のスマートフォンと、スマートウォッチ「Google Pixel Watch 4」、イヤホン「Google Pixel Buds 2a」の7モデル。いずれも同日から「Googleストア」などで販売する。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">Google・Android</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236935/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        Googleのスマートホーム機器、ついに「Gemini」を搭載--Nest Hubなど対象
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">Googleは、スマートホーム向けの新AI「Gemini for Home」を発表した。スマートディスプレイやスマートスピーカーではGoogleアシスタントに代わる存在となり、家庭内のタスクに最適化した生成AI機能を提供する。発表は米ニューヨークでの「Made by Google」に合わせて現地時間の水曜日に行われた。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">Google・Android</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236936/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        折りたたみスマホなのに完全防塵--Google「Pixel 10 Pro Fold」進化点まとめ
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">4インチの大画面、5015mAh、Qi2＆PixelSnap、AIカメラ/Tensor G5で実用性を底上げ。10月9日発売。. 折りたたみでIP68の防塵防水を実現したPixel 10 Pro Fold。塵や水に強く、8インチ＋6.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">Google・Android</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236940/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        Google「Pixel 10」のカメラが一線を超えた--捉えきれない細部を生成AIが描き足すように
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">Google Pixel 10 Pro / 10 Pro XLレビュー。Tensor G5搭載で高速化、AI強化カメラやAndroid 16の新機能を徹底検証。価格・スペック比較も。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">ゲーム</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236944/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        Xbox携帯ゲーム機「ROG Xbox Ally」、10月16日発売へ--日本など世界各国で
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">待望の携帯ゲーミングPC「ROG Xbox Ally」と「ROG Xbox Ally X」の発売日が10月16日に決まった。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">Apple製品</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236957/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        今すぐiPhoneに「iOS 18.6.2」適用を、すでに悪用の可能性がある脆弱性に対処
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">アップルは、「iPhone」向けの「iOS 26」公開を数週間後に控えた米国時間8月20日、「iOS 18.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">AI・機械学習</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236970/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        「Grok」とユーザーの会話37万件超が公開状態に、Forbesが指摘
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">イーロン・マスク氏の企業xAIが手掛けるAIアシスタント「Grok」とユーザーが交わした37万件超の会話が、Grokのウェブサイトで公開されていたと、Forbesが報じている。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">プログラミング</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236968/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        リコー、ハイエンドコンデジ「GR IV」発表--新開発センサー・レンズ搭載のスナップシューター
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">リコーイメージングは8月21日、ハイエンドコンパクトデジタルカメラ「RICOH GR IV」を発売すると発表した。価格はオープン。9月12日に発売する。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">AI・機械学習</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236971/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        AIを人間のように扱うのは間違いだ--マイクロソフトAI責任者が警告する「悲惨な結果」
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">マイクロソフトのAI部門でCEOを務めるムスタファ・スレイマン氏は、AIに人間のような意識がないことが、生成AIの急速な進歩により曖昧になり、その先には悲惨な結果が待ち受けている可能性があると警告している。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">Google・Android</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236986/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        Google最新スマホ「Pixel 10」シリーズが早速セール　最大6万円還元
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">Googleは自社ストアにおいて、新型スマートフォン「Pixel 10」シリーズの発売を記念した大規模セールを開始した。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">テクノロジー</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35236988/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        ボイジャーも見つけられなかった天王星の新衛星、ジェームズ・ウェッブ望遠鏡が発見--その直径は
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">NASAが天王星の新たな小型衛星「S/2025 U1」を発見。ジェームズ・ウェッブ宇宙望遠鏡が捉えた14個目の衛星の詳細と今後の命名予定を解説。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">Apple製品</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35237001/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        Google Pixel Watch 4進化点まとめ--腕に巻くGemini、Apple Watch愛用者をも驚かせそう
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">Pixel Watch 4がついに発表。Gemini AIコーチや衛星SOS、修理性改善など大刷新。Apple Watchユーザーも驚く進化とは？.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">テクノロジー</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35237006/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        ドコモdカードのETCカードが「ETCGO」に対応
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">NTTドコモは8月21日、クレジット「dカード」のETCカードが、8月28日午前11時からアマノの「ETCGO」に対応すると発表した。これにより、「三郷流山橋有料道路」「三浦縦貫道路」「逗葉新道」「鬼押ハイウェー」でもdカードのETCカードが利用できるようになる。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">ゲーム</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35237017/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        ソニー Xperia 1 VIIの販売再開--「一層の品質向上に務める」とコメント
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">ソニーは8月21日、スマートフォン「Xperia 1 VII」のモデル「XQ-FS44」について、8月27日から順次販売を再開すると発表した。同社は7月4日に電源が落ちる、再起動がかかる、電源が入らないという事象が一部で発生していることを受け、当該製品の出荷とソニーストアでの販売を一時停止し、製品回収も発表していた。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+            <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+                <div class="article-meta">
+                    <time class="article-date" datetime="" itemprop="datePublished">たった今</time>
+                    <span class="category-tag" itemprop="articleSection">AI・機械学習</span>
+                    <span class="article-source" itemprop="author">CNET Japan 最新情報　総合</span>
+                </div>
+                
+                <h2 class="article-title" itemprop="headline">
+                    <a href="https://japan.cnet.com/article/35237022/" 
+                       target="_blank" 
+                       rel="noopener"
+                       itemprop="url">
+                        グーグルの「AIモード」、日本でも提供開始--現在は英語のみ
+                    </a>
+                </h2>
+                
+                <p class="article-summary" itemprop="description">グーグルは、「AIモード」に新たなエージェンティック機能を追加するとともに、提供地域を日本など世界180の国と地域に拡大すると発表した。.</p>
+                
+                <meta itemprop="dateModified" content="">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                    <span itemprop="name">日本のテックニュース速報</span>
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                    </div>
+                </div>
+            </article>
+        
+        </div>
+        
+        <div class="social-share">
+            <h3>この記事をシェア</h3>
+            <amp-social-share type="twitter" width="40" height="32"></amp-social-share>
+            <amp-social-share type="facebook" width="40" height="32"></amp-social-share>
+            <amp-social-share type="line" width="40" height="32"></amp-social-share>
+            <amp-social-share type="email" width="40" height="32"></amp-social-share>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 日本のテックニュース速報. All rights reserved.</p>
+            <p>2時間ごとに自動更新される最新IT情報をお届けします。</p>
+        </div>
+    </footer>
+
+    <!-- AMP Analytics -->
+    <amp-analytics type="googleanalytics">
+        <script type="application/json">
+        {
+            "vars": {
+                "account": "G-C8010SR0ZW"
+            },
+            "triggers": {
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                }
+            }
+        }
+        </script>
+    </amp-analytics>
+</body>
+</html>

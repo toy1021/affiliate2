@@ -63,14 +63,26 @@
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
     <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
     <link rel="dns-prefetch" href="//www.amazon.co.jp">
+    <link rel="dns-prefetch" href="//affiliate.rakuten.co.jp">
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     
-    <!-- Critical resource preloading -->
-    <link rel="preload" href="articles.json" as="fetch" crossorigin>
+    <!-- Critical resource preloading for Core Web Vitals -->
+    <link rel="preload" href="articles.json" as="fetch" crossorigin="anonymous">
     <link rel="preload" href="sitemap.xml" as="fetch">
     <link rel="prefetch" href="performance.json">
     <link rel="prefetch" href="sitemap.json">
+    <link rel="prefetch" href="news_sitemap.xml">
+    <link rel="prefetch" href="sitemap_index.xml">
+    
+    <!-- Preload critical fonts for faster rendering -->
+    <link rel="preload" href="data:font/woff2;base64," as="font" type="font/woff2" crossorigin>
+    
+    <!-- Module preload for modern browsers -->
+    <link rel="modulepreload" href="data:text/javascript;base64,">
+    
+    <!-- Resource prioritization for better Core Web Vitals -->
+    <meta name="priority" content="high">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -631,6 +643,50 @@
                 .hidden {
                     display: none;
                 }
+                
+                /* Performance optimizations for Core Web Vitals */
+                .article-image-container {
+                    position: relative;
+                    width: 100%;
+                    max-width: 300px;
+                    height: 200px;
+                    margin-bottom: 1rem;
+                    overflow: hidden;
+                    border-radius: 8px;
+                    background: var(--bg-secondary);
+                }
+                
+                .article-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: opacity 0.3s ease;
+                }
+                
+                .article-image.lazy-load {
+                    opacity: 0;
+                    background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--border-color) 50%, var(--bg-secondary) 75%);
+                    background-size: 200% 100%;
+                    animation: shimmer 1.5s infinite;
+                }
+                
+                .article-image.loaded {
+                    opacity: 1;
+                    animation: none;
+                }
+                
+                @keyframes shimmer {
+                    0% { background-position: -200% 0; }
+                    100% { background-position: 200% 0; }
+                }
+                
+                /* Preload critical fonts */
+                @font-face {
+                    font-family: 'System';
+                    src: local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI');
+                    font-display: swap;
+                }
+                
                 .affiliate-links {
                     margin-top: 1rem;
                     padding-top: 1rem;
@@ -650,8 +706,9 @@
                     text-decoration: none;
                     font-size: 0.8rem;
                     font-weight: 600;
-                    transition: all 0.2s ease;
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
                     box-shadow: 0 2px 4px rgba(255, 149, 0, 0.2);
+                    will-change: transform;
                 }
                 .affiliate-link:hover {
                     transform: translateY(-1px);
@@ -662,6 +719,20 @@
                 }
                 .rakuten-link {
                     background: linear-gradient(135deg, #bf0000, #8b0000);
+                }
+                
+                /* Performance optimizations */
+                * {
+                    contain: layout style paint;
+                }
+                
+                .article-card {
+                    contain: layout style;
+                    will-change: background-color;
+                }
+                
+                .pagination-btn {
+                    contain: layout style paint;
                 }
             `);
             document.head.appendChild(link);
@@ -973,20 +1044,49 @@
                 }
                 
                 container.innerHTML = pageArticles.map(article => `
-                    <article class="article-card">
+                    <article class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
                         <div class="article-meta">
-                            <span class="article-date">${article.published_relative}</span>
-                            <span class="category-tag">${article.category}</span>
-                            <span class="article-source">${article.source_name}</span>
+                            <time class="article-date" datetime="${article.published_at}" itemprop="datePublished">${article.published_relative}</time>
+                            <span class="category-tag" itemprop="articleSection">${article.category}</span>
+                            <span class="article-source" itemprop="author" itemscope itemtype="https://schema.org/Organization">
+                                <span itemprop="name">${article.source_name}</span>
+                            </span>
                         </div>
                         
-                        <h2 class="article-title">
-                            <a href="${article.link || article.original_link}" target="_blank" rel="noopener">
+                        ${article.image_url ? `
+                        <div class="article-image-container">
+                            <img class="article-image lazy-load" 
+                                 data-src="${article.image_url}" 
+                                 alt="${article.title}"
+                                 loading="lazy"
+                                 decoding="async"
+                                 itemprop="image"
+                                 width="300" 
+                                 height="200">
+                            <noscript>
+                                <img src="${article.image_url}" alt="${article.title}" itemprop="image">
+                            </noscript>
+                        </div>
+                        ` : ''}
+                        
+                        <h2 class="article-title" itemprop="headline">
+                            <a href="${article.link || article.original_link}" 
+                               target="_blank" 
+                               rel="noopener"
+                               itemprop="url">
                                 ${article.title}
                             </a>
                         </h2>
                         
-                        ${article.summary ? `<p class="article-summary">${article.summary}</p>` : ''}
+                        ${article.summary ? `<p class="article-summary" itemprop="description">${article.summary}</p>` : ''}
+                        
+                        <meta itemprop="dateModified" content="${article.published_at}">
+                        <div itemprop="publisher" itemscope itemtype="https://schema.org/NewsMediaOrganization" style="display:none;">
+                            <span itemprop="name">日本のテックニュース速報</span>
+                            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="url" content="https://toy1021.github.io/affiliate2/favicon.ico">
+                            </div>
+                        </div>
                         
                         ${this.renderAffiliateLinks(article)}
                     </article>
@@ -994,6 +1094,40 @@
                 
                 // Generate structured data for articles
                 this.generateArticleStructuredData(pageArticles);
+                
+                // Initialize lazy loading for images
+                this.initLazyLoading();
+            }
+            
+            initLazyLoading() {
+                // Modern Intersection Observer API for lazy loading
+                if ('IntersectionObserver' in window) {
+                    const imageObserver = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                img.src = img.dataset.src;
+                                img.classList.remove('lazy-load');
+                                img.classList.add('loaded');
+                                observer.unobserve(img);
+                            }
+                        });
+                    }, {
+                        rootMargin: '50px 0px',
+                        threshold: 0.01
+                    });
+                    
+                    document.querySelectorAll('.lazy-load').forEach(img => {
+                        imageObserver.observe(img);
+                    });
+                } else {
+                    // Fallback for older browsers
+                    document.querySelectorAll('.lazy-load').forEach(img => {
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy-load');
+                        img.classList.add('loaded');
+                    });
+                }
             }
             
             generateArticleStructuredData(articles) {
@@ -1001,50 +1135,139 @@
                 const existingStructuredData = document.querySelectorAll('script[data-article-structured-data]');
                 existingStructuredData.forEach(script => script.remove());
                 
+                // Generate enhanced NewsArticle structured data for each article
+                articles.forEach((article, index) => {
+                    const newsArticleData = {
+                        "@context": "https://schema.org",
+                        "@type": "NewsArticle",
+                        "@id": article.link || article.original_link,
+                        "headline": article.title,
+                        "description": article.summary || article.title,
+                        "url": article.link || article.original_link,
+                        "datePublished": article.published_at,
+                        "dateModified": article.published_at,
+                        "author": {
+                            "@type": "Organization",
+                            "name": article.source_name,
+                            "url": article.source_url || "https://toy1021.github.io/affiliate2/"
+                        },
+                        "publisher": {
+                            "@type": "NewsMediaOrganization",
+                            "name": "日本のテックニュース速報",
+                            "url": "https://toy1021.github.io/affiliate2/",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://toy1021.github.io/affiliate2/favicon.ico",
+                                "width": 16,
+                                "height": 16
+                            }
+                        },
+                        "articleSection": article.category,
+                        "articleBody": article.summary || article.title,
+                        "keywords": [article.category, "テクノロジー", "ニュース", "IT", "日本"],
+                        "inLanguage": "ja",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": article.link || article.original_link,
+                            "url": article.link || article.original_link
+                        },
+                        "isPartOf": {
+                            "@type": "WebSite",
+                            "name": "日本のテックニュース速報",
+                            "url": "https://toy1021.github.io/affiliate2/"
+                        },
+                        "genre": ["Technology", "News", "IT", article.category],
+                        "about": {
+                            "@type": "Thing",
+                            "name": article.category,
+                            "description": `${article.category}に関するテクノロジーニュース`
+                        }
+                    };
+                    
+                    // Add image if available
+                    if (article.image_url) {
+                        newsArticleData.image = {
+                            "@type": "ImageObject",
+                            "url": article.image_url,
+                            "caption": article.title
+                        };
+                    }
+                    
+                    // Create and append NewsArticle structured data
+                    const newsScript = document.createElement('script');
+                    newsScript.type = 'application/ld+json';
+                    newsScript.setAttribute('data-article-structured-data', 'true');
+                    newsScript.textContent = JSON.stringify(newsArticleData, null, 2);
+                    document.head.appendChild(newsScript);
+                });
+                
                 // Generate ItemList structured data for current page articles
                 const itemListData = {
                     "@context": "https://schema.org",
                     "@type": "ItemList",
                     "name": "テックニュース記事一覧",
-                    "description": `${this.currentCategory ? this.currentCategory + 'カテゴリの' : ''}最新テクノロジーニュース記事`,
+                    "description": `${this.currentCategory ? this.currentCategory + 'カテゴリの' : ''}最新テクノロジーニュース記事一覧 - ページ${this.currentPage}`,
                     "numberOfItems": articles.length,
+                    "url": window.location.href,
                     "itemListElement": articles.map((article, index) => ({
                         "@type": "ListItem",
                         "position": index + 1,
                         "item": {
-                            "@type": "Article",
+                            "@type": "NewsArticle",
                             "@id": article.link || article.original_link,
                             "headline": article.title,
                             "description": article.summary || article.title,
                             "url": article.link || article.original_link,
                             "datePublished": article.published_at,
-                            "dateModified": article.published_at,
                             "author": {
                                 "@type": "Organization",
                                 "name": article.source_name
                             },
                             "publisher": {
-                                "@type": "Organization",
-                                "name": "日本のテックニュース速報",
-                                "logo": {
-                                    "@type": "ImageObject",
-                                    "url": "https://toy1021.github.io/affiliate2/favicon-192x192.png"
-                                }
+                                "@type": "NewsMediaOrganization",
+                                "name": "日本のテックニュース速報"
                             },
-                            "articleSection": article.category,
-                            "keywords": [article.category, "テクノロジー", "ニュース", "IT"],
-                            "mainEntityOfPage": {
-                                "@type": "WebPage",
-                                "@id": article.link || article.original_link
-                            },
-                            "isPartOf": {
-                                "@type": "WebSite",
-                                "name": "日本のテックニュース速報",
-                                "url": "https://toy1021.github.io/affiliate2/"
-                            }
+                            "articleSection": article.category
                         }
                     }))
                 };
+                
+                // Add BreadcrumbList structured data for category navigation
+                if (this.currentCategory) {
+                    const breadcrumbData = {
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "ホーム",
+                                "item": "https://toy1021.github.io/affiliate2/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": this.currentCategory,
+                                "item": `https://toy1021.github.io/affiliate2/?category=${encodeURIComponent(this.currentCategory)}`
+                            }
+                        ]
+                    };
+                    
+                    if (this.currentPage > 1) {
+                        breadcrumbData.itemListElement.push({
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": `ページ ${this.currentPage}`,
+                            "item": window.location.href
+                        });
+                    }
+                    
+                    const breadcrumbScript = document.createElement('script');
+                    breadcrumbScript.type = 'application/ld+json';
+                    breadcrumbScript.setAttribute('data-article-structured-data', 'true');
+                    breadcrumbScript.textContent = JSON.stringify(breadcrumbData, null, 2);
+                    document.head.appendChild(breadcrumbScript);
+                }
                 
                 // Create and append the structured data script
                 const script = document.createElement('script');
@@ -1166,6 +1389,60 @@
         document.addEventListener('DOMContentLoaded', () => {
             new NewsApp();
         });
+        
+        // Core Web Vitals monitoring
+        function measureCoreWebVitals() {
+            // First Contentful Paint (FCP)
+            if ('performance' in window && 'getEntriesByType' in performance) {
+                const paintEntries = performance.getEntriesByType('paint');
+                const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+                if (fcpEntry) {
+                    console.log('FCP:', fcpEntry.startTime);
+                    gtag('event', 'timing_complete', {
+                        name: 'FCP',
+                        value: Math.round(fcpEntry.startTime)
+                    });
+                }
+            }
+            
+            // Largest Contentful Paint (LCP)
+            if ('PerformanceObserver' in window) {
+                try {
+                    const lcpObserver = new PerformanceObserver((list) => {
+                        const entries = list.getEntries();
+                        const lastEntry = entries[entries.length - 1];
+                        console.log('LCP:', lastEntry.startTime);
+                        gtag('event', 'timing_complete', {
+                            name: 'LCP',
+                            value: Math.round(lastEntry.startTime)
+                        });
+                    });
+                    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+                    
+                    // First Input Delay (FID)
+                    const fidObserver = new PerformanceObserver((list) => {
+                        const entries = list.getEntries();
+                        entries.forEach(entry => {
+                            console.log('FID:', entry.processingStart - entry.startTime);
+                            gtag('event', 'timing_complete', {
+                                name: 'FID',
+                                value: Math.round(entry.processingStart - entry.startTime)
+                            });
+                        });
+                    });
+                    fidObserver.observe({ entryTypes: ['first-input'] });
+                } catch (e) {
+                    console.log('Performance monitoring not supported');
+                }
+            }
+        }
+        
+        // Initialize performance monitoring
+        if (document.readyState === 'complete') {
+            measureCoreWebVitals();
+        } else {
+            window.addEventListener('load', measureCoreWebVitals);
+        }
         
         // Service Worker registration for improved performance (optional)
         if ('serviceWorker' in navigator) {

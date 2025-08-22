@@ -139,14 +139,15 @@
         }
     </script>
     
-    <!-- 構造化データ（JSON-LD）- SPA対応 -->
+    <!-- 拡張構造化データ（JSON-LD）- FAQ & HowTo対応 -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsMediaOrganization",
-      "name": "日本のテックニュース速報",
-      "url": "https://toy1021.github.io/affiliate2/",
-      "logo": {
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "NewsMediaOrganization",
+        "name": "日本のテックニュース速報",
+        "url": "https://toy1021.github.io/affiliate2/",
+        "logo": {
         "@type": "ImageObject",
         "url": "https://toy1021.github.io/affiliate2/favicon-192x192.png",
         "width": 192,
@@ -319,7 +320,63 @@
         "availableLanguage": ["ja", "Japanese"],
         "areaServed": "JP"
       }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "テックニュースサイトで最新情報を効率的に取得する方法",
+      "description": "日本のテックニュース速報を使って最新IT情報を効率的に取得する手順",
+      "totalTime": "PT5M",
+      "supply": ["インターネット接続", "ウェブブラウザ"],
+      "tool": ["PC", "スマートフォン", "タブレット"],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "サイトアクセス",
+          "text": "toy1021.github.io/affiliate2/ にアクセスします",
+          "image": "https://toy1021.github.io/affiliate2/favicon.ico"
+        },
+        {
+          "@type": "HowToStep", 
+          "name": "カテゴリー選択",
+          "text": "左サイドバーから興味のあるカテゴリ（AI・機械学習、Apple製品など）を選択します",
+          "image": "https://toy1021.github.io/affiliate2/favicon.ico"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "記事閲覧",
+          "text": "最新記事一覧から気になる記事をクリックして外部サイトで詳細を確認します",
+          "image": "https://toy1021.github.io/affiliate2/favicon.ico"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "テクノロジーニュース検索・フィルタリングページ",
+      "description": "日本のテクノロジーニュースを検索・フィルタリングできる高機能ページ",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://toy1021.github.io/affiliate2/?q={search_term}",
+            "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+          },
+          "query-input": "required name=search_term"
+        },
+        {
+          "@type": "FilterAction",
+          "target": {
+            "@type": "EntryPoint", 
+            "urlTemplate": "https://toy1021.github.io/affiliate2/?category={category_name}",
+            "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+          },
+          "query-input": "required name=category_name"
+        }
+      ]
     }
+    ]
     </script>
     
     <!-- Critical CSS inlined for immediate rendering -->
@@ -495,6 +552,15 @@
                     margin-left: 0.3rem;
                 }
                 
+                .reading-time {
+                    color: var(--text-secondary);
+                    font-size: 0.8rem;
+                    background: var(--bg-secondary);
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 4px;
+                    font-weight: 500;
+                }
+                
                 .articles-grid {
                     display: block;
                     margin: 2rem 0;
@@ -625,6 +691,85 @@
                     margin-bottom: 2rem;
                     align-items: center;
                     flex-wrap: wrap;
+                }
+                
+                .search-container {
+                    position: relative;
+                    flex: 1;
+                    max-width: 300px;
+                }
+                
+                .search-input {
+                    width: 100%;
+                    padding: 0.5rem 2rem 0.5rem 1rem;
+                    border: 1px solid var(--border-color);
+                    border-radius: 6px;
+                    background: var(--bg-primary);
+                    font-size: 0.9rem;
+                    transition: all 0.2s ease;
+                }
+                
+                .search-input:focus {
+                    outline: none;
+                    border-color: var(--primary-color);
+                    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+                }
+                
+                .search-clear {
+                    position: absolute;
+                    right: 0.5rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: none;
+                    border: none;
+                    font-size: 1.2rem;
+                    color: var(--text-secondary);
+                    cursor: pointer;
+                    padding: 0.2rem;
+                    border-radius: 50%;
+                    line-height: 1;
+                }
+                
+                .search-clear:hover {
+                    background: var(--bg-secondary);
+                    color: var(--text-primary);
+                }
+                
+                .search-suggestions {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    background: var(--bg-primary);
+                    border: 1px solid var(--border-color);
+                    border-top: none;
+                    border-radius: 0 0 6px 6px;
+                    max-height: 200px;
+                    overflow-y: auto;
+                    z-index: 1000;
+                    display: none;
+                }
+                
+                .suggestion-item {
+                    padding: 0.5rem 1rem;
+                    cursor: pointer;
+                    border-bottom: 1px solid var(--border-color);
+                    font-size: 0.9rem;
+                }
+                
+                .suggestion-item:last-child {
+                    border-bottom: none;
+                }
+                
+                .suggestion-item:hover,
+                .suggestion-item.highlighted {
+                    background: var(--bg-secondary);
+                }
+                
+                .suggestion-category {
+                    font-size: 0.75rem;
+                    color: var(--text-secondary);
+                    margin-left: 0.5rem;
                 }
                 
                 .filter-select {
@@ -933,6 +1078,19 @@
         </div>
 
         <div class="filters" id="filters" style="display: none;">
+            <div class="search-container">
+                <input type="text" 
+                       class="search-input" 
+                       id="search-input" 
+                       placeholder="記事を検索..." 
+                       autocomplete="off"
+                       spellcheck="false"
+                       role="searchbox"
+                       aria-label="記事検索"
+                       data-lpignore="true">
+                <div class="search-suggestions" id="search-suggestions"></div>
+                <button class="search-clear" id="search-clear" aria-label="検索をクリア" style="display: none;">×</button>
+            </div>
             <select class="filter-select" id="category-filter">
                 <option value="">全カテゴリ</option>
             </select>
@@ -999,6 +1157,7 @@
                 this.articlesPerPage = 12;
                 this.currentCategory = '';
                 this.currentSource = '';
+                this.currentSearch = '';
                 this.filteredArticles = [];
                 
                 this.init();
@@ -1027,6 +1186,81 @@
             }
             
             setupEventListeners() {
+                // 検索機能
+                const searchInput = document.getElementById('search-input');
+                const searchClear = document.getElementById('search-clear');
+                const searchSuggestions = document.getElementById('search-suggestions');
+                
+                let searchTimeout;
+                let selectedSuggestionIndex = -1;
+                
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.trim();
+                    
+                    // Show/hide clear button
+                    searchClear.style.display = query ? 'block' : 'none';
+                    
+                    // Clear previous timeout
+                    clearTimeout(searchTimeout);
+                    
+                    if (query.length >= 2) {
+                        // Debounce search to avoid too many calls
+                        searchTimeout = setTimeout(() => {
+                            this.showSearchSuggestions(query);
+                        }, 300);
+                    } else {
+                        this.hideSearchSuggestions();
+                    }
+                    
+                    // Update current search and filter
+                    this.currentSearch = query;
+                    this.currentPage = 1;
+                    this.filterArticles();
+                    this.updateURL();
+                });
+                
+                searchInput.addEventListener('keydown', (e) => {
+                    const suggestions = searchSuggestions.querySelectorAll('.suggestion-item');
+                    
+                    if (e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        selectedSuggestionIndex = Math.min(selectedSuggestionIndex + 1, suggestions.length - 1);
+                        this.highlightSuggestion(suggestions, selectedSuggestionIndex);
+                    } else if (e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        selectedSuggestionIndex = Math.max(selectedSuggestionIndex - 1, -1);
+                        this.highlightSuggestion(suggestions, selectedSuggestionIndex);
+                    } else if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (selectedSuggestionIndex >= 0 && suggestions[selectedSuggestionIndex]) {
+                            suggestions[selectedSuggestionIndex].click();
+                        } else {
+                            this.hideSearchSuggestions();
+                        }
+                    } else if (e.key === 'Escape') {
+                        this.hideSearchSuggestions();
+                        searchInput.blur();
+                    }
+                });
+                
+                searchClear.addEventListener('click', () => {
+                    searchInput.value = '';
+                    searchClear.style.display = 'none';
+                    this.currentSearch = '';
+                    this.currentPage = 1;
+                    this.filterArticles();
+                    this.updateURL();
+                    this.hideSearchSuggestions();
+                    searchInput.focus();
+                });
+                
+                // Hide suggestions when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('.search-container')) {
+                        this.hideSearchSuggestions();
+                    }
+                });
+                
                 // カテゴリフィルター
                 document.getElementById('category-filter').addEventListener('change', (e) => {
                     this.currentCategory = e.target.value;
@@ -1110,7 +1344,20 @@
                 this.filteredArticles = this.data.articles.filter(article => {
                     const categoryMatch = !this.currentCategory || article.category === this.currentCategory;
                     const sourceMatch = !this.currentSource || article.source_name === this.currentSource;
-                    return categoryMatch && sourceMatch;
+                    
+                    // Search functionality
+                    let searchMatch = true;
+                    if (this.currentSearch && this.currentSearch.length > 0) {
+                        const searchLower = this.currentSearch.toLowerCase();
+                        const titleMatch = article.title.toLowerCase().includes(searchLower);
+                        const summaryMatch = article.summary && article.summary.toLowerCase().includes(searchLower);
+                        const categorySearchMatch = article.category.toLowerCase().includes(searchLower);
+                        const sourceSearchMatch = article.source_name.toLowerCase().includes(searchLower);
+                        
+                        searchMatch = titleMatch || summaryMatch || categorySearchMatch || sourceSearchMatch;
+                    }
+                    
+                    return categoryMatch && sourceMatch && searchMatch;
                 });
                 
                 this.render();
@@ -1396,6 +1643,7 @@
                         <div class="article-meta">
                             <time class="article-date" datetime="${article.published_at}" itemprop="datePublished">${article.published_relative}</time>
                             <span class="category-tag" itemprop="articleSection">${article.category}</span>
+                            <span class="reading-time">📖 ${this.calculateReadingTime(article)}</span>
                             <span class="article-source" itemprop="author" itemscope itemtype="https://schema.org/Organization">
                                 <span itemprop="name">${article.source_name}</span>
                             </span>
@@ -1740,6 +1988,122 @@
                 return `${category}ニュース: ${titleWords} - ${source}より`;
             }
             
+<<<<<<< HEAD
+=======
+            calculateReadingTime(article) {
+                // Calculate estimated reading time based on title, summary, and average reading speed
+                const wordsPerMinute = 400; // Japanese reading speed (chars per minute)
+                const titleLength = (article.title || '').length;
+                const summaryLength = (article.summary || '').length;
+                const totalChars = titleLength + summaryLength;
+                
+                // Minimum 1 minute, maximum 10 minutes for news articles
+                const estimatedMinutes = Math.max(1, Math.min(10, Math.ceil(totalChars / wordsPerMinute)));
+                
+                if (estimatedMinutes === 1) {
+                    return '1分で読める';
+                } else {
+                    return `約${estimatedMinutes}分で読める`;
+                }
+            }
+            
+            showSearchSuggestions(query) {
+                const suggestions = this.generateSearchSuggestions(query);
+                const suggestionsContainer = document.getElementById('search-suggestions');
+                
+                if (suggestions.length === 0) {
+                    this.hideSearchSuggestions();
+                    return;
+                }
+                
+                const suggestionsHTML = suggestions.map(suggestion => `
+                    <div class="suggestion-item" data-suggestion="${suggestion.text}">
+                        ${suggestion.text}
+                        <span class="suggestion-category">${suggestion.category || ''}</span>
+                    </div>
+                `).join('');
+                
+                suggestionsContainer.innerHTML = suggestionsHTML;
+                suggestionsContainer.style.display = 'block';
+                
+                // Add click listeners to suggestions
+                suggestionsContainer.querySelectorAll('.suggestion-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        const suggestion = item.dataset.suggestion;
+                        document.getElementById('search-input').value = suggestion;
+                        this.currentSearch = suggestion;
+                        this.currentPage = 1;
+                        this.filterArticles();
+                        this.updateURL();
+                        this.hideSearchSuggestions();
+                    });
+                });
+            }
+            
+            hideSearchSuggestions() {
+                const suggestionsContainer = document.getElementById('search-suggestions');
+                suggestionsContainer.style.display = 'none';
+                suggestionsContainer.innerHTML = '';
+            }
+            
+            highlightSuggestion(suggestions, index) {
+                suggestions.forEach((suggestion, i) => {
+                    suggestion.classList.toggle('highlighted', i === index);
+                });
+            }
+            
+            generateSearchSuggestions(query) {
+                const queryLower = query.toLowerCase();
+                const suggestions = new Set();
+                const maxSuggestions = 5;
+                
+                // Search in titles and add unique suggestions
+                this.data.articles.forEach(article => {
+                    const title = article.title.toLowerCase();
+                    const category = article.category;
+                    const source = article.source_name;
+                    
+                    // Title-based suggestions
+                    if (title.includes(queryLower) && suggestions.size < maxSuggestions) {
+                        const words = article.title.split(/\s+/);
+                        const relevantWords = words.filter(word => 
+                            word.toLowerCase().includes(queryLower) && word.length > 2
+                        );
+                        
+                        relevantWords.forEach(word => {
+                            if (suggestions.size < maxSuggestions) {
+                                suggestions.add({
+                                    text: word,
+                                    category: category,
+                                    type: 'keyword'
+                                });
+                            }
+                        });
+                    }
+                    
+                    // Category suggestions
+                    if (category.toLowerCase().includes(queryLower) && suggestions.size < maxSuggestions) {
+                        suggestions.add({
+                            text: category,
+                            category: 'カテゴリ',
+                            type: 'category'
+                        });
+                    }
+                    
+                    // Source suggestions
+                    if (source.toLowerCase().includes(queryLower) && suggestions.size < maxSuggestions) {
+                        suggestions.add({
+                            text: source,
+                            category: 'ソース',
+                            type: 'source'
+                        });
+                    }
+                });
+                
+                return Array.from(suggestions).slice(0, maxSuggestions);
+            }
+            
+>>>>>>> 6da761b (🔍 Advanced SEO and Search Enhancement Suite)
             generateWebPUrl(originalUrl) {
                 // For now, return original URL
                 // In production, you could use a service like Cloudinary or implement server-side WebP conversion

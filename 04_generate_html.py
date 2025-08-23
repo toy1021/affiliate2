@@ -489,12 +489,20 @@ def copy_static_files():
     
     static_files = [
         "favicon.ico",
-        "templates/sw.js",
-        "templates/404.html",
+        "output/sw.js",
+        "templates/404.html", 
         "images/og-image.svg",
         "sitemap.xml",
-        "robots.txt"
+        "robots.txt",
+        "_config.yml",
+        "_headers",
+        ".htaccess"
     ]
+    
+    # 最適化されたCSS/JSファイルも追加
+    for file in os.listdir("output"):
+        if file.startswith(("styles.", "app.")) and (file.endswith(".css") or file.endswith(".js")):
+            static_files.append(f"output/{file}")
     
     copied_files = []
     
@@ -636,7 +644,7 @@ def generate_structured_data(enhanced_articles, stats):
 def generate_spa_as_main(enhanced_articles, stats):
     """SPAをメインのindex.htmlとして生成"""
     # SPA用テンプレートを読み込み
-    spa_template_path = "templates/spa.html"
+    spa_template_path = "templates/spa_optimized.html" if os.path.exists("templates/spa_optimized.html") else "templates/spa.html"
     
     if not os.path.exists(spa_template_path):
         print(f"Error: SPA template not found: {spa_template_path}")
@@ -668,7 +676,7 @@ def generate_spa_as_main(enhanced_articles, stats):
 def generate_spa_version(enhanced_articles, stats):
     """シングルページアプリケーション版を生成"""
     # SPA用テンプレートを読み込み
-    spa_template_path = "templates/spa.html"
+    spa_template_path = "templates/spa_optimized.html" if os.path.exists("templates/spa_optimized.html") else "templates/spa.html"
     
     if not os.path.exists(spa_template_path):
         print(f"Warning: SPA template not found: {spa_template_path}")

@@ -52,10 +52,12 @@ jobs:
         echo "Starting RSS Affiliate Pipeline..."
         python run_all.py
         
-    - name: Generate SEO files
+    - name: Generate SEO files and optimize performance
       run: |
         echo "Generating XML sitemap..."
         python generate_sitemap.py
+        echo "Optimizing Core Web Vitals..."
+        python optimize_performance.py
         
     - name: Verify generated files
       run: |

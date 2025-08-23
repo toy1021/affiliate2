@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本のテックニュース速報 | 2時間ごとに更新される最新IT情報</title>
+    <meta name="description" content="AI・機械学習、Apple製品、プログラミングなど最新テクノロジーニュースを2時間ごとに自動更新。関連商品も一緒にお届け。">
+    <meta name="keywords" content="テクノロジーニュース,AI,機械学習,Apple,iPhone,プログラミング,Python,JavaScript,IT速報,ガジェット">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="日本のテックニュース速報">
+    <meta property="og:description" content="最新テクノロジーニュースを2時間ごとに自動更新">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toy1021.github.io/affiliate2/">
+    <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/svg+xml">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://toy1021.github.io/affiliate2/">
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="https://toy1021.github.io/affiliate2/sitemap.xml">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="日本のテックニュース速報">
+    <meta name="twitter:description" content="最新テクノロジーニュースを2時間ごとに自動更新">
+    <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
+    
+    <!-- JSON-LD構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "日本のテックニュース速報",
+        "description": "AI・機械学習、Apple製品、プログラミングなど最新テクノロジーニュースを2時間ごとに自動更新。関連商品も一緒にお届け。",
+        "url": "https://toy1021.github.io/affiliate2/",
+        "inLanguage": "ja",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tech News Hub"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://toy1021.github.io/affiliate2/#search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "日本のテックニュース速報",
+        "description": "最新テクノロジーニュースコレクション",
+        "url": "https://toy1021.github.io/affiliate2/",
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "テックニュース記事一覧",
+            "numberOfItems": "{{ ARTICLE_COUNT }}",
+            "itemListElement": []
+        }
+    }
+    </script>
+    
+    <!-- BreadcrumbList構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "ホーム",
+                "item": "https://toy1021.github.io/affiliate2/"
+            },
+            {
+                "@type": "ListItem", 
+                "position": 2,
+                "name": "テックニュース",
+                "item": "https://toy1021.github.io/affiliate2/"
+            }
+        ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.2572bb31.css">
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    
+    <!-- Performance Meta Tags -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="referrer" content="origin-when-cross-origin">
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <h1>日本のテックニュース速報</h1>
+                    <p class="subtitle">2時間ごとに更新される最新IT情報</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="update-info">
+            <p><strong>最新更新:</strong> <span id="update-time">{{ UPDATE_TIME }}</span></p>
+            <p><strong>記事数:</strong> <span id="article-count">{{ ARTICLE_COUNT }}</span>件</p>
+        </div>
+
+        <div class="filters" id="filters" style="display: none;">
+            <input type="text" class="search-input" id="search-input" placeholder="記事を検索...">
+            <select class="filter-select" id="category-filter">
+                <option value="">全カテゴリ</option>
+            </select>
+            <select class="filter-select" id="source-filter">
+                <option value="">全ソース</option>
+            </select>
+        </div>
+        
+        <div class="main-layout">
+            <div class="main-content">
+                <div class="articles-grid" id="articles-container">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+                
+                <div class="pagination" id="pagination" style="display: none;"></div>
+            </div>
+            
+            <div class="sidebar" id="sidebar" style="display: none;">
+                <h3>カテゴリ</h3>
+                <ul id="category-menu"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.197b74f3.js" defer></script>
+
+    <script>
+    if('serviceWorker' in navigator){
+        window.addEventListener('load',()=>{
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg=>console.log('SW registered'))
+                .catch(err=>console.log('SW registration failed'));
+        });
+    }
+    </script>
+    </body>
+</html>

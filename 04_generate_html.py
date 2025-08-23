@@ -483,6 +483,145 @@ def generate_api_data(enhanced_articles, stats):
     
     return api_data
 
+def generate_individual_article_pages(enhanced_articles):
+    """個別記事ページを生成"""
+    try:
+        # Jinja2環境をセットアップ
+        from jinja2 import FileSystemLoader, Environment
+        loader = FileSystemLoader('templates')
+        env = Environment(
+            loader=loader,
+            autoescape=True,
+            trim_blocks=True,
+            lstrip_blocks=True
+        )
+        
+        # 記事テンプレートを読み込み
+        try:
+            template = env.get_template('article.html')
+        except Exception as e:
+            print(f"記事テンプレートの読み込みに失敗しました: {str(e)}")
+            return
+        
+        # 記事ディレクトリを作成
+        articles_dir = os.path.join(OUTPUT_DIR, 'articles')
+        os.makedirs(articles_dir, exist_ok=True)
+        
+        generated_count = 0
+        failed_count = 0
+        
+        for article in enhanced_articles:
+            try:
+                # 記事IDからスラッグを生成
+                slug = article['id'].replace(' ', '_').replace('/', '_').replace('\\', '_')
+                slug = ''.join(c for c in slug if c.isalnum() or c in '_-')
+                
+                # アフィリエイトリンクを配列として処理（最大6件）
+                affiliate_links = []
+                if article.get('affiliate_links'):
+                    if isinstance(article['affiliate_links'], list):
+                        affiliate_links = article['affiliate_links'][:6]
+                    elif isinstance(article['affiliate_links'], dict):
+                        affiliate_links = list(article['affiliate_links'].values())[:6]
+                
+                # HTMLを生成
+                html_content = template.render(
+                    article=article,
+                    affiliate_links=affiliate_links
+                )
+                
+                # ファイルに保存
+                output_file = os.path.join(articles_dir, f"{slug}.html")
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    f.write(html_content)
+                
+                generated_count += 1
+                
+                if VERBOSE and generated_count <= 5:  # 最初の5つだけ詳細ログ
+                    print(f"記事ページを生成: {slug}.html")
+            
+            except Exception as e:
+                failed_count += 1
+                if DEBUG:
+                    print(f"記事ページ生成失敗: {article.get('id', 'unknown')} - {str(e)}")
+        
+        print(f"個別記事ページ生成完了: 成功 {generated_count}件, 失敗 {failed_count}件")
+        
+        # サイトマップに記事ページを追加
+        update_sitemap_with_articles(enhanced_articles)
+        
+    except Exception as e:
+        print(f"個別記事ページの生成に失敗しました: {str(e)}")
+
+def update_sitemap_with_articles(enhanced_articles, base_url="https://toy1021.github.io/affiliate2/"):
+    """サイトマップに個別記事ページを追加"""
+    sitemap_file = os.path.join(OUTPUT_DIR, 'sitemap.xml')
+    
+    try:
+        # 既存のサイトマップを読み込み
+        if os.path.exists(sitemap_file):
+            with open(sitemap_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+        else:
+            # 基本的なサイトマップを作成
+            content = '''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://toy1021.github.io/affiliate2/</loc>
+        <lastmod>{}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+</urlset>'''.format(datetime.now().strftime('%Y-%m-%d'))
+        
+        # 個別記事のエントリを生成
+        urls_xml = ""
+        for article in enhanced_articles:
+            slug = article['id'].replace(' ', '_').replace('/', '_').replace('\\', '_')
+            slug = ''.join(c for c in slug if c.isalnum() or c in '_-')
+            
+            url = f"{base_url}articles/{slug}.html"
+            
+            # 最終更新日を取得
+            lastmod = article.get('processed_at', article.get('fetched_at', ''))
+            if lastmod and 'T' in lastmod:
+                lastmod = lastmod.split('T')[0]
+            else:
+                lastmod = datetime.now().strftime('%Y-%m-%d')
+            
+            urls_xml += f'''    <url>
+        <loc>{url}</loc>
+        <lastmod>{lastmod}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+'''
+        
+        # 既存のサイトマップに新しいエントリを挿入
+        if '</urlset>' in content:
+            content = content.replace('</urlset>', urls_xml + '</urlset>')
+        else:
+            # サイトマップの形式が正しくない場合は新しく作成
+            content = f'''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://toy1021.github.io/affiliate2/</loc>
+        <lastmod>{datetime.now().strftime('%Y-%m-%d')}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+{urls_xml}</urlset>'''
+        
+        # サイトマップファイルに書き込み
+        with open(sitemap_file, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        if VERBOSE:
+            print(f"サイトマップを更新しました: {len(enhanced_articles)}記事を追加")
+        
+    except Exception as e:
+        print(f"サイトマップの更新に失敗しました: {str(e)}")
+
 def copy_static_files():
     """静的ファイル（favicon等）をoutputディレクトリにコピー"""
     import shutil
@@ -667,6 +806,9 @@ def generate_spa_as_main(enhanced_articles, stats):
     
     # 静的ファイルもコピー
     copy_static_files()
+    
+    # 個別記事ページを生成
+    generate_individual_article_pages(enhanced_articles)
     
     if VERBOSE:
         print(f"SPA generated as main page: {main_output_file}")

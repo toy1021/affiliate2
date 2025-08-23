@@ -24,6 +24,11 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_924.html">
     
+    <!-- アクセシビリティ改善 -->
+    <meta name="reading-time" content="1">
+    <meta name="content-language" content="ja">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
+    
     <!-- JSON-LD構造化データ -->
     <script type="application/ld+json">
     {
@@ -89,7 +94,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 </head>
 <body>
-    <header>
+    <!-- スキップナビゲーション -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
+    <header role="banner">
         <div class="container">
             <div class="header-content">
                 <div>
@@ -110,7 +118,8 @@
             </ol>
         </nav>
 
-        <article class="article-detail">
+        <main id="main-content" role="main">
+        <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
                 <h1>【Mintfolio】Qiitaの活動を一瞬でポートフォリオ化できるサービスを開発してみた！</h1>
                 <div class="article-meta">
@@ -119,6 +128,7 @@
                     <time datetime="2025-08-20T12:08:25+09:00">
                         公開: 2025-08-20T12:08:25+09:00
                     </time>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
             </header>
 
@@ -182,9 +192,11 @@
                 </div>
             </div>
         </nav>
+        </main>
 
         <!-- 関連記事 -->
-        <section class="related-articles">
+        <aside class="related-articles" role="complementary" aria-label="関連記事">
+        <section>
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
@@ -239,6 +251,7 @@
                 </article>
             </div>
         </section>
+        </aside>
 
         <div class="back-navigation">
             <a href="../" class="back-to-home">一覧に戻る</a>
@@ -246,6 +259,55 @@
     </div>
 
     <style>
+    /* アクセシビリティ：スキップリンク */
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #000;
+        color: #fff;
+        padding: 8px;
+        text-decoration: none;
+        z-index: 100;
+        border-radius: 0 0 4px 4px;
+        font-weight: bold;
+        transition: top 0.3s;
+    }
+    
+    .skip-link:focus {
+        top: 0;
+    }
+    
+    /* アクセシビリティ：フォーカス表示の改善 */
+    a:focus,
+    button:focus,
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: 2px solid #007cba;
+        outline-offset: 2px;
+    }
+    
+    /* 高コントラストモード対応 */
+    @media (prefers-contrast: high) {
+        .article-detail {
+            border: 2px solid;
+        }
+        
+        .article-meta {
+            font-weight: bold;
+        }
+    }
+    
+    /* motion縮小設定への対応 */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+    
     .breadcrumb {
         margin: 1rem 0;
         font-size: 0.875rem;

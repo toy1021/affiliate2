@@ -175,6 +175,112 @@ def optimize_meta_description(article, target_length=155):
     
     return best_candidate
 
+def generate_accessibility_alt_text(article, context="article"):
+    """アクセシビリティに配慮したalt属性テキストを生成"""
+    title = article.get('title', '')
+    category = article.get('category', '')
+    source_name = article.get('source_name', '')
+    
+    if context == "article":
+        # 記事のメイン画像用
+        if title:
+            # カテゴリ情報を含めた説明的なalt text
+            category_desc = {
+                'Apple製品': 'Apple製品',
+                'AI・機械学習': 'AI・機械学習技術',
+                'プログラミング': 'プログラミング・開発',
+                'ゲーム': 'ゲーム・エンターテインメント',
+                'Google・Android': 'Google・Android',
+                'セキュリティ': 'セキュリティ・暗号化',
+                'テクノロジー': 'テクノロジー',
+            }.get(category, 'テクノロジー')
+            
+            # 記事内容を説明する alt text を生成
+            alt_text = f"{title}に関する{category_desc}の記事画像"
+            
+            # 長すぎる場合は調整
+            if len(alt_text) > 125:
+                # タイトルを短縮
+                short_title = title[:60] + "..." if len(title) > 60 else title
+                alt_text = f"{short_title}に関する{category_desc}の記事画像"
+            
+            return alt_text
+        else:
+            return f"{category}に関する記事の画像" if category else "技術記事の画像"
+    
+    elif context == "affiliate":
+        # アフィリエイト商品画像用  
+        product_title = article.get('title', '')
+        if product_title:
+            # 商品名を含む説明的なalt text
+            alt_text = f"{product_title}の商品画像"
+            if len(alt_text) > 100:
+                short_title = product_title[:70] + "..." if len(product_title) > 70 else product_title
+                alt_text = f"{short_title}の商品画像"
+            return alt_text
+        else:
+            return "関連商品の画像"
+    
+    elif context == "logo":
+        # ロゴ・アイコン用
+        return f"{source_name}のロゴ" if source_name else "サイトロゴ"
+    
+    # デフォルト
+    return title if title else "記事に関連する画像"
+
+def generate_accessible_content_structure(article):
+    """記事のアクセシブルなコンテンツ構造を生成"""
+    structure = {
+        'heading_hierarchy': [],
+        'content_sections': [],
+        'reading_time': 0,
+        'accessibility_features': []
+    }
+    
+    # 読了時間の推定（日本語の平均読書速度: 400-600文字/分）
+    content_length = len(article.get('title', '')) + len(article.get('summary', ''))
+    if article.get('original_content'):
+        content_length += len(str(article.get('original_content', '')))
+    
+    # 読了時間を推定（保守的に400文字/分で計算）
+    structure['reading_time'] = max(1, round(content_length / 400))
+    
+    # 見出し構造の分析
+    title = article.get('title', '')
+    if title:
+        structure['heading_hierarchy'].append({
+            'level': 1,
+            'text': title,
+            'type': 'main_title'
+        })
+    
+    if article.get('summary'):
+        structure['heading_hierarchy'].append({
+            'level': 2, 
+            'text': '概要',
+            'type': 'summary'
+        })
+    
+    # コンテンツセクション
+    structure['content_sections'] = [
+        {'type': 'header', 'content': title},
+        {'type': 'summary', 'content': article.get('summary', '')},
+        {'type': 'body', 'content': article.get('original_content', '')},
+        {'type': 'source', 'content': article.get('source_url', '')}
+    ]
+    
+    # アクセシビリティ機能
+    structure['accessibility_features'] = [
+        'skip_navigation',
+        'semantic_markup', 
+        'alt_text_images',
+        'keyboard_navigation',
+        'screen_reader_support',
+        'high_contrast_support'
+    ]
+    
+    return structure
+
 def calculate_article_importance(article):
     """記事の重要度を計算（品質スコア統合版）"""
     importance_score = 0
@@ -697,6 +803,15 @@ def generate_individual_article_pages(enhanced_articles):
                 # 最適化されたメタディスクリプションを生成
                 optimized_meta_description = optimize_meta_description(article)
                 
+                # アクセシビリティ機能を生成
+                article_alt_text = generate_accessibility_alt_text(article, "article")
+                accessible_structure = generate_accessible_content_structure(article)
+                
+                # アフィリエイトリンクにもalt text を追加
+                for link in affiliate_links:
+                    if isinstance(link, dict):
+                        link['accessible_alt_text'] = generate_accessibility_alt_text(link, "affiliate")
+                
                 # HTMLを生成
                 html_content = template.render(
                     article=article,
@@ -704,7 +819,9 @@ def generate_individual_article_pages(enhanced_articles):
                     related_articles=related_articles,
                     prev_article=prev_next['prev'],
                     next_article=prev_next['next'],
-                    optimized_meta_description=optimized_meta_description
+                    optimized_meta_description=optimized_meta_description,
+                    article_alt_text=article_alt_text,
+                    accessible_structure=accessible_structure
                 )
                 
                 # ファイルに保存

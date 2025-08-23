@@ -36,7 +36,7 @@ def clean_html(html_text):
     text = re.sub(r'\s+', ' ', text)
     return text.strip()
 
-def extract_key_sentences(text, max_sentences=3):
+def extract_key_sentences(text, max_sentences=6):
     """重要な文章を抽出"""
     if not text:
         return ""
@@ -56,7 +56,7 @@ def extract_key_sentences(text, max_sentences=3):
     
     # 文章に重要度スコアを付与
     scored_sentences = []
-    for sentence in sentences[:20]:  # 最初の20文を評価
+    for sentence in sentences[:30]:  # 最初の30文を評価
         score = 0
         sentence_lower = sentence.lower()
         
@@ -66,7 +66,7 @@ def extract_key_sentences(text, max_sentences=3):
                 score += 2
         
         # 文章の長さによる調整（長すぎず短すぎない文章を優先）
-        if 30 <= len(sentence) <= 150:
+        if 20 <= len(sentence) <= 200:
             score += 1
         
         # 数字や具体的なデータを含む文章

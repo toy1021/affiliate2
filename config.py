@@ -44,7 +44,7 @@ RSS_FEEDS = [
 
 # Content Processing
 MAX_ARTICLES_PER_FEED = 20  # 記事数を大幅に増加（数日分）
-SUMMARY_LENGTH = 350  # より詳細な要約
+SUMMARY_LENGTH = 800  # より長い詳細な要約
 ARTICLES_PER_PAGE = 12  # ページネーション用
 
 # Affiliate Settings

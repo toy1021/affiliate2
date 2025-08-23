@@ -165,9 +165,64 @@
             </aside>
         </article>
 
+        <!-- 前後記事ナビゲーション -->
         <nav class="article-navigation">
-            <a href="../" class="back-to-home">一覧に戻る</a>
+            <div class="nav-links">
+                <div class="nav-prev">
+                    <a href="ASCIIjp__トップ_9737.html">
+                        <span class="nav-label">前の記事</span>
+                        <span class="nav-title">新設計ケースで楽々開閉！ 大幅なイメチェンを果たした「新生G TUNE」をご覧あれ：マウスコンピュー...</span>
+                    </a>
+                </div>
+                
+                <div class="nav-next">
+                    <a href="CNET_Japan_最新情報総合_4422.html">
+                        <span class="nav-label">次の記事</span>
+                        <span class="nav-title">NASAとIBM、太陽フレアをAIで予測へ--新モデル「Surya」を公開</span>
+                    </a>
+                </div>
+            </div>
         </nav>
+
+        <!-- 関連記事 -->
+        <section class="related-articles">
+            <h2>関連記事</h2>
+            <div class="related-grid">
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_8153.html">
+                        <h3>au、eSIM再発行を9月1日から当面無料に</h3>
+                        <div class="related-meta">
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">KDDIは8月21日、2025年9月1日以降「My au」「My UQ mobile」でのeSIM再発行およびeSIM転送手続きを当面無料にすると発表した。有料化する際には事前に告知するとしている。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_9255.html">
+                        <h3>OAuth 2.0 / OIDCを理解するために、自分でGoで実装してみた</h3>
+                        <div class="related-meta">
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">0は、ユーザーの認証情報を直接アプリに渡すことなく、外部サービスを通じて安全に認可を行うためのプロトコルです 。特にWebやモバイルアプリ開発では、認証と認可を分離しセキュアに委譲する手段として広く利...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahooニューストピックス_-_IT_2720.html">
+                        <h3>報告遅れ 楽天モバイルに行政指導</h3>
+                        <div class="related-meta">
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <div class="back-navigation">
+            <a href="../" class="back-to-home">一覧に戻る</a>
+        </div>
     </div>
 
     <style>
@@ -355,8 +410,133 @@
     }
     
     .article-navigation {
+        margin: 3rem 0;
+        border-top: 1px solid #eee;
+        padding-top: 2rem;
+    }
+    
+    .nav-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .nav-prev {
+        text-align: left;
+    }
+    
+    .nav-next {
+        text-align: right;
+    }
+    
+    .nav-prev a,
+    .nav-next a {
+        display: block;
+        padding: 1rem;
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s;
+    }
+    
+    .nav-prev a:hover,
+    .nav-next a:hover {
+        background: #e9ecef;
+        border-color: #adb5bd;
+    }
+    
+    .nav-label {
+        display: block;
+        font-size: 0.875rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-title {
+        display: block;
+        font-weight: 500;
+        color: #333;
+        line-height: 1.3;
+    }
+    
+    .related-articles {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+    
+    .related-articles h2 {
+        margin: 0 0 2rem;
+        font-size: 1.5rem;
+        color: #333;
         text-align: center;
-        margin: 2rem 0;
+    }
+    
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .related-item {
+        background: white;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .related-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .related-item a {
+        display: block;
+        padding: 1.5rem;
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .related-item h3 {
+        margin: 0 0 1rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .related-meta {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .related-meta .category {
+        background: #007acc;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+    }
+    
+    .related-meta .source {
+        color: #666;
+    }
+    
+    .related-summary {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        color: #555;
+    }
+    
+    .back-navigation {
+        text-align: center;
+        margin: 3rem 0;
     }
     
     .back-to-home {
@@ -391,6 +571,27 @@
         
         .affiliate-grid {
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+        
+        .nav-links {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .nav-next {
+            text-align: left;
+        }
+        
+        .related-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .related-articles {
+            padding: 1.5rem;
+        }
+        
+        .related-articles h2 {
+            font-size: 1.25rem;
         }
     }
     </style>

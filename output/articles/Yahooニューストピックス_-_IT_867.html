@@ -158,9 +158,85 @@
             </aside>
         </article>
 
+        <!-- 前後記事ナビゲーション -->
         <nav class="article-navigation">
-            <a href="../" class="back-to-home">一覧に戻る</a>
+            <div class="nav-links">
+                <div class="nav-prev">
+                    <a href="Zennのトレンド_1293.html">
+                        <span class="nav-label">前の記事</span>
+                        <span class="nav-title">Codex CLI をプロジェクトに詳しい相棒にする</span>
+                    </a>
+                </div>
+                
+                <div class="nav-next">
+                    <a href="iPhone_Mania_1916.html">
+                        <span class="nav-label">次の記事</span>
+                        <span class="nav-title">iPhone17では開封事故が避けられる仕様になっていることを願う</span>
+                    </a>
+                </div>
+            </div>
         </nav>
+
+        <!-- 関連記事 -->
+        <section class="related-articles">
+            <h2>関連記事</h2>
+            <div class="related-grid">
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_9641.html">
+                        <h3>ボイジャーも見つけられなかった天王星の新衛星、ジェームズ・ウェッブ望遠鏡が発見--その直径は</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">NASAが天王星の新たな小型衛星「S/2025 U1」を発見。ジェームズ・ウェッブ宇宙望遠鏡が捉えた14個目の衛星の詳細と今後の命名予定を解説。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_6343.html">
+                        <h3>ドコモdカードのETCカードが「ETCGO」に対応</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">NTTドコモは8月21日、クレジット「dカード」のETCカードが、8月28日午前11時からアマノの「ETCGO」に対応すると発表した。これにより、「三郷流山橋有料道路」「三浦縦貫道路」「逗葉新道」「鬼...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_6743.html">
+                        <h3>ニコン、新レンズ「NIKKOR Z 24-70mm f/2.8 S II」発表--「大三元」2世代目、同クラス最軽量モデ...</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">8 S II」を発表した。発売予定日は9月26日。8月28日10時から予約を受け付ける。. ニコンは8月22日、新レンズ「NIKKOR Z 24-70mm f/2.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_593.html">
+                        <h3>縦も横も間も挿せる「革命的」電源タップ発売--コンセント干渉を解決　サンワサプライから</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">サンワサプライが新発想の電源タップ「700-TAP082・083」を発売。縦横だけでなく“間”にも差せる車輪差し構造で配線問題を解決。USB急速充電や雷ガード搭載モデルも用意。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCIIjp__トップ_2167.html">
+                        <h3>「オールナイト万博」でチェコとポルトガルが&#34;神パビリオン&#34;と大絶賛！ インドネシアパビリオンは「ヨヤクナシガールズ」「J...</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">日を追うごとに来場者が増加している「大阪・関西万博」を、膨大なX解析データから徹底分析。今週は地下鉄の運転見合わせによって帰宅困難者が続出した現象、通称「オールナイト万博」が話題の中心となっている。.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <div class="back-navigation">
+            <a href="../" class="back-to-home">一覧に戻る</a>
+        </div>
     </div>
 
     <style>
@@ -348,8 +424,133 @@
     }
     
     .article-navigation {
+        margin: 3rem 0;
+        border-top: 1px solid #eee;
+        padding-top: 2rem;
+    }
+    
+    .nav-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .nav-prev {
+        text-align: left;
+    }
+    
+    .nav-next {
+        text-align: right;
+    }
+    
+    .nav-prev a,
+    .nav-next a {
+        display: block;
+        padding: 1rem;
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s;
+    }
+    
+    .nav-prev a:hover,
+    .nav-next a:hover {
+        background: #e9ecef;
+        border-color: #adb5bd;
+    }
+    
+    .nav-label {
+        display: block;
+        font-size: 0.875rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-title {
+        display: block;
+        font-weight: 500;
+        color: #333;
+        line-height: 1.3;
+    }
+    
+    .related-articles {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+    
+    .related-articles h2 {
+        margin: 0 0 2rem;
+        font-size: 1.5rem;
+        color: #333;
         text-align: center;
-        margin: 2rem 0;
+    }
+    
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .related-item {
+        background: white;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .related-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .related-item a {
+        display: block;
+        padding: 1.5rem;
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .related-item h3 {
+        margin: 0 0 1rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .related-meta {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .related-meta .category {
+        background: #007acc;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+    }
+    
+    .related-meta .source {
+        color: #666;
+    }
+    
+    .related-summary {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        color: #555;
+    }
+    
+    .back-navigation {
+        text-align: center;
+        margin: 3rem 0;
     }
     
     .back-to-home {
@@ -384,6 +585,27 @@
         
         .affiliate-grid {
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+        
+        .nav-links {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .nav-next {
+            text-align: left;
+        }
+        
+        .related-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .related-articles {
+            padding: 1.5rem;
+        }
+        
+        .related-articles h2 {
+            font-size: 1.25rem;
         }
     }
     </style>

@@ -180,9 +180,57 @@
             {% endif %}
         </article>
 
+        <!-- 前後記事ナビゲーション -->
+        {% if prev_article or next_article %}
         <nav class="article-navigation">
-            <a href="../" class="back-to-home">一覧に戻る</a>
+            <div class="nav-links">
+                {% if prev_article %}
+                <div class="nav-prev">
+                    <a href="{{ prev_article.slug }}.html">
+                        <span class="nav-label">前の記事</span>
+                        <span class="nav-title">{{ prev_article.title[:50] }}{% if prev_article.title|length > 50 %}...{% endif %}</span>
+                    </a>
+                </div>
+                {% endif %}
+                
+                {% if next_article %}
+                <div class="nav-next">
+                    <a href="{{ next_article.slug }}.html">
+                        <span class="nav-label">次の記事</span>
+                        <span class="nav-title">{{ next_article.title[:50] }}{% if next_article.title|length > 50 %}...{% endif %}</span>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
         </nav>
+        {% endif %}
+
+        <!-- 関連記事 -->
+        {% if related_articles and related_articles|length > 0 %}
+        <section class="related-articles">
+            <h2>関連記事</h2>
+            <div class="related-grid">
+                {% for related in related_articles %}
+                <article class="related-item">
+                    <a href="{{ related.slug }}.html">
+                        <h3>{{ related.title[:60] }}{% if related.title|length > 60 %}...{% endif %}</h3>
+                        <div class="related-meta">
+                            <span class="category">{{ related.category }}</span>
+                            <span class="source">{{ related.source_name }}</span>
+                        </div>
+                        {% if related.summary %}
+                        <p class="related-summary">{{ related.summary[:100] }}{% if related.summary|length > 100 %}...{% endif %}</p>
+                        {% endif %}
+                    </a>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        <div class="back-navigation">
+            <a href="../" class="back-to-home">一覧に戻る</a>
+        </div>
     </div>
 
     <style>
@@ -370,8 +418,133 @@
     }
     
     .article-navigation {
+        margin: 3rem 0;
+        border-top: 1px solid #eee;
+        padding-top: 2rem;
+    }
+    
+    .nav-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .nav-prev {
+        text-align: left;
+    }
+    
+    .nav-next {
+        text-align: right;
+    }
+    
+    .nav-prev a,
+    .nav-next a {
+        display: block;
+        padding: 1rem;
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s;
+    }
+    
+    .nav-prev a:hover,
+    .nav-next a:hover {
+        background: #e9ecef;
+        border-color: #adb5bd;
+    }
+    
+    .nav-label {
+        display: block;
+        font-size: 0.875rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-title {
+        display: block;
+        font-weight: 500;
+        color: #333;
+        line-height: 1.3;
+    }
+    
+    .related-articles {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+    
+    .related-articles h2 {
+        margin: 0 0 2rem;
+        font-size: 1.5rem;
+        color: #333;
         text-align: center;
-        margin: 2rem 0;
+    }
+    
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .related-item {
+        background: white;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .related-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .related-item a {
+        display: block;
+        padding: 1.5rem;
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .related-item h3 {
+        margin: 0 0 1rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .related-meta {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .related-meta .category {
+        background: #007acc;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+    }
+    
+    .related-meta .source {
+        color: #666;
+    }
+    
+    .related-summary {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        color: #555;
+    }
+    
+    .back-navigation {
+        text-align: center;
+        margin: 3rem 0;
     }
     
     .back-to-home {
@@ -406,6 +579,27 @@
         
         .affiliate-grid {
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+        
+        .nav-links {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .nav-next {
+            text-align: left;
+        }
+        
+        .related-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .related-articles {
+            padding: 1.5rem;
+        }
+        
+        .related-articles h2 {
+            font-size: 1.25rem;
         }
     }
     </style>

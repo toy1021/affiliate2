@@ -166,9 +166,85 @@
             </aside>
         </article>
 
+        <!-- 前後記事ナビゲーション -->
         <nav class="article-navigation">
-            <a href="../" class="back-to-home">一覧に戻る</a>
+            <div class="nav-links">
+                <div class="nav-prev">
+                    <a href="CNET_Japan_最新情報総合_9032.html">
+                        <span class="nav-label">前の記事</span>
+                        <span class="nav-title">「Grok」とユーザーの会話37万件超が公開状態に、Forbesが指摘</span>
+                    </a>
+                </div>
+                
+                <div class="nav-next">
+                    <a href="CNET_Japan_最新情報総合_4923.html">
+                        <span class="nav-label">次の記事</span>
+                        <span class="nav-title">Xbox携帯ゲーム機「ROG Xbox Ally」、10月16日発売へ--日本など世界各国で</span>
+                    </a>
+                </div>
+            </div>
         </nav>
+
+        <!-- 関連記事 -->
+        <section class="related-articles">
+            <h2>関連記事</h2>
+            <div class="related-grid">
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_6382.html">
+                        <h3>Google Pixel Watch 4進化点まとめ--腕に巻くGemini、Apple Watch愛用者をも驚かせそう</h3>
+                        <div class="related-meta">
+                            <span class="category">Apple製品</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">Pixel Watch 4がついに発表。Gemini AIコーチや衛星SOS、修理性改善など大刷新。Apple Watchユーザーも驚く進化とは？.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_2095.html">
+                        <h3>中国vivoが「Apple Vision Pro」似のMRヘッドセットを発表、価格と軽さで勝負</h3>
+                        <div class="related-meta">
+                            <span class="category">Apple製品</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">中国のスマートフォンメーカーvivoが発表した「vivo Vision」は、拡張現実（AR）と仮想現実（VR）を融合させたヘッドセットで、アップルの「Vision Pro」と多くの点で似ている。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCIIjp__トップ_3451.html">
+                        <h3>KRAFTON、『inZOI』新コンテンツ配信＆Mac版を発売！</h3>
+                        <div class="related-meta">
+                            <span class="category">Apple製品</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">KRAFTON、『inZOI』新コンテンツ配信＆Mac版を発売！.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="iPhone_Mania_5614.html">
+                        <h3>iPhoneとiPadの整備済製品の在庫が大幅に増加〜ProモデルやiPad miniなど</h3>
+                        <div class="related-meta">
+                            <span class="category">Apple製品</span>
+                            <span class="source">iPhone Mania</span>
+                        </div>
+                        <p class="related-summary">Appleオンラインストアで販売されている認定整備済製品において、iPhone整備済製品とiPad整備済製品の在庫が大幅に増加しました。 iPhone15 ProやiPad mini 6など、入荷後に...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCIIjp__トップ_828.html">
+                        <h3>『RPG MAKER UNITE』ゲームジャム受賞作品発表！　Mac版配信開始・75%OFFセール実施</h3>
+                        <div class="related-meta">
+                            <span class="category">Apple製品</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">『RPG MAKER UNITE』ゲームジャム受賞作品発表！ Mac版配信開始・75%OFFセール実施.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <div class="back-navigation">
+            <a href="../" class="back-to-home">一覧に戻る</a>
+        </div>
     </div>
 
     <style>
@@ -356,8 +432,133 @@
     }
     
     .article-navigation {
+        margin: 3rem 0;
+        border-top: 1px solid #eee;
+        padding-top: 2rem;
+    }
+    
+    .nav-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .nav-prev {
+        text-align: left;
+    }
+    
+    .nav-next {
+        text-align: right;
+    }
+    
+    .nav-prev a,
+    .nav-next a {
+        display: block;
+        padding: 1rem;
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s;
+    }
+    
+    .nav-prev a:hover,
+    .nav-next a:hover {
+        background: #e9ecef;
+        border-color: #adb5bd;
+    }
+    
+    .nav-label {
+        display: block;
+        font-size: 0.875rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-title {
+        display: block;
+        font-weight: 500;
+        color: #333;
+        line-height: 1.3;
+    }
+    
+    .related-articles {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+    
+    .related-articles h2 {
+        margin: 0 0 2rem;
+        font-size: 1.5rem;
+        color: #333;
         text-align: center;
-        margin: 2rem 0;
+    }
+    
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .related-item {
+        background: white;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .related-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .related-item a {
+        display: block;
+        padding: 1.5rem;
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .related-item h3 {
+        margin: 0 0 1rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .related-meta {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .related-meta .category {
+        background: #007acc;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+    }
+    
+    .related-meta .source {
+        color: #666;
+    }
+    
+    .related-summary {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        color: #555;
+    }
+    
+    .back-navigation {
+        text-align: center;
+        margin: 3rem 0;
     }
     
     .back-to-home {
@@ -392,6 +593,27 @@
         
         .affiliate-grid {
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+        
+        .nav-links {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .nav-next {
+            text-align: left;
+        }
+        
+        .related-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .related-articles {
+            padding: 1.5rem;
+        }
+        
+        .related-articles h2 {
+            font-size: 1.25rem;
         }
     }
     </style>

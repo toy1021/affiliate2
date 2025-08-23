@@ -483,6 +483,50 @@ def generate_api_data(enhanced_articles, stats):
     
     return api_data
 
+def create_article_slug(article_id):
+    """記事IDからスラッグを生成"""
+    slug = article_id.replace(' ', '_').replace('/', '_').replace('\\', '_')
+    slug = ''.join(c for c in slug if c.isalnum() or c in '_-')
+    return slug
+
+def get_related_articles(current_article, all_articles, max_count=5):
+    """関連記事を取得（同じカテゴリの記事から）"""
+    current_category = current_article.get('category', '')
+    current_id = current_article.get('id', '')
+    
+    # 同じカテゴリの記事を抽出（現在の記事は除外）
+    related = [
+        article for article in all_articles 
+        if article.get('category') == current_category 
+        and article.get('id') != current_id
+    ]
+    
+    # 重要度/品質スコア順でソート（既存の重要度スコアを使用）
+    related = sorted(related, key=lambda x: x.get('importance_score', 0), reverse=True)
+    
+    return related[:max_count]
+
+def get_prev_next_articles(current_article, all_articles):
+    """前後の記事を取得（時系列順）"""
+    current_index = -1
+    
+    # 現在の記事のインデックスを探す
+    for i, article in enumerate(all_articles):
+        if article.get('id') == current_article.get('id'):
+            current_index = i
+            break
+    
+    if current_index == -1:
+        return {'prev': None, 'next': None}
+    
+    prev_article = all_articles[current_index + 1] if current_index + 1 < len(all_articles) else None
+    next_article = all_articles[current_index - 1] if current_index - 1 >= 0 else None
+    
+    return {
+        'prev': prev_article,
+        'next': next_article
+    }
+
 def generate_individual_article_pages(enhanced_articles):
     """個別記事ページを生成"""
     try:
@@ -524,10 +568,29 @@ def generate_individual_article_pages(enhanced_articles):
                     elif isinstance(article['affiliate_links'], dict):
                         affiliate_links = list(article['affiliate_links'].values())[:6]
                 
+                # 関連記事を取得（同じカテゴリの記事から最大5件）
+                related_articles = get_related_articles(article, enhanced_articles, 5)
+                
+                # 次/前の記事を取得
+                prev_next = get_prev_next_articles(article, enhanced_articles)
+                
+                # 関連記事にスラッグを追加
+                for related in related_articles:
+                    related['slug'] = create_article_slug(related['id'])
+                
+                # 前後記事にもスラッグを追加
+                if prev_next['prev']:
+                    prev_next['prev']['slug'] = create_article_slug(prev_next['prev']['id'])
+                if prev_next['next']:
+                    prev_next['next']['slug'] = create_article_slug(prev_next['next']['id'])
+                
                 # HTMLを生成
                 html_content = template.render(
                     article=article,
-                    affiliate_links=affiliate_links
+                    affiliate_links=affiliate_links,
+                    related_articles=related_articles,
+                    prev_article=prev_next['prev'],
+                    next_article=prev_next['next']
                 )
                 
                 # ファイルに保存

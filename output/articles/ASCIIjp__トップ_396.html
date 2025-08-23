@@ -162,9 +162,65 @@
             </aside>
         </article>
 
+        <!-- 前後記事ナビゲーション -->
         <nav class="article-navigation">
-            <a href="../" class="back-to-home">一覧に戻る</a>
+            <div class="nav-links">
+                <div class="nav-prev">
+                    <a href="ASCIIjp__トップ_9615.html">
+                        <span class="nav-label">前の記事</span>
+                        <span class="nav-title">【JPIセミナー】特許庁「AI／DX時代に即した産業財産権制度について」9月1日(月)開催</span>
+                    </a>
+                </div>
+                
+                <div class="nav-next">
+                    <a href="iPhone_Mania_5614.html">
+                        <span class="nav-label">次の記事</span>
+                        <span class="nav-title">iPhoneとiPadの整備済製品の在庫が大幅に増加〜ProモデルやiPad miniなど</span>
+                    </a>
+                </div>
+            </div>
         </nav>
+
+        <!-- 関連記事 -->
+        <section class="related-articles">
+            <h2>関連記事</h2>
+            <div class="related-grid">
+                <article class="related-item">
+                    <a href="Publickey_6124.html">
+                        <h3>インプレス、上場廃止後の新体制に。新社長には塚本慶一郎氏の子である塚本由紀氏が就任</h3>
+                        <div class="related-meta">
+                            <span class="category">ビジネス・経済</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">先月末（2025年7月末）に上場を廃止したインプレスホールディングスが新たな経営陣を発表しました。 6人いた取締役は3人となり、代表取締役には同社ファウンダーである塚本慶一郎氏の子である塚本由紀氏が就...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_1133.html">
+                        <h3>IT系上場企業の平均年収を業種別にみてみた 2025年版［後編］ ～ パッケージソフトウェア系、SI／システム開発系、ク...</h3>
+                        <div class="related-meta">
+                            <span class="category">ビジネス・経済</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">IT系企業で平均年収が高いのは、勢いのあるネットベンチャー系企業なのか、それとも伝統的なSIerなのでしょうか。毎年恒例の記事を今年も公開します。 上場企業は毎年「有価証券報告書」の発行を義務づけられ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_3228.html">
+                        <h3>IT系上場企業の平均年収を業種別にみてみた 2025年版［前編］ ～ ネットベンチャー、ゲーム、メディア系</h3>
+                        <div class="related-meta">
+                            <span class="category">ビジネス・経済</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">IT系企業で平均年収が高いのは、勢いのあるネットベンチャー系企業なのか、それとも伝統的なSIerなのでしょうか。毎年恒例の記事を今年も公開します。 上場企業は毎年「有価証券報告書」の発行を義務づけられ...</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <div class="back-navigation">
+            <a href="../" class="back-to-home">一覧に戻る</a>
+        </div>
     </div>
 
     <style>
@@ -352,8 +408,133 @@
     }
     
     .article-navigation {
+        margin: 3rem 0;
+        border-top: 1px solid #eee;
+        padding-top: 2rem;
+    }
+    
+    .nav-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .nav-prev {
+        text-align: left;
+    }
+    
+    .nav-next {
+        text-align: right;
+    }
+    
+    .nav-prev a,
+    .nav-next a {
+        display: block;
+        padding: 1rem;
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s;
+    }
+    
+    .nav-prev a:hover,
+    .nav-next a:hover {
+        background: #e9ecef;
+        border-color: #adb5bd;
+    }
+    
+    .nav-label {
+        display: block;
+        font-size: 0.875rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-title {
+        display: block;
+        font-weight: 500;
+        color: #333;
+        line-height: 1.3;
+    }
+    
+    .related-articles {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+    
+    .related-articles h2 {
+        margin: 0 0 2rem;
+        font-size: 1.5rem;
+        color: #333;
         text-align: center;
-        margin: 2rem 0;
+    }
+    
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .related-item {
+        background: white;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .related-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .related-item a {
+        display: block;
+        padding: 1.5rem;
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .related-item h3 {
+        margin: 0 0 1rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .related-meta {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .related-meta .category {
+        background: #007acc;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+    }
+    
+    .related-meta .source {
+        color: #666;
+    }
+    
+    .related-summary {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        color: #555;
+    }
+    
+    .back-navigation {
+        text-align: center;
+        margin: 3rem 0;
     }
     
     .back-to-home {
@@ -388,6 +569,27 @@
         
         .affiliate-grid {
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+        
+        .nav-links {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .nav-next {
+            text-align: left;
+        }
+        
+        .related-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .related-articles {
+            padding: 1.5rem;
+        }
+        
+        .related-articles h2 {
+            font-size: 1.25rem;
         }
     }
     </style>

@@ -700,9 +700,17 @@ def generate_api_data(enhanced_articles, stats):
     return api_data
 
 def create_article_slug(article_id):
-    """記事IDからスラッグを生成"""
+    """記事IDからスラッグを生成（JavaScript版と同じロジック）"""
+    import re
     slug = article_id.replace(' ', '_').replace('/', '_').replace('\\', '_')
-    slug = ''.join(c for c in slug if c.isalnum() or c in '_-')
+    # 英数字、アンダースコア、ハイフン、日本語文字を保持
+    def is_valid_char(c):
+        return (c.isascii() and c.isalnum()) or c in '_-' or (
+            '\u3040' <= c <= '\u309F' or  # ひらがな
+            '\u30A0' <= c <= '\u30FF' or  # カタカナ
+            '\u4E00' <= c <= '\u9FAF'     # 漢字
+        )
+    slug = ''.join(c for c in slug if is_valid_char(c))
     return slug
 
 def get_related_articles(current_article, all_articles, max_count=5):

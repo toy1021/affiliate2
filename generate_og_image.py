@@ -84,7 +84,7 @@ def create_og_image():
 
 def main():
     """メイン処理"""
-    print("🎨 Open Graph画像を生成中...")
+    print("Open Graph画像を生成中...")
     
     try:
         # OG画像生成
@@ -98,7 +98,7 @@ def main():
         og_path = os.path.join(output_dir, "og-image.png")
         og_image.save(og_path, "PNG", quality=95)
         
-        print(f"✅ Open Graph画像を生成しました: {og_path}")
+        print(f"Open Graph画像を生成しました: {og_path}")
         print(f"   サイズ: {og_image.size}")
         print(f"   ファイルサイズ: {os.path.getsize(og_path) / 1024:.1f}KB")
         
@@ -109,12 +109,12 @@ def main():
             if os.path.exists(dest_dir):
                 dest_path = os.path.join(dest_dir, "og-image.png")
                 shutil.copy2(og_path, dest_path)
-                print(f"✅ {dest_path} にコピーしました")
+                print(f"{dest_path} にコピーしました")
         
         return True
         
     except Exception as e:
-        print(f"❌ 画像生成エラー: {e}")
+        print(f"画像生成エラー: {e}")
         return False
 
 if __name__ == "__main__":

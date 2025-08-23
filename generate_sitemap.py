@@ -20,7 +20,7 @@ def generate_xml_sitemap():
     # 記事データ読み込み
     articles_file = "docs/articles.json"
     if not os.path.exists(articles_file):
-        print(f"❌ 記事ファイルが見つかりません: {articles_file}")
+        print(f"エラー: 記事ファイルが見つかりません: {articles_file}")
         return False
     
     with open(articles_file, 'r', encoding='utf-8') as f:
@@ -107,13 +107,13 @@ def generate_xml_sitemap():
         try:
             with open(output_file, 'w', encoding='utf-8') as f:
                 f.write(sitemap_content)
-            print(f"✅ サイトマップを生成しました: {output_file}")
+            print(f"サイトマップを生成しました: {output_file}")
         except Exception as e:
-            print(f"❌ サイトマップ生成エラー: {output_file} - {e}")
+            print(f"サイトマップ生成エラー: {output_file} - {e}")
     
     # 統計情報表示
     total_urls = 1 + len(categories) + len(top_articles)  # メイン + カテゴリ + 記事
-    print(f"📊 サイトマップ統計:")
+    print(f"サイトマップ統計:")
     print(f"   - 総URL数: {total_urls}")
     print(f"   - メインページ: 1")
     print(f"   - カテゴリページ: {len(categories)}")
@@ -122,10 +122,10 @@ def generate_xml_sitemap():
     return True
 
 if __name__ == "__main__":
-    print("🗺️ XMLサイトマップを生成中...")
+    print("XMLサイトマップを生成中...")
     success = generate_xml_sitemap()
     
     if success:
-        print("✅ XMLサイトマップの生成が完了しました")
+        print("XMLサイトマップの生成が完了しました")
     else:
-        print("❌ XMLサイトマップの生成に失敗しました")
+        print("XMLサイトマップの生成に失敗しました")

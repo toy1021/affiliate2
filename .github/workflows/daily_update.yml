@@ -49,30 +49,30 @@ jobs:
         
     - name: Run RSS Affiliate Pipeline
       run: |
-        echo "🚀 Starting RSS Affiliate Pipeline..."
+        echo "Starting RSS Affiliate Pipeline..."
         python run_all.py
         
     - name: Generate SEO files
       run: |
-        echo "🗺️ Generating XML sitemap..."
+        echo "Generating XML sitemap..."
         python generate_sitemap.py
         
     - name: Verify generated files
       run: |
-        echo "📁 Generated files:"
+        echo "Generated files:"
         ls -la output/
         ls -la data/
         
         # HTMLファイルの存在と最小サイズをチェック
         if [ -f "output/index.html" ]; then
           SIZE=$(stat -f%z "output/index.html" 2>/dev/null || stat -c%s "output/index.html")
-          echo "✅ Generated HTML size: $SIZE bytes"
+          echo "Generated HTML size: $SIZE bytes"
           if [ $SIZE -lt 1000 ]; then
-            echo "❌ HTML file too small, something went wrong"
+            echo "HTML file too small, something went wrong"
             exit 1
           fi
         else
-          echo "❌ HTML file not generated"
+          echo "HTML file not generated"
           exit 1
         fi
         
@@ -99,7 +99,7 @@ jobs:
         
         # Always add and commit to trigger GitHub Pages rebuild
         git add . -A
-        git commit -m "🕐 Update affiliate content - $TIMESTAMP"
+        git commit -m "Update affiliate content - $TIMESTAMP"
         
         # Pull and rebase with automatic conflict resolution (use ours strategy for conflicts)
         git pull --rebase -X ours || {
@@ -140,7 +140,7 @@ jobs:
         if [ -f "execution_log.txt" ]; then
           git add execution_log.txt
           if ! git diff --staged --quiet; then
-            git commit -m "📊 Execution log - $(date '+%Y-%m-%d %H:%M')"
+            git commit -m "Execution log - $(date '+%Y-%m-%d %H:%M')"
             git pull --rebase -X ours || {
               echo "Merge conflicts in logs. Resolving automatically..."
               git add . -A

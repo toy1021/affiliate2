@@ -148,16 +148,13 @@
                 </div>
                 {% endif %}
                 
-                {% if article.summary %}
-                <div class="article-summary">
-                    <h2>概要</h2>
-                    <p>{{ article.summary }}</p>
-                </div>
-                {% endif %}
-                
                 <div class="article-body">
                     {% if article.original_content %}
                     {{ article.original_content|safe }}
+                    {% elif article.summary %}
+                    <div class="article-summary">
+                        <p>{{ article.summary }}</p>
+                    </div>
                     {% else %}
                     <p>この記事の詳細については、元の記事をご覧ください。</p>
                     {% endif %}

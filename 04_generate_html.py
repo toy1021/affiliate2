@@ -65,6 +65,116 @@ def calculate_article_quality_score(article):
     
     return quality_score
 
+def optimize_meta_description(article, target_length=155):
+    """SEO最適化されたメタディスクリプションを生成"""
+    title = article.get('title', '')
+    summary = article.get('summary', '')
+    category = article.get('category', '')
+    source_name = article.get('source_name', '')
+    
+    # 基本的なメタディスクリプション候補
+    candidates = []
+    
+    # 1. 要約ベース（最優先）
+    if summary:
+        clean_summary = summary.replace('\n', ' ').replace('  ', ' ').strip()
+        if len(clean_summary) <= target_length:
+            candidates.append(clean_summary)
+        else:
+            # 句読点で区切って最適長に調整
+            sentences = clean_summary.split('。')
+            desc = ''
+            for sentence in sentences:
+                if len(desc + sentence + '。') <= target_length - 10:  # 余裕を持たせる
+                    desc += sentence + '。'
+                else:
+                    break
+            if desc:
+                candidates.append(desc.rstrip('。'))
+    
+    # 2. タイトル + カテゴリ情報
+    if title:
+        category_info = ''
+        if category == 'Apple製品':
+            category_info = 'Apple製品の最新情報'
+        elif category == 'AI・機械学習':
+            category_info = 'AI・機械学習技術のニュース'
+        elif category == 'プログラミング':
+            category_info = 'プログラミング関連情報'
+        elif category == 'ゲーム':
+            category_info = 'ゲーム業界の最新動向'
+        elif category == 'Google・Android':
+            category_info = 'Google・Android関連ニュース'
+        elif category == 'セキュリティ':
+            category_info = 'セキュリティ対策情報'
+        else:
+            category_info = 'テクノロジーニュース'
+            
+        title_based = f"{title} - {category_info}をお届け。"
+        if len(title_based) <= target_length:
+            candidates.append(title_based)
+    
+    # 3. 要約の最初の文 + 付加情報
+    if summary:
+        first_sentence = summary.split('。')[0]
+        if len(first_sentence) < target_length - 30:
+            enhanced = f"{first_sentence}。最新のテクノロジー情報をお届けします。"
+            if len(enhanced) <= target_length:
+                candidates.append(enhanced)
+    
+    # 4. タイトルのみ（最後の手段）
+    if title and len(title) <= target_length:
+        candidates.append(title)
+    
+    # 最適な候補を選択（長すぎず短すぎない）
+    best_candidate = ''
+    best_score = 0
+    
+    for candidate in candidates:
+        if not candidate:
+            continue
+            
+        score = 0
+        length = len(candidate)
+        
+        # 長さの最適性（140-155文字が理想）
+        if 140 <= length <= target_length:
+            score += 10
+        elif 120 <= length < 140:
+            score += 8
+        elif 100 <= length < 120:
+            score += 6
+        elif length > target_length:
+            score -= 5  # 長すぎる場合は減点
+        
+        # キーワードの含有率
+        important_terms = ['AI', 'iPhone', 'Google', 'Apple', 'プログラミング', 'セキュリティ', 'ゲーム']
+        for term in important_terms:
+            if term in candidate:
+                score += 1
+        
+        # 完結性（句点で終わる）
+        if candidate.endswith('。') or candidate.endswith('.'):
+            score += 2
+        
+        if score > best_score:
+            best_score = score
+            best_candidate = candidate
+    
+    # フォールバック
+    if not best_candidate:
+        if summary:
+            best_candidate = summary[:target_length]
+            if not best_candidate.endswith('。'):
+                # 最後の完全な文で終わるように調整
+                last_period = best_candidate.rfind('。')
+                if last_period > 50:  # 最低限の長さは確保
+                    best_candidate = best_candidate[:last_period + 1]
+        else:
+            best_candidate = title[:target_length] if title else "最新テクノロジーニュースをお届け。"
+    
+    return best_candidate
+
 def calculate_article_importance(article):
     """記事の重要度を計算（品質スコア統合版）"""
     importance_score = 0
@@ -584,13 +694,17 @@ def generate_individual_article_pages(enhanced_articles):
                 if prev_next['next']:
                     prev_next['next']['slug'] = create_article_slug(prev_next['next']['id'])
                 
+                # 最適化されたメタディスクリプションを生成
+                optimized_meta_description = optimize_meta_description(article)
+                
                 # HTMLを生成
                 html_content = template.render(
                     article=article,
                     affiliate_links=affiliate_links,
                     related_articles=related_articles,
                     prev_article=prev_next['prev'],
-                    next_article=prev_next['next']
+                    next_article=prev_next['next'],
+                    optimized_meta_description=optimized_meta_description
                 )
                 
                 # ファイルに保存

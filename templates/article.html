@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ article.title }} | 日本のテックニュース速報</title>
-    <meta name="description" content="{{ article.summary[:160] if article.summary else article.title }}">
+    <meta name="description" content="{{ optimized_meta_description if optimized_meta_description else (article.summary[:160] if article.summary else article.title) }}">
     <meta name="keywords" content="{{ article.keywords|join(',') if article.keywords else 'テクノロジー,ニュース,IT' }}">
     
     <!-- Open Graph -->
     <meta property="og:title" content="{{ article.title }}">
-    <meta property="og:description" content="{{ article.summary[:160] if article.summary else article.title }}">
+    <meta property="og:description" content="{{ optimized_meta_description if optimized_meta_description else (article.summary[:160] if article.summary else article.title) }}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/{{ article.id }}.html">
     <meta property="og:image" content="{{ article.image_url if article.image_url else 'https://toy1021.github.io/affiliate2/og-image.svg' }}">
@@ -18,7 +18,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ article.title }}">
-    <meta name="twitter:description" content="{{ article.summary[:160] if article.summary else article.title }}">
+    <meta name="twitter:description" content="{{ optimized_meta_description if optimized_meta_description else (article.summary[:160] if article.summary else article.title) }}">
     <meta name="twitter:image" content="{{ article.image_url if article.image_url else 'https://toy1021.github.io/affiliate2/og-image.svg' }}">
     
     <!-- Canonical URL -->
@@ -30,7 +30,7 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "{{ article.title }}",
-        "description": "{{ article.summary[:160] if article.summary else article.title }}",
+        "description": "{{ optimized_meta_description if optimized_meta_description else (article.summary[:160] if article.summary else article.title) }}",
         "author": {
             "@type": "Organization",
             "name": "{{ article.source_name }}"

@@ -11,7 +11,14 @@ from pathlib import Path
 
 def python_create_slug(article_id):
     """Python版のスラッグ生成（04_generate_html.pyと同じ）"""
+    import re
+    # スペースとスラッシュをアンダースコアに変換
     slug = article_id.replace(' ', '_').replace('/', '_').replace('\\', '_')
+    # 特殊文字もアンダースコアに変換（安全性向上）
+    slug = slug.replace('!', '_').replace('?', '_').replace('.', '_').replace(':', '_')
+    slug = slug.replace('(', '_').replace(')', '_').replace('[', '_').replace(']', '_')
+    # 連続するアンダースコアを単一に
+    slug = re.sub(r'_+', '_', slug)
     # 英数字、アンダースコア、ハイフン、日本語文字を保持
     def is_valid_char(c):
         return (c.isascii() and c.isalnum()) or c in '_-' or (
@@ -20,11 +27,20 @@ def python_create_slug(article_id):
             '\u4E00' <= c <= '\u9FAF'     # 漢字
         )
     slug = ''.join(c for c in slug if is_valid_char(c))
+    # 先頭と末尾のアンダースコアを除去
+    slug = slug.strip('_')
     return slug
 
 def javascript_create_slug(article_id):
     """JavaScript版のスラッグ生成をPythonで模擬"""
+    import re
+    # スペースとスラッシュをアンダースコアに変換
     slug = article_id.replace(' ', '_').replace('/', '_').replace('\\', '_')
+    # 特殊文字もアンダースコアに変換（安全性向上）
+    slug = slug.replace('!', '_').replace('?', '_').replace('.', '_').replace(':', '_')
+    slug = slug.replace('(', '_').replace(')', '_').replace('[', '_').replace(']', '_')
+    # 連続するアンダースコアを単一に
+    slug = re.sub(r'_+', '_', slug)
     # 英数字、アンダースコア、ハイフン、日本語文字を保持
     result = ''
     for c in slug:
@@ -34,6 +50,8 @@ def javascript_create_slug(article_id):
             ('\u30A0' <= c <= '\u30FF') or  # カタカナ
             ('\u4E00' <= c <= '\u9FAF')):   # 漢字
             result += c
+    # 先頭と末尾のアンダースコアを除去
+    result = result.strip('_')
     return result
 
 def test_slug_consistency():

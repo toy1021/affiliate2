@@ -1,0 +1,31 @@
+name: URL Consistency Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-slug-consistency:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        pip install beautifulsoup4
+        
+    - name: Run slug consistency test
+      run: |
+        python3 test_slug_consistency.py
+        
+    - name: Check for 404 links
+      run: |
+        python3 test_link_integrity.py

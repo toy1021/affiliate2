@@ -7,18 +7,25 @@ from datetime import datetime
 from config import PROCESSED_ARTICLES_FILE, AFFILIATE_ARTICLES_FILE, AFFILIATE_CONFIGS, DEBUG, VERBOSE
 
 def generate_amazon_link(keyword, config):
-    """Amazonアフィリエイトリンクを生成"""
+    """Amazonアフィリエイトリンクを生成（商品情報を強化）"""
     base_url = config["search_base_url"]
     tag = config["tag"]
     
     search_query = urllib.parse.quote(keyword)
     affiliate_url = f"{base_url}{search_query}&linkCode=ll2&tag={tag}&linkId=your-link-id"
     
+    # 商品タイトルを最適化
+    optimized_title = keyword.replace(" ", "・")
+    
     return {
         "platform": "amazon",
         "keyword": keyword,
         "url": affiliate_url,
-        "display_text": f"{keyword}を検索 - Amazon"
+        "title": optimized_title,
+        "display_text": f"🛒 {optimized_title}",
+        "description": f"Amazonで{optimized_title}をチェック",
+        "price": "価格を確認",
+        "image_url": None  # Amazon商品画像は後で実装可能
     }
 
 def generate_rakuten_link(keyword, config):
@@ -36,81 +43,106 @@ def generate_rakuten_link(keyword, config):
         "display_text": f"{keyword}を検索 - 楽天市場"
     }
 
-def get_smart_product_recommendations(keywords, category):
-    """キーワードとカテゴリに基づく高精度商品推薦"""
+def get_smart_product_recommendations(keywords, category, title=""):
+    """キーワードとカテゴリに基づく高精度商品推薦（タイトル分析を追加）"""
     
-    # キーワード → 商品マッピング（より詳細）
+    # 記事タイトル分析による動的商品推薦
+    title_lower = title.lower()
+    dynamic_recommendations = []
+    
+    # タイトル分析による商品推薦
+    if "iphone" in title_lower or "アイフォン" in title_lower:
+        dynamic_recommendations.extend(["iPhone ケース", "iPhone 充電器", "MagSafe 対応 アクセサリー"])
+    elif "macbook" in title_lower or "マック" in title_lower:
+        dynamic_recommendations.extend(["MacBook ケース", "USB-C ハブ", "外付けSSD"])
+    elif "tesla" in title_lower or "テスラ" in title_lower:
+        dynamic_recommendations.extend(["電気自動車 本", "Tesla グッズ", "EV 充電器"])
+    elif "ai" in title_lower or "人工知能" in title_lower or "機械学習" in title_lower:
+        dynamic_recommendations.extend(["AI プログラミング 本", "Python 機械学習 実践", "深層学習 教科書"])
+    elif "投資" in title_lower or "株価" in title_lower or "bitcoin" in title_lower:
+        dynamic_recommendations.extend(["投資 入門書", "株式投資 ガイド", "仮想通貨 解説書"])
+    elif "プログラミング" in title_lower or "開発" in title_lower:
+        dynamic_recommendations.extend(["プログラミング 本", "コーディング 学習書", "技術書 おすすめ"])
+    
+    # キーワード → 商品マッピング（改善版）
     keyword_product_map = {
-        # AI・プログラミング関連
-        "AI": ["AI プログラミング 本", "Python 機械学習 本", "ChatGPT 活用法"],
-        "ChatGPT": ["ChatGPT 本", "AI 活用 ガイドブック", "プロンプト エンジニアリング"],
-        "Python": ["Python 入門書", "データ分析 本", "プログラミング 学習本"],
-        "JavaScript": ["JavaScript 本", "Web開発 教本", "React 入門書"],
-        "React": ["React 開発本", "フロントエンド 開発書", "JavaScript フレームワーク"],
+        # AI・プログラミング関連（より具体的）
+        "AI": ["AI プログラミング 実践", "機械学習 入門書", "ChatGPT 活用術"],
+        "ChatGPT": ["生成AI 活用本", "プロンプトエンジニアリング", "AI ツール 解説書"],
+        "Python": ["Python データ分析", "Python Web開発", "Python 自動化"],
+        "JavaScript": ["JavaScript 完全ガイド", "Node.js 開発本", "フロントエンド 技術書"],
+        "React": ["React 実践開発", "モダンフロントエンド", "JavaScript フレームワーク"],
         
-        # Apple製品
-        "iPhone": ["iPhone ケース", "iPhone 充電器", "iPhone アクセサリー", "ワイヤレス充電器"],
-        "iPad": ["iPad ケース", "Apple Pencil", "iPad キーボード", "タブレット スタンド"],
-        "MacBook": ["MacBook ケース", "USB-C ハブ", "外付けSSD", "ワイヤレスマウス"],
-        "AirPods": ["AirPods ケース", "ワイヤレスイヤホン", "イヤホン 収納"],
+        # Apple製品（モデル別）
+        "iPhone": ["iPhone 15 ケース", "MagSafe 充電器", "Lightning ケーブル"],
+        "iPad": ["iPad Pro ケース", "Apple Pencil 第2世代", "iPad キーボード"],
+        "MacBook": ["MacBook Pro ケース", "Thunderbolt ハブ", "外付けSSD 1TB"],
+        "Apple Watch": ["Apple Watch バンド", "ワイヤレス充電器", "スマートウォッチ アクセサリー"],
         
-        # Android・Google
-        "Android": ["Android ケース", "Android 充電器", "スマホ アクセサリー"],
-        "Pixel": ["Pixel ケース", "Google Pixel アクセサリー", "Android 本"],
+        # 最新ガジェット
+        "VR": ["VR ヘッドセット", "Meta Quest", "VR ゲーム"],
+        "ヘッドホン": ["Sony WH-1000XM5", "AirPods Pro", "ノイズキャンセリング"],
+        "カメラ": ["ミラーレス一眼", "Canon EOS R", "Sony α7"],
+        "スマートホーム": ["スマートスピーカー", "IoT デバイス", "ホームオートメーション"],
         
-        # ガジェット
-        "ヘッドホン": ["ノイズキャンセリング ヘッドホン", "ワイヤレス ヘッドホン", "ゲーミング ヘッドセット"],
-        "カメラ": ["ミラーレス カメラ", "カメラ レンズ", "三脚", "カメラ ストラップ"],
-        "スマートウォッチ": ["Apple Watch バンド", "スマートウォッチ 充電器", "フィットネス トラッカー"],
+        # ビジネス・投資（トレンド重視）
+        "投資": ["NISA 投資術", "インデックス投資", "資産運用 最新版"],
+        "仮想通貨": ["暗号資産 入門", "ブロックチェーン技術", "DeFi 解説書"],
+        "スタートアップ": ["起業 成功法則", "ビジネスモデル設計", "VC 資金調達"],
         
-        # ビジネス・投資
-        "投資": ["投資 入門書", "株式投資 本", "資産運用 ガイド"],
-        "スタートアップ": ["起業 本", "ビジネス書", "経営戦略 本"],
-        "Bitcoin": ["仮想通貨 本", "ブロックチェーン 解説書", "投資 ガイド"],
+        # 自動車・モビリティ
+        "Tesla": ["電気自動車 完全ガイド", "Tesla 関連書籍", "EV 充電設備"],
+        "自動運転": ["自動運転技術 解説", "モビリティ革命", "AI 自動車"],
         
-        # 自動車
-        "Tesla": ["電気自動車 本", "Tesla グッズ", "EV 充電器"],
-        "電気自動車": ["EV 充電ケーブル", "電気自動車 本", "カー アクセサリー"],
-        
-        # ゲーム
-        "PlayStation": ["PS5 アクセサリー", "ゲーミング ヘッドセット", "コントローラー"],
-        "Nintendo Switch": ["Switch ケース", "Pro コントローラー", "ゲームソフト"],
-        "Steam": ["ゲーミング キーボード", "ゲーミング マウス", "PC ゲーム"]
+        # エンターテイメント
+        "PlayStation": ["PS5 コントローラー", "ゲーミングヘッドセット", "4K ゲーミングモニター"],
+        "Nintendo": ["Switch Proコントローラー", "Nintendo Switch ケース", "マリオ関連グッズ"],
+        "ゲーム開発": ["Unity ゲーム開発", "Unreal Engine 5", "ゲームプログラミング"]
     }
     
     recommended_products = []
     
-    # キーワードベースの推薦
-    for keyword in keywords[:5]:
+    # 動的推薦を優先
+    recommended_products = dynamic_recommendations[:3]
+    
+    # キーワードベースの推薦（関連性を重視）
+    for keyword in keywords[:3]:  # より厳選
         if keyword in keyword_product_map:
-            products = keyword_product_map[keyword][:2]  # 各キーワードから最大2商品
+            products = keyword_product_map[keyword][:2]  # 各キーワードから2商品
             recommended_products.extend(products)
     
-    # カテゴリベースの追加推薦
-    category_defaults = {
-        "tech": ["プログラミング 本", "開発者 ツール"],
-        "AI・機械学習": ["AI 入門書", "機械学習 実践書"],
-        "Apple製品": ["Apple アクセサリー", "iPhone グッズ"],
-        "ガジェット": ["最新 ガジェット", "スマホ アクセサリー"],
-        "ビジネス": ["ビジネス書 ランキング", "自己啓発 本"],
-        "ゲーム": ["ゲーミング デバイス", "ゲーム グッズ"],
-        "general": ["人気商品 ランキング", "おすすめ グッズ"]
+    # カテゴリベースの高品質推薦
+    category_premium_products = {
+        "tech": ["プログラミング必読書", "開発効率化ツール", "技術トレンド本 2025"],
+        "AI・機械学習": ["機械学習 実装ガイド", "深層学習 PyTorch", "AI エンジニア必携"],
+        "Apple製品": ["Apple 純正アクセサリー", "MagSafe対応製品", "Apple認定アクセサリー"],
+        "ガジェット": ["2025年 注目ガジェット", "スマートデバイス", "未来テクノロジー"],
+        "ビジネス": ["ビジネス書ベストセラー", "経営戦略 実践書", "リーダーシップ論"],
+        "ゲーム": ["ゲーミングPC周辺機器", "eスポーツ デバイス", "VRゲーム機器"],
+        "投資・金融": ["資産形成 完全ガイド", "投資信託 選び方", "節税対策 最新版"],
+        "自動車": ["EV 充電アクセサリー", "カーエレクトロニクス", "自動運転技術書"],
+        "general": ["Amazon売れ筋ランキング", "今週の注目商品", "レビュー高評価商品"]
     }
     
-    if category in category_defaults:
-        recommended_products.extend(category_defaults[category])
+    if category in category_premium_products:
+        recommended_products.extend(category_premium_products[category][:2])
     
-    # 重複除去と優先度調整
-    unique_products = list(dict.fromkeys(recommended_products))
+    # 重複除去と優先度調整（動的推薦を最優先）
+    seen = set()
+    unique_products = []
+    for product in recommended_products:
+        if product not in seen:
+            unique_products.append(product)
+            seen.add(product)
     
-    return unique_products[:4]  # 最大4つの商品推薦
+    return unique_products[:5]  # 最大5つの商品推薦（品質重視）
 
-def match_keywords_to_affiliates(keywords, category):
-    """高精度アフィリエイトリンク生成"""
+def match_keywords_to_affiliates(keywords, category, title=""):
+    """高精度アフィリエイトリンク生成（記事タイトル分析を含む）"""
     affiliate_links = []
     
-    # 商品推薦を取得
-    recommended_products = get_smart_product_recommendations(keywords, category)
+    # 商品推薦を取得（タイトル情報を含む）
+    recommended_products = get_smart_product_recommendations(keywords, category, title)
     
     # カテゴリ別プラットフォーム戦略
     category_strategies = {
@@ -126,21 +158,19 @@ def match_keywords_to_affiliates(keywords, category):
     
     platforms = category_strategies.get(category, ["amazon"])
     
-    # 推薦商品からアフィリエイトリンク生成
+    # 推薦商品からアフィリエイトリンク生成（品質向上）
     for product in recommended_products:
-        for platform in platforms[:2]:  # 最大2プラットフォーム
+        for platform in platforms[:1]:  # Amazonに特化（品質重視）
             if platform == "amazon":
                 link = generate_amazon_link(product, AFFILIATE_CONFIGS["amazon"])
-                link["display_text"] = f"🛒 {product}"
                 affiliate_links.append(link)
                 break  # 同じ商品で複数プラットフォームは避ける
             elif platform == "rakuten":
                 link = generate_rakuten_link(product, AFFILIATE_CONFIGS["rakuten"])
-                link["display_text"] = f"🛒 {product}"
                 affiliate_links.append(link)
                 break
     
-    return affiliate_links[:3]  # 最大3つのアフィリエイトリンク
+    return affiliate_links[:4]  # 最大4つのアフィリエイトリンク（品質重視）
 
 def generate_category_recommendations(category):
     """カテゴリに基づいた関連商品推薦を生成"""
@@ -178,15 +208,16 @@ def generate_category_recommendations(category):
     return affiliate_recs
 
 def add_affiliate_links(article):
-    """記事にアフィリエイトリンクを追加"""
+    """記事にアフィリエイトリンクを追加（改善版）"""
     enhanced_article = article.copy()
     enhanced_article["affiliate_processed_at"] = datetime.now().isoformat()
     
     keywords = article.get("keywords", [])
     category = article.get("category", "general")
+    title = article.get("title", "")
     
-    # キーワードベースのアフィリエイトリンク
-    keyword_links = match_keywords_to_affiliates(keywords, category)
+    # キーワードベースのアフィリエイトリンク（タイトル分析を含む）
+    keyword_links = match_keywords_to_affiliates(keywords, category, title)
     
     # カテゴリベースの推薦
     category_recommendations = generate_category_recommendations(category)

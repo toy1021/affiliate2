@@ -702,7 +702,13 @@ def generate_api_data(enhanced_articles, stats):
 def create_article_slug(article_id):
     """記事IDからスラッグを生成（JavaScript版と同じロジック）"""
     import re
+    # スペースとスラッシュをアンダースコアに変換
     slug = article_id.replace(' ', '_').replace('/', '_').replace('\\', '_')
+    # 特殊文字もアンダースコアに変換（安全性向上）
+    slug = slug.replace('!', '_').replace('?', '_').replace('.', '_').replace(':', '_')
+    slug = slug.replace('(', '_').replace(')', '_').replace('[', '_').replace(']', '_')
+    # 連続するアンダースコアを単一に
+    slug = re.sub(r'_+', '_', slug)
     # 英数字、アンダースコア、ハイフン、日本語文字を保持
     def is_valid_char(c):
         return (c.isascii() and c.isalnum()) or c in '_-' or (
@@ -711,6 +717,8 @@ def create_article_slug(article_id):
             '\u4E00' <= c <= '\u9FAF'     # 漢字
         )
     slug = ''.join(c for c in slug if is_valid_char(c))
+    # 先頭と末尾のアンダースコアを除去
+    slug = slug.strip('_')
     return slug
 
 def get_related_articles(current_article, all_articles, max_count=5):

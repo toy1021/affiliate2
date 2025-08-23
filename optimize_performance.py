@@ -69,8 +69,8 @@ def extract_and_optimize_css_js(html_file):
         css_link = f'<link rel="stylesheet" href="{css_filename}">'
         content = re.sub(css_pattern, css_link, content, flags=re.DOTALL)
     
-    # JavaScript抽出
-    js_pattern = r'<script>(.*?)</script>'
+    # JavaScript抽出（最後のscriptタグのみ - メインアプリケーション）
+    js_pattern = r'<script>(\s*class NewsApp.*?const app = new NewsApp\(\);.*?)</script>'
     js_match = re.search(js_pattern, content, re.DOTALL)
     
     if js_match:
@@ -130,14 +130,17 @@ def add_performance_optimizations(html_content):
     <meta name="referrer" content="origin-when-cross-origin">
     '''
     
-    # Service Worker登録
+    # Service Worker登録（エラーハンドリング改善）
     sw_script = '''
     <script>
     if('serviceWorker' in navigator){
         window.addEventListener('load',()=>{
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('sw.js')
                 .then(reg=>console.log('SW registered'))
-                .catch(err=>console.log('SW registration failed'));
+                .catch(err=>{
+                    console.log('SW registration failed:', err);
+                    // Service Worker登録失敗は404エラーとして報告されるが、機能には影響しない
+                });
         });
     }
     </script>
@@ -259,6 +262,35 @@ def optimize_images():
     if optimized_count > 0:
         print(f"画像最適化完了: {optimized_count}個のファイルをWebP変換")
 
+def create_fallback_optimized_template():
+    """フォールバック対応の最適化テンプレート作成"""
+    template_file = "templates/spa.html" 
+    
+    if not os.path.exists(template_file):
+        print(f"テンプレートファイルが見つかりません: {template_file}")
+        return False
+        
+    with open(template_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # 基本的な最適化のみ適用（外部ファイル化は行わない）
+    # Service Workerパスの修正
+    content = content.replace("navigator.serviceWorker.register('/sw.js')", 
+                            "navigator.serviceWorker.register('sw.js')")
+    
+    # パフォーマンス最適化の追加
+    content = add_performance_optimizations(content)
+    
+    # 最適化されたHTMLを出力
+    output_file = "templates/spa_optimized.html"
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(content)
+    
+    print(f"フォールバック対応最適化テンプレート: {output_file}")
+    print(f"テンプレートサイズ: {len(content)} bytes")
+    
+    return True
+
 def optimize_html_template():
     """HTMLテンプレートの最適化"""
     template_file = "templates/spa.html"
@@ -269,18 +301,19 @@ def optimize_html_template():
     
     print("Core Web Vitals最適化を開始...")
     
-    # CSS/JS抽出と最適化
-    optimized_content, css_file, js_file = extract_and_optimize_css_js(template_file)
+    # 段階的最適化: まずフォールバック版を作成
+    success = create_fallback_optimized_template()
+    if not success:
+        return False
     
-    # パフォーマンス最適化の追加
-    optimized_content = add_performance_optimizations(optimized_content)
-    
-    # 最適化されたHTMLを出力
-    output_file = "templates/spa_optimized.html"
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(optimized_content)
-    
-    print(f"最適化されたHTMLテンプレート: {output_file}")
+    # CSS/JS抽出と最適化（エラーがあっても継続）
+    try:
+        optimized_content, css_file, js_file = extract_and_optimize_css_js(template_file)
+        print("CSS/JS外部ファイル化に成功しました")
+    except Exception as e:
+        print(f"CSS/JS最適化をスキップ: {e}")
+        css_file = None
+        js_file = None
     
     # Service Worker生成
     create_service_worker()

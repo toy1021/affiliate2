@@ -1,11 +1,28 @@
 User-agent: *
 Allow: /
-Disallow: /data/
-Disallow: /*.json
-Allow: /articles.json
-Allow: /sitemap.json
 
-# Prioritize important crawlers
+# 重要なファイルは明示的に許可
+Allow: /index.html
+Allow: /articles.json
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /og-image.svg
+
+# 不要なディレクトリやファイルをクロール対象外
+Disallow: /data/
+Disallow: /images/
+Disallow: /output/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /*.py$
+Disallow: /*.txt$
+Disallow: /*.md$
+Disallow: /*.json$
+
+# ただし、重要なJSONは許可（上書き）
+Allow: /articles.json
+
+# 主要検索エンジンの最適化
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -18,8 +35,11 @@ User-agent: Slurp
 Allow: /
 Crawl-delay: 2
 
-# Block aggressive crawlers
+# アグレッシブなクローラーをブロック
 User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
 Disallow: /
 
 User-agent: MJ12bot
@@ -28,7 +48,10 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Allow resources needed for proper page rendering
+User-agent: BLEXBot
+Disallow: /
+
+# ページレンダリングに必要なリソースを許可
 User-agent: *
 Allow: /*.css
 Allow: /*.js
@@ -43,8 +66,8 @@ Allow: /*.woff
 Allow: /*.woff2
 Allow: /*.ttf
 
-# Sitemap locations
+# サイトマップの場所
 Sitemap: https://toy1021.github.io/affiliate2/sitemap.xml
 
-# Host directive for canonical domain
+# 正規ドメイン指定
 Host: https://toy1021.github.io

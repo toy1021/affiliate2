@@ -491,7 +491,9 @@ def copy_static_files():
         "favicon.ico",
         "templates/sw.js",
         "templates/404.html",
-        "images/og-image.svg"
+        "images/og-image.svg",
+        "sitemap.xml",
+        "robots.txt"
     ]
     
     copied_files = []

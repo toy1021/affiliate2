@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>日本のテックニュース速報 | 2時間ごとに更新される最新IT情報</title>
-    <meta name="description" content="AI・機械学習、Apple製品、プログラミングなど最新テクノロジーニュースを2時間ごとに自動更新。関連商品も一緒にお届け。">
+    <meta name="description" content="AI・機械学習、Apple製品、プログラミングなど最新テクノロジーニュースを2時間ごとに自動更新。SEO最適化されたメタディスクリプションで各記事の詳細な情報と関連商品をお届けします。">
     <meta name="keywords" content="テクノロジーニュース,AI,機械学習,Apple,iPhone,プログラミング,Python,JavaScript,IT速報,ガジェット">
     
     <!-- Open Graph -->
@@ -206,25 +206,6 @@
             color: #555;
             margin-bottom: 1rem;
             line-height: 1.5;
-        }
-        
-        .article-actions {
-            margin-bottom: 1rem;
-        }
-        
-        .source-link {
-            display: inline-block;
-            background: #6c757d;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: background-color 0.3s;
-        }
-        
-        .source-link:hover {
-            background: #545b62;
         }
         
         .affiliate-links {
@@ -436,11 +417,6 @@
                 this.filteredArticles = this.data.articles;
             }
             
-            createSlug(articleId) {
-                // 記事IDからスラッグを生成
-                return articleId.replace(/[\s\/\\]/g, '_').replace(/[^a-zA-Z0-9_-]/g, '');
-            }
-            
             setupEventListeners() {
                 // 検索
                 const searchInput = document.getElementById('search-input');
@@ -561,12 +537,9 @@
                             <span>${article.category} | ${article.source_name}</span>
                         </div>
                         <h2 class="article-title">
-                            <a href="articles/${this.createSlug(article.id)}.html">${article.title}</a>
+                            <a href="${article.link}" target="_blank" rel="noopener">${article.title}</a>
                         </h2>
                         <p class="article-summary">${article.summary}</p>
-                        <div class="article-actions">
-                            <a href="${article.link}" target="_blank" rel="noopener nofollow" class="source-link">元記事を読む</a>
-                        </div>
                         ${article.affiliate_links && article.affiliate_links.length > 0 ? `
                             <div class="affiliate-links">
                                 ${article.affiliate_links.map(link => 

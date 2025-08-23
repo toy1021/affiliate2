@@ -1,0 +1,34 @@
+# GitHub Pages Jekyll設定 (パフォーマンス最適化)
+
+# プラグイン設定
+plugins:
+  - jekyll-gzip
+
+# Gzip圧縮設定
+gzip:
+  extensions:
+    - '.html'
+    - '.css'
+    - '.js'
+    - '.json'
+    - '.xml'
+    - '.svg'
+
+# 静的ファイル設定
+include:
+  - "_headers"
+  - "sw.js"
+  - "robots.txt"
+  - "sitemap.xml"
+
+# キャッシュ最適化
+sass:
+  style: compressed
+
+# 圧縮設定
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  ignore:
+    envs: development

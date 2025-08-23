@@ -1,0 +1,25 @@
+# GitHub Pages用HTTPヘッダー設定 (Netlifyスタイル)
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY  
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  
+/*.js  
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.json
+  Cache-Control: public, max-age=3600
+
+/*.png /*.jpg /*.jpeg /*.gif /*.svg /*.webp /*.ico
+  Cache-Control: public, max-age=2592000
+
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate

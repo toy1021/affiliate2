@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>日本のテックニュース速報 | 2時間ごとに更新される最新IT情報</title>
-    <meta name="description" content="AI・機械学習、Apple製品、プログラミングなど最新テクノロジーニュースを2時間ごとに自動更新。SEO最適化されたメタディスクリプションで各記事の詳細な情報と関連商品をお届けします。">
+    <meta name="description" content="AI・機械学習、Apple製品、プログラミングなど最新テクノロジーニュースを2時間ごとに自動更新。関連商品も一緒にお届け。">
     <meta name="keywords" content="テクノロジーニュース,AI,機械学習,Apple,iPhone,プログラミング,Python,JavaScript,IT速報,ガジェット">
     
     <!-- Open Graph -->
@@ -63,7 +63,7 @@
         "mainEntity": {
             "@type": "ItemList",
             "name": "テックニュース記事一覧",
-            "numberOfItems": "142",
+            "numberOfItems": "141",
             "itemListElement": []
         }
     }
@@ -355,7 +355,7 @@
     <div class="container">
         <div class="update-info">
             <p><strong>最新更新:</strong> <span id="update-time"></span></p>
-            <p><strong>記事数:</strong> <span id="article-count">142</span>件</p>
+            <p><strong>記事数:</strong> <span id="article-count">141</span>件</p>
         </div>
 
         <div class="filters" id="filters" style="display: none;">
@@ -537,7 +537,7 @@
                             <span>${article.category} | ${article.source_name}</span>
                         </div>
                         <h2 class="article-title">
-                            <a href="${article.link}" target="_blank" rel="noopener">${article.title}</a>
+                            <a href="articles/${this.createSlug(article.id)}.html">${article.title}</a>
                         </h2>
                         <p class="article-summary">${article.summary}</p>
                         ${article.affiliate_links && article.affiliate_links.length > 0 ? `
@@ -583,6 +583,13 @@
                 this.renderArticles();
                 this.renderPagination();
                 window.scrollTo(0, 0);
+            }
+            
+            createSlug(articleId) {
+                // 記事IDからファイル名を生成（04_generate_html.pyと同じロジック）
+                let slug = articleId.replace(/ /g, '_').replace(/\//g, '_').replace(/\\/g, '_');
+                slug = slug.replace(/[^a-zA-Z0-9_\-]/g, '');
+                return slug;
             }
         }
         

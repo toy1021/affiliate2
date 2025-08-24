@@ -2,8 +2,12 @@
 
 import json
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from jinja2 import Template, FileSystemLoader, Environment
+
+# 日本標準時タイムゾーン
+JST = timezone(timedelta(hours=9))
+
 from config import (
     AFFILIATE_ARTICLES_FILE, 
     FINAL_HTML_FILE, 
@@ -53,7 +57,7 @@ def calculate_article_quality_score(article):
     # 公開日の新しさ
     try:
         timestamp = parse_article_timestamp(article)
-        hours_old = (datetime.now(timezone.utc) - timestamp).total_seconds() / 3600
+        hours_old = (datetime.now(JST) - timestamp).total_seconds() / 3600
         if hours_old < 24:
             quality_score += 3
         elif hours_old < 72:
@@ -326,7 +330,7 @@ def calculate_article_importance(article):
 
 def get_relative_time(timestamp):
     """相対時間を日本語で返す"""
-    now = datetime.now(timezone.utc)
+    now = datetime.now(JST)
     diff = now - timestamp
     
     if diff.days > 7:
@@ -351,7 +355,7 @@ def parse_article_timestamp(article):
     timestamp_str = published if published else fetched
     
     if not timestamp_str:
-        return datetime(1970, 1, 1, tzinfo=timezone.utc)
+        return datetime(1970, 1, 1, tzinfo=JST)
     
     try:
         # 既存の日付フォーマットをパース
@@ -360,26 +364,52 @@ def parse_article_timestamp(article):
             try:
                 dt = datetime.fromisoformat(timestamp_str.replace('Z', '+00:00'))
                 if dt.tzinfo is None:
-                    dt = dt.replace(tzinfo=timezone.utc)
+                    dt = dt.replace(tzinfo=JST)
+                
+                # 未来の年を現在年に修正
+                current_year = datetime.now(JST).year
+                if dt.year > current_year:
+                    dt = dt.replace(year=current_year)
+                
                 return dt
             except:
                 # シンプルISOフォーマット
                 dt = datetime.strptime(timestamp_str[:19], "%Y-%m-%dT%H:%M:%S")
-                return dt.replace(tzinfo=timezone.utc)
+                dt = dt.replace(tzinfo=JST)
+                
+                # 未来の年を現在年に修正
+                current_year = datetime.now(JST).year
+                if dt.year > current_year:
+                    dt = dt.replace(year=current_year)
+                
+                return dt
         else:
             # 簡単な日付フォーマットの場合
             dt = datetime.strptime(timestamp_str[:19], "%Y-%m-%d %H:%M:%S")
-            return dt.replace(tzinfo=timezone.utc)
+            dt = dt.replace(tzinfo=JST)
+            
+            # 未来の年を現在年に修正
+            current_year = datetime.now(JST).year
+            if dt.year > current_year:
+                dt = dt.replace(year=current_year)
+            
+            return dt
     except:
         try:
             # RFC2822フォーマットの場合（RSSでよく使われる）
             from email.utils import parsedate_to_datetime
             dt = parsedate_to_datetime(timestamp_str)
             if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
+                dt = dt.replace(tzinfo=JST)
+            
+            # 未来の年を現在年に修正
+            current_year = datetime.now(JST).year
+            if dt.year > current_year:
+                dt = dt.replace(year=current_year)
+            
             return dt
         except:
-            return datetime(1970, 1, 1, tzinfo=timezone.utc)
+            return datetime(1970, 1, 1, tzinfo=JST)
 
 def sort_articles(articles):
     """記事を時系列順（新しい順）でソート"""
@@ -546,7 +576,7 @@ def generate_sitemap_xml(articles):
         # Googleニュース用の追加情報（最新24時間以内の記事のみ）
         try:
             article_time = parse_article_timestamp(article)
-            time_diff = datetime.now(timezone.utc) - article_time
+            time_diff = datetime.now(JST) - article_time
             if time_diff.days == 0:  # 24時間以内
                 news = SubElement(url, 'news:news')
                 publication = SubElement(news, 'news:publication')
@@ -566,11 +596,11 @@ def generate_sitemap_xml(articles):
 def generate_sitemap(articles, total_pages=1):
     """簡単なサイトマップ情報を生成（将来の拡張用）"""
     sitemap_data = {
-        "generated_at": datetime.now().isoformat(),
+        "generated_at": datetime.now(JST).isoformat(),
         "total_pages": total_pages,
         "articles_count": len(articles),
         "last_updated": UPDATE_TIME,
-        "cache_buster": int(datetime.now().timestamp())
+        "cache_buster": int(datetime.now(JST).timestamp())
     }
     
     return sitemap_data
@@ -675,7 +705,7 @@ def generate_api_data(enhanced_articles, stats):
             "total_affiliate_links": stats["total_affiliate_links"],
             "total_feeds": stats["total_feeds"],
             "last_updated": UPDATE_TIME,
-            "generated_at": datetime.now().isoformat()
+            "generated_at": datetime.now(JST).isoformat()
         },
         "categories": [{
             "name": category,
@@ -884,7 +914,7 @@ def update_sitemap_with_articles(enhanced_articles, base_url="https://toy1021.gi
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
-</urlset>'''.format(datetime.now().strftime('%Y-%m-%d'))
+</urlset>'''.format(datetime.now(JST).strftime('%Y-%m-%d'))
         
         # 個別記事のエントリを生成
         urls_xml = ""
@@ -901,7 +931,7 @@ def update_sitemap_with_articles(enhanced_articles, base_url="https://toy1021.gi
             if lastmod and 'T' in lastmod:
                 lastmod = lastmod.split('T')[0]
             else:
-                lastmod = datetime.now().strftime('%Y-%m-%d')
+                lastmod = datetime.now(JST).strftime('%Y-%m-%d')
             
             urls_xml += f'''    <url>
         <loc>{url}</loc>
@@ -920,7 +950,7 @@ def update_sitemap_with_articles(enhanced_articles, base_url="https://toy1021.gi
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://toy1021.github.io/affiliate2/</loc>
-        <lastmod>{datetime.now().strftime('%Y-%m-%d')}</lastmod>
+        <lastmod>{datetime.now(JST).strftime('%Y-%m-%d')}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1154,7 +1184,7 @@ def generate_spa_version(enhanced_articles, stats):
 def generate_performance_report(enhanced_articles, stats, execution_time):
     """パフォーマンスレポートを生成"""
     report = {
-        "generated_at": datetime.now().isoformat(),
+        "generated_at": datetime.now(JST).isoformat(),
         "execution_time_seconds": execution_time,
         "articles_processed": len(enhanced_articles),
         "processing_rate": len(enhanced_articles) / execution_time if execution_time > 0 else 0,

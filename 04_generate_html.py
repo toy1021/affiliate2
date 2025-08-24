@@ -788,9 +788,11 @@ def generate_individual_article_pages(enhanced_articles):
         
         for article in enhanced_articles:
             try:
-                # 記事IDからスラッグを生成
+                # 記事IDからスラッグを生成（日本語文字を保持）
                 slug = article['id'].replace(' ', '_').replace('/', '_').replace('\\', '_')
-                slug = ''.join(c for c in slug if c.isalnum() or c in '_-')
+                # 危険な文字のみを削除し、日本語文字は保持
+                import re
+                slug = re.sub(r'[<>:"|?*]', '', slug)
                 
                 # アフィリエイトリンクを配列として処理（最大6件）
                 affiliate_links = []
@@ -888,7 +890,9 @@ def update_sitemap_with_articles(enhanced_articles, base_url="https://toy1021.gi
         urls_xml = ""
         for article in enhanced_articles:
             slug = article['id'].replace(' ', '_').replace('/', '_').replace('\\', '_')
-            slug = ''.join(c for c in slug if c.isalnum() or c in '_-')
+            # 危険な文字のみを削除し、日本語文字は保持
+            import re
+            slug = re.sub(r'[<>:"|?*]', '', slug)
             
             url = f"{base_url}articles/{slug}.html"
             

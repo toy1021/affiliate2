@@ -577,7 +577,8 @@
             createSlug(articleId) {
                 // 記事IDからファイル名を生成（04_generate_html.pyと同じロジック）
                 let slug = articleId.replace(/ /g, '_').replace(/\//g, '_').replace(/\\/g, '_');
-                slug = slug.replace(/[^a-zA-Z0-9_\-]/g, '');
+                // 危険な文字のみを削除し、日本語文字は保持
+                slug = slug.replace(/[<>:"|?*]/g, '');
                 return slug;
             }
         }

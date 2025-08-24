@@ -205,9 +205,19 @@
                     <div class="affiliate-grid compact">
                         {% for link in article.affiliate_links.category_recommendations[:3] %}
                         <div class="affiliate-item">
-                            <a href="{{ link.url }}" target="_blank" rel="nofollow noopener sponsored">
+                            <a href="{{ link.url }}" target="_blank" rel="nofollow noopener sponsored" aria-label="{{ link.title }}をAmazonで購入">
+                                {% if link.image_url %}
+                                <div class="product-image">
+                                    <img src="{{ link.image_url }}" alt="{{ link.title }}" loading="lazy">
+                                    {% if link.rating %}
+                                    <div class="rating-badge">★ {{ link.rating }}</div>
+                                    {% endif %}
+                                </div>
+                                {% endif %}
                                 <div class="product-info">
-                                    <div class="product-title">{{ link.display_text }}</div>
+                                    <div class="product-title">{{ link.title }}</div>
+                                    <div class="product-description">{{ link.description if link.description else 'Amazonで詳細をチェック' }}</div>
+                                    <div class="product-price">{{ link.price if link.price else '価格を確認' }}</div>
                                     <div class="platform-badge">{{ link.platform|title }}</div>
                                 </div>
                             </a>

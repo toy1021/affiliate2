@@ -178,14 +178,6 @@
                         {% for link in article.affiliate_links.keyword_based[:4] %}
                         <div class="affiliate-item featured">
                             <a href="{{ link.url }}" target="_blank" rel="nofollow noopener sponsored" aria-label="{{ link.title }}をAmazonで購入">
-                                {% if link.image_url %}
-                                <div class="product-image">
-                                    <img src="{{ link.image_url }}" alt="{{ link.title }}" loading="lazy">
-                                    {% if link.rating %}
-                                    <div class="rating-badge">★ {{ link.rating }}</div>
-                                    {% endif %}
-                                </div>
-                                {% endif %}
                                 <div class="product-info">
                                     <div class="product-title">{{ link.title }}</div>
                                     <div class="product-description">{{ link.description if link.description else 'Amazonで詳細をチェック' }}</div>
@@ -206,14 +198,6 @@
                         {% for link in article.affiliate_links.category_recommendations[:3] %}
                         <div class="affiliate-item">
                             <a href="{{ link.url }}" target="_blank" rel="nofollow noopener sponsored" aria-label="{{ link.title }}をAmazonで購入">
-                                {% if link.image_url %}
-                                <div class="product-image">
-                                    <img src="{{ link.image_url }}" alt="{{ link.title }}" loading="lazy">
-                                    {% if link.rating %}
-                                    <div class="rating-badge">★ {{ link.rating }}</div>
-                                    {% endif %}
-                                </div>
-                                {% endif %}
                                 <div class="product-info">
                                     <div class="product-title">{{ link.title }}</div>
                                     <div class="product-description">{{ link.description if link.description else 'Amazonで詳細をチェック' }}</div>

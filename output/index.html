@@ -588,21 +588,7 @@
             createSlug(articleId) {
                 // 記事IDからファイル名を生成（04_generate_html.pyと同じロジック）
                 let slug = articleId.replace(/ /g, '_').replace(/\//g, '_').replace(/\\/g, '_');
-                // 特殊文字もアンダースコアに変換（安全性向上）
-                slug = slug.replace(/!/g, '_').replace(/\?/g, '_').replace(/\./g, '_').replace(/:/g, '_');
-                slug = slug.replace(/\(/g, '_').replace(/\)/g, '_').replace(/\[/g, '_').replace(/\]/g, '_');
-                // 連続するアンダースコアを単一に
-                slug = slug.replace(/_+/g, '_');
-                // 英数字、アンダースコア、ハイフン、日本語文字を保持
-                slug = slug.split('').filter(c => 
-                    (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || 
-                    (c >= '0' && c <= '9') || c === '_' || c === '-' ||
-                    (c >= '\u3040' && c <= '\u309F') || // ひらがな
-                    (c >= '\u30A0' && c <= '\u30FF') || // カタカナ  
-                    (c >= '\u4E00' && c <= '\u9FAF')    // 漢字
-                ).join('');
-                // 先頭と末尾のアンダースコアを除去
-                slug = slug.replace(/^_+|_+$/g, '');
+                slug = slug.replace(/[^a-zA-Z0-9_\-]/g, '');
                 return slug;
             }
         }

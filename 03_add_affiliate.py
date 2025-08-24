@@ -6,136 +6,241 @@ import urllib.parse
 from datetime import datetime
 from config import PROCESSED_ARTICLES_FILE, AFFILIATE_ARTICLES_FILE, AFFILIATE_CONFIGS, DEBUG, VERBOSE
 
-def generate_amazon_link(keyword, config):
-    """Amazonアフィリエイトリンクを生成（商品情報を強化）"""
-    base_url = config["search_base_url"]
+def generate_specific_amazon_link(product_key, config):
+    """Amazon実物商品への直接アフィリエイトリンクを生成"""
+    products_db = get_specific_product_database()
     tag = config["tag"]
     
-    search_query = urllib.parse.quote(keyword)
-    affiliate_url = f"{base_url}{search_query}&linkCode=ll2&tag={tag}&linkId=your-link-id"
+    if product_key not in products_db:
+        return None
     
-    # 商品タイトルを最適化
-    optimized_title = keyword.replace(" ", "・")
+    product = products_db[product_key]
+    affiliate_url = f"https://www.amazon.co.jp/dp/{product['asin']}?tag={tag}&linkCode=osi&th=1&psc=1"
     
     return {
         "platform": "amazon",
-        "keyword": keyword,
+        "asin": product["asin"],
         "url": affiliate_url,
-        "title": optimized_title,
-        "display_text": f"🛒 {optimized_title}",
-        "description": f"Amazonで{optimized_title}をチェック",
-        "price": "価格を確認",
-        "image_url": None  # Amazon商品画像は後で実装可能
+        "title": product["title"],
+        "display_text": f"🛒 {product['title']}",
+        "description": f"Amazonで{product['title']}をチェック",
+        "price": product["price"],
+        "image_url": product["image"],
+        "rating": product["rating"]
     }
 
-def generate_rakuten_link(keyword, config):
-    """楽天アフィリエイトリンクを生成"""
-    base_url = config["search_base_url"]
-    affiliate_id = config["affiliate_id"]
+def generate_rakuten_link(product_key, config):
+    """楽天アフィリエイトリンクを生成（具体的商品用）"""
+    products_db = get_specific_product_database()
+    affiliate_id = config.get("affiliate_id", "")
     
-    search_query = urllib.parse.quote(keyword)
-    affiliate_url = f"{base_url}{search_query}/?f=1&grp=product"
+    if product_key not in products_db:
+        return None
+    
+    product = products_db[product_key]
+    # 楽天では検索ベースのリンクを使用
+    search_query = urllib.parse.quote(product["title"])
+    affiliate_url = f"https://search.rakuten.co.jp/search/mall/{search_query}/?f=1&grp=product"
     
     return {
-        "platform": "rakuten",
-        "keyword": keyword,
+        "platform": "rakuten", 
+        "keyword": product["title"],
         "url": affiliate_url,
-        "display_text": f"{keyword}を検索 - 楽天市場"
+        "title": product["title"],
+        "display_text": f"🛒 {product['title']}",
+        "description": f"楽天で{product['title']}をチェック",
+        "price": product.get("price", "価格を確認"),
+        "image_url": product.get("image"),
+        "rating": product.get("rating")
+    }
+
+def get_specific_product_database():
+    """具体的な商品データベース（Amazon実物商品）"""
+    return {
+        # AI・機械学習関連
+        "ai_programming": {
+            "asin": "4295013773",
+            "title": "ゼロから作るDeep Learning",
+            "price": "￥4,180",
+            "image": "https://m.media-amazon.com/images/I/81VYZdZbN7L._SX350_BO1,204,203,200_.jpg",
+            "rating": "4.2"
+        },
+        "python_ml": {
+            "asin": "4873119286",
+            "title": "Python機械学習プログラミング",
+            "price": "￥3,740",
+            "image": "https://m.media-amazon.com/images/I/81rGdRHo-PL._SX350_BO1,204,203,200_.jpg",
+            "rating": "4.1"
+        },
+        "chatgpt_book": {
+            "asin": "4295018295",
+            "title": "ChatGPT APIプログラミング 入門",
+            "price": "￥2,860",
+            "image": "https://m.media-amazon.com/images/I/81kf1mBnX1L._SX350_BO1,204,203,200_.jpg",
+            "rating": "4.0"
+        },
+        
+        # iPhoneアクセサリー
+        "iphone_case": {
+            "asin": "B0CX1WF4XY",
+            "title": "Apple iPhone 15 Pro シリコンケース",
+            "price": "￥6,800",
+            "image": "https://m.media-amazon.com/images/I/61P9mVSO8sL._AC_SX679_.jpg",
+            "rating": "4.4"
+        },
+        "magsafe_charger": {
+            "asin": "B08P4CZYQX",
+            "title": "Apple MagSafe充電器",
+            "price": "￥5,930",
+            "image": "https://m.media-amazon.com/images/I/61SUkK0DFQL._AC_SX679_.jpg",
+            "rating": "4.3"
+        },
+        "lightning_cable": {
+            "asin": "B075853FRF",
+            "title": "Apple Lightning - USBケーブル (1 m)",
+            "price": "￥2,668",
+            "image": "https://m.media-amazon.com/images/I/31rAao-WFpL._AC_SX679_.jpg",
+            "rating": "4.5"
+        },
+        
+        # MacBookアクセサリー
+        "macbook_case": {
+            "asin": "B0BXJX3QBL",
+            "title": "MacBook Pro 14インチ M3 ハードケース",
+            "price": "￥2,980",
+            "image": "https://m.media-amazon.com/images/I/71BhpHO4iYL._AC_SX679_.jpg",
+            "rating": "4.2"
+        },
+        "usb_c_hub": {
+            "asin": "B09C8QZQ8G",
+            "title": "Anker PowerExpand 8-in-1 USB-C PD メディア ハブ",
+            "price": "￥9,990",
+            "image": "https://m.media-amazon.com/images/I/61YJkMtA-kL._AC_SX679_.jpg",
+            "rating": "4.3"
+        },
+        "external_ssd": {
+            "asin": "B084HPXZ5J",
+            "title": "SanDisk ポータブルSSD 1TB",
+            "price": "￥13,980",
+            "image": "https://m.media-amazon.com/images/I/61Dr8R15tXL._AC_SX679_.jpg",
+            "rating": "4.4"
+        },
+        
+        # プログラミング書籍
+        "clean_code": {
+            "asin": "4048930591",
+            "title": "リーダブルコード",
+            "price": "￥2,640",
+            "image": "https://m.media-amazon.com/images/I/51MgH8Jmr3L._SX350_BO1,204,203,200_.jpg",
+            "rating": "4.2"
+        },
+        "javascript_book": {
+            "asin": "4873119707",
+            "title": "JavaScript: The Definitive Guide, 7th Edition",
+            "price": "￥5,060",
+            "image": "https://m.media-amazon.com/images/I/91MZCe9YuFL._SX350_BO1,204,203,200_.jpg",
+            "rating": "4.1"
+        },
+        
+        # ゲーミング
+        "ps5_controller": {
+            "asin": "B08H99BPJN",
+            "title": "PlayStation 5 DualSense ワイヤレスコントローラー",
+            "price": "￥8,778",
+            "image": "https://m.media-amazon.com/images/I/51g0MEHbM9L._AC_SX679_.jpg",
+            "rating": "4.5"
+        },
+        "gaming_headset": {
+            "asin": "B07SQDVL8Z",
+            "title": "SteelSeries Arctis 7P ワイヤレスゲーミングヘッドセット",
+            "price": "￥16,182",
+            "image": "https://m.media-amazon.com/images/I/71vKjlK5OcL._AC_SX679_.jpg",
+            "rating": "4.4"
+        },
+        
+        # 投資・ビジネス書
+        "investment_book": {
+            "asin": "4532358213",
+            "title": "つみたてNISAの教科書 2024",
+            "price": "￥1,595",
+            "image": "https://m.media-amazon.com/images/I/81Xk1xHLHBL._SX350_BO1,204,203,200_.jpg",
+            "rating": "4.3"
+        },
+        "startup_book": {
+            "asin": "4822255018",
+            "title": "リーンスタートアップ",
+            "price": "￥2,420",
+            "image": "https://m.media-amazon.com/images/I/814s1Z7fBNL._SX350_BO1,204,203,200_.jpg",
+            "rating": "4.1"
+        }
     }
 
 def get_smart_product_recommendations(keywords, category, title=""):
-    """キーワードとカテゴリに基づく高精度商品推薦（タイトル分析を追加）"""
+    """キーワードとカテゴリに基づく高精度商品推薦（具体的商品）"""
+    
+    products_db = get_specific_product_database()
+    title_lower = title.lower()
+    recommended_product_keys = []
     
     # 記事タイトル分析による動的商品推薦
-    title_lower = title.lower()
-    dynamic_recommendations = []
-    
-    # タイトル分析による商品推薦
     if "iphone" in title_lower or "アイフォン" in title_lower:
-        dynamic_recommendations.extend(["iPhone ケース", "iPhone 充電器", "MagSafe 対応 アクセサリー"])
+        recommended_product_keys.extend(["iphone_case", "magsafe_charger", "lightning_cable"])
     elif "macbook" in title_lower or "マック" in title_lower:
-        dynamic_recommendations.extend(["MacBook ケース", "USB-C ハブ", "外付けSSD"])
-    elif "tesla" in title_lower or "テスラ" in title_lower:
-        dynamic_recommendations.extend(["電気自動車 本", "Tesla グッズ", "EV 充電器"])
+        recommended_product_keys.extend(["macbook_case", "usb_c_hub", "external_ssd"])
     elif "ai" in title_lower or "人工知能" in title_lower or "機械学習" in title_lower:
-        dynamic_recommendations.extend(["AI プログラミング 本", "Python 機械学習 実践", "深層学習 教科書"])
+        recommended_product_keys.extend(["ai_programming", "python_ml", "chatgpt_book"])
     elif "投資" in title_lower or "株価" in title_lower or "bitcoin" in title_lower:
-        dynamic_recommendations.extend(["投資 入門書", "株式投資 ガイド", "仮想通貨 解説書"])
+        recommended_product_keys.extend(["investment_book", "startup_book"])
     elif "プログラミング" in title_lower or "開発" in title_lower:
-        dynamic_recommendations.extend(["プログラミング 本", "コーディング 学習書", "技術書 おすすめ"])
+        recommended_product_keys.extend(["clean_code", "javascript_book", "python_ml"])
+    elif "playstation" in title_lower or "ps5" in title_lower or "ゲーム" in title_lower:
+        recommended_product_keys.extend(["ps5_controller", "gaming_headset"])
     
-    # キーワード → 商品マッピング（改善版）
+    # キーワードベースの推薦（具体的商品キー）
     keyword_product_map = {
-        # AI・プログラミング関連（より具体的）
-        "AI": ["AI プログラミング 実践", "機械学習 入門書", "ChatGPT 活用術"],
-        "ChatGPT": ["生成AI 活用本", "プロンプトエンジニアリング", "AI ツール 解説書"],
-        "Python": ["Python データ分析", "Python Web開発", "Python 自動化"],
-        "JavaScript": ["JavaScript 完全ガイド", "Node.js 開発本", "フロントエンド 技術書"],
-        "React": ["React 実践開発", "モダンフロントエンド", "JavaScript フレームワーク"],
-        
-        # Apple製品（モデル別）
-        "iPhone": ["iPhone 15 ケース", "MagSafe 充電器", "Lightning ケーブル"],
-        "iPad": ["iPad Pro ケース", "Apple Pencil 第2世代", "iPad キーボード"],
-        "MacBook": ["MacBook Pro ケース", "Thunderbolt ハブ", "外付けSSD 1TB"],
-        "Apple Watch": ["Apple Watch バンド", "ワイヤレス充電器", "スマートウォッチ アクセサリー"],
-        
-        # 最新ガジェット
-        "VR": ["VR ヘッドセット", "Meta Quest", "VR ゲーム"],
-        "ヘッドホン": ["Sony WH-1000XM5", "AirPods Pro", "ノイズキャンセリング"],
-        "カメラ": ["ミラーレス一眼", "Canon EOS R", "Sony α7"],
-        "スマートホーム": ["スマートスピーカー", "IoT デバイス", "ホームオートメーション"],
-        
-        # ビジネス・投資（トレンド重視）
-        "投資": ["NISA 投資術", "インデックス投資", "資産運用 最新版"],
-        "仮想通貨": ["暗号資産 入門", "ブロックチェーン技術", "DeFi 解説書"],
-        "スタートアップ": ["起業 成功法則", "ビジネスモデル設計", "VC 資金調達"],
-        
-        # 自動車・モビリティ
-        "Tesla": ["電気自動車 完全ガイド", "Tesla 関連書籍", "EV 充電設備"],
-        "自動運転": ["自動運転技術 解説", "モビリティ革命", "AI 自動車"],
-        
-        # エンターテイメント
-        "PlayStation": ["PS5 コントローラー", "ゲーミングヘッドセット", "4K ゲーミングモニター"],
-        "Nintendo": ["Switch Proコントローラー", "Nintendo Switch ケース", "マリオ関連グッズ"],
-        "ゲーム開発": ["Unity ゲーム開発", "Unreal Engine 5", "ゲームプログラミング"]
+        "AI": ["ai_programming", "python_ml", "chatgpt_book"],
+        "ChatGPT": ["chatgpt_book", "ai_programming", "python_ml"],
+        "Python": ["python_ml", "clean_code", "javascript_book"],
+        "JavaScript": ["javascript_book", "clean_code", "python_ml"],
+        "React": ["javascript_book", "clean_code"],
+        "iPhone": ["iphone_case", "magsafe_charger", "lightning_cable"],
+        "MacBook": ["macbook_case", "usb_c_hub", "external_ssd"],
+        "投資": ["investment_book", "startup_book"],
+        "PlayStation": ["ps5_controller", "gaming_headset"],
+        "プログラミング": ["clean_code", "python_ml", "javascript_book"]
     }
     
     recommended_products = []
     
-    # 動的推薦を優先
-    recommended_products = dynamic_recommendations[:3]
-    
-    # キーワードベースの推薦（関連性を重視）
-    for keyword in keywords[:3]:  # より厳選
+    # キーワードベースの推薦を追加
+    for keyword in keywords[:3]:
         if keyword in keyword_product_map:
-            products = keyword_product_map[keyword][:2]  # 各キーワードから2商品
-            recommended_products.extend(products)
+            product_keys = keyword_product_map[keyword][:2]
+            recommended_product_keys.extend(product_keys)
     
-    # カテゴリベースの高品質推薦
-    category_premium_products = {
-        "tech": ["プログラミング必読書", "開発効率化ツール", "技術トレンド本 2025"],
-        "AI・機械学習": ["機械学習 実装ガイド", "深層学習 PyTorch", "AI エンジニア必携"],
-        "Apple製品": ["Apple 純正アクセサリー", "MagSafe対応製品", "Apple認定アクセサリー"],
-        "ガジェット": ["2025年 注目ガジェット", "スマートデバイス", "未来テクノロジー"],
-        "ビジネス": ["ビジネス書ベストセラー", "経営戦略 実践書", "リーダーシップ論"],
-        "ゲーム": ["ゲーミングPC周辺機器", "eスポーツ デバイス", "VRゲーム機器"],
-        "投資・金融": ["資産形成 完全ガイド", "投資信託 選び方", "節税対策 最新版"],
-        "自動車": ["EV 充電アクセサリー", "カーエレクトロニクス", "自動運転技術書"],
-        "general": ["Amazon売れ筋ランキング", "今週の注目商品", "レビュー高評価商品"]
+    # カテゴリベースのデフォルト推薦
+    category_defaults = {
+        "AI・機械学習": ["ai_programming", "python_ml"],
+        "Apple製品": ["iphone_case", "magsafe_charger"],
+        "プログラミング": ["clean_code", "python_ml"],
+        "ゲーム": ["ps5_controller", "gaming_headset"],
+        "ビジネス": ["investment_book", "startup_book"],
+        "general": ["clean_code", "investment_book"]
     }
     
-    if category in category_premium_products:
-        recommended_products.extend(category_premium_products[category][:2])
+    if category in category_defaults:
+        recommended_product_keys.extend(category_defaults[category])
     
-    # 重複除去と優先度調整（動的推薦を最優先）
+    # 重複除去と優先度調整
     seen = set()
-    unique_products = []
-    for product in recommended_products:
-        if product not in seen:
-            unique_products.append(product)
-            seen.add(product)
+    unique_product_keys = []
+    for key in recommended_product_keys:
+        if key not in seen and key in products_db:
+            unique_product_keys.append(key)
+            seen.add(key)
     
-    return unique_products[:5]  # 最大5つの商品推薦（品質重視）
+    # 具体的商品情報を返す
+    return unique_product_keys[:4]
 
 def match_keywords_to_affiliates(keywords, category, title=""):
     """高精度アフィリエイトリンク生成（記事タイトル分析を含む）"""
@@ -158,52 +263,38 @@ def match_keywords_to_affiliates(keywords, category, title=""):
     
     platforms = category_strategies.get(category, ["amazon"])
     
-    # 推薦商品からアフィリエイトリンク生成（品質向上）
-    for product in recommended_products:
-        for platform in platforms[:1]:  # Amazonに特化（品質重視）
-            if platform == "amazon":
-                link = generate_amazon_link(product, AFFILIATE_CONFIGS["amazon"])
+    # 具体的商品からアフィリエイトリンク生成
+    for product_key in recommended_products:
+        if "amazon" in platforms:
+            link = generate_specific_amazon_link(product_key, AFFILIATE_CONFIGS["amazon"])
+            if link:
                 affiliate_links.append(link)
-                break  # 同じ商品で複数プラットフォームは避ける
-            elif platform == "rakuten":
-                link = generate_rakuten_link(product, AFFILIATE_CONFIGS["rakuten"])
-                affiliate_links.append(link)
-                break
     
-    return affiliate_links[:4]  # 最大4つのアフィリエイトリンク（品質重視）
+    return affiliate_links[:4]  # 最大4つの具体的商品アフィリエイトリンク
 
 def generate_category_recommendations(category):
-    """カテゴリに基づいた関連商品推薦を生成"""
-    recommendations = {
-        "tech": [
-            {"text": "プログラミング学習におすすめ", "search": "プログラミング 入門書"},
-            {"text": "開発効率を上げるツール", "search": "プログラマー ツール"}
-        ],
-        "gadget": [
-            {"text": "最新ガジェットをチェック", "search": "最新 ガジェット"},
-            {"text": "スマホアクセサリー", "search": "スマートフォン アクセサリー"}
-        ],
-        "book": [
-            {"text": "関連書籍を探す", "search": "ビジネス書 ランキング"},
-            {"text": "Kindle Unlimitedで読み放題", "search": "kindle unlimited"}
-        ],
-        "business": [
-            {"text": "ビジネススキル向上に", "search": "ビジネス スキル 本"},
-            {"text": "経営・マーケティング書籍", "search": "マーケティング 本"}
-        ],
-        "general": [
-            {"text": "今週のおすすめ商品", "search": "おすすめ商品"},
-            {"text": "人気ランキング", "search": "人気 ランキング"}
-        ]
+    """カテゴリに基づいた関連商品推薦を生成（具体的商品）"""
+    products_db = get_specific_product_database()
+    
+    category_product_mapping = {
+        "tech": ["clean_code", "python_ml"],
+        "AI・機械学習": ["ai_programming", "chatgpt_book"],
+        "Apple製品": ["iphone_case", "magsafe_charger"],
+        "プログラミング": ["javascript_book", "clean_code"],
+        "ゲーム": ["ps5_controller", "gaming_headset"],
+        "ビジネス": ["investment_book", "startup_book"],
+        "general": ["clean_code", "investment_book"]
     }
     
-    category_recs = recommendations.get(category, recommendations["general"])
+    product_keys = category_product_mapping.get(category, category_product_mapping["general"])
     affiliate_recs = []
     
-    for rec in category_recs:
-        amazon_link = generate_amazon_link(rec["search"], AFFILIATE_CONFIGS["amazon"])
-        amazon_link["display_text"] = rec["text"]
-        affiliate_recs.append(amazon_link)
+    for product_key in product_keys:
+        if product_key in products_db:
+            link = generate_specific_amazon_link(product_key, AFFILIATE_CONFIGS["amazon"])
+            if link:
+                link["display_text"] = f"🛒 {products_db[product_key]['title']}"
+                affiliate_recs.append(link)
     
     return affiliate_recs
 

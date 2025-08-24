@@ -6,53 +6,68 @@ import urllib.parse
 from datetime import datetime
 from config import PROCESSED_ARTICLES_FILE, AFFILIATE_ARTICLES_FILE, AFFILIATE_CONFIGS, DEBUG, VERBOSE
 
-def generate_specific_amazon_link(product_key, config):
-    """Amazon実物商品への直接アフィリエイトリンクを生成"""
-    products_db = get_specific_product_database()
+def generate_amazon_search_link(keyword, config):
+    """記事のキーワードに基づいてAmazon検索リンクを生成"""
     tag = config["tag"]
+    encoded_keyword = urllib.parse.quote(keyword)
     
-    if product_key not in products_db:
-        return None
-    
-    product = products_db[product_key]
-    affiliate_url = f"https://www.amazon.co.jp/dp/{product['asin']}?tag={tag}&linkCode=osi&th=1&psc=1"
+    affiliate_url = f"https://www.amazon.co.jp/s?k={encoded_keyword}&tag={tag}&linkCode=ur2&linkId=amazon_search"
     
     return {
         "platform": "amazon",
-        "asin": product["asin"],
+        "keyword": keyword,
         "url": affiliate_url,
-        "title": product["title"],
-        "display_text": f"🛒 {product['title']}",
-        "description": f"Amazonで{product['title']}をチェック",
-        "price": product["price"],
-        "image_url": product["image"],
-        "rating": product["rating"]
+        "title": f"{keyword} - Amazon検索結果",
+        "display_text": f"🛒 {keyword}をAmazonで探す",
+        "description": f"Amazonで{keyword}に関連する商品をチェック",
+        "price": "価格を確認",
+        "image_url": "https://m.media-amazon.com/images/G/09/associates/remote-buy-box/buy-now.png",
+        "rating": None
     }
 
-def generate_rakuten_link(product_key, config):
-    """楽天アフィリエイトリンクを生成（具体的商品用）"""
-    products_db = get_specific_product_database()
-    affiliate_id = config.get("affiliate_id", "")
+def get_relevant_keywords_for_affiliate(keywords, category, title=""):
+    """記事に関連するアフィリエイトキーワードを抽出"""
+    relevant_keywords = []
+    title_lower = title.lower()
     
-    if product_key not in products_db:
-        return None
+    # タイトルから直接的なキーワードを抽出
+    title_keywords = []
+    if "iphone" in title_lower or "アイフォン" in title_lower:
+        title_keywords.extend(["iPhone", "スマートフォン", "アクセサリー"])
+    elif "macbook" in title_lower or "マック" in title_lower:
+        title_keywords.extend(["MacBook", "ノートPC", "アクセサリー"])  
+    elif "ai" in title_lower or "人工知能" in title_lower or "機械学習" in title_lower:
+        title_keywords.extend(["AI", "機械学習", "プログラミング"])
+    elif "投資" in title_lower or "株価" in title_lower or "bitcoin" in title_lower:
+        title_keywords.extend(["投資", "経済", "ビジネス"])
+    elif "プログラミング" in title_lower or "開発" in title_lower:
+        title_keywords.extend(["プログラミング", "開発", "技術書"])
+    elif "playstation" in title_lower or "ps5" in title_lower or "ゲーム" in title_lower:
+        title_keywords.extend(["ゲーム", "PlayStation", "ゲーミング"])
     
-    product = products_db[product_key]
-    # 楽天では検索ベースのリンクを使用
-    search_query = urllib.parse.quote(product["title"])
-    affiliate_url = f"https://search.rakuten.co.jp/search/mall/{search_query}/?f=1&grp=product"
+    # タイトルから抽出されたキーワードを最優先
+    relevant_keywords.extend(title_keywords[:2])
     
-    return {
-        "platform": "rakuten", 
-        "keyword": product["title"],
-        "url": affiliate_url,
-        "title": product["title"],
-        "display_text": f"🛒 {product['title']}",
-        "description": f"楽天で{product['title']}をチェック",
-        "price": product.get("price", "価格を確認"),
-        "image_url": product.get("image"),
-        "rating": product.get("rating")
+    # 記事のキーワードから関連性の高いものを選択
+    for keyword in keywords[:3]:
+        if keyword not in relevant_keywords:
+            relevant_keywords.append(keyword)
+    
+    # カテゴリベースのデフォルトキーワード
+    category_defaults = {
+        "AI・機械学習": ["AI", "機械学習"],
+        "Apple製品": ["iPhone", "MacBook"],
+        "プログラミング": ["プログラミング", "技術書"],
+        "ゲーム": ["ゲーム", "PlayStation"],
+        "ビジネス・経済": ["投資", "ビジネス"]
     }
+    
+    if category in category_defaults:
+        for kw in category_defaults[category]:
+            if kw not in relevant_keywords:
+                relevant_keywords.append(kw)
+    
+    return relevant_keywords[:3]
 
 def get_specific_product_database():
     """具体的な商品データベース（Amazon実物商品）"""
@@ -175,128 +190,58 @@ def get_specific_product_database():
         }
     }
 
-def get_smart_product_recommendations(keywords, category, title=""):
-    """キーワードとカテゴリに基づく高精度商品推薦（具体的商品）"""
-    
-    products_db = get_specific_product_database()
-    title_lower = title.lower()
-    recommended_product_keys = []
-    
-    # 記事タイトル分析による動的商品推薦
-    if "iphone" in title_lower or "アイフォン" in title_lower:
-        recommended_product_keys.extend(["iphone_case", "magsafe_charger", "lightning_cable"])
-    elif "macbook" in title_lower or "マック" in title_lower:
-        recommended_product_keys.extend(["macbook_case", "usb_c_hub", "external_ssd"])
-    elif "ai" in title_lower or "人工知能" in title_lower or "機械学習" in title_lower:
-        recommended_product_keys.extend(["ai_programming", "python_ml", "chatgpt_book"])
-    elif "投資" in title_lower or "株価" in title_lower or "bitcoin" in title_lower:
-        recommended_product_keys.extend(["investment_book", "startup_book"])
-    elif "プログラミング" in title_lower or "開発" in title_lower:
-        recommended_product_keys.extend(["clean_code", "javascript_book", "python_ml"])
-    elif "playstation" in title_lower or "ps5" in title_lower or "ゲーム" in title_lower:
-        recommended_product_keys.extend(["ps5_controller", "gaming_headset"])
-    
-    # キーワードベースの推薦（具体的商品キー）
-    keyword_product_map = {
-        "AI": ["ai_programming", "python_ml", "chatgpt_book"],
-        "ChatGPT": ["chatgpt_book", "ai_programming", "python_ml"],
-        "Python": ["python_ml", "clean_code", "javascript_book"],
-        "JavaScript": ["javascript_book", "clean_code", "python_ml"],
-        "React": ["javascript_book", "clean_code"],
-        "iPhone": ["iphone_case", "magsafe_charger", "lightning_cable"],
-        "MacBook": ["macbook_case", "usb_c_hub", "external_ssd"],
-        "投資": ["investment_book", "startup_book"],
-        "PlayStation": ["ps5_controller", "gaming_headset"],
-        "プログラミング": ["clean_code", "python_ml", "javascript_book"]
-    }
-    
-    recommended_products = []
-    
-    # キーワードベースの推薦を追加
-    for keyword in keywords[:3]:
-        if keyword in keyword_product_map:
-            product_keys = keyword_product_map[keyword][:2]
-            recommended_product_keys.extend(product_keys)
-    
-    # カテゴリベースのデフォルト推薦
-    category_defaults = {
-        "AI・機械学習": ["ai_programming", "python_ml"],
-        "Apple製品": ["iphone_case", "magsafe_charger"],
-        "プログラミング": ["clean_code", "python_ml"],
-        "ゲーム": ["ps5_controller", "gaming_headset"],
-        "ビジネス": ["investment_book", "startup_book"],
-        "general": ["clean_code", "investment_book"]
-    }
-    
-    if category in category_defaults:
-        recommended_product_keys.extend(category_defaults[category])
-    
-    # 重複除去と優先度調整
-    seen = set()
-    unique_product_keys = []
-    for key in recommended_product_keys:
-        if key not in seen and key in products_db:
-            unique_product_keys.append(key)
-            seen.add(key)
-    
-    # 具体的商品情報を返す
-    return unique_product_keys[:4]
 
 def match_keywords_to_affiliates(keywords, category, title=""):
-    """高精度アフィリエイトリンク生成（記事タイトル分析を含む）"""
+    """記事のキーワードに基づいて動的にアフィリエイトリンクを生成"""
     affiliate_links = []
     
-    # 商品推薦を取得（タイトル情報を含む）
-    recommended_products = get_smart_product_recommendations(keywords, category, title)
+    # 記事に関連するキーワードを取得
+    relevant_keywords = get_relevant_keywords_for_affiliate(keywords, category, title)
     
     # カテゴリ別プラットフォーム戦略
     category_strategies = {
-        "tech": ["amazon", "rakuten"],
+        "tech": ["amazon"],
         "AI・機械学習": ["amazon"],
-        "Apple製品": ["amazon", "rakuten"],
-        "ガジェット": ["amazon", "rakuten"],  
-        "ビジネス": ["amazon"],
-        "ゲーム": ["amazon", "rakuten"],
+        "Apple製品": ["amazon"],
+        "ガジェット": ["amazon"],  
+        "ビジネス・経済": ["amazon"],
+        "ゲーム": ["amazon"],
         "書籍・教育": ["amazon"],
         "general": ["amazon"]
     }
     
     platforms = category_strategies.get(category, ["amazon"])
     
-    # 具体的商品からアフィリエイトリンク生成
-    for product_key in recommended_products:
+    # キーワードベースの検索リンク生成
+    for keyword in relevant_keywords:
         if "amazon" in platforms:
-            link = generate_specific_amazon_link(product_key, AFFILIATE_CONFIGS["amazon"])
+            link = generate_amazon_search_link(keyword, AFFILIATE_CONFIGS["amazon"])
             if link:
                 affiliate_links.append(link)
     
-    return affiliate_links[:4]  # 最大4つの具体的商品アフィリエイトリンク
+    return affiliate_links[:3]  # 最大3つの検索ベースアフィリエイトリンク
 
 def generate_category_recommendations(category):
-    """カテゴリに基づいた関連商品推薦を生成（具体的商品）"""
-    products_db = get_specific_product_database()
-    
-    category_product_mapping = {
-        "tech": ["clean_code", "python_ml"],
-        "AI・機械学習": ["ai_programming", "chatgpt_book"],
-        "Apple製品": ["iphone_case", "magsafe_charger"],
-        "プログラミング": ["javascript_book", "clean_code"],
-        "ゲーム": ["ps5_controller", "gaming_headset"],
-        "ビジネス": ["investment_book", "startup_book"],
-        "general": ["clean_code", "investment_book"]
+    """カテゴリに基づいた関連キーワード検索リンクを生成"""
+    category_keyword_mapping = {
+        "tech": ["技術", "テクノロジー"],
+        "AI・機械学習": ["AI", "機械学習"],
+        "Apple製品": ["iPhone", "MacBook"],
+        "プログラミング": ["プログラミング", "技術書"],
+        "ゲーム": ["ゲーム", "ゲーミング"],
+        "ビジネス・経済": ["投資", "ビジネス"],
+        "general": ["テクノロジー", "ガジェット"]
     }
     
-    product_keys = category_product_mapping.get(category, category_product_mapping["general"])
+    keywords = category_keyword_mapping.get(category, category_keyword_mapping["general"])
     affiliate_recs = []
     
-    for product_key in product_keys:
-        if product_key in products_db:
-            link = generate_specific_amazon_link(product_key, AFFILIATE_CONFIGS["amazon"])
-            if link:
-                link["display_text"] = f"🛒 {products_db[product_key]['title']}"
-                affiliate_recs.append(link)
+    for keyword in keywords:
+        link = generate_amazon_search_link(keyword, AFFILIATE_CONFIGS["amazon"])
+        if link:
+            affiliate_recs.append(link)
     
-    return affiliate_recs
+    return affiliate_recs[:2]  # カテゴリ推薦は最大2つ
 
 def add_affiliate_links(article):
     """記事にアフィリエイトリンクを追加（改善版）"""

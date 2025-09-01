@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>数分で数十倍まで！数万rpsまでオートスケールするAWS ECS on Fargateを構築 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに GMOコネクトの永田です。 とある案件で、非常に厳しいスパイクへの性能要求があり、試行錯誤してなんとか達成できたため、技術的な要点をまとめました。 性能要求事項 数分で数十倍までリクエストが増加 最終的に数万rps（requests per sec）まで増加.">
-    <meta name="keywords" content="AWS">
+    <title>PostgreSQLで同じ結果が得られるクエリの実行計画を確認してみる | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 本記事では同じ結果が得られるUNIONとCASE式を使用して実行計画を確認し、どちらの方がパフォーマンスが良いのか確認していきたいと思います！ 実行計画の確認方法がわからない方は「PostgreSQLで実行計画を確認してみる」を参考にしてください🙌 準備 まず.">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="数分で数十倍まで！数万rpsまでオートスケールするAWS ECS on Fargateを構築">
-    <meta property="og:description" content="はじめに GMOコネクトの永田です。 とある案件で、非常に厳しいスパイクへの性能要求があり、試行錯誤してなんとか達成できたため、技術的な要点をまとめました。 性能要求事項 数分で数十倍までリクエストが増加 最終的に数万rps（requests per sec）まで増加.">
+    <meta property="og:title" content="PostgreSQLで同じ結果が得られるクエリの実行計画を確認してみる">
+    <meta property="og:description" content="はじめに 本記事では同じ結果が得られるUNIONとCASE式を使用して実行計画を確認し、どちらの方がパフォーマンスが良いのか確認していきたいと思います！ 実行計画の確認方法がわからない方は「PostgreSQLで実行計画を確認してみる」を参考にしてください🙌 準備 まず.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1010.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="数分で数十倍まで！数万rpsまでオートスケールするAWS ECS on Fargateを構築">
-    <meta name="twitter:description" content="はじめに GMOコネクトの永田です。 とある案件で、非常に厳しいスパイクへの性能要求があり、試行錯誤してなんとか達成できたため、技術的な要点をまとめました。 性能要求事項 数分で数十倍までリクエストが増加 最終的に数万rps（requests per sec）まで増加.">
+    <meta name="twitter:title" content="PostgreSQLで同じ結果が得られるクエリの実行計画を確認してみる">
+    <meta name="twitter:description" content="はじめに 本記事では同じ結果が得られるUNIONとCASE式を使用して実行計画を確認し、どちらの方がパフォーマンスが良いのか確認していきたいと思います！ 実行計画の確認方法がわからない方は「PostgreSQLで実行計画を確認してみる」を参考にしてください🙌 準備 まず.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "数分で数十倍まで！数万rpsまでオートスケールするAWS ECS on Fargateを構築",
-        "description": "はじめに GMOコネクトの永田です。 とある案件で、非常に厳しいスパイクへの性能要求があり、試行錯誤してなんとか達成できたため、技術的な要点をまとめました。 性能要求事項 数分で数十倍までリクエストが増加 最終的に数万rps（requests per sec）まで増加.",
+        "headline": "PostgreSQLで同じ結果が得られるクエリの実行計画を確認してみる",
+        "description": "はじめに 本記事では同じ結果が得られるUNIONとCASE式を使用して実行計画を確認し、どちらの方がパフォーマンスが良いのか確認していきたいと思います！ 実行計画の確認方法がわからない方は「PostgreSQLで実行計画を確認してみる」を参考にしてください🙌 準備 まず.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-08-27T06:29:42",
-        "dateModified": "2025-08-29T18:25:26.329116",
+        "datePublished": "2025-08-31T09:05:26",
+        "dateModified": "2025-09-01T16:22:59.796044",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1010.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1010.html",
-        "articleSection": "テクノロジー",
-        "keywords": ["AWS"]
+        "articleSection": "その他",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "数分で数十倍まで！数万rpsまでオートスケールするAWS ECS on Fargateを構築",
+                "name": "PostgreSQLで同じ結果が得られるクエリの実行計画を確認してみる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1010.html"
             }
         ]
@@ -113,25 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">数分で数十倍まで！数万rpsまでオートスケールするAWS ECS on Fargateを構築</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">PostgreSQLで同じ結果が得られるクエリの実行計画を確認してみる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>数分で数十倍まで！数万rpsまでオートスケールするAWS ECS on Fargateを構築</h1>
+                <h1>PostgreSQLで同じ結果が得られるクエリの実行計画を確認してみる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/ntaka329/items/9f72bf6824abe8b4af97?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-08-27T06:29:42">
-                        公開: 2025-08-27T06:29:42
+                    <span class="source">出典: <a href="https://qiita.com/Kiita0430/items/f359f2888168ce648b54?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2025-08-31T09:05:26">
+                        公開: 2025-08-31T09:05:26
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AWS</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
@@ -139,17 +139,15 @@
                 
                 <div class="article-body">
                     はじめに
-GMOコネクトの永田です。
-とある案件で、非常に厳しいスパイクへの性能要求があり、試行錯誤してなんとか達成できたため、技術的な要点をまとめました。
+本記事では同じ結果が得られるUNIONとCASE式を使用して実行計画を確認し、どちらの方がパフォーマンスが良いのか確認していきたいと思います！
+実行計画の確認方法がわからない方は「PostgreSQLで実行計画を確認してみる」を参考にしてください🙌
 
-性能要求事項
-
-数分で数十倍までリクエストが増加
-最終的に数万rps（requests per sec）まで増加...
+準備
+まず...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/ntaka329/items/9f72bf6824abe8b4af97?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/Kiita0430/items/f359f2888168ce648b54?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,10 +160,10 @@ GMOコネクトの永田です。
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -175,7 +173,7 @@ GMOコネクトの永田です。
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -206,16 +204,16 @@ GMOコネクトの永田です。
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7370.html">
+                    <a href="Zennのトレンド_1682.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Claude Codeの新しいプラグイン機能を先行体験する</span>
+                        <span class="nav-title">Claude Codeをネイティブインストールしたらめっちゃ面倒くさかったのでnpmに戻す方法</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_7786.html">
+                    <a href="Zennのトレンド_4715.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">おっさんとChatGPTだからわかる生成AIのデジャヴュ感</span>
+                        <span class="nav-title">人生で初めてCI作ったので記事にしてみる</span>
                     </a>
                 </div>
             </div>
@@ -228,53 +226,53 @@ GMOコネクトの永田です。
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_687.html">
-                        <h3>電動キックボード、利用者自らバッテリーを交換可能に--その報酬とは　LUUP競合が開始</h3>
+                    <a href="CNET_Japan_最新情報総合_3103.html">
+                        <h3>日本上陸の人気スマートリングが米国で販売禁止に、「Ouraの特許を侵害」と裁定</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">電動キックボードなどの電動モビリティシェアサービスを展開する Lime は8月27日、沖縄県那覇市のパレットくもじと糸嶺会館に「バッテリースワップステーション」を設置すると発表した。利用者が自分でバッ...</p>
+                        <p class="related-summary">スマートリングを手掛けるOuraは先頃、UltrahumanおよびRingConnと争っていた特許紛争で最終的な勝利を収めた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_729.html">
-                        <h3>メルカリモバイル、4GBが990円の新料金--20GBで2390円　40GBは3700円</h3>
+                    <a href="ASCII_jp__トップ_1487.html">
+                        <h3>「イタリア本気出しすぎ！」「このペースで追加されるならまだありそう」またしても新たな芸術品がイタリアパビリオンに！ペルジ...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">メルカリは8月28日、モバイルサービス「メルカリモバイル」において、4GB月額990円からの新料金プランを9月1日より開始すると発表した。あわせて、メルカリでのお買い物時のポイント還元率が最大14%に...</p>
+                        <p class="related-summary">万博で、まさにいま注目されているトピックを紹介する日刊大阪・関西万博。9月1日（月）は、イタリアパビリオンの新たな展示品、ペルジーノの「正義の旗」が話題となっている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6787.html">
-                        <h3>「バトルフィールド6」PC動作環境が公開　2019年のGPUにも対応</h3>
+                    <a href="ASCII_jp__トップ_1525.html">
+                        <h3>【さとみ(すとぷり)本人メッセージ有】9月24日(水)発売の2ndフルアルバム『S’s』XFD動画を公開！</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">8月上旬のオープンベータが好評を博したことを受け、EAはシリーズ最新作『Battlefield 6』のPC版動作環境を公表した。木曜日に公開した公式ブログによれば、想定どおりの現実的なラインに収まって...</p>
+                        <p class="related-summary">【さとみ(すとぷり)本人メッセージ有】9月24日(水)発売の2ndフルアルバム『S’s』XFD動画を公開！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1544.html">
-                        <h3>なぜ1万円するこのAnker製モバイルバッテリーが超絶便利なのか　Amazonでセール中</h3>
+                    <a href="ASCII_jp__トップ_1323.html">
+                        <h3>【累計5万本達成記念】SOYMILこだわりの出来立て豆乳を楽しめる「国産大豆飲み比べプラン」をリニューアル</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">アマゾンで9月4日まで開催中の「スマイルSALE」で、Anker製のモバイルバッテリーが軒並みセール価格となっている。.</p>
+                        <p class="related-summary">【累計5万本達成記念】SOYMILこだわりの出来立て豆乳を楽しめる「国産大豆飲み比べプラン」をリニューアル.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_7155.html">
-                        <h3>DJIの小型アクションカメラの新モデル｢DJI Osmo Nano｣は9月10日に発売へ｜一部仕様や価格情報も明らかに</h3>
+                    <a href="ASCII_jp__トップ_914.html">
+                        <h3>ファンや漫画家さんたちに惜しまれつつ終了したマンガ談義の名番組「マンガのラジオ」がviviON協賛で復活！ 9/7(日)...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">DJIは「DJI Action 2」の後継となる小型アクションカメラ「DJI Osmo Nano」の発売に向け準備を進めているものの、当初7月とみられていた発売が延期され、その後も動きがなかったのです...</p>
+                        <p class="related-summary">ファンや漫画家さんたちに惜しまれつつ終了したマンガ談義の名番組「マンガのラジオ」がviviON協賛で復活！ 9/7(日)配信開始。初回は『こち亀』の秋本治がゲストで登場！.</p>
                     </a>
                 </article>
             </div>

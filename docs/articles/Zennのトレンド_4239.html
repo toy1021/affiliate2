@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>開発メンバーからEMが誕生するまで | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprintの106週目の記事です！ この記事で2年間連続達成となりました！🎉🎉🎉🎉🎉 ログラスのよしだです。猛暑日が続きすぎて、毎日暑さと格闘しております。 皆様も暑さには引き続きご注意ください">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>npmパッケージ/GitHub Actionsを利用する側/公開する側でサプライチェーン攻撃を防ぐためにやることメモ | 日本のテックニュース速報</title>
+    <meta name="description" content="パッケージを利用する側、パッケージを公開する側でサプライチェーン攻撃を防ぐためにできることのメモ書きです。 パッケージを利用する側 npmやGitHub Actionsなどを利用する側として、サプライチェーン攻撃を防ぐためにできることをまとめます">
+    <meta name="keywords" content="GitHub">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="開発メンバーからEMが誕生するまで">
-    <meta property="og:description" content="! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprintの106週目の記事です！ この記事で2年間連続達成となりました！🎉🎉🎉🎉🎉 ログラスのよしだです。猛暑日が続きすぎて、毎日暑さと格闘しております。 皆様も暑さには引き続きご注意ください">
+    <meta property="og:title" content="npmパッケージ/GitHub Actionsを利用する側/公開する側でサプライチェーン攻撃を防ぐためにやることメモ">
+    <meta property="og:description" content="パッケージを利用する側、パッケージを公開する側でサプライチェーン攻撃を防ぐためにできることのメモ書きです。 パッケージを利用する側 npmやGitHub Actionsなどを利用する側として、サプライチェーン攻撃を防ぐためにできることをまとめます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4239.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="開発メンバーからEMが誕生するまで">
-    <meta name="twitter:description" content="! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprintの106週目の記事です！ この記事で2年間連続達成となりました！🎉🎉🎉🎉🎉 ログラスのよしだです。猛暑日が続きすぎて、毎日暑さと格闘しております。 皆様も暑さには引き続きご注意ください">
+    <meta name="twitter:title" content="npmパッケージ/GitHub Actionsを利用する側/公開する側でサプライチェーン攻撃を防ぐためにやることメモ">
+    <meta name="twitter:description" content="パッケージを利用する側、パッケージを公開する側でサプライチェーン攻撃を防ぐためにできることのメモ書きです。 パッケージを利用する側 npmやGitHub Actionsなどを利用する側として、サプライチェーン攻撃を防ぐためにできることをまとめます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "開発メンバーからEMが誕生するまで",
-        "description": "! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprintの106週目の記事です！ この記事で2年間連続達成となりました！🎉🎉🎉🎉🎉 ログラスのよしだです。猛暑日が続きすぎて、毎日暑さと格闘しております。 皆様も暑さには引き続きご注意ください",
+        "headline": "npmパッケージ/GitHub Actionsを利用する側/公開する側でサプライチェーン攻撃を防ぐためにやることメモ",
+        "description": "パッケージを利用する側、パッケージを公開する側でサプライチェーン攻撃を防ぐためにできることのメモ書きです。 パッケージを利用する側 npmやGitHub Actionsなどを利用する側として、サプライチェーン攻撃を防ぐためにできることをまとめます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-08-29T03:45:02",
-        "dateModified": "2025-08-31T04:21:57.204937",
+        "datePublished": "2025-09-09T14:25:31",
+        "dateModified": "2025-09-10T08:25:59.892646",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4239.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4239.html",
         "articleSection": "プログラミング",
-        "keywords": []
+        "keywords": ["GitHub"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "開発メンバーからEMが誕生するまで",
+                "name": "npmパッケージ/GitHub Actionsを利用する側/公開する側でサプライチェーン攻撃を防ぐためにやることメモ",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4239.html"
             }
         ]
@@ -114,42 +114,48 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">開発メンバーからEMが誕生するまで</li>
+                <li aria-current="page">npmパッケージ/GitHub Actionsを利用する側/公開する側でサプライチェーン攻撃を防ぐた...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>開発メンバーからEMが誕生するまで</h1>
+                <h1>npmパッケージ/GitHub Actionsを利用する側/公開する側でサプライチェーン攻撃を防ぐためにやることメモ</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/loglass/articles/0ea7027ee634db" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/azu/articles/ad168118524135" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-08-29T03:45:02">
-                        公開: 2025-08-29T03:45:02
+                    <time datetime="2025-09-09T14:25:31">
+                        公開: 2025-09-09T14:25:31
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-この記事は毎週必ず記事がでるテックブログ  Loglass Tech Blog Sprintの106週目の記事です！
-この記事で2年間連続達成となりました！🎉🎉🎉🎉🎉
+                    パッケージを利用する側、パッケージを公開する側でサプライチェーン攻撃を防ぐためにできることのメモ書きです。
 
-ログラスのよしだです。猛暑日が続きすぎて、毎日暑さと格闘しております。
-皆様も暑さには引き続きご注意ください。
+ パッケージを利用する側
+npmやGitHub Actionsなどを利用する側として、サプライチェーン攻撃を防ぐためにできることをまとめます。
 
- はじめに
-今回は、開発メンバーの一人がEMになるまでのストーリーと、その道のりを伴走したマネージャー視点（私）での学びを共有しようと思います。
-弊社では、EM候補の外部採用もしていますが内部登用も行っております。
-私自身もキャリアに悩みがあり入社直後はエンジニアでしたが途中でEMになっておりますので、改...
+ ロックファイルを使う
+
+npmやYarn、pnpmなどのパッケージマネージャーは、依存関係のバージョンを固定するためにロックファイル（例: package-lock.json, yarn.lock, pnpm-lock.yaml）を使用する
+
+
+ GitHub ActionsではSHA Pinを行う
+
+
+pinactなどを使ったGit...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/loglass/articles/0ea7027ee634db" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/azu/articles/ad168118524135" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,20 +168,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +232,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_6261.html">
+                    <a href="iPhone_Mania_9808.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">WAFでブロックしたはずなのに200 OKが返ってくる謎を解く</span>
+                        <span class="nav-title">新型iPhoneの名称はiPhone Air？iPhone17 Airではない可能性</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1789.html">
+                    <a href="Publickey_3466.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Mastra × MCPでドキュメント作成を自動化してみる</span>
+                        <span class="nav-title">JetBrains、Railsの統合開発環境「RubyMine」を無料に、非商用利用であれば</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +254,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Zennのトレンド_9850.html">
-                        <h3>リソース効率で考えるアーキテクチャ設計：機能要件を超えた技術選定の本質</h3>
+                    <a href="ASCII_jp__トップ_9549.html">
+                        <h3>松屋にジャマイカ大使館コラボの「ジャークチキン」！ご飯に合う味になんだって</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">牛めしの「松屋」は、「ジャークチキン」を9月16日10時から順次販売開始します。ジャマイカ大使館の協力を得て開発しています。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_6487.html">
+                        <h3>【本日】「エルデンリング ナイトレイン」17時からメンテ入り　高難度モード「深き夜」は9月11日10時半から</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">フロム・ソフトウェアは「ELDEN RING NIGHTREIGN（エルデンリング ナイトレイン）」にて、9月10日17時～18時にサーバーメンテナンスを実施する。高難度モード「深き夜」は9月11日1...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_1336.html">
+                        <h3>Terraformでdotfilesを管理する</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">こちらの記事は「MEDLEY Summer Tech Blog Relay」の13日目の記事です。 https://developer. jp/entry/2025/08/15/20250815/ 株...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_3242.html">
+                        <h3>「ドメイン駆動設計をはじめよう」を3回読んで学んだ事をまとめる</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに 技術選定やアーキテクチャ設計は簡単な仕事ではありません。 資格の勉強を通して各クラウドサービスの機能がわかるようになったから・プログラミング言語を勉強してアプリコードが書けるようになったから...</p>
+                        <p class="related-summary">はじめに 直近の業務で「ドメイン駆動設計」を活用した開発があり、自分の知識をつける為に「ドメイン駆動設計をはじめよう」を数ヶ月前から読み始めました。 https://www. jp/books/978...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_702.html">
-                        <h3>【WPF】DataGridでコンスセルなUndoRedo</h3>
+                    <a href="Zennのトレンド_1090.html">
+                        <h3>国産の仕様駆動開発ツール cc-sdd を推していきたい</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">この記事はWPFSheepCalendar第5日目の記事だす。 AI依存の無能Coderの皆さん、こんにちわ。私もそうです。 便利な道具を使うという誘惑には抗いがたい ”エンジニア”とか気軽に言ってる...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6750.html">
-                        <h3>JavaScriptの非同期処理とイベントループ</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">JavaScriptの非同期処理とイベントループ コールスタック コールスタックは「いまどの関数が動いていて、その中でどの関数を呼び出したのか」を管理する仕組みです スタック構造なので、最後に呼ばれた...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4004.html">
-                        <h3>n8nを敬遠している老害エンジニアにさらに追い打ちをかける...！</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">AIで作業を自動化するなら n8n ですよね。ここ数ヶ月で少しずつ浸透してきたかと思います。 そんな n8n ですが、普通に使うと有料で、ある方法を使うと（合法的に）無料で使う方法を知っていますか？ ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5433.html">
-                        <h3>ClaudeCodeを上手く使えないあなたに捧げるTips</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">高度なプロジェクトにおいて、ClaudeCodeは脳死で使用しても良い結果をもたらさないどころか闇雲に時間を消費してしまうことにつながります。 ClaudeCodeでコーディングの作業は多くが削られま...</p>
+                        <p class="related-summary">こんにちは！エンジニアの黒神です！ 今回は「仕様駆動開発(Spec-Driven Development)」を Claude Code 上で手軽に実行できるツール 「cc-sdd」 を触ってみたら開発...</p>
                     </a>
                 </article>
             </div>

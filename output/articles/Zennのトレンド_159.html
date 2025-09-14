@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>シングルエージェント vs マルチエージェントを整理してみる | 日本のテックニュース速報</title>
-    <meta name="description" content="最近はClaude Codeのsub-agentsの登場なども背景に、マルチエージェントという言葉が語られる機会がグッと増えたなと感じます（AIエージェント開発だけでなく、活用の文脈でも） 一方で、シングルエージェントについて語る企業や記事の存在もあります">
-    <meta name="keywords" content="AI,Claude,本">
+    <title>TypeScriptの型推論でCLIバリデーションをなくせた話 | 日本のテックニュース速報</title>
+    <meta name="description" content="CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="シングルエージェント vs マルチエージェントを整理してみる">
-    <meta property="og:description" content="最近はClaude Codeのsub-agentsの登場なども背景に、マルチエージェントという言葉が語られる機会がグッと増えたなと感じます（AIエージェント開発だけでなく、活用の文脈でも） 一方で、シングルエージェントについて語る企業や記事の存在もあります">
+    <meta property="og:title" content="TypeScriptの型推論でCLIバリデーションをなくせた話">
+    <meta property="og:description" content="CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_159.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="シングルエージェント vs マルチエージェントを整理してみる">
-    <meta name="twitter:description" content="最近はClaude Codeのsub-agentsの登場なども背景に、マルチエージェントという言葉が語られる機会がグッと増えたなと感じます（AIエージェント開発だけでなく、活用の文脈でも） 一方で、シングルエージェントについて語る企業や記事の存在もあります">
+    <meta name="twitter:title" content="TypeScriptの型推論でCLIバリデーションをなくせた話">
+    <meta name="twitter:description" content="CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_159.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "シングルエージェント vs マルチエージェントを整理してみる",
-        "description": "最近はClaude Codeのsub-agentsの登場なども背景に、マルチエージェントという言葉が語られる機会がグッと増えたなと感じます（AIエージェント開発だけでなく、活用の文脈でも） 一方で、シングルエージェントについて語る企業や記事の存在もあります",
+        "headline": "TypeScriptの型推論でCLIバリデーションをなくせた話",
+        "description": "CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-01T23:10:21",
-        "dateModified": "2025-09-05T04:22:32.603733",
+        "datePublished": "2025-09-11T05:27:21",
+        "dateModified": "2025-09-14T14:15:34.121605",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_159.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_159.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","本"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "シングルエージェント vs マルチエージェントを整理してみる",
+                "name": "TypeScriptの型推論でCLIバリデーションをなくせた話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_159.html"
             }
         ]
@@ -113,43 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">シングルエージェント vs マルチエージェントを整理してみる</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">TypeScriptの型推論でCLIバリデーションをなくせた話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>シングルエージェント vs マルチエージェントを整理してみる</h1>
+                <h1>TypeScriptの型推論でCLIバリデーションをなくせた話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/r_kaga/articles/ea7119d22d4d3c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-09-01T23:10:21">
-                        公開: 2025-09-01T23:10:21
+                    <span class="source">出典: <a href="https://zenn.dev/hongminhee/articles/27bce6eb777dea" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2025-09-11T05:27:21">
+                        公開: 2025-09-11T05:27:21
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">本</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    最近はClaude Codeのsub-agentsの登場なども背景に、マルチエージェントという言葉が語られる機会がグッと増えたなと感じます（AIエージェント開発だけでなく、活用の文脈でも）
-一方で、シングルエージェントについて語る企業や記事の存在もあります。
-この記事は、いくつかの文献を参照しながら、シングルエージェントやマルチエージェントの概念や差分について整理した内容です。
-基本的・長期的には並列稼働も前提としたマルチエージェントな構成が増えていくのだろうと思う一方で、シングルエージェントの利点やメリットが強調される理由も認識しておけると良いなと。
-!
-🆚絵文字をアイキャッチにしたく...
+                    CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。
+きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした。どのCLIツールにも、似たようなバリデーションコードが含まれているんです。例えばこんな感じです：
+if (!opts.server &amp;&amp; opts.port) {
+  throw new Error('--port requires --server flag');
+}
+
+if (opts.server &amp;&amp; !opt...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/r_kaga/articles/ea7119d22d4d3c" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/hongminhee/articles/27bce6eb777dea" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,60 +154,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +187,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_5284.html">
+                    <a href="Zennのトレンド_3884.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【独自調査】iPhoneケース、購入時に重視するのは耐衝撃性＋MagSafe対応</span>
+                        <span class="nav-title">Claude Code 探訪: Opus と Sonnet を使い比べて気がついたこととその違い</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2761.html">
+                    <a href="Qiita_-_人気の記事_5711.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">RAGで「無関係な」文書をいれると性能が向上する理由を解明</span>
+                        <span class="nav-title">Nano bananaのすべて</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +209,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5953.html">
-                        <h3>AirTag類似品がAmazonでセール、アップル「探す」対応　きょう（4日）までの商品も</h3>
+                    <a href="CNET_Japan_最新情報総合_9689.html">
+                        <h3>Honda、航続距離295kmの軽EV「N-ONE e:」　V2H対応、家の蓄電池としても利用可</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Amazonの「スマイルSALE」は本日9月4日まで開催。AppleのAirTagに対応するAnkerのスマートトラッカーが33％オフ。鍵や財布を見失いやすい人におすすめのセール情報をチェック。.</p>
+                        <p class="related-summary">Hondaは9月11日、新型軽乗用電気自動車「N-ONE e:」を9月12日に発売すると発表した。航続距離はWLTCモードで295kmを実現し、日常使いに適したスタンダードなEVを目指すとしている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3369.html">
-                        <h3>「バットマン」無断生成は著作権侵害--ワーナー、AI企業Midjourneyを提訴</h3>
+                    <a href="CNET_Japan_最新情報総合_1856.html">
+                        <h3>タイミーでの勤務実績が「履歴書」に--自身の勤勉さを証明できる新サービス　正社員就労を支援</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ワーナー・ブラザース・ディスカバリーは、画像・動画生成AIを手掛けるMidjourneyを著作権侵害で提訴した。.</p>
+                        <p class="related-summary">スポットワークサービス「タイミー」を運営するタイミーは9月11日、正社員就業支援サービス「タイミーキャリアプラス」に新機能「タイミー履歴書」を導入したと発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7362.html">
-                        <h3>中国DeepSeek、「AIエージェント」開発か--米国の牙城を崩す衝撃、再び？</h3>
+                    <a href="CNET_Japan_最新情報総合_4492.html">
+                        <h3>マイクロソフトも週3出社に--なぜフルリモートでは駄目なのか　「データは明確」と同社</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">中国のDeepSeek（深度求索）が、新たなエージェント型生成AIモデルの開発に取り組んでいると、Bloombergが匿名の情報筋の話として報じた。.</p>
+                        <p class="related-summary">米マイクロソフトは9月9日（現地時間）、柔軟な働き方の指針を見直し、従業員に週3日の出社を求める新たな方針を示した。人事担当のエイミー・コールマン執行副社長が社員に通知し、社内ブログで公表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2341.html">
-                        <h3>SORACOM Fluxとソラカメが連携強化、IoT×AIでライブ映像分析が可能に</h3>
+                    <a href="CNET_Japan_最新情報総合_79.html">
+                        <h3>上司からの「。」で終わる文章にZ世代の半数以上が「冷たい・高圧的」と感じている--調査</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">株式会社ソラコムが、IoTアプリケーション開発を強化する「SORACOM Flux」のアップデートを発表。.</p>
+                        <p class="related-summary">「退職代行モームリ」を運営するアルバトロスと、「大学生活DX」を手掛けるペンマークが実施した「Z世代と上司のコミュニケーションに関する実態調査」で、Z世代の若手社会人の半数以上が、上司からの句点（。）...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5647.html">
-                        <h3>MSIが浮世絵デザインPCを発売！葛飾北斎×最新AIノート</h3>
+                    <a href="CNET_Japan_最新情報総合_7867.html">
+                        <h3>【天候のため中止】「ブルーインパルス」が東京上空を飛ぶ--9月13日の昼に飛行、どこで見られる？</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">MSIと岡田や漆器がコラボし、日本の伝統工芸と最新AI技術を融合したノートPC「Prestige 13 AI+ Ukiyo-e Edition A2VM」が9月5日に発売される。.</p>
+                        <p class="related-summary">9月13日、航空自衛隊のアクロバットチーム「ブルーインパルス」による展示飛行が、東京上空で予定されている。.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[25卒] キャッチアップをするために新人エンジニアが生成AIとレスバしてみた話 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに こんにちは文系卒新人エンジニアのyukiです。 この度研修期間が終わり配属され製品の中身を理解するために毎日あたふたしています。 新人エンジニアが製品のコードを理解するためにこんなことをやっているよということをこの記事では主にシェアします。 補足：この記事の対.">
-    <meta name="keywords" content="AI">
+    <title>仕様駆動開発オートエンコーダー コード→AGENTS.md→コード | 日本のテックニュース速報</title>
+    <meta name="description" content="TL;DR リポジトリの実コードから「仕様（AGENTS. md）」を自動抽出（Encode）し、その仕様から再びコードを生成（Decode）して差分とテストで評価する——この往復（Round-Trip）をCIに組み込むと、仕様と実装のズレを継続的に最小化できます。Spec.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="[25卒] キャッチアップをするために新人エンジニアが生成AIとレスバしてみた話">
-    <meta property="og:description" content="はじめに こんにちは文系卒新人エンジニアのyukiです。 この度研修期間が終わり配属され製品の中身を理解するために毎日あたふたしています。 新人エンジニアが製品のコードを理解するためにこんなことをやっているよということをこの記事では主にシェアします。 補足：この記事の対.">
+    <meta property="og:title" content="仕様駆動開発オートエンコーダー コード→AGENTS.md→コード">
+    <meta property="og:description" content="TL;DR リポジトリの実コードから「仕様（AGENTS. md）」を自動抽出（Encode）し、その仕様から再びコードを生成（Decode）して差分とテストで評価する——この往復（Round-Trip）をCIに組み込むと、仕様と実装のズレを継続的に最小化できます。Spec.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9013.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="[25卒] キャッチアップをするために新人エンジニアが生成AIとレスバしてみた話">
-    <meta name="twitter:description" content="はじめに こんにちは文系卒新人エンジニアのyukiです。 この度研修期間が終わり配属され製品の中身を理解するために毎日あたふたしています。 新人エンジニアが製品のコードを理解するためにこんなことをやっているよということをこの記事では主にシェアします。 補足：この記事の対.">
+    <meta name="twitter:title" content="仕様駆動開発オートエンコーダー コード→AGENTS.md→コード">
+    <meta name="twitter:description" content="TL;DR リポジトリの実コードから「仕様（AGENTS. md）」を自動抽出（Encode）し、その仕様から再びコードを生成（Decode）して差分とテストで評価する——この往復（Round-Trip）をCIに組み込むと、仕様と実装のズレを継続的に最小化できます。Spec.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "[25卒] キャッチアップをするために新人エンジニアが生成AIとレスバしてみた話",
-        "description": "はじめに こんにちは文系卒新人エンジニアのyukiです。 この度研修期間が終わり配属され製品の中身を理解するために毎日あたふたしています。 新人エンジニアが製品のコードを理解するためにこんなことをやっているよということをこの記事では主にシェアします。 補足：この記事の対.",
+        "headline": "仕様駆動開発オートエンコーダー コード→AGENTS.md→コード",
+        "description": "TL;DR リポジトリの実コードから「仕様（AGENTS. md）」を自動抽出（Encode）し、その仕様から再びコードを生成（Decode）して差分とテストで評価する——この往復（Round-Trip）をCIに組み込むと、仕様と実装のズレを継続的に最小化できます。Spec.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-02T01:10:10",
-        "dateModified": "2025-09-02T22:16:02.556329",
+        "datePublished": "2025-09-16T15:20:19",
+        "dateModified": "2025-09-18T08:25:14.047323",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9013.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9013.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "articleSection": "プログラミング",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "[25卒] キャッチアップをするために新人エンジニアが生成AIとレスバしてみた話",
+                "name": "仕様駆動開発オートエンコーダー コード→AGENTS.md→コード",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9013.html"
             }
         ]
@@ -113,41 +113,34 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">[25卒] キャッチアップをするために新人エンジニアが生成AIとレスバしてみた話</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">仕様駆動開発オートエンコーダー コード→AGENTS.md→コード</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>[25卒] キャッチアップをするために新人エンジニアが生成AIとレスバしてみた話</h1>
+                <h1>仕様駆動開発オートエンコーダー コード→AGENTS.md→コード</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/fukuba_y/items/c4038df472c89516037f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-09-02T01:10:10">
-                        公開: 2025-09-02T01:10:10
+                    <span class="source">出典: <a href="https://qiita.com/relu/items/ee152b0ba96d1e013ceb?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-09-16T15:20:19">
+                        公開: 2025-09-16T15:20:19
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-こんにちは文系卒新人エンジニアのyukiです。
-この度研修期間が終わり配属され製品の中身を理解するために毎日あたふたしています。
-新人エンジニアが製品のコードを理解するためにこんなことをやっているよということをこの記事では主にシェアします。
-
-補足：この記事の対...
+                    TL;DR
+リポジトリの実コードから「仕様（AGENTS.md）」を自動抽出（Encode）し、その仕様から再びコードを生成（Decode）して差分とテストで評価する——この往復（Round-Trip）をCIに組み込むと、仕様と実装のズレを継続的に最小化できます。Spec...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/fukuba_y/items/c4038df472c89516037f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/relu/items/ee152b0ba96d1e013ceb?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,20 +153,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -183,23 +186,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -214,16 +217,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_2655.html">
+                    <a href="Zennのトレンド_6958.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">☘️サイバーエージェントのサマーインターンに参加してきた話</span>
+                        <span class="nav-title">Claude Code vs Codex vs Cursor ― 同じプロンプトでSlackクローン...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_8447.html">
+                    <a href="Publickey_3260.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">急激なトラフィックスパイクでも落とさない ― 東京・大阪アクティブ/アクティブ構成×数万rps対応 ...</span>
+                        <span class="nav-title">オラクル、5年で44兆円のデータセンター超大型投資をOpenAIと合意。株価急騰でエリソン氏が初めて...</span>
                     </a>
                 </div>
             </div>
@@ -236,53 +239,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4230.html">
-                        <h3>サムスンの「Project Moohan」ついに登場？ 3つ折りスマホとともに9月29日発表か</h3>
+                    <a href="CNET_Japan_最新情報総合_737.html">
+                        <h3>野村不動産、日本のロケット開発企業「インターステラテクノロジズ」と資本業務提携</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">サムスンが3つの新型デバイス、つまり3つ折りスマートフォン、XRヘッドセット「Project Moohan」、そしてAIスマートグラスを、韓国で開催する「Unpacked」イベントで発表するという。.</p>
+                        <p class="related-summary">ロケット事業や通信衛星事業を手がけるインターステラテクノロジズは9月17日、野村不動産と資本業務提携を結んだと発表した。宇宙と不動産の領域で互いの事業発展を目指し、都市開発などで新たな事業の創出を図る...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2546.html">
-                        <h3>AIが嘘をつく理由は「あなたがそれを求めているから」</h3>
+                    <a href="Zennのトレンド_546.html">
+                        <h3>CUDA無し環境でPyTorchでGPUを使用する手軽な方法</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">なぜ生成AIモデルは、かくも多くの間違いを犯すのだろうか。その理由の一部は、AIが「ユーザーは常に正しい」という前提で振る舞うように訓練されているからだ。.</p>
+                        <p class="related-summary">「CUDAをインストールしていないけど、PyTorchでGPUを使いたい」 一昔前なら、Linux（Ubuntu）の黒画に10回くらい泣いてからようやく実現できたその行為も、今やpipやuvでPyTo...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4227.html">
-                        <h3>自治体の人口構成や人口推移などを可視化　自治体検索ツール「Lobby Local」、人口動態ダッシュボード機能を追加</h3>
+                    <a href="Publickey_4914.html">
+                        <h3>GitHub、総合的なMCPサーバのレジストリを目論む「GitHub MCP Registry」公開</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">LobbyAI株式会社は8月29日に、同社が提供する自治体検索ツール「LobbyLocal」において、自治体ごとの人口動態を理解するための新機能「人口動態ダッシュボード」のリリースを発表した。企業の自...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_167.html">
-                        <h3>双日、IT投資の社内稟議に「AI審議」を導入　AI活用のリスクを評価</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">双日は、IT投資の社内稟議プロセスにAI活用に伴うリスク評価を組み込んだ「AI審議」を導入した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_983.html">
-                        <h3>CSSで最も使われているフレームワークはTailwind、2位はBootstrap。レイアウトで苦労しているのはCSS ...</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">CSSに関するアンケートを全世界のソフトウェアデベロッパーが回答した結果をまとめた最新の結果「State of CSS 2025」が発表されました。 CSSはHTMLで記述されたWebページのスタイル...</p>
+                        <p class="related-summary">GitHubは、さまざまなサービスがAIと連携するための「MCPサーバ」の総合的なカタログとなることを目論んだ「GitHub MCP Registry」を公開しました。 MCPサーバは生成AIの能力を...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_2944.html">
+                        <h3>【AtCoder】人類史上最も役に立たない入茶記事</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">競プロを初めて約1年、ようやくABC423で入茶を成し遂げることができました。入茶すると記事を書く人間がいるということでそれに乗っかってみようと思います。 自己紹介 普通の中学3年生。コンピュータ同好...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_8502.html">
+                        <h3>ブックマーク迷子に捧ぐ！MkDocs × GitHub Pagesで「便利リンク集」を爆速構築してみた</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">Qiitaの投稿が久しぶりすぎ戸惑ってます。 おはようございます、こんには、こんばんは、やないです。 突然ですが、気づけばブラウザのブックマークが「カオスの海」になっていませんか？ ＼ｱﾙｱﾙｰ／ ＼...</p>
                     </a>
                 </article>
             </div>

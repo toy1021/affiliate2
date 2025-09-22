@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>シングルエージェント vs マルチエージェントを整理してみる | 日本のテックニュース速報</title>
-    <meta name="description" content="最近はClaude Codeのsub-agentsの登場なども背景に、マルチエージェントという言葉が語られる機会がグッと増えたなと感じます（AIエージェント開発だけでなく、活用の文脈でも） 一方で、シングルエージェントについて語る企業や記事の存在もあります">
-    <meta name="keywords" content="AI,Claude,本">
+    <title>Claudeと歩むAI仕様駆動開発の開発手法 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめまして、Risaです。 初投稿なのでお手柔らかにお願いします。 今回TwitterであがったIDEのkiroAIを使った仕様駆動開発を Claudeで行う方法をご紹介します。 おそらくGPTとCodexでも再現できるかとは思います。 今回はClaudeを使用していきます">
+    <meta name="keywords" content="AI,Claude,GPT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="シングルエージェント vs マルチエージェントを整理してみる">
-    <meta property="og:description" content="最近はClaude Codeのsub-agentsの登場なども背景に、マルチエージェントという言葉が語られる機会がグッと増えたなと感じます（AIエージェント開発だけでなく、活用の文脈でも） 一方で、シングルエージェントについて語る企業や記事の存在もあります">
+    <meta property="og:title" content="Claudeと歩むAI仕様駆動開発の開発手法">
+    <meta property="og:description" content="はじめまして、Risaです。 初投稿なのでお手柔らかにお願いします。 今回TwitterであがったIDEのkiroAIを使った仕様駆動開発を Claudeで行う方法をご紹介します。 おそらくGPTとCodexでも再現できるかとは思います。 今回はClaudeを使用していきます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1041.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="シングルエージェント vs マルチエージェントを整理してみる">
-    <meta name="twitter:description" content="最近はClaude Codeのsub-agentsの登場なども背景に、マルチエージェントという言葉が語られる機会がグッと増えたなと感じます（AIエージェント開発だけでなく、活用の文脈でも） 一方で、シングルエージェントについて語る企業や記事の存在もあります">
+    <meta name="twitter:title" content="Claudeと歩むAI仕様駆動開発の開発手法">
+    <meta name="twitter:description" content="はじめまして、Risaです。 初投稿なのでお手柔らかにお願いします。 今回TwitterであがったIDEのkiroAIを使った仕様駆動開発を Claudeで行う方法をご紹介します。 おそらくGPTとCodexでも再現できるかとは思います。 今回はClaudeを使用していきます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "シングルエージェント vs マルチエージェントを整理してみる",
-        "description": "最近はClaude Codeのsub-agentsの登場なども背景に、マルチエージェントという言葉が語られる機会がグッと増えたなと感じます（AIエージェント開発だけでなく、活用の文脈でも） 一方で、シングルエージェントについて語る企業や記事の存在もあります",
+        "headline": "Claudeと歩むAI仕様駆動開発の開発手法",
+        "description": "はじめまして、Risaです。 初投稿なのでお手柔らかにお願いします。 今回TwitterであがったIDEのkiroAIを使った仕様駆動開発を Claudeで行う方法をご紹介します。 おそらくGPTとCodexでも再現できるかとは思います。 今回はClaudeを使用していきます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-01T23:10:21",
-        "dateModified": "2025-09-03T02:55:13.847462",
+        "datePublished": "2025-09-21T02:39:59",
+        "dateModified": "2025-09-22T12:40:35.506421",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1041.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1041.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","本"]
+        "keywords": ["AI","Claude","GPT"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "シングルエージェント vs マルチエージェントを整理してみる",
+                "name": "Claudeと歩むAI仕様駆動開発の開発手法",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1041.html"
             }
         ]
@@ -114,42 +114,51 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">シングルエージェント vs マルチエージェントを整理してみる</li>
+                <li aria-current="page">Claudeと歩むAI仕様駆動開発の開発手法</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>シングルエージェント vs マルチエージェントを整理してみる</h1>
+                <h1>Claudeと歩むAI仕様駆動開発の開発手法</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/r_kaga/articles/ea7119d22d4d3c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/yukketbetai/articles/e263bd18784a78" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-09-01T23:10:21">
-                        公開: 2025-09-01T23:10:21
+                    <time datetime="2025-09-21T02:39:59">
+                        公開: 2025-09-21T02:39:59
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
                     <span class="tag">Claude</span>
-                    <span class="tag">本</span>
+                    <span class="tag">GPT</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    最近はClaude Codeのsub-agentsの登場なども背景に、マルチエージェントという言葉が語られる機会がグッと増えたなと感じます（AIエージェント開発だけでなく、活用の文脈でも）
-一方で、シングルエージェントについて語る企業や記事の存在もあります。
-この記事は、いくつかの文献を参照しながら、シングルエージェントやマルチエージェントの概念や差分について整理した内容です。
-基本的・長期的には並列稼働も前提としたマルチエージェントな構成が増えていくのだろうと思う一方で、シングルエージェントの利点やメリットが強調される理由も認識しておけると良いなと。
-!
-🆚絵文字をアイキャッチにしたく...
+                    はじめまして、Risaです。
+初投稿なのでお手柔らかにお願いします。
+今回TwitterであがったIDEのkiroAIを使った仕様駆動開発を
+Claudeで行う方法をご紹介します。
+おそらくGPTとCodexでも再現できるかとは思います。
+今回はClaudeを使用していきます。
+プランはMax 5xかMax 20xを用意してください
+Proだと圧倒的にトークンがたりません（ごめんなさい）
+まず使用順序を完結に説明します。
+ClaudeDesktop⇛Claudecodeの順です。
+それでは実践方法を詳しく説明していきます。
+
+ ClaudeDesktopを使う実際の流れ
+
+ Claude...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/r_kaga/articles/ea7119d22d4d3c" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/yukketbetai/articles/e263bd18784a78" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -172,20 +181,20 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +235,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_4627.html">
+                    <a href="Qiita_-_人気の記事_7999.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">｢Google Pixel 10a｣はTensor G5チップではなくTensor G4チップを搭載...</span>
+                        <span class="nav-title">うんち検知IoT：Raspberry Piが愛犬の大事件を見逃さない</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_1707.html">
+                    <a href="Zennのトレンド_8391.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Apple M4 MacでTensorFlowが爆速！GPU有効化etcで機械学習が10倍速くなる方...</span>
+                        <span class="nav-title">レッドオーシャンに一石を投じるつもりで変なSNSを8ヶ月以上運営してかなり病んだ話</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +257,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1158.html">
-                        <h3>OpenAI、製品実験プラットフォームのStatsigを買収--体験向上を目指す</h3>
+                    <a href="CNET_Japan_最新情報総合_6757.html">
+                        <h3>Luma AIの動画生成AI「Ray3」が登場--「推論モデル」で複雑なシーンも可能に</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは、製品実験プラットフォームを手掛ける米Statsigを買収すると発表した。.</p>
+                        <p class="related-summary">画像・動画生成AIを手掛けるLuma AIは、同社初となる推論機能を備えたAI動画生成モデル「Ray3」を発表、提供開始した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6851.html">
-                        <h3>空港で荷物を盗まれた！アップルの「AirTag」で追跡、そこで目にした奇妙な光景とは</h3>
+                    <a href="CNET_Japan_最新情報総合_136.html">
+                        <h3>ChatGPTに「策略」の兆し、OpenAIが実験で確認　実社会へのリスクは</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">2021年にアップルが落とし物トラッカー「AirTag」を発売して以来、その有用性を示す個人の体験談は枚挙にいとまがない。しかし、ウェストハリウッド在住のダニエル・スコット氏の事例ほど奇妙なものはない...</p>
+                        <p class="related-summary">AIがテストで意図的に誤答？OpenAIの最新研究で発覚した“策略するAI”のリスクと、安全性確保の取り組みを解説。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4646.html">
-                        <h3>【完全無料】TechTrain、AI時代のプロダクト人材に必要なスキルを全部見せ！AI × リファレンスで速く・正確に学...</h3>
+                    <a href="iPhone_Mania_1143.html">
+                        <h3>iPhone Airはどれくらいの圧力をかければ折れるのか？</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">【完全無料】TechTrain、AI時代のプロダクト人材に必要なスキルを全部見せ！AI × リファレンスで速く・正確に学ぶ「学習ロードマップ」を提供開始。.</p>
+                        <p class="related-summary">過酷なデバイス耐久性テストで知られるYouTuberのJerryRigEverything氏が、その薄さゆえに強度が心配されているiPhone Airの耐久性テストを実施しました。同氏はデバイスが折れ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_3257.html">
-                        <h3>Apple、軽量＆安価な「Vision Air」を2027年に投入か</h3>
+                    <a href="Zennのトレンド_2560.html">
+                        <h3>LoRAの進化：基礎から最新のLoRA-Proまで</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">Apple関連の情報ではお馴染みのアナリストのMing-Chi Kuo氏が、Appleは2027年に「Vision Air」を投入予定だと報告しています。 「Vision Air」は「Vision P...</p>
+                        <p class="related-summary">近年、大規模言語モデル（LLM）のオープンソース化が進み、大小さまざまなモデルが利用できるようになりました。 これらのモデルは汎用性が高い一方で、特定分野に特化したモデルを作るためのファインチューニン...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_6444.html">
-                        <h3>CSSで最も使われているフレームワークはTailwind、2位はBootstrap。レイアウトで苦労しているのはCSS ...</h3>
+                    <a href="Qiita_-_人気の記事_8220.html">
+                        <h3>あなたの「相棒（AIエージェント）」は誰？ 爆速開発を叶える伝統工芸の未来を創る開発現場のAIエージェント活用術【Qii...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">CSSに関するアンケートを全世界のソフトウェアデベロッパーが回答した結果をまとめた最新の結果「State of CSS 2025」が発表されました。 CSSはHTMLで記述されたWebページのスタイル...</p>
+                        <p class="related-summary">はじめに こんにちは！GIFTechのエンジニアの佐藤です！ 2025年9月8日に開催されたLTイベント「QiitaBash」に、私たちGIFTechがサポーターとなって弊社会場にて開催されました！🎉...</p>
                     </a>
                 </article>
             </div>

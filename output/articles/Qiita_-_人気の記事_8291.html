@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>サイバーセキュリティタスクフォース（第47回）の局所を掘り下げる（PQC編） | 日本のテックニュース速報</title>
-    <meta name="description" content="GMOコネクトの菅野（かんの）です。 PQCの件で気になったことがあったので満を持して記事を書いてみたいと思います。 フィードバックとかあれば、嬉しいです。 今回のテーマは9月1日に開催された「サイバーセキュリティタスクフォース（第47回）」の資料47－1「ICTサイバーセ.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>AWS環境でのアーキテクチャ設計を整理してみる | 日本のテックニュース速報</title>
+    <meta name="description" content="記事を読んでいただきありがとうございます。 モブエンジニア（@mob-engineer)です。 AWS環境で開発を行ううえで「アーキテクチャ設計」について思いつく限り整理しました。 前提 今回登場する環境として以下3点があります。 開発環境：機能開発・不具合改修などを行.">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="サイバーセキュリティタスクフォース（第47回）の局所を掘り下げる（PQC編）">
-    <meta property="og:description" content="GMOコネクトの菅野（かんの）です。 PQCの件で気になったことがあったので満を持して記事を書いてみたいと思います。 フィードバックとかあれば、嬉しいです。 今回のテーマは9月1日に開催された「サイバーセキュリティタスクフォース（第47回）」の資料47－1「ICTサイバーセ.">
+    <meta property="og:title" content="AWS環境でのアーキテクチャ設計を整理してみる">
+    <meta property="og:description" content="記事を読んでいただきありがとうございます。 モブエンジニア（@mob-engineer)です。 AWS環境で開発を行ううえで「アーキテクチャ設計」について思いつく限り整理しました。 前提 今回登場する環境として以下3点があります。 開発環境：機能開発・不具合改修などを行.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8291.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="サイバーセキュリティタスクフォース（第47回）の局所を掘り下げる（PQC編）">
-    <meta name="twitter:description" content="GMOコネクトの菅野（かんの）です。 PQCの件で気になったことがあったので満を持して記事を書いてみたいと思います。 フィードバックとかあれば、嬉しいです。 今回のテーマは9月1日に開催された「サイバーセキュリティタスクフォース（第47回）」の資料47－1「ICTサイバーセ.">
+    <meta name="twitter:title" content="AWS環境でのアーキテクチャ設計を整理してみる">
+    <meta name="twitter:description" content="記事を読んでいただきありがとうございます。 モブエンジニア（@mob-engineer)です。 AWS環境で開発を行ううえで「アーキテクチャ設計」について思いつく限り整理しました。 前提 今回登場する環境として以下3点があります。 開発環境：機能開発・不具合改修などを行.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "サイバーセキュリティタスクフォース（第47回）の局所を掘り下げる（PQC編）",
-        "description": "GMOコネクトの菅野（かんの）です。 PQCの件で気になったことがあったので満を持して記事を書いてみたいと思います。 フィードバックとかあれば、嬉しいです。 今回のテーマは9月1日に開催された「サイバーセキュリティタスクフォース（第47回）」の資料47－1「ICTサイバーセ.",
+        "headline": "AWS環境でのアーキテクチャ設計を整理してみる",
+        "description": "記事を読んでいただきありがとうございます。 モブエンジニア（@mob-engineer)です。 AWS環境で開発を行ううえで「アーキテクチャ設計」について思いつく限り整理しました。 前提 今回登場する環境として以下3点があります。 開発環境：機能開発・不具合改修などを行.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-02T06:35:49",
-        "dateModified": "2025-09-02T14:19:39.605785",
+        "datePublished": "2025-10-02T23:13:27",
+        "dateModified": "2025-10-03T08:24:35.969589",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8291.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8291.html",
-        "articleSection": "セキュリティ",
-        "keywords": []
+        "articleSection": "プログラミング",
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "セキュリティ",
-                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "サイバーセキュリティタスクフォース（第47回）の局所を掘り下げる（PQC編）",
+                "name": "AWS環境でのアーキテクチャ設計を整理してみる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8291.html"
             }
         ]
@@ -113,36 +113,43 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
-                <li aria-current="page">サイバーセキュリティタスクフォース（第47回）の局所を掘り下げる（PQC編）</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">AWS環境でのアーキテクチャ設計を整理してみる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>サイバーセキュリティタスクフォース（第47回）の局所を掘り下げる（PQC編）</h1>
+                <h1>AWS環境でのアーキテクチャ設計を整理してみる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/satokan3/items/d158dfc168246bf89ddc?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: セキュリティ</span>
-                    <time datetime="2025-09-02T06:35:49">
-                        公開: 2025-09-02T06:35:49
+                    <span class="source">出典: <a href="https://qiita.com/mob_engineer/items/e25f2411040bd063780b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-10-02T23:13:27">
+                        公開: 2025-10-02T23:13:27
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    GMOコネクトの菅野（かんの）です。
-PQCの件で気になったことがあったので満を持して記事を書いてみたいと思います。
-フィードバックとかあれば、嬉しいです。
-今回のテーマは9月1日に開催された「サイバーセキュリティタスクフォース（第47回）」の資料47－1「ICTサイバーセ...
+                    記事を読んでいただきありがとうございます。
+モブエンジニア（@mob-engineer)です。
+AWS環境で開発を行ううえで「アーキテクチャ設計」について思いつく限り整理しました。
+
+前提
+今回登場する環境として以下3点があります。
+
+開発環境：機能開発・不具合改修などを行...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/satokan3/items/d158dfc168246bf89ddc?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/mob_engineer/items/e25f2411040bd063780b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -151,25 +158,60 @@ PQCの件で気になったことがあったので満を持して記事を書�
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>セキュリティ関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -184,16 +226,16 @@ PQCの件で気になったことがあったので満を持して記事を書�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_3004.html">
+                    <a href="気になる記になる_4255.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iPhone18 Foldの生体認証はTouch ID〜サプライヤーが決定との情報</span>
+                        <span class="nav-title">ロジクール、メカニカルキーボード｢MX Mechanical｣シリーズの新モデルを近い将来に投入か</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="ASCII_jp__トップ_188.html">
+                    <a href="Qiita_-_人気の記事_2285.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【iPhone 17の噂】アップルのイベントロゴに、「iPhone 17 Pro」の特徴が隠されてい...</span>
+                        <span class="nav-title">【アクセシビリティ】主要OSのアクセシビリティ機能まとめ（見えにくい人向け）</span>
                     </a>
                 </div>
             </div>
@@ -206,23 +248,53 @@ PQCの件で気になったことがあったので満を持して記事を書�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1727.html">
-                        <h3>ゆうちょ銀行、「トークン化預金」26年度導入を検討　NFTやセキュリティトークン決済に対応</h3>
+                    <a href="ASCII_jp__トップ_400.html">
+                        <h3>NDソフトウェア、「ほのぼのmore」の機能強化を発表：2025年10月開始の「障がい者就労選択支援サービス」に完全対応</h3>
                         <div class="related-meta">
-                            <span class="category">セキュリティ</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ゆうちょ銀行は9月1日、ディーカレットDCPが提供するプラットフォームを活用し、2026年度中をめどに「トークン化預金」の取り扱いを始めることを検討していると発表した。.</p>
+                        <p class="related-summary">NDソフトウェア、「ほのぼのmore」の機能強化を発表：2025年10月開始の「障がい者就労選択支援サービス」に完全対応.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_704.html">
-                        <h3>【9月9日（火）オンライン開催】インシデント事例から読み解くサプライチェーンセキュリティの課題！経営者が今すぐ押さえるべ...</h3>
+                    <a href="ASCII_jp__トップ_6633.html">
+                        <h3>NDソフトウェア、第１０回ＣａｒｅＴＥＸ大阪’２５に出展</h3>
                         <div class="related-meta">
-                            <span class="category">セキュリティ</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">【9月9日（火）オンライン開催】インシデント事例から読み解くサプライチェーンセキュリティの課題！経営者が今すぐ押さえるべき情報セキュリティ対策の基本の「ほ」｜無料セミナー.</p>
+                        <p class="related-summary">NDソフトウェア、第１０回ＣａｒｅＴＥＸ大阪’２５に出展.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_9898.html">
+                        <h3>ターミナル派待望の GitHub Copilot CLI 使い方まとめ</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">こんにちは、URBAN HACKS サーバーサイドエンジニアの池田です。 2025/9/25に GitHub Copilot CLI が public preview 版で登場しました！ 業務で Gi...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_9365.html">
+                        <h3>PyCon JP 2025 参加レポ</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">9/26~27で開催された PyCon JP 2025 に参加してきました。 業務でちゃんとpythonを使い始めてまだ半年ほどですが、得るものの多い2日間だったので参加したセッションについていくつか...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_7234.html">
+                        <h3>Webブラウザ上にLinux/Node.sベースのWebアプリ開発環境をWebAssemblyで実装した「Browser...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">jsによるサーバサイドJavaScriptの実行環境とコードエディタなどの開発環境をWebAssemblyを用いてWebブラウザ上で実行可能にした「BrowserPod」を発表しました。. Learn...</p>
                     </a>
                 </article>
             </div>

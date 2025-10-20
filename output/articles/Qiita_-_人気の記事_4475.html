@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>急激なトラフィックスパイクでも落とさない ― 東京・大阪アクティブ/アクティブ構成×数万rps対応 AWS設計術 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに GMOコネクトの野尻です。 今回、数万rpsという高負荷に対応可能なAWS環境を構築する機会があり、その設計・構築内容について本記事にまとめました。 環境構築の前提条件 今回構築した環境の前提条件は以下の通りです： 性能要件は数万rps（requests.">
-    <meta name="keywords" content="AWS,本">
+    <title>【mysql2】queryとexecuteの使い分け | 日本のテックニュース速報</title>
+    <meta name="description" content="初めに みなさんはmysql2を使ったことがありますか？Node. js上でMySQLに接続する際のクライアントライブラリとして、mysql2が主要な選択肢の一つだと思います。その際に、SQL文を実行するときのquery関数とexecute関数の使い分けが曖昧だったので整理.">
+    <meta name="keywords" content="Node.js">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="急激なトラフィックスパイクでも落とさない ― 東京・大阪アクティブ/アクティブ構成×数万rps対応 AWS設計術">
-    <meta property="og:description" content="はじめに GMOコネクトの野尻です。 今回、数万rpsという高負荷に対応可能なAWS環境を構築する機会があり、その設計・構築内容について本記事にまとめました。 環境構築の前提条件 今回構築した環境の前提条件は以下の通りです： 性能要件は数万rps（requests.">
+    <meta property="og:title" content="【mysql2】queryとexecuteの使い分け">
+    <meta property="og:description" content="初めに みなさんはmysql2を使ったことがありますか？Node. js上でMySQLに接続する際のクライアントライブラリとして、mysql2が主要な選択肢の一つだと思います。その際に、SQL文を実行するときのquery関数とexecute関数の使い分けが曖昧だったので整理.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4475.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="急激なトラフィックスパイクでも落とさない ― 東京・大阪アクティブ/アクティブ構成×数万rps対応 AWS設計術">
-    <meta name="twitter:description" content="はじめに GMOコネクトの野尻です。 今回、数万rpsという高負荷に対応可能なAWS環境を構築する機会があり、その設計・構築内容について本記事にまとめました。 環境構築の前提条件 今回構築した環境の前提条件は以下の通りです： 性能要件は数万rps（requests.">
+    <meta name="twitter:title" content="【mysql2】queryとexecuteの使い分け">
+    <meta name="twitter:description" content="初めに みなさんはmysql2を使ったことがありますか？Node. js上でMySQLに接続する際のクライアントライブラリとして、mysql2が主要な選択肢の一つだと思います。その際に、SQL文を実行するときのquery関数とexecute関数の使い分けが曖昧だったので整理.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "急激なトラフィックスパイクでも落とさない ― 東京・大阪アクティブ/アクティブ構成×数万rps対応 AWS設計術",
-        "description": "はじめに GMOコネクトの野尻です。 今回、数万rpsという高負荷に対応可能なAWS環境を構築する機会があり、その設計・構築内容について本記事にまとめました。 環境構築の前提条件 今回構築した環境の前提条件は以下の通りです： 性能要件は数万rps（requests.",
+        "headline": "【mysql2】queryとexecuteの使い分け",
+        "description": "初めに みなさんはmysql2を使ったことがありますか？Node. js上でMySQLに接続する際のクライアントライブラリとして、mysql2が主要な選択肢の一つだと思います。その際に、SQL文を実行するときのquery関数とexecute関数の使い分けが曖昧だったので整理.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-02T01:30:25",
-        "dateModified": "2025-09-03T04:22:44.448802",
+        "datePublished": "2025-10-20T04:59:28",
+        "dateModified": "2025-10-20T14:20:07.902243",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4475.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4475.html",
-        "articleSection": "その他",
-        "keywords": ["AWS","本"]
+        "articleSection": "テクノロジー",
+        "keywords": ["Node.js"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "急激なトラフィックスパイクでも落とさない ― 東京・大阪アクティブ/アクティブ構成×数万rps対応 AWS設計術",
+                "name": "【mysql2】queryとexecuteの使い分け",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4475.html"
             }
         ]
@@ -113,44 +113,37 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">急激なトラフィックスパイクでも落とさない ― 東京・大阪アクティブ/アクティブ構成×数万rps対応 ...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">【mysql2】queryとexecuteの使い分け</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>急激なトラフィックスパイクでも落とさない ― 東京・大阪アクティブ/アクティブ構成×数万rps対応 AWS設計術</h1>
+                <h1>【mysql2】queryとexecuteの使い分け</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/noji777/items/81769893496b5f018c47?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-09-02T01:30:25">
-                        公開: 2025-09-02T01:30:25
+                    <span class="source">出典: <a href="https://qiita.com/tomonari_09/items/30f6731e580f98989afc?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2025-10-20T04:59:28">
+                        公開: 2025-10-20T04:59:28
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AWS</span>
-                    <span class="tag">本</span>
+                    <span class="tag">Node.js</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-GMOコネクトの野尻です。
-今回、数万rpsという高負荷に対応可能なAWS環境を構築する機会があり、その設計・構築内容について本記事にまとめました。
-
-環境構築の前提条件
-今回構築した環境の前提条件は以下の通りです：
-
-性能要件は数万rps（requests ...
+                    初めに
+みなさんはmysql2を使ったことがありますか？Node.js上でMySQLに接続する際のクライアントライブラリとして、mysql2が主要な選択肢の一つだと思います。その際に、SQL文を実行するときのquery関数とexecute関数の使い分けが曖昧だったので整理...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/noji777/items/81769893496b5f018c47?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/tomonari_09/items/30f6731e580f98989afc?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,20 +156,10 @@ GMOコネクトの野尻です。
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Node.js&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Node.js - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">Node.js - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでNode.jsに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -186,7 +169,7 @@ GMOコネクトの野尻です。
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -217,16 +200,16 @@ GMOコネクトの野尻です。
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_2083.html">
+                    <a href="Qiita_-_人気の記事_4740.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">[25卒] キャッチアップをするために新人エンジニアが生成AIとレスバしてみた話</span>
+                        <span class="nav-title">帰ってきた IETF 124 Side Meeting 差分アップデート（2025年10月19日版）</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_401.html">
+                    <a href="気になる記になる_1506.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">データ共有サービス比較：Snowflake Secure Data Sharing と  Datab...</span>
+                        <span class="nav-title">Amazonの大型セール「スマイルSALE」、次回は10月27日より開催へ</span>
                     </a>
                 </div>
             </div>
@@ -239,53 +222,53 @@ GMOコネクトの野尻です。
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5063.html">
-                        <h3>日本上陸の人気スマートリングが米国で販売禁止に、「Ouraの特許を侵害」と裁定</h3>
+                    <a href="CNET_Japan_最新情報総合_6373.html">
+                        <h3>半世紀前から知られる「地球磁場の裂け目」がいま拡大中　我々への影響は</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">スマートリングを手掛けるOuraは先頃、UltrahumanおよびRingConnと争っていた特許紛争で最終的な勝利を収めた。.</p>
+                        <p class="related-summary">半世紀以上前から知られている地球磁場（地磁気）の“ほころび”が、いま再び注目を集めている。南大西洋上で観測される磁場の弱い領域「南大西洋異常帯（South Atlantic Anomaly／SAA）」...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5692.html">
-                        <h3>2025年の夏は過去最高の暑さに　気象庁「127年間で最も高温」 猛暑はいつまで続く？</h3>
+                    <a href="CNET_Japan_最新情報総合_2047.html">
+                        <h3>無印良品のネットストアも停止--アスクルのシステム障害に関連か</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">気象庁は9月1日、2025年の夏（6～8月）の日本の平均気温が統計開始以来最も高かったと発表した。平年との差は+2. 36℃となり、これまでの記録だった2024年と2023年の+1. 76℃を大幅に上...</p>
+                        <p class="related-summary">無印良品のネットストアが10月19日夜から利用できなくなっている。運営元の良品計画は同日、公式サイトで「物流障害の影響により、一部サービス・機能を停止している」と明かしている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3556.html">
-                        <h3>シャオミのモバイルバッテリーに「過熱や発火」の可能性、一部を自主回収</h3>
+                    <a href="CNET_Japan_最新情報総合_3838.html">
+                        <h3>Reebok、初のスマートリングを発表--Ouraやサムスンに対抗しヘルステック市場参入</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">小米技術日本（シャオミ・ジャパン）は、同社のモバイルバッテリーの一部に過熱や発火の可能性があるとして、自主回収を発表した。.</p>
+                        <p class="related-summary">Reebokは同社初のスマートリングを発表し、ヘルステック市場に参入した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9361.html">
-                        <h3>「ブルーアーカイブ」グローバル版に不正アクセス　“詫び石”配布へ</h3>
+                    <a href="CNET_Japan_最新情報総合_6869.html">
+                        <h3>東京都公式の「東京ポイント」が「Vポイント」と交換可能に　1p＝1円</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">韓国ネクソンは9月2日、「ブルーアーカイブ」のグローバル版が不正アクセスを受けた件について、被害の概要と今後の対応について公表した。同作の日本版への影響はない。.</p>
+                        <p class="related-summary">東京都の公式アプリ「東京都公式アプリ」で貯まる「東京ポイント」が、10月20日から「Vポイント」に交換できるようになる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_8276.html">
-                        <h3>【なんだこれは】映画「タローマン」興収1億円突破　公開わずか10日で</h3>
+                    <a href="CNET_Japan_最新情報総合_7929.html">
+                        <h3>AWSで障害--PerplexityやSlackなどグローバルサービスに支障</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">岡本太郎の言葉と作品をモチーフにしたデタラメな特撮映画「大長編 タローマン 万博大爆発」が、公開からわずか10日で興行収入1億円を突破した。.</p>
+                        <p class="related-summary">米Amazonのクラウドサービス「Amazon Web Services（AWS）」で、世界的な障害が発生している。影響は広範囲に及び、PerplexityやSlackの一部機能など、グローバルのサー...</p>
                     </a>
                 </article>
             </div>

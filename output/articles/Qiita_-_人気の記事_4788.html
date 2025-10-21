@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bedrockくんさぁ、毎朝天気教えてくれない？ | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 今回は毎朝天気を教えてくれるbotを作成しました。 前回の記事で作成したLINEbotを改修したものになっています。 よければ前回の記事もご覧ください。 天気を取得するには 天気の取得は公開されているAPIにリクエストを送ることで天気を取得する手法を取り.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>React学習ログ No.12 | 日本のテックニュース速報</title>
+    <meta name="description" content="React Stateの更新における prev に関する整理 1. 値によるステート更新の限界 useStateフックのセッター関数（例: setCount）に、 ステートの値を直接用いた式を渡す形式（値による更新）には、 意図しない結果を生じる可能性がある 例: カ.">
+    <meta name="keywords" content="React,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Bedrockくんさぁ、毎朝天気教えてくれない？">
-    <meta property="og:description" content="はじめに 今回は毎朝天気を教えてくれるbotを作成しました。 前回の記事で作成したLINEbotを改修したものになっています。 よければ前回の記事もご覧ください。 天気を取得するには 天気の取得は公開されているAPIにリクエストを送ることで天気を取得する手法を取り.">
+    <meta property="og:title" content="React学習ログ No.12">
+    <meta property="og:description" content="React Stateの更新における prev に関する整理 1. 値によるステート更新の限界 useStateフックのセッター関数（例: setCount）に、 ステートの値を直接用いた式を渡す形式（値による更新）には、 意図しない結果を生じる可能性がある 例: カ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4788.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bedrockくんさぁ、毎朝天気教えてくれない？">
-    <meta name="twitter:description" content="はじめに 今回は毎朝天気を教えてくれるbotを作成しました。 前回の記事で作成したLINEbotを改修したものになっています。 よければ前回の記事もご覧ください。 天気を取得するには 天気の取得は公開されているAPIにリクエストを送ることで天気を取得する手法を取り.">
+    <meta name="twitter:title" content="React学習ログ No.12">
+    <meta name="twitter:description" content="React Stateの更新における prev に関する整理 1. 値によるステート更新の限界 useStateフックのセッター関数（例: setCount）に、 ステートの値を直接用いた式を渡す形式（値による更新）には、 意図しない結果を生じる可能性がある 例: カ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Bedrockくんさぁ、毎朝天気教えてくれない？",
-        "description": "はじめに 今回は毎朝天気を教えてくれるbotを作成しました。 前回の記事で作成したLINEbotを改修したものになっています。 よければ前回の記事もご覧ください。 天気を取得するには 天気の取得は公開されているAPIにリクエストを送ることで天気を取得する手法を取り.",
+        "headline": "React学習ログ No.12",
+        "description": "React Stateの更新における prev に関する整理 1. 値によるステート更新の限界 useStateフックのセッター関数（例: setCount）に、 ステートの値を直接用いた式を渡す形式（値による更新）には、 意図しない結果を生じる可能性がある 例: カ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-21T00:06:22",
-        "dateModified": "2025-09-21T08:21:48.703241",
+        "datePublished": "2025-10-19T08:07:28",
+        "dateModified": "2025-10-21T20:23:32.182437",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4788.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4788.html",
         "articleSection": "テクノロジー",
-        "keywords": []
+        "keywords": ["React","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Bedrockくんさぁ、毎朝天気教えてくれない？",
+                "name": "React学習ログ No.12",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4788.html"
             }
         ]
@@ -114,38 +114,43 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">Bedrockくんさぁ、毎朝天気教えてくれない？</li>
+                <li aria-current="page">React学習ログ No.12</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Bedrockくんさぁ、毎朝天気教えてくれない？</h1>
+                <h1>React学習ログ No.12</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/yakumo_09/items/0c575eed2973e6953fee?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/maedaHARUYA/items/b0a6aaf2e6ff2c0fa4d6?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-09-21T00:06:22">
-                        公開: 2025-09-21T00:06:22
+                    <time datetime="2025-10-19T08:07:28">
+                        公開: 2025-10-19T08:07:28
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-今回は毎朝天気を教えてくれるbotを作成しました。
-前回の記事で作成したLINEbotを改修したものになっています。
-よければ前回の記事もご覧ください。
+                    React Stateの更新における prev に関する整理
 
-天気を取得するには
-天気の取得は公開されているAPIにリクエストを送ることで天気を取得する手法を取り...
+1. 値によるステート更新の限界
+useStateフックのセッター関数（例: setCount）に、
+ステートの値を直接用いた式を渡す形式（値による更新）には、
+意図しない結果を生じる可能性がある
+
+例: カ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/yakumo_09/items/0c575eed2973e6953fee?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/maedaHARUYA/items/b0a6aaf2e6ff2c0fa4d6?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,6 +159,31 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
                     <h3>テクノロジー関連のおすすめ</h3>
@@ -187,16 +217,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="ASCII_jp__トップ_7461.html">
+                    <a href="Qiita_-_人気の記事_644.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">オーロラをなぞるようにマウスが滑る、ゲームのプロが細部までこだわったマウスパッド：PCワンズ</span>
+                        <span class="nav-title">これだけAIが流行っても単純作業が残っている理由</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="ASCII_jp__トップ_9681.html">
+                    <a href="Qiita_-_人気の記事_9315.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">耳掃除で咳が出るのはなぜ？ ― 高齢者に多い「Arnold’s Reflex」と耳のセルフケア</span>
+                        <span class="nav-title">【個人開発】ライター教育用アプリ&#34;曖昧表現チェッカー&#34;を作成【React × OpenAI × Su...</span>
                     </a>
                 </div>
             </div>
@@ -209,53 +239,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5288.html">
-                        <h3>テスラ車に「子どもを車内に閉じ込める」可能性--ドアハンドルの再設計を計画</h3>
+                    <a href="CNET_Japan_最新情報総合_8515.html">
+                        <h3>Reebok、初のスマートリングを発表--Ouraやサムスンに対抗しヘルステック市場参入</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米国道路交通安全局（NHTSA）は、一部のテスラ車両でドアハンドルが電力を失い、特に子どもを車内に閉じ込める可能性があるという苦情を調査した──。.</p>
+                        <p class="related-summary">Reebokは同社初のスマートリングを発表し、ヘルステック市場に参入した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_778.html">
-                        <h3>NVIDIAがインテルと電撃提携、約7400億円を出資へ</h3>
+                    <a href="CNET_Japan_最新情報総合_3738.html">
+                        <h3>東京都公式の「東京ポイント」が「Vポイント」と交換可能に　1p＝1円</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NVIDIAは米国時間9月18日、インテルに50億ドル（約7400億円）を出資することで合意したと発表した。.</p>
+                        <p class="related-summary">東京都の公式アプリ「東京都公式アプリ」で貯まる「東京ポイント」が、10月20日から「Vポイント」に交換できるようになる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8946.html">
-                        <h3>メタプラネット、「Bitcoin.jp」ドメイン取得--10年以上保有していたオーナーから仲介なしで直接</h3>
+                    <a href="CNET_Japan_最新情報総合_2175.html">
+                        <h3>AWSで障害--PerplexityやSlackなどグローバルサービスに支障（復旧）</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">jp」を戦略的に取得したと発表した。あわせて、ビットコイン関連事業を担う新子会社「ビットコインジャパン株式会社」を設立することを決議した。. メタプラネットは9月17日、ドメイン「Bitcoin.</p>
+                        <p class="related-summary">米Amazonのクラウドサービス「Amazon Web Services（AWS）」で、世界的な障害が発生している。影響は広範囲に及び、PerplexityやSlackの一部機能など、グローバルのサー...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_53.html">
-                        <h3>Nothingの新イヤホン「Ear (3)」を早速試す--「ケースに話しかける」という奇妙な体験</h3>
+                    <a href="CNET_Japan_最新情報総合_3465.html">
+                        <h3>AWS大規模障害、ついに解消--2000以上のサービスに影響した理由は？</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Nothingがノイズキャンセリングイヤホンの新モデル「Nothing Ear (3)」を発表した。さっそく試した米CNET記者が、その感触をお伝えする。.</p>
+                        <p class="related-summary">「Reddit」や「Ring」、「Roblox」などのサイトを停止させたアマゾン ウェブ サービス（AWS）の大規模障害は解消されたと、同社が発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3408.html">
-                        <h3>あの人気ゲーミングキーボードに新色が出た！「Razer BlackWidow V4 75% Phantom Green ...</h3>
+                    <a href="CNET_Japan_最新情報総合_8366.html">
+                        <h3>Anker、モバイルバッテリーなど4製品を自主回収　内部短絡の恐れ</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">定番に差をつける新カラー！ Razerの人気ゲーミングキーボード「BlackWidow V4 75%」に、ブランドを象徴する新色「Phantom Green」が登場しました。ラピッドトリガー・ホットス...</p>
+                        <p class="related-summary">アンカー・ジャパンは10月21日、モバイルバッテリーやBluetoothスピーカーなど4製品を自主回収すると発表した。いずれも電池セルの製造不備により、内部短絡が発生する恐れがあるという。.</p>
                     </a>
                 </article>
             </div>

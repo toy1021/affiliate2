@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C#の理解が10年古い、と言われたのでCloud Runにデプロイしてみた | 日本のテックニュース速報</title>
-    <meta name="description" content="NETでLinuxをメインにした開発方法をWebの記事等で見かけない」 という話もあり、確かに自分もあんまり見かけないなー、と思ったので 「無いなら作る」 の精神で作りながら書いてみる事にしました。Weekly ITニュースで扱ってるから概要は知ってるんですがエアプ気味でしたので良い機会">
-    <meta name="keywords" content="Java,本">
+    <title>uv × DockerでのPython開発環境構築方法 | 日本のテックニュース速報</title>
+    <meta name="description" content="松尾研究所では、Python開発における標準ツールとしてuvを推奨しています。uvはPythonのパッケージ管理ツールで、依存関係の管理や仮想環境の構築を自動化し、高速で再現性のある開発を可能にすることが特長です">
+    <meta name="keywords" content="Python,Node.js,Docker,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="C#の理解が10年古い、と言われたのでCloud Runにデプロイしてみた">
-    <meta property="og:description" content="NETでLinuxをメインにした開発方法をWebの記事等で見かけない」 という話もあり、確かに自分もあんまり見かけないなー、と思ったので 「無いなら作る」 の精神で作りながら書いてみる事にしました。Weekly ITニュースで扱ってるから概要は知ってるんですがエアプ気味でしたので良い機会">
+    <meta property="og:title" content="uv × DockerでのPython開発環境構築方法">
+    <meta property="og:description" content="松尾研究所では、Python開発における標準ツールとしてuvを推奨しています。uvはPythonのパッケージ管理ツールで、依存関係の管理や仮想環境の構築を自動化し、高速で再現性のある開発を可能にすることが特長です">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2756.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="C#の理解が10年古い、と言われたのでCloud Runにデプロイしてみた">
-    <meta name="twitter:description" content="NETでLinuxをメインにした開発方法をWebの記事等で見かけない」 という話もあり、確かに自分もあんまり見かけないなー、と思ったので 「無いなら作る」 の精神で作りながら書いてみる事にしました。Weekly ITニュースで扱ってるから概要は知ってるんですがエアプ気味でしたので良い機会">
+    <meta name="twitter:title" content="uv × DockerでのPython開発環境構築方法">
+    <meta name="twitter:description" content="松尾研究所では、Python開発における標準ツールとしてuvを推奨しています。uvはPythonのパッケージ管理ツールで、依存関係の管理や仮想環境の構築を自動化し、高速で再現性のある開発を可能にすることが特長です">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "C#の理解が10年古い、と言われたのでCloud Runにデプロイしてみた",
-        "description": "NETでLinuxをメインにした開発方法をWebの記事等で見かけない」 という話もあり、確かに自分もあんまり見かけないなー、と思ったので 「無いなら作る」 の精神で作りながら書いてみる事にしました。Weekly ITニュースで扱ってるから概要は知ってるんですがエアプ気味でしたので良い機会",
+        "headline": "uv × DockerでのPython開発環境構築方法",
+        "description": "松尾研究所では、Python開発における標準ツールとしてuvを推奨しています。uvはPythonのパッケージ管理ツールで、依存関係の管理や仮想環境の構築を自動化し、高速で再現性のある開発を可能にすることが特長です",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-21T01:00:00",
-        "dateModified": "2025-09-21T22:17:21.823128",
+        "datePublished": "2025-10-21T02:50:01",
+        "dateModified": "2025-10-21T16:27:06.977716",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2756.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2756.html",
         "articleSection": "プログラミング",
-        "keywords": ["Java","本"]
+        "keywords": ["Python","Node.js","Docker","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "C#の理解が10年古い、と言われたのでCloud Runにデプロイしてみた",
+                "name": "uv × DockerでのPython開発環境構築方法",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2756.html"
             }
         ]
@@ -114,24 +114,26 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">C#の理解が10年古い、と言われたのでCloud Runにデプロイしてみた</li>
+                <li aria-current="page">uv × DockerでのPython開発環境構築方法</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>C#の理解が10年古い、と言われたのでCloud Runにデプロイしてみた</h1>
+                <h1>uv × DockerでのPython開発環境構築方法</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/koduki/articles/dotnet20250920" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/mkj/articles/3aaa36d6f35c08" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-09-21T01:00:00">
-                        公開: 2025-09-21T01:00:00
+                    <time datetime="2025-10-21T02:50:01">
+                        公開: 2025-10-21T02:50:01
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Docker</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -139,15 +141,14 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-ちょっとSNSで 「.NETはLinuxでも本格的に動く！」 とか 「Web系エンジニアは.NETの理解が10年前で止まってる」 とか話題ですね。一方で、「そもそも.NETでLinuxをメインにした開発方法をWebの記事等で見かけない」　という話もあり、確かに自分もあんまり見かけないなー、と思ったので 「無いなら作る」 の精神で作りながら書いてみる事にしました。Weekly ITニュースで扱ってるから概要は知ってるんですがエアプ気味でしたので良い機会。まあ、お仕事だとJavaがメインだけど、自称 Web系エンジニアなので対よろです!
-TL;DR
-
-最新の.NETはWindo...
+                    松尾研究所では、Python開発における標準ツールとしてuvを推奨しています。uvはPythonのパッケージ管理ツールで、依存関係の管理や仮想環境の構築を自動化し、高速で再現性のある開発を可能にすることが特長です。
+Pythonパッケージだけでなく、Node.jsやブラウザ周りのツールなど他の依存も扱うときには、uvとDockerを併用するケースもあるかと思います。Dockerのコンテナ上でuvを使用する方法について社内で話題になったとき、調べたところいくつか方法があることが分かったので、それぞれの方法の違いと松尾研究所推奨の環境構築方法についてまとめました。
+!
+本記事では、uv、Do...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/koduki/articles/dotnet20250920" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/mkj/articles/3aaa36d6f35c08" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,30 +161,30 @@ TL;DR
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Java&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Java - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Java - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでJavaに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
                                     <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +225,16 @@ TL;DR
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3772.html">
+                    <a href="Zennのトレンド_1995.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「技術的には可能です」の少しマシな言い方</span>
+                        <span class="nav-title">Next.js 15 / React 19 実践設計ガイド 実装観点別のベストプラクティス</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6770.html">
+                    <a href="iPhone_Mania_1741.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">うんち検知IoT：Raspberry Piが愛犬の大事件を見逃さない</span>
+                        <span class="nav-title">iPhone17シリーズ、16シリーズと比べ14%増〜Airと16 Plusの比較も</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +247,53 @@ TL;DR
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1912.html">
-                        <h3>日本の金星探査機「あかつき」運用終了　「大気の高速回転」維持の解明など成果</h3>
+                    <a href="CNET_Japan_最新情報総合_1218.html">
+                        <h3>痛い乳がん検診にサヨナラ--MITが開発する「貼り付ける」デバイスとは</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">宇宙航空研究開発機構（JAXA）は9月18日午前9時、金星探査機「あかつき」（PLANET-C）の停波作業を行い、運用を終了したと発表した。2010年の打ち上げから15年、金星周回軌道での観測開始から...</p>
+                        <p class="related-summary">ウェアラブル端末から得られる健康データをAIと組み合わせれば、生存率を大幅に改善できる可能性がある。MITは、まさにその実現を目指す装置を開発中だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5294.html">
-                        <h3>晴海フラッグのタワマン「SKY DUO」竣工　築地虎ノ門トンネルで都心直結　50階建て</h3>
+                    <a href="気になる記になる_9548.html">
+                        <h3>Apple、M5搭載新型｢Vision Pro｣の発売に合わせて開発者向けのUSB-C接続アダプタ｢Developer ...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">東京・晴海の大規模再開発「HARUMI FLAG」で、地上50階建ての超高層タワー「HARUMI FLAG SKY DUO」が竣工し、入居が始まった。三井不動産レジデンシャルや三菱地所レジデンス、住友...</p>
+                        <p class="related-summary">Appleは開発者向けに「Vision Pro」と「Mac」を有線接続する為のUSB-C接続アダプタ「Developer Strap」を販売していますが、明日発売されるM5搭載「Vision Pro」...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4203.html">
-                        <h3>【個人開発】自分のスキルの課題点を登録するとAIが解決策+サンプル動画を提示してくれるアプリを作りました【React×T...</h3>
+                    <a href="Zennのトレンド_1995.html">
+                        <h3>Next.js 15 / React 19 実践設計ガイド 実装観点別のベストプラクティス</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">js 15とReact 19を使用したWebアプリケーション開発における、実践的な設計方針とベストプラクティスをまとめたガイドを作成しました。 本書では、Next. js 15 / React 19を...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_7355.html">
+                        <h3>0からフロントエンドにテストを導入した話</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">jsを使用しています。（詳しい技術内容はこちらを参照） 少し前の話になりますが、ゼロからテストを導入したので、その過程や戦略について話していこうと思います。 フロントエンドのテストを検討している方や、...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_4116.html">
+                        <h3>【GIFTech×iwashi】「好奇心」を「価値」に変える。fukabori.fmホストiwashi氏に学ぶ、しなやか...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは。 ここまでのReact学習の一環として初めて個人開発にチャレンジしました。どんなアプリを作るかの構想から実装までを一貫して行い、その過程で数多くの学びを得ることができました。 こ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2432.html">
-                        <h3>【個人開発】QAエンジニア、テスターを救うファイルダウンロードアプリを作りました【React/Typecript/Pyt...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">こんな悩みありませんでした？ QAでアップロード機能をテストしたいんだけど、ファイルを用意するのが面倒くさい. ファイル転送テストのために軽くて適当なファイルがすぐに欲しい ファイルサイズ変換ツールは...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1168.html">
-                        <h3>Amazon Q Developerを用いた開発にてコンテキストを永続化する運用方法</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに Amazon Q Developerで長時間開発を行っていると、以下のような文章が表示されます。 これはAmazon Q Developerの機能で、チャット履歴がコンテキストウィンドウの容...</p>
+                        <p class="related-summary">この記事は、こんな方に向けて書きました 自身の「好奇心」を、市場価値の高い「専門性」へと繋げたいと考えているエンジニア チームを率い、周囲を巻き込みながら、より大きなインパクトを生み出したいリーダー ...</p>
                     </a>
                 </article>
             </div>

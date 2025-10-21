@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化テクニック | 日本のテックニュース速報</title>
-    <meta name="description" content="Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化テクニック - プログラミング関連情報をお届け。">
-    <meta name="keywords" content="Claude,GitHub,本">
+    <title>Rust の derive macro を書いてみよう | 日本のテックニュース速報</title>
+    <meta name="description" content="前回は cargo-expand を使って thiserror crate の derive macro の展開結果を見てみました 。今回は derive macro を書いて derive macro に慣れてみようと思います">
+    <meta name="keywords" content="Mac">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化テクニック">
-    <meta property="og:description" content="Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化テクニック - プログラミング関連情報をお届け。">
+    <meta property="og:title" content="Rust の derive macro を書いてみよう">
+    <meta property="og:description" content="前回は cargo-expand を使って thiserror crate の derive macro の展開結果を見てみました 。今回は derive macro を書いて derive macro に慣れてみようと思います">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5338.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化テクニック">
-    <meta name="twitter:description" content="Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化テクニック - プログラミング関連情報をお届け。">
+    <meta name="twitter:title" content="Rust の derive macro を書いてみよう">
+    <meta name="twitter:description" content="前回は cargo-expand を使って thiserror crate の derive macro の展開結果を見てみました 。今回は derive macro を書いて derive macro に慣れてみようと思います">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化テクニック",
-        "description": "Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化テクニック - プログラミング関連情報をお届け。",
+        "headline": "Rust の derive macro を書いてみよう",
+        "description": "前回は cargo-expand を使って thiserror crate の derive macro の展開結果を見てみました 。今回は derive macro を書いて derive macro に慣れてみようと思います",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-25T20:56:30",
-        "dateModified": "2025-09-29T08:29:01.973256",
+        "datePublished": "2025-10-20T03:00:01",
+        "dateModified": "2025-10-21T01:28:02.446294",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5338.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5338.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Claude","GitHub","本"]
+        "articleSection": "Apple製品",
+        "keywords": ["Mac"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "Apple製品",
+                "item": "https://toy1021.github.io/affiliate2/#category=Apple製品"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化テクニック",
+                "name": "Rust の derive macro を書いてみよう",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5338.html"
             }
         ]
@@ -113,45 +113,40 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化...</li>
+                <li><a href="../#category=Apple製品">Apple製品</a></li>
+                <li aria-current="page">Rust の derive macro を書いてみよう</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化テクニック</h1>
+                <h1>Rust の derive macro を書いてみよう</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/tmasuyama1114/articles/claude_code_commands" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-09-25T20:56:30">
-                        公開: 2025-09-25T20:56:30
+                    <span class="source">出典: <a href="https://zenn.dev/doctormate/articles/0a7cc9365d90cd" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: Apple製品</span>
+                    <time datetime="2025-10-20T03:00:01">
+                        公開: 2025-10-20T03:00:01
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">GitHub</span>
-                    <span class="tag">本</span>
+                    <span class="tag">Mac</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Claude Codeカスタムコマンド完全ガイド：基礎から実践まで、開発効率を劇的に向上させる自動化テクニック
-こんにちは、とまだです。
-Claude Codeで同じような指示を何度も書いていて、「これ、もっと効率化できないかな」と思ったことはありませんか？
-実は、Claude Codeには「カスタムコマンド」という強力な機能があります。
-よく使う指示を短いコマンドとして登録でき、開発フローを大幅に効率化できるんです。
-今回は、カスタムコマンドの基本的な仕組みから、品質チェックの自動化、GitHub連携による開発フロー改善まで、実践的な活用方法を体系的に解説します。
+                    前回は cargo-expand を使って thiserror crate の derive macro の展開結果を見てみました 。今回は derive macro を書いて derive macro に慣れてみようと思います。
 
- 忙しい人のた...
+ derive macro とは
+derive macro とは、手続き的マクロ (procedural macro) の一種で、struct や enum などに derive 属性を指定したときに自動で生成されるコードを指定するマクロです。
+標準で提供される derive macro の例としては Clone, Copy, Debug, Default,...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/tmasuyama1114/articles/claude_code_commands" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/doctormate/articles/0a7cc9365d90cd" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -164,30 +159,30 @@ Claude Codeで同じような指示を何度も書いていて、「これ、も
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">Mac - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-title">iPhone - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">MacBook - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -197,23 +192,23 @@ Claude Codeで同じような指示を何度も書いていて、「これ、も
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>Apple製品関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">iPhone - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">MacBook - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -228,16 +223,16 @@ Claude Codeで同じような指示を何度も書いていて、「これ、も
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_973.html">
+                    <a href="Zennのトレンド_6544.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">A19 Proをマルチコアスコアで圧倒する新型SoC〜Xperia 1 VIIIに搭載見込み</span>
+                        <span class="nav-title">LLMの責務を最小化する設計 — Claude Codeの中身は50代のベテランエンジニアかもしれな...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_8487.html">
+                    <a href="Qiita_-_人気の記事_6495.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Google ストア、｢Google 創立記念キャンペーン｣を本日よりスタート</span>
+                        <span class="nav-title">帰ってきた IETF 124 Side Meeting 差分アップデート（2025年10月19日版）</span>
                     </a>
                 </div>
             </div>
@@ -250,53 +245,53 @@ Claude Codeで同じような指示を何度も書いていて、「これ、も
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8758.html">
-                        <h3>シャオミ、FeliCa搭載ハイエンドスマホ「Xiaomi 15T Pro」発売--「バグった価格」と自信</h3>
+                    <a href="CNET_Japan_最新情報総合_478.html">
+                        <h3>「タッチ対応MacBook Pro」、2026年にも登場か--「ジョブズ時代からの転換」と著名記者</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">Apple製品</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">シャオミが日本市場への本気度を示すXiaomi 15T Pro発表。グローバル発表と同時におサイフケータイを初搭載し、ライカ共同開発カメラやペリスコープ5倍ズーム、電波圏外でも1. 9km通信可能な独...</p>
+                        <p class="related-summary">アップルが2026年にも「MacBook Pro」に初めてタッチスクリーンを導入すると、Bloombergが報じている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8113.html">
-                        <h3>最小限のコマンドでADKをCloud Runにデプロイする</h3>
+                    <a href="CNET_Japan_最新情報総合_4847.html">
+                        <h3>iPhoneやAndroidスマホを充電器につなぎっぱだと電池は劣化する？公式見解は</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">Apple製品</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに アイレット DX開発事業部深川です。 この記事ではAgent Development Kit(ADK)を最小限のコマンドでCloud Runにデプロイする手順を記載します。 前提 開発言語は...</p>
+                        <p class="related-summary">就寝前にスマホをつないでおき、朝起きるとバッテリー残量は100%。多くの人が当たり前にやっている習慣だが、「これって電池に悪いのでは？」と気になる人も多いだろう。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9513.html">
-                        <h3>【年収810万円】C#エンジニア案件2025年9月最新｜フリーランス調査【フリーランスボード調べ】</h3>
+                    <a href="CNET_Japan_最新情報総合_3287.html">
+                        <h3>そういえばどうなった「iPod touch」--最近見ないデバイス調査隊</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">Apple製品</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">【年収810万円】C#エンジニア案件2025年9月最新｜フリーランス調査【フリーランスボード調べ】.</p>
+                        <p class="related-summary">かつて、「iPhone」でも「iPad」でもないiOS端末が存在した。「iPod touch」だ。音楽プレーヤーの枠を超え、手のひらサイズでネットもアプリも楽しめる──。そんな“もうひとつのiPhon...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3071.html">
-                        <h3>『バトルフィールド6』最高責任者にインタビュー！ 世界中のプレイヤーとともに作り上げた、これまでにない戦場体験【TGS2...</h3>
+                    <a href="CNET_Japan_最新情報総合_4864.html">
+                        <h3>「アップル製メガネ」の登場は近い？必要なピースは既にそろっている</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">Apple製品</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">TGS2025の取材期間中、BF6最高責任者であるByron Beede氏にインタビューを実施。発売が迫るBF6の開発状況や作品に込めた思いなど、興味深い話を聞くことができた。.</p>
+                        <p class="related-summary">もしメガネが本当にアップルの次の大きな動きなら、ぜひとも進めてほしい。必要な要素は全て、すでに明らかになっている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7084.html">
-                        <h3>53％オフの超特価！ REGZA（レグザ）48インチ4K有機ELテレビ【Amazonタイムセール】</h3>
+                    <a href="気になる記になる_8296.html">
+                        <h3>｢iOS 26.1 beta 4｣の新機能や変更点のまとめ｜Liquid Glassの透明度を切り替え可能に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">Apple製品</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">独自開発の技術を用いて豊かな色彩表現を可能にしたテレビ「REGZA（レグザ）‎48X8900L」がAmazonタイムセールに登場！.</p>
+                        <p class="related-summary">1 beta 4」を開発者向けにリリースしましたが、MacRumorsが、「iOS 26. 1 beta 4」での新機能や変更点を報告しているのでまとめてみました。 「iOS 26.</p>
                     </a>
                 </article>
             </div>

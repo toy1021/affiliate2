@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haskeller のための AtCoder 言語アップデート 2025 | 日本のテックニュース速報</title>
-    <meta name="description" content="背景 AtCoder では、ジャッジ環境 (コンパイル・実行環境) を (ユーザの意向に沿って) 更新するイベント『言語アップデート』が隔年で実施されています。 先日 2024-25 年度の言語アップデート における提出が締め切られました">
-    <meta name="keywords" content="AI,本">
+    <title>なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編） | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Haskeller のための AtCoder 言語アップデート 2025">
-    <meta property="og:description" content="背景 AtCoder では、ジャッジ環境 (コンパイル・実行環境) を (ユーザの意向に沿って) 更新するイベント『言語アップデート』が隔年で実施されています。 先日 2024-25 年度の言語アップデート における提出が締め切られました">
+    <meta property="og:title" content="なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）">
+    <meta property="og:description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8114.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Haskeller のための AtCoder 言語アップデート 2025">
-    <meta name="twitter:description" content="背景 AtCoder では、ジャッジ環境 (コンパイル・実行環境) を (ユーザの意向に沿って) 更新するイベント『言語アップデート』が隔年で実施されています。 先日 2024-25 年度の言語アップデート における提出が締め切られました">
+    <meta name="twitter:title" content="なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）">
+    <meta name="twitter:description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Haskeller のための AtCoder 言語アップデート 2025",
-        "description": "背景 AtCoder では、ジャッジ環境 (コンパイル・実行環境) を (ユーザの意向に沿って) 更新するイベント『言語アップデート』が隔年で実施されています。 先日 2024-25 年度の言語アップデート における提出が締め切られました",
+        "headline": "なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）",
+        "description": "はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-11T16:45:50",
-        "dateModified": "2025-09-12T14:18:15.420160",
+        "datePublished": "2025-10-26T03:40:37",
+        "dateModified": "2025-10-26T16:23:16.933524",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8114.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8114.html",
         "articleSection": "プログラミング",
-        "keywords": ["AI","本"]
+        "keywords": []
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Haskeller のための AtCoder 言語アップデート 2025",
+                "name": "なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8114.html"
             }
         ]
@@ -114,45 +114,42 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Haskeller のための AtCoder 言語アップデート 2025</li>
+                <li aria-current="page">なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Haskeller のための AtCoder 言語アップデート 2025</h1>
+                <h1>なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/toyboot4e/articles/haskell-on-atcoder-2025" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/yuta_kakiki/articles/13f54dd123e0d8" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-09-11T16:45:50">
-                        公開: 2025-09-11T16:45:50
+                    <time datetime="2025-10-26T03:40:37">
+                        公開: 2025-10-26T03:40:37
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    背景
-AtCoder では、ジャッジ環境 (コンパイル・実行環境) を (ユーザの意向に沿って) 更新するイベント『言語アップデート』が隔年で実施されています。
-先日 2024-25 年度の言語アップデート における提出が締め切られました。今後の予定は概ね以下のようです:
+                    はじめに
+「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突)
 
-2025 年 9 月下旬〜の AtCoder Daily Training で新ジャッジが運用されます。
-2025 年 10 月中旬を目処に本番のコンテストで新ジャッジが運用されます。
+そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。
+.....でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか。
 
-以下では更新に備え、 Haskell のジャッジ環境の設定内容と、以前と比べてどう変化するかを確認します。
+「よし、概念的に調べるぞ、ソースコードも読むぞ」ということで、RFCをはじめ色々調べてみたのでまとめていきます。
+なお、読む実装コードの言語はgolangです。
+まずはどんなふうに圧縮されているかを概念的に理解したあと、コードを実際に見て確認していきます。
 
- 言語アップデー...
+ 圧縮とは何かを概念的に理...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/toyboot4e/articles/haskell-on-atcoder-2025" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/yuta_kakiki/articles/13f54dd123e0d8" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -165,30 +162,20 @@ AtCoder では、ジャッジ環境 (コンパイル・実行環境) を (ユー
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
                                     <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -229,16 +216,16 @@ AtCoder では、ジャッジ環境 (コンパイル・実行環境) を (ユー
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_726.html">
+                    <a href="ASCII_jp__トップ_8820.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">au、Apple Watch11などの価格を発表！25カ月返却で34,370円〜</span>
+                        <span class="nav-title">超人気ファンタジードラマとガチコラボの「realme 15 Pro 5G Game of Thron...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_6207.html">
+                    <a href="ASCII_jp__トップ_7358.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhone Airは“Air”なのに史上最も軽いiPhoneではない？</span>
+                        <span class="nav-title">プロ選手の“ガチ”な戦いをみんなで観よう！ 「ポケモンユナイトフェスタ in 長崎 2025」11月...</span>
                     </a>
                 </div>
             </div>
@@ -251,53 +238,53 @@ AtCoder では、ジャッジ環境 (コンパイル・実行環境) を (ユー
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8082.html">
-                        <h3>アマゾン、ついにARグラス市場参入か--配送・一般向け2機種を開発との報道</h3>
+                    <a href="CNET_Japan_最新情報総合_6494.html">
+                        <h3>西武鉄道、2028年3月に新型レストラン列車を運行開始</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アマゾンが独自の拡張現実（AR）スマートグラスで競争に参入する可能性が浮上している。.</p>
+                        <p class="related-summary">西武鉄道は10月21日、新型レストラン列車の運行を2028年3月に開始すると発表した。車内のレストラン開発・運営パートナーとして、レストランやカフェを全国展開するバルニバービを迎え、両社が共同で新たな...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_3781.html">
-                        <h3>フロントエンドカンファレンス北海道2025 に参加してきました！ &amp; ほぼ全資料まとめ</h3>
+                    <a href="CNET_Japan_最新情報総合_6595.html">
+                        <h3>シャープが新型EV披露、車庫が「リビング」や「仕事部屋」に　27年度市場参入へ</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">こんにちは！チームラボ フロントエンド班所属の森と安藤です！ 2025年9月6日、北海道のエア・ウォーターの森にて開催された「フロントエンドカンファレンス北海道2025」に現地で参加してきました！ ま...</p>
+                        <p class="related-summary">シャープは10月24日、電気自動車(EV)のコンセプトモデル「LDK+(エルディーケープラス)」の第二弾を開発したと発表した。10月30日から11月9日まで東京ビッグサイトで開催される「Japan M...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_7533.html">
-                        <h3>VS Code と Docker で始める！シンプルな Java 開発入門</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに この記事では、Visual Studio Code (VS Code) と Docker を使って Java プログラミングを始めるための、最もシンプルで標準的な方法を解説します。ビルドツー...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4319.html">
-                        <h3>h2c (HTTP/2 平文) で通信してみた 【その1 〜 バックエンド(Go/Node.js/Python)サービス...</h3>
+                    <a href="Qiita_-_人気の記事_5828.html">
+                        <h3>【初投稿】はじめに</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">1の電文が混ざってしまうdesyncやsmugglingと呼ばれる脆弱性を告発（？）するサイトが話題になっていました。 データフレームを用いずテキストフォーマットで電文の切れ目を示す HTTP/1. ...</p>
+                        <p class="related-summary">現在 非情報の理系大学院の修士1年生です。研究でPythonに触れている経験から、IT業界に興味が湧きエンジニアを目指して就活中です！ プログラミングに興味を持った理由は、自分のアイデアを作ったり表現...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_2909.html">
-                        <h3>Awesome GitHub Copilot MCP Server で GitHub Copilot を強くする</h3>
+                    <a href="Qiita_-_人気の記事_2729.html">
+                        <h3>新卒エンジニア3年目の学習記録：学習20ヶ月目</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに エンジニア歴3年目のAKです。 先月に引き続き、今月に個人学習でやっていたことを記録していきます。 先月の記事です↓ 学習20か月目にやったこと １．社内LTを主催 社内のエンジニアを対象に...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_409.html">
+                        <h3>ソフトウェアエンジニアはいかにしてAIを真に愛するに 至ったか - コードを書く人から設計意図を定義する人へ -</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに GitHub Copilot の Agent Mode には調べものやコードを書いてもらったり毎日大変お世話になっています。 MCP サーバーや各種 instructions, chat m...</p>
+                        <p class="related-summary">ソフトウェアエンジニアリングの未来に対する考察.</p>
                     </a>
                 </article>
             </div>

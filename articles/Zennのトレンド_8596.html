@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>４輪独立ステアリング移動機構の開発記録 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに ロボコン関係で見る方が多いと思うので、一応先に個人的な結論ですが、ほとんどの場合”オムニで良い”です。 大抵の場合、敗因は足回りにはありません。足の差で負けて初めて、開発を始めればいいです。 コスパが悪すぎるので、余裕がないなら作るべきではありません">
+    <title>なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編） | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="４輪独立ステアリング移動機構の開発記録">
-    <meta property="og:description" content="はじめに ロボコン関係で見る方が多いと思うので、一応先に個人的な結論ですが、ほとんどの場合”オムニで良い”です。 大抵の場合、敗因は足回りにはありません。足の差で負けて初めて、開発を始めればいいです。 コスパが悪すぎるので、余裕がないなら作るべきではありません">
+    <meta property="og:title" content="なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）">
+    <meta property="og:description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8596.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="４輪独立ステアリング移動機構の開発記録">
-    <meta name="twitter:description" content="はじめに ロボコン関係で見る方が多いと思うので、一応先に個人的な結論ですが、ほとんどの場合”オムニで良い”です。 大抵の場合、敗因は足回りにはありません。足の差で負けて初めて、開発を始めればいいです。 コスパが悪すぎるので、余裕がないなら作るべきではありません">
+    <meta name="twitter:title" content="なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）">
+    <meta name="twitter:description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "４輪独立ステアリング移動機構の開発記録",
-        "description": "はじめに ロボコン関係で見る方が多いと思うので、一応先に個人的な結論ですが、ほとんどの場合”オムニで良い”です。 大抵の場合、敗因は足回りにはありません。足の差で負けて初めて、開発を始めればいいです。 コスパが悪すぎるので、余裕がないなら作るべきではありません",
+        "headline": "なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）",
+        "description": "はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-09T09:12:07",
-        "dateModified": "2025-10-10T01:24:51.483277",
+        "datePublished": "2025-10-26T03:40:37",
+        "dateModified": "2025-10-27T16:27:00.191062",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8596.html"
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "４輪独立ステアリング移動機構の開発記録",
+                "name": "なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8596.html"
             }
         ]
@@ -114,19 +114,19 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">４輪独立ステアリング移動機構の開発記録</li>
+                <li aria-current="page">なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>４輪独立ステアリング移動機構の開発記録</h1>
+                <h1>なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/takaki_maeda_99/articles/80606c946db64e" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/yuta_kakiki/articles/13f54dd123e0d8" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-10-09T09:12:07">
-                        公開: 2025-10-09T09:12:07
+                    <time datetime="2025-10-26T03:40:37">
+                        公開: 2025-10-26T03:40:37
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
@@ -136,19 +136,20 @@
                 
                 <div class="article-body">
                     はじめに
-ロボコン関係で見る方が多いと思うので、一応先に個人的な結論ですが、ほとんどの場合”オムニで良い”です。
-大抵の場合、敗因は足回りにはありません。足の差で負けて初めて、開発を始めればいいです。
-コスパが悪すぎるので、余裕がないなら作るべきではありません。
+「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突)
 
+そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。
+.....でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか。
 
- じゃあなぜ作ったのか？
-ロマンがあったからです。機体設計やってたら、一度は作ってみたいと思いますよね。それだけです。
-単純に弊サークルの技術力向上とアピール点を増やしたいという目的もありました。
-ただ、一応実用的な側面はあって、僕は関東夏2023,学ロボ2024とオムニを使っていましたが、樽をキレイにしておかないと滑る...
+「よし、概念的に調べるぞ、ソースコードも読むぞ」ということで、RFCをはじめ色々調べてみたのでまとめていきます。
+なお、読む実装コードの言語はgolangです。
+まずはどんなふうに圧縮されているかを概念的に理解したあと、コードを実際に見て確認していきます。
+
+ 圧縮とは何かを概念的に理...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/takaki_maeda_99/articles/80606c946db64e" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/yuta_kakiki/articles/13f54dd123e0d8" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -165,16 +166,6 @@
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
                                     <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +216,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_8153.html">
+                    <a href="Zennのトレンド_7458.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">NTTドコモ、｢爆アゲ セレクション｣の還元率を12月10日より改定へ</span>
+                        <span class="nav-title">バイナリ編集プラグインの歴史と新世代のバイナリ編集プラグイン ddx.vim</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_3672.html">
+                    <a href="Zennのトレンド_8676.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">A20/A20 ProやM6シリーズの値上げ幅抑制〜TSMCの2nmプロセスで製造</span>
+                        <span class="nav-title">ソフトウェアエンジニアはいかにしてAIを真に愛するに 至ったか - コードを書く人から設計意図を定義...</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +238,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6024.html">
-                        <h3>SESでフルリモートを続けたいエンジニアが今すぐやるべきこと</h3>
+                    <a href="CNET_Japan_最新情報総合_5499.html">
+                        <h3>シャープが新型EV披露、車庫が「リビング」や「仕事部屋」に　27年度市場参入へ</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">シャープは10月24日、電気自動車(EV)のコンセプトモデル「LDK+(エルディーケープラス)」の第二弾を開発したと発表した。10月30日から11月9日まで東京ビッグサイトで開催される「Japan M...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_9639.html">
+                        <h3>見た目と中身がズレるわけ 文字化けの正体とUTF-8・CRLF入門</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">無料のエンジニアコミュニティを運営しているのですが 「フルリモートを続けたいのですが、フルリモート案件はそんなに無いんですか。」そんな声をよく耳にします。 2023年ごろまでは、SES業界にもフルリモ...</p>
+                        <p class="related-summary">はじめに 開発中に「見た目は同じなのに差分が崩れる」「Windowsで作ったテキストをLinuxで開くと一行になる」「絵文字だけ位置が合わない」といった小さな不具合に出会うことがあります。原因を押さえ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8229.html">
-                        <h3>WPFのMVVM、「理想」と「現実」のギャップを埋めるハイブリッド設計</h3>
+                    <a href="Zennのトレンド_6020.html">
+                        <h3>Vue Fes JAPAN 2025に参加してきました。</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">js、Reactを用いたフロントエンド寄りのコードを書くことが多く、Vueを書く機会はあまりないのですが、フロントエンドのエコシステムや、デザインエンジニアリングという文脈での開発について興味がありま...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_9958.html">
+                        <h3>React学習ログ No.14</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに：MVVMの理想と、現場で直面する「つらさ」 WPFでUIを開発するとき、MVVMパターンは今やデファクトスタンダードですよね。ViewModelはViewを知らず、テストが容易で、関心の分離...</p>
+                        <p class="related-summary">React： splice() とイミュータビリティ（不変性） 概要 JavaScriptの splice() は配列から要素を削除・置換・追加できるメソッド しかし、Reactのstate（状態）に...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_4091.html">
-                        <h3>プロンプトエンジニアリングを終わらせるDSPy</h3>
+                    <a href="Zennのトレンド_3987.html">
+                        <h3>国土数値情報の Shapefile をブラウザ上で変換するツールを Rust で書くために苦労したところ</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに DSPyに夢中である。DSPyの最も重要な点は、プロンプトエンジニアリングを排除できる可能性を秘めていることだ。可能性を秘めているだけで、現状、プロンプトエンジニアリングが完全に不要になった...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_7634.html">
-                        <h3>誰でも書けるスクリプト言語は、immutable な配列を提供すればよかった</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">突然ですが、 Python あるある〜。 a = [1, 2, 3] b = a # コピー？ c = a # コピー？ b. append(5) # 追加 print(b) # [1, 2, 3, ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_7951.html">
-                        <h3>「React Foundation」をメタ、マイクロソフト、Vercelらが設立へ。ReactやReact Native...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">代表的なJavaScriptライブラリのひとつとして知られる「React」の開発チームは、ReactやReact Nativeなどの開発を主導する新たな独立組織「React Foundation」の設...</p>
+                        <p class="related-summary">com/yutannihilation/ksj2gp/ ksj2gp の画面 まだ開発中で結果の正しさは保証できないですが、ある程度動く状態にはなっているので、気になる方は試してみてください。国土数値...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nani翻訳の技術的な話 | 日本のテックニュース速報</title>
-    <meta name="description" content="Nani翻訳の技術的な話 - Apple製品の最新情報をお届け。">
-    <meta name="keywords" content="AI,Mac,macOS,Windows">
+    <title>なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編） | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Nani翻訳の技術的な話">
-    <meta property="og:description" content="Nani翻訳の技術的な話 - Apple製品の最新情報をお届け。">
+    <meta property="og:title" content="なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）">
+    <meta property="og:description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5550.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nani翻訳の技術的な話">
-    <meta name="twitter:description" content="Nani翻訳の技術的な話 - Apple製品の最新情報をお届け。">
+    <meta name="twitter:title" content="なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）">
+    <meta name="twitter:description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Nani翻訳の技術的な話",
-        "description": "Nani翻訳の技術的な話 - Apple製品の最新情報をお届け。",
+        "headline": "なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）",
+        "description": "はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-14T05:31:58",
-        "dateModified": "2025-10-17T03:02:42.038053",
+        "datePublished": "2025-10-26T03:40:37",
+        "dateModified": "2025-10-27T12:43:25.825595",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5550.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5550.html",
-        "articleSection": "Apple製品",
-        "keywords": ["AI","Mac","macOS","Windows"]
+        "articleSection": "プログラミング",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Apple製品",
-                "item": "https://toy1021.github.io/affiliate2/#category=Apple製品"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Nani翻訳の技術的な話",
+                "name": "なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5550.html"
             }
         ]
@@ -113,49 +113,43 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=Apple製品">Apple製品</a></li>
-                <li aria-current="page">Nani翻訳の技術的な話</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Nani翻訳の技術的な話</h1>
+                <h1>なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/catnose99/articles/nani-translate" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: Apple製品</span>
-                    <time datetime="2025-10-14T05:31:58">
-                        公開: 2025-10-14T05:31:58
+                    <span class="source">出典: <a href="https://zenn.dev/yuta_kakiki/articles/13f54dd123e0d8" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-10-26T03:40:37">
+                        公開: 2025-10-26T03:40:37
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Mac</span>
-                    <span class="tag">macOS</span>
-                    <span class="tag">Windows</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    先日 Nani というAI翻訳アプリをリリースしました。macOS / Windowsアプリを使うとショートカットで解説つきの翻訳を簡単に呼び出すことができます。
-https://x.com/catnose99/status/1973218927158424056
-この記事ではNaniの技術的な話をまとめておきます。「レスポンスが速い」という声も多くいただいているので、そのあたりの工夫についても触れたいと思います。
+                    はじめに
+「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突)
 
- ざっくりとした構成
-主な使用技術やサービスは以下のようになっています。
+そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。
+.....でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか。
 
+「よし、概念的に調べるぞ、ソースコードも読むぞ」ということで、RFCをはじめ色々調べてみたのでまとめていきます。
+なお、読む実装コードの言語はgolangです。
+まずはどんなふうに圧縮されているかを概念的に理解したあと、コードを実際に見て確認していきます。
 
-Turso: SQLiteでユーザーの設定などを保存
-
-Upstash (Redis): キャ...
+ 圧縮とは何かを概念的に理...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/catnose99/articles/nani-translate" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/yuta_kakiki/articles/13f54dd123e0d8" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -168,30 +162,20 @@ Upstash (Redis): キャ...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Mac - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=macOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="macOS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">macOS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでmacOSに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -201,23 +185,23 @@ Upstash (Redis): キャ...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>Apple製品関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">iPhone - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">MacBook - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -232,16 +216,16 @@ Upstash (Redis): キャ...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_9594.html">
+                    <a href="Zennのトレンド_159.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Qiitaを分析して異常記事を見つけるWebアプリ</span>
+                        <span class="nav-title">バイナリ編集プラグインの歴史と新世代のバイナリ編集プラグイン ddx.vim</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_1138.html">
+                    <a href="Zennのトレンド_2578.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhone17/18シリーズを引き続き中国でも製造し米国に出荷〜Airの予約開始へ</span>
+                        <span class="nav-title">ソフトウェアエンジニアはいかにしてAIを真に愛するに 至ったか - コードを書く人から設計意図を定義...</span>
                     </a>
                 </div>
             </div>
@@ -254,53 +238,53 @@ Upstash (Redis): キャ...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_687.html">
-                        <h3>新型「MacBook Pro」発表--新チップ「M5」搭載でAI性能が最大3.5倍、価格は据え置き</h3>
+                    <a href="CNET_Japan_最新情報総合_1266.html">
+                        <h3>シャープが新型EV披露、車庫が「リビング」や「仕事部屋」に　27年度市場参入へ</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アップルは米国時間10月15日、最新プロセッサー「M5」と、これを搭載する14インチの「MacBook Pro」を発表した。.</p>
+                        <p class="related-summary">シャープは10月24日、電気自動車(EV)のコンセプトモデル「LDK+(エルディーケープラス)」の第二弾を開発したと発表した。10月30日から11月9日まで東京ビッグサイトで開催される「Japan M...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8678.html">
-                        <h3>アップル、M5搭載「Vision Pro」発表　バンド刷新　約60万円から</h3>
+                    <a href="Qiita_-_人気の記事_6282.html">
+                        <h3>見た目と中身がズレるわけ 文字化けの正体とUTF-8・CRLF入門</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Appleは、VR／AR空間コンピュータ「Vision Pro」をアップデートした。新モデルには最新のM5チップを採用し、同時に発表されたMacBook ProやiPad Proと同じアーキテクチャを...</p>
+                        <p class="related-summary">はじめに 開発中に「見た目は同じなのに差分が崩れる」「Windowsで作ったテキストをLinuxで開くと一行になる」「絵文字だけ位置が合わない」といった小さな不具合に出会うことがあります。原因を押さえ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9471.html">
-                        <h3>アップルがM5搭載「iPad Pro」発表、10月22日発売　「3.5倍のAI性能」をうたう</h3>
+                    <a href="Zennのトレンド_1101.html">
+                        <h3>Vue Fes JAPAN 2025に参加してきました。</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">Appleが新型「iPad Pro」を発表した。搭載されるのは新しいM5チップで、発売日は10月22日。M5はMacBook ProやVision Proの新モデルにも採用されており、Appleの次世...</p>
+                        <p class="related-summary">js、Reactを用いたフロントエンド寄りのコードを書くことが多く、Vueを書く機会はあまりないのですが、フロントエンドのエコシステムや、デザインエンジニアリングという文脈での開発について興味がありま...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3027.html">
-                        <h3>スティーブ・ジョブズ氏が「1ドル記念硬貨」に</h3>
+                    <a href="Qiita_-_人気の記事_7961.html">
+                        <h3>React学習ログ No.14</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">米国の記念硬貨の1つに、アップルの共同創業者であるスティーブ・ジョブズ氏が描かれている。.</p>
+                        <p class="related-summary">React： splice() とイミュータビリティ（不変性） 概要 JavaScriptの splice() は配列から要素を削除・置換・追加できるメソッド しかし、Reactのstate（状態）に...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_8711.html">
-                        <h3>M5チップ(10コアCPU)を搭載した｢iPad Pro 13インチ｣のベンチマークスコアが明らかに</h3>
+                    <a href="Zennのトレンド_9868.html">
+                        <h3>国土数値情報の Shapefile をブラウザ上で変換するツールを Rust で書くために苦労したところ</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">先月、M5チップを搭載した新型「iPad Pro」の実機が流出し、発表前に開封動画やベンチマークスコアが明らかになる騒動がありましたが、GeekBenchにその「iPad Pro (M5)」の新たなベ...</p>
+                        <p class="related-summary">com/yutannihilation/ksj2gp/ ksj2gp の画面 まだ開発中で結果の正しさは保証できないですが、ある程度動く状態にはなっているので、気になる方は試してみてください。国土数値...</p>
                     </a>
                 </article>
             </div>

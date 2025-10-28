@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プロンプトエンジニアリングを終わらせるDSPy | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに DSPyに夢中である。DSPyの最も重要な点は、プロンプトエンジニアリングを排除できる可能性を秘めていることだ。可能性を秘めているだけで、現状、プロンプトエンジニアリングが完全に不要になったわけではないのだが、こちらの分野を真面目に学ぶ動機として十分だ">
-    <meta name="keywords" content="AI">
+    <title>Grafana Loki による AWS ログ監視基盤の構築 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 初めまして、木村俊星 です。この度、某S社の SRE を専門とする事業部のインターンに参加しました。インターンでは、Grafana Loki によってログの監視基盤を構築する方法と、Amazon CloudWatch Logs と比較したときの得失について調査しました">
+    <meta name="keywords" content="AWS,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="プロンプトエンジニアリングを終わらせるDSPy">
-    <meta property="og:description" content="はじめに DSPyに夢中である。DSPyの最も重要な点は、プロンプトエンジニアリングを排除できる可能性を秘めていることだ。可能性を秘めているだけで、現状、プロンプトエンジニアリングが完全に不要になったわけではないのだが、こちらの分野を真面目に学ぶ動機として十分だ">
+    <meta property="og:title" content="Grafana Loki による AWS ログ監視基盤の構築">
+    <meta property="og:description" content="はじめに 初めまして、木村俊星 です。この度、某S社の SRE を専門とする事業部のインターンに参加しました。インターンでは、Grafana Loki によってログの監視基盤を構築する方法と、Amazon CloudWatch Logs と比較したときの得失について調査しました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6547.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="プロンプトエンジニアリングを終わらせるDSPy">
-    <meta name="twitter:description" content="はじめに DSPyに夢中である。DSPyの最も重要な点は、プロンプトエンジニアリングを排除できる可能性を秘めていることだ。可能性を秘めているだけで、現状、プロンプトエンジニアリングが完全に不要になったわけではないのだが、こちらの分野を真面目に学ぶ動機として十分だ">
+    <meta name="twitter:title" content="Grafana Loki による AWS ログ監視基盤の構築">
+    <meta name="twitter:description" content="はじめに 初めまして、木村俊星 です。この度、某S社の SRE を専門とする事業部のインターンに参加しました。インターンでは、Grafana Loki によってログの監視基盤を構築する方法と、Amazon CloudWatch Logs と比較したときの得失について調査しました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6547.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "プロンプトエンジニアリングを終わらせるDSPy",
-        "description": "はじめに DSPyに夢中である。DSPyの最も重要な点は、プロンプトエンジニアリングを排除できる可能性を秘めていることだ。可能性を秘めているだけで、現状、プロンプトエンジニアリングが完全に不要になったわけではないのだが、こちらの分野を真面目に学ぶ動機として十分だ",
+        "headline": "Grafana Loki による AWS ログ監視基盤の構築",
+        "description": "はじめに 初めまして、木村俊星 です。この度、某S社の SRE を専門とする事業部のインターンに参加しました。インターンでは、Grafana Loki によってログの監視基盤を構築する方法と、Amazon CloudWatch Logs と比較したときの得失について調査しました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-08T22:45:37",
-        "dateModified": "2025-10-09T10:21:30.472876",
+        "datePublished": "2025-10-27T12:04:46",
+        "dateModified": "2025-10-28T22:20:09.422347",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6547.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6547.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AI"]
+        "articleSection": "ガジェット",
+        "keywords": ["AWS","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "ガジェット",
+                "item": "https://toy1021.github.io/affiliate2/#category=ガジェット"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "プロンプトエンジニアリングを終わらせるDSPy",
+                "name": "Grafana Loki による AWS ログ監視基盤の構築",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6547.html"
             }
         ]
@@ -113,25 +113,26 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">プロンプトエンジニアリングを終わらせるDSPy</li>
+                <li><a href="../#category=ガジェット">ガジェット</a></li>
+                <li aria-current="page">Grafana Loki による AWS ログ監視基盤の構築</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>プロンプトエンジニアリングを終わらせるDSPy</h1>
+                <h1>Grafana Loki による AWS ログ監視基盤の構築</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/cybernetics/articles/39fb763aca746c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-10-08T22:45:37">
-                        公開: 2025-10-08T22:45:37
+                    <span class="source">出典: <a href="https://zenn.dev/shunsei/articles/e3a2640a39ef40" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: ガジェット</span>
+                    <time datetime="2025-10-27T12:04:46">
+                        公開: 2025-10-27T12:04:46
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
@@ -139,13 +140,31 @@
                 
                 <div class="article-body">
                     はじめに
-DSPyに夢中である。DSPyの最も重要な点は、プロンプトエンジニアリングを排除できる可能性を秘めていることだ。可能性を秘めているだけで、現状、プロンプトエンジニアリングが完全に不要になったわけではないのだが、こちらの分野を真面目に学ぶ動機として十分だ。使い心地というか、真面目にこの分野やってみようと思ったのはPFNのChainerを初めて触ってみたときの感覚に似ている。その後、PyTorchが出現し、すごいスピードで技術とツールが進歩していく中で、学んだことをまとめるためにブログを書き始めたのを思い出した。
-https://dspy.ai/#__tabbed_3_1
-DS...
+初めまして、木村俊星 です。この度、某S社の SRE を専門とする事業部のインターンに参加しました。インターンでは、Grafana Loki によってログの監視基盤を構築する方法と、Amazon CloudWatch Logs と比較したときの得失について調査しました。本記事では、その調査結果を紹介します。
+環境構築と調査結果を1つの記事に書くと長くなりすぎてしまうため、以下の2部構成としました。
+
+第1部
+
+Grafana Loki について
+AWS 検証環境の構築
+
+
+
+第2部
+
+検索性の比較
+アラート機能の比較
+金銭コストの比較
+
+
+
+本記事は第1部の内容です。
+
+ ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/cybernetics/articles/39fb763aca746c" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/shunsei/articles/e3a2640a39ef40" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,30 +177,20 @@ DS...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -191,23 +200,23 @@ DS...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>ガジェット関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +231,16 @@ DS...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_1011.html">
+                    <a href="Qiita_-_人気の記事_4114.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">タグ・ホイヤー、独自OS｢TAG Heuer OS｣を搭載&amp;MFi認証を取得した新型スマートウォッチ...</span>
+                        <span class="nav-title">EC-CUBEプラグイン実装で、気をつけること</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_8222.html">
+                    <a href="気になる記になる_9529.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">折りたたみ式iPhoneのフレームはチタンとアルミの複合材を採用か</span>
+                        <span class="nav-title">｢iPhone 18 Pro Max｣のリアカメラは可変絞り対応との情報が再び</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +253,13 @@ DS...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1505.html">
-                        <h3>日本の次世代宇宙船「HTV-X」とは　JAXAが最新動画を公開--10月21日打ち上げ</h3>
+                    <a href="気になる記になる_8357.html">
+                        <h3>Microsoft、｢Windows 11 バージョン 26H1｣を来年初めに一部デバイス向けにリリースか</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">ガジェット</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">宇宙航空研究開発機構（JAXA）は10月8日、国際宇宙ステーション（ISS）への物資輸送を手掛ける日本の次世代宇宙船「HTV-X」の最新動画を公開した。10月21日に種子島宇宙センターから打ち上げられ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_156.html">
-                        <h3>JR東、E6系新幹線を置き換えへ</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">東日本旅客鉄道（JR東日本）は10月7日、秋田新幹線用の新型車両と高速ダイヤに対応した新幹線専用検測車「E927形」の同時開発に着手することを明らかにした。検測車については2029年度の導入を予定して...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9683.html">
-                        <h3>WPFのMVVM、「理想」と「現実」のギャップを埋めるハイブリッド設計</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに：MVVMの理想と、現場で直面する「つらさ」 WPFでUIを開発するとき、MVVMパターンは今やデファクトスタンダードですよね。ViewModelはViewを知らず、テストが容易で、関心の分離...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_7385.html">
-                        <h3>誰でも書けるスクリプト言語は、immutable な配列を提供すればよかった</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">突然ですが、 Python あるある〜。 a = [1, 2, 3] b = a # コピー？ c = a # コピー？ b. append(5) # 追加 print(b) # [1, 2, 3, ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_8641.html">
-                        <h3>「React Foundation」をメタ、マイクロソフト、Vercelらが設立へ。ReactやReact Native...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">代表的なJavaScriptライブラリのひとつとして知られる「React」の開発チームは、ReactやReact Nativeなどの開発を主導する新たな独立組織「React Foundation」の設...</p>
+                        <p class="related-summary">Neowinによると、Microsoftは来年初めに「Windows 11 バージョン 26H1」を一部のデバイス向けにリリースする可能性が浮上しました。 Microsoftは4年前に「Windows...</p>
                     </a>
                 </article>
             </div>

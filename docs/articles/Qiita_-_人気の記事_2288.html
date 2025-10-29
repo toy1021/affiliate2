@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VSCode にて Excel VBA を編集する （excel-vba-sync） | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Excel にて VBAマクロ を編集する際のエディタである VBE はエディタ機能が貧弱で、これを補う為にVisualStudioCode の拡張機能である XVBA1 などが用いられている。 ただ、XVBAも初期の設定が意外と面倒なため、excel-vba-.">
-    <meta name="keywords" content="Excel">
+    <title>EC-CUBEプラグイン実装で、気をつけること | 日本のテックニュース速報</title>
+    <meta name="description" content="前提 特定製品専用のEC-CUBEプラグイン(一般配布しない)を開発したときの備忘録です。 プラグインとして開発するので、付け外ししやすいように実装していたつもりが、Customize と Plugin の境界があいまいになりやすく、いつの間にか依存関係が入り組んでしまう.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="VSCode にて Excel VBA を編集する （excel-vba-sync）">
-    <meta property="og:description" content="はじめに Excel にて VBAマクロ を編集する際のエディタである VBE はエディタ機能が貧弱で、これを補う為にVisualStudioCode の拡張機能である XVBA1 などが用いられている。 ただ、XVBAも初期の設定が意外と面倒なため、excel-vba-.">
+    <meta property="og:title" content="EC-CUBEプラグイン実装で、気をつけること">
+    <meta property="og:description" content="前提 特定製品専用のEC-CUBEプラグイン(一般配布しない)を開発したときの備忘録です。 プラグインとして開発するので、付け外ししやすいように実装していたつもりが、Customize と Plugin の境界があいまいになりやすく、いつの間にか依存関係が入り組んでしまう.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2288.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="VSCode にて Excel VBA を編集する （excel-vba-sync）">
-    <meta name="twitter:description" content="はじめに Excel にて VBAマクロ を編集する際のエディタである VBE はエディタ機能が貧弱で、これを補う為にVisualStudioCode の拡張機能である XVBA1 などが用いられている。 ただ、XVBAも初期の設定が意外と面倒なため、excel-vba-.">
+    <meta name="twitter:title" content="EC-CUBEプラグイン実装で、気をつけること">
+    <meta name="twitter:description" content="前提 特定製品専用のEC-CUBEプラグイン(一般配布しない)を開発したときの備忘録です。 プラグインとして開発するので、付け外ししやすいように実装していたつもりが、Customize と Plugin の境界があいまいになりやすく、いつの間にか依存関係が入り組んでしまう.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "VSCode にて Excel VBA を編集する （excel-vba-sync）",
-        "description": "はじめに Excel にて VBAマクロ を編集する際のエディタである VBE はエディタ機能が貧弱で、これを補う為にVisualStudioCode の拡張機能である XVBA1 などが用いられている。 ただ、XVBAも初期の設定が意外と面倒なため、excel-vba-.",
+        "headline": "EC-CUBEプラグイン実装で、気をつけること",
+        "description": "前提 特定製品専用のEC-CUBEプラグイン(一般配布しない)を開発したときの備忘録です。 プラグインとして開発するので、付け外ししやすいように実装していたつもりが、Customize と Plugin の境界があいまいになりやすく、いつの間にか依存関係が入り組んでしまう.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-05T01:56:48",
-        "dateModified": "2025-10-07T22:18:20.206069",
+        "datePublished": "2025-10-27T11:37:20",
+        "dateModified": "2025-10-29T01:40:45.553365",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2288.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2288.html",
         "articleSection": "プログラミング",
-        "keywords": ["Excel"]
+        "keywords": []
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "VSCode にて Excel VBA を編集する （excel-vba-sync）",
+                "name": "EC-CUBEプラグイン実装で、気をつけること",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2288.html"
             }
         ]
@@ -114,37 +114,34 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">VSCode にて Excel VBA を編集する （excel-vba-sync）</li>
+                <li aria-current="page">EC-CUBEプラグイン実装で、気をつけること</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>VSCode にて Excel VBA を編集する （excel-vba-sync）</h1>
+                <h1>EC-CUBEプラグイン実装で、気をつけること</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/EitaroSeta/items/1bca6346fabd5a422161?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/hirosaku21/items/21ca3f6a74f574007820?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-10-05T01:56:48">
-                        公開: 2025-10-05T01:56:48
+                    <time datetime="2025-10-27T11:37:20">
+                        公開: 2025-10-27T11:37:20
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">Excel</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Excel にて VBAマクロ を編集する際のエディタである VBE はエディタ機能が貧弱で、これを補う為にVisualStudioCode の拡張機能である XVBA1 などが用いられている。
-ただ、XVBAも初期の設定が意外と面倒なため、excel-vba-...
+                    前提
+特定製品専用のEC-CUBEプラグイン(一般配布しない)を開発したときの備忘録です。
+プラグインとして開発するので、付け外ししやすいように実装していたつもりが、Customize と Plugin の境界があいまいになりやすく、いつの間にか依存関係が入り組んでしまう...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/EitaroSeta/items/1bca6346fabd5a422161?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/hirosaku21/items/21ca3f6a74f574007820?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -156,16 +153,6 @@ Excel にて VBAマクロ を編集する際のエディタである VBE はエ�
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Excel&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Excel - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Excel - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでExcelに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -221,16 +208,16 @@ Excel にて VBAマクロ を編集する際のエディタである VBE はエ�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_1955.html">
+                    <a href="Zennのトレンド_63.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【セール】CIOのUSB充電器やモバイルバッテリーが最大50%オフ&amp;全品ポイント2倍で販売中（10月...</span>
+                        <span class="nav-title">個人的もっと知られてほしいNeovim/Vimプラグイン８選</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_595.html">
+                    <a href="iPhone_Mania_2661.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">M5Stack LLM8850 モジュールを Raspberry Pi 5 で動かしてみた(LLM編...</span>
+                        <span class="nav-title">iPad Pro（M6）がベイパーチャンバー搭載〜iPad Foldは開発中止もあり</span>
                     </a>
                 </div>
             </div>
@@ -243,53 +230,53 @@ Excel にて VBAマクロ を編集する際のエディタである VBE はエ�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8485.html">
-                        <h3>高速道路の逆走を「空中ディスプレイ」で防ぐ--三菱電機がCEATECで展示</h3>
+                    <a href="CNET_Japan_最新情報総合_5927.html">
+                        <h3>国交省、道路被害把握にJAXAの衛星画像　夜や雨天でも地上を映す「だいち4号」など活用</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">三菱電機が新開発した空中ディスプレイ「CielVision（シエルビジョン）」を発表。自由曲面ミラー1枚で映像を空中に高精細表示し、従来比4倍の光利用効率を実現。CEATEC 2025で裸眼3D映像を...</p>
+                        <p class="related-summary">国土交通省道路局と宇宙航空研究開発機構（JAXA）は10月28日、災害時に人工衛星の画像データを活用して道路被害を把握するための協定を締結した。夜間や悪天候でも広域の道路状況を迅速に把握できるようにし...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9008.html">
-                        <h3>Suicaが基盤の街作り、JR東日本が推進へ--浜松町〜大井町の「広域品川圏」で</h3>
+                    <a href="Publickey_6975.html">
+                        <h3>［速報］GitHub Copilot Coding AgentがSlackとの連携機能を搭載</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">JR東日本が「広域品川圏」構想を発表。高輪ゲートウェイから大井町までを結ぶ再開発で、2026年にTAKANAWA GATEWAY CITYが開業。Suica連携の未来都市へ。.</p>
+                        <p class="related-summary">GitHubは、日本時間本日未明から開催中の年次イベント「GitHub Universe 2025」で、GitHub Copilot Coding AgentとSlackとの連携機能を搭載したことを発...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4679.html">
-                        <h3>【binaryまで読んで理解する】Javaでゼロから作るgit add</h3>
+                    <a href="気になる記になる_7073.html">
+                        <h3>【AmazonスマイルSALE】EarFunのワイヤレスイヤホンなどが特価に｜追加で6％オフになるクーポンも配布中</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">コスパの高いワイヤレスオーディオ機器で有名なEarFunが、Amazonが昨日よりスタートした「スマイルSALE」において、対象製品を特別価格で販売しています。 同社は2018年に経験豊富な工業デザイ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_3568.html">
+                        <h3>日刊IETF (2025-10-27)</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">この記事について 新卒で入社したBrainpadのプロダクト開発エンジニアグループには、自由発表会（後述）というものがあり、そこで自分が約2年前に発表した内容を載せてみようと思ってできた記事になります...</p>
+                        <p class="related-summary">こんにちは、GMOコネクトの名もなきエンジニアです。 よろしくお願いします! 日刊IETFは、I-D AnnounceやIETF Announceに投稿されたメールをサマリーし続けるという修行的な活動...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_1751.html">
-                        <h3>「動けばOK」だった僕が2ヶ月のAPI実装研修を通して学んだこと</h3>
+                    <a href="Zennのトレンド_4783.html">
+                        <h3>【心理学】ダブルバインドが横行する殺伐とした開発現場は実在するので、メンバーは自己防衛の手段としての心理学を身に付けて冷...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは！株式会社ビットエー所属 25卒エンジニアのkonchanです。 学生時代に数年間プログラミングを学び、「これで僕もWebアプリが作れるぜ！」と意気揚々と入社した僕を待っていたのは...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8864.html">
-                        <h3>良いテストとはなんだろう？ - （good code, bad codeより）</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">良いテストの原則・向き合い方 業務でも個人でも、開発をする方は「自動テスト」を書くでしょう。 テスト嫌い、という方もいるかもしれないですが、やはりあるのとないのでは大幅に開発体験が変わります。 書く瞬...</p>
+                        <p class="related-summary">はじめに 対象 船頭多くして船山に登る現場に、現状を説明したい開発者向け。 ダブルバインドを知る ! 筆者は専門家ではないので、詳細は信頼できる情報源でチェックしてください。 ある人が、メッセージとメ...</p>
                     </a>
                 </article>
             </div>

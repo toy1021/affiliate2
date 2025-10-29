@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>なぜ気軽にテーブルにカラムを足してはいけないのか | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに データベース（RDB）の設計で深く考えずにテーブルにカラムを追加してしまうことはありませんか？テーブルの追加よりもアプリケーション側での変更が少ないので、心理的ハードルが低いこともあるでしょう。しかし、そうしてカラム追加していくうちに取り返しのつかないことになるかもしれません">
+    <title>なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編） | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="なぜ気軽にテーブルにカラムを足してはいけないのか">
-    <meta property="og:description" content="はじめに データベース（RDB）の設計で深く考えずにテーブルにカラムを追加してしまうことはありませんか？テーブルの追加よりもアプリケーション側での変更が少ないので、心理的ハードルが低いこともあるでしょう。しかし、そうしてカラム追加していくうちに取り返しのつかないことになるかもしれません">
+    <meta property="og:title" content="なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）">
+    <meta property="og:description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4963.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="なぜ気軽にテーブルにカラムを足してはいけないのか">
-    <meta name="twitter:description" content="はじめに データベース（RDB）の設計で深く考えずにテーブルにカラムを追加してしまうことはありませんか？テーブルの追加よりもアプリケーション側での変更が少ないので、心理的ハードルが低いこともあるでしょう。しかし、そうしてカラム追加していくうちに取り返しのつかないことになるかもしれません">
+    <meta name="twitter:title" content="なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）">
+    <meta name="twitter:description" content="はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "なぜ気軽にテーブルにカラムを足してはいけないのか",
-        "description": "はじめに データベース（RDB）の設計で深く考えずにテーブルにカラムを追加してしまうことはありませんか？テーブルの追加よりもアプリケーション側での変更が少ないので、心理的ハードルが低いこともあるでしょう。しかし、そうしてカラム追加していくうちに取り返しのつかないことになるかもしれません",
+        "headline": "なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）",
+        "description": "はじめに 「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突) そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。. でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-13T10:00:01",
-        "dateModified": "2025-10-17T10:21:36.115080",
+        "datePublished": "2025-10-26T03:40:37",
+        "dateModified": "2025-10-29T03:16:48.928111",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4963.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4963.html",
-        "articleSection": "テクノロジー",
+        "articleSection": "プログラミング",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "なぜ気軽にテーブルにカラムを足してはいけないのか",
+                "name": "なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4963.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">なぜ気軽にテーブルにカラムを足してはいけないのか</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>なぜ気軽にテーブルにカラムを足してはいけないのか</h1>
+                <h1>なんとなく聞き流しがちな「圧縮」をGoの実装から理解する（可逆圧縮編）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/mj2mkt/articles/2025-10-12-dont-add-columns-at-random" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-10-13T10:00:01">
-                        公開: 2025-10-13T10:00:01
+                    <span class="source">出典: <a href="https://zenn.dev/yuta_kakiki/articles/13f54dd123e0d8" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-10-26T03:40:37">
+                        公開: 2025-10-26T03:40:37
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
@@ -136,20 +136,20 @@
                 
                 <div class="article-body">
                     はじめに
-データベース（RDB）の設計で深く考えずにテーブルにカラムを追加してしまうことはありませんか？テーブルの追加よりもアプリケーション側での変更が少ないので、心理的ハードルが低いこともあるでしょう。しかし、そうしてカラム追加していくうちに取り返しのつかないことになるかもしれません。
-この記事では大きく以下の3つに分けて、なぜ気軽にテーブルにカラムを足してはいけないのかを説明します。
+「データを圧縮すれば小さいサイズでレスポンスを返せて速くなるぞ」(唐突)
 
-そもそもデータベース設計がちゃんとできていないことの兆候である
-変更のコストが大きい
-インデックスの設計が難しくなる
+そこで大抵、「まあそうだよね」と答えられるはずです。これは非エンジニアだとしてもなんとなくそういうふうに思えるはずです。
+.....でも、よく考えたら、データを「圧縮」「小さくする」って、実際何をしてるんだろうか。
 
+「よし、概念的に調べるぞ、ソースコードも読むぞ」ということで、RFCをはじめ色々調べてみたのでまとめていきます。
+なお、読む実装コードの言語はgolangです。
+まずはどんなふうに圧縮されているかを概念的に理解したあと、コードを実際に見て確認していきます。
 
- そもそもデータベース設計がちゃんとできていないことの兆候である
-気軽にカ...
+ 圧縮とは何かを概念的に理...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/mj2mkt/articles/2025-10-12-dont-add-columns-at-random" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/yuta_kakiki/articles/13f54dd123e0d8" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,25 +158,50 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -191,16 +216,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_4270.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_6342.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iPhone Foldが税込30万円以下で発売可能？ヒンジの部品単価削減が進行中</span>
+                        <span class="nav-title">生成AIと結婚 婚姻制度上の問題は</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2144.html">
+                    <a href="Zennのトレンド_2936.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Next.js App Routerで破綻しない設計──本番で使えるアーキテクチャ実践ガイド</span>
+                        <span class="nav-title">ソフトウェアエンジニアはいかにしてAIを真に愛するに 至ったか - コードを書く人から設計意図を定義...</span>
                     </a>
                 </div>
             </div>
@@ -213,53 +238,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8656.html">
-                        <h3>「ヘイ、Copilot」だけでOK、Windows 11のCopilotが音声のみで操作可能に</h3>
+                    <a href="CNET_Japan_最新情報総合_1964.html">
+                        <h3>国交省、道路被害把握にJAXAの衛星画像　夜や雨天でも地上を映す「だいち4号」など活用</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">マイクロソフトは、音声コマンド「Hey Copilot」を使ってCopilotを利用する方法を説明した。.</p>
+                        <p class="related-summary">国土交通省道路局と宇宙航空研究開発機構（JAXA）は10月28日、災害時に人工衛星の画像データを活用して道路被害を把握するための協定を締結した。夜間や悪天候でも広域の道路状況を迅速に把握できるようにし...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2302.html">
-                        <h3>半世紀前から知られる「地球磁場の裂け目」がいま拡大中　我々への影響は</h3>
+                    <a href="CNET_Japan_最新情報総合_7206.html">
+                        <h3>BYD初の軽EV「RACCO」の実物を見てきた--26年半ば発売、「適正な価格で販売」と同社</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">半世紀以上前から知られている地球磁場（地磁気）の“ほころび”が、いま再び注目を集めている。南大西洋上で観測される磁場の弱い領域「南大西洋異常帯（South Atlantic Anomaly／SAA）」...</p>
+                        <p class="related-summary">中国BYDが日本市場向けに開発した軽EV「RACCO（ラッコ）」をJapan Mobility Show 2025で初公開。スライドドアを備えた日本初の軽EVとして注目。デザインやバッテリー仕様、発売...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9986.html">
-                        <h3>体験ギフト・マーケットプレイス「anatae（あなたへ）」、サービス開始から18か月で掲載体験数1,000件を突破</h3>
+                    <a href="ASCII_jp__トップ_3788.html">
+                        <h3>【膝を新品に】京大発の軟骨再生技術。老後の移動の悩みに希望</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">体験ギフト・マーケットプレイス「anatae（あなたへ）」、サービス開始から18か月で掲載体験数1,000件を突破.</p>
+                        <p class="related-summary">お年寄りの悩みといえば「膝が痛くて歩けない」。小型モビリティで移動支援しよう、なんて試みもあるけれど、なかなか普及しない。京大発スタートアップの株式会社Arktus Therapeuticsは膝そのも...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5619.html">
-                        <h3>【2023年度 省エネ大賞受賞】シャープのドラム式洗濯乾燥機セットが14％オフ！</h3>
+                    <a href="Publickey_9941.html">
+                        <h3>［速報］GitHub Copilot Coding AgentがSlackとの連携機能を搭載</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">乾燥・洗濯性能と省エネルギーを両立させたドラム式洗濯乾燥機「ES-X11B」がAmazonタイムセールに登場！.</p>
+                        <p class="related-summary">GitHubは、日本時間本日未明から開催中の年次イベント「GitHub Universe 2025」で、GitHub Copilot Coding AgentとSlackとの連携機能を搭載したことを発...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_391.html">
-                        <h3>創業祭「バリュー盛」が1274円で超お値打ち！10月18日スタート</h3>
+                    <a href="気になる記になる_8896.html">
+                        <h3>【AmazonスマイルSALE】EarFunのワイヤレスイヤホンなどが特価に｜追加で6％オフになるクーポンも配布中</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">小僧寿しは10月18日から31日までの期間限定で「創業祭 第1弾 感謝バリュー盛フェア」を開催。人気の「バリュー盛」が南まぐろ中とろ入りの特別仕様に。.</p>
+                        <p class="related-summary">コスパの高いワイヤレスオーディオ機器で有名なEarFunが、Amazonが昨日よりスタートした「スマイルSALE」において、対象製品を特別価格で販売しています。 同社は2018年に経験豊富な工業デザイ...</p>
                     </a>
                 </article>
             </div>

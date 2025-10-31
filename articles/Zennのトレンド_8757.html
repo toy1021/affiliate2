@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>サーバー代0円！ P2Pと無料サービスだけでリアルタイム対戦オセロを作った話 | 日本のテックニュース速報</title>
-    <meta name="description" content="サーバー代0円！ P2Pと無料サービスだけでリアルタイム対戦オセロを作った話 - プログラミング関連情報をお届け。">
-    <meta name="keywords" content="GitHub,ゲーム">
+    <title>WebSocket入門：GoでEcho/Chat機能を実装してみた | 日本のテックニュース速報</title>
+    <meta name="description" content="記事を書いた背景 WebSocket の実装が初めてだったこともあり、頭の中を整理しておこうと思い記事にしました。 全然関係ないですが、1 年くらい前にプロダクトへサーバレス構成でチャット機能を実装する時にインフラ側の基盤を作ったのが懐かしく感じました">
+    <meta name="keywords" content="Echo">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="サーバー代0円！ P2Pと無料サービスだけでリアルタイム対戦オセロを作った話">
-    <meta property="og:description" content="サーバー代0円！ P2Pと無料サービスだけでリアルタイム対戦オセロを作った話 - プログラミング関連情報をお届け。">
+    <meta property="og:title" content="WebSocket入門：GoでEcho/Chat機能を実装してみた">
+    <meta property="og:description" content="記事を書いた背景 WebSocket の実装が初めてだったこともあり、頭の中を整理しておこうと思い記事にしました。 全然関係ないですが、1 年くらい前にプロダクトへサーバレス構成でチャット機能を実装する時にインフラ側の基盤を作ったのが懐かしく感じました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8757.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="サーバー代0円！ P2Pと無料サービスだけでリアルタイム対戦オセロを作った話">
-    <meta name="twitter:description" content="サーバー代0円！ P2Pと無料サービスだけでリアルタイム対戦オセロを作った話 - プログラミング関連情報をお届け。">
+    <meta name="twitter:title" content="WebSocket入門：GoでEcho/Chat機能を実装してみた">
+    <meta name="twitter:description" content="記事を書いた背景 WebSocket の実装が初めてだったこともあり、頭の中を整理しておこうと思い記事にしました。 全然関係ないですが、1 年くらい前にプロダクトへサーバレス構成でチャット機能を実装する時にインフラ側の基盤を作ったのが懐かしく感じました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8757.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "サーバー代0円！ P2Pと無料サービスだけでリアルタイム対戦オセロを作った話",
-        "description": "サーバー代0円！ P2Pと無料サービスだけでリアルタイム対戦オセロを作った話 - プログラミング関連情報をお届け。",
+        "headline": "WebSocket入門：GoでEcho/Chat機能を実装してみた",
+        "description": "記事を書いた背景 WebSocket の実装が初めてだったこともあり、頭の中を整理しておこうと思い記事にしました。 全然関係ないですが、1 年くらい前にプロダクトへサーバレス構成でチャット機能を実装する時にインフラ側の基盤を作ったのが懐かしく感じました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-17T13:08:56",
-        "dateModified": "2025-10-19T22:18:30.557296",
+        "datePublished": "2025-10-30T02:43:23",
+        "dateModified": "2025-10-31T01:28:55.044994",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8757.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8757.html",
-        "articleSection": "プログラミング",
-        "keywords": ["GitHub","ゲーム"]
+        "articleSection": "通信・ネットワーク",
+        "keywords": ["Echo"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "通信・ネットワーク",
+                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "サーバー代0円！ P2Pと無料サービスだけでリアルタイム対戦オセロを作った話",
+                "name": "WebSocket入門：GoでEcho/Chat機能を実装してみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8757.html"
             }
         ]
@@ -113,44 +113,48 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">サーバー代0円！ P2Pと無料サービスだけでリアルタイム対戦オセロを作った話</li>
+                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
+                <li aria-current="page">WebSocket入門：GoでEcho/Chat機能を実装してみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>サーバー代0円！ P2Pと無料サービスだけでリアルタイム対戦オセロを作った話</h1>
+                <h1>WebSocket入門：GoでEcho/Chat機能を実装してみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/kinnkinn/articles/ff844e4d9e3ce4" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-10-17T13:08:56">
-                        公開: 2025-10-17T13:08:56
+                    <span class="source">出典: <a href="https://zenn.dev/takehiro1111/articles/go_web_socket" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: 通信・ネットワーク</span>
+                    <time datetime="2025-10-30T02:43:23">
+                        公開: 2025-10-30T02:43:23
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">GitHub</span>
-                    <span class="tag">ゲーム</span>
+                    <span class="tag">Echo</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    概要
-この記事では、サーバーコストを一切かけずにブラウザで動作するリアルタイム対戦ゲームを開発した際の技術的な構成と実装について解説します。WebRTC (PeerJS) によるP2P通信を主軸に、シグナリングサーバーをRender、フロントエンドをGitHub Pagesにデプロイすることで、完全無料で動作するブラウザオセロゲームを実現しました。
+                    1.記事を書いた背景
+WebSocket の実装が初めてだったこともあり、頭の中を整理しておこうと思い記事にしました。
+全然関係ないですが、1 年くらい前にプロダクトへサーバレス構成でチャット機能を実装する時にインフラ側の基盤を作ったのが懐かしく感じました。
+
+ 2.対象読者
+
+WebSocket って聞いたことあるけど何だっけという方(自分みたいな)
+実装レベルで気になる方(自分みたいな)
 
 
-ここクリックしてプレイする:https://kinn00kinn.github.io/osero_p2p_front.github.io/
+ 3.WebSocket とは？
 
-
-フロントエンド: https://github.com/kinn00kinn/osero_...
+WebSocket API は、ユーザーのブラウザーとサーバー間で対話的な通信セッションを開くことができるものです。この API を使用すると、サーバー...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/kinnkinn/articles/ff844e4d9e3ce4" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/takehiro1111/articles/go_web_socket" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,30 +167,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Echo&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Echo - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%B2%E3%83%BC%E3%83%A0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ゲーム - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">ゲーム - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでゲームに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">Echo - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEchoに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -196,23 +180,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>通信・ネットワーク関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +211,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_3294.html">
+                    <a href="気になる記になる_3343.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【非公式】AtCoder 言語アップデート 2024-2025 での変更点</span>
+                        <span class="nav-title">ロジクールの人気マウスの最新モデル｢MX Master 4｣は本日発売</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_491.html">
+                    <a href="Qiita_-_人気の記事_1678.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">M5チップ搭載｢MacBook Pro 14インチ｣のベンチマークスコアが明らかに｜前モデル比でCP...</span>
+                        <span class="nav-title">AngularでBootstrapを導入して簡単にデザインが整ったWebページを作成する</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +233,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4462.html">
-                        <h3>アークエッジ・スペース、 ハイパースペクトルカメラの軌道上実証など超小型衛星「AE2a」ミッションのフルサクセスを発表</h3>
+                    <a href="ASCII_jp__トップ_7862.html">
+                        <h3>「CAPCOM AUTUMN SALE」がSteam Store／ニンテンドーeショップ／App Storeにラインアッ...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">株式会社アークエッジ・スペースは、2025年6月24日に打ち上げられた6U級自社開発の超小型衛星「AE2a」について、設定したサクセスクライテリア（成功基準）をすべて達成し、ミッションがフルサクセスと...</p>
+                        <p class="related-summary">カプコンは、各デジタルストアで開催中の「CAPCOM AUTUMN SALE」について、Steam Store／ニンテンドーeショップ／App Storeにラインアップを追加してアップデートしたと20...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6728.html">
-                        <h3>[個人開発] React×TypeScript×Geminiで調味料代替案アプリをリリースしました！</h3>
+                    <a href="ASCII_jp__トップ_7172.html">
+                        <h3>格安SIMで企業ブランド強化を　ミークモバイルが“非通信事業者”向けMVNO代行サービス</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに JISOUで学習しているHeyho-です。 Reactの学習の一環として、個人アプリのアイデア出しからMVP作成、そしてアプリ開発までを行いました。 約1ヶ月という限られた期間で、「0から1...</p>
+                        <p class="related-summary">近年、通信事業を持たない小売やエンターテインメント、インフラ企業によるモバイル（MVNO）サービスの提供が増えているという。ミークモバイルは、こうした非通信事業者によるモバイル事業参入を支援する「MV...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4204.html">
-                        <h3>【高校数学でわかる】Haskellで実装するフィボナッチ数列</h3>
+                    <a href="Qiita_-_人気の記事_6006.html">
+                        <h3>【レベル2】Power Automate × Office スクリプトで稼働入力表を自動作成する：祝日を自動取得してみよ...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに 今月からHaskellというプログラミング言語を趣味で使い始めました。 その中で、フィボナッチ数列の実装をやってみたところ、Haskellという言語の素晴らしさを肌で感じることができたので、...</p>
+                        <p class="related-summary">com/sonooh/private/2759f1cd8ca2afd8b668 の続きです。 前回は Power Automate を用いて稼働入力表を自動作成するフローを構築しましたが、祝日の設定を...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2508.html">
-                        <h3>【Next.js】MediaRecorder APIとWhisper APIで音声メモアプリを作ってみた</h3>
+                    <a href="Qiita_-_人気の記事_3068.html">
+                        <h3>【レベル1】Power Automate × Office スクリプトで稼働入力表を自動作成する</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに 現在、個人開発の機能で音声メモを検討しており、技術検証を進めていました。 Next. jsで利用できるものを前提に検証し、MDNや公式ドキュメント上にあったAPIを用いて音声メモアプリを再現...</p>
+                        <p class="related-summary">PowerAutomate から特定の Office ファイルの Office スクリプトを実行する、ということをこれまでやってこなかったので、自身の勉強がてらタイトルの取り組みをしてみることにしまし...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4440.html">
-                        <h3>【GitHub】100日間コミットしてみた感想と気付き</h3>
+                    <a href="気になる記になる_49.html">
+                        <h3>DJI、11月5日に新製品を発表へ｜新型スマホジンバル｢Osmo Mobile 8｣か</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">はじめに 2025年の夏から秋にかけて、100日間連続でGitHubにコミットすることを目標にしました。 最初は「毎日コードを書いて習慣化したい」くらいの気持ちでしたが、気づけば生活と考え方そのものが...</p>
+                        <p class="related-summary">DJIが、日本時間の11月5日21時に何らかの新製品を発表することを案内しています。 ティザーサイトには「動きに合う、あなたを撮る」とのキャッチフレーズと共に新製品が回転する様子が描かれています。 そ...</p>
                     </a>
                 </article>
             </div>

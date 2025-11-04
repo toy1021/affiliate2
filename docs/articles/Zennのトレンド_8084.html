@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ユニットテストがしやすいコード構成について過去を振り返って考えてみた | 日本のテックニュース速報</title>
-    <meta name="description" content="ユニットテストがしやすいコード構成について過去を振り返って考えてみた - テクノロジーニュースをお届け。">
-    <meta name="keywords" content="本">
+    <title>自己補正するコンポーネント: レンダリング中に状態更新する公式テクニックの解釈 | 日本のテックニュース速報</title>
+    <meta name="description" content="Reactにおいてプロダクトの品質を高く保つには、Reactのやり方に合ったコードを書くことが重要です。公式ドキュメントの名物ページ「そのエフェクトは不要かも」には、useEffectの望ましくない使い方と、それに代わるテクニックが紹介されています">
+    <meta name="keywords" content="React">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ユニットテストがしやすいコード構成について過去を振り返って考えてみた">
-    <meta property="og:description" content="ユニットテストがしやすいコード構成について過去を振り返って考えてみた - テクノロジーニュースをお届け。">
+    <meta property="og:title" content="自己補正するコンポーネント: レンダリング中に状態更新する公式テクニックの解釈">
+    <meta property="og:description" content="Reactにおいてプロダクトの品質を高く保つには、Reactのやり方に合ったコードを書くことが重要です。公式ドキュメントの名物ページ「そのエフェクトは不要かも」には、useEffectの望ましくない使い方と、それに代わるテクニックが紹介されています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8084.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ユニットテストがしやすいコード構成について過去を振り返って考えてみた">
-    <meta name="twitter:description" content="ユニットテストがしやすいコード構成について過去を振り返って考えてみた - テクノロジーニュースをお届け。">
+    <meta name="twitter:title" content="自己補正するコンポーネント: レンダリング中に状態更新する公式テクニックの解釈">
+    <meta name="twitter:description" content="Reactにおいてプロダクトの品質を高く保つには、Reactのやり方に合ったコードを書くことが重要です。公式ドキュメントの名物ページ「そのエフェクトは不要かも」には、useEffectの望ましくない使い方と、それに代わるテクニックが紹介されています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ユニットテストがしやすいコード構成について過去を振り返って考えてみた",
-        "description": "ユニットテストがしやすいコード構成について過去を振り返って考えてみた - テクノロジーニュースをお届け。",
+        "headline": "自己補正するコンポーネント: レンダリング中に状態更新する公式テクニックの解釈",
+        "description": "Reactにおいてプロダクトの品質を高く保つには、Reactのやり方に合ったコードを書くことが重要です。公式ドキュメントの名物ページ「そのエフェクトは不要かも」には、useEffectの望ましくない使い方と、それに代わるテクニックが紹介されています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-24T03:00:44",
-        "dateModified": "2025-10-27T08:28:32.013169",
+        "datePublished": "2025-11-02T01:54:16",
+        "dateModified": "2025-11-04T12:44:37.280348",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8084.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8084.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "テクノロジー",
+        "keywords": ["React"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ユニットテストがしやすいコード構成について過去を振り返って考えてみた",
+                "name": "自己補正するコンポーネント: レンダリング中に状態更新する公式テクニックの解釈",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8084.html"
             }
         ]
@@ -113,44 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">ユニットテストがしやすいコード構成について過去を振り返って考えてみた</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">自己補正するコンポーネント: レンダリング中に状態更新する公式テクニックの解釈</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ユニットテストがしやすいコード構成について過去を振り返って考えてみた</h1>
+                <h1>自己補正するコンポーネント: レンダリング中に状態更新する公式テクニックの解釈</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/levtech/articles/feae08d88c039d" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-10-24T03:00:44">
-                        公開: 2025-10-24T03:00:44
+                    <span class="source">出典: <a href="https://zenn.dev/uhyo/articles/state-update-while-rendering" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2025-11-02T01:54:16">
+                        公開: 2025-11-02T01:54:16
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">React</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-インテグレーションテスト主体でテストを書いていく場合、テスト実行時間が長い問題が出てきた。
-（インスタンスをたくさん並べてパラレル実行にするとかやりようはあると思う）
-解決するためには出来る限りユニットテストに寄せた方が良いが、どういったコード構成ならユニットテストに寄せやすいのか？考えた。
-
- 今あるアーキテクチャから選べばいいじゃんという話もあるが。。。
-既存アーキテクチャだとなんかしっくりこないのでしっくりくるのを考えてみた。
-全部に当てはまる正解はないので、自分の関わってきたシステムを振り返り、それらを踏まえて考えてみる。
-実際に本番稼働していたシステムを元に考える...
+                    Reactにおいてプロダクトの品質を高く保つには、Reactのやり方に合ったコードを書くことが重要です。公式ドキュメントの名物ページ「そのエフェクトは不要かも」には、useEffectの望ましくない使い方と、それに代わるテクニックが紹介されています。
+この記事で取り上げるのは、その中でも「props が変更されたときに一部の state を調整する」のセクションで紹介されている、レンダリング中にステートを更新するテクニックです。
+このテクニックは一見すると奇妙で、知ってはいるけど使っていいのかよく分からないという方も多そうです。しかし、一見突飛に見える記述でも、深く理解すれば実はReac...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/levtech/articles/feae08d88c039d" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/uhyo/articles/state-update-while-rendering" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,10 +157,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -176,7 +170,7 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -207,16 +201,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_1756.html">
+                    <a href="iPhone_Mania_2359.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">今こそCodexに全振りするチャンス！ClaudeCodeからCodexへの移行と実践Tips9選</span>
+                        <span class="nav-title">iPhone17シリーズ/Airの買取価格を調査〜リセールバリューの高いモデルは？</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_8248.html">
+                    <a href="iPhone_Mania_12.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">では素晴らしい提案をしよう。お前もライブラリを作らないか？</span>
+                        <span class="nav-title">A19 Pro超えのチップを搭載するGalaxy S26シリーズを来年2月25日に発表か</span>
                     </a>
                 </div>
             </div>
@@ -229,53 +223,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4519.html">
-                        <h3>秋葉原電気街に「パソコン工房 買取センター」新登場｜査定10％UPや商品券還元も！</h3>
+                    <a href="CNET_Japan_最新情報総合_2955.html">
+                        <h3>SBI新生銀行、50年ローンを提供　「20〜30代の住宅購入を支援」</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">パソコン工房が秋葉原に新しい買取センターをオープン。パソコンやスマホを高価買取し、11月1日からオープニングセールも実施。キャンペーン情報や店舗詳細はこちら。.</p>
+                        <p class="related-summary">SBI新生銀行は、11月17日から住宅ローンの最長返済期間を従来の35年から50年へと拡大する。変動金利型（半年型）の商品が対象で、20〜30代の住宅購入を後押しする。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4489.html">
-                        <h3>全国都道府県対抗eスポーツ選手権 2025 SHIGA本大会出場選手とエキシビションマッチ決定のお知らせ</h3>
+                    <a href="CNET_Japan_最新情報総合_3451.html">
+                        <h3>TP-Link製ルーター、米国で「禁止」案が有力に--国家安全保障リスクを懸念</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">全国都道府県対抗eスポーツ選手権 2025 SHIGA本大会出場選手とエキシビションマッチ決定のお知らせ.</p>
+                        <p class="related-summary">人気ルーターブランドであるTP-Linkのルーターが米国で禁止される可能性が高まっている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_8306.html">
-                        <h3>最終回が幻に？　短波放送「KTWRフレンドシップラジオ」で放送事故　制作陣が放送局に抗議</h3>
+                    <a href="CNET_Japan_最新情報総合_9824.html">
+                        <h3>「RE搭載」コンセプトカーなどが登場　写真で見る「JAPAN MOBILITY SHOW2025」マツダ・スバル・スズキ...</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">今では数少なくなった海外発の日本語短波放送の1つ「KTWRフレンドシップラジオ」で10月26日、定刻（21時15分）になっても放送が始まらず、そのまま終了時刻を迎えるトラブルが発生した。.</p>
+                        <p class="related-summary">10月30日、「JAPAN MOBILITY SHOW2025」（モビショー）が開幕した。ここでは、マツダ、スバル、スズキのブースに展示されていたコンセプトカーなどをご紹介しよう。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7790.html">
-                        <h3>GPU搭載インスタンスは高い？実測したら逆に8.7倍も安かった話【AWS コスパ検証】</h3>
+                    <a href="CNET_Japan_最新情報総合_3548.html">
+                        <h3>ポルシェ、フル電動の「マカン GTS」発表　その最高速は？</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに GMOコネクトの野尻です。 「高性能の環境って結構コストがお高くなるものだが、クラウドサービスって使った時間だけ料金が発生するのでタイムパフォーマンス加味すると必ずしも高性能環境の方がお金が...</p>
+                        <p class="related-summary">ポルシェは、電動SUVに「マカン GTS」を追加した。GTSの名にふさわしく、期待通りの攻撃的な仕上がりだ。新型マカン GTSは最高速155mph（約250km/h）、0〜62mph（約100km/h...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4604.html">
-                        <h3>【点呼】担当者は日本に何人いる？ AWS Organizationsの社内請求を魔改造CLIで経理翻訳する泥臭い話</h3>
+                    <a href="CNET_Japan_最新情報総合_3316.html">
+                        <h3>「月面着陸は嘘」--お騒がせセレブが唱える陰謀論、NASAトップが否定</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">たまにはピンポイントで呼び掛けてみたいのです 안녕하신게라！パナソニック コネクト株式会社クラウドソリューション部の加賀です。 この記事を開いたあなたは、おそらくAWS Organizationsの管...</p>
+                        <p class="related-summary">NASAは、人類はこれまでに6回月面に到達したと説明している。一方、キム・カーダシアン氏は最初の月着陸は「やらせ」だったと主張した。.</p>
                     </a>
                 </article>
             </div>

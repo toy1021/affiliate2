@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我々はCodexとどう向き合うべきなのか | 日本のテックニュース速報</title>
-    <meta name="description" content="この記事は、すでにCodexやClaudeCodeなどのAIコーディングツールを実務で使い始めているエンジニアに向けて書いている。「期待ほど効率が上がらない」と感じている人や、運用の型を模索している個人開発者を想定している。導入方法や基礎理論は扱わない">
-    <meta name="keywords" content="AI,Claude">
+    <title>miseのバグを直そうとしたらGiteaのバグを直した件 | 日本のテックニュース速報</title>
+    <meta name="description" content="Tl;dr AWS S3の署名付きURLはHTTPメソッドを署名に含むので、GET用の署名付きURLに対してHEADリクエストを送ると403 Forbiddenになります。HEADリクエストにはHEAD用の署名付きURLを返しましょう。 Giteaがこれを踏んでいました">
+    <meta name="keywords" content="AWS,GitHub">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="我々はCodexとどう向き合うべきなのか">
-    <meta property="og:description" content="この記事は、すでにCodexやClaudeCodeなどのAIコーディングツールを実務で使い始めているエンジニアに向けて書いている。「期待ほど効率が上がらない」と感じている人や、運用の型を模索している個人開発者を想定している。導入方法や基礎理論は扱わない">
+    <meta property="og:title" content="miseのバグを直そうとしたらGiteaのバグを直した件">
+    <meta property="og:description" content="Tl;dr AWS S3の署名付きURLはHTTPメソッドを署名に含むので、GET用の署名付きURLに対してHEADリクエストを送ると403 Forbiddenになります。HEADリクエストにはHEAD用の署名付きURLを返しましょう。 Giteaがこれを踏んでいました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7736.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="我々はCodexとどう向き合うべきなのか">
-    <meta name="twitter:description" content="この記事は、すでにCodexやClaudeCodeなどのAIコーディングツールを実務で使い始めているエンジニアに向けて書いている。「期待ほど効率が上がらない」と感じている人や、運用の型を模索している個人開発者を想定している。導入方法や基礎理論は扱わない">
+    <meta name="twitter:title" content="miseのバグを直そうとしたらGiteaのバグを直した件">
+    <meta name="twitter:description" content="Tl;dr AWS S3の署名付きURLはHTTPメソッドを署名に含むので、GET用の署名付きURLに対してHEADリクエストを送ると403 Forbiddenになります。HEADリクエストにはHEAD用の署名付きURLを返しましょう。 Giteaがこれを踏んでいました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "我々はCodexとどう向き合うべきなのか",
-        "description": "この記事は、すでにCodexやClaudeCodeなどのAIコーディングツールを実務で使い始めているエンジニアに向けて書いている。「期待ほど効率が上がらない」と感じている人や、運用の型を模索している個人開発者を想定している。導入方法や基礎理論は扱わない",
+        "headline": "miseのバグを直そうとしたらGiteaのバグを直した件",
+        "description": "Tl;dr AWS S3の署名付きURLはHTTPメソッドを署名に含むので、GET用の署名付きURLに対してHEADリクエストを送ると403 Forbiddenになります。HEADリクエストにはHEAD用の署名付きURLを返しましょう。 Giteaがこれを踏んでいました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-09T22:00:06",
-        "dateModified": "2025-10-10T12:40:34.910128",
+        "datePublished": "2025-11-04T14:33:15",
+        "dateModified": "2025-11-06T12:42:17.247839",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7736.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7736.html",
         "articleSection": "プログラミング",
-        "keywords": ["AI","Claude"]
+        "keywords": ["AWS","GitHub"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "我々はCodexとどう向き合うべきなのか",
+                "name": "miseのバグを直そうとしたらGiteaのバグを直した件",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7736.html"
             }
         ]
@@ -114,40 +114,44 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">我々はCodexとどう向き合うべきなのか</li>
+                <li aria-current="page">miseのバグを直そうとしたらGiteaのバグを直した件</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>我々はCodexとどう向き合うべきなのか</h1>
+                <h1>miseのバグを直そうとしたらGiteaのバグを直した件</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/aki_think/articles/5fb93a15a6257a" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/risu729/articles/db2bd05a342898" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-10-09T22:00:06">
-                        公開: 2025-10-09T22:00:06
+                    <time datetime="2025-11-04T14:33:15">
+                        公開: 2025-11-04T14:33:15
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事は、すでにCodexやClaudeCodeなどのAIコーディングツールを実務で使い始めているエンジニアに向けて書いている。「期待ほど効率が上がらない」と感じている人や、運用の型を模索している個人開発者を想定している。導入方法や基礎理論は扱わない。ひとりのエンジニアが数ヶ月間Codexと向き合って得た、実践的な運用知見を語る。
+                    Tl;dr
+AWS S3の署名付きURLはHTTPメソッドを署名に含むので、GET用の署名付きURLに対してHEADリクエストを送ると403 Forbiddenになります。HEADリクエストにはHEAD用の署名付きURLを返しましょう。
+Giteaがこれを踏んでいました。
 
- 数ヶ月で変わったこと
-まず、ここ数ヶ月でAIコーディングツールの使い方が大きく変わったという話からしたい。
-数ヶ月前のClaudeCodeガードレール戦略全盛期と比べると、隔世の感がある。あの頃は、AIが暴走しないように制御する、余計なことをさせないよう...
+ はじめに
+私は大学生なのですが、趣味でmiseにコントリビュートしています。
+この話はaqua:gitea.com/gitea/tea@0.10.1がインストールできないというバグ報告から始まりました。
+https://github.com/jdx/mise/discussions/5643
+miseにはbac...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/aki_think/articles/5fb93a15a6257a" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/risu729/articles/db2bd05a342898" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,20 +164,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +228,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2281.html">
+                    <a href="Zennのトレンド_380.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iOS Default Web Browserの自作方法</span>
+                        <span class="nav-title">今年俺を一番幸せにしたDX最高な奴ら10選</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_2369.html">
+                    <a href="Publickey_4835.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Apple、｢AirPods Pro 2/3｣と｢AirPods 4｣向けの最新のベータ版ファームウ...</span>
+                        <span class="nav-title">OpenAIやマイクロソフト、メタ、シスコ、AMDらがイーサネットをAI向けに広帯域かつ低遅延にする...</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +250,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8047.html">
-                        <h3>「散歩は最高のデバッグ時間」──エンジニアの集中力・作業効率・睡眠が劇的に改善する理由</h3>
+                    <a href="ASCII_jp__トップ_8447.html">
+                        <h3>【28卒エンジニア限定】海外大学生とプロダクトを開発する長期チーム開発プログラム受付開始</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">💻 エンジニアは動かない生き物？ 気づけば一日中PCの前に座りっぱなし。 気づけば万歩計の数字が「200歩」。 リモートワークや長時間のコーディングが当たり前になった今、エンジニアの運動不足は深刻です...</p>
+                        <p class="related-summary">【28卒エンジニア限定】海外大学生とプロダクトを開発する長期チーム開発プログラム受付開始.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_283.html">
-                        <h3>SESでフルリモートを続けたいエンジニアが今すぐやるべきこと</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">無料のエンジニアコミュニティを運営しているのですが 「フルリモートを続けたいのですが、フルリモート案件はそんなに無いんですか。」そんな声をよく耳にします。 2023年ごろまでは、SES業界にもフルリモ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5355.html">
-                        <h3>WPFのMVVM、「理想」と「現実」のギャップを埋めるハイブリッド設計</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに：MVVMの理想と、現場で直面する「つらさ」 WPFでUIを開発するとき、MVVMパターンは今やデファクトスタンダードですよね。ViewModelはViewを知らず、テストが容易で、関心の分離...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_2742.html">
-                        <h3>プロンプトエンジニアリングを終わらせるDSPy</h3>
+                    <a href="Zennのトレンド_3900.html">
+                        <h3>Zenn Publication ProとGitHub連携で構築する企業向け技術ブログ執筆環境</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに DSPyに夢中である。DSPyの最も重要な点は、プロンプトエンジニアリングを排除できる可能性を秘めていることだ。可能性を秘めているだけで、現状、プロンプトエンジニアリングが完全に不要になった...</p>
+                        <p class="related-summary">com/m/m6bd2e5209140 PKSHA の Zenn は Publication Pro プランと GitHub 連携を利用して執筆しています。 この記事では Zenn の執筆環境について...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_6193.html">
-                        <h3>誰でも書けるスクリプト言語は、immutable な配列を提供すればよかった</h3>
+                    <a href="Zennのトレンド_5276.html">
+                        <h3>[ADK] What&#39;s new in 1.18.0 ~ 公式ADK Visual Agent Builder登場 ~</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">突然ですが、 Python あるある〜。 a = [1, 2, 3] b = a # コピー？ c = a # コピー？ b. append(5) # 追加 print(b) # [1, 2, 3, ...</p>
+                        <p class="related-summary">0 今回のリリースは、ADKリリース歴の中でも特に大きなマイルストーンと言えるかもしれません。ついに、GUIでAgentを構築できる「ADK Visual Agent Builder」が adk we...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_9138.html">
+                        <h3>MCPサーバのテストやデバッグ機能、自然言語でテスト用モックサーバの自動生成など、API開発ツール「Kong Insom...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">API管理ツールや開発ツールを提供するKongは、API開発ツール「Kong Insomnia」の最新バージョンとなる「Kong Insomnia 12」（以下、Insomnia 12）正式リリースを...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_6467.html">
+                        <h3>フロントエンドとサーバーでのバリデーション責務分解</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに 先日、Xでこんな投稿が話題になっていました。 https://x. com/okd61807313/status/1984917649386615251 実際のサイトを見ていないため詳細は不...</p>
                     </a>
                 </article>
             </div>

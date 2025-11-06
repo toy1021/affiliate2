@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>製造現場の隙間時間で、Next.jsダッシュボードを作った話 | 日本のテックニュース速報</title>
-    <meta name="description" content="ダイカストマシンが製品を作ってる間、2〜3分くらい待つ時間があるんですよ。製造現場にいると、この「サイクルタイム」っていう隙間時間が1日に何回も訪れます。 普通、この時間って何もできないんです。機械が止まるのを待つだけ">
-    <meta name="keywords" content="PC">
+    <title>miseのバグを直そうとしたらGiteaのバグを直した件 | 日本のテックニュース速報</title>
+    <meta name="description" content="Tl;dr AWS S3の署名付きURLはHTTPメソッドを署名に含むので、GET用の署名付きURLに対してHEADリクエストを送ると403 Forbiddenになります。HEADリクエストにはHEAD用の署名付きURLを返しましょう。 Giteaがこれを踏んでいました">
+    <meta name="keywords" content="AWS,GitHub">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="製造現場の隙間時間で、Next.jsダッシュボードを作った話">
-    <meta property="og:description" content="ダイカストマシンが製品を作ってる間、2〜3分くらい待つ時間があるんですよ。製造現場にいると、この「サイクルタイム」っていう隙間時間が1日に何回も訪れます。 普通、この時間って何もできないんです。機械が止まるのを待つだけ">
+    <meta property="og:title" content="miseのバグを直そうとしたらGiteaのバグを直した件">
+    <meta property="og:description" content="Tl;dr AWS S3の署名付きURLはHTTPメソッドを署名に含むので、GET用の署名付きURLに対してHEADリクエストを送ると403 Forbiddenになります。HEADリクエストにはHEAD用の署名付きURLを返しましょう。 Giteaがこれを踏んでいました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9704.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="製造現場の隙間時間で、Next.jsダッシュボードを作った話">
-    <meta name="twitter:description" content="ダイカストマシンが製品を作ってる間、2〜3分くらい待つ時間があるんですよ。製造現場にいると、この「サイクルタイム」っていう隙間時間が1日に何回も訪れます。 普通、この時間って何もできないんです。機械が止まるのを待つだけ">
+    <meta name="twitter:title" content="miseのバグを直そうとしたらGiteaのバグを直した件">
+    <meta name="twitter:description" content="Tl;dr AWS S3の署名付きURLはHTTPメソッドを署名に含むので、GET用の署名付きURLに対してHEADリクエストを送ると403 Forbiddenになります。HEADリクエストにはHEAD用の署名付きURLを返しましょう。 Giteaがこれを踏んでいました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "製造現場の隙間時間で、Next.jsダッシュボードを作った話",
-        "description": "ダイカストマシンが製品を作ってる間、2〜3分くらい待つ時間があるんですよ。製造現場にいると、この「サイクルタイム」っていう隙間時間が1日に何回も訪れます。 普通、この時間って何もできないんです。機械が止まるのを待つだけ",
+        "headline": "miseのバグを直そうとしたらGiteaのバグを直した件",
+        "description": "Tl;dr AWS S3の署名付きURLはHTTPメソッドを署名に含むので、GET用の署名付きURLに対してHEADリクエストを送ると403 Forbiddenになります。HEADリクエストにはHEAD用の署名付きURLを返しましょう。 Giteaがこれを踏んでいました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-28T23:17:59",
-        "dateModified": "2025-10-31T03:12:08.529843",
+        "datePublished": "2025-11-04T14:33:15",
+        "dateModified": "2025-11-06T22:20:20.614309",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9704.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9704.html",
         "articleSection": "プログラミング",
-        "keywords": ["PC"]
+        "keywords": ["AWS","GitHub"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "製造現場の隙間時間で、Next.jsダッシュボードを作った話",
+                "name": "miseのバグを直そうとしたらGiteaのバグを直した件",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9704.html"
             }
         ]
@@ -114,40 +114,44 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">製造現場の隙間時間で、Next.jsダッシュボードを作った話</li>
+                <li aria-current="page">miseのバグを直そうとしたらGiteaのバグを直した件</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>製造現場の隙間時間で、Next.jsダッシュボードを作った話</h1>
+                <h1>miseのバグを直そうとしたらGiteaのバグを直した件</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/yamato_snow/articles/b0d625be6d0751" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/risu729/articles/db2bd05a342898" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-10-28T23:17:59">
-                        公開: 2025-10-28T23:17:59
+                    <time datetime="2025-11-04T14:33:15">
+                        公開: 2025-11-04T14:33:15
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">PC</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    ダイカストマシンが製品を作ってる間、2〜3分くらい待つ時間があるんですよ。製造現場にいると、この「サイクルタイム」っていう隙間時間が1日に何回も訪れます。
-普通、この時間って何もできないんです。機械が止まるのを待つだけ。
-でも、Cursorを使い始めてから、この隙間時間が開発時間になりました。
-サイクルタイムの隙間にPCを開く → Cursorに「この関数を実装して」って指示を入力 → 機械が止まる → 製品を取り出して、次の作業 → また隙間時間 → PCを開くと、コードができてる。
-これを2ヶ月間繰り返して、Next.jsでダッシュボードを作りました。
-この記事では、小規模製造業でゼ...
+                    Tl;dr
+AWS S3の署名付きURLはHTTPメソッドを署名に含むので、GET用の署名付きURLに対してHEADリクエストを送ると403 Forbiddenになります。HEADリクエストにはHEAD用の署名付きURLを返しましょう。
+Giteaがこれを踏んでいました。
+
+ はじめに
+私は大学生なのですが、趣味でmiseにコントリビュートしています。
+この話はaqua:gitea.com/gitea/tea@0.10.1がインストールできないというバグ報告から始まりました。
+https://github.com/jdx/mise/discussions/5643
+miseにはbac...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/yamato_snow/articles/b0d625be6d0751" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/risu729/articles/db2bd05a342898" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,10 +164,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=PC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="PC - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">PC - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでPCに関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -174,16 +188,6 @@
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
                                     <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +228,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_4274.html">
+                    <a href="Zennのトレンド_8501.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">アジェンダのないミーティングを減らす（可能性をちょっとだけ上げるかもしれない） Chrome 拡張を...</span>
+                        <span class="nav-title">今年俺を一番幸せにしたDX最高な奴ら10選</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_8241.html">
+                    <a href="Publickey_9959.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">携帯「空飛ぶ基地局」実用化へ</span>
+                        <span class="nav-title">OpenAIやマイクロソフト、メタ、シスコ、AMDらがイーサネットをAI向けに広帯域かつ低遅延にする...</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +250,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1599.html">
-                        <h3>海に囲まれたニッポン。海水が“燃料”になる技術が動き出している</h3>
+                    <a href="ASCII_jp__トップ_6006.html">
+                        <h3>【28卒エンジニア限定】海外大学生とプロダクトを開発する長期チーム開発プログラム受付開始</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">日本の海がエネルギーを生む時代が来るかもしれない。東大発スタートアップ株式会社pHydrogenは、安価な金属と海水から水素を製造する「中性海水電解セル」の開発に成功。より低コストで安全な水素製造を可...</p>
+                        <p class="related-summary">【28卒エンジニア限定】海外大学生とプロダクトを開発する長期チーム開発プログラム受付開始.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4651.html">
-                        <h3>AngularでBootstrapを導入して簡単にデザインが整ったWebページを作成する</h3>
+                    <a href="Zennのトレンド_1135.html">
+                        <h3>Zenn Publication ProとGitHub連携で構築する企業向け技術ブログ執筆環境</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">Bootstrapとは Bootstrapは旧Twitter社のエンジニアが開発した、HTML、CSS、JavaScriptで構成された、Webサイトを効率的に開発するためのオープンソースのフレームワ...</p>
+                        <p class="related-summary">com/m/m6bd2e5209140 PKSHA の Zenn は Publication Pro プランと GitHub 連携を利用して執筆しています。 この記事では Zenn の執筆環境について...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4186.html">
-                        <h3>日刊IETF (2025-10-29)</h3>
+                    <a href="Zennのトレンド_3252.html">
+                        <h3>[ADK] What&#39;s new in 1.18.0 ~ 公式ADK Visual Agent Builder登場 ~</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">おはようございます！ GMOコネクトの名もなきエンジニアです。 よろしくお願いします！ 日刊IETFは、I-D AnnounceやIETF Announceに投稿されたメールをサマリーし続けるという修...</p>
+                        <p class="related-summary">0 今回のリリースは、ADKリリース歴の中でも特に大きなマイルストーンと言えるかもしれません。ついに、GUIでAgentを構築できる「ADK Visual Agent Builder」が adk we...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9527.html">
-                        <h3>エンジニアを褒めるだけ(通勤中に見てください)</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">※エンジニアの皆さんは、読んでいる途中で処理落ちするかもしれませんが、正常な動作です。 あまり深く考えず、ふわっと理解した！くらいで大丈夫です。 この記事はゴリゴリ感性で書いています。 初めまして、ゆ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_9382.html">
-                        <h3>VS Code、Copilotが仕様作成を支援する「Planモード」が追加</h3>
+                    <a href="Publickey_9872.html">
+                        <h3>MCPサーバのテストやデバッグ機能、自然言語でテスト用モックサーバの自動生成など、API開発ツール「Kong Insom...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">GitHubは、日本時間10月29日未明から開催中の年次イベント「GitHub Universe 2025」で、Visual Studio CodeにおけるGitHub Copilotの新機能として、...</p>
+                        <p class="related-summary">API管理ツールや開発ツールを提供するKongは、API開発ツール「Kong Insomnia」の最新バージョンとなる「Kong Insomnia 12」（以下、Insomnia 12）正式リリースを...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_5484.html">
+                        <h3>日刊IETF (2025-11-04) 第3部</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">こんばんは！ GMOコネクトの名もなきエンジニアです。 よろしくお願いします! 11月4日分の日刊IETFも終わりです！ 日刊IETFは、I-D AnnounceやIETF Announceに投稿され...</p>
                     </a>
                 </article>
             </div>

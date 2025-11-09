@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TypeScriptの型推論でCLIバリデーションをなくせた話 | 日本のテックニュース速報</title>
-    <meta name="description" content="CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>RAGを活用してセキュリティチェックシートの回答作業を自動化した話 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 今回は、RAG（Retrieval-Augmented Generation）を使ってセキュリティチェックシートへの回答を自動化した事例を紹介します。生成AI技術をどう業務に活かせるのか、実際のところどうだったのか、できるだけ具体的にお伝えできればと思います">
+    <meta name="keywords" content="AI,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="TypeScriptの型推論でCLIバリデーションをなくせた話">
-    <meta property="og:description" content="CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした">
+    <meta property="og:title" content="RAGを活用してセキュリティチェックシートの回答作業を自動化した話">
+    <meta property="og:description" content="はじめに 今回は、RAG（Retrieval-Augmented Generation）を使ってセキュリティチェックシートへの回答を自動化した事例を紹介します。生成AI技術をどう業務に活かせるのか、実際のところどうだったのか、できるだけ具体的にお伝えできればと思います">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9109.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TypeScriptの型推論でCLIバリデーションをなくせた話">
-    <meta name="twitter:description" content="CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした">
+    <meta name="twitter:title" content="RAGを活用してセキュリティチェックシートの回答作業を自動化した話">
+    <meta name="twitter:description" content="はじめに 今回は、RAG（Retrieval-Augmented Generation）を使ってセキュリティチェックシートへの回答を自動化した事例を紹介します。生成AI技術をどう業務に活かせるのか、実際のところどうだったのか、できるだけ具体的にお伝えできればと思います">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9109.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "TypeScriptの型推論でCLIバリデーションをなくせた話",
-        "description": "CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした",
+        "headline": "RAGを活用してセキュリティチェックシートの回答作業を自動化した話",
+        "description": "はじめに 今回は、RAG（Retrieval-Augmented Generation）を使ってセキュリティチェックシートへの回答を自動化した事例を紹介します。生成AI技術をどう業務に活かせるのか、実際のところどうだったのか、できるだけ具体的にお伝えできればと思います",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-11T05:27:21",
-        "dateModified": "2025-09-13T22:16:06.730337",
+        "datePublished": "2025-11-09T00:25:48",
+        "dateModified": "2025-11-09T20:20:51.951706",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9109.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9109.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "セキュリティ",
+        "keywords": ["AI","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "セキュリティ",
+                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "TypeScriptの型推論でCLIバリデーションをなくせた話",
+                "name": "RAGを活用してセキュリティチェックシートの回答作業を自動化した話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9109.html"
             }
         ]
@@ -113,39 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">TypeScriptの型推論でCLIバリデーションをなくせた話</li>
+                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
+                <li aria-current="page">RAGを活用してセキュリティチェックシートの回答作業を自動化した話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>TypeScriptの型推論でCLIバリデーションをなくせた話</h1>
+                <h1>RAGを活用してセキュリティチェックシートの回答作業を自動化した話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/hongminhee/articles/27bce6eb777dea" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-09-11T05:27:21">
-                        公開: 2025-09-11T05:27:21
+                    <span class="source">出典: <a href="https://zenn.dev/delisit/articles/0b4977d79500fa" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: セキュリティ</span>
+                    <time datetime="2025-11-09T00:25:48">
+                        公開: 2025-11-09T00:25:48
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。
-きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした。どのCLIツールにも、似たようなバリデーションコードが含まれているんです。例えばこんな感じです：
-if (!opts.server &amp;&amp; opts.port) {
-  throw new Error('--port requires --server flag');
-}
+                    はじめに
+今回は、RAG（Retrieval-Augmented Generation）を使ってセキュリティチェックシートへの回答を自動化した事例を紹介します。生成AI技術をどう業務に活かせるのか、実際のところどうだったのか、できるだけ具体的にお伝えできればと思います。
 
-if (opts.server &amp;&amp; !opt...
+ そもそもの問題
+最近のシステム開発では、何でもかんでも自分たちで作るのではなく、外部のサービスをAPIで使うことが増えてきました。開発スピードが上がって便利なのですが、私の会社は金融系ということもあり、外部サービスを使う前にFISCの安全対策基準に基づいたセキュリティチェックが必須になっています。
+このチェックシ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/hongminhee/articles/27bce6eb777dea" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/delisit/articles/0b4977d79500fa" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,9 +157,34 @@ if (opts.server &amp;&amp; !opt...
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>セキュリティ関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -187,16 +215,16 @@ if (opts.server &amp;&amp; !opt...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_6181.html">
+                    <a href="Qiita_-_人気の記事_5486.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Awesome GitHub Copilot MCP Server で GitHub Copilot...</span>
+                        <span class="nav-title">今日のQiitaトレンド記事をポッドキャストで聴こう！ 2025/11/09</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_8392.html">
+                    <a href="気になる記になる_7809.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">新型Apple Watchの5G接続は利用できない国も？</span>
+                        <span class="nav-title">｢DJI Osmo Pocket 4｣と｢Osmo Pocket 3｣の比較テストを激写したとされる...</span>
                     </a>
                 </div>
             </div>
@@ -209,53 +237,23 @@ if (opts.server &amp;&amp; !opt...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3081.html">
-                        <h3>Honda、航続距離295kmの軽EV「N-ONE e:」　V2H対応、家の蓄電池としても利用可</h3>
+                    <a href="CNET_Japan_最新情報総合_2730.html">
+                        <h3>ルーブル美術館のパスワードは「Louvre」だった--150億円の宝石盗難で発覚した杜撰なセキュリティ</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">セキュリティ</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Hondaは9月11日、新型軽乗用電気自動車「N-ONE e:」を9月12日に発売すると発表した。航続距離はWLTCモードで295kmを実現し、日常使いに適したスタンダードなEVを目指すとしている。.</p>
+                        <p class="related-summary">ルーブル美術館から約150億円以上の宝石が大胆にも盗まれた事件は、世界中の注目を集めた。そして今、同美術館が過去にセキュリティ上の問題を抱えていたことが、報道によって明らかになっている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1931.html">
-                        <h3>タイミーでの勤務実績が「履歴書」に--自身の勤勉さを証明できる新サービス　正社員就労を支援</h3>
+                    <a href="Zennのトレンド_5226.html">
+                        <h3>攻撃者の視点で学ぶPHPセキュリティ｜Kali Linuxで実践する脆弱性テスト</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">スポットワークサービス「タイミー」を運営するタイミーは9月11日、正社員就業支援サービス「タイミーキャリアプラス」に新機能「タイミー履歴書」を導入したと発表した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_874.html">
-                        <h3>マイクロソフトも週3出社に--なぜフルリモートでは駄目なのか　「データは明確」と同社</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">米マイクロソフトは9月9日（現地時間）、柔軟な働き方の指針を見直し、従業員に週3日の出社を求める新たな方針を示した。人事担当のエイミー・コールマン執行副社長が社員に通知し、社内ブログで公表した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3100.html">
-                        <h3>上司からの「。」で終わる文章にZ世代の半数以上が「冷たい・高圧的」と感じている--調査</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">「退職代行モームリ」を運営するアルバトロスと、「大学生活DX」を手掛けるペンマークが実施した「Z世代と上司のコミュニケーションに関する実態調査」で、Z世代の若手社会人の半数以上が、上司からの句点（。）...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_809.html">
-                        <h3>【天候のため中止】「ブルーインパルス」が東京上空を飛ぶ--9月13日の昼に飛行、どこで見られる？</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">9月13日、航空自衛隊のアクロバットチーム「ブルーインパルス」による展示飛行が、東京上空で予定されている。.</p>
+                        <p class="related-summary">はじめに これまでの記事で、セキュリティを守りながら生成AIでPHPを学ぶ方法を実践してきました。 生成AIでプログラミング学習、その前に｜社内SEが知っておくべきセキュリティの基本：生成AIのリスク...</p>
                     </a>
                 </article>
             </div>

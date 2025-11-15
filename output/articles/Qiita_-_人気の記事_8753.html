@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【検証】AI Agentは学術論文を読んでプロトタイプ実装まで本当にできるのか？（波乱の実装編） | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに GMOコネクトの永田です。 前回の記事では論文読解と設計まで実施しましたが、今回はスタート（Inputにするドキュメント）を揃えた上で、実装を試してみます！ 設計までだと多少のブレがあっても違いが分かりにくいですが、実装になるとプログラムした通りにしか動き.">
-    <meta name="keywords" content="AI,本">
+    <title>文字化けの正体はこれだ！半角カナ・JIS・UTFの沼を実例で読み解く | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 文字化けは「文字集合」「符号化方式」「宣言」の不一致から生じます。特に日本語は歴史的に複数の方式が並立し、メールや携帯端末、業務システムの相互運用で事故が起きやすい背景があります。 本稿は、代表的な文字コードの考え方、典型的な化け方のパターン、昔のメールで半角カ.">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【検証】AI Agentは学術論文を読んでプロトタイプ実装まで本当にできるのか？（波乱の実装編）">
-    <meta property="og:description" content="はじめに GMOコネクトの永田です。 前回の記事では論文読解と設計まで実施しましたが、今回はスタート（Inputにするドキュメント）を揃えた上で、実装を試してみます！ 設計までだと多少のブレがあっても違いが分かりにくいですが、実装になるとプログラムした通りにしか動き.">
+    <meta property="og:title" content="文字化けの正体はこれだ！半角カナ・JIS・UTFの沼を実例で読み解く">
+    <meta property="og:description" content="はじめに 文字化けは「文字集合」「符号化方式」「宣言」の不一致から生じます。特に日本語は歴史的に複数の方式が並立し、メールや携帯端末、業務システムの相互運用で事故が起きやすい背景があります。 本稿は、代表的な文字コードの考え方、典型的な化け方のパターン、昔のメールで半角カ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8753.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【検証】AI Agentは学術論文を読んでプロトタイプ実装まで本当にできるのか？（波乱の実装編）">
-    <meta name="twitter:description" content="はじめに GMOコネクトの永田です。 前回の記事では論文読解と設計まで実施しましたが、今回はスタート（Inputにするドキュメント）を揃えた上で、実装を試してみます！ 設計までだと多少のブレがあっても違いが分かりにくいですが、実装になるとプログラムした通りにしか動き.">
+    <meta name="twitter:title" content="文字化けの正体はこれだ！半角カナ・JIS・UTFの沼を実例で読み解く">
+    <meta name="twitter:description" content="はじめに 文字化けは「文字集合」「符号化方式」「宣言」の不一致から生じます。特に日本語は歴史的に複数の方式が並立し、メールや携帯端末、業務システムの相互運用で事故が起きやすい背景があります。 本稿は、代表的な文字コードの考え方、典型的な化け方のパターン、昔のメールで半角カ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【検証】AI Agentは学術論文を読んでプロトタイプ実装まで本当にできるのか？（波乱の実装編）",
-        "description": "はじめに GMOコネクトの永田です。 前回の記事では論文読解と設計まで実施しましたが、今回はスタート（Inputにするドキュメント）を揃えた上で、実装を試してみます！ 設計までだと多少のブレがあっても違いが分かりにくいですが、実装になるとプログラムした通りにしか動き.",
+        "headline": "文字化けの正体はこれだ！半角カナ・JIS・UTFの沼を実例で読み解く",
+        "description": "はじめに 文字化けは「文字集合」「符号化方式」「宣言」の不一致から生じます。特に日本語は歴史的に複数の方式が並立し、メールや携帯端末、業務システムの相互運用で事故が起きやすい背景があります。 本稿は、代表的な文字コードの考え方、典型的な化け方のパターン、昔のメールで半角カ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-07T02:01:34",
-        "dateModified": "2025-10-07T20:21:22.111785",
+        "datePublished": "2025-11-13T11:06:25",
+        "dateModified": "2025-11-15T14:18:21.211693",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8753.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8753.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","本"]
+        "articleSection": "その他",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【検証】AI Agentは学術論文を読んでプロトタイプ実装まで本当にできるのか？（波乱の実装編）",
+                "name": "文字化けの正体はこれだ！半角カナ・JIS・UTFの沼を実例で読み解く",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8753.html"
             }
         ]
@@ -113,25 +113,24 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">【検証】AI Agentは学術論文を読んでプロトタイプ実装まで本当にできるのか？（波乱の実装編）</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">文字化けの正体はこれだ！半角カナ・JIS・UTFの沼を実例で読み解く</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【検証】AI Agentは学術論文を読んでプロトタイプ実装まで本当にできるのか？（波乱の実装編）</h1>
+                <h1>文字化けの正体はこれだ！半角カナ・JIS・UTFの沼を実例で読み解く</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/ntaka329/items/9ead91ed832cb3f65af2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-10-07T02:01:34">
-                        公開: 2025-10-07T02:01:34
+                    <span class="source">出典: <a href="https://qiita.com/comty/items/cb4b0f0060af3ccc7209?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2025-11-13T11:06:25">
+                        公開: 2025-11-13T11:06:25
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -140,14 +139,12 @@
                 
                 <div class="article-body">
                     はじめに
-GMOコネクトの永田です。
-前回の記事では論文読解と設計まで実施しましたが、今回はスタート（Inputにするドキュメント）を揃えた上で、実装を試してみます！
-
-設計までだと多少のブレがあっても違いが分かりにくいですが、実装になるとプログラムした通りにしか動き...
+文字化けは「文字集合」「符号化方式」「宣言」の不一致から生じます。特に日本語は歴史的に複数の方式が並立し、メールや携帯端末、業務システムの相互運用で事故が起きやすい背景があります。
+本稿は、代表的な文字コードの考え方、典型的な化け方のパターン、昔のメールで半角カ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/ntaka329/items/9ead91ed832cb3f65af2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/comty/items/cb4b0f0060af3ccc7209?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,26 +156,6 @@ GMOコネクトの永田です。
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -193,23 +170,23 @@ GMOコネクトの永田です。
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +201,16 @@ GMOコネクトの永田です。
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_7545.html">
+                    <a href="iPhone_Mania_2899.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【セール】Nothingのイヤホンやスマートウォッチが最大40％オフに</span>
+                        <span class="nav-title">iPhone17が各国で根強い人気、17 Pro Maxよりも納期が長くなる</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_1798.html">
+                    <a href="Zennのトレンド_6413.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">povo、常設トッピングに｢5GB(30日間)/1,380円｣など4つのトッピングを追加</span>
+                        <span class="nav-title">MoonBit 最高 2025</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +223,53 @@ GMOコネクトの永田です。
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7995.html">
-                        <h3>OpenAIの動画SNS「Sora」を使ってみた--恐ろしくリアル、気づけば無限スクロール</h3>
+                    <a href="CNET_Japan_最新情報総合_4737.html">
+                        <h3>JR東日本「東北・上越新幹線の終電を早めます」--安全性向上へ工事時間を確保</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIの新しいAIソーシャルメディアアプリ「Sora」を使っている間、私はVineの時代がどれほど恋しいかをずっと考えていた。あの“良き時代”――馬鹿げたネットの流行が面白く、そして基本的には、...</p>
+                        <p class="related-summary">JR東日本は、東北新幹線の東京～盛岡間と上越新幹線の大宮～越後湯沢間で、2026年春から下りの終電を10～20分程度繰り上げると発表した。設備のリニューアル工事や地震対策工事を着実に進めるため、夜間の...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2931.html">
-                        <h3>任天堂、生成AI関連で「日本政府にロビー活動している」との噂を否定</h3>
+                    <a href="CNET_Japan_最新情報総合_560.html">
+                        <h3>クレジットカード、1人何枚持つのが「平均的」？ --最新データが公開</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">任天堂は10月5日，公式のXアカウントを更新し「当社が生成AIに関連して日本政府に対して何らかの働きかけをしているような事実はない」と投稿した。.</p>
+                        <p class="related-summary">日本クレジット協会は11月14日、2025年3月末時点のクレジットカード発行枚数調査結果を公表した。調査回答社数243社の合計で、発行枚数は3億2057万枚となり、前年比2.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1777.html">
-                        <h3>猫型AIカメラ「Looki L1」を体験、あまりの可愛さに心を奪われる</h3>
+                    <a href="ASCII_jp__トップ_8500.html">
+                        <h3>『餓狼伝説 City of the Wolves SPECIAL EDITION』3168円で買えるセールを開催中！ 安...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">日常生活の中で写真や動画、音声を記録できるライフログ用ウェアラブルカメラ「Looki L1」を試した米CNET記者が、その感触をお伝えする。.</p>
+                        <p class="related-summary">本編＋シーズン1がセットになった『餓狼伝説 City of the Wolves SPECIAL EDITION』が60％オフで買えるチャンス！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8482.html">
-                        <h3>約1万円のAirPods対抗イヤホンはノイキャン2倍で空間オーディオ対応--ファーウェイから</h3>
+                    <a href="ASCII_jp__トップ_5028.html">
+                        <h3>うまそ!! 熱々の「海鮮あんかけおこげ」がバーミヤンに！海鮮フェア始まったよ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ファーウェイが1万円台の完全ワイヤレスイヤホン「FreeBuds 7i」を発表。1万2980円でヘッドトラッキング対応の空間オーディオとLDAC対応を実現し、ノイズキャンセリング性能も前モデル比で10...</p>
+                        <p class="related-summary">バーミヤンは11月13日、「熱々海鮮展（カイセンフェア）」を開始。本ずわい蟹の土鍋チャーハンや海鮮おこげ、鮑や牡蠣の土鍋料理など、熱々感を存分に味わえるラインアップがそろいます。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5476.html">
-                        <h3>OpenAIとジョニー・アイブ氏の「未知のAIデバイス」、技術的な課題に直面か</h3>
+                    <a href="気になる記になる_4107.html">
+                        <h3>【セール】UGREEN、公式ストアでブラックフライデーセールを開催中｜人気のNAS製品がお得に</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">iPhoneやiPodのデザインを手掛けたことで知られるジョニー・アイブ氏が、OpenAIと新製品を共同開発しているものの、技術的な課題に直面していると、英Financial Times（FT）が日曜...</p>
+                        <p class="related-summary">現在、UGREENが、公式サイトにてブラックフライデーセールを開催しています。 セールは11月14日からの先行セールと11月21日からの本セールに分かれており、先行セールではNAS製品とUPS（無停電...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【個人メモ】三層分離モデルをAWSアカウントで実現しようとした場合の構成 | 日本のテックニュース速報</title>
-    <meta name="description" content="記事を読んでいただきありがとうございます。 モブエンジニア（@mob-engineer)です。 TLを見ていたらセキュリティ対策における三層分離モデルの有効性云々の情報が流れていたので、頭の整理のために三層分離モデルをAWSアカウントで実現しようとした場合の構成を整理してみ.">
-    <meta name="keywords" content="AWS">
+    <title>[Amazon Bedrock AgentCore]エージェント呼び出し時の認証を実装してみる（Inbound Auth解説） | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Amazon Bedrock AgentCoreのIdentity機能を使うと、「誰が」「どの権限で」アクセスしているのかを安全に識別することができます。 外部からRuntimeを呼び出すときに使われる インバウンド認証（Inbound Auth） は、 エー.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【個人メモ】三層分離モデルをAWSアカウントで実現しようとした場合の構成">
-    <meta property="og:description" content="記事を読んでいただきありがとうございます。 モブエンジニア（@mob-engineer)です。 TLを見ていたらセキュリティ対策における三層分離モデルの有効性云々の情報が流れていたので、頭の整理のために三層分離モデルをAWSアカウントで実現しようとした場合の構成を整理してみ.">
+    <meta property="og:title" content="[Amazon Bedrock AgentCore]エージェント呼び出し時の認証を実装してみる（Inbound Auth解説）">
+    <meta property="og:description" content="はじめに Amazon Bedrock AgentCoreのIdentity機能を使うと、「誰が」「どの権限で」アクセスしているのかを安全に識別することができます。 外部からRuntimeを呼び出すときに使われる インバウンド認証（Inbound Auth） は、 エー.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6259.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【個人メモ】三層分離モデルをAWSアカウントで実現しようとした場合の構成">
-    <meta name="twitter:description" content="記事を読んでいただきありがとうございます。 モブエンジニア（@mob-engineer)です。 TLを見ていたらセキュリティ対策における三層分離モデルの有効性云々の情報が流れていたので、頭の整理のために三層分離モデルをAWSアカウントで実現しようとした場合の構成を整理してみ.">
+    <meta name="twitter:title" content="[Amazon Bedrock AgentCore]エージェント呼び出し時の認証を実装してみる（Inbound Auth解説）">
+    <meta name="twitter:description" content="はじめに Amazon Bedrock AgentCoreのIdentity機能を使うと、「誰が」「どの権限で」アクセスしているのかを安全に識別することができます。 外部からRuntimeを呼び出すときに使われる インバウンド認証（Inbound Auth） は、 エー.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【個人メモ】三層分離モデルをAWSアカウントで実現しようとした場合の構成",
-        "description": "記事を読んでいただきありがとうございます。 モブエンジニア（@mob-engineer)です。 TLを見ていたらセキュリティ対策における三層分離モデルの有効性云々の情報が流れていたので、頭の整理のために三層分離モデルをAWSアカウントで実現しようとした場合の構成を整理してみ.",
+        "headline": "[Amazon Bedrock AgentCore]エージェント呼び出し時の認証を実装してみる（Inbound Auth解説）",
+        "description": "はじめに Amazon Bedrock AgentCoreのIdentity機能を使うと、「誰が」「どの権限で」アクセスしているのかを安全に識別することができます。 外部からRuntimeを呼び出すときに使われる インバウンド認証（Inbound Auth） は、 エー.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-10T23:27:37",
-        "dateModified": "2025-10-12T14:16:41.611288",
+        "datePublished": "2025-11-15T02:56:57",
+        "dateModified": "2025-11-16T16:23:31.471197",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6259.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6259.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AWS"]
+        "articleSection": "通信・ネットワーク",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "通信・ネットワーク",
+                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【個人メモ】三層分離モデルをAWSアカウントで実現しようとした場合の構成",
+                "name": "[Amazon Bedrock AgentCore]エージェント呼び出し時の認証を実装してみる（Inbound Auth解説）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6259.html"
             }
         ]
@@ -113,38 +113,35 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">【個人メモ】三層分離モデルをAWSアカウントで実現しようとした場合の構成</li>
+                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
+                <li aria-current="page">[Amazon Bedrock AgentCore]エージェント呼び出し時の認証を実装してみる（In...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【個人メモ】三層分離モデルをAWSアカウントで実現しようとした場合の構成</h1>
+                <h1>[Amazon Bedrock AgentCore]エージェント呼び出し時の認証を実装してみる（Inbound Auth解説）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/mob_engineer/items/ee1c5eb4c4a8a1ee9625?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-10-10T23:27:37">
-                        公開: 2025-10-10T23:27:37
+                    <span class="source">出典: <a href="https://qiita.com/yakumo_09/items/a091b38d23cd16bdbf1c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: 通信・ネットワーク</span>
+                    <time datetime="2025-11-15T02:56:57">
+                        公開: 2025-11-15T02:56:57
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    記事を読んでいただきありがとうございます。
-モブエンジニア（@mob-engineer)です。
-TLを見ていたらセキュリティ対策における三層分離モデルの有効性云々の情報が流れていたので、頭の整理のために三層分離モデルをAWSアカウントで実現しようとした場合の構成を整理してみ...
+                    はじめに
+Amazon Bedrock AgentCoreのIdentity機能を使うと、「誰が」「どの権限で」アクセスしているのかを安全に識別することができます。
+外部からRuntimeを呼び出すときに使われる インバウンド認証（Inbound Auth） は、  エー...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/mob_engineer/items/ee1c5eb4c4a8a1ee9625?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/yakumo_09/items/a091b38d23cd16bdbf1c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -153,60 +150,25 @@ TLを見ていたらセキュリティ対策における三層分離モデルの
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>通信・ネットワーク関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -221,16 +183,16 @@ TLを見ていたらセキュリティ対策における三層分離モデルの
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_6703.html">
+                    <a href="気になる記になる_7331.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">2025年末〜2026年の新型Macの投入スケジュールが明らかに｜新型｢MacBook Pro｣のM...</span>
+                        <span class="nav-title">X、DM代替の新しいメッセージング機能｢チャット｣を正式に展開開始</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_7985.html">
+                    <a href="気になる記になる_2357.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【セール】Kindleストアで｢ニコニコカドカワ祭2025第2弾｣のセール開催中｜7,000冊以上が...</span>
+                        <span class="nav-title">【セール】UGREEN、公式ストアでブラックフライデーセールを開催中｜人気のNAS製品がお得に</span>
                     </a>
                 </div>
             </div>
@@ -243,53 +205,33 @@ TLを見ていたらセキュリティ対策における三層分離モデルの
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_553.html">
-                        <h3>気候テック10：インドのEV化は二輪車から、アザー・エナジーの挑戦</h3>
+                    <a href="ASCII_jp__トップ_2964.html">
+                        <h3>【2万円台で120Hz！】Motorola g64の高性能5Gスマホが35%オフで手に入る！</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">インドの電動スクーターメーカーであるアザー・エナジーは、ソフトウェアスタックからハードウェアまで、ほぼすべてを社内で設計・開発している。高級車種で売り上げを立てる一方で、より安価なリン酸鉄リチウムバッ...</p>
+                        <p class="related-summary">手頃な価格で5G通信と快適なパフォーマンスを両立したスマートフォン「motorola g64 5G」が、Amazonにてセール販売中。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_1977.html">
-                        <h3>TinyGoはどのように &#34;Tiny&#34; を実現している？</h3>
+                    <a href="Qiita_-_人気の記事_8807.html">
+                        <h3>VisualStudio 2026 でビルド時間が短くなったらしい</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">! この資料は TinyGo Conference 2025 in Japan の登壇資料です。 自己紹介 名前: uji 神戸市在住 NOT A HOTEL のソフトウェアエンジニア Gopher ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2162.html">
-                        <h3>ABC427個人的備忘録[A-E]</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">最高の出来だった気がした男の備忘録です コンテスト概要 パナソニックグループ プログラミングコンテスト2025（AtCoder Beginner Contest 427 開催日:2025年10月11日...</p>
+                        <p class="related-summary">11月11日、ついにVisualStudio 2026が正式リリースされました 色々変更点はあるかと思いますが、今回はビルド時間にのみフォーカスしていきます. NET MAUIのビルドが遅すぎる Vi...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_9199.html">
-                        <h3>もうprintlnデバッグは卒業。VSCodeで始めるRust実践デバッグ</h3>
+                    <a href="気になる記になる_3878.html">
+                        <h3>Amazon、オーディオブック配信サービス｢Audible｣の3ヶ月月額99円キャンペーンをスタート｜さらに300円分の...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">はじめに 突然ですが、Rustでプログラムを書いていて、こんな経験はありませんか? println!(&#34;ここまで到達&#34;); println!(&#34;変数xの値: {:?}&#34;, x); println!(&#34;...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_3397.html">
-                        <h3>Go&amp;Ebitengineで3D描画をする</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに Ebitengineは2Dゲームエンジンであり、3D用の機能は持ち合わせていないが、なぜか世の中にはガチな人がいてガチな3Dライブラリを作っていたりする。 https://github. c...</p>
+                        <p class="related-summary">Amazonが、本日よりオーディオブック配信サービス「Audible」のプレミアムプランの3か月月額99円キャンペーンを実施しています。 「Audible」は月額制の聴き放題サービスで、20万以上の作...</p>
                     </a>
                 </article>
             </div>

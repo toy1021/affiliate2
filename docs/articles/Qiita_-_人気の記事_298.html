@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS CDK 基礎知識まとめ | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに AWS CDK (Cloud Development Kit)について、私が初めて学習した際に学んだ内容を備忘録としてまとめてみました。 この記事を読んでいただくことで、aws-cdkを使用してコードを書き始めるために必要な前提知識を身につけることができます。.">
-    <meta name="keywords" content="AWS,EV">
+    <title>【Secrets Manager】RDSパスワードローテーションをコードから理解する | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに AWS Secrets Managerで、データベースのシークレットをローテーションすることができます。このローテーションの際、Lambdaが実行されているのですが、どういった仕組みになっているのかあまり把握できていませんでした。 そこで、今回はSecrets.">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AWS CDK 基礎知識まとめ">
-    <meta property="og:description" content="はじめに AWS CDK (Cloud Development Kit)について、私が初めて学習した際に学んだ内容を備忘録としてまとめてみました。 この記事を読んでいただくことで、aws-cdkを使用してコードを書き始めるために必要な前提知識を身につけることができます。.">
+    <meta property="og:title" content="【Secrets Manager】RDSパスワードローテーションをコードから理解する">
+    <meta property="og:description" content="はじめに AWS Secrets Managerで、データベースのシークレットをローテーションすることができます。このローテーションの際、Lambdaが実行されているのですが、どういった仕組みになっているのかあまり把握できていませんでした。 そこで、今回はSecrets.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_298.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AWS CDK 基礎知識まとめ">
-    <meta name="twitter:description" content="はじめに AWS CDK (Cloud Development Kit)について、私が初めて学習した際に学んだ内容を備忘録としてまとめてみました。 この記事を読んでいただくことで、aws-cdkを使用してコードを書き始めるために必要な前提知識を身につけることができます。.">
+    <meta name="twitter:title" content="【Secrets Manager】RDSパスワードローテーションをコードから理解する">
+    <meta name="twitter:description" content="はじめに AWS Secrets Managerで、データベースのシークレットをローテーションすることができます。このローテーションの際、Lambdaが実行されているのですが、どういった仕組みになっているのかあまり把握できていませんでした。 そこで、今回はSecrets.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AWS CDK 基礎知識まとめ",
-        "description": "はじめに AWS CDK (Cloud Development Kit)について、私が初めて学習した際に学んだ内容を備忘録としてまとめてみました。 この記事を読んでいただくことで、aws-cdkを使用してコードを書き始めるために必要な前提知識を身につけることができます。.",
+        "headline": "【Secrets Manager】RDSパスワードローテーションをコードから理解する",
+        "description": "はじめに AWS Secrets Managerで、データベースのシークレットをローテーションすることができます。このローテーションの際、Lambdaが実行されているのですが、どういった仕組みになっているのかあまり把握できていませんでした。 そこで、今回はSecrets.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-06T08:01:50",
-        "dateModified": "2025-10-07T18:29:17.680329",
+        "datePublished": "2025-11-14T15:20:13",
+        "dateModified": "2025-11-16T12:37:52.070437",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_298.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_298.html",
         "articleSection": "テクノロジー",
-        "keywords": ["AWS","EV"]
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AWS CDK 基礎知識まとめ",
+                "name": "【Secrets Manager】RDSパスワードローテーションをコードから理解する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_298.html"
             }
         ]
@@ -114,25 +114,24 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">AWS CDK 基礎知識まとめ</li>
+                <li aria-current="page">【Secrets Manager】RDSパスワードローテーションをコードから理解する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AWS CDK 基礎知識まとめ</h1>
+                <h1>【Secrets Manager】RDSパスワードローテーションをコードから理解する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/j-yasukawa/items/8020fab836d4efbae8db?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/ryu-ki/items/a49ffb7b2bece4dec53f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-10-06T08:01:50">
-                        公開: 2025-10-06T08:01:50
+                    <time datetime="2025-11-14T15:20:13">
+                        公開: 2025-11-14T15:20:13
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AWS</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
@@ -140,13 +139,12 @@
                 
                 <div class="article-body">
                     はじめに
-AWS CDK (Cloud Development Kit)について、私が初めて学習した際に学んだ内容を備忘録としてまとめてみました。
-この記事を読んでいただくことで、aws-cdkを使用してコードを書き始めるために必要な前提知識を身につけることができます。
-...
+AWS Secrets Managerで、データベースのシークレットをローテーションすることができます。このローテーションの際、Lambdaが実行されているのですが、どういった仕組みになっているのかあまり把握できていませんでした。
+そこで、今回はSecrets ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/j-yasukawa/items/8020fab836d4efbae8db?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/ryu-ki/items/a49ffb7b2bece4dec53f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,16 +161,6 @@ AWS CDK (Cloud Development Kit)について、私が初めて学習した際に�
                                 <div class="product-info">
                                     <div class="product-title">AWS - Amazon検索結果</div>
                                     <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -213,16 +201,16 @@ AWS CDK (Cloud Development Kit)について、私が初めて学習した際に�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5477.html">
+                    <a href="気になる記になる_4456.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">全プロセスが一秒止まる不具合続編: カーネル内部で何が起きたか？</span>
+                        <span class="nav-title">6秒動画投稿サービス｢Vine｣が｢Divine｣として復活｜過去の一部動画も視聴可能</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_714.html">
+                    <a href="Qiita_-_人気の記事_3410.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPad miniの新型発売を明言し、廉価版の追加を提案〜著名記者</span>
+                        <span class="nav-title">国土交通データプラットフォームのMCPサーバーが公開されたので試してみた</span>
                     </a>
                 </div>
             </div>
@@ -235,53 +223,52 @@ AWS CDK (Cloud Development Kit)について、私が初めて学習した際に�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5800.html">
-                        <h3>スマートリングのバッテリーが膨張、指から抜けない--実際に起きた事故と対処法</h3>
+                    <a href="CNET_Japan_最新情報総合_3989.html">
+                        <h3>イヤホンでおなじみ「ノイキャン」を空間全体に適用、クルマの走行音低減も--NTT</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">サムスン製スマートリングのバッテリーが膨張して指から抜けなくなり、あるユーザーが飛行機の搭乗を拒否される事案が発生した。このような場合、どう対処すればよいのだろうか。.</p>
+                        <p class="related-summary">NTTは、車内や会議室など“空間全体”の騒音に高速追従し、低減できる新しいノイズキャンセリング技術を発表した。これまでヘッドホンなど個人向けに限られていたANC（Active Noise Contro...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1308.html">
-                        <h3>Beats最新イヤホン「Powerbeats Fit」辛口レビュー：装着感は向上、でも待望の「Fit Pro 2」じゃな...</h3>
+                    <a href="CNET_Japan_最新情報総合_4940.html">
+                        <h3>「Skyrim」から14年、続編「Elder Scrolls VI」発売日はいつ？ ディレクターは「まだかなり先」</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">フィット感が向上したというBeatsの最新イヤホン「Powerbeats Fit」の忌憚なきレビューをお届けする。.</p>
+                        <p class="related-summary">「The Elder Scrolls VI」は、まだしばらくはお目見えしそうにない。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6351.html">
-                        <h3>秋キャンプするなら必見--コールマン製品がAmazonでセール中</h3>
+                    <a href="CNET_Japan_最新情報総合_7837.html">
+                        <h3>アマゾンの衛星インターネット「Project Kuiper」が「Leo」に改称、Starlink対抗へ</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">コールマン製品がAmazonのプライム感謝祭でセール中。焚き火台やテント、アウトドアワゴンなど人気キャンプ用品が今だけお得に手に入る！.</p>
+                        <p class="related-summary">アマゾンが進めてきた衛星インターネット計画「Project Kuiper」の名称が「Amazon Leo」に変更された。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1878.html">
-                        <h3>Instagram、創造性をたたえる賞「Rings」新設--スパイク・リー監督ら13人が審査</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_995.html">
+                        <h3>進まない選挙のSNS対策 課題多く</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">Instagramは、創造性をたたえる新たな賞「Rings」を新設すると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2935.html">
-                        <h3>「ZEFT Z55XO（Core Ultra9・RTX 5080・128GBメモリ）」などが最大6.5万円オフ｜パソコン...</h3>
+                    <a href="ASCII_jp__トップ_2790.html">
+                        <h3>小悪魔系の魅力あふれる清宮みいな、制服やサキュバス姿で魅せる1st DVDリリース！</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">パソコンショップSEVENが2025年10月8日に24時間限定セールを開催。Core Ultra9・RTX 5080搭載「ZEFT Z55XO」など10モデルが最大6.</p>
+                        <p class="related-summary">色白で小悪魔的な可愛さが魅力。撮影会でも人気の清宮みいなさんが、1st DVD「初恋天使」の発売記念イベントをソフマップAKIBA アミューズメント館で開催した。.</p>
                     </a>
                 </article>
             </div>

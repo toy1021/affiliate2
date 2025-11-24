@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rustで『安全』と言い切れるか？Cloudflare 障害と unwrap() のリアル | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 2025年11月18日、インターネットインフラ大手 Cloudflare にて、世界規模のサービス障害が発生しました。 その原因として、Rust 製プロキシサービス内で起きた panic の一撃が引き金になったことが報じられています">
+    <title>Rust でローカルにできる限りにセキュアに保存 | 日本のテックニュース速報</title>
+    <meta name="description" content="Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Rustで『安全』と言い切れるか？Cloudflare 障害と unwrap() のリアル">
-    <meta property="og:description" content="はじめに 2025年11月18日、インターネットインフラ大手 Cloudflare にて、世界規模のサービス障害が発生しました。 その原因として、Rust 製プロキシサービス内で起きた panic の一撃が引き金になったことが報じられています">
+    <meta property="og:title" content="Rust でローカルにできる限りにセキュアに保存">
+    <meta property="og:description" content="Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5223.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rustで『安全』と言い切れるか？Cloudflare 障害と unwrap() のリアル">
-    <meta name="twitter:description" content="はじめに 2025年11月18日、インターネットインフラ大手 Cloudflare にて、世界規模のサービス障害が発生しました。 その原因として、Rust 製プロキシサービス内で起きた panic の一撃が引き金になったことが報じられています">
+    <meta name="twitter:title" content="Rust でローカルにできる限りにセキュアに保存">
+    <meta name="twitter:description" content="Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Rustで『安全』と言い切れるか？Cloudflare 障害と unwrap() のリアル",
-        "description": "はじめに 2025年11月18日、インターネットインフラ大手 Cloudflare にて、世界規模のサービス障害が発生しました。 その原因として、Rust 製プロキシサービス内で起きた panic の一撃が引き金になったことが報じられています",
+        "headline": "Rust でローカルにできる限りにセキュアに保存",
+        "description": "Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-21T13:17:11",
-        "dateModified": "2025-11-22T08:26:01.582468",
+        "datePublished": "2025-11-23T09:47:38",
+        "dateModified": "2025-11-24T22:20:58.456017",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5223.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5223.html",
-        "articleSection": "その他",
+        "articleSection": "セキュリティ",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "セキュリティ",
+                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Rustで『安全』と言い切れるか？Cloudflare 障害と unwrap() のリアル",
+                "name": "Rust でローカルにできる限りにセキュアに保存",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5223.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">Rustで『安全』と言い切れるか？Cloudflare 障害と unwrap() のリアル</li>
+                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
+                <li aria-current="page">Rust でローカルにできる限りにセキュアに保存</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Rustで『安全』と言い切れるか？Cloudflare 障害と unwrap() のリアル</h1>
+                <h1>Rust でローカルにできる限りにセキュアに保存</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/dokusy/articles/666387f63061de" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-11-21T13:17:11">
-                        公開: 2025-11-21T13:17:11
+                    <span class="source">出典: <a href="https://zenn.dev/nodamushi/articles/7189de6df51938" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: セキュリティ</span>
+                    <time datetime="2025-11-23T09:47:38">
+                        公開: 2025-11-23T09:47:38
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
@@ -135,17 +135,19 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-2025年11月18日、インターネットインフラ大手 Cloudflare にて、世界規模のサービス障害が発生しました。
-その原因として、Rust 製プロキシサービス内で起きた panic の一撃が引き金になったことが報じられています。中でも注目されたのが、Rust 標準ライブラリの Option::unwrap() または Result::unwrap() の呼び出しです。
-しかし、この「unwrap が原因」という一言だけで終わる話ではありません。今回は、Rust における unwrap() の意味・使いどころ・今回の障害が教えてくれたことを丁寧に振り返ります。
+                    Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。
+主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう。ChaCha20Poly1305 あたりで十分かと個人的には思います。
+クラウドを使えやクソデブって？うん、それでいいんじゃない？
+!
+私はセキュリティの専門家ではないので、鵜呑みにせずにご自身で考えてください。
 
 
- R...
+ keyring
+keyring クレートを使うと、 OS 固有の安全なストアに統一的にアクセスする方...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/dokusy/articles/666387f63061de" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/nodamushi/articles/7189de6df51938" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -156,7 +158,7 @@
                 
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>セキュリティ関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -187,16 +189,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_4626.html">
+                    <a href="Zennのトレンド_3502.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iPhone17eが来春発売もC1X搭載せずC1継続？iPad（A18）なども同時発表か</span>
+                        <span class="nav-title">AWS CDK で Grants クラスが導入されました（v2.227.0)</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_2090.html">
+                    <a href="Zennのトレンド_751.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">MINISFORUM、Core Ultra 9 285HX搭載のミニワークステーション｢MS-02 ...</span>
+                        <span class="nav-title">Unityのホラーゲーム用ライティング設定メモ</span>
                     </a>
                 </div>
             </div>
@@ -209,53 +211,33 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5947.html">
-                        <h3>ヤフオク、出品商品の「本物 or 偽物」をプロが鑑定する新サービス　利用無料</h3>
+                    <a href="Qiita_-_人気の記事_6454.html">
+                        <h3>【2030年問題】オーストラリア政府が突きつけた&#34;暗号全取替え&#34;の衝撃 ― LATICEフレームワーク完全解説</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">LINEヤフーは11月19日、「Yahoo!オークション」に出品された商品が本物か偽物かをプロが鑑定するサービスを始めた。SODAが提供する「スニーカーダンク」と連携し、ファッション、アクセサリー・時...</p>
+                        <p class="related-summary">暗号好きですか？ GMOコネクトでCTOしている菅野 哲（かんの さとる）でございます。 今回は、オーストラリア政府がぶっ込んできたドキュメントを取り上げて解説しておりますので、よろしくお願いします。...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8760.html">
-                        <h3>マクドナルドの「ストロー無しで飲めるフタ」を試す--紙ストローより断然こっち</h3>
+                    <a href="Zennのトレンド_6715.html">
+                        <h3>aws loginコマンドが来たのでAWSのアクセスキーを削除したかったけど、やっぱり保留しました。</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">日本マクドナルドは11月19日、冷たいドリンクをストローを使わずに飲める新型フタの提供を開始した。これに伴い、紙ストローは順次廃止する。.</p>
+                        <p class="related-summary">はじめに AWS CLIにaws loginコマンドが実装されました。 https://aws. com/jp/blogs/security/simplified-developer-access-t...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2658.html">
-                        <h3>ドコモ「dポイント」、Amazonブラックフライデーでポイント還元</h3>
+                    <a href="iPhone_Mania_9199.html">
+                        <h3>Cloudflareに問題が発生中〜多くの大手サイトがアクセス不可に</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">NTTドコモは、Amazonブラックフライデーに合わせて、dポイントとd払いを対象にした2つのキャンペーンを発表した。期間は11月21日0時から12月1日23時59分までで、いずれも事前エントリーが必...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_4127.html">
-                        <h3>天丼てんや「年越し天ぷら」予約開始！ 天然大海老や蟹を詰め込んだ豪華3商品</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">天丼てんやは11月24日より「年越し天ぷら」の予約受付を店頭で開始。4人前目安の「極」は、天然大海老、海老、ずわい蟹などが入った豪華な内容です。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_7178.html">
-                        <h3>NuSoundが音楽アーティスト向けの新しい収益化機能をリリース！さらに、リリース記念をお祝いして収益手数料無料キャンペ...</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">NuSoundが音楽アーティスト向けの新しい収益化機能をリリース！さらに、リリース記念をお祝いして収益手数料無料キャンペーンの期間を延長！.</p>
+                        <p class="related-summary">コンテンツデリバリネットワーク（CDN）やインターネットセキュリティサービス、DDoS防御、分散型ドメイン名サーバシステムを提供するCloudflareに問題が発生しており、多くの大手サイトにアクセス...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTokがゼロ知識証明の開発を始めた話 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに TikTokが今年に入ってから、TEE（Trusted Execution Environment）のRA(Remote Attestation)に、ゼロ知識証明（ZKP）を使った仕組みをOSSで公開していました。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="EV">
+    <title>Rust でローカルにできる限りにセキュアに保存 | 日本のテックニュース速報</title>
+    <meta name="description" content="Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="TikTokがゼロ知識証明の開発を始めた話">
-    <meta property="og:description" content="はじめに TikTokが今年に入ってから、TEE（Trusted Execution Environment）のRA(Remote Attestation)に、ゼロ知識証明（ZKP）を使った仕組みをOSSで公開していました。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="Rust でローカルにできる限りにセキュアに保存">
+    <meta property="og:description" content="Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4211.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TikTokがゼロ知識証明の開発を始めた話">
-    <meta name="twitter:description" content="はじめに TikTokが今年に入ってから、TEE（Trusted Execution Environment）のRA(Remote Attestation)に、ゼロ知識証明（ZKP）を使った仕組みをOSSで公開していました。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="Rust でローカルにできる限りにセキュアに保存">
+    <meta name="twitter:description" content="Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "TikTokがゼロ知識証明の開発を始めた話",
-        "description": "はじめに TikTokが今年に入ってから、TEE（Trusted Execution Environment）のRA(Remote Attestation)に、ゼロ知識証明（ZKP）を使った仕組みをOSSで公開していました。最新のテクノロジー情報をお届けします。",
+        "headline": "Rust でローカルにできる限りにセキュアに保存",
+        "description": "Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-23T00:38:17",
-        "dateModified": "2025-09-26T14:18:44.940886",
+        "datePublished": "2025-11-23T09:47:38",
+        "dateModified": "2025-11-25T04:28:12.089759",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4211.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4211.html",
-        "articleSection": "プログラミング",
-        "keywords": ["EV"]
+        "articleSection": "セキュリティ",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "セキュリティ",
+                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "TikTokがゼロ知識証明の開発を始めた話",
+                "name": "Rust でローカルにできる限りにセキュアに保存",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4211.html"
             }
         ]
@@ -113,37 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">TikTokがゼロ知識証明の開発を始めた話</li>
+                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
+                <li aria-current="page">Rust でローカルにできる限りにセキュアに保存</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>TikTokがゼロ知識証明の開発を始めた話</h1>
+                <h1>Rust でローカルにできる限りにセキュアに保存</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/mameta29/articles/d05f0c9d9dff90" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-09-23T00:38:17">
-                        公開: 2025-09-23T00:38:17
+                    <span class="source">出典: <a href="https://zenn.dev/nodamushi/articles/7189de6df51938" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: セキュリティ</span>
+                    <time datetime="2025-11-23T09:47:38">
+                        公開: 2025-11-23T09:47:38
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-TikTokが今年に入ってから、TEE（Trusted Execution Environment）のRA(Remote Attestation)に、ゼロ知識証明（ZKP）を使った仕組みをOSSで公開していました。こちらがTikTokの記事Trustless Attestation Verification With Zero-Knowledge Proofs  | TikTok for Developersです。TEEやRemote Attestationとは何か、どのような場面でゼロ知識証明が使われるのか、そしてTikTokがこのような最先端な暗号技術を積極的に取り入れ...
+                    Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。
+主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう。ChaCha20Poly1305 あたりで十分かと個人的には思います。
+クラウドを使えやクソデブって？うん、それでいいんじゃない？
+!
+私はセキュリティの専門家ではないので、鵜呑みにせずにご自身で考えてください。
+
+
+ keyring
+keyring クレートを使うと、 OS 固有の安全なストアに統一的にアクセスする方...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/mameta29/articles/d05f0c9d9dff90" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/nodamushi/articles/7189de6df51938" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -152,60 +156,25 @@ TikTokが今年に入ってから、TEE（Trusted Execution Environment）のRA(
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>セキュリティ関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -220,16 +189,16 @@ TikTokが今年に入ってから、TEE（Trusted Execution Environment）のRA(
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9767.html">
+                    <a href="Zennのトレンド_8574.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">TikTok米事業 企業連合が買収へ</span>
+                        <span class="nav-title">【Google Antigravity】話題のAI IDEを使って、家庭菜園シミュレータを1日で爆誕...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_2532.html">
+                    <a href="Zennのトレンド_3985.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhone AirとGalaxy S25 Edgeのバッテリー駆動時間比較結果は？</span>
+                        <span class="nav-title">仕様書駆動開発で一番いいAIモデル&amp;エージェント検証 11/23版</span>
                     </a>
                 </div>
             </div>
@@ -242,53 +211,23 @@ TikTokが今年に入ってから、TEE（Trusted Execution Environment）のRA(
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4178.html">
-                        <h3>FPSゲームの開発者は、はたしてFPSがめちゃくちゃ強いのだろうか？ マウスコンピューター「G TUNE × 『Esca...</h3>
+                    <a href="Qiita_-_人気の記事_7233.html">
+                        <h3>【2030年問題】オーストラリア政府が突きつけた&#34;暗号全取替え&#34;の衝撃 ― LATICEフレームワーク完全解説</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">東京ゲームショウ2025のマウスコンピューターブースで、FPSファンなら注目したいおもしろいステージがありました。それはFPS開発者とストリーマーの間での対戦という試みです！.</p>
+                        <p class="related-summary">暗号好きですか？ GMOコネクトでCTOしている菅野 哲（かんの さとる）でございます。 今回は、オーストラリア政府がぶっ込んできたドキュメントを取り上げて解説しておりますので、よろしくお願いします。...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7336.html">
-                        <h3>NDソフトウェア、国際福祉機器展H.C.R.2025に出展</h3>
+                    <a href="iPhone_Mania_990.html">
+                        <h3>Cloudflareに問題が発生中〜多くの大手サイトがアクセス不可に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_9393.html">
-                        <h3>GitHub Copilot CLI入門</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">com/github/copilot-cli 対応しているプラットフォーム Linux macOS Windo. com/github/status/1971295695853306059 触ってみる...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_4088.html">
-                        <h3>Storybook公式MCPの解説とその先 - Design Systems with Agentsの提案について -</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">! この記事は、CYBOZU SUMMER BLOG FES &#39;25の記事です。 はじめに 2025年8月末にStorybook公式のMCPが登場しました。これがMCP Addonです。 https:...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_7632.html">
-                        <h3>Amazon、｢Fire TV｣にも自社開発の｢Vega OS｣を採用へ｜早ければ来週に発表</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">今年4月、Amazonは「Echo」シリーズの一部モデルに続き、今年後半には「Fire TV」シリーズにも自社開発OS「Vega OS」を採用する可能性があるとお伝えしましたが、The Vergeによ...</p>
+                        <p class="related-summary">コンテンツデリバリネットワーク（CDN）やインターネットセキュリティサービス、DDoS防御、分散型ドメイン名サーバシステムを提供するCloudflareに問題が発生しており、多くの大手サイトにアクセス...</p>
                     </a>
                 </article>
             </div>

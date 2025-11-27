@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIエージェントを脱線させないプロンプト設計の実践ガイド | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに DevinやGitHub Copilot AgentのようなAIエージェントは、設計・実装の一部を自動化し開発速度を大きく向上させます。しかし、明確なガードレールなしに指示を出すと、リポジトリの前提を誤解したり、想定外の実装に踏み込んだりして生産性が下がることも少なくありません">
-    <meta name="keywords" content="AI,GitHub,本,EV">
+    <title>git worktree 並列開発でのポート競合を解消するCLI、PortMuxを作りました | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Coding Agent でタスクを並列に進めることが一般的になりつつある昨今、git worktree でブランチごとに環境を分け、ローカルで並行開発する場面が増えています。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIエージェントを脱線させないプロンプト設計の実践ガイド">
-    <meta property="og:description" content="はじめに DevinやGitHub Copilot AgentのようなAIエージェントは、設計・実装の一部を自動化し開発速度を大きく向上させます。しかし、明確なガードレールなしに指示を出すと、リポジトリの前提を誤解したり、想定外の実装に踏み込んだりして生産性が下がることも少なくありません">
+    <meta property="og:title" content="git worktree 並列開発でのポート競合を解消するCLI、PortMuxを作りました">
+    <meta property="og:description" content="はじめに Coding Agent でタスクを並列に進めることが一般的になりつつある昨今、git worktree でブランチごとに環境を分け、ローカルで並行開発する場面が増えています。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1249.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIエージェントを脱線させないプロンプト設計の実践ガイド">
-    <meta name="twitter:description" content="はじめに DevinやGitHub Copilot AgentのようなAIエージェントは、設計・実装の一部を自動化し開発速度を大きく向上させます。しかし、明確なガードレールなしに指示を出すと、リポジトリの前提を誤解したり、想定外の実装に踏み込んだりして生産性が下がることも少なくありません">
+    <meta name="twitter:title" content="git worktree 並列開発でのポート競合を解消するCLI、PortMuxを作りました">
+    <meta name="twitter:description" content="はじめに Coding Agent でタスクを並列に進めることが一般的になりつつある昨今、git worktree でブランチごとに環境を分け、ローカルで並行開発する場面が増えています。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIエージェントを脱線させないプロンプト設計の実践ガイド",
-        "description": "はじめに DevinやGitHub Copilot AgentのようなAIエージェントは、設計・実装の一部を自動化し開発速度を大きく向上させます。しかし、明確なガードレールなしに指示を出すと、リポジトリの前提を誤解したり、想定外の実装に踏み込んだりして生産性が下がることも少なくありません",
+        "headline": "git worktree 並列開発でのポート競合を解消するCLI、PortMuxを作りました",
+        "description": "はじめに Coding Agent でタスクを並列に進めることが一般的になりつつある昨今、git worktree でブランチごとに環境を分け、ローカルで並行開発する場面が増えています。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-21T10:08:20",
-        "dateModified": "2025-09-22T08:27:36.061394",
+        "datePublished": "2025-11-26T17:00:13",
+        "dateModified": "2025-11-27T16:26:43.723394",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1249.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1249.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","GitHub","本","EV"]
+        "articleSection": "プログラミング",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIエージェントを脱線させないプロンプト設計の実践ガイド",
+                "name": "git worktree 並列開発でのポート競合を解消するCLI、PortMuxを作りました",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1249.html"
             }
         ]
@@ -113,28 +113,22 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIエージェントを脱線させないプロンプト設計の実践ガイド</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">git worktree 並列開発でのポート競合を解消するCLI、PortMuxを作りました</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIエージェントを脱線させないプロンプト設計の実践ガイド</h1>
+                <h1>git worktree 並列開発でのポート競合を解消するCLI、PortMuxを作りました</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/toccasystems/articles/ai-agent-guardrail-prompt-tips" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-09-21T10:08:20">
-                        公開: 2025-09-21T10:08:20
+                    <span class="source">出典: <a href="https://zenn.dev/yuta_takahashi/articles/introduce-portmux-cli" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-11-26T17:00:13">
+                        公開: 2025-11-26T17:00:13
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">GitHub</span>
-                    <span class="tag">本</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
@@ -142,15 +136,13 @@
                 
                 <div class="article-body">
                     はじめに
-DevinやGitHub Copilot AgentのようなAIエージェントは、設計・実装の一部を自動化し開発速度を大きく向上させます。しかし、明確なガードレールなしに指示を出すと、リポジトリの前提を誤解したり、想定外の実装に踏み込んだりして生産性が下がることも少なくありません。本記事では、AIエージェントが設計や開発タスクを脱線しないようにするためのプロンプトのコツを、READMEやdocsの整備、タスクのスライシング、issueの書き方といった観点で具体的に紹介します。
-
- ガードレールとしてのREADME / docs整備と活用プロンプト
-
- READMEを「行動ルー...
+Coding Agent でタスクを並列に進めることが一般的になりつつある昨今、git worktree でブランチごとに環境を分け、ローカルで並行開発する場面が増えています。このような開発フローでは、各 worktree で開発サーバーを立ち上げて行き来しながら動作確認する必要があります。
+とはいえ、ローカルサーバーの切り替えは手間がかかります。1 つのプロダクトで複数のサーバーを立てていると、毎回 stop / start をやり直したり、ポート競合に引っかかったりしがちです。
+この記事では、git worktree 運用時のポート競合と切り替えの手間を減らすために開発...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/toccasystems/articles/ai-agent-guardrail-prompt-tips" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/yuta_takahashi/articles/introduce-portmux-cli" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,30 +155,30 @@ DevinやGitHub Copilot AgentのようなAIエージェントは、設計・実�
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -196,23 +188,23 @@ DevinやGitHub Copilot AgentのようなAIエージェントは、設計・実�
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +219,16 @@ DevinやGitHub Copilot AgentのようなAIエージェントは、設計・実�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_4645.html">
+                    <a href="気になる記になる_9838.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【個人開発】QAエンジニア、テスターを救うファイルダウンロードアプリを作りました【React/Typ...</span>
+                        <span class="nav-title">世界各国で即完売した｢iPhone Pocket｣のコピー商品が早くも登場｜価格は約1,000円〜</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_7224.html">
+                    <a href="Zennのトレンド_5923.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">地下鉄でバク宙配信 ドイツ人真意</span>
+                        <span class="nav-title">JSONはもう古い？LLM時代の新フォーマット「TOON」がトークンを節約する理由</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +241,53 @@ DevinやGitHub Copilot AgentのようなAIエージェントは、設計・実�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3917.html">
-                        <h3>Luma AIの動画生成AI「Ray3」が登場--「推論モデル」で複雑なシーンも可能に</h3>
+                    <a href="CNET_Japan_最新情報総合_4071.html">
+                        <h3>聴覚障害者の社会参入を後押しする「字幕テック」をデフリンピック会場で見てきた</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">画像・動画生成AIを手掛けるLuma AIは、同社初となる推論機能を備えたAI動画生成モデル「Ray3」を発表、提供開始した。.</p>
+                        <p class="related-summary">自動車部品メーカー・アイシンが聴覚障害者との社内コミュニケーション支援のために開発した「YYSystem」。工場の騒音下でも高精度な音声認識を実現し、災害時のオフライン動作にも対応。「字幕文化を広げた...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1948.html">
-                        <h3>ChatGPTに「策略」の兆し、OpenAIが実験で確認　実社会へのリスクは</h3>
+                    <a href="Zennのトレンド_8598.html">
+                        <h3>Honoの7つのコンセプト</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">AIがテストで意図的に誤答？OpenAIの最新研究で発覚した“策略するAI”のリスクと、安全性確保の取り組みを解説。.</p>
+                        <p class="related-summary">jsなどどんなJavaScriptのランタイムでも動作します。2021年の12月15日から開発が始まり4年が経とうとしています。 以下はHonoを使った基本的な&#34;Hello World&#34;のアプリケーシ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_954.html">
-                        <h3>映像プロ仕様の動画生成AI「Ray3」　Adobeや電通とも連携</h3>
+                    <a href="Zennのトレンド_3438.html">
+                        <h3>GitHub Copilot カスタムエージェントのための agents.md 作成ベストプラクティス</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">Luma AIが9月18日、「世界初の推論型動画モデル」とする動画生成モデル「Ray3」を発表した。指示やコンセプトを理解し、修正を重ねつつ、自ら出力を改善していく能力を備えている。.</p>
+                        <p class="related-summary">blog/changelog/2025-10-28-custom-agents-for-github-copilot/. はじめに スタディポケットでソフトウェアエンジニア / SRE として働いてい...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3763.html">
-                        <h3>インハウスマーケター必見 広告成果を最大化 2025年下期、知らないと損するAI活用術5選</h3>
+                    <a href="Zennのトレンド_4666.html">
+                        <h3>モノレポ＋Hono＋OpenAPIスキーマ駆動(Orval)+Drizzleは最高</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">インハウスマーケター必見 広告成果を最大化 2025年下期、知らないと損するAI活用術5選.</p>
+                        <p class="related-summary">はじめに 最近の開発で、モノレポ上に Hono のバックエンドと Next. js のフロントを抱えたアプリを作っている。そこで一周回って確信したのが、「Hono + OpenAPIスキーマ駆動 (O...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2154.html">
-                        <h3>ものづくりワールド大阪2025にて『EMLink』の新機能（AIエージェント機能など）を展示いたします。</h3>
+                    <a href="Qiita_-_人気の記事_9075.html">
+                        <h3>エンジニアの「絵で説明して」問題、Nano Banana Pro（Gemini 3 Pro Image）でどこまで解消で...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ものづくりワールド大阪2025にて『EMLink』の新機能（AIエージェント機能など）を展示いたします。.</p>
+                        <p class="related-summary">はじめに GMOコネクトの永田です。 エンジニアやアーキテクトの皆さん、こんな経験はありませんか？ 「この技術的な内容、文字だけじゃ分かりにくいから絵で説明して」 分かりやすく説明したい気持ちはあるも...</p>
                     </a>
                 </article>
             </div>

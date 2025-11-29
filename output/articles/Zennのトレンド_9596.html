@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rust でローカルにできる限りにセキュアに保存 | 日本のテックニュース速報</title>
-    <meta name="description" content="Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>GitHub Copilot カスタムエージェントのための agents.md 作成ベストプラクティス | 日本のテックニュース速報</title>
+    <meta name="description" content="blog/changelog/2025-10-28-custom-agents-for-github-copilot/. はじめに スタディポケットでソフトウェアエンジニア / SRE として働いている@Tocyukiです。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="GitHub">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Rust でローカルにできる限りにセキュアに保存">
-    <meta property="og:description" content="Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう">
+    <meta property="og:title" content="GitHub Copilot カスタムエージェントのための agents.md 作成ベストプラクティス">
+    <meta property="og:description" content="blog/changelog/2025-10-28-custom-agents-for-github-copilot/. はじめに スタディポケットでソフトウェアエンジニア / SRE として働いている@Tocyukiです。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9596.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rust でローカルにできる限りにセキュアに保存">
-    <meta name="twitter:description" content="Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう">
+    <meta name="twitter:title" content="GitHub Copilot カスタムエージェントのための agents.md 作成ベストプラクティス">
+    <meta name="twitter:description" content="blog/changelog/2025-10-28-custom-agents-for-github-copilot/. はじめに スタディポケットでソフトウェアエンジニア / SRE として働いている@Tocyukiです。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Rust でローカルにできる限りにセキュアに保存",
-        "description": "Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。 主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう",
+        "headline": "GitHub Copilot カスタムエージェントのための agents.md 作成ベストプラクティス",
+        "description": "blog/changelog/2025-10-28-custom-agents-for-github-copilot/. はじめに スタディポケットでソフトウェアエンジニア / SRE として働いている@Tocyukiです。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-23T09:47:38",
-        "dateModified": "2025-11-24T10:25:14.630818",
+        "datePublished": "2025-11-26T15:23:38",
+        "dateModified": "2025-11-29T14:19:05.745790",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9596.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9596.html",
-        "articleSection": "セキュリティ",
-        "keywords": []
+        "articleSection": "プログラミング",
+        "keywords": ["GitHub"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "セキュリティ",
-                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Rust でローカルにできる限りにセキュアに保存",
+                "name": "GitHub Copilot カスタムエージェントのための agents.md 作成ベストプラクティス",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9596.html"
             }
         ]
@@ -113,41 +113,40 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
-                <li aria-current="page">Rust でローカルにできる限りにセキュアに保存</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">GitHub Copilot カスタムエージェントのための agents.md 作成ベストプラクティ...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Rust でローカルにできる限りにセキュアに保存</h1>
+                <h1>GitHub Copilot カスタムエージェントのための agents.md 作成ベストプラクティス</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/nodamushi/articles/7189de6df51938" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: セキュリティ</span>
-                    <time datetime="2025-11-23T09:47:38">
-                        公開: 2025-11-23T09:47:38
+                    <span class="source">出典: <a href="https://zenn.dev/studypocket/articles/github-copilot-agents-md-best-practices" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-11-26T15:23:38">
+                        公開: 2025-11-26T15:23:38
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Rust で他人に抜かれたらまずいデータをローカルに保存したいときにどうするか、ちょっと調べたり考えたりしたまとめ。
-主にこの記事では暗号化する鍵（OsRnd とか使った 自動生成の鍵 を想定）の扱い方をローカルでどうするかです。暗号化方法については適宜選べばよいでしょう。ChaCha20Poly1305 あたりで十分かと個人的には思います。
-クラウドを使えやクソデブって？うん、それでいいんじゃない？
-!
-私はセキュリティの専門家ではないので、鵜呑みにせずにご自身で考えてください。
-
-
- keyring
-keyring クレートを使うと、 OS 固有の安全なストアに統一的にアクセスする方...
+                    はじめに
+スタディポケットでソフトウェアエンジニア / SRE として働いている@Tocyukiです。
+先日 GitHub Copilot にカスタムエージェント機能が登場し、これは面白そうだと思い早速試してみました。
+https://github.blog/changelog/2025-10-28-custom-agents-for-github-copilot/
+.github/agents/ ディレクトリに agents.md ファイルを配置することで、カスタムエージェントを定義し、Issue に定義したカスタムエージェントをアサインできるようになっています。従来の汎用アシスタ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/nodamushi/articles/7189de6df51938" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/studypocket/articles/github-copilot-agents-md-best-practices" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -156,25 +155,60 @@ keyring クレートを使うと、 OS 固有の安全なストアに統一的�
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>セキュリティ関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -189,16 +223,16 @@ keyring クレートを使うと、 OS 固有の安全なストアに統一的�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_417.html">
+                    <a href="Qiita_-_人気の記事_3005.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AWS CDK で Grants クラスが導入されました（v2.227.0)</span>
+                        <span class="nav-title">【Android】Jetpack Compose State 完全ガイド</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_7409.html">
+                    <a href="Publickey_3583.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">仕様書駆動開発で一番いいAIモデル&amp;エージェント検証 11/23版</span>
+                        <span class="nav-title">自然言語でKubernetesに話しかけて運用管理可能に。AWSがフルマネージドなAmazon EK...</span>
                     </a>
                 </div>
             </div>
@@ -211,13 +245,53 @@ keyring クレートを使うと、 OS 固有の安全なストアに統一的�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="iPhone_Mania_7139.html">
-                        <h3>Cloudflareに問題が発生中〜多くの大手サイトがアクセス不可に</h3>
+                    <a href="Zennのトレンド_9284.html">
+                        <h3>cc-sddで71ファイルのユーザー管理機能実装を手戻りなく進めた話</h3>
                         <div class="related-meta">
-                            <span class="category">セキュリティ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">所感・結論 cc-sdd（Claude Code Spec-Driven Development）を初めて使ってみた。 https://github. com/gotalab/cc-sdd 結論から言...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_5217.html">
+                        <h3>【Azure】インフラ構築不要でここまで簡単とは…！App ServiceとGitHub連携の自動デプロイに感動した話</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに クラウドでWebアプリケーションを公開したいとき、インフラの構築やデプロイの仕組み作りは意外と手間がかかるものです。 今回は、そんな悩みを解決してくれるAzureのPaaS（Platform...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_5557.html">
+                        <h3>Elixir(AtomVM)でLチカ　〜 M5Stack CoreS3 〜</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">ElixirのコードでM5Stack CoreS3を動かすことを目標にするコラムです 今回はExAtomVMを使います 開発環境 Ubuntu 24.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="iPhone_Mania_5311.html">
+                        <h3>iPhone Airの販売不振が影響〜中国のスマホメーカーが薄型モデルの開発中止</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
                             <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">コンテンツデリバリネットワーク（CDN）やインターネットセキュリティサービス、DDoS防御、分散型ドメイン名サーバシステムを提供するCloudflareに問題が発生しており、多くの大手サイトにアクセス...</p>
+                        <p class="related-summary">iPhone Airの販売が想定を大きく下回ったことで、競合製品の開発を進めていた中国のスマートフォンメーカーが、相次いで薄型モデルの開発を中止したとサプライチェーン関係者が報告しています。 薄型スマ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_5458.html">
+                        <h3>1Password Shell Pluginが便利</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">1Password Shell Pluginを長らく使っていて便利だなと感じているので紹介します！ 1Password Shell Pluginとは CLIツール（GitHub CLI, AWS CL...</p>
                     </a>
                 </article>
             </div>

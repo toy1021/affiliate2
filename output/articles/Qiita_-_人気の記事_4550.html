@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerShellで「Windowsの声」をしゃべらせる ～ログ完了を音声で知らせる実用スクリプト～ | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Windowsには標準で「音声読み上げエンジン（Speech API）」が搭載されています。実はこれ、PowerShellだけで簡単に呼び出すことができます。 使い道の例 ログ処理やバックアップ完了を音声で通知 英語・日本語の自動切り替え 簡易読み上げリ.">
-    <meta name="keywords" content="Windows,本">
+    <title>Python + boto3でDynamoDBのデータを取得する方法（query編） | 日本のテックニュース速報</title>
+    <meta name="description" content="AWS の DynamoDB に保存されたデータを Python から効率的に取得する方法をご紹介します。 前回は scan を使った全件検索を解説しましたが、今回は query を使った効率的なデータ取得に絞って解説します。 前回の記事をまだ見ていない方はこちらをご覧くだ.">
+    <meta name="keywords" content="Python,AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="PowerShellで「Windowsの声」をしゃべらせる ～ログ完了を音声で知らせる実用スクリプト～">
-    <meta property="og:description" content="はじめに Windowsには標準で「音声読み上げエンジン（Speech API）」が搭載されています。実はこれ、PowerShellだけで簡単に呼び出すことができます。 使い道の例 ログ処理やバックアップ完了を音声で通知 英語・日本語の自動切り替え 簡易読み上げリ.">
+    <meta property="og:title" content="Python + boto3でDynamoDBのデータを取得する方法（query編）">
+    <meta property="og:description" content="AWS の DynamoDB に保存されたデータを Python から効率的に取得する方法をご紹介します。 前回は scan を使った全件検索を解説しましたが、今回は query を使った効率的なデータ取得に絞って解説します。 前回の記事をまだ見ていない方はこちらをご覧くだ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4550.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PowerShellで「Windowsの声」をしゃべらせる ～ログ完了を音声で知らせる実用スクリプト～">
-    <meta name="twitter:description" content="はじめに Windowsには標準で「音声読み上げエンジン（Speech API）」が搭載されています。実はこれ、PowerShellだけで簡単に呼び出すことができます。 使い道の例 ログ処理やバックアップ完了を音声で通知 英語・日本語の自動切り替え 簡易読み上げリ.">
+    <meta name="twitter:title" content="Python + boto3でDynamoDBのデータを取得する方法（query編）">
+    <meta name="twitter:description" content="AWS の DynamoDB に保存されたデータを Python から効率的に取得する方法をご紹介します。 前回は scan を使った全件検索を解説しましたが、今回は query を使った効率的なデータ取得に絞って解説します。 前回の記事をまだ見ていない方はこちらをご覧くだ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "PowerShellで「Windowsの声」をしゃべらせる ～ログ完了を音声で知らせる実用スクリプト～",
-        "description": "はじめに Windowsには標準で「音声読み上げエンジン（Speech API）」が搭載されています。実はこれ、PowerShellだけで簡単に呼び出すことができます。 使い道の例 ログ処理やバックアップ完了を音声で通知 英語・日本語の自動切り替え 簡易読み上げリ.",
+        "headline": "Python + boto3でDynamoDBのデータを取得する方法（query編）",
+        "description": "AWS の DynamoDB に保存されたデータを Python から効率的に取得する方法をご紹介します。 前回は scan を使った全件検索を解説しましたが、今回は query を使った効率的なデータ取得に絞って解説します。 前回の記事をまだ見ていない方はこちらをご覧くだ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-28T14:21:09",
-        "dateModified": "2025-10-31T14:21:41.363515",
+        "datePublished": "2025-11-28T00:00:36",
+        "dateModified": "2025-11-29T06:31:01.059779",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4550.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4550.html",
-        "articleSection": "その他",
-        "keywords": ["Windows","本"]
+        "articleSection": "プログラミング",
+        "keywords": ["Python","AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "PowerShellで「Windowsの声」をしゃべらせる ～ログ完了を音声で知らせる実用スクリプト～",
+                "name": "Python + boto3でDynamoDBのデータを取得する方法（query編）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4550.html"
             }
         ]
@@ -113,45 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">PowerShellで「Windowsの声」をしゃべらせる ～ログ完了を音声で知らせる実用スクリプト...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">Python + boto3でDynamoDBのデータを取得する方法（query編）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>PowerShellで「Windowsの声」をしゃべらせる ～ログ完了を音声で知らせる実用スクリプト～</h1>
+                <h1>Python + boto3でDynamoDBのデータを取得する方法（query編）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/Tadataka_Takahashi/items/0cfaeaba24bcc39235c7?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-10-28T14:21:09">
-                        公開: 2025-10-28T14:21:09
+                    <span class="source">出典: <a href="https://qiita.com/Yamashita_Sosuke/items/731ab660738bb9392fb4?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-11-28T00:00:36">
+                        公開: 2025-11-28T00:00:36
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Windows</span>
-                    <span class="tag">本</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-
-Windowsには標準で「音声読み上げエンジン（Speech API）」が搭載されています。実はこれ、PowerShellだけで簡単に呼び出すことができます。
-
-使い道の例
-
-ログ処理やバックアップ完了を音声で通知
-英語・日本語の自動切り替え
-簡易読み上げリ...
+                    AWS の DynamoDB に保存されたデータを Python から効率的に取得する方法をご紹介します。
+前回は scan を使った全件検索を解説しましたが、今回は query を使った効率的なデータ取得に絞って解説します。
+前回の記事をまだ見ていない方はこちらをご覧くだ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/Tadataka_Takahashi/items/0cfaeaba24bcc39235c7?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/Yamashita_Sosuke/items/731ab660738bb9392fb4?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -164,20 +158,30 @@ Windowsには標準で「音声読み上げエンジン（Speech API）」が搭
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Windows&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Windows - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Windows - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでWindowsに関連する商品をチェック</div>
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -187,23 +191,23 @@ Windowsには標準で「音声読み上げエンジン（Speech API）」が搭
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -218,16 +222,16 @@ Windowsには標準で「音声読み上げエンジン（Speech API）」が搭
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_9826.html">
+                    <a href="Qiita_-_人気の記事_1838.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【個人開発】香水オタクから初心者まで楽しめる香り記録・レビューアプリを作りました</span>
+                        <span class="nav-title">家に来た人に毎回Wi-Fiパスワード聞かれるのが面倒なので、QR化したら謎の歓迎ページが爆誕した</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_6708.html">
+                    <a href="Qiita_-_人気の記事_3519.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhone17シリーズの人気の高さが各国で話題に〜台湾でも競合を圧倒</span>
+                        <span class="nav-title">AWS Transfer Family - SFTPでS3へファイル転送</span>
                     </a>
                 </div>
             </div>
@@ -240,53 +244,53 @@ Windowsには標準で「音声読み上げエンジン（Speech API）」が搭
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2577.html">
-                        <h3>「Honda 0」新モデルや「エルグランド」新型が公開　写真で見る「モビショー」ホンダ・日産・三菱編</h3>
+                    <a href="iPhone_Mania_916.html">
+                        <h3>iPhone Airの販売不振が影響〜中国のスマホメーカーが薄型モデルの開発中止</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">10月30日、「JAPAN MOBILITY SHOW2025」（モビショー）が開幕した。ここでは、本田技研工業（ホンダ）、日産自動車、三菱自動車のブースに展示されていた、新型車やコンセプトカーなどを...</p>
+                        <p class="related-summary">iPhone Airの販売が想定を大きく下回ったことで、競合製品の開発を進めていた中国のスマートフォンメーカーが、相次いで薄型モデルの開発を中止したとサプライチェーン関係者が報告しています。 薄型スマ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4304.html">
-                        <h3>BYD、普通免許で走れる小型EVトラック　約800万円で日本発売へ</h3>
+                    <a href="Qiita_-_人気の記事_9044.html">
+                        <h3>jest.fn / jest.spyOn / jest.mock と reset系の使い分け</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">BYD JAPANは10月29日、普通免許で運転できる小型EVトラック「T35（ティー・サンゴー）」を「Japan Mobility Show 2025」で世界初公開した。アルミバンと平ボディの2タイ...</p>
+                        <p class="related-summary">はじめに NestJSでアプリを開発していて、jestを使ったmockを触る機会がありました。その際、mockの使い分けがわからなかったので、まとめてみました。 私が疑問に思ったのは「mockClea...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5262.html">
-                        <h3>すし関係ない！もはやシャリもない「ケバブ」は万博で人気だった</h3>
+                    <a href="Qiita_-_人気の記事_1715.html">
+                        <h3>1Password Shell Pluginが便利</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">すしチェーンの「くら寿司」が異色なメニューを全国販売しています。なんと単品の「ケバブ」（240円）が登場。なんでまた。.</p>
+                        <p class="related-summary">1Password Shell Pluginを長らく使っていて便利だなと感じているので紹介します！ 1Password Shell Pluginとは CLIツール（GitHub CLI, AWS CL...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_3958.html">
-                        <h3>CIO、今年12月に半固体電池を採用したモバイルバッテリーを投入へ｜その後も半固体電池へ順次移行予定</h3>
+                    <a href="Qiita_-_人気の記事_9951.html">
+                        <h3>【NanoBanana🍌(Gemini)】画像生成の精度を極限まで高めたプロンプトエンジニアリング6つの実践</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">最近、モバイルバッテリーの発火事故が話題になっていますが、本日、CIOが同社のモバイルバッテリーの安全性と社会的責任についての取り組みを紹介する記事を公開しています。 その中で、半固体電池の採用推進を...</p>
+                        <p class="related-summary">こんにちは。 GIFTechの伝統工芸×テクノロジープロジェクト –– GIFTech JAPAN NEXT CRAFTでアプリケーション開発を担当した@enumura1 です。 このアプリは伝統工芸...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_8734.html">
-                        <h3>Threadsで投稿への返信を承認後に表示出来る返信承認機能などが利用可能に</h3>
+                    <a href="Zennのトレンド_9519.html">
+                        <h3>Next.js Cache回想</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">本日、Metaが、Threadsにおいて、投稿への返信をより自由に管理出来るよう新しい返信承認機能とフィルター機能の導入を発表しました。 返信承認機能では、他のユーザーに見られる前に自分の投稿に表示さ...</p>
+                        <p class="related-summary">! この記事はJSConf JP 2025で発表した内容を、記事として執筆しなおしたものです。 Next. jsは従来より、デフォルトで高いパフォーマンスを実現するフレームワークであることを重視してき...</p>
                     </a>
                 </article>
             </div>

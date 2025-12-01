@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点) | 日本のテックニュース速報</title>
-    <meta name="description" content="コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点) - プログラミング関連情報をお届け。">
-    <meta name="keywords" content="Claude,LLM,PC,GitHub,EV">
+    <title>Azure の バックボーン や ネットワーク を図解してみる | 日本のテックニュース速報</title>
+    <meta name="description" content="こちらは Microsoft Azure Tech Advent Calendar 2025 1日目 の記事です。 はじめに Azure を支えるネットワークインフラ について、公式ドキュメント等にある情報をまとめつつ、図解しながら、その構造や通信の経路などを掘り下げてみます">
+    <meta name="keywords" content="Azure,本,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点)">
-    <meta property="og:description" content="コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点) - プログラミング関連情報をお届け。">
+    <meta property="og:title" content="Azure の バックボーン や ネットワーク を図解してみる">
+    <meta property="og:description" content="こちらは Microsoft Azure Tech Advent Calendar 2025 1日目 の記事です。 はじめに Azure を支えるネットワークインフラ について、公式ドキュメント等にある情報をまとめつつ、図解しながら、その構造や通信の経路などを掘り下げてみます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4499.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点)">
-    <meta name="twitter:description" content="コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点) - プログラミング関連情報をお届け。">
+    <meta name="twitter:title" content="Azure の バックボーン や ネットワーク を図解してみる">
+    <meta name="twitter:description" content="こちらは Microsoft Azure Tech Advent Calendar 2025 1日目 の記事です。 はじめに Azure を支えるネットワークインフラ について、公式ドキュメント等にある情報をまとめつつ、図解しながら、その構造や通信の経路などを掘り下げてみます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点)",
-        "description": "コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点) - プログラミング関連情報をお届け。",
+        "headline": "Azure の バックボーン や ネットワーク を図解してみる",
+        "description": "こちらは Microsoft Azure Tech Advent Calendar 2025 1日目 の記事です。 はじめに Azure を支えるネットワークインフラ について、公式ドキュメント等にある情報をまとめつつ、図解しながら、その構造や通信の経路などを掘り下げてみます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-29T07:43:58",
-        "dateModified": "2025-10-31T04:25:16.078059",
+        "datePublished": "2025-11-30T18:43:47",
+        "dateModified": "2025-12-01T10:25:58.780128",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4499.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4499.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Claude","LLM","PC","GitHub","EV"]
+        "articleSection": "通信・ネットワーク",
+        "keywords": ["Azure","本","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "通信・ネットワーク",
+                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点)",
+                "name": "Azure の バックボーン や ネットワーク を図解してみる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4499.html"
             }
         ]
@@ -113,28 +113,26 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサー...</li>
+                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
+                <li aria-current="page">Azure の バックボーン や ネットワーク を図解してみる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点)</h1>
+                <h1>Azure の バックボーン や ネットワーク を図解してみる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/katalab/articles/39c313b89e6518" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-10-29T07:43:58">
-                        公開: 2025-10-29T07:43:58
+                    <span class="source">出典: <a href="https://zenn.dev/microsoft/articles/azurebackbone" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: 通信・ネットワーク</span>
+                    <time datetime="2025-11-30T18:43:47">
+                        公開: 2025-11-30T18:43:47
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">LLM</span>
-                    <span class="tag">PC</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">本</span>
                     <span class="tag">EV</span>
                 </div>
             </header>
@@ -142,19 +140,17 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    動機
-一見全く別のトピックに見えるこれらの記事は
-https://zenn.dev/knowledgesense/articles/47afd29ecfc3bb
-https://zenn.dev/kotoba_tech/articles/98feb05f24c082
-vLLM等を用いたローカルLLMサーバの構築・検証経験があり
-以下の開発でコンテキストエンジニアリングの重要性を痛感した私には地続きの内容に見えます
-https://github.com/Katagiri-Hoshino-Lab/VibeCodeHPC-jp
-コンテキストエンジニアリングを極めようとすると
-どうしてもLL...
+                    こちらは Microsoft Azure Tech Advent Calendar 2025 1日目 の記事です。
+
+ はじめに
+Azure を支えるネットワークインフラ について、公式ドキュメント等にある情報をまとめつつ、図解しながら、その構造や通信の経路などを掘り下げてみます。特に バックボーン あたりをフォーカスして記載しています。また本記事とあわせ、本当に通信がインターネットに出てないか検証した記事も併せてご覧ください。
+https://zenn.dev/microsoft/articles/azurebackbone-datadog/
+
+ 早速図解してみる - Azure ネッ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/katalab/articles/39c313b89e6518" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/microsoft/articles/azurebackbone" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -167,30 +163,30 @@ https://github.com/Katagiri-Hoshino-Lab/VibeCodeHPC-jp
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Azure&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Azure - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">Azure - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAzureに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=PC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="PC - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">PC - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでPCに関連する商品をチェック</div>
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -200,23 +196,23 @@ https://github.com/Katagiri-Hoshino-Lab/VibeCodeHPC-jp
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>通信・ネットワーク関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -231,16 +227,16 @@ https://github.com/Katagiri-Hoshino-Lab/VibeCodeHPC-jp
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9089.html">
+                    <a href="Publickey_1113.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ChatGPT利用者0.15% 自殺に関心</span>
+                        <span class="nav-title">SwiftコードをAndroidネイティブにコンパイルできる「Skip Fuse」が個人開発者などに...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2650.html">
+                    <a href="Zennのトレンド_449.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Cloudflare Workers, D1, Hono, Next.jsを使ってちゃんと使えるアプ...</span>
+                        <span class="nav-title">M365 Copilotで「自社スタイルPPT」を自動生成する方法</span>
                     </a>
                 </div>
             </div>
@@ -253,53 +249,53 @@ https://github.com/Katagiri-Hoshino-Lab/VibeCodeHPC-jp
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3697.html">
-                        <h3>AngularでBootstrapを導入して簡単にデザインが整ったWebページを作成する</h3>
+                    <a href="ASCII_jp__トップ_7036.html">
+                        <h3>楽天モバイル、65歳以上のユーザーに「オレオレ詐欺対策保険」を開始</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Bootstrapとは Bootstrapは旧Twitter社のエンジニアが開発した、HTML、CSS、JavaScriptで構成された、Webサイトを効率的に開発するためのオープンソースのフレームワ...</p>
+                        <p class="related-summary">楽天モバイルは、65歳以上を対象した「最強シニアプログラム」向けのオプションパック「15分かけ放題＆安心パック」を契約したユーザーに、追加料金なしで「オレオレ詐欺対策保険」の提供を開始したことを発表し...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1032.html">
-                        <h3>日刊IETF (2025-10-29)</h3>
+                    <a href="ASCII_jp__トップ_3957.html">
+                        <h3>auのデザインケータイ「INFOBAR」が指先に宿る。スマートリカバリーリングとコラボで登場！</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">おはようございます！ GMOコネクトの名もなきエンジニアです。 よろしくお願いします！ 日刊IETFは、I-D AnnounceやIETF Announceに投稿されたメールをサマリーし続けるという修...</p>
+                        <p class="related-summary">auのデザインケータイ「INFOBAR」が指先に宿る。スマートリカバリーリングとコラボで登場！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7541.html">
-                        <h3>エンジニアを褒めるだけ(通勤中に見てください)</h3>
+                    <a href="ASCII_jp__トップ_7136.html">
+                        <h3>HISモバイル、OPPOの新エントリー機「OPPO A5 5G」発売　記念キャンペーンも実施</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">※エンジニアの皆さんは、読んでいる途中で処理落ちするかもしれませんが、正常な動作です。 あまり深く考えず、ふわっと理解した！くらいで大丈夫です。 この記事はゴリゴリ感性で書いています。 初めまして、ゆ...</p>
+                        <p class="related-summary">HISモバイルは、OPPOの新エントリースマートフォン「OPPO A5 5G」の取り扱いを発表。12月4日の発売に先立ち、予約受付を開始している。価格は2万9900円。HISモバイルのSIMを新規契約...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_7763.html">
-                        <h3>VS Code、Copilotが仕様作成を支援する「Planモード」が追加</h3>
+                    <a href="気になる記になる_5853.html">
+                        <h3>楽天モバイル、｢楽天スーパーSALE｣において｢Nothing Ear (a)｣と｢AirPods｣シリーズの値下げセー...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">GitHubは、日本時間10月29日未明から開催中の年次イベント「GitHub Universe 2025」で、Visual Studio CodeにおけるGitHub Copilotの新機能として、...</p>
+                        <p class="related-summary">楽天モバイルが、12月3日より開催される「楽天スーパーSALE」に合わせ、「楽天モバイル公式 楽天市場店」において、「Nothing Ear (a)」と「AirPods」シリーズの値下げセールを開催す...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_6299.html">
-                        <h3>Claude Code を1ヶ月使ってみて</h3>
+                    <a href="気になる記になる_9532.html">
+                        <h3>｢DJI Osmo Pocket 4｣がFCCの認証を取得｜12月発売の可能性が高まる</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">🚀 使い始めたきっかけ 社内運用予定の広告管理システムを開発することになり、TypeScript や React、Hono、TailwindCSS を使うことが決まっていました。 ところが、TypeS...</p>
+                        <p class="related-summary">12月18日に発売と噂されているDJIの人気超小型3軸ジンバルカメラの次期モデル「DJI Osmo Pocket 4」ですが、その「DJI Osmo Pocket 4」がFCC（米連邦通信委員会）の認...</p>
                     </a>
                 </article>
             </div>

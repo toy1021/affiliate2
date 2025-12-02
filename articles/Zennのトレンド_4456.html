@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS大解剖 1日目: 「仕様書」 | 日本のテックニュース速報</title>
-    <meta name="description" content="本稿は、2024年2月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/21)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください">
-    <meta name="keywords" content="本">
+    <title>SELECT * がデータモデルの保守性を下げる話 | 日本のテックニュース速報</title>
+    <meta name="description" content="SQLコーディング規約で SELECT * を使わずにカラム名を明示化する、というポリシーを時々見るのですが、正直なところ自分はこれまで「どっちでもいいかな〜」くらいに思ってました。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="CSS大解剖 1日目: 「仕様書」">
-    <meta property="og:description" content="本稿は、2024年2月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/21)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください">
+    <meta property="og:title" content="SELECT * がデータモデルの保守性を下げる話">
+    <meta property="og:description" content="SQLコーディング規約で SELECT * を使わずにカラム名を明示化する、というポリシーを時々見るのですが、正直なところ自分はこれまで「どっちでもいいかな〜」くらいに思ってました。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4456.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CSS大解剖 1日目: 「仕様書」">
-    <meta name="twitter:description" content="本稿は、2024年2月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/21)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください">
+    <meta name="twitter:title" content="SELECT * がデータモデルの保守性を下げる話">
+    <meta name="twitter:description" content="SQLコーディング規約で SELECT * を使わずにカラム名を明示化する、というポリシーを時々見るのですが、正直なところ自分はこれまで「どっちでもいいかな〜」くらいに思ってました。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "CSS大解剖 1日目: 「仕様書」",
-        "description": "本稿は、2024年2月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/21)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください",
+        "headline": "SELECT * がデータモデルの保守性を下げる話",
+        "description": "SQLコーディング規約で SELECT * を使わずにカラム名を明示化する、というポリシーを時々見るのですが、正直なところ自分はこれまで「どっちでもいいかな〜」くらいに思ってました。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-21T02:57:17",
-        "dateModified": "2025-09-23T08:25:25.998729",
+        "datePublished": "2025-11-30T00:23:03",
+        "dateModified": "2025-12-02T12:45:44.449140",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4456.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4456.html",
         "articleSection": "プログラミング",
-        "keywords": ["本"]
+        "keywords": []
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "CSS大解剖 1日目: 「仕様書」",
+                "name": "SELECT * がデータモデルの保守性を下げる話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4456.html"
             }
         ]
@@ -114,41 +114,33 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">CSS大解剖 1日目: 「仕様書」</li>
+                <li aria-current="page">SELECT * がデータモデルの保守性を下げる話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>CSS大解剖 1日目: 「仕様書」</h1>
+                <h1>SELECT * がデータモデルの保守性を下げる話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/qnighy/articles/8091294fda603d" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/okiyuki/articles/d94b4ceb940160" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-09-21T02:57:17">
-                        公開: 2025-09-21T02:57:17
+                    <time datetime="2025-11-30T00:23:03">
+                        公開: 2025-11-30T00:23:03
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本稿は、2024年2月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/21)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください。
-
-CSSの仕様を理解するために、1日ごとにテーマを決めて説明する企画1日目です。今日のテーマは「仕様書」です。
-
- 仕様書
-CSSはWebの標準化団体であるW3Cによって標準化され、各ブラウザベンダによって実装されている規格です。
-標準化して挙動を仕様書として書き起こすことによって、Webブラウザ間の相互運用性が高まり、Web開発者も互換性の高い記述を心掛け...
+                    SQLコーディング規約で SELECT * を使わずにカラム名を明示化する、というポリシーを時々見るのですが、正直なところ自分はこれまで「どっちでもいいかな〜」くらいに思ってました。アドホックな分析なら速いし、dbtで開発していても最下流のデータマートなら「カラムが増えても勝手についてきてくれるし、楽でいいじゃん」くらいに考えていました。
+一方、ディメンショナルモデリングを運用する中で、これを入れておかないと、知らぬ間に不適切なカラムが公開されて保守性が著しく下がる ということを痛感する出来事がありました。今回は、その実体験の共有となぜエンジニアリングの観点で SELECT * がアンチ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/qnighy/articles/8091294fda603d" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/okiyuki/articles/d94b4ceb940160" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,16 +152,6 @@ CSSはWebの標準化団体であるW3Cによって標準化され、各ブラ�
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -225,16 +207,16 @@ CSSはWebの標準化団体であるW3Cによって標準化され、各ブラ�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_2965.html">
+                    <a href="iPhone_Mania_1846.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">うんち検知IoT：Raspberry Piが愛犬の大事件を見逃さない</span>
+                        <span class="nav-title">iPhone18 ProとPro Maxの値上げ懸念〜DRAM価格が約3倍に急騰</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_9977.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_4513.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhone Airの分解動画が公開〜iPhone17 Proと異なる内部構造</span>
+                        <span class="nav-title">韓国通販大手 3370万人の情報流出</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +229,53 @@ CSSはWebの標準化団体であるW3Cによって標準化され、各ブラ�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8476.html">
-                        <h3>晴海フラッグのタワマン「SKY DUO」竣工　築地虎ノ門トンネルで都心直結　50階建て</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">東京・晴海の大規模再開発「HARUMI FLAG」で、地上50階建ての超高層タワー「HARUMI FLAG SKY DUO」が竣工し、入居が始まった。三井不動産レジデンシャルや三菱地所レジデンス、住友...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5413.html">
-                        <h3>【10項目で比較】Claude Code vs Codex CLI どっちを選ぶべき？観点別にポイントを解説してみた</h3>
+                    <a href="Qiita_-_人気の記事_818.html">
+                        <h3>Obsidian + tblsで仕様書を書くと便利な件</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">こんにちは、とまだです。 みなさん、Claude CodeとCodex CLI、どちらを使うか迷っていませんか？ 以前はClaude Codeが大流行りでしたが、最近Codex CLIも試してみたとこ...</p>
+                        <p class="related-summary">はじめに 普段はWebアプリケーションの開発をメインでやっていて、ここ2〜3年で開発時のドキュメント作成環境が結構変わって来ました。生成AIが開発プロセスに組み込まれつつあり、仕様駆動開発という考え方...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7055.html">
-                        <h3>俺が3人分になる... おすすめのClaudeCodeを使った開発環境構築方法・使用例</h3>
+                    <a href="iPhone_Mania_9914.html">
+                        <h3>Galaxy S26シリーズにも値上げ懸念〜SamsungがDRAMの長期供給を拒否</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">はじめに Claude Codeの新機能であるHooksとSubagentsを使って、3人分以上の馬力を出せる開発環境構築方法を記事にしてみました。 HooksでCIを実行し、Subagentsに専門...</p>
+                        <p class="related-summary">Samsungの半導体部門が、Galaxyスマートフォンの開発を担当するMX部門に対するDRAMの長期供給を拒否したとの噂が、サプライチェーン関係者から伝えられています。 背景にあるのは、世界的に続く...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_7909.html">
-                        <h3>【Terraform 1.14】terraform query コマンドで既存リソースを一括 import する</h3>
+                    <a href="気になる記になる_9996.html">
+                        <h3>【セール】KORGの音楽制作アプリ＆ソフトウェア全製品が最大50％オフに｜サイバーマンデーのセールがスタート</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">音楽制作アプリ＆ソフトでお馴染みのKORGが、同社の音楽制作アプリ＆ソフトウェア全製品を最大50%オフで販売するサイバーマンデーのセールをスタートしました。 セールでは、KORG Collection...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_3983.html">
+                        <h3>思考を減らしコードに集中するための tmux, Neovim 設定</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">0 の beta がリリースされています。 https://github. 0-beta1 リリースノートを見てみると、「List Resources」や「terraform query コマンド」な...</p>
+                        <p class="related-summary">LayerX Tech Advent Calendar 2025 記念すべき1日目の記事です。めでたいですね。初日は @frkake さんの「OCR技術の変遷と日本語対応モデルの性能検証」との二本立て...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_5266.html">
-                        <h3>Codexを使うあなたへ。おすすめ設定&amp;MCP集</h3>
+                    <a href="気になる記になる_4665.html">
+                        <h3>KDDI、｢INFOBAR｣デザインのスマートリング｢Smart Recovery Ring｣のクラファンを本日18時よ...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">2025年9月15日に出たCodex（GPT-5-Codex）めっちゃいいですよね。Claude Codeと併用を始める人も多いのではないでしょうか？ しかしいくら性能が良くても、日本国内ではClau...</p>
+                        <p class="related-summary">KDDIが、本日午後6時より、携帯電話デザイン開発プロジェクトau Design project「INFOBAR」を象徴するカラー”NISHIKIGOI”および”ICHIMATSU&amp;# […].</p>
                     </a>
                 </article>
             </div>

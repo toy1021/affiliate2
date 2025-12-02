@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>コーディングエージェントのauto-compactの仕組みを読み解く - タスク引継ぎの再現性を高める方法 | 日本のテックニュース速報</title>
-    <meta name="description" content="などコーディングエージェントはたくさんありますが、全てに共通する問題といえば「AIモデルのコンテキストウィンドウ制限」です。 Claude Opus 4. 1が200k、GPT-5が400k、そしてGemini 2. 5 Proが1Mとモデルにより異なります">
-    <meta name="keywords" content="AI,Claude,GPT,GitHub">
+    <title>SELECT * がデータモデルの保守性を下げる話 | 日本のテックニュース速報</title>
+    <meta name="description" content="SQLコーディング規約で SELECT * を使わずにカラム名を明示化する、というポリシーを時々見るのですが、正直なところ自分はこれまで「どっちでもいいかな〜」くらいに思ってました。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="コーディングエージェントのauto-compactの仕組みを読み解く - タスク引継ぎの再現性を高める方法">
-    <meta property="og:description" content="などコーディングエージェントはたくさんありますが、全てに共通する問題といえば「AIモデルのコンテキストウィンドウ制限」です。 Claude Opus 4. 1が200k、GPT-5が400k、そしてGemini 2. 5 Proが1Mとモデルにより異なります">
+    <meta property="og:title" content="SELECT * がデータモデルの保守性を下げる話">
+    <meta property="og:description" content="SQLコーディング規約で SELECT * を使わずにカラム名を明示化する、というポリシーを時々見るのですが、正直なところ自分はこれまで「どっちでもいいかな〜」くらいに思ってました。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3151.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="コーディングエージェントのauto-compactの仕組みを読み解く - タスク引継ぎの再現性を高める方法">
-    <meta name="twitter:description" content="などコーディングエージェントはたくさんありますが、全てに共通する問題といえば「AIモデルのコンテキストウィンドウ制限」です。 Claude Opus 4. 1が200k、GPT-5が400k、そしてGemini 2. 5 Proが1Mとモデルにより異なります">
+    <meta name="twitter:title" content="SELECT * がデータモデルの保守性を下げる話">
+    <meta name="twitter:description" content="SQLコーディング規約で SELECT * を使わずにカラム名を明示化する、というポリシーを時々見るのですが、正直なところ自分はこれまで「どっちでもいいかな〜」くらいに思ってました。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "コーディングエージェントのauto-compactの仕組みを読み解く - タスク引継ぎの再現性を高める方法",
-        "description": "などコーディングエージェントはたくさんありますが、全てに共通する問題といえば「AIモデルのコンテキストウィンドウ制限」です。 Claude Opus 4. 1が200k、GPT-5が400k、そしてGemini 2. 5 Proが1Mとモデルにより異なります",
+        "headline": "SELECT * がデータモデルの保守性を下げる話",
+        "description": "SQLコーディング規約で SELECT * を使わずにカラム名を明示化する、というポリシーを時々見るのですが、正直なところ自分はこれまで「どっちでもいいかな〜」くらいに思ってました。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-27T14:27:04",
-        "dateModified": "2025-09-30T10:20:50.943896",
+        "datePublished": "2025-11-30T00:23:03",
+        "dateModified": "2025-12-02T08:31:34.954984",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3151.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3151.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","GPT","GitHub"]
+        "articleSection": "プログラミング",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "コーディングエージェントのauto-compactの仕組みを読み解く - タスク引継ぎの再現性を高める方法",
+                "name": "SELECT * がデータモデルの保守性を下げる話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3151.html"
             }
         ]
@@ -113,41 +113,34 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">コーディングエージェントのauto-compactの仕組みを読み解く - タスク引継ぎの再現性を高め...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">SELECT * がデータモデルの保守性を下げる話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>コーディングエージェントのauto-compactの仕組みを読み解く - タスク引継ぎの再現性を高める方法</h1>
+                <h1>SELECT * がデータモデルの保守性を下げる話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/gotalab/articles/4b74e6810db959" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-09-27T14:27:04">
-                        公開: 2025-09-27T14:27:04
+                    <span class="source">出典: <a href="https://zenn.dev/okiyuki/articles/d94b4ceb940160" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-11-30T00:23:03">
+                        公開: 2025-11-30T00:23:03
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">GPT</span>
-                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Claude Code, Codex, Cursor, GitHub Copilot, Cline...などコーディングエージェントはたくさんありますが、全てに共通する問題といえば「AIモデルのコンテキストウィンドウ制限」です。
-Claude Opus 4.1が200k、GPT-5が400k、そしてGemini 2.5 Proが1Mとモデルにより異なります。
-コーディングでは扱うファイルやコード数が非常に多く、平気でコンテキストウィンドウ以上のトークン数を必要とします。各コーディングエージェントは、コンテキストウィンドウ制限が起こっても快適なコーディング作業を継続するための仕組みとして「...
+                    SQLコーディング規約で SELECT * を使わずにカラム名を明示化する、というポリシーを時々見るのですが、正直なところ自分はこれまで「どっちでもいいかな〜」くらいに思ってました。アドホックな分析なら速いし、dbtで開発していても最下流のデータマートなら「カラムが増えても勝手についてきてくれるし、楽でいいじゃん」くらいに考えていました。
+一方、ディメンショナルモデリングを運用する中で、これを入れておかないと、知らぬ間に不適切なカラムが公開されて保守性が著しく下がる ということを痛感する出来事がありました。今回は、その実体験の共有となぜエンジニアリングの観点で SELECT * がアンチ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/gotalab/articles/4b74e6810db959" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/okiyuki/articles/d94b4ceb940160" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,30 +153,20 @@ Claude Opus 4.1が200k、GPT-5が400k、そしてGemini 2.5 Proが1Mとモデル
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GPT - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGPTに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -193,23 +176,23 @@ Claude Opus 4.1が200k、GPT-5が400k、そしてGemini 2.5 Proが1Mとモデル
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +207,16 @@ Claude Opus 4.1が200k、GPT-5が400k、そしてGemini 2.5 Proが1Mとモデル
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_6569.html">
+                    <a href="Zennのトレンド_6051.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">文系バイブコーダーからR&amp;Dエンジニアになるまでにやったこと</span>
+                        <span class="nav-title">技術書典19で買った『わかる！ソフトウェア設計トレーニング』が良かった</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_1425.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_8926.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">汎用人型ロボ開発 30年試作機目標</span>
+                        <span class="nav-title">韓国通販大手 3370万人の情報流出</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +229,53 @@ Claude Opus 4.1が200k、GPT-5が400k、そしてGemini 2.5 Proが1Mとモデル
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4540.html">
-                        <h3>アマゾン純正AirPods対抗イヤホン「Echo Buds 2」が73%オフ　1万4980円→3980円に</h3>
+                    <a href="ASCII_jp__トップ_8985.html">
+                        <h3>貸付型クラウドファンディング「Funvest」12/3より新ファンド「FYC 八幡山コンパクトマンション開発プロジェクト...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">Amazon純正完全ワイヤレスイヤホン「Echo Buds（第2世代）」がプライム会員限定セールで73%OFFの3980円に。ノイキャン強化やIPX4防滴対応の高コスパモデルを今すぐチェック！.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8659.html">
-                        <h3>ChatGPT、子どもの利用を親が管理--会話内容は共有せず安全リスクのみ通知</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">OpenAIが、子どもによるChatGPTの使い方を保護者がより細かく管理できる新しいペアレンタルコントロールを導入する。家庭や学校、支援団体から、AIチャットボットが子どもやティーンの発達に及ぼし得...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4532.html">
-                        <h3>ChatGPT上で「買い物」できる新機能--支払いまで完結　Shopifyとも提携</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">毎週7億人以上が使うChatGPTが、販売者にとってはチャットボット経由で新規顧客へ直接リーチできる場になりつつある──。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_1936.html">
-                        <h3>児童虐待対応を支援するAiCAN、「こども×Tech 関西」子育て支援ゾーンに出展 10月29日・30日開催</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">児童虐待対応を支援するAiCAN、「こども×Tech 関西」子育て支援ゾーンに出展 10月29日・30日開催.</p>
+                        <p class="related-summary">貸付型クラウドファンディング「Funvest」12/3より新ファンド「FYC 八幡山コンパクトマンション開発プロジェクト１-２号」の募集開始.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7176.html">
-                        <h3>AI議事録サービス「Rimo Voice」、本日リリースの最新モデル「Claude Sonnet 4.5 」に対応</h3>
+                    <a href="Qiita_-_人気の記事_9010.html">
+                        <h3>Obsidian + tblsで仕様書を書くと便利な件</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">AI議事録サービス「Rimo Voice」、本日リリースの最新モデル「Claude Sonnet 4.</p>
+                        <p class="related-summary">はじめに 普段はWebアプリケーションの開発をメインでやっていて、ここ2〜3年で開発時のドキュメント作成環境が結構変わって来ました。生成AIが開発プロセスに組み込まれつつあり、仕様駆動開発という考え方...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="iPhone_Mania_3591.html">
+                        <h3>Galaxy S26シリーズにも値上げ懸念〜SamsungがDRAMの長期供給を拒否</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">iPhone Mania</span>
+                        </div>
+                        <p class="related-summary">Samsungの半導体部門が、Galaxyスマートフォンの開発を担当するMX部門に対するDRAMの長期供給を拒否したとの噂が、サプライチェーン関係者から伝えられています。 背景にあるのは、世界的に続く...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_2250.html">
+                        <h3>【セール】KORGの音楽制作アプリ＆ソフトウェア全製品が最大50％オフに｜サイバーマンデーのセールがスタート</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">音楽制作アプリ＆ソフトでお馴染みのKORGが、同社の音楽制作アプリ＆ソフトウェア全製品を最大50%オフで販売するサイバーマンデーのセールをスタートしました。 セールでは、KORG Collection...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_7550.html">
+                        <h3>思考を減らしコードに集中するための tmux, Neovim 設定</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">LayerX Tech Advent Calendar 2025 記念すべき1日目の記事です。めでたいですね。初日は @frkake さんの「OCR技術の変遷と日本語対応モデルの性能検証」との二本立て...</p>
                     </a>
                 </article>
             </div>

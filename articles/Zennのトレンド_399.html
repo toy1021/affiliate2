@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>仕様書駆動開発で一番いいAIモデル&amp;エージェント検証 11/23版 | 日本のテックニュース速報</title>
-    <meta name="description" content="5と各社モデルが出揃ってきた感じがするので、改めて今現在のSDDでどれが一番いいか検証しました。 ただ、検証もそれなりに面倒なので、厳密なベンチマークほど信用のおけるものではないということを留意してください">
-    <meta name="keywords" content="AI,GPT">
+    <title>Prompt Cachingを完全に理解してLLMコストを爆裂に下げる | 日本のテックニュース速報</title>
+    <meta name="description" content="! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています">
+    <meta name="keywords" content="AI,LLM,iOS,Android">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="仕様書駆動開発で一番いいAIモデル&amp;エージェント検証 11/23版">
-    <meta property="og:description" content="5と各社モデルが出揃ってきた感じがするので、改めて今現在のSDDでどれが一番いいか検証しました。 ただ、検証もそれなりに面倒なので、厳密なベンチマークほど信用のおけるものではないということを留意してください">
+    <meta property="og:title" content="Prompt Cachingを完全に理解してLLMコストを爆裂に下げる">
+    <meta property="og:description" content="! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_399.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="仕様書駆動開発で一番いいAIモデル&amp;エージェント検証 11/23版">
-    <meta name="twitter:description" content="5と各社モデルが出揃ってきた感じがするので、改めて今現在のSDDでどれが一番いいか検証しました。 ただ、検証もそれなりに面倒なので、厳密なベンチマークほど信用のおけるものではないということを留意してください">
+    <meta name="twitter:title" content="Prompt Cachingを完全に理解してLLMコストを爆裂に下げる">
+    <meta name="twitter:description" content="! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_399.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "仕様書駆動開発で一番いいAIモデル&amp;エージェント検証 11/23版",
-        "description": "5と各社モデルが出揃ってきた感じがするので、改めて今現在のSDDでどれが一番いいか検証しました。 ただ、検証もそれなりに面倒なので、厳密なベンチマークほど信用のおけるものではないということを留意してください",
+        "headline": "Prompt Cachingを完全に理解してLLMコストを爆裂に下げる",
+        "description": "! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-23T10:54:41",
-        "dateModified": "2025-11-25T03:16:25.961747",
+        "datePublished": "2025-12-02T02:10:50",
+        "dateModified": "2025-12-03T06:34:48.684856",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_399.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_399.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","GPT"]
+        "keywords": ["AI","LLM","iOS","Android"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "仕様書駆動開発で一番いいAIモデル&amp;エージェント検証 11/23版",
+                "name": "Prompt Cachingを完全に理解してLLMコストを爆裂に下げる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_399.html"
             }
         ]
@@ -114,50 +114,45 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">仕様書駆動開発で一番いいAIモデル&amp;エージェント検証 11/23版</li>
+                <li aria-current="page">Prompt Cachingを完全に理解してLLMコストを爆裂に下げる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>仕様書駆動開発で一番いいAIモデル&amp;エージェント検証 11/23版</h1>
+                <h1>Prompt Cachingを完全に理解してLLMコストを爆裂に下げる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/sakastudio/articles/a5ea1eee97ec37" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/ubie_dev/articles/ade17afebabaa9" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-23T10:54:41">
-                        公開: 2025-11-23T10:54:41
+                    <time datetime="2025-12-02T02:10:50">
+                        公開: 2025-12-02T02:10:50
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">GPT</span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">iOS</span>
+                    <span class="tag">Android</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    GPT5.1、Gemini 3.0、Sonnet 4.5と各社モデルが出揃ってきた感じがするので、改めて今現在のSDDでどれが一番いいか検証しました。
-ただ、検証もそれなりに面倒なので、厳密なベンチマークほど信用のおけるものではないということを留意してください。
+                    !
+この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。
 
- 忙しい人のためのサマリ
+Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています。toCでLLMプロダクトを提供する上では、コスト最適化が重要な課題となります。
+この記事では、その中核となる技術のひとつであるPrompt Cachingのプラクティスを紹介します。まだPrompt Cachingを試されていない方は、もしかすると50%~規模のコスト削減余地が眠っているかもしれません。
 
-仕様書作成は Cursor + gemini3.0が最も良かった。
-実装はcodexが最も良かった。
-
-
- 検証方針
-仕様書作成と、その仕様書をもとにした実装の2段階で行い、各段階でどのモデルが最もパフォーマンスが出せるかを検証していきます。
-
- 仕様書作成
-まずは仕様書の作成についての検証です。
-...
+ Prompt Cachingとは
+Prompt Caching(C...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/sakastudio/articles/a5ea1eee97ec37" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ubie_dev/articles/ade17afebabaa9" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -180,20 +175,20 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GPT - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=iOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iOS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGPTに関連する商品をチェック</div>
+                                    <div class="product-title">iOS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでiOSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -234,16 +229,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7301.html">
+                    <a href="気になる記になる_9755.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Rust でローカルにできる限りにセキュアに保存</span>
+                        <span class="nav-title">【セール】Kindleストアで2万冊以上が50％ポイント還元に｜｢Kindle本 50％還元ポイント...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_7277.html">
+                    <a href="Zennのトレンド_9396.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">サイゼの注文アプリ 賛否呼ぶ理由</span>
+                        <span class="nav-title">目にやさしい仕様駆動開発「spec-workflow-mcp」がもたらすブルーベリー効果</span>
                     </a>
                 </div>
             </div>
@@ -256,53 +251,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5095.html">
-                        <h3>ChatGPTに「グループチャット」機能--その用途とは</h3>
+                    <a href="CNET_Japan_最新情報総合_473.html">
+                        <h3>2025年の「今年の単語」が決定、怒りを煽る「レイジベイト」--英オックスフォード大学出版局</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは先週、ChatGPTをより多様な場面で活用してもらうための新機能として「Group Chats（グループチャット）」を発表した。導入直後から寄せられたフィードバックを踏まえ、今後数日でF...</p>
+                        <p class="related-summary">ソーシャルメディア時代の暗部を反映する動きとして、オックスフォード大学出版局は2025年の「今年の単語」に「レイジベイト（rage bait）」を選出した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1839.html">
-                        <h3>グーグル、画像生成AI「Nano Banana Pro」公開　4K対応＆文字も鮮明に</h3>
+                    <a href="CNET_Japan_最新情報総合_5232.html">
+                        <h3>デジタル庁、AIで行政効率化へ「国産LLM」を公募開始</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">グーグルは、画像生成AIモデルの最新版「Nano Banana Pro（Gemini 3 Pro Image）」を公開した。.</p>
+                        <p class="related-summary">デジタル庁が国内開発LLMの公募を開始。ガバメントAI「源内」で2026年度から試験導入へ。応募条件、対象モデル、スケジュールを詳しく解説し、行政DX・国産AIの最新動向をまとめる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5781.html">
-                        <h3>Geminiに「この画像はAI生成？」と聞けるように　“見えない透かし”で判別　制約も</h3>
+                    <a href="CNET_Japan_最新情報総合_5442.html">
+                        <h3>アップル、AI戦略の責任者が退任--元マイクロソフトのAI研究者が後任に</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Googleの対話型AI「Gemini」で、画像が同社のAIで生成されたものかどうかを確認できるようになった──。.</p>
+                        <p class="related-summary">アップルは、機械学習・AI戦略担当シニアバイスプレジデント（SVP）のジョン・ジャナンドレア氏が退任すると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7909.html">
-                        <h3>エストニアのお隣、ラトビアが「欧州のテック先進国」として急浮上、その理由とは--注目事例3選</h3>
+                    <a href="CNET_Japan_最新情報総合_1710.html">
+                        <h3>仏Mistral AI、多言語対応を強化した次世代オープンソースAI「Mistral Large 3」発表</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">医療データを一切外部に出さずAI分析を実現する技術、コロナ禍で25万個売れたCO2センサー、卒業生の4分の1がスタートアップを立ち上げる教育機関。小国ラトビアから生まれた3つのイノベーションが示すのは...</p>
+                        <p class="related-summary">フランスのAI開発企業Mistral AIが、場所やインターネット接続の安定性、あるいは使用言語に関わらず、より多くの人々にハイエンドのAI機能を提供するために設計された新しい言語モデル群をリリースす...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4325.html">
-                        <h3>さらば「新機能より保守性重視」--NECPCが法人PCで方針転換　その中身とは</h3>
+                    <a href="CNET_Japan_最新情報総合_8195.html">
+                        <h3>Amazon、ChatGPTのショッピング機能をブロック　理由は？</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NECパーソナルコンピュータが法人PCで「守り」から「攻め」への転換を発表。Core Ultra搭載の新「VersaPro」シリーズでは、独自開発のAIチャットボット標準搭載や軽量化技術の投入など、従...</p>
+                        <p class="related-summary">ChatGPTのショッピング機能は、ユーザーの代わりにオンラインストアから商品を探し、比較までしてくれるというものだ。年末商戦の買い物に役立ちそうだが、この仕組みに対して「利用は認めない」と判断した小...</p>
                     </a>
                 </article>
             </div>

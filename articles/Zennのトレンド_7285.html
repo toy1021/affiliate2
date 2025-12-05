@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAGが苦手な「ぬるっとした日本語」と戦う | 日本のテックニュース速報</title>
-    <meta name="description" content="本記事では、RAGの性能を高めるための「DualCSE」という手法について、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
-    <meta name="keywords" content="AI,スタートアップ,本">
+    <title>Prompt Cachingを完全に理解してLLMコストを爆裂に下げる | 日本のテックニュース速報</title>
+    <meta name="description" content="! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています">
+    <meta name="keywords" content="AI,LLM,iOS,Android">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="RAGが苦手な「ぬるっとした日本語」と戦う">
-    <meta property="og:description" content="本記事では、RAGの性能を高めるための「DualCSE」という手法について、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
+    <meta property="og:title" content="Prompt Cachingを完全に理解してLLMコストを爆裂に下げる">
+    <meta property="og:description" content="! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7285.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RAGが苦手な「ぬるっとした日本語」と戦う">
-    <meta name="twitter:description" content="本記事では、RAGの性能を高めるための「DualCSE」という手法について、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
+    <meta name="twitter:title" content="Prompt Cachingを完全に理解してLLMコストを爆裂に下げる">
+    <meta name="twitter:description" content="! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "RAGが苦手な「ぬるっとした日本語」と戦う",
-        "description": "本記事では、RAGの性能を高めるための「DualCSE」という手法について、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです",
+        "headline": "Prompt Cachingを完全に理解してLLMコストを爆裂に下げる",
+        "description": "! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-21T00:01:01",
-        "dateModified": "2025-10-21T14:19:26.312758",
+        "datePublished": "2025-12-02T02:10:50",
+        "dateModified": "2025-12-05T22:21:23.270750",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7285.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7285.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","スタートアップ","本"]
+        "keywords": ["AI","LLM","iOS","Android"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "RAGが苦手な「ぬるっとした日本語」と戦う",
+                "name": "Prompt Cachingを完全に理解してLLMコストを爆裂に下げる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7285.html"
             }
         ]
@@ -114,43 +114,45 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">RAGが苦手な「ぬるっとした日本語」と戦う</li>
+                <li aria-current="page">Prompt Cachingを完全に理解してLLMコストを爆裂に下げる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>RAGが苦手な「ぬるっとした日本語」と戦う</h1>
+                <h1>Prompt Cachingを完全に理解してLLMコストを爆裂に下げる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/knowledgesense/articles/83c89503b6531b" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/ubie_dev/articles/ade17afebabaa9" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-10-21T00:01:01">
-                        公開: 2025-10-21T00:01:01
+                    <time datetime="2025-12-02T02:10:50">
+                        公開: 2025-12-02T02:10:50
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">スタートアップ</span>
-                    <span class="tag">本</span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">iOS</span>
+                    <span class="tag">Android</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本記事では、RAGの性能を高めるための「DualCSE」という手法について、ざっくり理解します。
-株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです。
+                    !
+この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。
 
- この記事は何
-この記事は、日本語特有の「あいまいな婉曲表現」（=ぬるっとした日本語）を含む文章でもRAGの精度を上げるための手法「DualCSE」の論文[1]について、日本語で簡単にまとめたものです。
-https://arxiv.org/abs/2510.09293
-今回も「そもそもRAGとは？」については、知っている前提で進みます。確認する場合は、こちらの記事もご...
+Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています。toCでLLMプロダクトを提供する上では、コスト最適化が重要な課題となります。
+この記事では、その中核となる技術のひとつであるPrompt Cachingのプラクティスを紹介します。まだPrompt Cachingを試されていない方は、もしかすると50%~規模のコスト削減余地が眠っているかもしれません。
+
+ Prompt Cachingとは
+Prompt Caching(C...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/knowledgesense/articles/83c89503b6531b" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ubie_dev/articles/ade17afebabaa9" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -173,20 +175,20 @@ https://arxiv.org/abs/2510.09293
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="スタートアップ - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">スタートアップ - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでスタートアップに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=iOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iOS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">iOS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでiOSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +229,16 @@ https://arxiv.org/abs/2510.09293
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_450.html">
+                    <a href="Zennのトレンド_7693.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">｢iOS 26.1 beta 4｣の新機能や変更点のまとめ｜Liquid Glassの透明度を切り替...</span>
+                        <span class="nav-title">爆速CLI入門 ~最初に知りたかったTips~</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_3142.html">
+                    <a href="Zennのトレンド_2153.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【GIFTech×iwashi】「好奇心」を「価値」に変える。fukabori.fmホストiwash...</span>
+                        <span class="nav-title">目にやさしい仕様駆動開発「spec-workflow-mcp」がもたらすブルーベリー効果</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +251,52 @@ https://arxiv.org/abs/2510.09293
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4756.html">
-                        <h3>Facebook、AIがカメラロールから「おすすめの写真」を提案する新機能</h3>
+                    <a href="CNET_Japan_最新情報総合_3735.html">
+                        <h3>ChatGPT、アップルの「ヘルスケア」と連携へ？ コード内にアイコン発見</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Facebookは、スマートフォンのカメラロールから写真や動画を提案する新機能の提供を開始している。.</p>
+                        <p class="related-summary">「ChatGPT」とアップルの「ヘルスケア」が連携する可能性が報じられている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_214.html">
-                        <h3>アボカドの「食べ頃」、AIが判定--90%超の精度で食品ロス削減へ</h3>
+                    <a href="CNET_Japan_最新情報総合_3242.html">
+                        <h3>OpenAI、グーグル対抗の新モデル「ガーリック」を極秘開発か　CEOは「非常事態」宣言</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">オレゴン州立大学とフロリダ州立大学の研究者らが、アボカドの食べ頃を正確に判別できる、スマートフォンを活用したAIを開発した。.</p>
+                        <p class="related-summary">OpenAIが「Garlic」（ガーリック）というコードネームの新モデルを開発していると報じられている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3655.html">
-                        <h3>ソフトバンクとJDSCが資本業務提携、AIエージェントの社会実装めざす</h3>
+                    <a href="CNET_Japan_最新情報総合_7074.html">
+                        <h3>Google、誰でもAIエージェントを作成できる新サービス--Gemini 3活用</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ソフトバンクとJDSCは10月20日、AI領域における中長期的な戦略的協業を目的とした資本業務提携契約を締結したと発表した。両社は、AIエージェントをはじめとするソリューションの社会実装を推進するとし...</p>
+                        <p class="related-summary">グーグルは、「Google Workspace」でAIエージェントを活用した新たな自動化ツール「Google Workspace Studio」の提供を始めたと発表した。生成AI「Gemini 3」を...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5141.html">
-                        <h3>NTT、国産AIをアップグレード「tsuzumi 2」発表</h3>
+                    <a href="CNET_Japan_最新情報総合_1564.html">
+                        <h3>JR券売機にAIチャット、「駅無人化」や「みどりの窓口削減」の穴を埋められるか--鉄道技術展レポ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NTTは10月20日、軽量かつ高性能をうたう国産大規模言語モデル「tsuzumi 2」の提供を開始した。1GPUで動作しながら高い日本語処理性能を備え、電力消費やコストの課題を抑えつつ、企業や自治体で...</p>
+                        <p class="related-summary">みどりの窓口縮小が進む中、JRシステムが新型券売機を開発した。音声で「仙台まで」と話すだけできっぷを購入でき、車いす利用者向け機能やのぞき見防止機能も搭載したユニバーサルデザインが特徴だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2906.html">
-                        <h3>Wikipediaのトラフィックが8％減少、AI要約とSNSにユーザーを奪われる</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_1675.html">
+                        <h3>子の自殺防止 AI活用の検討開始へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">無料のオンライン百科事典「Wikipedia」の運営元は、検索エンジンの検索結果に表示されるAI要約やSNS人気の高まりにより、利用者数が減少していることを明らかにした。.</p>
                     </a>
                 </article>
             </div>

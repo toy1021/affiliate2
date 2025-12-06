@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NVIDIA NeMoを利用したGPT-OSSの学習 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事では、OpenAIから2025年8月にリリースされたgpt-ossをNVIDIA NeMoフレームワークにて学習するための方法について解説します">
-    <meta name="keywords" content="AI,OpenAI,GPT,本">
+    <title>Prompt Cachingを完全に理解してLLMコストを爆裂に下げる | 日本のテックニュース速報</title>
+    <meta name="description" content="! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています">
+    <meta name="keywords" content="AI,LLM,iOS,Android">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="NVIDIA NeMoを利用したGPT-OSSの学習">
-    <meta property="og:description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事では、OpenAIから2025年8月にリリースされたgpt-ossをNVIDIA NeMoフレームワークにて学習するための方法について解説します">
+    <meta property="og:title" content="Prompt Cachingを完全に理解してLLMコストを爆裂に下げる">
+    <meta property="og:description" content="! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7229.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NVIDIA NeMoを利用したGPT-OSSの学習">
-    <meta name="twitter:description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事では、OpenAIから2025年8月にリリースされたgpt-ossをNVIDIA NeMoフレームワークにて学習するための方法について解説します">
+    <meta name="twitter:title" content="Prompt Cachingを完全に理解してLLMコストを爆裂に下げる">
+    <meta name="twitter:description" content="! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "NVIDIA NeMoを利用したGPT-OSSの学習",
-        "description": "はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事では、OpenAIから2025年8月にリリースされたgpt-ossをNVIDIA NeMoフレームワークにて学習するための方法について解説します",
+        "headline": "Prompt Cachingを完全に理解してLLMコストを爆裂に下げる",
+        "description": "! この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。 Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-19T06:22:29",
-        "dateModified": "2025-11-20T22:19:57.476538",
+        "datePublished": "2025-12-02T02:10:50",
+        "dateModified": "2025-12-06T04:24:12.235647",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7229.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7229.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","OpenAI","GPT","本"]
+        "keywords": ["AI","LLM","iOS","Android"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "NVIDIA NeMoを利用したGPT-OSSの学習",
+                "name": "Prompt Cachingを完全に理解してLLMコストを爆裂に下げる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7229.html"
             }
         ]
@@ -114,42 +114,45 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">NVIDIA NeMoを利用したGPT-OSSの学習</li>
+                <li aria-current="page">Prompt Cachingを完全に理解してLLMコストを爆裂に下げる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>NVIDIA NeMoを利用したGPT-OSSの学習</h1>
+                <h1>Prompt Cachingを完全に理解してLLMコストを爆裂に下げる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/turing_motors/articles/81cf3128b22c63" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/ubie_dev/articles/ade17afebabaa9" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-19T06:22:29">
-                        公開: 2025-11-19T06:22:29
+                    <time datetime="2025-12-02T02:10:50">
+                        公開: 2025-12-02T02:10:50
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">OpenAI</span>
-                    <span class="tag">GPT</span>
-                    <span class="tag">本</span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">iOS</span>
+                    <span class="tag">Android</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。
-本記事では、OpenAIから2025年8月にリリースされたgpt-ossをNVIDIA NeMoフレームワークにて学習するための方法について解説します。
-2025年11月4日時点では、NVIDIA公式からは、LoRA finetunigを行う方法についてのみ解説されており、Long Context継続事前学習(Continual Pre-Training)など本格的な学習を行うにはハードルが多数あります。
-本記事では、学習を行うために解決する必要があるすべて...
+                    !
+この記事は Ubie Tech Advent Calendar 2025 の1日目の記事です。
+
+Ubieのモバイルアプリ(iOS/Android)では、身体の悩みを相談できる医療AIエージェントを提供しています。toCでLLMプロダクトを提供する上では、コスト最適化が重要な課題となります。
+この記事では、その中核となる技術のひとつであるPrompt Cachingのプラクティスを紹介します。まだPrompt Cachingを試されていない方は、もしかすると50%~規模のコスト削減余地が眠っているかもしれません。
+
+ Prompt Cachingとは
+Prompt Caching(C...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/turing_motors/articles/81cf3128b22c63" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ubie_dev/articles/ade17afebabaa9" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -172,20 +175,20 @@ Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=OpenAI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="OpenAI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">OpenAI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでOpenAIに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GPT - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=iOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iOS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGPTに関連する商品をチェック</div>
+                                    <div class="product-title">iOS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでiOSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +229,16 @@ Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_7474.html">
+                    <a href="Zennのトレンド_8158.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">コスト削減と自由度アップ！商用ツールからオープンソースへの乗り換え15選</span>
+                        <span class="nav-title">爆速CLI入門 ~最初に知りたかったTips~</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_1496.html">
+                    <a href="Zennのトレンド_3214.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">バンダイch停止 個人情報漏えいか</span>
+                        <span class="nav-title">目にやさしい仕様駆動開発「spec-workflow-mcp」がもたらすブルーベリー効果</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +251,53 @@ Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9656.html">
-                        <h3>NTT、AI電力危機に光量子コンピューターで挑む　2030年に100万量子ビット目指す</h3>
+                    <a href="CNET_Japan_最新情報総合_7882.html">
+                        <h3>OpenAI、グーグル対抗の新モデル「ガーリック」を極秘開発か　CEOは「非常事態」宣言</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">迫るAI電力危機に向け、NTTが光量子コンピューターで解決に挑む。60年の光通信技術を活かした独自アプローチで、肥料生成から新薬開発まで地球規模の課題解決を目指す。.</p>
+                        <p class="related-summary">OpenAIが「Garlic」（ガーリック）というコードネームの新モデルを開発していると報じられている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3137.html">
-                        <h3>TikTok、「AI動画の表示量」を調整可能に--削除困難な「見えない透かし」も</h3>
+                    <a href="CNET_Japan_最新情報総合_1005.html">
+                        <h3>Google、誰でもAIエージェントを作成できる新サービス--Gemini 3活用</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">TikTokは11月19日、「おすすめ」フィードに表示されるAI生成コンテンツの量を調整できる機能を導入すると発表した。.</p>
+                        <p class="related-summary">グーグルは、「Google Workspace」でAIエージェントを活用した新たな自動化ツール「Google Workspace Studio」の提供を始めたと発表した。生成AI「Gemini 3」を...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1369.html">
-                        <h3>Metaの物体検出AI「SAM 3」登場、インスタ編集や野生動物保全に活躍</h3>
+                    <a href="CNET_Japan_最新情報総合_7537.html">
+                        <h3>JR券売機にAIチャット、「駅無人化」や「みどりの窓口削減」の穴を埋められるか--鉄道技術展レポ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Metaは、AIモデル「SAM（Segment Anything Model）」の最新版である「SAM 3」と「SAM 3D」を公開した。.</p>
+                        <p class="related-summary">みどりの窓口縮小が進む中、JRシステムが新型券売機を開発した。音声で「仙台まで」と話すだけできっぷを購入でき、車いす利用者向け機能やのぞき見防止機能も搭載したユニバーサルデザインが特徴だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4527.html">
-                        <h3>PerplexityのAIショッピング体験が刷新、ブラックフライデー前に米国で無料公開</h3>
+                    <a href="ASCII_jp__トップ_9768.html">
+                        <h3>早くも割引！2025夏モデルAIレッツノートが26万円台に値下がり【11％オフ】</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Perplexityはブラックフライデーを前に、AI搭載ショッピング機能を刷新し、米国の全ユーザー向けに無料で提供することを明らかにした。.</p>
+                        <p class="related-summary">パナソニックのノートPC「レッツノート CF-FC6ADTCR」が、Amazonセールに登場です。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_113.html">
-                        <h3>「ノートPCのバッテリー劣化を無償交換します」--VAIOとノジマが「日本初」の試み</h3>
+                    <a href="ASCII_jp__トップ_8086.html">
+                        <h3>フリーランスは生成AIで仕事効率アップ！ でも企業は契約ノータッチ？ AI活用を契約書に明記している企業はわずか4％</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">VAIOとノジマは11月20日、ノートPCのバッテリー劣化を無償で保証する「VAIOバッテリー保証サービス」を12月1日から期間限定で提供すると発表した。対象モデルを購入後3年以内に満充電容量が80％...</p>
+                        <p class="related-summary">ランサーズが公表した実態調査では、フリーランスの約7割が生成AIを業務に活用し、作業効率や成果物の質向上といった効果を実感している一方、企業側の許可や契約整備は追いついていない現状が明らかになった。A...</p>
                     </a>
                 </article>
             </div>

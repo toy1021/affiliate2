@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bedrock AgentCore で Remote MCP サーバーをホストする2つの方法の徹底検証 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 初めまして！AWS Japan に 2025/10/1 に入社した AI/ML Specialist Solutions Architect の Kujirada です。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="AI,AWS">
+    <title>Luaをコンパイル先とする言語処理系を作る際のTips | 日本のテックニュース速報</title>
+    <meta name="description" content="この記事は「Lua Advent Calendar 2025」および「言語実装 Advent Calendar 2025」の6日目の記事です。 Luaは個人的には好きな言語ですが、静的な型システムの不在や、比較的冗長な記述などにより、人や用途によっては不満を感じることもあるかもしれません">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Bedrock AgentCore で Remote MCP サーバーをホストする2つの方法の徹底検証">
-    <meta property="og:description" content="はじめに 初めまして！AWS Japan に 2025/10/1 に入社した AI/ML Specialist Solutions Architect の Kujirada です。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="Luaをコンパイル先とする言語処理系を作る際のTips">
+    <meta property="og:description" content="この記事は「Lua Advent Calendar 2025」および「言語実装 Advent Calendar 2025」の6日目の記事です。 Luaは個人的には好きな言語ですが、静的な型システムの不在や、比較的冗長な記述などにより、人や用途によっては不満を感じることもあるかもしれません">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4286.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bedrock AgentCore で Remote MCP サーバーをホストする2つの方法の徹底検証">
-    <meta name="twitter:description" content="はじめに 初めまして！AWS Japan に 2025/10/1 に入社した AI/ML Specialist Solutions Architect の Kujirada です。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="Luaをコンパイル先とする言語処理系を作る際のTips">
+    <meta name="twitter:description" content="この記事は「Lua Advent Calendar 2025」および「言語実装 Advent Calendar 2025」の6日目の記事です。 Luaは個人的には好きな言語ですが、静的な型システムの不在や、比較的冗長な記述などにより、人や用途によっては不満を感じることもあるかもしれません">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Bedrock AgentCore で Remote MCP サーバーをホストする2つの方法の徹底検証",
-        "description": "はじめに 初めまして！AWS Japan に 2025/10/1 に入社した AI/ML Specialist Solutions Architect の Kujirada です。最新のテクノロジー情報をお届けします。",
+        "headline": "Luaをコンパイル先とする言語処理系を作る際のTips",
+        "description": "この記事は「Lua Advent Calendar 2025」および「言語実装 Advent Calendar 2025」の6日目の記事です。 Luaは個人的には好きな言語ですが、静的な型システムの不在や、比較的冗長な記述などにより、人や用途によっては不満を感じることもあるかもしれません",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-20T22:46:44",
-        "dateModified": "2025-11-22T04:23:47.273163",
+        "datePublished": "2025-12-06T03:40:16",
+        "dateModified": "2025-12-06T10:21:23.938742",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4286.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4286.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","AWS"]
+        "articleSection": "プログラミング",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Bedrock AgentCore で Remote MCP サーバーをホストする2つの方法の徹底検証",
+                "name": "Luaをコンパイル先とする言語処理系を作る際のTips",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4286.html"
             }
         ]
@@ -113,40 +113,34 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Bedrock AgentCore で Remote MCP サーバーをホストする2つの方法の徹底検...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">Luaをコンパイル先とする言語処理系を作る際のTips</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Bedrock AgentCore で Remote MCP サーバーをホストする2つの方法の徹底検証</h1>
+                <h1>Luaをコンパイル先とする言語処理系を作る際のTips</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/aws_japan/articles/001-bedrock-agentcore-remote-mcp" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-20T22:46:44">
-                        公開: 2025-11-20T22:46:44
+                    <span class="source">出典: <a href="https://zenn.dev/mod_poppo/articles/compiling-to-lua" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-12-06T03:40:16">
+                        公開: 2025-12-06T03:40:16
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-初めまして！AWS Japan に 2025/10/1 に入社した AI/ML Specialist Solutions Architect の Kujirada です。
-2025 年、MCP は Agent と外部システムを接続し、Tool として利用するためのプロトコルとして急速に普及しています。エンタープライズ利用の需要に伴い、Local MCP から Remote MCP への移行が進んでいます。Remote MCP は、利用者自身での Local MCP サーバーの管理が不要になるため、広範なユーザーへのサービス提供を可能にします。
-AWS マネージドサービスを利...
+                    この記事は「Lua Advent Calendar 2025」および「言語実装 Advent Calendar 2025」の6日目の記事です。
+Luaは個人的には好きな言語ですが、静的な型システムの不在や、比較的冗長な記述などにより、人や用途によっては不満を感じることもあるかもしれません。Lua自体はオープンソースで提供されていますが、開発体制はクローズド寄りなので、ユーザーの希望が通るとも限りません。しかし、Luaを組み込んだアプリケーションはいくつか存在し、プログラムをLuaとして動かしたい需要はあるでしょう。そこで、「他の言語からLuaへコンパイルしよう」という発想が出てきます。L...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/aws_japan/articles/001-bedrock-agentcore-remote-mcp" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/mod_poppo/articles/compiling-to-lua" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,30 +153,20 @@ AWS マネージドサービスを利...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -192,23 +176,23 @@ AWS マネージドサービスを利...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +207,16 @@ AWS マネージドサービスを利...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_2764.html">
+                    <a href="ASCII_jp__トップ_5746.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">念願の！API Gateway + Lambdaでストリーミングレスポンス！Bedrockの応答でカ...</span>
+                        <span class="nav-title">早くも割引！2025夏モデルAIレッツノートが26万円台に値下がり【11％オフ】</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_456.html">
+                    <a href="ASCII_jp__トップ_325.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【セール】PITAKAのアラミド繊維ケースなどが最大50％オフに｜Amazonと楽天市場でセール開催...</span>
+                        <span class="nav-title">まさかの！ 幸楽苑に「カルボらーめん」爆誕　“追いチーズ”もあるよ</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +229,53 @@ AWS マネージドサービスを利...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7373.html">
-                        <h3>Metaの物体検出AI「SAM 3」登場、インスタ編集や野生動物保全に活躍</h3>
+                    <a href="CNET_Japan_最新情報総合_1637.html">
+                        <h3>登山前にスマホで事前登録すると、遭難時の位置情報が伝わる新システム--ドローンとWi-Fi活用</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Metaは、AIモデル「SAM（Segment Anything Model）」の最新版である「SAM 3」と「SAM 3D」を公開した。.</p>
+                        <p class="related-summary">ソフトバンクと東京科学大学 工学院 電気電子系 藤井輝也研究室（以下東京科学大学）は、雪山や山岳地帯において、遭難者の救助を迅速に行うためのシステム「ドローンWi-Fi無線中継システムを用いた遭難者捜...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_535.html">
-                        <h3>PerplexityのAIショッピング体験が刷新、ブラックフライデー前に米国で無料公開</h3>
+                    <a href="CNET_Japan_最新情報総合_2607.html">
+                        <h3>KDDI、スマホで「ブラウザ」「検索エンジン」の選択を必須に　新法対応</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Perplexityはブラックフライデーを前に、AI搭載ショッピング機能を刷新し、米国の全ユーザー向けに無料で提供することを明らかにした。.</p>
+                        <p class="related-summary">KDDIは12月2日、自社スマートフォンについて、「ブラウザ」と「検索エンジン」の選択を必須にすると発表した。2025年12月から施行される新しい法律に伴う措置で、各機種のソフトウェアアップデート実施...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1529.html">
-                        <h3>「ノートPCのバッテリー劣化を無償交換します」--VAIOとノジマが「日本初」の試み</h3>
+                    <a href="Zennのトレンド_966.html">
+                        <h3>技術力で殴る前に「問い」を研げ。</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">VAIOとノジマは11月20日、ノートPCのバッテリー劣化を無償で保証する「VAIOバッテリー保証サービス」を12月1日から期間限定で提供すると発表した。対象モデルを購入後3年以内に満充電容量が80％...</p>
+                        <p class="related-summary">はじめに 本記事は 仮想通貨 Advent Calendar 2025 のシリーズ2の6日目の記事です。 エンジニアやデータサイエンティストがクリプトトレードに参入する際、最も陥りやすい罠があります。...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7535.html">
-                        <h3>ChatGPTに「グループチャット」機能--その用途とは</h3>
+                    <a href="Zennのトレンド_2170.html">
+                        <h3>テストも捨てやすく作ろう</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">OpenAIは先週、ChatGPTをより多様な場面で活用してもらうための新機能として「Group Chats（グループチャット）」を発表した。導入直後から寄せられたフィードバックを踏まえ、今後数日でF...</p>
+                        <p class="related-summary">はじめに この記事は「株式会社カオナビAdvent Calendar 2025」の6日目の記事です。 昨年、株式会社カオナビの佐野さんが「ソフトウェアは捨てやすく作ろう」という記事を執筆しました。 h...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9359.html">
-                        <h3>グーグル、画像生成AI「Nano Banana Pro」公開　4K対応＆文字も鮮明に</h3>
+                    <a href="Zennのトレンド_5326.html">
+                        <h3>フルリモート歴1年のエンジニアが辿り着いた“最強の作業環境”</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">グーグルは、画像生成AIモデルの最新版「Nano Banana Pro（Gemini 3 Pro Image）」を公開した。.</p>
+                        <p class="related-summary">org/calendars/11621 どうもこんにちは！コラボスタイルでバックエンドエンジニアをしているMESIです。 2025年の1月に入社して以来、プロダクト開発や社内の技術改善に日々関わってい...</p>
                     </a>
                 </article>
             </div>

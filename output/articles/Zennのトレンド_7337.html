@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIエージェントを開発するPdMがやることをプロンプトを書きながら考える | 日本のテックニュース速報</title>
-    <meta name="description" content="こちらはLayerX AI エージェントブログリレー48日目の記事です。 こんにちは、CEO室でAIエージェント開発のPdMをしているKenta Watanabeです。昨日はTomoakiさんの作って学ぶ ChatGPT Atlas でした">
-    <meta name="keywords" content="AI,ChatGPT,GPT,EV">
+    <title>RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】 | 日本のテックニュース速報</title>
+    <meta name="description" content="RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】 - AI・機械学習技術のニュースをお届け。">
+    <meta name="keywords" content="AI,LLM,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIエージェントを開発するPdMがやることをプロンプトを書きながら考える">
-    <meta property="og:description" content="こちらはLayerX AI エージェントブログリレー48日目の記事です。 こんにちは、CEO室でAIエージェント開発のPdMをしているKenta Watanabeです。昨日はTomoakiさんの作って学ぶ ChatGPT Atlas でした">
+    <meta property="og:title" content="RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】">
+    <meta property="og:description" content="RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】 - AI・機械学習技術のニュースをお届け。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7337.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIエージェントを開発するPdMがやることをプロンプトを書きながら考える">
-    <meta name="twitter:description" content="こちらはLayerX AI エージェントブログリレー48日目の記事です。 こんにちは、CEO室でAIエージェント開発のPdMをしているKenta Watanabeです。昨日はTomoakiさんの作って学ぶ ChatGPT Atlas でした">
+    <meta name="twitter:title" content="RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】">
+    <meta name="twitter:description" content="RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】 - AI・機械学習技術のニュースをお届け。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIエージェントを開発するPdMがやることをプロンプトを書きながら考える",
-        "description": "こちらはLayerX AI エージェントブログリレー48日目の記事です。 こんにちは、CEO室でAIエージェント開発のPdMをしているKenta Watanabeです。昨日はTomoakiさんの作って学ぶ ChatGPT Atlas でした",
+        "headline": "RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】",
+        "description": "RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】 - AI・機械学習技術のニュースをお届け。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-18T14:45:14",
-        "dateModified": "2025-11-19T10:24:15.608606",
+        "datePublished": "2025-12-05T15:27:23",
+        "dateModified": "2025-12-08T10:25:54.242793",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7337.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7337.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","ChatGPT","GPT","EV"]
+        "keywords": ["AI","LLM","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIエージェントを開発するPdMがやることをプロンプトを書きながら考える",
+                "name": "RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7337.html"
             }
         ]
@@ -114,41 +114,45 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIエージェントを開発するPdMがやることをプロンプトを書きながら考える</li>
+                <li aria-current="page">RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIエージェントを開発するPdMがやることをプロンプトを書きながら考える</h1>
+                <h1>RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/layerx/articles/671bdaf4aa0a32" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/livetoon/articles/b273cdfc07c55c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-18T14:45:14">
-                        公開: 2025-11-18T14:45:14
+                    <time datetime="2025-12-05T15:27:23">
+                        公開: 2025-12-05T15:27:23
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">ChatGPT</span>
-                    <span class="tag">GPT</span>
-                    <span class="tag">EV</span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    こちらはLayerX AI エージェントブログリレー48日目の記事です。
-こんにちは、CEO室でAIエージェント開発のPdMをしているKenta Watanabeです。昨日はTomoakiさんの作って学ぶ ChatGPT Atlas
-でした。Evalに関する実用的な記事になる予定だったんですが、ちょっと別テーマで書きたいことが出てきたのでテーマを変えてみます。これまでのAIエージェントブログリレーでは開発寄りの記事を書いてきましたが、今日はPdM目線での記事を書きたいと思います。
-普段はAIエージェントの企画・開発を行っていますが、企画と開発両面で従来のプロダクトとの違いを感じる場面が...
+                    この記事はLivetoon Tech Advent Calendar 2025の６日目の記事です。
+https://adventar.org/calendars/12157
+CTOの長嶋が担当です。
+本日は、皆さんよく聞くRAGのお話です。
+
+ 宣伝
+https://kai0.onelink.me/Hogh/AdventCalendar2025
+今回のアドベントカレンダーでは、LivetoonのAIキャラクターアプリのkaiwaに関わるエンジニアが、アプリの話からLLM・合成音声・インフラ監視・GPU・OSSまで、幅広くアドベントカレンダーとして書いて行く予定です。
+是非、publica...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/layerx/articles/671bdaf4aa0a32" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/livetoon/articles/b273cdfc07c55c" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -181,10 +185,10 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=ChatGPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ChatGPT - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ChatGPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでChatGPTに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +229,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_2036.html">
+                    <a href="Zennのトレンド_9535.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">DJI、初の可変絞りに対応したアクションカメラ｢DJI Osmo Action 6｣を発売</span>
+                        <span class="nav-title">情シスの休日：個人ホームページを WordPress から Hugo + AWS へ移行して、コスト...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_7540.html">
+                    <a href="Zennのトレンド_6026.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhone18向けイメージセンサー製造に向けSamsungが追加投資〜搭載決定か</span>
+                        <span class="nav-title">技術力で殴る前に「問い」を研げ。</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +251,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9680.html">
-                        <h3>アマゾン創業者ベゾス氏、AI新会社を設立--共同CEOに</h3>
+                    <a href="CNET_Japan_最新情報総合_6002.html">
+                        <h3>レノボとデルがPC値上げか　AI需要でメモリ不足、15〜20％高騰も</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アマゾン創業者のジェフ・ベゾス氏が人工知能（AI）開発のスタートアップProject Prometheusを設立し、共同CEOに就任すると報じられている。.</p>
+                        <p class="related-summary">レノボとデルがPC価格を引き上げる計画だと、市場調査会社TrendForceが伝えている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3649.html">
-                        <h3>日本IBMとセガXD、生成AIを学べるカードバトルゲームを開発</h3>
+                    <a href="CNET_Japan_最新情報総合_5762.html">
+                        <h3>FacebookとInstagram、アカウント復旧もAIで容易に　Metaがサポート強化を発表</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">日本IBMとセガXDがゲーミフィケーションを取り入れた生成AIの研修サービスを開発。プロンプトで強いカードを生成し、カードバトルを楽しめる。.</p>
+                        <p class="related-summary">「Facebook」と「Instagram」のどちらをメインに使っているかにかかわらず、まもなく同じ場所からサポートを受けられるようになると、Metaが発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7679.html">
-                        <h3>X（旧Twitter）で障害　一時閲覧できず（更新）Cloudflareに起因　ChatGPTなどにも影響</h3>
+                    <a href="CNET_Japan_最新情報総合_2881.html">
+                        <h3>ATM前での通話動作、AIが自動検知→取引停止　ゆうちょ銀が1月から</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">X（旧Twitter）が利用できなくなっている模様だ。筆者の端末、知人の端末、そして他のSNSでも「Xが使えない」との投稿が相次いでいる。.</p>
+                        <p class="related-summary">ゆうちょ銀行は、ATMを使った特殊詐欺の被害を防ぐため、AIによる画像分析を活用した対策を強化すると発表した。2026年1月以降、ATMの前で携帯電話などで通話している動きが検知された場合、取引を中止...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9478.html">
-                        <h3>グーグルの最強AIモデル「Gemini 3」登場--「意図を汲む」能力向上、お世辞は控えめ</h3>
+                    <a href="ASCII_jp__トップ_2529.html">
+                        <h3>絶対裏切りが発生するやつ→ドンシューで話題の「ARC Raiders」配信イベント「帰せ。」12月9日20時開催　加藤純...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">グーグルは、最新AIモデル「Gemini 3」を発表した。同社で最も知能が高いモデルであり、より高度なマルチモーダル機能とバイブコーディング機能を備えているという。.</p>
+                        <p class="related-summary">UUUMはマルチプレイヤーTPS脱出アドベンチャー「ARC Raiders」を用いた生配信イベント『「帰せ。」in ARC Raiders～生きて帰るか、死んで奪われるか。～』を、12月9日20時より...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4258.html">
-                        <h3>XもChatGPTも一時使えず　Cloudflare障害で「ネットの裏側」集中リスクが顕在化</h3>
+                    <a href="ASCII_jp__トップ_8476.html">
+                        <h3>Polimill、全国1,800自治体へ“クリスマスDM”を発送！！来年度予算づくりと行政課題の解決に役立つQommon...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">日本時間11月18日夜、Cloudflareで障害が発生し、OpenAIやSpotify、X、Grindr、Letterboxd、Canvaといった主要サービスをはじめ、多くのウェブサイトが一斉にアク...</p>
+                        <p class="related-summary">Polimill、全国1,800自治体へ“クリスマスDM”を発送！！来年度予算づくりと行政課題の解決に役立つQommonsAI活用情報をお届け！.</p>
                     </a>
                 </article>
             </div>

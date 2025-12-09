@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error Boundary/Suspenseはどこに置く？ テスト・Storybook・UXのためのReactコンポーネント設計 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Error Boundary と Suspense をどこに置くか悩みませんか？かつての自分はこの設計をうまくできず、テストが書きづらい、1 つのエラーで全体が落ちる といった問題に苦しみました。最新のテクノロジー情報をお届けします。">
+    <title>Reactにおける共通コンポーネント設計のアンチパターン | 日本のテックニュース速報</title>
+    <meta name="description" content="株式会社 Sally エンジニアの @piesukeです。 弊社では、マーダーミステリーをプレイできるアプリ「ウズ」と、マーダーミステリーを制作しウズ上で利用できるアプリ「ウズスタジオ」を開発しています。 最近良かったマーダーミステリーは「青いクジラは沈まない」です">
     <meta name="keywords" content="React,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Error Boundary/Suspenseはどこに置く？ テスト・Storybook・UXのためのReactコンポーネント設計">
-    <meta property="og:description" content="はじめに Error Boundary と Suspense をどこに置くか悩みませんか？かつての自分はこの設計をうまくできず、テストが書きづらい、1 つのエラーで全体が落ちる といった問題に苦しみました。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="Reactにおける共通コンポーネント設計のアンチパターン">
+    <meta property="og:description" content="株式会社 Sally エンジニアの @piesukeです。 弊社では、マーダーミステリーをプレイできるアプリ「ウズ」と、マーダーミステリーを制作しウズ上で利用できるアプリ「ウズスタジオ」を開発しています。 最近良かったマーダーミステリーは「青いクジラは沈まない」です">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9525.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Error Boundary/Suspenseはどこに置く？ テスト・Storybook・UXのためのReactコンポーネント設計">
-    <meta name="twitter:description" content="はじめに Error Boundary と Suspense をどこに置くか悩みませんか？かつての自分はこの設計をうまくできず、テストが書きづらい、1 つのエラーで全体が落ちる といった問題に苦しみました。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="Reactにおける共通コンポーネント設計のアンチパターン">
+    <meta name="twitter:description" content="株式会社 Sally エンジニアの @piesukeです。 弊社では、マーダーミステリーをプレイできるアプリ「ウズ」と、マーダーミステリーを制作しウズ上で利用できるアプリ「ウズスタジオ」を開発しています。 最近良かったマーダーミステリーは「青いクジラは沈まない」です">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Error Boundary/Suspenseはどこに置く？ テスト・Storybook・UXのためのReactコンポーネント設計",
-        "description": "はじめに Error Boundary と Suspense をどこに置くか悩みませんか？かつての自分はこの設計をうまくできず、テストが書きづらい、1 つのエラーで全体が落ちる といった問題に苦しみました。最新のテクノロジー情報をお届けします。",
+        "headline": "Reactにおける共通コンポーネント設計のアンチパターン",
+        "description": "株式会社 Sally エンジニアの @piesukeです。 弊社では、マーダーミステリーをプレイできるアプリ「ウズ」と、マーダーミステリーを制作しウズ上で利用できるアプリ「ウズスタジオ」を開発しています。 最近良かったマーダーミステリーは「青いクジラは沈まない」です",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-12T09:58:23",
-        "dateModified": "2025-10-13T10:23:28.782489",
+        "datePublished": "2025-12-07T03:00:02",
+        "dateModified": "2025-12-09T22:22:29.628545",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9525.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9525.html",
-        "articleSection": "その他",
+        "articleSection": "プログラミング",
         "keywords": ["React","本"]
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Error Boundary/Suspenseはどこに置く？ テスト・Storybook・UXのためのReactコンポーネント設計",
+                "name": "Reactにおける共通コンポーネント設計のアンチパターン",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9525.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">Error Boundary/Suspenseはどこに置く？ テスト・Storybook・UXのため...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">Reactにおける共通コンポーネント設計のアンチパターン</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Error Boundary/Suspenseはどこに置く？ テスト・Storybook・UXのためのReactコンポーネント設計</h1>
+                <h1>Reactにおける共通コンポーネント設計のアンチパターン</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/mkt_engr/articles/20251012_error-boundary-suspense-storybook" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-10-12T09:58:23">
-                        公開: 2025-10-12T09:58:23
+                    <span class="source">出典: <a href="https://zenn.dev/uzu_tech/articles/common-component-anti-pattern" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-12-07T03:00:02">
+                        公開: 2025-12-07T03:00:02
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
@@ -139,23 +139,16 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Error Boundary と Suspense をどこに置くか悩みませんか？かつての自分はこの設計をうまくできず、テストが書きづらい、1 つのエラーで全体が落ちる といった問題に苦しみました。
-本記事では、その設計が
-
-テストの書きやすさ
-Storybook の書きやすさ
-ユーザー体験（UX）
-
-にどう影響するかを、実装例を通じて紹介します。
-「全体を 1 つの Error Boundary でラップ」という私がよくやってしまっていたよくないパターンと、「セクションごとに個別にラップ」するパターンを比較しながら、適切な配置について説明していきます。
-
- 対象読者
-Err...
+                    株式会社 Sally エンジニアの @piesukeです。
+弊社では、マーダーミステリーをプレイできるアプリ「ウズ」と、マーダーミステリーを制作しウズ上で利用できるアプリ「ウズスタジオ」を開発しています。
+最近良かったマーダーミステリーは「青いクジラは沈まない」です。
+複数のWebサービスを展開する弊社では、開発効率の向上と車輪の再発明防止のため、頻繁に使用されるコンポーネントを共通コンポーネントとして管理しています。
+しかし、共通コンポーネントは多岐にわたる箇所での利用を想定する必要があり、設計上の考慮が不足すると、結果として使いづらいコンポーネントとなることがあります。
+本稿では、共...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/mkt_engr/articles/20251012_error-boundary-suspense-storybook" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/uzu_tech/articles/common-component-anti-pattern" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -187,27 +180,37 @@ Err...
                                 </div>
                             </a>
                         </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +225,16 @@ Err...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_9425.html">
+                    <a href="気になる記になる_5874.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">M5搭載｢iPad Pro｣の発売に向けた動き??｜米AT&amp;TのWebサイトに同製品の名前が</span>
+                        <span class="nav-title">楽天市場のGoogle Playギフトコード認定店、｢GooglePlayギフトコード｣の10%オフ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_7614.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_7917.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPad Pro (M5)とM5搭載MacBook Proが近日発表か〜裏付ける情報</span>
+                        <span class="nav-title">性的ディープフェイク 処罰難しく</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +247,53 @@ Err...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2669.html">
-                        <h3>PayPay、ビットコインへの取り組み強化　Binance日本法人の株式4割取得</h3>
+                    <a href="Zennのトレンド_1889.html">
+                        <h3>Cap&#39;n Webについて</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">PayPayは10月9日、世界最大級の暗号資産取引所を展開するBinanceの日本法人「Binance Japan」に出資したと発表した。出資比率は40％で、2025年9月から持分法適用会社となる。P...</p>
+                        <p class="related-summary">Cap&#39;n Webが面白いのでその紹介です。 Cap&#39;n Web概要 Cap&#39;n WebはJavaScriptネイティブなRPCの実装でcapnwebというnpmライブラリが提供されています。作者がC...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6764.html">
-                        <h3>JR東日本ら、超電導で電力損失「ほぼゼロ」の送電に成功　営業列車4万本に供給</h3>
+                    <a href="Qiita_-_人気の記事_5546.html">
+                        <h3>PoCやディープダイブから学んだ喜びの源泉</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">鉄道総合技術研究所（鉄道総研）は10月9日、伊豆箱根鉄道およびJR東日本と共同で実施した「超電導き電システム」の営業列車向け電力供給実証で、安定した送電を確認したと発表した。伊豆箱根鉄道駿豆線では20...</p>
+                        <p class="related-summary">はじめに こんにちは、anyプロダクトチームでPdMをしているmaedaです！ 今年もアドベントカレンダーの季節がやってきました🎄 この記事は、anyプロダクトチームAdventCalendar202...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1226.html">
-                        <h3>Ankerのモバイルバッテリーと充電器がAmazonでセール中　オススメ3選　10月10日まで</h3>
+                    <a href="Qiita_-_人気の記事_9226.html">
+                        <h3>ノイジーネイバー問題とその対策【マルチテナントSaaSにおけるエンジニアリング大全 Day9】</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Amazonが10月10日まで開催中の「プライム感謝祭2025」では、Anker製のモバイルバッテリーや充電器がセール中だ。本記事ではセール対象の中から、持ち運びにも便利な注目の3製品を紹介する。.</p>
+                        <p class="related-summary">はじめに 本記事は any Advent Calendar #2 「マルチテナントSaaSにおけるエンジニアリング大全」 Day9 の記事です。弊社anyのアドベントカレンダーをひとつ丸ごと占有して、...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7747.html">
-                        <h3>JR東日本、SixTONESコラボの発車メロディ中止　「危険な収音行為」相次ぎ安全を優先</h3>
+                    <a href="Qiita_-_人気の記事_584.html">
+                        <h3>TypeScriptエラーハンドリング進化の軌跡</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">JR東日本は10月11日、SixTONESとのコラボキャンペーン「Enjoy! SixTONES, Enjoy! ShinKANSEN. 」で実施していた発車メロディの使用を中止し、従来の発車ベルに戻...</p>
+                        <p class="related-summary">こんにちは、関数型プログラミングを嗜んでいるフルスタックエンジニアのトウカです。アドベントカレンダー初参加なので、温かい目で読んでいただけると幸いです。 はじめに 皆さんはこんな経験ありませんか？本番...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4673.html">
-                        <h3>壁にコンセントがなかった大正時代、人々はどうやって家電を使っていたのか--その答えは</h3>
+                    <a href="Qiita_-_人気の記事_3639.html">
+                        <h3>StrandsとAgentCoreに入門＆新機能を宇宙最速ハンズオン！</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">大正時代、日本の家庭にまだコンセントがなかった!? 電気アイロンやこたつはどう使っていた？ 松下幸之助の「アタッチメントプラグ」が電化の夜明けを切り開いた——パナソニック配線器具記念館でたどる日本家電...</p>
+                        <p class="related-summary">以下のイベントで実施するハンズオンですが、この記事を読めば1. 5hぐらいで誰でも出来ます！ 前提条件 AWSアカウントがあること ルートユーザー（初期ユーザー）、もしくはAdminAccess相当の...</p>
                     </a>
                 </article>
             </div>

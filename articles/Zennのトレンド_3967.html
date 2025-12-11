@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ratatuiのチュートリアルをやる: その1 | 日本のテックニュース速報</title>
-    <meta name="description" content="Ratatuiを使って作りたいツールが出てきたので、Ratatuiの使い方を勉強することにした。Ratatuiにはいくつかのチュートリアルがあり、これらをこなすことでRatatuiの使い方や中に登場する概念を一通り理解できるようになっている。このチュートリアルをやってみる">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager | 日本のテックニュース速報</title>
+    <meta name="description" content="LayerX Tech Advent Calendar 2025の9日目の記事です。 バクラク事業部 ソフトウェアエンジニアの @upamune です。 今日は、ローカル開発のシークレット設定をいい感じにした話をします">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Ratatuiのチュートリアルをやる: その1">
-    <meta property="og:description" content="Ratatuiを使って作りたいツールが出てきたので、Ratatuiの使い方を勉強することにした。Ratatuiにはいくつかのチュートリアルがあり、これらをこなすことでRatatuiの使い方や中に登場する概念を一通り理解できるようになっている。このチュートリアルをやってみる">
+    <meta property="og:title" content="ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager">
+    <meta property="og:description" content="LayerX Tech Advent Calendar 2025の9日目の記事です。 バクラク事業部 ソフトウェアエンジニアの @upamune です。 今日は、ローカル開発のシークレット設定をいい感じにした話をします">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3967.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ratatuiのチュートリアルをやる: その1">
-    <meta name="twitter:description" content="Ratatuiを使って作りたいツールが出てきたので、Ratatuiの使い方を勉強することにした。Ratatuiにはいくつかのチュートリアルがあり、これらをこなすことでRatatuiの使い方や中に登場する概念を一通り理解できるようになっている。このチュートリアルをやってみる">
+    <meta name="twitter:title" content="ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager">
+    <meta name="twitter:description" content="LayerX Tech Advent Calendar 2025の9日目の記事です。 バクラク事業部 ソフトウェアエンジニアの @upamune です。 今日は、ローカル開発のシークレット設定をいい感じにした話をします">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Ratatuiのチュートリアルをやる: その1",
-        "description": "Ratatuiを使って作りたいツールが出てきたので、Ratatuiの使い方を勉強することにした。Ratatuiにはいくつかのチュートリアルがあり、これらをこなすことでRatatuiの使い方や中に登場する概念を一通り理解できるようになっている。このチュートリアルをやってみる",
+        "headline": "ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager",
+        "description": "LayerX Tech Advent Calendar 2025の9日目の記事です。 バクラク事業部 ソフトウェアエンジニアの @upamune です。 今日は、ローカル開発のシークレット設定をいい感じにした話をします",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-02T14:10:12",
-        "dateModified": "2025-11-05T08:33:33.801049",
+        "datePublished": "2025-12-09T10:24:23",
+        "dateModified": "2025-12-11T14:24:19.067501",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3967.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3967.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "プログラミング",
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Ratatuiのチュートリアルをやる: その1",
+                "name": "ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3967.html"
             }
         ]
@@ -113,37 +113,44 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">Ratatuiのチュートリアルをやる: その1</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Ratatuiのチュートリアルをやる: その1</h1>
+                <h1>ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/helloyuki/articles/e9f25dc546b280" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-11-02T14:10:12">
-                        公開: 2025-11-02T14:10:12
+                    <span class="source">出典: <a href="https://zenn.dev/layerx/articles/762ecd4494694f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-12-09T10:24:23">
+                        公開: 2025-12-09T10:24:23
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Ratatuiを使って作りたいツールが出てきたので、Ratatuiの使い方を勉強することにした。Ratatuiにはいくつかのチュートリアルがあり、これらをこなすことでRatatuiの使い方や中に登場する概念を一通り理解できるようになっている。このチュートリアルをやってみる。
-https://ratatui.rs/tutorials/
+                    LayerX Tech Advent Calendar 2025の9日目の記事です。
+バクラク事業部 ソフトウェアエンジニアの @upamune です。
+今日は、ローカル開発のシークレット設定をいい感じにした話をします。
 
- Ratatui
-Ratatui（ラタトゥイ）はRustでTUI（Terminal UI）ツールを作ることができるクレート（ライブラリ）だ。名前の由来はおそらく「ラタトゥイユ」だと思う。このクレートは後述するようにtui-rsをフォークして作られたものであ...
+
+ ローカル開発環境のシークレット設定、手動でやっていませんか？
+「シークレットは1Passwordにあるので設定してください」
+開発環境のセットアップでこのようなことを言った・聞いたことがある人も多いのではないでしょうか。APIキーなど、ローカル開発でシークレットの設定が必要なことがあります。
+この記事では、AWS Secrets Manager と Go の s...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/helloyuki/articles/e9f25dc546b280" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/layerx/articles/762ecd4494694f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -152,25 +159,60 @@ Ratatui（ラタトゥイ）はRustでTUI（Terminal UI）ツールを作るこ�
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -185,16 +227,16 @@ Ratatui（ラタトゥイ）はRustでTUI（Terminal UI）ツールを作るこ�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2819.html">
+                    <a href="気になる記になる_8715.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Linux カーネルのコードリーディングを再現可能にする</span>
+                        <span class="nav-title">Shokz、｢耳に福くる Shokz 福袋 2026｣を12月16日に発売へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_9810.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9590.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">ブラウザストレージ比較：localStorage、Cookie、IndexedDBの選び方</span>
+                        <span class="nav-title">Suicaペンギン後任 来年11月公表</span>
                     </a>
                 </div>
             </div>
@@ -207,53 +249,53 @@ Ratatui（ラタトゥイ）はRustでTUI（Terminal UI）ツールを作るこ�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2851.html">
-                        <h3>ドコモとWOWOW、コンテンツ面で業務提携</h3>
+                    <a href="CNET_Japan_最新情報総合_5662.html">
+                        <h3>マーケティングのコンプライアンスとセキュリティを統合管理、日英で共同開発</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NTTドコモとWOWOWが、映像事業の拡大と顧客価値の向上を目的にコンテンツ分野で業務提携を結んだ。両社は音楽ライブや超大作ドラマ、スポーツ番組の共同制作・共同提供を進め、ドコモの映像配信サービス「L...</p>
+                        <p class="related-summary">広告表現のコンプライアンスチェックやブランドを悪用するフィッシングなどのサイバー犯罪対策を横断的に行える「Trust Lens」を日英企業が共同開発した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4776.html">
-                        <h3>2025年で最大の「スーパームーン」が到来、一番の見頃はいつ？</h3>
+                    <a href="Qiita_-_人気の記事_967.html">
+                        <h3>現場エンジニアではない人事が、それでもQiitaを読む理由</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">11月の満月は「ビーバームーン」とも呼ばれ、2025年で最大となる。一番の見頃や、その名称の由来とは。.</p>
+                        <p class="related-summary">コード以外にも伝わっている エンジニアではない立場で、Qiitaを見ている人間がいます。 KDDIアジャイル開発センターで採用担当をしている渡邊です。 普段は、ソフトウェアエンジニアやスクラムマスター...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3080.html">
-                        <h3>ドコモMAX、dアニメ・Lemino（旧dTV）も無料対象に　2サービス選択制</h3>
+                    <a href="Qiita_-_人気の記事_4598.html">
+                        <h3>新卒エンジニアが vibe coding して分かったこと</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">NTTドコモは2026年2月から「ドコモMAX」の特典対象に「Lemino」「dアニメストア」を追加し、従来のスポーツ配信2サービスと合わせた計4サービスから最大2つを選択可能にすると発表した。WOW...</p>
+                        <p class="related-summary">はじめに 新卒エンジニアとして 2025 年の 4 月に入社して以来、ほとんど未経験でプロジェクトの開発に配属されたため当然のように AI に鞭を打って開発を行っていました。このやり方は後から vib...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1223.html">
-                        <h3>ニコニコ動画で不具合　有料会員のはずが退会扱いに</h3>
+                    <a href="Zennのトレンド_3151.html">
+                        <h3>Reactカスタムフックが可読性を損なうとき</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">ニコニコ動画で、プレミアム会員およびニコニコチャンネルに関連する不具合が相次いで発生している。いずれも2025年11月4日から発生しており、現在も継続中だ。.</p>
+                        <p class="related-summary">この記事は React Advent Calender 2025 11 日目の投稿です。 可読性の高いカスタムフックを考える React 開発において、「ロジックはカスタムフックに切り出す」というプラ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8955.html">
-                        <h3>DJI製ドローン、米国で販売禁止へ？ 理由・時期は--現時点で分かっていること</h3>
+                    <a href="Qiita_-_人気の記事_1426.html">
+                        <h3>バハムート駆動開発をやってください</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">先週、米FCCで行われた採決により、DJIのドローンが米国で輸入・販売を禁止される可能性が高まっている。.</p>
+                        <p class="related-summary">クラスを、オブジェクトを、なんとなく理解したと思えたとき、クラスが召喚石で、オブジェクトがバハムートで、newがバハムート呼び出すことで、メソッドがバハムートのメガフレアみたいなもんかなと思いました。...</p>
                     </a>
                 </article>
             </div>

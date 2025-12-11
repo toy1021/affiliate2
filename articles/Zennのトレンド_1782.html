@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TypeScriptの型推論でCLIバリデーションをなくせた話 | 日本のテックニュース速報</title>
-    <meta name="description" content="CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>テセウスのTransformer | 日本のテックニュース速報</title>
+    <meta name="description" content="! この記事は CyberAgent AI Lab Advent Calendar 2025 の11日目の記事です。 10日目：2025年キャラクター系の論文一言まとめ(ACL, EMNLP) 12日目： はじめに サイバーエージェント AI Lab NLP チームの高瀬です">
+    <meta name="keywords" content="AI,機械学習,LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="TypeScriptの型推論でCLIバリデーションをなくせた話">
-    <meta property="og:description" content="CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした">
+    <meta property="og:title" content="テセウスのTransformer">
+    <meta property="og:description" content="! この記事は CyberAgent AI Lab Advent Calendar 2025 の11日目の記事です。 10日目：2025年キャラクター系の論文一言まとめ(ACL, EMNLP) 12日目： はじめに サイバーエージェント AI Lab NLP チームの高瀬です">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1782.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TypeScriptの型推論でCLIバリデーションをなくせた話">
-    <meta name="twitter:description" content="CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした">
+    <meta name="twitter:title" content="テセウスのTransformer">
+    <meta name="twitter:description" content="! この記事は CyberAgent AI Lab Advent Calendar 2025 の11日目の記事です。 10日目：2025年キャラクター系の論文一言まとめ(ACL, EMNLP) 12日目： はじめに サイバーエージェント AI Lab NLP チームの高瀬です">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1782.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "TypeScriptの型推論でCLIバリデーションをなくせた話",
-        "description": "CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。 きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした",
+        "headline": "テセウスのTransformer",
+        "description": "! この記事は CyberAgent AI Lab Advent Calendar 2025 の11日目の記事です。 10日目：2025年キャラクター系の論文一言まとめ(ACL, EMNLP) 12日目： はじめに サイバーエージェント AI Lab NLP チームの高瀬です",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-11T05:27:21",
-        "dateModified": "2025-09-12T02:55:06.263988",
+        "datePublished": "2025-12-11T04:02:48",
+        "dateModified": "2025-12-11T14:24:19.065675",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1782.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1782.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","機械学習","LLM"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "TypeScriptの型推論でCLIバリデーションをなくせた話",
+                "name": "テセウスのTransformer",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1782.html"
             }
         ]
@@ -113,39 +113,46 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">TypeScriptの型推論でCLIバリデーションをなくせた話</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">テセウスのTransformer</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>TypeScriptの型推論でCLIバリデーションをなくせた話</h1>
+                <h1>テセウスのTransformer</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/hongminhee/articles/27bce6eb777dea" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-09-11T05:27:21">
-                        公開: 2025-09-11T05:27:21
+                    <span class="source">出典: <a href="https://zenn.dev/shot4410/articles/5354ce65907e15" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2025-12-11T04:02:48">
+                        公開: 2025-12-11T04:02:48
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">機械学習</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    CLIツールを作っていると、必ずと言っていいほど書くことになるバリデーションコード。TypeScriptの型推論を活用したら、このコードをほぼ不要にできたお話をします。
-きっかけは、いろんなプロジェクトのコードを読んでいて気づいたことでした。どのCLIツールにも、似たようなバリデーションコードが含まれているんです。例えばこんな感じです：
-if (!opts.server &amp;&amp; opts.port) {
-  throw new Error('--port requires --server flag');
-}
+                    !
+この記事は CyberAgent AI Lab Advent Calendar 2025 の11日目の記事です。
+10日目：2025年キャラクター系の論文一言まとめ(ACL, EMNLP)
+12日目：
 
-if (opts.server &amp;&amp; !opt...
+
+ はじめに
+サイバーエージェント AI Lab NLP チームの高瀬です。自然言語処理や機械学習分野で研究をしていまして、最近はTransformerの性質に関する研究が多いです。
+さて、大規模言語モデル（LLM）が日常に浸透してきたこともあり、多くのLLMで採用されている、Transformerと呼ばれるモデルも広く知られるようになっているかと思います。しかし、現在のLLMで採用...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/hongminhee/articles/27bce6eb777dea" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/shot4410/articles/5354ce65907e15" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,25 +161,60 @@ if (opts.server &amp;&amp; !opt...
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -187,16 +229,16 @@ if (opts.server &amp;&amp; !opt...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_4726.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9367.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">SEからプロジェクトマネージャーになる方法（仕事内容・必要スキル・年収比較を徹底解説）</span>
+                        <span class="nav-title">Gmail一部機能1月終了 各社案内</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_6215.html">
+                    <a href="ASCII_jp__トップ_5959.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">新型Apple Watchの5G接続は利用できない国も？</span>
+                        <span class="nav-title">ピザもチキンも全部入り！ ドミノの「冬の贅沢セット」早トク予約で“無料クーポン”チャンス</span>
                     </a>
                 </div>
             </div>
@@ -209,53 +251,53 @@ if (opts.server &amp;&amp; !opt...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9006.html">
-                        <h3>防衛装備庁、レールガン（電磁砲）の洋上射撃に成功　火砲と比べた利点と課題は？</h3>
+                    <a href="CNET_Japan_最新情報総合_5592.html">
+                        <h3>グーグル「Nano Banana Pro」がリアルすぎて恐ろしい　これがAI画像と分かりますか？</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">防衛装備庁は9月10日、レールガンを用いた洋上射撃試験を実施したと発表した。試験艦「あすか」に搭載したレールガンから標的船への射撃や長射程射撃に成功したという。詳細は2025年度の防衛装備庁技術シンポ...</p>
+                        <p class="related-summary">グーグルによる最新の画像生成AI「Nano Banana」を使って感じたことをお伝えする。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6769.html">
-                        <h3>火星に生命存在か　NASAが「最も有望な兆候」を発見</h3>
+                    <a href="CNET_Japan_最新情報総合_6767.html">
+                        <h3>ChatGPT、無料で「Photoshop」が利用可能に　スライダーで簡単編集</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NASAが火星探査で発見した「バイオシグネチャー」は古代生命の痕跡か。パーサビアランスが捉えた有望な手がかりを詳しく解説。.</p>
+                        <p class="related-summary">アドビの3つのアプリ、「Photoshop」「Adobe Express」「Acrobat」が、「ChatGPT」で利用可能になる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8049.html">
-                        <h3>もはやハンドルすらない自動運転タクシー、アマゾン傘下Zooxが運行開始</h3>
+                    <a href="CNET_Japan_最新情報総合_8848.html">
+                        <h3>AIチャットボットの利用率は「ChatGPT」が圧倒的、Geminiも存在感--MMD調査</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Amazon傘下のZooxは、一般向けのロボタクシーサービスをラスベガスで開始した。.</p>
+                        <p class="related-summary">MMD研究所は12月10日、「2025年一般生活者におけるAIサービス利用実態調査」の結果を発表した。18歳から69歳の男女1000人を対象に、11月14日から17日にかけて実施したもので、一般生活者...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1324.html">
-                        <h3>Honda、航続距離295kmの軽EV「N-ONE e:」　V2H対応、家の蓄電池としても利用可</h3>
+                    <a href="CNET_Japan_最新情報総合_7483.html">
+                        <h3>ウェブ版Gmailで「外部のメールアドレス」が利用不可に　1月から</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Hondaは9月11日、新型軽乗用電気自動車「N-ONE e:」を9月12日に発売すると発表した。航続距離はWLTCモードで295kmを実現し、日常使いに適したスタンダードなEVを目指すとしている。.</p>
+                        <p class="related-summary">Web版「Gmail」で、外部のメールアカウントを取り込む機能が2026年1月から利用できなくなる。対象となるのは、Yahoo!メールやOutlook. comなどをGmailの仕組みで扱える「Gma...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2357.html">
-                        <h3>【3日間限定】創業当時から愛される人気ステーキ復活！あの「特選ハラミ」が食べられるぞ</h3>
+                    <a href="CNET_Japan_最新情報総合_4415.html">
+                        <h3>ソフトバンク、法人向けAIエージェント「AGENTIC STAR」を提供開始　中小企業も利用しやすく</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">フォルクスは9月13日から15日の3日間限定で「特選ハラミステーキ」（150g・2948円）を販売する。シルバーウィークはガッツリお肉を楽しもう！.</p>
+                        <p class="related-summary">ソフトバンクが法人向けAIエージェントプラットフォーム「AGENTIC STAR」の提供を開始。従来の一問一答型AIと異なり、業務のゴールを伝えるだけでAIが自ら手順を組み立てて作業を進める。社内先行...</p>
                     </a>
                 </article>
             </div>

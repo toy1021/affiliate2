@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temporal Workflow で実現する Durable な AI Agent #LayerX_AI_Agent_ブログリレー | 日本のテックニュース速報</title>
-    <meta name="description" content="せっかく作ってもらったのに Zenn だと og:image 設定できなくて途方に暮れたアイキャッチ画像 LayerX AI Agent ブログリレー 14日目の記事です。 バクラク事業部 スタッフエンジニアの @izumin5210 です">
-    <meta name="keywords" content="AI">
+    <title>ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager | 日本のテックニュース速報</title>
+    <meta name="description" content="LayerX Tech Advent Calendar 2025の9日目の記事です。 バクラク事業部 ソフトウェアエンジニアの @upamune です。 今日は、ローカル開発のシークレット設定をいい感じにした話をします">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Temporal Workflow で実現する Durable な AI Agent #LayerX_AI_Agent_ブログリレー">
-    <meta property="og:description" content="せっかく作ってもらったのに Zenn だと og:image 設定できなくて途方に暮れたアイキャッチ画像 LayerX AI Agent ブログリレー 14日目の記事です。 バクラク事業部 スタッフエンジニアの @izumin5210 です">
+    <meta property="og:title" content="ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager">
+    <meta property="og:description" content="LayerX Tech Advent Calendar 2025の9日目の記事です。 バクラク事業部 ソフトウェアエンジニアの @upamune です。 今日は、ローカル開発のシークレット設定をいい感じにした話をします">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3143.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Temporal Workflow で実現する Durable な AI Agent #LayerX_AI_Agent_ブログリレー">
-    <meta name="twitter:description" content="せっかく作ってもらったのに Zenn だと og:image 設定できなくて途方に暮れたアイキャッチ画像 LayerX AI Agent ブログリレー 14日目の記事です。 バクラク事業部 スタッフエンジニアの @izumin5210 です">
+    <meta name="twitter:title" content="ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager">
+    <meta name="twitter:description" content="LayerX Tech Advent Calendar 2025の9日目の記事です。 バクラク事業部 ソフトウェアエンジニアの @upamune です。 今日は、ローカル開発のシークレット設定をいい感じにした話をします">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Temporal Workflow で実現する Durable な AI Agent #LayerX_AI_Agent_ブログリレー",
-        "description": "せっかく作ってもらったのに Zenn だと og:image 設定できなくて途方に暮れたアイキャッチ画像 LayerX AI Agent ブログリレー 14日目の記事です。 バクラク事業部 スタッフエンジニアの @izumin5210 です",
+        "headline": "ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager",
+        "description": "LayerX Tech Advent Calendar 2025の9日目の記事です。 バクラク事業部 ソフトウェアエンジニアの @upamune です。 今日は、ローカル開発のシークレット設定をいい感じにした話をします",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-29T12:12:57",
-        "dateModified": "2025-10-01T22:18:05.700548",
+        "datePublished": "2025-12-09T10:24:23",
+        "dateModified": "2025-12-12T06:35:43.842980",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3143.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3143.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "articleSection": "プログラミング",
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Temporal Workflow で実現する Durable な AI Agent #LayerX_AI_Agent_ブログリレー",
+                "name": "ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3143.html"
             }
         ]
@@ -113,40 +113,44 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Temporal Workflow で実現する Durable な AI Agent #LayerX...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Temporal Workflow で実現する Durable な AI Agent #LayerX_AI_Agent_ブログリレー</h1>
+                <h1>ローカル開発のシークレット設定を自動化する ── Go × AWS Secrets Manager</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/layerx/articles/b5f6cf6e47221e" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-09-29T12:12:57">
-                        公開: 2025-09-29T12:12:57
+                    <span class="source">出典: <a href="https://zenn.dev/layerx/articles/762ecd4494694f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-12-09T10:24:23">
+                        公開: 2025-12-09T10:24:23
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    せっかく作ってもらったのに Zenn だと og:image 設定できなくて途方に暮れたアイキャッチ画像
-LayerX AI Agent ブログリレー 14日目の記事です。
-バクラク事業部 スタッフエンジニアの @izumin5210 です。
-Platform Engineering 部 Enabling チームでいろいろなことをしています。
-この記事では AI Agent をプロダクトに組み込んでいくにあたり、複雑な Agent を production で動かすのに避けては通れないであろう Durable Execution を実現してくれる Workflow Engine である...
+                    LayerX Tech Advent Calendar 2025の9日目の記事です。
+バクラク事業部 ソフトウェアエンジニアの @upamune です。
+今日は、ローカル開発のシークレット設定をいい感じにした話をします。
+
+
+ ローカル開発環境のシークレット設定、手動でやっていませんか？
+「シークレットは1Passwordにあるので設定してください」
+開発環境のセットアップでこのようなことを言った・聞いたことがある人も多いのではないでしょうか。APIキーなど、ローカル開発でシークレットの設定が必要なことがあります。
+この記事では、AWS Secrets Manager と Go の s...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/layerx/articles/b5f6cf6e47221e" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/layerx/articles/762ecd4494694f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,20 +163,30 @@ Platform Engineering 部 Enabling チームでいろいろなことをしてい�
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -182,23 +196,23 @@ Platform Engineering 部 Enabling チームでいろいろなことをしてい�
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -213,16 +227,16 @@ Platform Engineering 部 Enabling チームでいろいろなことをしてい�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_8936.html">
+                    <a href="Qiita_-_人気の記事_5242.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">NTT東西 加入電話基本料値上げへ</span>
+                        <span class="nav-title">コードミスで自社メールサーバーを受信不能にした話</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_3809.html">
+                    <a href="iPhone_Mania_959.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">初心者のための最短でPythonを学ぶ本</span>
+                        <span class="nav-title">日本でも衛星経由のメッセージが利用可能に！山間などで特に役立つ？</span>
                     </a>
                 </div>
             </div>
@@ -235,53 +249,53 @@ Platform Engineering 部 Enabling チームでいろいろなことをしてい�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_268.html">
-                        <h3>ChatGPT、子どもの利用を親が管理--会話内容は共有せず安全リスクのみ通知</h3>
+                    <a href="CNET_Japan_最新情報総合_2647.html">
+                        <h3>若者にも刺さる都市型スマート農業--キンバル・マスク氏率いるSquare Rootsが日本上陸</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIが、子どもによるChatGPTの使い方を保護者がより細かく管理できる新しいペアレンタルコントロールを導入する。家庭や学校、支援団体から、AIチャットボットが子どもやティーンの発達に及ぼし得...</p>
+                        <p class="related-summary">気候変動は世界中の農作物に多大な影響を与えている。農地が高温や乾燥にさらされ、耕作地域を変えたり、別の品種に切り替えたりする対策は日本国内でも、あらゆる場所、あらゆる作物で講じられている。また、強い耐...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6927.html">
-                        <h3>ChatGPT上で「買い物」できる新機能--支払いまで完結　Shopifyとも提携</h3>
+                    <a href="Zennのトレンド_6203.html">
+                        <h3>詳解 筑波大学学園祭を支えた本番ネットワークインフラ全貌</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">毎週7億人以上が使うChatGPTが、販売者にとってはチャットボット経由で新規顧客へ直接リーチできる場になりつつある──。.</p>
+                        <p class="related-summary">明日は Centra（@centra_linux） さんによる「そぽ祭りには実はサイネージがあった！？！？！？！？」です。もう遅れているので公開されていますね。ここの記事でもサイネージについて書いてい...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6656.html">
-                        <h3>OpenAI、生成AI動画だけのSNS「Sora」発表--文章から自身の映像、短編アニメなど生成</h3>
+                    <a href="Zennのトレンド_4996.html">
+                        <h3>AIの力を借りて2人で10人分の仕事をする (2025年・個人開発)</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">招待制SNS「Sora」登場！OpenAIの最新AIモデル「Sora 2」で自分や友人をAI動画に登場可能。Cameo機能・音声付き生成も搭載。.</p>
+                        <p class="related-summary">x倍くらいに留まっている気がします。 その原因は「プロダクト作りはコーディング以外にも色々やることがあるから」だと思い、コーディング以外でのAI活用を今年色々試したのでまとめてみます。 なお、このZe...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_150.html">
-                        <h3>アマゾンが新型「Echo」4機種を一挙発表--AI強化版「Alexa＋」に対応</h3>
+                    <a href="Zennのトレンド_7740.html">
+                        <h3>View TransitionでわかるNext.jsとAstroの設計思想</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">アマゾンはニューヨーク市で開催したイベントで、複数の新型「Echo」デバイスを発表した。.</p>
+                        <p class="related-summary">PLAID Designer&#39;s Advent Calendar 11日目の記事です。こんにちは。株式会社プレイドのDirection &amp; Development Unit所属のデザインエンジニア、ケ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1339.html">
-                        <h3>モトローラ、約13万円の縦折りスマホ「razr 60」10月10日発売--その特徴とは</h3>
+                    <a href="Zennのトレンド_2161.html">
+                        <h3>Storybook風SlackApp UIのプレビューツール『slack-blockbook』を作ってみた！</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">モトローラが10月10日に発売する折りたたみスマホ「razr 60」は、日本語対応AI機能「moto ai」を搭載し、価格は13万5800円。「とりまリスト」や「おまとメモ」など、日本ユーザー向けに最...</p>
+                        <p class="related-summary">com/package/@layerx/slack-blockbook 想定読者 SlackAppを開発している（または興味がある）エンジニア jsx-slackを使っている開発者 前提：私たちの技術...</p>
                     </a>
                 </article>
             </div>

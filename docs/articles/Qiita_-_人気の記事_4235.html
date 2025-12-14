@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javaのリフレクション：標準APIとFieldUtils/MethodUtilsの使い分けと注意点 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに リフレクションとは ・実行時にクラスの構造（フィールド、メソッドなど）を動的に調査・操作できるJavaの機能 ・通常はアクセスできないprivateなフィールドやメソッドにもアクセス可能 本記事の対象 ・Java1.。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="Java,本">
+    <title>開発者ツールでテストしたら本番環境だった話 〜不正入力とバリデーションの大事さ〜 | 日本のテックニュース速報</title>
+    <meta name="description" content="この記事は 本番環境などでやらかしちゃった人 Advent Calendar 2025 14 日目の記事です。 https://qiita. com/advent-calendar/2025/yarakashi ※この記事は、とある社内Webアプリで実際にやらかしかけた出来事.">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Javaのリフレクション：標準APIとFieldUtils/MethodUtilsの使い分けと注意点">
-    <meta property="og:description" content="はじめに リフレクションとは ・実行時にクラスの構造（フィールド、メソッドなど）を動的に調査・操作できるJavaの機能 ・通常はアクセスできないprivateなフィールドやメソッドにもアクセス可能 本記事の対象 ・Java1.。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="開発者ツールでテストしたら本番環境だった話 〜不正入力とバリデーションの大事さ〜">
+    <meta property="og:description" content="この記事は 本番環境などでやらかしちゃった人 Advent Calendar 2025 14 日目の記事です。 https://qiita. com/advent-calendar/2025/yarakashi ※この記事は、とある社内Webアプリで実際にやらかしかけた出来事.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4235.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Javaのリフレクション：標準APIとFieldUtils/MethodUtilsの使い分けと注意点">
-    <meta name="twitter:description" content="はじめに リフレクションとは ・実行時にクラスの構造（フィールド、メソッドなど）を動的に調査・操作できるJavaの機能 ・通常はアクセスできないprivateなフィールドやメソッドにもアクセス可能 本記事の対象 ・Java1.。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="開発者ツールでテストしたら本番環境だった話 〜不正入力とバリデーションの大事さ〜">
+    <meta name="twitter:description" content="この記事は 本番環境などでやらかしちゃった人 Advent Calendar 2025 14 日目の記事です。 https://qiita. com/advent-calendar/2025/yarakashi ※この記事は、とある社内Webアプリで実際にやらかしかけた出来事.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Javaのリフレクション：標準APIとFieldUtils/MethodUtilsの使い分けと注意点",
-        "description": "はじめに リフレクションとは ・実行時にクラスの構造（フィールド、メソッドなど）を動的に調査・操作できるJavaの機能 ・通常はアクセスできないprivateなフィールドやメソッドにもアクセス可能 本記事の対象 ・Java1.。最新のテクノロジー情報をお届けします。",
+        "headline": "開発者ツールでテストしたら本番環境だった話 〜不正入力とバリデーションの大事さ〜",
+        "description": "この記事は 本番環境などでやらかしちゃった人 Advent Calendar 2025 14 日目の記事です。 https://qiita. com/advent-calendar/2025/yarakashi ※この記事は、とある社内Webアプリで実際にやらかしかけた出来事.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-11T22:06:21",
-        "dateModified": "2025-12-13T04:28:01.527308",
+        "datePublished": "2025-12-13T22:09:14",
+        "dateModified": "2025-12-14T22:20:12.050195",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4235.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4235.html",
-        "articleSection": "その他",
-        "keywords": ["Java","本"]
+        "articleSection": "プログラミング",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Javaのリフレクション：標準APIとFieldUtils/MethodUtilsの使い分けと注意点",
+                "name": "開発者ツールでテストしたら本番環境だった話 〜不正入力とバリデーションの大事さ〜",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4235.html"
             }
         ]
@@ -113,25 +113,24 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">Javaのリフレクション：標準APIとFieldUtils/MethodUtilsの使い分けと注意点</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">開発者ツールでテストしたら本番環境だった話 〜不正入力とバリデーションの大事さ〜</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Javaのリフレクション：標準APIとFieldUtils/MethodUtilsの使い分けと注意点</h1>
+                <h1>開発者ツールでテストしたら本番環境だった話 〜不正入力とバリデーションの大事さ〜</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/kira33/items/8ce7fa049f5682c8ab68?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-12-11T22:06:21">
-                        公開: 2025-12-11T22:06:21
+                    <span class="source">出典: <a href="https://qiita.com/nprimem/items/ed8179c858695c1e31ca?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-12-13T22:09:14">
+                        公開: 2025-12-13T22:09:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Java</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -139,19 +138,13 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    1.はじめに
-
-リフレクションとは
-・実行時にクラスの構造（フィールド、メソッドなど）を動的に調査・操作できるJavaの機能
-・通常はアクセスできないprivateなフィールドやメソッドにもアクセス可能
-
-本記事の対象
-・Java1.7をベースに開設
-・Junit4を使用...
+                    この記事は 本番環境などでやらかしちゃった人 Advent Calendar 2025 14 日目の記事です。
+https://qiita.com/advent-calendar/2025/yarakashi
+※この記事は、とある社内Webアプリで実際にやらかしかけた出来事...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/kira33/items/8ce7fa049f5682c8ab68?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/nprimem/items/ed8179c858695c1e31ca?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -164,10 +157,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Java&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Java - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Java - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでJavaに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -187,23 +190,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -218,16 +221,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_1282.html">
+                    <a href="Qiita_-_人気の記事_1027.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">EC2起動時にユーザーデータを利用して初期設定を自動化する</span>
+                        <span class="nav-title">日々のコンディションを“軽いデバッグ”として扱ってみる、そんな試みの話。</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_3735.html">
+                    <a href="Qiita_-_人気の記事_7391.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">基礎を学んだ現場と教訓</span>
+                        <span class="nav-title">【初心者でもできる！】KiroとAWS MCP Serversで始める、AWS CDKのSpec駆動...</span>
                     </a>
                 </div>
             </div>
@@ -240,53 +243,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3346.html">
-                        <h3>JR東日本・タクシー・京急で「忘れ物を横断検索」可能に　スタートアップ「find」のサービス導入</h3>
+                    <a href="CNET_Japan_最新情報総合_8048.html">
+                        <h3>若者にも刺さる都市型スマート農業--キンバル・マスク氏率いるSquare Rootsが日本上陸</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「落とし物クラウドfind」を展開するfindは12日、交通機関や空港、タクシーなど複数の事業者にまたがって落とし物を検索できる「find chat」の横断検索を開始したと発表した。主要なインフラ事業...</p>
+                        <p class="related-summary">気候変動は世界中の農作物に多大な影響を与えている。農地が高温や乾燥にさらされ、耕作地域を変えたり、別の品種に切り替えたりする対策は日本国内でも、あらゆる場所、あらゆる作物で講じられている。また、強い耐...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_504.html">
-                        <h3>もし日本で明日から「16歳未満はSNS禁止」と決まったらどうなる？--豪州で壮大な実験</h3>
+                    <a href="ASCII_jp__トップ_7632.html">
+                        <h3>バタフライボード、一枚の紙のようにひらけるノート「ULTRAFLAT 13”」先行販売開始</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">「16歳未満はSNS禁止」──。もし日本で、明日からそう決まったら、どんな混乱が起きるだろうか。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_1453.html">
-                        <h3>世界三大料理なのに意外と知られていないトルコ料理、実は“超手軽に食べる方法”があります</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">世界三大料理のひとつ、トルコ料理を手軽に食べるには？.</p>
+                        <p class="related-summary">バタフライボード株式会社は12月9日から応援購入サイト「Makuake（マクアケ）」にて、フラッグシップノート「ULTRAFLAT 13”（ウルトラフラット13インチ）」の先行販売を開始した。「ULT...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9171.html">
-                        <h3>マルちゃん正麺「もやし辛味噌」がパワーアップ！ シリーズ10周年を機に</h3>
+                    <a href="Qiita_-_人気の記事_7391.html">
+                        <h3>【初心者でもできる！】KiroとAWS MCP Serversで始める、AWS CDKのSpec駆動開発体験記👻</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">東洋水産は12月15日、「マルちゃん正麺 カップ もやし辛味噌」を発売します。2024年にも販売されていた味で、シリーズ10周年を機にパワーアップして新登場。.</p>
+                        <p class="related-summary">はじめに こんにちは！ NRI xPalette Advent Calendar 2025の14日目は、 【初心者でもできる！】KiroとAWS MCP Serversで始める、AWS CDKのSpe...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9369.html">
-                        <h3>外で使える。お掃除ロボット日本で発売開始。</h3>
+                    <a href="Qiita_-_人気の記事_1027.html">
+                        <h3>日々のコンディションを“軽いデバッグ”として扱ってみる、そんな試みの話。</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">外で使える。お掃除ロボット日本で発売開始。.</p>
+                        <p class="related-summary">はじめに｜ちょっと遊びにきました こんにちは、anyのnerumaru(ねるまる)です。Xは こちら。 この記事は、anyプロダクトチームAdventCalendar2025、14日目の記事となります...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7407.html">
+                        <h3>「井の中の蛙」だった私が、転職活動で目の当たりにした &#34;実力不足&#34; 〜勘違いしていた駆け出しの私へ〜</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">この記事は、ひまプロ談話室 Advent Calendar 2025 の14日目の記事です！ 導入 新卒でSES企業に入社し、エンジニア歴3年目になろうとしている🔰フロントエンドエンジニアの私が、転職...</p>
                     </a>
                 </article>
             </div>

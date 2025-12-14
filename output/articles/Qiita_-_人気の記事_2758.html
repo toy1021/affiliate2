@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QRコードを「理解」するために、理論の学習からリーダーの自作、誤り訂正の検証までやってみた | 日本のテックニュース速報</title>
-    <meta name="description" content="忙しい人のためのまとめ（この記事の結論） 何をしたか QRコードの仕組みを完全に理解するため、ライブラリに頼らずゼロから読み取りロジックの実装に挑戦。 （※ただし「誤り訂正」の数学が難しすぎたため、検証用の最強リーダーにはOpenCVを使用しました……悔しい！）.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>レビューしやすい設計書を作ってくれるエージェント決定戦！ cc-sddで設計書作って比べてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="読みやすい設計書作ってくれるAI、いったいどれなんだい！！ どうも。最近仕様駆動開発を触っている者です。 仕様駆動開発、個人的にすごく好きなのですが、設計書レビューはやはり負荷がかかります。 というわけで、仕様駆動開発ライブラリのcc-sddを使って、各コーディングエージ.">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="QRコードを「理解」するために、理論の学習からリーダーの自作、誤り訂正の検証までやってみた">
-    <meta property="og:description" content="忙しい人のためのまとめ（この記事の結論） 何をしたか QRコードの仕組みを完全に理解するため、ライブラリに頼らずゼロから読み取りロジックの実装に挑戦。 （※ただし「誤り訂正」の数学が難しすぎたため、検証用の最強リーダーにはOpenCVを使用しました……悔しい！）.">
+    <meta property="og:title" content="レビューしやすい設計書を作ってくれるエージェント決定戦！ cc-sddで設計書作って比べてみた">
+    <meta property="og:description" content="読みやすい設計書作ってくれるAI、いったいどれなんだい！！ どうも。最近仕様駆動開発を触っている者です。 仕様駆動開発、個人的にすごく好きなのですが、設計書レビューはやはり負荷がかかります。 というわけで、仕様駆動開発ライブラリのcc-sddを使って、各コーディングエージ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2758.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="QRコードを「理解」するために、理論の学習からリーダーの自作、誤り訂正の検証までやってみた">
-    <meta name="twitter:description" content="忙しい人のためのまとめ（この記事の結論） 何をしたか QRコードの仕組みを完全に理解するため、ライブラリに頼らずゼロから読み取りロジックの実装に挑戦。 （※ただし「誤り訂正」の数学が難しすぎたため、検証用の最強リーダーにはOpenCVを使用しました……悔しい！）.">
+    <meta name="twitter:title" content="レビューしやすい設計書を作ってくれるエージェント決定戦！ cc-sddで設計書作って比べてみた">
+    <meta name="twitter:description" content="読みやすい設計書作ってくれるAI、いったいどれなんだい！！ どうも。最近仕様駆動開発を触っている者です。 仕様駆動開発、個人的にすごく好きなのですが、設計書レビューはやはり負荷がかかります。 というわけで、仕様駆動開発ライブラリのcc-sddを使って、各コーディングエージ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "QRコードを「理解」するために、理論の学習からリーダーの自作、誤り訂正の検証までやってみた",
-        "description": "忙しい人のためのまとめ（この記事の結論） 何をしたか QRコードの仕組みを完全に理解するため、ライブラリに頼らずゼロから読み取りロジックの実装に挑戦。 （※ただし「誤り訂正」の数学が難しすぎたため、検証用の最強リーダーにはOpenCVを使用しました……悔しい！）.",
+        "headline": "レビューしやすい設計書を作ってくれるエージェント決定戦！ cc-sddで設計書作って比べてみた",
+        "description": "読みやすい設計書作ってくれるAI、いったいどれなんだい！！ どうも。最近仕様駆動開発を触っている者です。 仕様駆動開発、個人的にすごく好きなのですが、設計書レビューはやはり負荷がかかります。 というわけで、仕様駆動開発ライブラリのcc-sddを使って、各コーディングエージ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-27T14:31:52",
-        "dateModified": "2025-11-29T08:27:18.156324",
+        "datePublished": "2025-12-14T00:16:41",
+        "dateModified": "2025-12-14T08:27:54.510848",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2758.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2758.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "QRコードを「理解」するために、理論の学習からリーダーの自作、誤り訂正の検証までやってみた",
+                "name": "レビューしやすい設計書を作ってくれるエージェント決定戦！ cc-sddで設計書作って比べてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2758.html"
             }
         ]
@@ -113,39 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">QRコードを「理解」するために、理論の学習からリーダーの自作、誤り訂正の検証までやってみた</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">レビューしやすい設計書を作ってくれるエージェント決定戦！ cc-sddで設計書作って比べてみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>QRコードを「理解」するために、理論の学習からリーダーの自作、誤り訂正の検証までやってみた</h1>
+                <h1>レビューしやすい設計書を作ってくれるエージェント決定戦！ cc-sddで設計書作って比べてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/Kodak_20/items/1afdf4384f8722ad8622?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-11-27T14:31:52">
-                        公開: 2025-11-27T14:31:52
+                    <span class="source">出典: <a href="https://qiita.com/kaaaichi_i/items/7083543acaad53c39b30?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2025-12-14T00:16:41">
+                        公開: 2025-12-14T00:16:41
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    忙しい人のためのまとめ（この記事の結論）
-
-何をしたか
-QRコードの仕組みを完全に理解するため、ライブラリに頼らずゼロから読み取りロジックの実装に挑戦。
-（※ただし「誤り訂正」の数学が難しすぎたため、検証用の最強リーダーにはOpenCVを使用しました……悔しい！）
-
-...
+                    読みやすい設計書作ってくれるAI、いったいどれなんだい！！
+どうも。最近仕様駆動開発を触っている者です。
+仕様駆動開発、個人的にすごく好きなのですが、設計書レビューはやはり負荷がかかります。
+というわけで、仕様駆動開発ライブラリのcc-sddを使って、各コーディングエージ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/Kodak_20/items/1afdf4384f8722ad8622?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/kaaaichi_i/items/7083543acaad53c39b30?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,25 +154,50 @@ QRコードの仕組みを完全に理解するため、ライブラリに頼ら
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -187,16 +212,16 @@ QRコードの仕組みを完全に理解するため、ライブラリに頼ら
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_9239.html">
+                    <a href="Qiita_-_人気の記事_4444.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Git入門 - 初心者が最初に押さえるべき基本知識</span>
+                        <span class="nav-title">「井の中の蛙」だった私が、転職活動で目の当たりにした &#34;実力不足&#34; 〜勘違いしていた駆け出しの私へ〜</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_301.html">
+                    <a href="気になる記になる_7862.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Open Notebookを完全ローカル環境で動かす方法</span>
+                        <span class="nav-title">【セール】UGREENのNAS製品が最大30％オフとなる「UGREEN NAS 年末セール」が開催中...</span>
                     </a>
                 </div>
             </div>
@@ -209,53 +234,53 @@ QRコードの仕組みを完全に理解するため、ライブラリに頼ら
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1715.html">
-                        <h3>2025年最後のスーパームーン「コールドムーン」まもなく出現、見頃はいつ？</h3>
+                    <a href="CNET_Japan_最新情報総合_4495.html">
+                        <h3>ソフトバンク、法人向けAIエージェント「AGENTIC STAR」を提供開始　中小企業も利用しやすく</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">2025年にスーパームーンを見られる最後のチャンスが近づいている。.</p>
+                        <p class="related-summary">ソフトバンクが法人向けAIエージェントプラットフォーム「AGENTIC STAR」の提供を開始。従来の一問一答型AIと異なり、業務のゴールを伝えるだけでAIが自ら手順を組み立てて作業を進める。社内先行...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8490.html">
-                        <h3>「OPPO＝壊れないスマホ」訴求へ、試験ラボをメディア公開　4年以上快適に使えることを重視</h3>
+                    <a href="CNET_Japan_最新情報総合_8650.html">
+                        <h3>ChatGPT新モデル「GPT-5.2」公開　何が変わった？--資料作りなど知的労働の代替加速</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">昨今のスマートフォンはスペックの向上が続き、多くのユーザーはすでに必要十分な性能を手に入れており、差別化が難しくなっている。そんな中、OPPOが掲げる次のキーワードが「品質」だ。.</p>
+                        <p class="related-summary">OpenAIは日本時間12月12日未明、新たな生成AIモデル「GPT-5. 1」から大幅に性能を引き上げ、専門的な知識労働や長時間動作する自律型AIエージェントの利用を見据えた改良が進んでいるという。...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4459.html">
-                        <h3>「POCO F8 Ultra」実機レポート--スマホでもサブウーファー搭載、Bose監修で「音」が主役に</h3>
+                    <a href="CNET_Japan_最新情報総合_9860.html">
+                        <h3>ディズニー、OpenAIに1500億円出資--ダース・ベイダーもSoraで動画生成可能に</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">小米科技（シャオミ）のサブブランドであるPOCOが発表した最新フラッグシップスマートフォン、「POCO F8 Ultra」の実機レポートをお届けする。.</p>
+                        <p class="related-summary">ディズニーとOpenAIは12月11日、10億ドル（約1500億円）規模の資本提携を発表した。この契約により、マーベルやスター・ウォーズ、ピクサーなど200以上の主要キャラクターが、OpenAIの動画...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5820.html">
-                        <h3>テスラの最新「FSD v14」実力検証：160kmを「手放し」ドライブ【動画あり】</h3>
+                    <a href="CNET_Japan_最新情報総合_4803.html">
+                        <h3>米TIME誌の「今年の人」はAI設計者　マスク氏やアルトマン氏らが表紙に</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">テスラの運転支援システム「フルセルフドライビング（FSD）」の最新版（v14）を搭載したクルマで160kmを走破し、その実力を検証した。.</p>
+                        <p class="related-summary">米TIME誌が2025年の「パーソン・オブ・ザ・イヤー（今年の人）」を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5082.html">
-                        <h3>パナソニック、エアコンのリサイクル料金を値下げへ--なぜ可能に？</h3>
+                    <a href="CNET_Japan_最新情報総合_745.html">
+                        <h3>「グーグルはただ乗り」ディズニーが停止通告、OpenAIとは蜜月へ--著作権めぐる対比鮮明</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">パナソニックは11月28日、家庭用エアコンの再商品化料金（リサイクル料金）を2026年2月1日に改定すると発表した。現行の990円から550円へと値下げする。.</p>
+                        <p class="related-summary">ディズニーはグーグルに停止通告書を送付し、グーグルのAIモデルが自社の著作権を「大規模に」侵害していると主張した。.</p>
                     </a>
                 </article>
             </div>

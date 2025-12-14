@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS大解剖 15日目: 「方向」 | 日本のテックニュース速報</title>
-    <meta name="description" content="本稿は、2024年3月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/27)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください">
-    <meta name="keywords" content="本">
+    <title>View TransitionでわかるNext.jsとAstroの設計思想 | 日本のテックニュース速報</title>
+    <meta name="description" content="PLAID Designer&#39;s Advent Calendar 11日目の記事です。こんにちは。株式会社プレイドのDirection &amp; Development Unit所属のデザインエンジニア、ケンジです。 はじめに ウェブフロントエンド開発のエコシステムは成熟期を迎えました">
+    <meta name="keywords" content="AI,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="CSS大解剖 15日目: 「方向」">
-    <meta property="og:description" content="本稿は、2024年3月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/27)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください">
+    <meta property="og:title" content="View TransitionでわかるNext.jsとAstroの設計思想">
+    <meta property="og:description" content="PLAID Designer&#39;s Advent Calendar 11日目の記事です。こんにちは。株式会社プレイドのDirection &amp; Development Unit所属のデザインエンジニア、ケンジです。 はじめに ウェブフロントエンド開発のエコシステムは成熟期を迎えました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2069.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CSS大解剖 15日目: 「方向」">
-    <meta name="twitter:description" content="本稿は、2024年3月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/27)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください">
+    <meta name="twitter:title" content="View TransitionでわかるNext.jsとAstroの設計思想">
+    <meta name="twitter:description" content="PLAID Designer&#39;s Advent Calendar 11日目の記事です。こんにちは。株式会社プレイドのDirection &amp; Development Unit所属のデザインエンジニア、ケンジです。 はじめに ウェブフロントエンド開発のエコシステムは成熟期を迎えました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "CSS大解剖 15日目: 「方向」",
-        "description": "本稿は、2024年3月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/27)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください",
+        "headline": "View TransitionでわかるNext.jsとAstroの設計思想",
+        "description": "PLAID Designer&#39;s Advent Calendar 11日目の記事です。こんにちは。株式会社プレイドのDirection &amp; Development Unit所属のデザインエンジニア、ケンジです。 はじめに ウェブフロントエンド開発のエコシステムは成熟期を迎えました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-26T22:00:01",
-        "dateModified": "2025-09-28T04:22:43.123043",
+        "datePublished": "2025-12-11T05:32:13",
+        "dateModified": "2025-12-14T03:39:44.406869",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2069.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2069.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "プログラミング",
+        "keywords": ["AI","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "CSS大解剖 15日目: 「方向」",
+                "name": "View TransitionでわかるNext.jsとAstroの設計思想",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2069.html"
             }
         ]
@@ -113,61 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">CSS大解剖 15日目: 「方向」</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">View TransitionでわかるNext.jsとAstroの設計思想</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>CSS大解剖 15日目: 「方向」</h1>
+                <h1>View TransitionでわかるNext.jsとAstroの設計思想</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/qnighy/articles/a5dfab433d6a88" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-09-26T22:00:01">
-                        公開: 2025-09-26T22:00:01
+                    <span class="source">出典: <a href="https://zenn.dev/ignorant_kenji/articles/6f501784ee2812" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-12-11T05:32:13">
+                        公開: 2025-12-11T05:32:13
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本稿は、2024年3月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/27)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください。
+                    PLAID Designer's Advent Calendar 11日目の記事です。こんにちは。株式会社プレイドのDirection &amp; Development Unit所属のデザインエンジニア、ケンジです。
 
-CSSの仕様を理解するために、1日ごとにテーマを決めて説明する企画15日目です。今日のテーマは「方向」です。
-
- 本稿で扱う方向
-
-
-
-
-←
-→
-↑
-↓
-←→
-↑↓
-その他の用語
-
-
-
-
-物理的な方向(physical direction)
-左(left)
-右(right)
-上(top)
-下(bottom)
-(物理的な)幅((physical) width...
+ はじめに
+ウェブフロントエンド開発のエコシステムは成熟期を迎えました。「シングルページアプリケーション（SPA）」と「マルチページアプリケーション（MPA）」という長年の二項対立。この議論は、View Transition APIの標準化と普及により、その境界線を溶解させつつあります。
+この新しいウェブ標準APIは、MPAであってもSPAのようなシームレスなページ遷移...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/qnighy/articles/a5dfab433d6a88" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ignorant_kenji/articles/6f501784ee2812" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -180,10 +160,30 @@ CSSの仕様を理解するために、1日ごとにテーマを決めて説明�
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -193,23 +193,23 @@ CSSの仕様を理解するために、1日ごとにテーマを決めて説明�
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +224,16 @@ CSSの仕様を理解するために、1日ごとにテーマを決めて説明�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3284.html">
+                    <a href="Zennのトレンド_4635.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Temporal APIの現在地（2025年9月時点）</span>
+                        <span class="nav-title">Obsidian × Claude Codeで情報整理を緩くやってみたけど、想像以上によかった話</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_2880.html">
+                    <a href="iPhone_Mania_2555.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">SNSで不特定多数に発信2割 調査</span>
+                        <span class="nav-title">iPad（A19）とiPad Air（M4）などの存在がiOS26の内部ビルドに</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +246,53 @@ CSSの仕様を理解するために、1日ごとにテーマを決めて説明�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1841.html">
-                        <h3>めぐりズムがeスポーツで疲れた目を癒やします 日本eスポーツ協会のオフィシャルスポンサーに！</h3>
+                    <a href="CNET_Japan_最新情報総合_8233.html">
+                        <h3>若者にも刺さる都市型スマート農業--キンバル・マスク氏率いるSquare Rootsが日本上陸</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">今回の提携により、JESUが関わるeスポーツ大会やイベントにおいて、めぐりズムの製品が選手や来場者に活用される予定。.</p>
+                        <p class="related-summary">気候変動は世界中の農作物に多大な影響を与えている。農地が高温や乾燥にさらされ、耕作地域を変えたり、別の品種に切り替えたりする対策は日本国内でも、あらゆる場所、あらゆる作物で講じられている。また、強い耐...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4241.html">
-                        <h3>稲とアガベ、日本の在来種「唐花草」で醸すマスカットやライチを連想する芳香最上級クラフトサケ『寵深花風（ちょうしんかふう）...</h3>
+                    <a href="Qiita_-_人気の記事_6553.html">
+                        <h3>メモリの動的確保はなぜ嫌われるのか？</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">稲とアガベ、日本の在来種「唐花草」で醸すマスカットやライチを連想する芳香最上級クラフトサケ『寵深花風（ちょうしんかふう）』を新発売.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8989.html">
-                        <h3>料理データから自作腸活スコアを計算＆可視化してみる</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは…！ この記事では、自分なりの「腸活スコア」を組み立てて料理と食材のデータセットを用いて、 実際にスコアを算出しその結果を可視化するまでの過程をまとめました。 ※ 本記事で紹介する...</p>
+                        <p class="related-summary">メモリの動的確保（Dynamic Memory Allocation）は、プログラムの実行中に必要に応じてメモリを割り当てる手法です。C言語ではmallocやcalloc、C++ではnew演算子がこれ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1186.html">
-                        <h3>n乗の高速化</h3>
+                    <a href="Qiita_-_人気の記事_6384.html">
+                        <h3>バックエンド(レガシー)からフロントエンド(最新技術)まで学んだ Advent Calendar</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">n乗の高速化の理解とプログラム 前提 自分はとても頭がわるく、自分で何とか理解したものを趣味程度に、偉そうに書き下しているだけです。下に書いてあることは参考程度にしてください また、もし何かアドバイス...</p>
+                        <p class="related-summary">はじめに 今年は、業務と個人開発の両方で新しい言語・技術に挑戦した一年でした。 本業では、初めての COBOL と SQL に本格的に取り組み、 基幹システムの中でどのようにデータが扱われ、どのように...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_5216.html">
-                        <h3>CIO、｢SMARTCOBY SLIM 5K｣の発熱温度を抑制したセーフティモデル版への更新サポートを提供開始</h3>
+                    <a href="気になる記になる_6449.html">
+                        <h3>Apple、｢HomePodソフトウェア 26.2｣をリリース｜パフォーマンスと安定性を改善</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">CIOが、新サービス「SMARTCOBY SLIM 5K セーフティモデルへの更新サポート」の提供を開始しました。 本サービスは、モバイルバッテリー「SMARTCOBY SLIM 5K」を、より発熱温...</p>
+                        <p class="related-summary">本日、Appleが、「HomePod」向けソフトウェアの最新アップデートとなる「HomePodソフトウェアバージョン26. 2」を正式にリリースしました。 アップデートは「HomePod（第1世代）」...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_6600.html">
+                        <h3>ショートカットキーで「「「爆速」」」プログラミング学習</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">やあ RUNTEQ56期卒業生のしまだです。 RUNTEQ Advent Calendar 2025『みんなにおすすめしたい〇〇tips』の13日目を担当します。 はじめに プログラミング学習中、例え...</p>
                     </a>
                 </article>
             </div>

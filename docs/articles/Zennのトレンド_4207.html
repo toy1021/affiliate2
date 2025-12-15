@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastAPIのテストコードを書いてDIの重要性を知った話 | 日本のテックニュース速報</title>
-    <meta name="description" content="きっかけ こんにちは、ランサーズでエンジニアをしている岡田です。 当時は開発スピード優先でテストコードなんて二の次。 DIの概念は知りつつも、「DIを意識した開発コードって？」「DIを意識すると何が良いの？」と分からないままでした">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>「状態」ではなく「変化（イベント）」を保存したい | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Dress Code Advent Calendar 2025 の 15 日目の記事です。 Dress Code 株式会社で、プロダクト開発しながらアーキテクト、組織設計、採用、技術広報などなど担当しているかわうそです">
+    <meta name="keywords" content="EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="FastAPIのテストコードを書いてDIの重要性を知った話">
-    <meta property="og:description" content="きっかけ こんにちは、ランサーズでエンジニアをしている岡田です。 当時は開発スピード優先でテストコードなんて二の次。 DIの概念は知りつつも、「DIを意識した開発コードって？」「DIを意識すると何が良いの？」と分からないままでした">
+    <meta property="og:title" content="「状態」ではなく「変化（イベント）」を保存したい">
+    <meta property="og:description" content="はじめに Dress Code Advent Calendar 2025 の 15 日目の記事です。 Dress Code 株式会社で、プロダクト開発しながらアーキテクト、組織設計、採用、技術広報などなど担当しているかわうそです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4207.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FastAPIのテストコードを書いてDIの重要性を知った話">
-    <meta name="twitter:description" content="きっかけ こんにちは、ランサーズでエンジニアをしている岡田です。 当時は開発スピード優先でテストコードなんて二の次。 DIの概念は知りつつも、「DIを意識した開発コードって？」「DIを意識すると何が良いの？」と分からないままでした">
+    <meta name="twitter:title" content="「状態」ではなく「変化（イベント）」を保存したい">
+    <meta name="twitter:description" content="はじめに Dress Code Advent Calendar 2025 の 15 日目の記事です。 Dress Code 株式会社で、プロダクト開発しながらアーキテクト、組織設計、採用、技術広報などなど担当しているかわうそです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "FastAPIのテストコードを書いてDIの重要性を知った話",
-        "description": "きっかけ こんにちは、ランサーズでエンジニアをしている岡田です。 当時は開発スピード優先でテストコードなんて二の次。 DIの概念は知りつつも、「DIを意識した開発コードって？」「DIを意識すると何が良いの？」と分からないままでした",
+        "headline": "「状態」ではなく「変化（イベント）」を保存したい",
+        "description": "はじめに Dress Code Advent Calendar 2025 の 15 日目の記事です。 Dress Code 株式会社で、プロダクト開発しながらアーキテクト、組織設計、採用、技術広報などなど担当しているかわうそです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-27T01:56:09",
-        "dateModified": "2025-11-30T10:21:15.718829",
+        "datePublished": "2025-12-15T00:00:03",
+        "dateModified": "2025-12-15T22:22:16.633912",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4207.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4207.html",
         "articleSection": "プログラミング",
-        "keywords": []
+        "keywords": ["EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "FastAPIのテストコードを書いてDIの重要性を知った話",
+                "name": "「状態」ではなく「変化（イベント）」を保存したい",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4207.html"
             }
         ]
@@ -114,38 +114,41 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">FastAPIのテストコードを書いてDIの重要性を知った話</li>
+                <li aria-current="page">「状態」ではなく「変化（イベント）」を保存したい</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>FastAPIのテストコードを書いてDIの重要性を知った話</h1>
+                <h1>「状態」ではなく「変化（イベント）」を保存したい</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/lancers/articles/1bff9ebffdbd89" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/dress_code/articles/5d94f6c817efb3" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-11-27T01:56:09">
-                        公開: 2025-11-27T01:56:09
+                    <time datetime="2025-12-15T00:00:03">
+                        公開: 2025-12-15T00:00:03
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    きっかけ
-こんにちは、ランサーズでエンジニアをしている岡田です。
-当時は開発スピード優先でテストコードなんて二の次。
-DIの概念は知りつつも、「DIを意識した開発コードって？」「DIを意識すると何が良いの？」と分からないままでした。
-それでも、FastAPI+sqlalchemyの開発では、DBを使う時に大抵エンドポイントの引数にdb: Session = Depends(get_db)が出てきます。
-「どうしてエンドポイントの内部ではなく引数で書くのか？」といまいち納得しないまま、FastAPIの書き方に従っておまじないのようにDependsを書いてました。
-そして、開発コードも増...
+                    はじめに
+Dress Code Advent Calendar 2025 の 15 日目の記事です。
+Dress Code 株式会社で、プロダクト開発しながらアーキテクト、組織設計、採用、技術広報などなど担当しているかわうそです。
+今日は「履歴」というデータを取り扱うことために考えていること・戦い方について整理してみたので、その内容を共有したいと思います。
+履歴のデータはとても重要になる場合があり、履歴管理や監査証跡、時点復元、法令対応などで「過去の状態を正確に残したい」という要件が発生することがあります。
+!
+この記事では、テンポラルデータモデル、Event Sourcing につ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/lancers/articles/1bff9ebffdbd89" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/dress_code/articles/5d94f6c817efb3" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,6 +160,16 @@ DIの概念は知りつつも、「DIを意識した開発コードって？」�
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -212,16 +225,16 @@ DIの概念は知りつつも、「DIを意識した開発コードって？」�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_8705.html">
+                    <a href="気になる記になる_7719.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「AIに先にテストを全部書かせる」はTDDじゃない。でも、それもアリだよね。</span>
+                        <span class="nav-title">『MOFT MagSafe対応バイカラーケース』レビュー｜側面を覆わないオープンデザインが特徴の｢i...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1704.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_892.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Honoの7つのコンセプト</span>
+                        <span class="nav-title">オンライン詐欺 闇マーケット実態</span>
                     </a>
                 </div>
             </div>
@@ -234,53 +247,53 @@ DIの概念は知りつつも、「DIを意識した開発コードって？」�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Zennのトレンド_2504.html">
-                        <h3>技術書典19で買った『わかる！ソフトウェア設計トレーニング』が良かった</h3>
+                    <a href="CNET_Japan_最新情報総合_3185.html">
+                        <h3>JR東日本、水平飛行できるVTOLドローン導入検討　時速100kmで点検現場へ急行</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">これはなに 先日、技術書典19に参加してきました。 技術書典では色々と書籍を買ったんですが、その中でも特に良かったなと感じた『わかる！ソフトウェア設計トレーニング』についてご紹介します。 ちなみに購入...</p>
+                        <p class="related-summary">JR東日本新潟支社は、冬季の沿線斜面調査にVTOL（垂直離着陸）型ドローンを活用する実証実験を行った。エアロセンス（東京都北区）が開発した固定翼で水平飛行できる機体を用い、降雪時でも迅速で安定した調査...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5157.html">
-                        <h3>Elixir/Nervesで MIX_TARGET に応じて処理を切り替える</h3>
+                    <a href="Publickey_4529.html">
+                        <h3>日本人プログラマ向け、プログラミングに適した「フォント」まとめ。2025年版</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">プログラミングでは、1文字でも打ち間違いがあればエラーの原因になってしまいます。 そこで似たような文字、例えば数字の「1」（いち）とアルファベットの「l」（エル）、数字の「0」（ゼロ）とアルファベット...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_6158.html">
+                        <h3>茶色になるまで1年かかったうさぎさんの入緑記事</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに Nerves で開発していると、「ホスト環境と Raspberry Pi などのターゲット環境で、ちょっとだけ処理を変えたい」という場面にしばしば出くわします。 たとえば次のようなケースです...</p>
+                        <p class="related-summary">Hello World こんにちは！ 早起きが得意なうさぎアイコンの人こと、Un_titledです。 このたびAtCoderで入緑しました！！ 緑になるまでの道のりを記事にしようと思い、私のなけなしの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_3053.html">
-                        <h3>コンテナとは何か</h3>
+                    <a href="Zennのトレンド_5001.html">
+                        <h3>たった1日で実務経験が積める神ゲー『農家はReplace()されました』</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに Dockerをはじめとするコンテナ技術を利用して開発を行う人は少なくないと思います。 普段意識せずに使用しているコンテナ、これらはどのように定義や実装をされているのでしょうか。 本記事では、...</p>
+                        <p class="related-summary">こちらの記事は「Medley（メドレー） - Qiita Advent Calendar 2025」の15日目の記事です🎄 👋 はじめに 株式会社メドレーに2025年4月に新卒入社した、おぎのしきぶと...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4967.html">
-                        <h3>Elixirでバージョン文字列を解析して分岐処理</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに ある日、AtomVM で動かすファームウェアを友人と開発している中で、「同じ基板だけど、LCD と SD の CS ピンだけ配線が違う」という 2 種類のバージョンをサポートする必要が出てき...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_6160.html">
-                        <h3>cc-sddで71ファイルのユーザー管理機能実装を手戻りなく進めた話</h3>
+                    <a href="Zennのトレンド_3722.html">
+                        <h3>【OSS】Rust + gpuiで高速なファイルエクスプローラを作り始めた話</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">所感・結論 cc-sdd（Claude Code Spec-Driven Development）を初めて使ってみた。 https://github. com/gotalab/cc-sdd 結論から言...</p>
+                        <p class="related-summary">この記事はRust Advent Calendar 2025 14日目の記事です． はじめに こんにちは．普段はバックエンドを書いているsyuya2036です． 突然ですがみなさん，MacのFinde...</p>
                     </a>
                 </article>
             </div>

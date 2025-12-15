@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>カレントディレクトリとは何か  (Unix系OSの場合) | 日本のテックニュース速報</title>
-    <meta name="description" content="結論 カレントディレクトリ (以下cwd) は、以下の2つの組み合わせで管理される、プロセス状態の構成要素です。 物理的なcwd: ディレクトリそのものを指すポインタ。カーネル側で管理される。 論理的なcwd: ディレクトリパス">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>「状態」ではなく「変化（イベント）」を保存したい | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Dress Code Advent Calendar 2025 の 15 日目の記事です。 Dress Code 株式会社で、プロダクト開発しながらアーキテクト、組織設計、採用、技術広報などなど担当しているかわうそです">
+    <meta name="keywords" content="EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="カレントディレクトリとは何か  (Unix系OSの場合)">
-    <meta property="og:description" content="結論 カレントディレクトリ (以下cwd) は、以下の2つの組み合わせで管理される、プロセス状態の構成要素です。 物理的なcwd: ディレクトリそのものを指すポインタ。カーネル側で管理される。 論理的なcwd: ディレクトリパス">
+    <meta property="og:title" content="「状態」ではなく「変化（イベント）」を保存したい">
+    <meta property="og:description" content="はじめに Dress Code Advent Calendar 2025 の 15 日目の記事です。 Dress Code 株式会社で、プロダクト開発しながらアーキテクト、組織設計、採用、技術広報などなど担当しているかわうそです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6229.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="カレントディレクトリとは何か  (Unix系OSの場合)">
-    <meta name="twitter:description" content="結論 カレントディレクトリ (以下cwd) は、以下の2つの組み合わせで管理される、プロセス状態の構成要素です。 物理的なcwd: ディレクトリそのものを指すポインタ。カーネル側で管理される。 論理的なcwd: ディレクトリパス">
+    <meta name="twitter:title" content="「状態」ではなく「変化（イベント）」を保存したい">
+    <meta name="twitter:description" content="はじめに Dress Code Advent Calendar 2025 の 15 日目の記事です。 Dress Code 株式会社で、プロダクト開発しながらアーキテクト、組織設計、採用、技術広報などなど担当しているかわうそです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "カレントディレクトリとは何か  (Unix系OSの場合)",
-        "description": "結論 カレントディレクトリ (以下cwd) は、以下の2つの組み合わせで管理される、プロセス状態の構成要素です。 物理的なcwd: ディレクトリそのものを指すポインタ。カーネル側で管理される。 論理的なcwd: ディレクトリパス",
+        "headline": "「状態」ではなく「変化（イベント）」を保存したい",
+        "description": "はじめに Dress Code Advent Calendar 2025 の 15 日目の記事です。 Dress Code 株式会社で、プロダクト開発しながらアーキテクト、組織設計、採用、技術広報などなど担当しているかわうそです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-01T13:08:39",
-        "dateModified": "2025-11-04T04:24:00.941912",
+        "datePublished": "2025-12-15T00:00:03",
+        "dateModified": "2025-12-15T14:27:15.436537",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6229.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6229.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "プログラミング",
+        "keywords": ["EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "カレントディレクトリとは何か  (Unix系OSの場合)",
+                "name": "「状態」ではなく「変化（イベント）」を保存したい",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6229.html"
             }
         ]
@@ -113,45 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">カレントディレクトリとは何か  (Unix系OSの場合)</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">「状態」ではなく「変化（イベント）」を保存したい</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>カレントディレクトリとは何か  (Unix系OSの場合)</h1>
+                <h1>「状態」ではなく「変化（イベント）」を保存したい</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/qnighy/articles/c6653eaf49a21a" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-11-01T13:08:39">
-                        公開: 2025-11-01T13:08:39
+                    <span class="source">出典: <a href="https://zenn.dev/dress_code/articles/5d94f6c817efb3" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-12-15T00:00:03">
+                        公開: 2025-12-15T00:00:03
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    結論
-カレントディレクトリ (以下cwd) は、以下の2つの組み合わせで管理される、プロセス状態の構成要素です。
-
-
-物理的なcwd: ディレクトリそのものを指すポインタ。カーネル側で管理される。
-
-論理的なcwd: ディレクトリパス。 PWD という名前の環境変数を経由して、ユーザーランドで管理される。
-
-
- ポイント
-一般論として、ファイルを特定する方法には、ファイルへのポインタを保持する方法とパスを保持する方法の2通りがあります。この2つの方法は一長一短で、様々な場面で振る舞いが異なります。
-
-ファイルポインタを保持する方法は、同じファイルシステム内でのファイルの 移動やリネー...
+                    はじめに
+Dress Code Advent Calendar 2025 の 15 日目の記事です。
+Dress Code 株式会社で、プロダクト開発しながらアーキテクト、組織設計、採用、技術広報などなど担当しているかわうそです。
+今日は「履歴」というデータを取り扱うことために考えていること・戦い方について整理してみたので、その内容を共有したいと思います。
+履歴のデータはとても重要になる場合があり、履歴管理や監査証跡、時点復元、法令対応などで「過去の状態を正確に残したい」という要件が発生することがあります。
+!
+この記事では、テンポラルデータモデル、Event Sourcing につ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/qnighy/articles/c6653eaf49a21a" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/dress_code/articles/5d94f6c817efb3" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,25 +157,60 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -193,16 +225,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_4133.html">
+                    <a href="気になる記になる_5112.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Claude Code と Codex の使い分け</span>
+                        <span class="nav-title">『MOFT MagSafe対応バイカラーケース』レビュー｜側面を覆わないオープンデザインが特徴の｢i...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_5825.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_2484.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">OSS監視ツール徹底比較【2025年版】：あなたの環境に最適な選択はどれか</span>
+                        <span class="nav-title">オンライン詐欺 闇マーケット実態</span>
                     </a>
                 </div>
             </div>
@@ -215,53 +247,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_146.html">
-                        <h3>フォトショ使いなら絶対知るべき「アドビの次世代機能」10選--Adobe MAX 2025で披露【画像】</h3>
+                    <a href="Publickey_8950.html">
+                        <h3>日本人プログラマ向け、プログラミングに適した「フォント」まとめ。2025年版</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">Adobeは米国ロサンゼルスで10月28日～30日（現地時間）に、クリエイター向けのカンファレンスイベント「Adobe MAX 2025」を開催した。.</p>
+                        <p class="related-summary">プログラミングでは、1文字でも打ち間違いがあればエラーの原因になってしまいます。 そこで似たような文字、例えば数字の「1」（いち）とアルファベットの「l」（エル）、数字の「0」（ゼロ）とアルファベット...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4709.html">
-                        <h3>テスラ「サイバートラック」、早くも10件目のリコール--今度はライトバー脱落の恐れ</h3>
+                    <a href="CNET_Japan_最新情報総合_3397.html">
+                        <h3>JR東日本、水平飛行できるVTOLドローン導入検討　時速100kmで点検現場へ急行</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">テスラと米当局は「Cybertruck」（サイバートラック）の所有者に対し、あるオフロード用アクセサリーが道路上の障害になる可能性があると警告している。.</p>
+                        <p class="related-summary">JR東日本新潟支社は、冬季の沿線斜面調査にVTOL（垂直離着陸）型ドローンを活用する実証実験を行った。エアロセンス（東京都北区）が開発した固定翼で水平飛行できる機体を用い、降雪時でも迅速で安定した調査...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5701.html">
-                        <h3>SBI新生銀行、50年ローンを提供　「20〜30代の住宅購入を支援」</h3>
+                    <a href="Zennのトレンド_5071.html">
+                        <h3>たった1日で実務経験が積める神ゲー『農家はReplace()されました』</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">SBI新生銀行は、11月17日から住宅ローンの最長返済期間を従来の35年から50年へと拡大する。変動金利型（半年型）の商品が対象で、20〜30代の住宅購入を後押しする。.</p>
+                        <p class="related-summary">こちらの記事は「Medley（メドレー） - Qiita Advent Calendar 2025」の15日目の記事です🎄 👋 はじめに 株式会社メドレーに2025年4月に新卒入社した、おぎのしきぶと...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1783.html">
-                        <h3>TP-Link製ルーター、米国で「禁止」案が有力に--国家安全保障リスクを懸念</h3>
+                    <a href="Zennのトレンド_2852.html">
+                        <h3>【OSS】Rust + gpuiで高速なファイルエクスプローラを作り始めた話</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">人気ルーターブランドであるTP-Linkのルーターが米国で禁止される可能性が高まっている。.</p>
+                        <p class="related-summary">この記事はRust Advent Calendar 2025 14日目の記事です． はじめに こんにちは．普段はバックエンドを書いているsyuya2036です． 突然ですがみなさん，MacのFinde...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1288.html">
-                        <h3>「RE搭載」コンセプトカーなどが登場　写真で見る「JAPAN MOBILITY SHOW2025」マツダ・スバル・スズキ...</h3>
+                    <a href="Qiita_-_人気の記事_6146.html">
+                        <h3>開発者ツールでテストしたら本番環境だった話 〜不正入力とバリデーションの大事さ〜</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">10月30日、「JAPAN MOBILITY SHOW2025」（モビショー）が開幕した。ここでは、マツダ、スバル、スズキのブースに展示されていたコンセプトカーなどをご紹介しよう。.</p>
+                        <p class="related-summary">この記事は 本番環境などでやらかしちゃった人 Advent Calendar 2025 14 日目の記事です。 https://qiita. com/advent-calendar/2025/yara...</p>
                     </a>
                 </article>
             </div>

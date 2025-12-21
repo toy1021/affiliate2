@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go 1.26で生まれ変わるimage/jpegパッケージ | 日本のテックニュース速報</title>
-    <meta name="description" content="! 本記事は Go Advent Calendar 2025 の7日目の記事です 2026年2月リリース予定のGo 1. 26で、image/jpegパッケージの内部実装が大きく更新されます。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="本">
+    <title>Go の test における flag パッケージ活用Tips | 日本のテックニュース速報</title>
+    <meta name="description" content="! この記事は、Go Advent Calendar 2025 の 21 日目の記事です。 先日、Findy さんのイベントにて testdata ディレクトリの活用についての発表をさせていただきました">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Go 1.26で生まれ変わるimage/jpegパッケージ">
-    <meta property="og:description" content="! 本記事は Go Advent Calendar 2025 の7日目の記事です 2026年2月リリース予定のGo 1. 26で、image/jpegパッケージの内部実装が大きく更新されます。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="Go の test における flag パッケージ活用Tips">
+    <meta property="og:description" content="! この記事は、Go Advent Calendar 2025 の 21 日目の記事です。 先日、Findy さんのイベントにて testdata ディレクトリの活用についての発表をさせていただきました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5290.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Go 1.26で生まれ変わるimage/jpegパッケージ">
-    <meta name="twitter:description" content="! 本記事は Go Advent Calendar 2025 の7日目の記事です 2026年2月リリース予定のGo 1. 26で、image/jpegパッケージの内部実装が大きく更新されます。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="Go の test における flag パッケージ活用Tips">
+    <meta name="twitter:description" content="! この記事は、Go Advent Calendar 2025 の 21 日目の記事です。 先日、Findy さんのイベントにて testdata ディレクトリの活用についての発表をさせていただきました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5290.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Go 1.26で生まれ変わるimage/jpegパッケージ",
-        "description": "! 本記事は Go Advent Calendar 2025 の7日目の記事です 2026年2月リリース予定のGo 1. 26で、image/jpegパッケージの内部実装が大きく更新されます。最新のテクノロジー情報をお届けします。",
+        "headline": "Go の test における flag パッケージ活用Tips",
+        "description": "! この記事は、Go Advent Calendar 2025 の 21 日目の記事です。 先日、Findy さんのイベントにて testdata ディレクトリの活用についての発表をさせていただきました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-07T15:20:39",
-        "dateModified": "2025-12-09T18:29:52.997317",
+        "datePublished": "2025-12-20T15:00:02",
+        "dateModified": "2025-12-21T16:25:43.123950",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5290.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5290.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Go 1.26で生まれ変わるimage/jpegパッケージ",
+                "name": "Go の test における flag パッケージ活用Tips",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5290.html"
             }
         ]
@@ -113,25 +113,22 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">Go 1.26で生まれ変わるimage/jpegパッケージ</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Go の test における flag パッケージ活用Tips</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Go 1.26で生まれ変わるimage/jpegパッケージ</h1>
+                <h1>Go の test における flag パッケージ活用Tips</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/koya_iwamura/articles/c47b41bd7459a7" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-12-07T15:20:39">
-                        公開: 2025-12-07T15:20:39
+                    <span class="source">出典: <a href="https://zenn.dev/uji/articles/go-flag-usecase-in-test" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2025-12-20T15:00:02">
+                        公開: 2025-12-20T15:00:02
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
             </header>
 
@@ -139,18 +136,19 @@
                 
                 <div class="article-body">
                     !
-本記事は Go Advent Calendar 2025 の7日目の記事です
+この記事は、Go Advent Calendar 2025 の 21 日目の記事です。
 
-2026年2月リリース予定のGo 1.26で、image/jpegパッケージの内部実装が大きく更新されます。この変更により後方互換性が崩れることはほぼないのですが、その裏側には興味深い変更が加えられていました。
-本記事では、image/jpegパッケージがなぜ更新されるのか、何が改善されるのかを紹介します。
+先日、Findy さんのイベントにて testdata ディレクトリの活用についての発表をさせていただきました。
+https://x.com/uji_rb/status/1996066089432969331
+このイベントの中で、Golden Test の実現に標準の flag パッケージを活用できる話をしました。
+testdata 利用の有無に限らずこのTipsは便利なので、知見の共有がしやすくなるように記事にしようと思います。
 
- ライセンス問題
-今回の更新の最大の動機は、長年存在していたライセンス問題の解決です。
-image/jpegパッケージの中核をなすfdct.go（離散コサイン変換）とidct.go（逆離散コサイン変...
+ 利用方法
+test での flag パッケージの使い方は3ス...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/koya_iwamura/articles/c47b41bd7459a7" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/uji/articles/go-flag-usecase-in-test" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,24 +157,9 @@ image/jpegパッケージの中核をなすfdct.go（離散コサイン変換）
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -207,16 +190,16 @@ image/jpegパッケージの中核をなすfdct.go（離散コサイン変換）
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_165.html">
+                    <a href="iPhone_Mania_6313.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ターミナルでメモ管理 (Neovim, nb, zeno.zsh)</span>
+                        <span class="nav-title">A20/A20 Proに先行〜Exynos 2600は2nmプロセスで製造と報道</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Publickey_9124.html">
+                    <a href="Zennのトレンド_3615.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AIエージェントをどのコードエディタでも使えるようにする「ACP（Agent Client Prot...</span>
+                        <span class="nav-title">アクティブ運用の基本法則</span>
                     </a>
                 </div>
             </div>
@@ -229,53 +212,53 @@ image/jpegパッケージの中核をなすfdct.go（離散コサイン変換）
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_143.html">
-                        <h3>「16歳未満はSNS全面禁止」オーストラリアで10日から　賛否の声</h3>
+                    <a href="CNET_Japan_最新情報総合_3050.html">
+                        <h3>住信SBIは「ドコモSMTBネット銀行」に　ドコモ利用者へ住宅ローン金利優遇も</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">オーストラリアは、これまでどの国も踏み込んでこなかった規制に動き出しており、その行方を世界の多くの国が注視している。.</p>
+                        <p class="related-summary">NTTドコモ、三井住友信託銀行、住信SBIネット銀行の3社は12月19日、「住信SBIネット銀行」の商号をは2026年8月3日付けで「ドコモSMTBネット銀行」に変更すると発表した。関係当局の認可を前...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_508.html">
-                        <h3>【本日限定】最新ゲーミングPCが最大82,000円オフ！ ハイエンドも破格の24時間セール開始</h3>
+                    <a href="CNET_Japan_最新情報総合_3740.html">
+                        <h3>成田空港、出発ロビーに衣類圧縮機　「スーツケースに入らない」を解決</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ハイエンドからコスパモデルまで全10機種が値下げ。12月10日限定で最大82,000円引きとなるセブンアールジャパンの最新PCセール情報。.</p>
+                        <p class="related-summary">成田国際空港は12月19日、衣類圧縮機を出発ロビーに設置する実証実験を開始すると発表した。SJOYと共同で、2026年1月13日から15日までの3日間、成田空港第2ターミナルおよび第3ターミナルに専用...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_4910.html">
-                        <h3>Nothing、12月12日に渋谷で開催するイベントで｢​Phone (3a) Community Edition｣の先...</h3>
+                    <a href="CNET_Japan_最新情報総合_3012.html">
+                        <h3>韓国サムスン半導体、ついに2nmプロセス量産　Galaxy向け「Exnos 2600」正式発表</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">本日、Nothingが「​Phone (3a) Community Edition」を正式に発表しましたが、先日お伝えした12月12日に東京・渋谷で開催するスペシャルイベントにおいて、「​Phone ...</p>
+                        <p class="related-summary">サムスンが新たなSoCを発表した。今後登場するGalaxyシリーズの性能を左右する存在になる可能性がある──。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_4367.html">
-                        <h3>Nothing、90年代後半のテックの世界がモチーフになった｢​Phone (3a) Community Edition...</h3>
+                    <a href="CNET_Japan_最新情報総合_588.html">
+                        <h3>NASAが「レモン型とみられる惑星」を発見</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">本日、Nothingが、「​Phone (3a) Community Edition」を正式に発表しました。 Community Editionプロジェクトは、コミュニティメンバーと一緒にスマートフォ...</p>
+                        <p class="related-summary">天文学者が、これまでに例のない特徴を持つ系外惑星を発見した。高速で自転する中性子星「パルサー」を周回するこの惑星は、強い重力の影響で、レモンのように歪んだ形をしていると考えられている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6652.html">
-                        <h3>定番の旨さ！ 「サッポロ生ビール 黒ラベル」が8％オフの4,994円。Amazonタイムセールでお得に</h3>
+                    <a href="CNET_Japan_最新情報総合_2902.html">
+                        <h3>もし家のキッチンが広いなら「新Echo Show」を買うべき--その理由　Alexa＋も体験</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「サッポロ生ビール 黒ラベル 350ml×24本」が、現在開催中のAmazonタイムセールに登場しています。1本あたりの価格に換算すると192円となり、まとめ買いをする絶好の機会となっています。.</p>
+                        <p class="related-summary">音量や明るさ、見たい情報を呼び出すといったシンプルな操作は、やはりAlexaへの音声コマンドが一番速い。細かな設定に触れたい場合はタッチ操作もあるが、全体のカスタマイズはAlexaアプリのほうが分かり...</p>
                     </a>
                 </article>
             </div>

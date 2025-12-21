@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code に draw.io の図を描かせるコツ | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 株式会社GENDA データエンジニア / MLOps エンジニアの uma-chan です。 この記事は GENDA Advent Calendar 2025 シリーズ4 Day 12 の記事です。 1. io 形式の図を描かせようとすると、意外とハマりポイントが多いです">
-    <meta name="keywords" content="Claude,本">
+    <title>標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか | 日本のテックニュース速報</title>
+    <meta name="description" content="大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Code に draw.io の図を描かせるコツ">
-    <meta property="og:description" content="はじめに 株式会社GENDA データエンジニア / MLOps エンジニアの uma-chan です。 この記事は GENDA Advent Calendar 2025 シリーズ4 Day 12 の記事です。 1. io 形式の図を描かせようとすると、意外とハマりポイントが多いです">
+    <meta property="og:title" content="標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか">
+    <meta property="og:description" content="大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3236.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Code に draw.io の図を描かせるコツ">
-    <meta name="twitter:description" content="はじめに 株式会社GENDA データエンジニア / MLOps エンジニアの uma-chan です。 この記事は GENDA Advent Calendar 2025 シリーズ4 Day 12 の記事です。 1. io 形式の図を描かせようとすると、意外とハマりポイントが多いです">
+    <meta name="twitter:title" content="標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか">
+    <meta name="twitter:description" content="大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Code に draw.io の図を描かせるコツ",
-        "description": "はじめに 株式会社GENDA データエンジニア / MLOps エンジニアの uma-chan です。 この記事は GENDA Advent Calendar 2025 シリーズ4 Day 12 の記事です。 1. io 形式の図を描かせようとすると、意外とハマりポイントが多いです",
+        "headline": "標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか",
+        "description": "大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-11T22:00:01",
-        "dateModified": "2025-12-15T06:37:40.937582",
+        "datePublished": "2025-12-20T04:18:33",
+        "dateModified": "2025-12-21T08:28:27.806708",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3236.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3236.html",
         "articleSection": "プログラミング",
-        "keywords": ["Claude","本"]
+        "keywords": []
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Code に draw.io の図を描かせるコツ",
+                "name": "標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3236.html"
             }
         ]
@@ -114,50 +114,40 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Claude Code に draw.io の図を描かせるコツ</li>
+                <li aria-current="page">標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Code に draw.io の図を描かせるコツ</h1>
+                <h1>標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/genda_jp/articles/2025-12-12-drawio-tips-claude-code" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/mod_poppo/articles/libm-precision" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-12-11T22:00:01">
-                        公開: 2025-12-11T22:00:01
+                    <time datetime="2025-12-20T04:18:33">
+                        公開: 2025-12-20T04:18:33
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    1. はじめに
-株式会社GENDA データエンジニア / MLOps エンジニアの uma-chan です。
-この記事は GENDA Advent Calendar 2025 シリーズ4 Day 12 の記事です。
+                    大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について
 
+どのくらいの精度が期待できるのか？
+どのくらい再現性があるのか？
 
- 1.1. この記事について
-Claude Code に draw.io 形式の図を描かせようとすると、意外とハマりポイントが多いです。
+という話題を扱います。
 
-フォントが反映されない
-矢印がラベルと被る
-テキストが意図しない改行をする
-
-本記事では、私が実際にプレゼン資料の図を Claude Code に描かせる中で学んだコツをまとめます。
-
- 1.2. なぜ Claude Code に...
+ 正確な計算は難しい
+無限大やNaNを除く有限の浮動小数点数は、数学的な実数を表していると考えられます。例えば、1.5 という浮動小数点数なら1.5という実数に対応します。ソースに 0.1 と書いた浮動小数点数が数学的には 0.100000000000000005551115123125782702118158340454101562...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/genda_jp/articles/2025-12-12-drawio-tips-claude-code" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/mod_poppo/articles/libm-precision" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -170,30 +160,20 @@ Claude Code に draw.io 形式の図を描かせようとすると、意外と�
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
                                     <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -234,16 +214,16 @@ Claude Code に draw.io 形式の図を描かせようとすると、意外と�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5753.html">
+                    <a href="Qiita_-_人気の記事_9584.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">詳解 筑波大学学園祭を支えた本番ネットワークインフラ全貌</span>
+                        <span class="nav-title">全てをなんちゃってソースコードにするクソアプリ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_3737.html">
+                    <a href="Qiita_-_人気の記事_4505.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">一種類の記号だけで個数を数える方法は「1進法」ではない</span>
+                        <span class="nav-title">OSS版Kong Gatewayをk8sで動かしてみる</span>
                     </a>
                 </div>
             </div>
@@ -256,53 +236,53 @@ Claude Code に draw.io 形式の図を描かせようとすると、意外と�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6267.html">
-                        <h3>PayPayで手続きが完結できるスマホの保険 PayPayほけん「スマホ保険」における開発を支援</h3>
+                    <a href="Qiita_-_人気の記事_6740.html">
+                        <h3>【公式】準備ゼロで使えるPyxel開発環境「Pyxel Code Maker」のご紹介</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">もっと手軽にPyxelを使いたい！ Pyxel（ピクセル）は、Pythonを使ってレトロ調のゲームやアプリを作れるゲームエンジンです。（Pyxelの名前を聞くのが初めてという方は、紹介記事「【公式】レ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_4536.html">
+                        <h3>昨年に引き続き、アルゴ式が国内最大規模の高校生・高専生向けプログラミングコンテスト『プログラミング甲子園2025』の競技...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">PayPayで手続きが完結できるスマホの保険 PayPayほけん「スマホ保険」における開発を支援.</p>
+                        <p class="related-summary">昨年に引き続き、アルゴ式が国内最大規模の高校生・高専生向けプログラミングコンテスト『プログラミング甲子園2025』の競技制作を担当.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_1288.html">
-                        <h3>【OSS】Rust + gpuiで高速なファイルエクスプローラを作り始めた話</h3>
+                    <a href="Qiita_-_人気の記事_9584.html">
+                        <h3>全てをなんちゃってソースコードにするクソアプリ</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">この記事はクソアプリアドベントカレンダー20日目の記事となります。 19日目は@kokusinさんの 特定のワードに反応してミーム音源を勝手に流すクソアプリでした。ものすごくバズっています。 日常でた...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_910.html">
+                        <h3>GitHub Copilot Agent Skills 入門</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">この記事はRust Advent Calendar 2025 14日目の記事です． はじめに こんにちは．普段はバックエンドを書いているsyuya2036です． 突然ですがみなさん，MacのFinde...</p>
+                        <p class="related-summary">md にそうした情報を記述することで対応してきましたが、ここに新たな最適化方法が登場してきています。それが「Agent Skills」です。 2025 年 12 月 18 日、Agent Skills...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6804.html">
-                        <h3>【初心者でもできる！】KiroとAWS MCP Serversで始める、AWS CDKのSpec駆動開発体験記👻</h3>
+                    <a href="Qiita_-_人気の記事_8245.html">
+                        <h3>AG-gridを使用してウェブでExcelを使おう！</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは！ NRI xPalette Advent Calendar 2025の14日目は、 【初心者でもできる！】KiroとAWS MCP Serversで始める、AWS CDKのSpe...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9841.html">
-                        <h3>開発者ツールでテストしたら本番環境だった話 〜不正入力とバリデーションの大事さ〜</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">この記事は 本番環境などでやらかしちゃった人 Advent Calendar 2025 14 日目の記事です。 https://qiita. com/advent-calendar/2025/yara...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5035.html">
-                        <h3>日々のコンディションを“軽いデバッグ”として扱ってみる、そんな試みの話。</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに｜ちょっと遊びにきました こんにちは、anyのnerumaru(ねるまる)です。Xは こちら。 この記事は、anyプロダクトチームAdventCalendar2025、14日目の記事となります...</p>
+                        <p class="related-summary">初めに このポストを見ている皆さんは、AG-gridのことをお分かりですか？ ウェブで高性能のデータテーブルが使用可能ンオープンソースライブラリーです。 React,Angular,Vue,Javas...</p>
                     </a>
                 </article>
             </div>

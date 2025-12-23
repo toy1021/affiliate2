@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>try-catch に疲れたので、TypeScript で別の書き方を考えた | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事は、GMOペパボ エンジニアAdvent Calendar 2025 の17日目の記事です。 JS/TSを長く触れていると、無意識に受け入れてしまっている不便さがあります。その一つが、TypeScriptにおける非同期処理のエラーハンドリングです">
-    <meta name="keywords" content="AI">
+    <title>Next.js App Router での「更新後のUI最新化」をパターンで整理する | 日本のテックニュース速報</title>
+    <meta name="description" content="js App Router では、Server Component（SC）でデータを取得しレンダリングするのが自然な形です。ページを開けばサーバー側でデータを取得し、レンダリング済みのコンテンツがユーザーに届く。ここまではシンプルです">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="try-catch に疲れたので、TypeScript で別の書き方を考えた">
-    <meta property="og:description" content="! この記事は、GMOペパボ エンジニアAdvent Calendar 2025 の17日目の記事です。 JS/TSを長く触れていると、無意識に受け入れてしまっている不便さがあります。その一つが、TypeScriptにおける非同期処理のエラーハンドリングです">
+    <meta property="og:title" content="Next.js App Router での「更新後のUI最新化」をパターンで整理する">
+    <meta property="og:description" content="js App Router では、Server Component（SC）でデータを取得しレンダリングするのが自然な形です。ページを開けばサーバー側でデータを取得し、レンダリング済みのコンテンツがユーザーに届く。ここまではシンプルです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2685.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="try-catch に疲れたので、TypeScript で別の書き方を考えた">
-    <meta name="twitter:description" content="! この記事は、GMOペパボ エンジニアAdvent Calendar 2025 の17日目の記事です。 JS/TSを長く触れていると、無意識に受け入れてしまっている不便さがあります。その一つが、TypeScriptにおける非同期処理のエラーハンドリングです">
+    <meta name="twitter:title" content="Next.js App Router での「更新後のUI最新化」をパターンで整理する">
+    <meta name="twitter:description" content="js App Router では、Server Component（SC）でデータを取得しレンダリングするのが自然な形です。ページを開けばサーバー側でデータを取得し、レンダリング済みのコンテンツがユーザーに届く。ここまではシンプルです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "try-catch に疲れたので、TypeScript で別の書き方を考えた",
-        "description": "! この記事は、GMOペパボ エンジニアAdvent Calendar 2025 の17日目の記事です。 JS/TSを長く触れていると、無意識に受け入れてしまっている不便さがあります。その一つが、TypeScriptにおける非同期処理のエラーハンドリングです",
+        "headline": "Next.js App Router での「更新後のUI最新化」をパターンで整理する",
+        "description": "js App Router では、Server Component（SC）でデータを取得しレンダリングするのが自然な形です。ページを開けばサーバー側でデータを取得し、レンダリング済みのコンテンツがユーザーに届く。ここまではシンプルです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-18T00:44:09",
-        "dateModified": "2025-12-20T03:17:10.457123",
+        "datePublished": "2025-12-21T22:00:00",
+        "dateModified": "2025-12-23T04:39:29.299888",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2685.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2685.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "articleSection": "プログラミング",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "try-catch に疲れたので、TypeScript で別の書き方を考えた",
+                "name": "Next.js App Router での「更新後のUI最新化」をパターンで整理する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2685.html"
             }
         ]
@@ -113,44 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">try-catch に疲れたので、TypeScript で別の書き方を考えた</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">Next.js App Router での「更新後のUI最新化」をパターンで整理する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>try-catch に疲れたので、TypeScript で別の書き方を考えた</h1>
+                <h1>Next.js App Router での「更新後のUI最新化」をパターンで整理する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/sangun/articles/354b8d53343777" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-12-18T00:44:09">
-                        公開: 2025-12-18T00:44:09
+                    <span class="source">出典: <a href="https://zenn.dev/akky1991/articles/75f15ee6511049" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2025-12-21T22:00:00">
+                        公開: 2025-12-21T22:00:00
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-この記事は、GMOペパボ エンジニアAdvent Calendar 2025 の17日目の記事です。
+                    この記事はファインディエンジニア Advent Calendar 2025 22日目の記事です。
+https://adventar.org/calendars/11860
 
-JS/TSを長く触れていると、無意識に受け入れてしまっている不便さがあります。その一つが、TypeScriptにおける非同期処理のエラーハンドリングです。
-async/await の登場で非同期処理は劇的に書きやすくなりましたが、その裏で私たちは try-catch ブロックのネストと、型安全性の喪失という新たな問題と戦い続けてきました。
-今回は、そんなモヤモヤと向き合った結果、
-最終的に try-ok という小さなライブラリを作った話です。
-
- 私たちが抱える「try-catch...
+ 1. はじめに
+Next.js App Router では、Server Component（SC）でデータを取得しレンダリングするのが自然な形です。ページを開けばサーバー側でデータを取得し、レンダリング済みのコンテンツがユーザーに届く。ここまではシンプルです。
+しかし、ユーザー操作でデータが変わったあと 「UI をどう最新化するか」 となると、急に選択肢が増えます。router.refresh() で SC を再...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/sangun/articles/354b8d53343777" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/akky1991/articles/75f15ee6511049" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,20 +157,20 @@ async/await の登場で非同期処理は劇的に書きやすくなりまし�
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -186,23 +180,23 @@ async/await の登場で非同期処理は劇的に書きやすくなりまし�
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -217,16 +211,16 @@ async/await の登場で非同期処理は劇的に書きやすくなりまし�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_918.html">
+                    <a href="Publickey_2883.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">祝v1リリース🎉新たなヘッドレスUIライブラリBase UIが良さそう</span>
+                        <span class="nav-title">Anthropic、AIエージェントにタスクの手順や知識を組み込める「Agent Skills」をオ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_3557.html">
+                    <a href="Qiita_-_人気の記事_912.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">祝・実験終了 🎉 Linux カーネルの Rust 採用が正式化！ C から Rust へ ─ AI...</span>
+                        <span class="nav-title">新人エンジニアが現場で遭遇したエラーコード3選</span>
                     </a>
                 </div>
             </div>
@@ -239,53 +233,53 @@ async/await の登場で非同期処理は劇的に書きやすくなりまし�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_202.html">
-                        <h3>ChatGPTに「アプリストア」が登場、誰でも公開可能に</h3>
+                    <a href="Publickey_6505.html">
+                        <h3>GitHub、コードやデータの保存場所を日本に指定できるデータレジデンシーをGitHub Enterprise Clou...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">OpenAIは、ベータ版機能の発表と開発キットの公開から2カ月を経て、アプリプラットフォームを正式に立ち上げた。.</p>
+                        <p class="related-summary">GitHubは、日本においてデータレジデンシーに対応したGitHub Enterprise Cloudの一般提供を開始したことを発表しました。 医療機関や金融機関、政府機関など、顧客のプライバシーやセ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2368.html">
-                        <h3>YouTube、AIで作った「偽の予告編」で計10億再生の2チャンネルを削除</h3>
+                    <a href="Zennのトレンド_4836.html">
+                        <h3>50人以上の開発者が日々使用する10万commitオーバーのGitHubリポジトリを分離した</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">YouTubeは、AIを使って偽の映画予告編を制作していた2つのチャンネルに対し、措置を講じた。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1264.html">
-                        <h3>いずれChatGPTで振込も--ドコモSMTBネット銀行が構想する「アプリ不要のAI銀行」とは</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">住信SBIネット銀行が2026年8月に「ドコモSMTBネット銀行」へ商号変更し、音声やチャットだけで銀行取引が完結する生成AI活用サービス「NEOBANK ai」を2026年2月に開始する。NTTドコ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_3634.html">
-                        <h3>｢AirPods Pro 3｣の一部で発生しているノイズ問題、11月と12月のファームウェアアップデートでも修正されず</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">今年10月末、「AirPods Pro 3」を使用する一部のユーザーから、アクティブノイズキャンセリング（ANC）がオンになっているにも関わらず、メディアを再生していない状態で静電気のようなノイズが聞...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_3629.html">
-                        <h3>医療業界で突然LLMを使ってくれと言われたら</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに 「うちの病院でも生成AIを活用したい」 「電子カルテの要約をAIでできないか」 医療機関のDX推進担当者や、外部のシステム開発者がこのような相談を受けることが増えています。しかし医療分野でL...</p>
+                        <p class="related-summary">dev/moneyforward/articles/5c011e4b44ae18 本記事では、この課題に対してどのように対応したかについて、筆を執りたいと思います. ! これは株式会社マネーフォワード...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_912.html">
+                        <h3>新人エンジニアが現場で遭遇したエラーコード3選</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">現場に配属されてから半年が経ちました。あっという間です。仕事を覚えることに精一杯でしたが、得られた学びも多くありました。特にコードのエラーには苦戦した覚えがあります。そこで本稿では、実際に現場で見たエ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_8060.html">
+                        <h3>Python のコンパイラを作りたい #9 - MLIR の導入と最適化</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">こんにちは。前回 (#8 - オブジェクトモデルの構築) の記事からしばらく (体感で半年くらい) 記事を更新できていませんでしたね。学業・私用が重なっていたのが主因です。 ただ、その間も開発自体は止...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_2913.html">
+                        <h3>「Skills？MCP？インストラクション？」仕組みからわかる GitHub Copilot のカスタマイズ戦略ガイド</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに 2025 年、GitHub Copilot は Agent Mode の登場とともに大きく進化しました。それに伴って、Agent Skills、MCP (Model Context Prot...</p>
                     </a>
                 </article>
             </div>

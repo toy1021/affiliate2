@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS初心者がALBログを記録してみた話 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに こんにちは。Tsukasaです！ 皆さんAWSでログを取ったことはありますか？ 私は基本的にどういうサービスも初めて使うので、今回はALBでログを取ってみました。 それでは早速見て行きましょう！ ALBログとは そもそもALBログとは何なのでしょう？ ALBロ.">
-    <meta name="keywords" content="AWS,本">
+    <title>Cloud Runのアクセス制御を完全理解する（Ingress / IAM / Cloud Armor / IAP） | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに ※ 本記事はCloud Run services（HTTPリクエストを処理するサービス）を対象としています。Cloud Run jobs（バッチ処理）やCloud Run worker pools（pull-based処理）には適用されません。 Cloud Ru.">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AWS初心者がALBログを記録してみた話">
-    <meta property="og:description" content="はじめに こんにちは。Tsukasaです！ 皆さんAWSでログを取ったことはありますか？ 私は基本的にどういうサービスも初めて使うので、今回はALBでログを取ってみました。 それでは早速見て行きましょう！ ALBログとは そもそもALBログとは何なのでしょう？ ALBロ.">
+    <meta property="og:title" content="Cloud Runのアクセス制御を完全理解する（Ingress / IAM / Cloud Armor / IAP）">
+    <meta property="og:description" content="はじめに ※ 本記事はCloud Run services（HTTPリクエストを処理するサービス）を対象としています。Cloud Run jobs（バッチ処理）やCloud Run worker pools（pull-based処理）には適用されません。 Cloud Ru.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5967.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AWS初心者がALBログを記録してみた話">
-    <meta name="twitter:description" content="はじめに こんにちは。Tsukasaです！ 皆さんAWSでログを取ったことはありますか？ 私は基本的にどういうサービスも初めて使うので、今回はALBでログを取ってみました。 それでは早速見て行きましょう！ ALBログとは そもそもALBログとは何なのでしょう？ ALBロ.">
+    <meta name="twitter:title" content="Cloud Runのアクセス制御を完全理解する（Ingress / IAM / Cloud Armor / IAP）">
+    <meta name="twitter:description" content="はじめに ※ 本記事はCloud Run services（HTTPリクエストを処理するサービス）を対象としています。Cloud Run jobs（バッチ処理）やCloud Run worker pools（pull-based処理）には適用されません。 Cloud Ru.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AWS初心者がALBログを記録してみた話",
-        "description": "はじめに こんにちは。Tsukasaです！ 皆さんAWSでログを取ったことはありますか？ 私は基本的にどういうサービスも初めて使うので、今回はALBでログを取ってみました。 それでは早速見て行きましょう！ ALBログとは そもそもALBログとは何なのでしょう？ ALBロ.",
+        "headline": "Cloud Runのアクセス制御を完全理解する（Ingress / IAM / Cloud Armor / IAP）",
+        "description": "はじめに ※ 本記事はCloud Run services（HTTPリクエストを処理するサービス）を対象としています。Cloud Run jobs（バッチ処理）やCloud Run worker pools（pull-based処理）には適用されません。 Cloud Ru.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-08T11:31:32",
-        "dateModified": "2025-11-09T12:37:08.500231",
+        "datePublished": "2025-12-22T22:08:36",
+        "dateModified": "2025-12-23T20:24:55.211716",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5967.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5967.html",
         "articleSection": "その他",
-        "keywords": ["AWS","本"]
+        "keywords": ["本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AWS初心者がALBログを記録してみた話",
+                "name": "Cloud Runのアクセス制御を完全理解する（Ingress / IAM / Cloud Armor / IAP）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5967.html"
             }
         ]
@@ -114,24 +114,23 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">AWS初心者がALBログを記録してみた話</li>
+                <li aria-current="page">Cloud Runのアクセス制御を完全理解する（Ingress / IAM / Cloud Armo...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AWS初心者がALBログを記録してみた話</h1>
+                <h1>Cloud Runのアクセス制御を完全理解する（Ingress / IAM / Cloud Armor / IAP）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/tks_1128/items/fb44f826f6390ca45452?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/created_on_june_19/items/ed7d16eda2264ba690bb?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-11-08T11:31:32">
-                        公開: 2025-11-08T11:31:32
+                    <time datetime="2025-12-22T22:08:36">
+                        公開: 2025-12-22T22:08:36
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AWS</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -140,18 +139,12 @@
                 
                 <div class="article-body">
                     はじめに
-こんにちは。Tsukasaです！
-皆さんAWSでログを取ったことはありますか？
-私は基本的にどういうサービスも初めて使うので、今回はALBでログを取ってみました。
-それでは早速見て行きましょう！
-
-ALBログとは
-そもそもALBログとは何なのでしょう？
-ALBロ...
+※ 本記事はCloud Run services（HTTPリクエストを処理するサービス）を対象としています。Cloud Run jobs（バッチ処理）やCloud Run worker pools（pull-based処理）には適用されません。
+Cloud Ru...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/tks_1128/items/fb44f826f6390ca45452?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/created_on_june_19/items/ed7d16eda2264ba690bb?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,16 +156,6 @@ ALBロ...
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -218,16 +201,16 @@ ALBロ...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7961.html">
+                    <a href="Qiita_-_人気の記事_1205.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">[Go 1.25] WaitGroup.Go()を使って既存コードを書き換える際の注意点</span>
+                        <span class="nav-title">toioと星空観測</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_402.html">
+                    <a href="気になる記になる_8631.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Liquid Glassのデザインをすでに採用済みのアプリは？Appleがリストを公開</span>
+                        <span class="nav-title">｢DJI Osmo Pocket 4｣は1眼カメラ搭載の標準モデルと2眼カメラ搭載のProモデルの2...</span>
                     </a>
                 </div>
             </div>
@@ -240,53 +223,53 @@ ALBロ...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8244.html">
-                        <h3>アスクル、本格復旧は12月上旬以降に　現在はFAXなどで暫定対応</h3>
+                    <a href="CNET_Japan_最新情報総合_1740.html">
+                        <h3>JAL、フィッシング詐欺を注意喚起--マイルが勝手にJAL Payにチャージされ不正利用される被害</h3>
                         <div class="related-meta">
                             <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アスクルは11月6日、10月19日に発生したランサムウェア攻撃によるシステム障害の復旧状況を発表した。現在、事業所向け「ASKULサービス」を最優先に段階的な復旧を進めており、12月上旬の本格再開を目...</p>
+                        <p class="related-summary">日本航空は12月23日、JALグループを装った偽メールや偽サイトによるフィッシング詐欺により、顧客のマイルが不正にJAL Payへチャージされ、不正利用される被害が発生していると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_483.html">
-                        <h3>買って本当に良かった、上質で人と被らないイヤーカフ型イヤホンに大満足</h3>
+                    <a href="Zennのトレンド_4762.html">
+                        <h3>結局std::simdってどうなのさ</h3>
                         <div class="related-meta">
                             <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">人と被らない“装うイヤホン”。ラグジュアリーデザインが魅力のイヤーカフ型イヤホン「BUTTONS CLIP」は、アクセサリーとして成立する唯一無二の存在で、日常にしっくり馴染む満足感を与えてくれます。...</p>
+                        <p class="related-summary">! この記事はC++ Advent Calendar 2025の20日目の記事です(遅刻)． 19日目は…kizulさんがLLVMでなんかするらしい(遅刻)． I(@wx257osn2)です． 今年も...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_138.html">
-                        <h3>【格安スマホまとめ】Amazon経由でドコモ「ahamo」契約で2万ポイント　Amazonでそのまま使えるのがうれしい</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">11月から始まったahamoのAmazon. jp限定キャンペーンがオトク。MNPでのSIMのみでの新規契約でAmazonギフトカードが2万円分プレゼント。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_7825.html">
-                        <h3>BMW「X2 M35i」はカジュアルさとBMWらしさが高次元にバランスした日本にピッタリなSUV</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">BMWから、第2世代のSUV「X2」が登場したので試乗したところ、乗れば乗るほど「これは日本にピッタリの1台だ！」と思った次第。その理由を3つにわけて紹介します。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7143.html">
-                        <h3>Elixir で Open JTalk を使い、IEx に日本語をしゃべらせてみた</h3>
+                    <a href="Qiita_-_人気の記事_5954.html">
+                        <h3>データサイエンティストスキルチェックリストVer.6.0「基盤」「価値創造力」を身につける本31冊・資料7件</h3>
                         <div class="related-meta">
                             <span class="category">その他</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに IEx で日本語音声を発声させてみます。 TL;DR まず、Elixir がインストールされていることを確認します。 ターミナル $ elixir --version Erlang/OTP ...</p>
+                        <p class="related-summary">0で新設・刷新された「基盤」スキル、「価値創造力」スキルの基礎知識習得の本・資料の紹介 データサイエンティスト協会の「データサイエンティストスキルチェックリスト」が更新されました。 従. 本記事のめあ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_9879.html">
+                        <h3>Microsoft、Surfaceの学生向けキャンペーン｢君が、人生に向き合うとき。｣を開始｜数量限定の新生活応援モデル...</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">本日、日本マイクロソフトが、「Surface」シリーズの新キャンペーン「君が、人生に向き合うとき。」を開始しました。 本キャンペーンでは、学生または25歳以下の方（入学予定者・在学中の方を含む）向けに...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_8060.html">
+                        <h3>【セール】Kindleストアで2,000冊以上のマンガが99円以下で販売中｜｢冬のマンガ祭り2025｣がスタート</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">Amazonが、本日よりKindleストアにおいて、「冬のマンガ祭り2025」のセールをスタートしました。 「冬のマンガ祭り2025」のセールは、タイトル通りマンガを対象としたセールで、対象タイトルが...</p>
                     </a>
                 </article>
             </div>

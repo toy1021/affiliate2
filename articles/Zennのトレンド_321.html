@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM開発の裏で行われるデバッグ作業: PyTorch DCP | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事は、LLM, VLM開発の裏で行われるリアルなデバッグ作業の様子を紹介します">
-    <meta name="keywords" content="LLM,本">
+    <title>LLMのCUDAカーネルを自作しよう! | 日本のテックニュース速報</title>
+    <meta name="description" content="com/advent-calendar/2025/large-language-model はじめに pytorchは、Meta社が開発した機械学習・深層学習のためのpythonライブラリです。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="Python,機械学習,LLM,深層学習,ニューラルネット,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="LLM開発の裏で行われるデバッグ作業: PyTorch DCP">
-    <meta property="og:description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事は、LLM, VLM開発の裏で行われるリアルなデバッグ作業の様子を紹介します">
+    <meta property="og:title" content="LLMのCUDAカーネルを自作しよう!">
+    <meta property="og:description" content="com/advent-calendar/2025/large-language-model はじめに pytorchは、Meta社が開発した機械学習・深層学習のためのpythonライブラリです。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_321.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LLM開発の裏で行われるデバッグ作業: PyTorch DCP">
-    <meta name="twitter:description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事は、LLM, VLM開発の裏で行われるリアルなデバッグ作業の様子を紹介します">
+    <meta name="twitter:title" content="LLMのCUDAカーネルを自作しよう!">
+    <meta name="twitter:description" content="com/advent-calendar/2025/large-language-model はじめに pytorchは、Meta社が開発した機械学習・深層学習のためのpythonライブラリです。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "LLM開発の裏で行われるデバッグ作業: PyTorch DCP",
-        "description": "はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事は、LLM, VLM開発の裏で行われるリアルなデバッグ作業の様子を紹介します",
+        "headline": "LLMのCUDAカーネルを自作しよう!",
+        "description": "com/advent-calendar/2025/large-language-model はじめに pytorchは、Meta社が開発した機械学習・深層学習のためのpythonライブラリです。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-13T06:03:34",
-        "dateModified": "2025-11-16T04:27:18.533120",
+        "datePublished": "2025-12-21T07:29:03",
+        "dateModified": "2025-12-24T12:44:35.082991",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_321.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_321.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["LLM","本"]
+        "keywords": ["Python","機械学習","LLM","深層学習","ニューラルネット","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "LLM開発の裏で行われるデバッグ作業: PyTorch DCP",
+                "name": "LLMのCUDAカーネルを自作しよう!",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_321.html"
             }
         ]
@@ -114,24 +114,28 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">LLM開発の裏で行われるデバッグ作業: PyTorch DCP</li>
+                <li aria-current="page">LLMのCUDAカーネルを自作しよう!</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>LLM開発の裏で行われるデバッグ作業: PyTorch DCP</h1>
+                <h1>LLMのCUDAカーネルを自作しよう!</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/turing_motors/articles/04eed10b0aafe9" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/selllous/articles/diy_llm_kernel" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-13T06:03:34">
-                        公開: 2025-11-13T06:03:34
+                    <time datetime="2025-12-21T07:29:03">
+                        公開: 2025-12-21T07:29:03
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">機械学習</span>
                     <span class="tag">LLM</span>
+                    <span class="tag">深層学習</span>
+                    <span class="tag">ニューラルネット</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -139,18 +143,16 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。
-本記事は、LLM, VLM開発の裏で行われるリアルなデバッグ作業の様子を紹介します。
-LLM, VLMの開発の裏には本記事で紹介するような地道なデバッグ作業が多数あるのですが、なかなかその実態が伝わっていないように思います。できるだけ詳細にデバッグ作業の様子を記しましたので、実際の現場で行われている作業を追体験いただけますと幸いです。
+                    本記事は、LLM・LLM活用 Advent Calendar 2025 21日目の記事です。
+https://qiita.com/advent-calendar/2025/large-language-model
 
- Background
-まず、デバッグ作業を行う前の背景と経緯について説明します。
-学習に使用している依存関係の継続的なu...
+ はじめに
+pytorchは、Meta社が開発した機械学習・深層学習のためのpythonライブラリです。ユーザーは、pytorchを使用することで、画像分類モデルや強化学習モデルをはじめとし、大規模言語モデルや拡散モデルなど、多種多様なニューラルネットワークモデルを構築することが可能です。
+また、pytorch内部では、CPU、TPU、GPUといった様々なプロセッサ向けに最適...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/turing_motors/articles/04eed10b0aafe9" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/selllous/articles/diy_llm_kernel" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,20 +165,20 @@ LLM, VLMの開発の裏には本記事で紹介するような地道なデバッ
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +229,16 @@ LLM, VLMの開発の裏には本記事で紹介するような地道なデバッ
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7081.html">
+                    <a href="Zennのトレンド_6863.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">TestcontainersでRDBを使ったテストを快適にする仕組み</span>
+                        <span class="nav-title">Figmaやめて、AIとコードでUIを作り始めた話</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_1008.html">
+                    <a href="iPhone_Mania_7288.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">知っておくべき10のAWSサービス（SAA試験向け）</span>
+                        <span class="nav-title">iPhone18 Proシリーズの量産試作を年明けに開始か〜変更点はどうなる？</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +251,52 @@ LLM, VLMの開発の裏には本記事で紹介するような地道なデバッ
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8491.html">
-                        <h3>ChatGPT新モデル「GPT-5.1」公開--よりフレンドリーな応答、指示への遵守も強化</h3>
+                    <a href="CNET_Japan_最新情報総合_614.html">
+                        <h3>ChatGPT版「今年のまとめ」機能が米国などで登場　1年の利用傾向を楽しく振り返る</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは日本時間11月13日未明、GPT-5シリーズの新モデル「GPT-5. 1」を公開した。同社は今回の更新について「より賢く、より会話的なChatGPTを実現するアップグレード」と位置づけ、...</p>
+                        <p class="related-summary">OpenAIは、1年間の「ChatGPT」利用傾向を「Spotifyまとめ」のような感じで取りを振り返る新機能を、米国などで提供開始した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2979.html">
-                        <h3>「AI音楽」と「人間の音楽」、97％が判別できない衝撃--9000人調査で分かった本音とは</h3>
+                    <a href="CNET_Japan_最新情報総合_6399.html">
+                        <h3>アップルの「AirTag」より優れた紛失防止タグを見つけた話</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">完全にAIで生成された音楽をほとんどの人が判別できないことが、新たな調査で明らかになった。.</p>
+                        <p class="related-summary">AirTagの弱点を解消？USB-C充電・130dB大音量・高輝度LED搭載の紛失防止タグ「Pebblebee Clip 5」を徹底レビュー。iOS／Android対応で鍵やバッグ探しが激変。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7190.html">
-                        <h3>6Gスマホは「速い」だけじゃない--電波の乱れからヒトの呼吸まで検知</h3>
+                    <a href="CNET_Japan_最新情報総合_7531.html">
+                        <h3>LINEヤフー、川邊会長が退任へ　今後は「AIと自分の二人会社を起業」と同氏</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">6GがAI時代のスマホ体験をどう変える？ クアルコムCEOが語る「常時センシング・ネットワーク」の仕組みと、音声操作・自律エージェントが進化する次世代通信の本質を詳しく解説。.</p>
+                        <p class="related-summary">LINEヤフーは12月23日、代表取締役会長を務める川邊健太郎氏が、2026年6月開催予定の第31回定時株主総会の終了をもって、任期満了により退任すると発表した.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_748.html">
-                        <h3>Twitter創業者支援の新アプリ「Divine」登場、Vine動画10万本が復活--AIは禁止</h3>
+                    <a href="CNET_Japan_最新情報総合_8125.html">
+                        <h3>YouTube動画を生成AIでテキスト化→ニュース記事として配信　スマニューとUUUMが提携</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">6秒動画アプリ「Vine」の終了からほぼ9年が経ったいま、よく似た新アプリ「Divine」が登場した。.</p>
+                        <p class="related-summary">スマートニュースとUUUMは12月24日、UUUM所属クリエイターのYouTube動画を生成AIで解析し、テキスト記事として配信する取り組みに向け、業務提携の基本合意を結んだ。SmartNewsアプリ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7426.html">
-                        <h3>サイバーエージェント社長交代　新社長に山内隆裕氏　藤田氏は会長に</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_756.html">
+                        <h3>AIで故人「復活」抵抗感は根強く</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">サイバーエージェントは11月14日、創業社長の藤田晋氏が代表取締役会長に、専務執行役員の山内隆裕氏が代表取締役社長に就任する人事を発表した。正式決定は12月12日の定時株主総会後となる。.</p>
                     </a>
                 </article>
             </div>

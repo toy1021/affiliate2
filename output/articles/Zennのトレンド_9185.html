@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NVIDIA NeMoを利用したGPT-OSSの学習 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事では、OpenAIから2025年8月にリリースされたgpt-ossをNVIDIA NeMoフレームワークにて学習するための方法について解説します">
-    <meta name="keywords" content="AI,OpenAI,GPT,本">
+    <title>LLMのCUDAカーネルを自作しよう! | 日本のテックニュース速報</title>
+    <meta name="description" content="com/advent-calendar/2025/large-language-model はじめに pytorchは、Meta社が開発した機械学習・深層学習のためのpythonライブラリです。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="Python,機械学習,LLM,深層学習,ニューラルネット,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="NVIDIA NeMoを利用したGPT-OSSの学習">
-    <meta property="og:description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事では、OpenAIから2025年8月にリリースされたgpt-ossをNVIDIA NeMoフレームワークにて学習するための方法について解説します">
+    <meta property="og:title" content="LLMのCUDAカーネルを自作しよう!">
+    <meta property="og:description" content="com/advent-calendar/2025/large-language-model はじめに pytorchは、Meta社が開発した機械学習・深層学習のためのpythonライブラリです。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9185.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NVIDIA NeMoを利用したGPT-OSSの学習">
-    <meta name="twitter:description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事では、OpenAIから2025年8月にリリースされたgpt-ossをNVIDIA NeMoフレームワークにて学習するための方法について解説します">
+    <meta name="twitter:title" content="LLMのCUDAカーネルを自作しよう!">
+    <meta name="twitter:description" content="com/advent-calendar/2025/large-language-model はじめに pytorchは、Meta社が開発した機械学習・深層学習のためのpythonライブラリです。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "NVIDIA NeMoを利用したGPT-OSSの学習",
-        "description": "はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事では、OpenAIから2025年8月にリリースされたgpt-ossをNVIDIA NeMoフレームワークにて学習するための方法について解説します",
+        "headline": "LLMのCUDAカーネルを自作しよう!",
+        "description": "com/advent-calendar/2025/large-language-model はじめに pytorchは、Meta社が開発した機械学習・深層学習のためのpythonライブラリです。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-19T06:22:29",
-        "dateModified": "2025-11-20T06:31:30.388717",
+        "datePublished": "2025-12-21T07:29:03",
+        "dateModified": "2025-12-24T04:37:39.675125",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9185.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9185.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","OpenAI","GPT","本"]
+        "keywords": ["Python","機械学習","LLM","深層学習","ニューラルネット","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "NVIDIA NeMoを利用したGPT-OSSの学習",
+                "name": "LLMのCUDAカーネルを自作しよう!",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9185.html"
             }
         ]
@@ -114,26 +114,28 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">NVIDIA NeMoを利用したGPT-OSSの学習</li>
+                <li aria-current="page">LLMのCUDAカーネルを自作しよう!</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>NVIDIA NeMoを利用したGPT-OSSの学習</h1>
+                <h1>LLMのCUDAカーネルを自作しよう!</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/turing_motors/articles/81cf3128b22c63" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/selllous/articles/diy_llm_kernel" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-19T06:22:29">
-                        公開: 2025-11-19T06:22:29
+                    <time datetime="2025-12-21T07:29:03">
+                        公開: 2025-12-21T07:29:03
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">OpenAI</span>
-                    <span class="tag">GPT</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">機械学習</span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">深層学習</span>
+                    <span class="tag">ニューラルネット</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -141,15 +143,16 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。
-本記事では、OpenAIから2025年8月にリリースされたgpt-ossをNVIDIA NeMoフレームワークにて学習するための方法について解説します。
-2025年11月4日時点では、NVIDIA公式からは、LoRA finetunigを行う方法についてのみ解説されており、Long Context継続事前学習(Continual Pre-Training)など本格的な学習を行うにはハードルが多数あります。
-本記事では、学習を行うために解決する必要があるすべて...
+                    本記事は、LLM・LLM活用 Advent Calendar 2025 21日目の記事です。
+https://qiita.com/advent-calendar/2025/large-language-model
+
+ はじめに
+pytorchは、Meta社が開発した機械学習・深層学習のためのpythonライブラリです。ユーザーは、pytorchを使用することで、画像分類モデルや強化学習モデルをはじめとし、大規模言語モデルや拡散モデルなど、多種多様なニューラルネットワークモデルを構築することが可能です。
+また、pytorch内部では、CPU、TPU、GPUといった様々なプロセッサ向けに最適...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/turing_motors/articles/81cf3128b22c63" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/selllous/articles/diy_llm_kernel" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,30 +165,30 @@ Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=OpenAI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="OpenAI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">OpenAI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでOpenAIに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GPT - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGPTに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +229,16 @@ Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_5769.html">
+                    <a href="Qiita_-_人気の記事_3317.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【コピペでOK】ポケモンZA公式サイトのオシャレフレーム</span>
+                        <span class="nav-title">データサイエンティストスキルチェックリストVer.6.0「基盤」「価値創造力」を身につける本31冊・...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_8495.html">
+                    <a href="iPhone_Mania_9147.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Gemini3 ProのVision性能をチラシチャレンジしてみた</span>
+                        <span class="nav-title">iPhone18 Proシリーズの量産試作を年明けに開始か〜変更点はどうなる？</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +251,52 @@ Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8652.html">
-                        <h3>XもChatGPTも一時使えず　Cloudflare障害で「ネットの裏側」集中リスクが顕在化</h3>
+                    <a href="CNET_Japan_最新情報総合_5976.html">
+                        <h3>ChatGPT版「今年のまとめ」機能が米国などで登場　1年の利用傾向を楽しく振り返る</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">日本時間11月18日夜、Cloudflareで障害が発生し、OpenAIやSpotify、X、Grindr、Letterboxd、Canvaといった主要サービスをはじめ、多くのウェブサイトが一斉にアク...</p>
+                        <p class="related-summary">OpenAIは、1年間の「ChatGPT」利用傾向を「Spotifyまとめ」のような感じで取りを振り返る新機能を、米国などで提供開始した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1105.html">
-                        <h3>NTT、AI電力危機に光量子コンピューターで挑む　2030年に100万量子ビット目指す</h3>
+                    <a href="CNET_Japan_最新情報総合_162.html">
+                        <h3>アップルの「AirTag」より優れた紛失防止タグを見つけた話</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">迫るAI電力危機に向け、NTTが光量子コンピューターで解決に挑む。60年の光通信技術を活かした独自アプローチで、肥料生成から新薬開発まで地球規模の課題解決を目指す。.</p>
+                        <p class="related-summary">AirTagの弱点を解消？USB-C充電・130dB大音量・高輝度LED搭載の紛失防止タグ「Pebblebee Clip 5」を徹底レビュー。iOS／Android対応で鍵やバッグ探しが激変。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5192.html">
-                        <h3>TikTok、「AI動画の表示量」を調整可能に--削除困難な「見えない透かし」も</h3>
+                    <a href="CNET_Japan_最新情報総合_1451.html">
+                        <h3>LINEヤフー、川邊会長が退任へ　今後は「AIと自分の二人会社を起業」と同氏</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">TikTokは11月19日、「おすすめ」フィードに表示されるAI生成コンテンツの量を調整できる機能を導入すると発表した。.</p>
+                        <p class="related-summary">LINEヤフーは12月23日、代表取締役会長を務める川邊健太郎氏が、2026年6月開催予定の第31回定時株主総会の終了をもって、任期満了により退任すると発表した.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7582.html">
-                        <h3>Metaの物体検出AI「SAM 3」登場、インスタ編集や野生動物保全に活躍</h3>
+                    <a href="ASCII_jp__トップ_7323.html">
+                        <h3>「画像生成AI」の業務利用6割で定着の兆し　著作権・情報漏えいがいまだ懸念</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Metaは、AIモデル「SAM（Segment Anything Model）」の最新版である「SAM 3」と「SAM 3D」を公開した。.</p>
+                        <p class="related-summary">アドビは、日本のビジネスパーソン1000名を対象とした「生成AIの業務活用実態調査」の結果を公表。すべての回答者が業務で何らかの生成AIを利用しており、その中でも「画像生成AI」を利用しているのは約6...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5943.html">
-                        <h3>PerplexityのAIショッピング体験が刷新、ブラックフライデー前に米国で無料公開</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_8246.html">
+                        <h3>AIで故人「復活」抵抗感は根強く</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">Perplexityはブラックフライデーを前に、AI搭載ショッピング機能を刷新し、米国の全ユーザー向けに無料で提供することを明らかにした。.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anthropic が示した「コード実行で 98.7% トークン削減」を安全に実装する | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに TRIAL＆RetailAI Advent Calendar 2025 の 3 日目の記事です。 昨日は @mizoguchi_ryosuke さんの『遺伝性とマンスキーから学ぶ「○○ で決まる」の罠：生成 AI で実践する誠実な分析』でした。生成 AI 時代に.">
-    <meta name="keywords" content="AI">
+    <title>【Claude Code】Agent SkillsとMCPの違いを徹底解説 - 補完関係を理解して使いこなす | 日本のテックニュース速報</title>
+    <meta name="description" content="要約 Agent SkillsはMCPの「ファイルシステム版」とも言える存在で、よりシンプルで使いやすく、トークン効率に優れた仕組みである。両者の役割は明確に区別されており、かつ補完的な関係にある。 対象読者: Claude Codeを活用してAIエージェントの自動化.">
+    <meta name="keywords" content="AI,Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Anthropic が示した「コード実行で 98.7% トークン削減」を安全に実装する">
-    <meta property="og:description" content="はじめに TRIAL＆RetailAI Advent Calendar 2025 の 3 日目の記事です。 昨日は @mizoguchi_ryosuke さんの『遺伝性とマンスキーから学ぶ「○○ で決まる」の罠：生成 AI で実践する誠実な分析』でした。生成 AI 時代に.">
+    <meta property="og:title" content="【Claude Code】Agent SkillsとMCPの違いを徹底解説 - 補完関係を理解して使いこなす">
+    <meta property="og:description" content="要約 Agent SkillsはMCPの「ファイルシステム版」とも言える存在で、よりシンプルで使いやすく、トークン効率に優れた仕組みである。両者の役割は明確に区別されており、かつ補完的な関係にある。 対象読者: Claude Codeを活用してAIエージェントの自動化.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9279.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Anthropic が示した「コード実行で 98.7% トークン削減」を安全に実装する">
-    <meta name="twitter:description" content="はじめに TRIAL＆RetailAI Advent Calendar 2025 の 3 日目の記事です。 昨日は @mizoguchi_ryosuke さんの『遺伝性とマンスキーから学ぶ「○○ で決まる」の罠：生成 AI で実践する誠実な分析』でした。生成 AI 時代に.">
+    <meta name="twitter:title" content="【Claude Code】Agent SkillsとMCPの違いを徹底解説 - 補完関係を理解して使いこなす">
+    <meta name="twitter:description" content="要約 Agent SkillsはMCPの「ファイルシステム版」とも言える存在で、よりシンプルで使いやすく、トークン効率に優れた仕組みである。両者の役割は明確に区別されており、かつ補完的な関係にある。 対象読者: Claude Codeを活用してAIエージェントの自動化.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Anthropic が示した「コード実行で 98.7% トークン削減」を安全に実装する",
-        "description": "はじめに TRIAL＆RetailAI Advent Calendar 2025 の 3 日目の記事です。 昨日は @mizoguchi_ryosuke さんの『遺伝性とマンスキーから学ぶ「○○ で決まる」の罠：生成 AI で実践する誠実な分析』でした。生成 AI 時代に.",
+        "headline": "【Claude Code】Agent SkillsとMCPの違いを徹底解説 - 補完関係を理解して使いこなす",
+        "description": "要約 Agent SkillsはMCPの「ファイルシステム版」とも言える存在で、よりシンプルで使いやすく、トークン効率に優れた仕組みである。両者の役割は明確に区別されており、かつ補完的な関係にある。 対象読者: Claude Codeを活用してAIエージェントの自動化.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-02T22:04:51",
-        "dateModified": "2025-12-03T10:26:17.158451",
+        "datePublished": "2025-12-29T05:35:06",
+        "dateModified": "2025-12-29T20:26:23.326778",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9279.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9279.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "keywords": ["AI","Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Anthropic が示した「コード実行で 98.7% トークン削減」を安全に実装する",
+                "name": "【Claude Code】Agent SkillsとMCPの違いを徹底解説 - 補完関係を理解して使いこなす",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9279.html"
             }
         ]
@@ -114,37 +114,39 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Anthropic が示した「コード実行で 98.7% トークン削減」を安全に実装する</li>
+                <li aria-current="page">【Claude Code】Agent SkillsとMCPの違いを徹底解説 - 補完関係を理解して使...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Anthropic が示した「コード実行で 98.7% トークン削減」を安全に実装する</h1>
+                <h1>【Claude Code】Agent SkillsとMCPの違いを徹底解説 - 補完関係を理解して使いこなす</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/atsukish/items/82323b33f59d20db7200?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/masayan1126/items/20fa457b8ba6994b6d0d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-12-02T22:04:51">
-                        公開: 2025-12-02T22:04:51
+                    <time datetime="2025-12-29T05:35:06">
+                        公開: 2025-12-29T05:35:06
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-TRIAL＆RetailAI Advent Calendar 2025 の 3 日目の記事です。
-昨日は @mizoguchi_ryosuke さんの『遺伝性とマンスキーから学ぶ「○○ で決まる」の罠：生成 AI で実践する誠実な分析』でした。生成 AI 時代に...
+                    要約
+Agent SkillsはMCPの「ファイルシステム版」とも言える存在で、よりシンプルで使いやすく、トークン効率に優れた仕組みである。両者の役割は明確に区別されており、かつ補完的な関係にある。
+
+対象読者: Claude Codeを活用してAIエージェントの自動化...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/atsukish/items/82323b33f59d20db7200?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/masayan1126/items/20fa457b8ba6994b6d0d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,6 +163,16 @@ TRIAL＆RetailAI Advent Calendar 2025 の 3 日目の記事です。
                                 <div class="product-info">
                                     <div class="product-title">AI - Amazon検索結果</div>
                                     <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -211,16 +223,16 @@ TRIAL＆RetailAI Advent Calendar 2025 の 3 日目の記事です。
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_8628.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_1639.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">WindowsでKubernetesを使用可能な環境構築</span>
+                        <span class="nav-title">経産省 AI学習データ整備支援へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_363.html">
+                    <a href="iPhone_Mania_1676.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">資格取得備忘録</span>
+                        <span class="nav-title">「Appleの初売り」2026完全攻略！製品別還元額一覧＆注意点まとめ</span>
                     </a>
                 </div>
             </div>
@@ -233,53 +245,52 @@ TRIAL＆RetailAI Advent Calendar 2025 の 3 日目の記事です。
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6847.html">
-                        <h3>デジタル庁、AIで行政効率化へ「国産LLM」を公募開始</h3>
+                    <a href="CNET_Japan_最新情報総合_799.html">
+                        <h3>まもなく開幕「CES 2026」：AIウェアラブルから3つ折りスマホまで、注目の5大トレンド</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">デジタル庁が国内開発LLMの公募を開始。ガバメントAI「源内」で2026年度から試験導入へ。応募条件、対象モデル、スケジュールを詳しく解説し、行政DX・国産AIの最新動向をまとめる。.</p>
+                        <p class="related-summary">世界最大級のテクノロジーカンファレンス「CES 2026」がまもなく開幕する。注目を集めるであろう5大トレンドを予想してみた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4376.html">
-                        <h3>アップル、AI戦略の責任者が退任--元マイクロソフトのAI研究者が後任に</h3>
+                    <a href="CNET_Japan_最新情報総合_7505.html">
+                        <h3>AIを擬人化して「画策」「告白」などと表現するのは即刻やめるべきだ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アップルは、機械学習・AI戦略担当シニアバイスプレジデント（SVP）のジョン・ジャナンドレア氏が退任すると発表した。.</p>
+                        <p class="related-summary">感情を持たない人工知能（AI）を、感情があるかのような言葉で表現するのは危険だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6634.html">
-                        <h3>仏Mistral AI、多言語対応を強化した次世代オープンソースAI「Mistral Large 3」発表</h3>
+                    <a href="CNET_Japan_最新情報総合_7433.html">
+                        <h3>OpenAI、「AIによる深刻な危害」に備える責任者を新設　リスクを予測し軽減</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">フランスのAI開発企業Mistral AIが、場所やインターネット接続の安定性、あるいは使用言語に関わらず、より多くの人々にハイエンドのAI機能を提供するために設計された新しい言語モデル群をリリースす...</p>
+                        <p class="related-summary">OpenAIは、人工知能（AI）の「深刻な危害をもたらすリスク」に備える責任者「Head of Preparedness（準備責任者）」の募集を開始した。高度化するAIが引き起こす可能性のあるリスクを...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6489.html">
-                        <h3>Amazon、ChatGPTのショッピング機能をブロック　理由は？</h3>
+                    <a href="Qiita_-_人気の記事_8802.html">
+                        <h3>Microsoft 365 Copilotを活かすためにMicrosoft 365をきちんと使おう</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ChatGPTのショッピング機能は、ユーザーの代わりにオンラインストアから商品を探し、比較までしてくれるというものだ。年末商戦の買い物に役立ちそうだが、この仕組みに対して「利用は認めない」と判断した小...</p>
+                        <p class="related-summary">前提 この内容は私の主観です。生成AI（Copilot）も一部使って書いてます。ご了承ください。 Microsoft 365 CopilotはMicrosoft 365のためのCopilot なにを当...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2319.html">
-                        <h3>クリスマスカード作りをAIに任せたら「ニセ家族写真」が量産された話</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_2324.html">
+                        <h3>OpenAIが高収入の役職新設 背景</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">クリスマスカードを送る時期が来た――だが、AIで作ることは考え直した方が良いかもしれない。.</p>
                     </a>
                 </article>
             </div>

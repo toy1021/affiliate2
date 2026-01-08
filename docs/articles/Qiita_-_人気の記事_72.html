@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>エンジニアが覚えておきたい英単語 - AIコード読解時代の必須語彙 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに AI時代のコードリーディングは、英単語の語感を掴むことから始まります。 プログラミング言語は英語で書かれた “ルールブック”。 変数・関数・クラス・コメント──すべてが英語の延長です。 「文法」だけでなく「単語の意味」を押さえると、知らない言語のコードでも.">
-    <meta name="keywords" content="AI">
+    <title>kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ― | 日本のテックニュース速報</title>
+    <meta name="description" content="このシリーズ記事一覧 kiro-cli 実務活用入門 ― agent / context＆compact / save＆load / todoをどう使い分けるか ― agentとcontextの違いと設計思想（今回） kiro-cliのはじめ方（近日公開） チーム運用.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="エンジニアが覚えておきたい英単語 - AIコード読解時代の必須語彙">
-    <meta property="og:description" content="はじめに AI時代のコードリーディングは、英単語の語感を掴むことから始まります。 プログラミング言語は英語で書かれた “ルールブック”。 変数・関数・クラス・コメント──すべてが英語の延長です。 「文法」だけでなく「単語の意味」を押さえると、知らない言語のコードでも.">
+    <meta property="og:title" content="kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ―">
+    <meta property="og:description" content="このシリーズ記事一覧 kiro-cli 実務活用入門 ― agent / context＆compact / save＆load / todoをどう使い分けるか ― agentとcontextの違いと設計思想（今回） kiro-cliのはじめ方（近日公開） チーム運用.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_72.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="エンジニアが覚えておきたい英単語 - AIコード読解時代の必須語彙">
-    <meta name="twitter:description" content="はじめに AI時代のコードリーディングは、英単語の語感を掴むことから始まります。 プログラミング言語は英語で書かれた “ルールブック”。 変数・関数・クラス・コメント──すべてが英語の延長です。 「文法」だけでなく「単語の意味」を押さえると、知らない言語のコードでも.">
+    <meta name="twitter:title" content="kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ―">
+    <meta name="twitter:description" content="このシリーズ記事一覧 kiro-cli 実務活用入門 ― agent / context＆compact / save＆load / todoをどう使い分けるか ― agentとcontextの違いと設計思想（今回） kiro-cliのはじめ方（近日公開） チーム運用.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "エンジニアが覚えておきたい英単語 - AIコード読解時代の必須語彙",
-        "description": "はじめに AI時代のコードリーディングは、英単語の語感を掴むことから始まります。 プログラミング言語は英語で書かれた “ルールブック”。 変数・関数・クラス・コメント──すべてが英語の延長です。 「文法」だけでなく「単語の意味」を押さえると、知らない言語のコードでも.",
+        "headline": "kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ―",
+        "description": "このシリーズ記事一覧 kiro-cli 実務活用入門 ― agent / context＆compact / save＆load / todoをどう使い分けるか ― agentとcontextの違いと設計思想（今回） kiro-cliのはじめ方（近日公開） チーム運用.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-11T07:14:26",
-        "dateModified": "2025-11-13T14:20:51.693613",
+        "datePublished": "2026-01-07T09:04:15",
+        "dateModified": "2026-01-08T20:27:45.390351",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_72.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_72.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "エンジニアが覚えておきたい英単語 - AIコード読解時代の必須語彙",
+                "name": "kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ―",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_72.html"
             }
         ]
@@ -113,42 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">エンジニアが覚えておきたい英単語 - AIコード読解時代の必須語彙</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">kiro-cli 設計の肝  ― agent / knowledge / context を混同する...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>エンジニアが覚えておきたい英単語 - AIコード読解時代の必須語彙</h1>
+                <h1>kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ―</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/Sakai_path/items/b11badaa8daff2984f8d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-11T07:14:26">
-                        公開: 2025-11-11T07:14:26
+                    <span class="source">出典: <a href="https://qiita.com/YShiba92/items/dc73bab7a2db7ebb0257?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-01-07T09:04:15">
+                        公開: 2026-01-07T09:04:15
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
+                    このシリーズ記事一覧
 
-AI時代のコードリーディングは、英単語の語感を掴むことから始まります。
-
-プログラミング言語は英語で書かれた “ルールブック”。
-変数・関数・クラス・コメント──すべてが英語の延長です。
-「文法」だけでなく「単語の意味」を押さえると、知らない言語のコードでも ...
+kiro-cli 実務活用入門 　― agent / context＆compact / save＆load / todoをどう使い分けるか ―
+agentとcontextの違いと設計思想（今回）
+kiro-cliのはじめ方（近日公開）
+チーム運用...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/Sakai_path/items/b11badaa8daff2984f8d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/YShiba92/items/dc73bab7a2db7ebb0257?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,50 +153,25 @@ AI時代のコードリーディングは、英単語の語感を掴むことか
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -215,16 +186,16 @@ AI時代のコードリーディングは、英単語の語感を掴むことか
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_5744.html">
+                    <a href="気になる記になる_897.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">SELECT AIを試す [ADB][生成AIサービス]</span>
+                        <span class="nav-title">Xの｢記事｣機能、｢プレミアム｣の加入者にも解放へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9052.html">
+                    <a href="iPhone_Mania_3304.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">国会図書館 不正接続で情報流出か</span>
+                        <span class="nav-title">iPhone（2028）にSamsung製の2億画素イメージセンサーを搭載か</span>
                     </a>
                 </div>
             </div>
@@ -237,53 +208,53 @@ AI時代のコードリーディングは、英単語の語感を掴むことか
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_3590.html">
-                        <h3>Google、AIでファイルの種類を高速正確に判別するオープンソース「Magika 1.0」公開。Rustで再構築し、よ...</h3>
+                    <a href="CNET_Japan_最新情報総合_9778.html">
+                        <h3>ソフトバンク、オンラインでのSIM再発行手数料を改定--eSIMは無料、USIMは1100円に</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Googleは、AIを用いることでファイルの種類を高速かつ正確に判別できるオープンソースのツール「Magika 1. 0」を公開したと発表しました。 Magikaは、あるファイルの中味が何なのか、記述...</p>
+                        <p class="related-summary">ソフトバンクが1月21日からSIM再発行・機種変更手数料を改定し、eSIMは無料、物理SIMは1100円に設定する。当初予定していた3850円への値上げを撤回し、ユーザーからの意見を反映した形となった...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9090.html">
-                        <h3>コカ・コーラの「AI生成CM」が再び物議、いたって平凡な映像の何が気に障るのか</h3>
+                    <a href="CNET_Japan_最新情報総合_7931.html">
+                        <h3>レノボ、新型「ThinkPad」で修理しやすさを追求　新構造「Space Frame」採用</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">コカ・コーラが公開した新作のホリデー向けCMが、生成AIを使ってシーンに命を吹き込もうとしたことで反発を招いている。.</p>
+                        <p class="related-summary">ノートPCメーカー各社は、より薄く軽く、かつ製造効率の高い製品を目指して、マザーボードに各種コンポーネントをはんだ付けし、バッテリーも筐体に接着してしまう設計へとシフトしてきた。レノボが「ThinkP...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9182.html">
-                        <h3>なぜソフトバンクGは保有する全NVIDIA株を売却したのか--CFOの回答は</h3>
+                    <a href="CNET_Japan_最新情報総合_8983.html">
+                        <h3>富士フイルム、動画が撮れるチェキ「instax mini Evo Cinema」を発表--「ジダイヤル」で10の時代を演...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">5兆円の巨額投資に踏み切る理由を後藤芳光CFOが説明。生成AI競争でOpenAIを最有力視する狙いとは。. ソフトバンクグループがNVIDIA株を約9000億円で全売却。OpenAIへ4.</p>
+                        <p class="related-summary">1930年代から2020年代まで10の時代を表現する「ジダイヤル」を搭載したチェキ「instax mini Evo Cinema」が登場。8mmフィルム風から現代のスマホアプリ風まで、合計100通りの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2739.html">
-                        <h3>JR東日本の「顔認証改札機」は「Suica」を置き換えるのか【徹底解説】</h3>
+                    <a href="CNET_Japan_最新情報総合_9230.html">
+                        <h3>この「カメ型ロボット」はかわいいだけじゃない、サンゴ礁も見守るスグレモノ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JR東日本が顔認証技術を使ったウォークスルー改札を上越新幹線で実証実験。タッチもチャージも不要、Suicaの次世代化「Suica Renaissance」構想の第一歩となる取り組み。.</p>
+                        <p class="related-summary">プール掃除ロボットで知られるBeatbotが、泳ぐカメ型ロボットをCES 2026で披露した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6672.html">
-                        <h3>ChatGPT新モデル「GPT-5.1」公開--よりフレンドリーな応答、指示への遵守も強化</h3>
+                    <a href="CNET_Japan_最新情報総合_2044.html">
+                        <h3>サッカーファン垂涎？ W杯仕様の特別版「razr」がモトローラから登場</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは日本時間11月13日未明、GPT-5シリーズの新モデル「GPT-5. 1」を公開した。同社は今回の更新について「より賢く、より会話的なChatGPTを実現するアップグレード」と位置づけ、...</p>
+                        <p class="related-summary">モトローラは2026年のFIFAワールドカップを記念し、縦折りスマホ「razr」の特別版を発表した。.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【Visual Studio 2026】MCPがついに標準化！NuGet MCPを有効化して動作確認してみた | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Visual Studio 2026 から、ついに MCP（Model Context Protocol）が IDE に標準対応しました。 これ、地味ですが VS2026 最大級のアップデートです。（いや、地味ではないか…） その背景には、Copilot.">
+    <title>kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ― | 日本のテックニュース速報</title>
+    <meta name="description" content="このシリーズ記事一覧 kiro-cli 実務活用入門 ― agent / context＆compact / save＆load / todoをどう使い分けるか ― agentとcontextの違いと設計思想（今回） kiro-cliのはじめ方（近日公開） チーム運用.">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【Visual Studio 2026】MCPがついに標準化！NuGet MCPを有効化して動作確認してみた">
-    <meta property="og:description" content="はじめに Visual Studio 2026 から、ついに MCP（Model Context Protocol）が IDE に標準対応しました。 これ、地味ですが VS2026 最大級のアップデートです。（いや、地味ではないか…） その背景には、Copilot.">
+    <meta property="og:title" content="kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ―">
+    <meta property="og:description" content="このシリーズ記事一覧 kiro-cli 実務活用入門 ― agent / context＆compact / save＆load / todoをどう使い分けるか ― agentとcontextの違いと設計思想（今回） kiro-cliのはじめ方（近日公開） チーム運用.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7044.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【Visual Studio 2026】MCPがついに標準化！NuGet MCPを有効化して動作確認してみた">
-    <meta name="twitter:description" content="はじめに Visual Studio 2026 から、ついに MCP（Model Context Protocol）が IDE に標準対応しました。 これ、地味ですが VS2026 最大級のアップデートです。（いや、地味ではないか…） その背景には、Copilot.">
+    <meta name="twitter:title" content="kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ―">
+    <meta name="twitter:description" content="このシリーズ記事一覧 kiro-cli 実務活用入門 ― agent / context＆compact / save＆load / todoをどう使い分けるか ― agentとcontextの違いと設計思想（今回） kiro-cliのはじめ方（近日公開） チーム運用.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【Visual Studio 2026】MCPがついに標準化！NuGet MCPを有効化して動作確認してみた",
-        "description": "はじめに Visual Studio 2026 から、ついに MCP（Model Context Protocol）が IDE に標準対応しました。 これ、地味ですが VS2026 最大級のアップデートです。（いや、地味ではないか…） その背景には、Copilot.",
+        "headline": "kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ―",
+        "description": "このシリーズ記事一覧 kiro-cli 実務活用入門 ― agent / context＆compact / save＆load / todoをどう使い分けるか ― agentとcontextの違いと設計思想（今回） kiro-cliのはじめ方（近日公開） チーム運用.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-13T15:47:52",
-        "dateModified": "2025-11-14T20:24:00.310707",
+        "datePublished": "2026-01-07T09:04:15",
+        "dateModified": "2026-01-09T04:42:06.969683",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7044.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7044.html",
-        "articleSection": "その他",
+        "articleSection": "テクノロジー",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【Visual Studio 2026】MCPがついに標準化！NuGet MCPを有効化して動作確認してみた",
+                "name": "kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ―",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7044.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">【Visual Studio 2026】MCPがついに標準化！NuGet MCPを有効化して動作確認...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">kiro-cli 設計の肝  ― agent / knowledge / context を混同する...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【Visual Studio 2026】MCPがついに標準化！NuGet MCPを有効化して動作確認してみた</h1>
+                <h1>kiro-cli 設計の肝  ― agent / knowledge / context を混同すると、なぜ破綻するのか ―</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/Sakai_path/items/8e4f317acb3490099dea?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-11-13T15:47:52">
-                        公開: 2025-11-13T15:47:52
+                    <span class="source">出典: <a href="https://qiita.com/YShiba92/items/dc73bab7a2db7ebb0257?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-01-07T09:04:15">
+                        公開: 2026-01-07T09:04:15
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
@@ -135,15 +135,16 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Visual Studio 2026 から、ついに MCP（Model Context Protocol）が IDE に標準対応しました。
+                    このシリーズ記事一覧
 
-これ、地味ですが VS2026 最大級のアップデートです。（いや、地味ではないか…）
-その背景には、Copilot ...
+kiro-cli 実務活用入門 　― agent / context＆compact / save＆load / todoをどう使い分けるか ―
+agentとcontextの違いと設計思想（今回）
+kiro-cliのはじめ方（近日公開）
+チーム運用...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/Sakai_path/items/8e4f317acb3490099dea?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/YShiba92/items/dc73bab7a2db7ebb0257?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,7 +155,7 @@ Visual Studio 2026 から、ついに MCP（Model Context Protocol）が IDE に
                 
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -185,16 +186,16 @@ Visual Studio 2026 から、ついに MCP（Model Context Protocol）が IDE に
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_5265.html">
+                    <a href="気になる記になる_4674.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">GPT-5.1とGPT-5の違いをGPT-5.1とGPT-5にQiitaの記事としてまとめさせて、G...</span>
+                        <span class="nav-title">Xの｢記事｣機能、｢プレミアム｣の加入者にも解放へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6745.html">
+                    <a href="iPhone_Mania_8049.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【ポケモン×Java】Lv12：『ラストバトル』～Scanner、while、if～</span>
+                        <span class="nav-title">iPhone（2028）にSamsung製の2億画素イメージセンサーを搭載か</span>
                     </a>
                 </div>
             </div>
@@ -207,53 +208,53 @@ Visual Studio 2026 から、ついに MCP（Model Context Protocol）が IDE に
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7539.html">
-                        <h3>JR東日本「東北・上越新幹線の終電を早めます」--安全性向上へ工事時間を確保</h3>
+                    <a href="CNET_Japan_最新情報総合_7899.html">
+                        <h3>富士フイルム、動画が撮れるチェキ「instax mini Evo Cinema」を発表--「ジダイヤル」で10の時代を演...</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JR東日本は、東北新幹線の東京～盛岡間と上越新幹線の大宮～越後湯沢間で、2026年春から下りの終電を10～20分程度繰り上げると発表した。設備のリニューアル工事や地震対策工事を着実に進めるため、夜間の...</p>
+                        <p class="related-summary">1930年代から2020年代まで10の時代を表現する「ジダイヤル」を搭載したチェキ「instax mini Evo Cinema」が登場。8mmフィルム風から現代のスマホアプリ風まで、合計100通りの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3941.html">
-                        <h3>クレジットカード、1人何枚持つのが「平均的」？ --最新データが公開</h3>
+                    <a href="CNET_Japan_最新情報総合_2914.html">
+                        <h3>この「カメ型ロボット」はかわいいだけじゃない、サンゴ礁も見守るスグレモノ</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">日本クレジット協会は11月14日、2025年3月末時点のクレジットカード発行枚数調査結果を公表した。調査回答社数243社の合計で、発行枚数は3億2057万枚となり、前年比2.</p>
+                        <p class="related-summary">プール掃除ロボットで知られるBeatbotが、泳ぐカメ型ロボットをCES 2026で披露した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9180.html">
-                        <h3>翔選手、ひなお選手、ドンピシャさんらがノミネート！ 「日本eスポーツアワード2025」ファン投票の第2回中間発表</h3>
+                    <a href="CNET_Japan_最新情報総合_7453.html">
+                        <h3>サッカーファン垂涎？ W杯仕様の特別版「razr」がモトローラから登場</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">一般社団法人日本eスポーツ協会（JESU）は11月13日、2026年1月12日に開催される「日本eスポーツアワード2025」のファン投票について、第2回の中間発表を報じた。.</p>
+                        <p class="related-summary">モトローラは2026年のFIFAワールドカップを記念し、縦折りスマホ「razr」の特別版を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4062.html">
-                        <h3>サービス、サービス！ 『新世紀エヴァンゲリオン』30周年記念展「ALL OF EVANGELION」を六本木の東京シティ...</h3>
+                    <a href="CNET_Japan_最新情報総合_304.html">
+                        <h3>愛らしい子犬のように付いてくる「動くソーラー電源」にCESで出会った</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">六本木ヒルズ展望台 東京シティビューでは11月14日から2026年1月12日まで、30周年記念展「ALL OF EVANGELION」を開催する。同展では、1995年10月4日にテレビ放送が開始された...</p>
+                        <p class="related-summary">CES 2026で出会った自律走行するバックアップ電源「Solar Mars Bot」を紹介する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_1419.html">
-                        <h3>【セール】MINISFORUMのブラックフライデーセールがスタート｜最新の人気製品を含む対象製品が最大30％オフに</h3>
+                    <a href="CNET_Japan_最新情報総合_7475.html">
+                        <h3>ワイモバイル、8万円台の折りたたみスマホ「nubia Flip 3」を1月15日発売</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ミニPCのグローバルメーカーであるMINISFORUMが、本日より公式ストアにおいて、年内最大級の「ブラックフライデーセール」をスタートしました。 「ブラックフライデーセール」では、今年発売された人気...</p>
+                        <p class="related-summary">ついに折りたたみスマホが身近な価格帯に。ワイモバイルの「nubia Flip 3」は8万円台から購入でき、割引適用で6万円台まで下がる。1月15日発売で予約受付中。.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSPy + LangSmithでプロンプトを全自動で育ててみた | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 「システムに組み込むプロンプトって、どうやって修繕・管理すればいいんだ…？」 LLM関係のプロダクトを作っていて、この悩みにぶつかった人は多いんじゃないでしょうか。私もその一人でした。 最初は手動でプロンプトを書いて、結果を目視で確認して、ちょっとずつ修正して…を繰り返します">
-    <meta name="keywords" content="AI,LLM">
+    <title>Agent Skills Scriptsアンチパターン その1 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじまり Agent Skillsに対応したAIエージェントMagicaが完成したので、スキルで使用するスクリプトを作成するうえで気をつけたことを書いていきたいと思います。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="AI,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="DSPy + LangSmithでプロンプトを全自動で育ててみた">
-    <meta property="og:description" content="はじめに 「システムに組み込むプロンプトって、どうやって修繕・管理すればいいんだ…？」 LLM関係のプロダクトを作っていて、この悩みにぶつかった人は多いんじゃないでしょうか。私もその一人でした。 最初は手動でプロンプトを書いて、結果を目視で確認して、ちょっとずつ修正して…を繰り返します">
+    <meta property="og:title" content="Agent Skills Scriptsアンチパターン その1">
+    <meta property="og:description" content="はじまり Agent Skillsに対応したAIエージェントMagicaが完成したので、スキルで使用するスクリプトを作成するうえで気をつけたことを書いていきたいと思います。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6246.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DSPy + LangSmithでプロンプトを全自動で育ててみた">
-    <meta name="twitter:description" content="はじめに 「システムに組み込むプロンプトって、どうやって修繕・管理すればいいんだ…？」 LLM関係のプロダクトを作っていて、この悩みにぶつかった人は多いんじゃないでしょうか。私もその一人でした。 最初は手動でプロンプトを書いて、結果を目視で確認して、ちょっとずつ修正して…を繰り返します">
+    <meta name="twitter:title" content="Agent Skills Scriptsアンチパターン その1">
+    <meta name="twitter:description" content="はじまり Agent Skillsに対応したAIエージェントMagicaが完成したので、スキルで使用するスクリプトを作成するうえで気をつけたことを書いていきたいと思います。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "DSPy + LangSmithでプロンプトを全自動で育ててみた",
-        "description": "はじめに 「システムに組み込むプロンプトって、どうやって修繕・管理すればいいんだ…？」 LLM関係のプロダクトを作っていて、この悩みにぶつかった人は多いんじゃないでしょうか。私もその一人でした。 最初は手動でプロンプトを書いて、結果を目視で確認して、ちょっとずつ修正して…を繰り返します",
+        "headline": "Agent Skills Scriptsアンチパターン その1",
+        "description": "はじまり Agent Skillsに対応したAIエージェントMagicaが完成したので、スキルで使用するスクリプトを作成するうえで気をつけたことを書いていきたいと思います。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-06T06:03:10",
-        "dateModified": "2025-11-09T18:26:17.044721",
+        "datePublished": "2026-01-11T12:02:57",
+        "dateModified": "2026-01-12T16:29:48.260691",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6246.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6246.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","LLM"]
+        "keywords": ["AI","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "DSPy + LangSmithでプロンプトを全自動で育ててみた",
+                "name": "Agent Skills Scriptsアンチパターン その1",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6246.html"
             }
         ]
@@ -114,40 +114,45 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">DSPy + LangSmithでプロンプトを全自動で育ててみた</li>
+                <li aria-current="page">Agent Skills Scriptsアンチパターン その1</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>DSPy + LangSmithでプロンプトを全自動で育ててみた</h1>
+                <h1>Agent Skills Scriptsアンチパターン その1</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/monox_dev/articles/7f5b8bb1423cbf" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/tkithrta/articles/6e36550369a65e" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-06T06:03:10">
-                        公開: 2025-11-06T06:03:10
+                    <time datetime="2026-01-11T12:02:57">
+                        公開: 2026-01-11T12:02:57
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">LLM</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-「システムに組み込むプロンプトって、どうやって修繕・管理すればいいんだ…？」
-LLM関係のプロダクトを作っていて、この悩みにぶつかった人は多いんじゃないでしょうか。私もその一人でした。
-最初は手動でプロンプトを書いて、結果を目視で確認して、ちょっとずつ修正して…を繰り返します。数パターンなら何とかなりますが、テストケースが増えてくるとすぐに破綻します。「あのプロンプト変更でこっちのケースが壊れた」「前のバージョンの方がよかった気がする…」といった状況、経験ありませんか？
-この記事では、評価×改善のループを自動化して、プロンプトが勝手に進化していく環境を、AIプロダクト開発...
+                    はじまり
+Agent Skillsに対応したAIエージェントMagicaが完成したので、スキルで使用するスクリプトを作成するうえで気をつけたことを書いていきたいと思います。
+https://gitlab.com/tkithrta/magica
+https://zenn.dev/tkithrta/articles/cd1d8a058014e1
+
+ スクリプトをBashで書いてはならない
+Agent Skillsの仕様には以下のように書かれています。
+https://agentskills.io/specification
+
+エージェントが実行できる実行可能コードが含まれています。スクリ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/monox_dev/articles/7f5b8bb1423cbf" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/tkithrta/articles/6e36550369a65e" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -170,10 +175,10 @@ LLM関係のプロダクトを作っていて、この悩みにぶつかった�
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +229,16 @@ LLM関係のプロダクトを作っていて、この悩みにぶつかった�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_2064.html">
+                    <a href="Qiita_-_人気の記事_7849.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">｢iOS 26.1｣でスライド式になったアラームの停止ボタンを元に戻す方法</span>
+                        <span class="nav-title">データを扱う職種について in 2026/01</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_8330.html">
+                    <a href="Zennのトレンド_5713.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iOS26.2で検索もストアも選べる？日本で大転換</span>
+                        <span class="nav-title">Xで流行りの縦長4分割投稿、ツール作ってみたら意外とハマりどころがあった</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +251,53 @@ LLM関係のプロダクトを作っていて、この悩みにぶつかった�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8774.html">
-                        <h3>「通話の録音」をお金にできるアプリ「Neon」が復活--AI時代の新ビジネス</h3>
+                    <a href="CNET_Japan_最新情報総合_5031.html">
+                        <h3>メモリ価格が2025年Q4に50%急騰、2026年も上昇継続へ--調査会社が予測</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">9月に物議を醸した「Neon」というアプリがある。通話を録音・共有することでユーザーに対価を支払うというものだ。.</p>
+                        <p class="related-summary">AI需要拡大によりメモリ市場が過熱、価格は2018年ピークの2倍水準へ。iPhone 17 Pro Maxではメモリがコストの10%以上を占める見通しで、スマートフォン価格への影響は避けられない状況だ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6496.html">
-                        <h3>「ChatGPTのせいで試験に落ちた」 キム・カーダシアンが恨み節</h3>
+                    <a href="CNET_Japan_最新情報総合_9480.html">
+                        <h3>OpenAI、健康管理に特化した「ChatGPT ヘルスケア」を発表--医療記録やApple ヘルスケアと連携</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">学校の宿題で「ChatGPT」に頼っている学生は、リアリティー番組スターのキム・カーダシアンさんの教訓に耳を傾けた方がいいかもしれない。.</p>
+                        <p class="related-summary">AI健康管理の新時代が到来。OpenAIの「ChatGPT ヘルスケア」は医療記録から日常のウェルネスアプリまで幅広く連携し、個人に最適化された健康アドバイスを実現する。まず少人数での提供開始後、数週...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_53.html">
-                        <h3>OpenAIの「Sora」Android版、配信初日で47万ダウンロードを記録</h3>
+                    <a href="CNET_Japan_最新情報総合_3829.html">
+                        <h3>グーグルとCharacter.AI、少年の自殺めぐる訴訟で和解へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIがAI動画SNSアプリ「Sora」のAndroid版をリリースしてからまだ2日しか経っていないが、その人気はとどまるところを知らないようだ。.</p>
+                        <p class="related-summary">AIが、AIチャットボットとの会話により未成年に被害が生じたとされる件をめぐり、4州で提起されている5件の訴訟について和解することで合意した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9239.html">
-                        <h3>ささやくだけでメモ完了。思考を拡張するAI指輪「Stream Ring」とは？</h3>
+                    <a href="CNET_Japan_最新情報総合_6951.html">
+                        <h3>レノボのディスプレイ試作機に「疲れてますね」と指摘された--ローラブルPCも披露</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">車を運転中、明日の重要なプレゼンテーションのアイデアがふと浮かぶ。.</p>
+                        <p class="related-summary">「疲れて見えますね」と言われて喜ぶ人はいない。だが、レノボがCES 2026で披露した「AI-Powered Personalized Display Concept」はまさにそれを指摘してくる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_4514.html">
-                        <h3>GeminiにPDFやWord、Excel、テキストファイルなどの検索機能を組み込める「File Search in G...</h3>
+                    <a href="CNET_Japan_最新情報総合_3595.html">
+                        <h3>NVIDIAのジェンスン・フアンCEO、「IEEE栄誉賞」を受賞</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Google Cloudは、同社の生成AIサービスであるGeminiに、PDFやWord、Excel、テキストファイルなどのさまざまなファイル形式を読み込ませて検索可能にするフルマネージドなRAGシス...</p>
+                        <p class="related-summary">時価総額5兆ドルを突破したNVIDIAを率いるジェンスン・フアン氏が、IEEEの最高栄誉「IEEE栄誉賞」を獲得。インターネット開発者やGPS発明者らが名を連ねる歴史的な賞の受賞者に、AI時代の立役者...</p>
                     </a>
                 </article>
             </div>

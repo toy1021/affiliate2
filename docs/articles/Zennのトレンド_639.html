@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか | 日本のテックニュース速報</title>
-    <meta name="description" content="大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録 | 日本のテックニュース速報</title>
+    <meta name="description" content="js で開発を開始し、約4年半運用しています。 技術スタックは何度か変わっていて、最初は Next. これはなに？ 本番環境で約2年間 Prisma を使っていたプロジェクトを、Atlas + Kysely に移行した記録です">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか">
-    <meta property="og:description" content="大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います">
+    <meta property="og:title" content="Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録">
+    <meta property="og:description" content="js で開発を開始し、約4年半運用しています。 技術スタックは何度か変わっていて、最初は Next. これはなに？ 本番環境で約2年間 Prisma を使っていたプロジェクトを、Atlas + Kysely に移行した記録です">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_639.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか">
-    <meta name="twitter:description" content="大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います">
+    <meta name="twitter:title" content="Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録">
+    <meta name="twitter:description" content="js で開発を開始し、約4年半運用しています。 技術スタックは何度か変わっていて、最初は Next. これはなに？ 本番環境で約2年間 Prisma を使っていたプロジェクトを、Atlas + Kysely に移行した記録です">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_639.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか",
-        "description": "大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います",
+        "headline": "Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録",
+        "description": "js で開発を開始し、約4年半運用しています。 技術スタックは何度か変わっていて、最初は Next. これはなに？ 本番環境で約2年間 Prisma を使っていたプロジェクトを、Atlas + Kysely に移行した記録です",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-20T04:18:33",
-        "dateModified": "2025-12-20T16:26:08.791748",
+        "datePublished": "2026-01-12T09:55:43",
+        "dateModified": "2026-01-13T08:33:35.291951",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_639.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_639.html",
         "articleSection": "プログラミング",
-        "keywords": []
+        "keywords": ["本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか",
+                "name": "Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_639.html"
             }
         ]
@@ -114,40 +114,40 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか</li>
+                <li aria-current="page">Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか</h1>
+                <h1>Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/mod_poppo/articles/libm-precision" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/coji/articles/prisma-to-atlas-kysely-migration-with-supabase" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-12-20T04:18:33">
-                        公開: 2025-12-20T04:18:33
+                    <time datetime="2026-01-12T09:55:43">
+                        公開: 2026-01-12T09:55:43
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について
+                    これはなに？
+本番環境で約2年間 Prisma を使っていたプロジェクトを、Atlas + Kysely に移行した記録です。Supabase の PostgreSQL を使っている環境だったので、いくつか注意点がありました。この記事では、移行の動機から具体的な手順、そして移行リスクを抑えるために追加した E2E テストまで、一連の流れを共有します。
 
-どのくらいの精度が期待できるのか？
-どのくらい再現性があるのか？
-
-という話題を扱います。
-
- 正確な計算は難しい
-無限大やNaNを除く有限の浮動小数点数は、数学的な実数を表していると考えられます。例えば、1.5 という浮動小数点数なら1.5という実数に対応します。ソースに 0.1 と書いた浮動小数点数が数学的には 0.100000000000000005551115123125782702118158340454101562...
+ プロジェクトの背景
+このプロジェクトは 2021年8月に Next.js で開発を開始し、約4年半運用しています。
+技術スタックは何度か変わっていて、最初は Next.js と Supabase SDK を使っていました。認証も S...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/mod_poppo/articles/libm-precision" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/coji/articles/prisma-to-atlas-kysely-migration-with-supabase" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,6 +159,16 @@
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -214,16 +224,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_6462.html">
+                    <a href="Qiita_-_人気の記事_7403.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">不規則な睡眠 年1兆円損失と推計</span>
+                        <span class="nav-title">GLM 4.7と私：Benchmarkはすべてを語らない</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="ASCII_jp__トップ_8579.html">
+                    <a href="Qiita_-_人気の記事_494.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">あの『こち亀』がシミュレーションゲームになって登場！集英社ゲームズ×カイロソフト『こちら葛飾区亀有公...</span>
+                        <span class="nav-title">Vivliostyle CLI v10.3.0で追加されたCMYK対応について</span>
                     </a>
                 </div>
             </div>
@@ -236,52 +246,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1874.html">
-                        <h3>「GR GT」はトヨタが送り出す究極のスポーツカー！ V8×ハイブリッドが衝撃すぎる！</h3>
+                    <a href="ASCII_jp__トップ_4140.html">
+                        <h3>【年収951万円】セキュリティエンジニア案件2026年1月最新｜フリーランス調査【フリーランスボード調べ】</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">12月5日、トヨタは新型スポーツ「GR GT」と「GR GT3」、開発中である2台のプロトタイプ車両を初公開しました。.</p>
+                        <p class="related-summary">【年収951万円】セキュリティエンジニア案件2026年1月最新｜フリーランス調査【フリーランスボード調べ】.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_2665.html">
-                        <h3>2025年版: 開発環境のツールまとめ</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに SREチームの小野です。 普段はAWSやGCPなどのクラウドの管理やモニタリングの整備などを行っています。 実はIT業界に就職したのは、「映画などで黒い画面に向かってカタカタしてる人がかっこ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_7266.html">
-                        <h3>キリスト教の教理問答ボット 開発</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
-                        </div>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4139.html">
-                        <h3>コード疲れたから農業デビューする</h3>
+                    <a href="Qiita_-_人気の記事_9440.html">
+                        <h3>【TypeScript】AWS SDK for JavaScript v2からv3への移行ガイド：S3・Lambda・S...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに 一人でプログラミングを勉強することに疲れてしまいました。 そこで、少し違う道を選ぶことにしました。 今は「農家」になりました。 本物の農家ではなく、ゲーム The Farmer Was Re...</p>
+                        <p class="related-summary">はじめに プロジェクトで使用している AWS SDK を v2 から v3 へと移行しました。v3 はモジュラアーキテクチャを採用しており、必要なパッケージのみをバンドルできるため、アプリケーションの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_7386.html">
-                        <h3>Deno に&#34;守り&#34;のコントリビュートしていたら、TC39 に出した言語仕様変更が承認され、ついでに V8 にパッチを投...</h3>
+                    <a href="Zennのトレンド_8059.html">
+                        <h3>Zennの自動翻訳機能から学ぶプロダクト開発の難しさ</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">! この記事は Deno Advent Calendar 2025 と JavaScript Advent Calendar 2025 の18日目の記事です。 “守り”のコントリビュート Deno が...</p>
+                        <p class="related-summary">はじめに 2026年1月、Zennに自動翻訳機能が導入されました。著者が翻訳を許可した記事について、記事URLに?locale=enをつけることで英語版が読めるようになったのです。 当初はデフォルトで...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_4197.html">
+                        <h3>AtCoderで橙になりました</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに こんにちは、a1048576です。 2026年1月11日のARC212(Div. 2)にて入橙することができました。 あまり書くことがないですが、黄色になってからの約2年間を軽く振り返ろうと...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_3365.html">
+                        <h3>【Crank.js】リアクティブという欠陥を完全解決したJavaScriptフレームワーク、Crank.jsの思想と信条</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">ReactやVueとかの記事を見ていると、useMemoしろとuseMemoするなとか、イベントハンドラにuseEffectを使えとイベントハンドラにuseEffectを使うなとか、どうすりゃええねん...</p>
                     </a>
                 </article>
             </div>

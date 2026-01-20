@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM開発の裏で行われるデバッグ作業: PyTorch DCP | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事は、LLM, VLM開発の裏で行われるリアルなデバッグ作業の様子を紹介します">
-    <meta name="keywords" content="LLM,本">
+    <title>Next.js のリクエストから画面描画まで──RSC Payload を理解する | 日本のテックニュース速報</title>
+    <meta name="description" content="jsでの実装を分解して、整理してみました。 この記事の構成 セクション 内容 1. jsを使っている方は多いと思いますが、何となくフワッとした理解で使っていませんか？ 使っているうちに、こんな疑問が浮かんできたことはないでしょうか">
+    <meta name="keywords" content="React,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="LLM開発の裏で行われるデバッグ作業: PyTorch DCP">
-    <meta property="og:description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事は、LLM, VLM開発の裏で行われるリアルなデバッグ作業の様子を紹介します">
+    <meta property="og:title" content="Next.js のリクエストから画面描画まで──RSC Payload を理解する">
+    <meta property="og:description" content="jsでの実装を分解して、整理してみました。 この記事の構成 セクション 内容 1. jsを使っている方は多いと思いますが、何となくフワッとした理解で使っていませんか？ 使っているうちに、こんな疑問が浮かんできたことはないでしょうか">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2338.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LLM開発の裏で行われるデバッグ作業: PyTorch DCP">
-    <meta name="twitter:description" content="はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事は、LLM, VLM開発の裏で行われるリアルなデバッグ作業の様子を紹介します">
+    <meta name="twitter:title" content="Next.js のリクエストから画面描画まで──RSC Payload を理解する">
+    <meta name="twitter:description" content="jsでの実装を分解して、整理してみました。 この記事の構成 セクション 内容 1. jsを使っている方は多いと思いますが、何となくフワッとした理解で使っていませんか？ 使っているうちに、こんな疑問が浮かんできたことはないでしょうか">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "LLM開発の裏で行われるデバッグ作業: PyTorch DCP",
-        "description": "はじめに Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。 本記事は、LLM, VLM開発の裏で行われるリアルなデバッグ作業の様子を紹介します",
+        "headline": "Next.js のリクエストから画面描画まで──RSC Payload を理解する",
+        "description": "jsでの実装を分解して、整理してみました。 この記事の構成 セクション 内容 1. jsを使っている方は多いと思いますが、何となくフワッとした理解で使っていませんか？ 使っているうちに、こんな疑問が浮かんできたことはないでしょうか",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-13T06:03:34",
-        "dateModified": "2025-11-14T08:28:33.618692",
+        "datePublished": "2026-01-19T02:56:01",
+        "dateModified": "2026-01-20T08:34:57.604040",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2338.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2338.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["LLM","本"]
+        "articleSection": "テクノロジー",
+        "keywords": ["React","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "LLM開発の裏で行われるデバッグ作業: PyTorch DCP",
+                "name": "Next.js のリクエストから画面描画まで──RSC Payload を理解する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2338.html"
             }
         ]
@@ -113,26 +113,26 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">LLM開発の裏で行われるデバッグ作業: PyTorch DCP</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Next.js のリクエストから画面描画まで──RSC Payload を理解する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>LLM開発の裏で行われるデバッグ作業: PyTorch DCP</h1>
+                <h1>Next.js のリクエストから画面描画まで──RSC Payload を理解する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/turing_motors/articles/04eed10b0aafe9" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-13T06:03:34">
-                        公開: 2025-11-13T06:03:34
+                    <span class="source">出典: <a href="https://zenn.dev/branbran/articles/5dff2f327cf18d" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-01-19T02:56:01">
+                        公開: 2026-01-19T02:56:01
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">LLM</span>
-                    <span class="tag">本</span>
+                    <span class="tag">React</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
@@ -140,17 +140,31 @@
                 
                 <div class="article-body">
                     はじめに
-Turing CTO室に所属している東京科学大学(Institute of Science Tokyo)の藤井です。
-本記事は、LLM, VLM開発の裏で行われるリアルなデバッグ作業の様子を紹介します。
-LLM, VLMの開発の裏には本記事で紹介するような地道なデバッグ作業が多数あるのですが、なかなかその実態が伝わっていないように思います。できるだけ詳細にデバッグ作業の様子を記しましたので、実際の現場で行われている作業を追体験いただけますと幸いです。
+仕事やプロジェクトでNext.jsを使っている方は多いと思いますが、何となくフワッとした理解で使っていませんか？
+使っているうちに、こんな疑問が浮かんできたことはないでしょうか。
 
- Background
-まず、デバッグ作業を行う前の背景と経緯について説明します。
-学習に使用している依存関係の継続的なu...
+RSC Payloadって結局なに？
+「Server Componentはサーバーで実行される」って、具体的にはどういうこと？
+Hydrationエラー、なんで起きるの？
+
+今回は、DevToolsで観測できる挙動を手がかりに、React Server Componentsの仕組みとNext.jsでの実装を分解して、整理してみました。
+
+
+ この記事の構成
+
+
+
+セクション
+内容
+
+
+
+
+1. ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/turing_motors/articles/04eed10b0aafe9" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/branbran/articles/5dff2f327cf18d" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,30 +177,20 @@ LLM, VLMの開発の裏には本記事で紹介するような地道なデバッ
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -196,23 +200,23 @@ LLM, VLMの開発の裏には本記事で紹介するような地道なデバッ
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +231,16 @@ LLM, VLMの開発の裏には本記事で紹介するような地道なデバッ
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7167.html">
+                    <a href="Qiita_-_人気の記事_8846.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">GitHub社謹製Spec KitにCodex CLI対応のPRを送った話</span>
+                        <span class="nav-title">自然言語からSQLは魔法ではない</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6293.html">
+                    <a href="Qiita_-_人気の記事_3191.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">CompTIA Pentest+ （PT0-002）の受験記</span>
+                        <span class="nav-title">【Claude Code】スラッシュコマンドを使ってAIに日報のフィードバックをさせてみた</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +253,53 @@ LLM, VLMの開発の裏には本記事で紹介するような地道なデバッ
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6078.html">
-                        <h3>ChatGPT新モデル「GPT-5.1」公開--よりフレンドリーな応答、指示への遵守も強化</h3>
+                    <a href="CNET_Japan_最新情報総合_3392.html">
+                        <h3>TikTok、短尺ドラマ専用アプリ「PineDrama」を公開　どんな特徴？</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは日本時間11月13日未明、GPT-5シリーズの新モデル「GPT-5. 1」を公開した。同社は今回の更新について「より賢く、より会話的なChatGPTを実現するアップグレード」と位置づけ、...</p>
+                        <p class="related-summary">TikTokは、新たなアプリ「PineDrama」で短尺ドラマに注力しているようだ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9455.html">
-                        <h3>「AI音楽」と「人間の音楽」、97％が判別できない衝撃--9000人調査で分かった本音とは</h3>
+                    <a href="CNET_Japan_最新情報総合_6305.html">
+                        <h3>Metaが3年前に買収した人気VRアプリを事実上の終了へ　「裏切られた」ファンの悲痛な叫び</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">完全にAIで生成された音楽をほとんどの人が判別できないことが、新たな調査で明らかになった。.</p>
+                        <p class="related-summary">Metaによる最近のレイオフを受け、同社が3年前に買収した人気VRフィットネスアプリが「メンテナンスモード」に移行した。つまり、新しいワークアウトも音楽もコーチの言葉も、もう追加されない。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5639.html">
-                        <h3>6Gスマホは「速い」だけじゃない--電波の乱れからヒトの呼吸まで検知</h3>
+                    <a href="CNET_Japan_最新情報総合_1023.html">
+                        <h3>発火しない固体電池のモバイルバッテリーを1週間使ってわかったこと--リチウムイオン式は「オワコン」か</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">6GがAI時代のスマホ体験をどう変える？ クアルコムCEOが語る「常時センシング・ネットワーク」の仕組みと、音声操作・自律エージェントが進化する次世代通信の本質を詳しく解説。.</p>
+                        <p class="related-summary">「BMX SolidSafe 5K」は、固体電池を採用したワイヤレスモバイルバッテリーだ。なぜこの技術が重要なのか、その理由を解説する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2730.html">
-                        <h3>Twitter創業者支援の新アプリ「Divine」登場、Vine動画10万本が復活--AIは禁止</h3>
+                    <a href="CNET_Japan_最新情報総合_9965.html">
+                        <h3>言語の壁が消える？「翻訳であることを忘れる」レベルの翻訳機を試した</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">6秒動画アプリ「Vine」の終了からほぼ9年が経ったいま、よく似た新アプリ「Divine」が登場した。.</p>
+                        <p class="related-summary">「言葉の壁」を越える難しさを知る筆者が最新の翻訳専用機を試し、感動した体験についてお伝えする。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2577.html">
-                        <h3>AIで仕事を失うのは“現場担当”？　1億8000万件の求人分析で出た結論</h3>
+                    <a href="CNET_Japan_最新情報総合_4.html">
+                        <h3>「目に優しい」と「サクサク」を両立した次世代ペーパータブレットが登場</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">求人広告データプロバイダーReveaera社のCTO、ヘンリー・ウィング・チウ氏が11月9日、2023〜25年の求人約1億8000万件を分析し、AIがどの職を実際に変えているかを調べた結果を報告してい...</p>
+                        <p class="related-summary">動作速度と目への優しさを兼ね備えた次世代ペーパータブレットが、ドイツのHANNspreeから登場した。.</p>
                     </a>
                 </article>
             </div>

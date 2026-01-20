@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【CISSP合格体験記】実務経験者が3か月・約100時間で合格するまで | 日本のテックニュース速報</title>
-    <meta name="description" content="com/ 私はSRE（主にGoogle Cloud）を2年程度と、主にAWS環境におけるサイバーセキュリティコンサルティングを2年程度経験しております。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="AWS,本">
+    <title>Next.js のリクエストから画面描画まで──RSC Payload を理解する | 日本のテックニュース速報</title>
+    <meta name="description" content="jsでの実装を分解して、整理してみました。 この記事の構成 セクション 内容 1. jsを使っている方は多いと思いますが、何となくフワッとした理解で使っていませんか？ 使っているうちに、こんな疑問が浮かんできたことはないでしょうか">
+    <meta name="keywords" content="React,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【CISSP合格体験記】実務経験者が3か月・約100時間で合格するまで">
-    <meta property="og:description" content="com/ 私はSRE（主にGoogle Cloud）を2年程度と、主にAWS環境におけるサイバーセキュリティコンサルティングを2年程度経験しております。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="Next.js のリクエストから画面描画まで──RSC Payload を理解する">
+    <meta property="og:description" content="jsでの実装を分解して、整理してみました。 この記事の構成 セクション 内容 1. jsを使っている方は多いと思いますが、何となくフワッとした理解で使っていませんか？ 使っているうちに、こんな疑問が浮かんできたことはないでしょうか">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6418.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【CISSP合格体験記】実務経験者が3か月・約100時間で合格するまで">
-    <meta name="twitter:description" content="com/ 私はSRE（主にGoogle Cloud）を2年程度と、主にAWS環境におけるサイバーセキュリティコンサルティングを2年程度経験しております。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="Next.js のリクエストから画面描画まで──RSC Payload を理解する">
+    <meta name="twitter:description" content="jsでの実装を分解して、整理してみました。 この記事の構成 セクション 内容 1. jsを使っている方は多いと思いますが、何となくフワッとした理解で使っていませんか？ 使っているうちに、こんな疑問が浮かんできたことはないでしょうか">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【CISSP合格体験記】実務経験者が3か月・約100時間で合格するまで",
-        "description": "com/ 私はSRE（主にGoogle Cloud）を2年程度と、主にAWS環境におけるサイバーセキュリティコンサルティングを2年程度経験しております。最新のテクノロジー情報をお届けします。",
+        "headline": "Next.js のリクエストから画面描画まで──RSC Payload を理解する",
+        "description": "jsでの実装を分解して、整理してみました。 この記事の構成 セクション 内容 1. jsを使っている方は多いと思いますが、何となくフワッとした理解で使っていませんか？ 使っているうちに、こんな疑問が浮かんできたことはないでしょうか",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-13T07:36:23",
-        "dateModified": "2026-01-15T10:27:35.987034",
+        "datePublished": "2026-01-19T02:56:01",
+        "dateModified": "2026-01-20T10:30:21.915563",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6418.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6418.html",
-        "articleSection": "セキュリティ",
-        "keywords": ["AWS","本"]
+        "articleSection": "テクノロジー",
+        "keywords": ["React","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "セキュリティ",
-                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【CISSP合格体験記】実務経験者が3か月・約100時間で合格するまで",
+                "name": "Next.js のリクエストから画面描画まで──RSC Payload を理解する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6418.html"
             }
         ]
@@ -113,43 +113,58 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
-                <li aria-current="page">【CISSP合格体験記】実務経験者が3か月・約100時間で合格するまで</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Next.js のリクエストから画面描画まで──RSC Payload を理解する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【CISSP合格体験記】実務経験者が3か月・約100時間で合格するまで</h1>
+                <h1>Next.js のリクエストから画面描画まで──RSC Payload を理解する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/kenseitogari/articles/5124cc75373ac5" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: セキュリティ</span>
-                    <time datetime="2026-01-13T07:36:23">
-                        公開: 2026-01-13T07:36:23
+                    <span class="source">出典: <a href="https://zenn.dev/branbran/articles/5dff2f327cf18d" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-01-19T02:56:01">
+                        公開: 2026-01-19T02:56:01
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AWS</span>
-                    <span class="tag">本</span>
+                    <span class="tag">React</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本記事は、クラウドやセキュリティ領域での実務経験があり、CISSPを受験しようか迷っている方、あるいは勉強方法がわからず困っている方に向けた合格体験記です。
+                    はじめに
+仕事やプロジェクトでNext.jsを使っている方は多いと思いますが、何となくフワッとした理解で使っていませんか？
+使っているうちに、こんな疑問が浮かんできたことはないでしょうか。
 
- 筆者のバックグラウンド
-こんにちは、サイバーセキュリティクラウドでCloudFastenerサービス事業部の戸ヶ里と申します。
-https://cloud-fastener.com/
-私はSRE（主にGoogle Cloud）を2年程度と、主にAWS環境におけるサイバーセキュリティコンサルティングを2年程度経験しております。
-クラウドやプロダクト開発におけるセキュリティが専門で、オンプレや物理、コーポレートセキュリティは専門では...
+RSC Payloadって結局なに？
+「Server Componentはサーバーで実行される」って、具体的にはどういうこと？
+Hydrationエラー、なんで起きるの？
+
+今回は、DevToolsで観測できる挙動を手がかりに、React Server Componentsの仕組みとNext.jsでの実装を分解して、整理してみました。
+
+
+ この記事の構成
+
+
+
+セクション
+内容
+
+
+
+
+1. ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/kenseitogari/articles/5124cc75373ac5" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/branbran/articles/5dff2f327cf18d" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,20 +177,20 @@ https://cloud-fastener.com/
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -185,7 +200,7 @@ https://cloud-fastener.com/
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>セキュリティ関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -216,16 +231,16 @@ https://cloud-fastener.com/
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_3236.html">
+                    <a href="Qiita_-_人気の記事_2960.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">データベースはなぜ大切なのか？多くの人が説明できない概念的な考え方について</span>
+                        <span class="nav-title">自然言語からSQLは魔法ではない</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_424.html">
+                    <a href="Qiita_-_人気の記事_6599.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Codeとghコマンドで、コードエディタをほぼ触らなくなった話</span>
+                        <span class="nav-title">【Claude Code】スラッシュコマンドを使ってAIに日報のフィードバックをさせてみた</span>
                     </a>
                 </div>
             </div>
@@ -238,33 +253,53 @@ https://cloud-fastener.com/
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2434.html">
-                        <h3>Web関係のセキュリティについて初心者でもわかるようにまとめてみた - OWASP Top 10:2025</h3>
+                    <a href="CNET_Japan_最新情報総合_6788.html">
+                        <h3>TikTok、短尺ドラマ専用アプリ「PineDrama」を公開　どんな特徴？</h3>
                         <div class="related-meta">
-                            <span class="category">セキュリティ</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに セキュリティに問題があると、大変なことになります。 普通のバグは不便で済むこともありますが、セキュリティの穴はアカウント乗っ取り、情報漏えい、サービス停止など、取り返しがつかない形で表に出や...</p>
+                        <p class="related-summary">TikTokは、新たなアプリ「PineDrama」で短尺ドラマに注力しているようだ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_9140.html">
-                        <h3>Microsoft、2026年1月のセキュリティ更新プログラムをリリース</h3>
+                    <a href="CNET_Japan_最新情報総合_7749.html">
+                        <h3>Metaが3年前に買収した人気VRアプリを事実上の終了へ　「裏切られた」ファンの悲痛な叫び</h3>
                         <div class="related-meta">
-                            <span class="category">セキュリティ</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">本日、Microsoftが、2026年1月のセキュリティ更新プログラム（月例パッチ）をリリースしています。 今月の更新プログラムでは、Windows、Windows Server、Office、Sha...</p>
+                        <p class="related-summary">Metaによる最近のレイオフを受け、同社が3年前に買収した人気VRフィットネスアプリが「メンテナンスモード」に移行した。つまり、新しいワークアウトも音楽もコーチの言葉も、もう追加されない。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1088.html">
-                        <h3>ハッカー視点で語る「Initial Access（初期侵入）」 〜 派手なExploitより、地味なパスワードが最強 〜</h3>
+                    <a href="CNET_Japan_最新情報総合_7945.html">
+                        <h3>発火しない固体電池のモバイルバッテリーを1週間使ってわかったこと--リチウムイオン式は「オワコン」か</h3>
                         <div class="related-meta">
-                            <span class="category">セキュリティ</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">本記事の内容は、セキュリティの仕組みを理解するための学習・研究を目的としています。 許可のない第三者のシステムへの攻撃や侵入行為は、法律で固く禁止されています。 検証を行う際は、必ずご自身が管理する環...</p>
+                        <p class="related-summary">「BMX SolidSafe 5K」は、固体電池を採用したワイヤレスモバイルバッテリーだ。なぜこの技術が重要なのか、その理由を解説する。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_4970.html">
+                        <h3>言語の壁が消える？「翻訳であることを忘れる」レベルの翻訳機を試した</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">「言葉の壁」を越える難しさを知る筆者が最新の翻訳専用機を試し、感動した体験についてお伝えする。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_4685.html">
+                        <h3>「目に優しい」と「サクサク」を両立した次世代ペーパータブレットが登場</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">動作速度と目への優しさを兼ね備えた次世代ペーパータブレットが、ドイツのHANNspreeから登場した。.</p>
                     </a>
                 </article>
             </div>

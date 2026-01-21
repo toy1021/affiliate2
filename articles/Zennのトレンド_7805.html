@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3年ぶりにアプリをアップデートしたことの振り返り | 日本のテックニュース速報</title>
-    <meta name="description" content="org/calendars/12244 本記事では、僕が約3年ぶりにアプリをアップデートしたことについて振り返っています。 前半では、個人開発を始めたきっかけや現在リリースしているアプリの紹介を、後半では今回アップデートしたアプリの開発内容や振り返りをまとめています">
-    <meta name="keywords" content="本">
+    <title>Anthropicハッカソン優勝者のClaude Code設定集「everything-claude-code」を読み解く | 日本のテックニュース速報</title>
+    <meta name="description" content="Anthropicハッカソン優勝者が10ヶ月以上かけて実際のプロダクト開発で使い込んだ everything-claude-code というリポジトリが公開されていたので、内容を読み解いてみました。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="Claude,GitHub,本,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="3年ぶりにアプリをアップデートしたことの振り返り">
-    <meta property="og:description" content="org/calendars/12244 本記事では、僕が約3年ぶりにアプリをアップデートしたことについて振り返っています。 前半では、個人開発を始めたきっかけや現在リリースしているアプリの紹介を、後半では今回アップデートしたアプリの開発内容や振り返りをまとめています">
+    <meta property="og:title" content="Anthropicハッカソン優勝者のClaude Code設定集「everything-claude-code」を読み解く">
+    <meta property="og:description" content="Anthropicハッカソン優勝者が10ヶ月以上かけて実際のプロダクト開発で使い込んだ everything-claude-code というリポジトリが公開されていたので、内容を読み解いてみました。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7805.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="3年ぶりにアプリをアップデートしたことの振り返り">
-    <meta name="twitter:description" content="org/calendars/12244 本記事では、僕が約3年ぶりにアプリをアップデートしたことについて振り返っています。 前半では、個人開発を始めたきっかけや現在リリースしているアプリの紹介を、後半では今回アップデートしたアプリの開発内容や振り返りをまとめています">
+    <meta name="twitter:title" content="Anthropicハッカソン優勝者のClaude Code設定集「everything-claude-code」を読み解く">
+    <meta name="twitter:description" content="Anthropicハッカソン優勝者が10ヶ月以上かけて実際のプロダクト開発で使い込んだ everything-claude-code というリポジトリが公開されていたので、内容を読み解いてみました。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "3年ぶりにアプリをアップデートしたことの振り返り",
-        "description": "org/calendars/12244 本記事では、僕が約3年ぶりにアプリをアップデートしたことについて振り返っています。 前半では、個人開発を始めたきっかけや現在リリースしているアプリの紹介を、後半では今回アップデートしたアプリの開発内容や振り返りをまとめています",
+        "headline": "Anthropicハッカソン優勝者のClaude Code設定集「everything-claude-code」を読み解く",
+        "description": "Anthropicハッカソン優勝者が10ヶ月以上かけて実際のプロダクト開発で使い込んだ everything-claude-code というリポジトリが公開されていたので、内容を読み解いてみました。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-09T15:00:02",
-        "dateModified": "2025-12-11T22:22:31.035662",
+        "datePublished": "2026-01-19T00:22:56",
+        "dateModified": "2026-01-21T04:45:53.373576",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7805.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7805.html",
         "articleSection": "プログラミング",
-        "keywords": ["本"]
+        "keywords": ["Claude","GitHub","本","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "3年ぶりにアプリをアップデートしたことの振り返り",
+                "name": "Anthropicハッカソン優勝者のClaude Code設定集「everything-claude-code」を読み解く",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7805.html"
             }
         ]
@@ -114,41 +114,47 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">3年ぶりにアプリをアップデートしたことの振り返り</li>
+                <li aria-current="page">Anthropicハッカソン優勝者のClaude Code設定集「everything-claude...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>3年ぶりにアプリをアップデートしたことの振り返り</h1>
+                <h1>Anthropicハッカソン優勝者のClaude Code設定集「everything-claude-code」を読み解く</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/naoya_maeda/articles/af86652c1ba611" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/ttks/articles/a54c7520f827be" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-12-09T15:00:02">
-                        公開: 2025-12-09T15:00:02
+                    <time datetime="2026-01-19T00:22:56">
+                        公開: 2026-01-19T00:22:56
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">Claude</span>
+                    <span class="tag">GitHub</span>
                     <span class="tag">本</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本記事は、『エンジニアと人生 Advent Calendar 2025』10日目の記事です。
-https://adventar.org/calendars/12244
-本記事では、僕が約3年ぶりにアプリをアップデートしたことについて振り返っています。
-前半では、個人開発を始めたきっかけや現在リリースしているアプリの紹介を、後半では今回アップデートしたアプリの開発内容や振り返りをまとめています。技術的な話題にはあまり触れていないので、読み物として気軽に読んでいただけると幸いです。
+                    Anthropicハッカソン優勝者が10ヶ月以上かけて実際のプロダクト開発で使い込んだ everything-claude-code というリポジトリが公開されていたので、内容を読み解いてみました。
+https://github.com/affaan-m/everything-claude-code
+https://x.com/affaanmustafa/status/2012378465664745795
 
- 個人開発を始めたきっかけについて
-個人開発を始めたきっかけは、特に深い理由があったわけではなく、ただ単に...
+ この記事の要約
+
+
+Anthropic x Forum Venturesハッカソン優勝者 が公開した本番環境で使えるClaude Code設定集
+
+agents, skills,...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/naoya_maeda/articles/af86652c1ba611" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ttks/articles/a54c7520f827be" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,30 +167,30 @@ https://adventar.org/calendars/12244
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">本 - Amazon検索結果</div>
                                     <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +231,16 @@ https://adventar.org/calendars/12244
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_667.html">
+                    <a href="気になる記になる_7946.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Claude Codeプラグインを社内で作って、2ヶ月経過した</span>
+                        <span class="nav-title">｢Xbox Cloud Gaming｣、年内に広告付きアクセスプランを導入へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1771.html">
+                    <a href="Zennのトレンド_5908.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Code × MCP × Notion で「Jupyter Notebookから分析レ...</span>
+                        <span class="nav-title">テストで開発者を駆動する</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +253,53 @@ https://adventar.org/calendars/12244
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8698.html">
-                        <h3>マーケティングのコンプライアンスとセキュリティを統合管理、日英で共同開発</h3>
+                    <a href="CNET_Japan_最新情報総合_6105.html">
+                        <h3>自走する「ロボットハンド」登場、人間の可動域を超え災害救助などの貢献に期待</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">広告表現のコンプライアンスチェックやブランドを悪用するフィッシングなどのサイバー犯罪対策を横断的に行える「Trust Lens」を日英企業が共同開発した。.</p>
+                        <p class="related-summary">スイス連邦工科大学ローザンヌ校の研究チームは、人の手よりも広い可動域を持つロボットハンドを開発した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7284.html">
-                        <h3>現場エンジニアではない人事が、それでもQiitaを読む理由</h3>
+                    <a href="気になる記になる_9026.html">
+                        <h3>Insta360、｢DJI Osmo Pocket｣対抗のモジュール式小型ジンバルカメラを投入か｜試作機とみられる画像が...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">今年に入ってから海外のSNS上などでInsta360がDJIの「Osmo Pocket」シリーズに対抗する小型ジンバルカメラを開発していると噂されていたのですが、本日、そのInsta360の小型ジンバ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_164.html">
+                        <h3>マイクロソフト、XAML Studioをオープンソース化。UIのプロトタイプを迅速に作成可能</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">マイクロソフトは、同社が開発したユーザーインターフェイスを記述するためのマークアップ言語「XAML」（ザムル）を用いてアプリケーションのモックアップを手軽に構築できる「XAML Studio」をオープ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_509.html">
+                        <h3>VS Code開発効率を最大化するキーボード操作術【Mac編】</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">コード以外にも伝わっている エンジニアではない立場で、Qiitaを見ている人間がいます。 KDDIアジャイル開発センターで採用担当をしている渡邊です。 普段は、ソフトウェアエンジニアやスクラムマスター...</p>
+                        <p class="related-summary">はじめに 開発効率を向上させる上で、エディタの操作速度は無視できない要素です。 思考と実装のタイムラグを最小限に抑えるためには、キーボードとマウス・トラックパッドの切り替えを減らし、ホームポジションか...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5144.html">
-                        <h3>新卒エンジニアが vibe coding して分かったこと</h3>
+                    <a href="Qiita_-_人気の記事_2522.html">
+                        <h3>先輩に言われた「それ、前教えたじゃん！」。それでもあなたは悪くない。【前編】</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに 新卒エンジニアとして 2025 年の 4 月に入社して以来、ほとんど未経験でプロジェクトの開発に配属されたため当然のように AI に鞭を打って開発を行っていました。このやり方は後から vib...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2314.html">
-                        <h3>CSVやMarkdownをそのままNotionに表として貼り付けられるCLI作った</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">こんにちは！any 株式会社でプロダクトチームに所属しているエンジニアのなおとぅ(@Rasukarusan)です！ この記事は、any Product Team Advent Calendar 202...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_6541.html">
-                        <h3>Reactカスタムフックが可読性を損なうとき</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">この記事は React Advent Calender 2025 11 日目の投稿です。 可読性の高いカスタムフックを考える React 開発において、「ロジックはカスタムフックに切り出す」というプラ...</p>
+                        <p class="related-summary">人はなぜ忘れるのか。初めての現場で学びが「点」になる理由 ― 記憶の科学と、現場構造のすれ違い ― はじめまして。 株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.2%で1位。 | 日本のテックニュース速報</title>
-    <meta name="description" content="【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>ブログのいいねボタン、astro-notion-blog＋Cloudflare Pagesで実装する | 日本のテックニュース速報</title>
+    <meta name="description" content="Cloudflare KVとPages Functionsを使用して「いいねボタン」を実装してみました。当時はCloudflareに不慣れで少し苦労したので、本記事ではその実装を紹介したいと思います。.">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.2%で1位。">
-    <meta property="og:description" content="【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.">
+    <meta property="og:title" content="ブログのいいねボタン、astro-notion-blog＋Cloudflare Pagesで実装する">
+    <meta property="og:description" content="Cloudflare KVとPages Functionsを使用して「いいねボタン」を実装してみました。当時はCloudflareに不慣れで少し苦労したので、本記事ではその実装を紹介したいと思います。.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/ASCII.jp － トップ_3707.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.2%で1位。">
-    <meta name="twitter:description" content="【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.">
+    <meta name="twitter:title" content="ブログのいいねボタン、astro-notion-blog＋Cloudflare Pagesで実装する">
+    <meta name="twitter:description" content="Cloudflare KVとPages Functionsを使用して「いいねボタン」を実装してみました。当時はCloudflareに不慣れで少し苦労したので、本記事ではその実装を紹介したいと思います。.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.2%で1位。",
-        "description": "【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.",
+        "headline": "ブログのいいねボタン、astro-notion-blog＋Cloudflare Pagesで実装する",
+        "description": "Cloudflare KVとPages Functionsを使用して「いいねボタン」を実装してみました。当時はCloudflareに不慣れで少し苦労したので、本記事ではその実装を紹介したいと思います。.",
         "author": {
             "@type": "Organization",
             "name": "ASCII.jp － トップ"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-04T09:20:00",
-        "dateModified": "2025-11-04T18:30:23.582153",
+        "datePublished": "2026-01-29T06:00:00",
+        "dateModified": "2026-01-29T06:51:26.514763",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/ASCII.jp － トップ_3707.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/ASCII.jp － トップ_3707.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "その他",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.2%で1位。",
+                "name": "ブログのいいねボタン、astro-notion-blog＋Cloudflare Pagesで実装する",
                 "item": "https://toy1021.github.io/affiliate2/articles/ASCII.jp － トップ_3707.html"
             }
         ]
@@ -113,33 +113,36 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.2%で1位。</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">ブログのいいねボタン、astro-notion-blog＋Cloudflare Pagesで実装する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.2%で1位。</h1>
+                <h1>ブログのいいねボタン、astro-notion-blog＋Cloudflare Pagesで実装する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://ascii.jp/elem/000/004/349/4349218/?rss" target="_blank" rel="nofollow noopener">ASCII.jp － トップ</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-11-04T09:20:00">
-                        公開: 2025-11-04T09:20:00
+                    <span class="source">出典: <a href="https://ascii.jp/elem/000/004/368/4368599/?rss" target="_blank" rel="nofollow noopener">ASCII.jp － トップ</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-01-29T06:00:00">
+                        公開: 2026-01-29T06:00:00
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    <p><img align="left" height="60" src="https://ascii.jp/img/2019/05/13/1510511/s/5e76a3dd2752b473.jpg" width="60" />【Z世代の広告調査】ブランドイメージ形成に最も影響する広告は「SNS広告」が37.2%で1位。</p><br clear="left" />
+                    <p><img align="left" height="60" src="https://ascii.jp/img/2026/01/26/4407593/s/6bc205f299125810.png" width="60" />Cloudflare KVとPages Functionsを使用して「いいねボタン」を実装してみました。当時はCloudflareに不慣れで少し苦労したので、本記事ではその実装を紹介したいと思います。</p><br clear="left" />
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://ascii.jp/elem/000/004/349/4349218/?rss" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://ascii.jp/elem/000/004/368/4368599/?rss" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -148,9 +151,24 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -181,16 +199,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="ASCII_jp__トップ_8169.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5166.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">4K・160Hz・FAST IPS搭載のハイスペックゲーミングモニター「U27T6」</span>
+                        <span class="nav-title">ネット選挙運動 X機能に落とし穴</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="ASCII_jp__トップ_3504.html">
+                    <a href="ASCII_jp__トップ_327.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">『スト6』にて「魔界村」シリーズとコラボしたファイティングパスを本日配信！</span>
+                        <span class="nav-title">【タイムセール】QuietComfortの系譜を継ぐBoseの上位モデル「Ultra Earbuds...</span>
                     </a>
                 </div>
             </div>
@@ -203,53 +221,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9402.html">
-                        <h3>SBI新生銀行、50年ローンを提供　「20〜30代の住宅購入を支援」</h3>
+                    <a href="CNET_Japan_最新情報総合_9308.html">
+                        <h3>JR東日本、JRE POINT特典改定　新幹線35％オフの期間限定キャンペーンも</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">SBI新生銀行は、11月17日から住宅ローンの最長返済期間を従来の35年から50年へと拡大する。変動金利型（半年型）の商品が対象で、20〜30代の住宅購入を後押しする。.</p>
+                        <p class="related-summary">JR東日本は1月28日、ポイントで新幹線や特急に乗れる「JRE POINT特典」を刷新すると発表した。3月14日乗車分から交換ポイント数を距離に応じた体系に見直すほか、2026年度は新幹線が通常より3...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4236.html">
-                        <h3>TP-Link製ルーター、米国で「禁止」案が有力に--国家安全保障リスクを懸念</h3>
+                    <a href="CNET_Japan_最新情報総合_4659.html">
+                        <h3>キヤノン、社長COOに小川一登氏　御手洗氏は会長CEOへ</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">人気ルーターブランドであるTP-Linkのルーターが米国で禁止される可能性が高まっている。.</p>
+                        <p class="related-summary">キヤノンは29日、取締役副社長でグローバル販売戦略推進本部長の小川一登氏が、3月27日付で代表取締役社長COOに就任する人事を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9922.html">
-                        <h3>「RE搭載」コンセプトカーなどが登場　写真で見る「JAPAN MOBILITY SHOW2025」マツダ・スバル・スズキ...</h3>
+                    <a href="ASCII_jp__トップ_7492.html">
+                        <h3>うまそ！CoCo壱に「厚切りベーコン」のスープカレー。追いチーズがたまらない</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">10月30日、「JAPAN MOBILITY SHOW2025」（モビショー）が開幕した。ここでは、マツダ、スバル、スズキのブースに展示されていたコンセプトカーなどをご紹介しよう。.</p>
+                        <p class="related-summary">カレーハウスCoCo壱番屋は2月1日より、数量限定メニュー「厚切りベーコンとスモークチーズのスープカレー」を販売します。別皿で提供されるスモークチーズで味変できます。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2337.html">
-                        <h3>ポルシェ、フル電動の「マカン GTS」発表　その最高速は？</h3>
+                    <a href="ASCII_jp__トップ_679.html">
+                        <h3>業界でも異例の「永久保証」を備える『リベティ多機能スーツケース』フロントポケットから本体収納へ直接アクセスできる新構造で...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ポルシェは、電動SUVに「マカン GTS」を追加した。GTSの名にふさわしく、期待通りの攻撃的な仕上がりだ。新型マカン GTSは最高速155mph（約250km/h）、0〜62mph（約100km/h...</p>
+                        <p class="related-summary">業界でも異例の「永久保証」を備える『リベティ多機能スーツケース』フロントポケットから本体収納へ直接アクセスできる新構造で2026年1月リニューアル展開.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1558.html">
-                        <h3>「月面着陸は嘘」--お騒がせセレブが唱える陰謀論、NASAトップが否定</h3>
+                    <a href="ASCII_jp__トップ_9129.html">
+                        <h3>衆院選の投票に行くと、最大118万円相当のポイントを獲得！予測市場アプリ「ミライマ」が、「選挙をもっと身近に。投票してポ...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">NASAは、人類はこれまでに6回月面に到達したと説明している。一方、キム・カーダシアン氏は最初の月着陸は「やらせ」だったと主張した。.</p>
+                        <p class="related-summary">衆院選の投票に行くと、最大118万円相当のポイントを獲得！予測市場アプリ「ミライマ」が、「選挙をもっと身近に。投票してポイ活」キャンペーンを開催.</p>
                     </a>
                 </article>
             </div>

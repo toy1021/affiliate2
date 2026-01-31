@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>エンジニアの脳が壊れる瞬間 ─ 複雑性・認知負荷・計算量のメカニズム | 日本のテックニュース速報</title>
-    <meta name="description" content="複雑性はなぜ破綻するのか？ 計算量と認知負荷から読み解く、ソフトウェアの限界について考えました。 これは、情報過多時代の「過学習」にも通じるテーマです。 私たちの脳がどこで飽和し、どこから理解が追いつかなくなるのか. その構造を知ることは、エンジニアリングだけでなくリス.">
+    <title>C言語でメモリマップド I/O を扱うときに注意すること  - volatile 修飾子とメモリバリアの役割 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに CPU が I/O デバイスのレジスタをアクセスする際は、物理メモリ空間にマッピングされたアドレスを介して行われるのが一般的です。これをメモリマップド I/O と言います。 CPU がメモリ空間にアクセスする際の用途は文字通り記録(メモリ)するためです。しかし、.">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="エンジニアの脳が壊れる瞬間 ─ 複雑性・認知負荷・計算量のメカニズム">
-    <meta property="og:description" content="複雑性はなぜ破綻するのか？ 計算量と認知負荷から読み解く、ソフトウェアの限界について考えました。 これは、情報過多時代の「過学習」にも通じるテーマです。 私たちの脳がどこで飽和し、どこから理解が追いつかなくなるのか. その構造を知ることは、エンジニアリングだけでなくリス.">
+    <meta property="og:title" content="C言語でメモリマップド I/O を扱うときに注意すること  - volatile 修飾子とメモリバリアの役割">
+    <meta property="og:description" content="はじめに CPU が I/O デバイスのレジスタをアクセスする際は、物理メモリ空間にマッピングされたアドレスを介して行われるのが一般的です。これをメモリマップド I/O と言います。 CPU がメモリ空間にアクセスする際の用途は文字通り記録(メモリ)するためです。しかし、.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6597.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="エンジニアの脳が壊れる瞬間 ─ 複雑性・認知負荷・計算量のメカニズム">
-    <meta name="twitter:description" content="複雑性はなぜ破綻するのか？ 計算量と認知負荷から読み解く、ソフトウェアの限界について考えました。 これは、情報過多時代の「過学習」にも通じるテーマです。 私たちの脳がどこで飽和し、どこから理解が追いつかなくなるのか. その構造を知ることは、エンジニアリングだけでなくリス.">
+    <meta name="twitter:title" content="C言語でメモリマップド I/O を扱うときに注意すること  - volatile 修飾子とメモリバリアの役割">
+    <meta name="twitter:description" content="はじめに CPU が I/O デバイスのレジスタをアクセスする際は、物理メモリ空間にマッピングされたアドレスを介して行われるのが一般的です。これをメモリマップド I/O と言います。 CPU がメモリ空間にアクセスする際の用途は文字通り記録(メモリ)するためです。しかし、.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "エンジニアの脳が壊れる瞬間 ─ 複雑性・認知負荷・計算量のメカニズム",
-        "description": "複雑性はなぜ破綻するのか？ 計算量と認知負荷から読み解く、ソフトウェアの限界について考えました。 これは、情報過多時代の「過学習」にも通じるテーマです。 私たちの脳がどこで飽和し、どこから理解が追いつかなくなるのか. その構造を知ることは、エンジニアリングだけでなくリス.",
+        "headline": "C言語でメモリマップド I/O を扱うときに注意すること  - volatile 修飾子とメモリバリアの役割",
+        "description": "はじめに CPU が I/O デバイスのレジスタをアクセスする際は、物理メモリ空間にマッピングされたアドレスを介して行われるのが一般的です。これをメモリマップド I/O と言います。 CPU がメモリ空間にアクセスする際の用途は文字通り記録(メモリ)するためです。しかし、.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-18T07:34:01",
-        "dateModified": "2025-11-20T01:28:57.441131",
+        "datePublished": "2026-01-30T05:53:24",
+        "dateModified": "2026-01-31T18:34:56.271131",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6597.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6597.html",
-        "articleSection": "プログラミング",
+        "articleSection": "ガジェット",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "ガジェット",
+                "item": "https://toy1021.github.io/affiliate2/#category=ガジェット"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "エンジニアの脳が壊れる瞬間 ─ 複雑性・認知負荷・計算量のメカニズム",
+                "name": "C言語でメモリマップド I/O を扱うときに注意すること  - volatile 修飾子とメモリバリアの役割",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6597.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">エンジニアの脳が壊れる瞬間 ─ 複雑性・認知負荷・計算量のメカニズム</li>
+                <li><a href="../#category=ガジェット">ガジェット</a></li>
+                <li aria-current="page">C言語でメモリマップド I/O を扱うときに注意すること  - volatile 修飾子とメモリバリ...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>エンジニアの脳が壊れる瞬間 ─ 複雑性・認知負荷・計算量のメカニズム</h1>
+                <h1>C言語でメモリマップド I/O を扱うときに注意すること  - volatile 修飾子とメモリバリアの役割</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/Sakai_path/items/415dc71f3463c0c4471b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-11-18T07:34:01">
-                        公開: 2025-11-18T07:34:01
+                    <span class="source">出典: <a href="https://qiita.com/ikwzm/items/d6d6a0223931c4a55037?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: ガジェット</span>
+                    <time datetime="2026-01-30T05:53:24">
+                        公開: 2026-01-30T05:53:24
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
@@ -135,15 +135,13 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    複雑性はなぜ破綻するのか？
-計算量と認知負荷から読み解く、ソフトウェアの限界について考えました。
-
-これは、情報過多時代の「過学習」にも通じるテーマです。
-私たちの脳がどこで飽和し、どこから理解が追いつかなくなるのか..その構造を知ることは、エンジニアリングだけでなくリス...
+                    はじめに
+CPU が I/O デバイスのレジスタをアクセスする際は、物理メモリ空間にマッピングされたアドレスを介して行われるのが一般的です。これをメモリマップド I/O と言います。
+CPU がメモリ空間にアクセスする際の用途は文字通り記録(メモリ)するためです。しかし、...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/Sakai_path/items/415dc71f3463c0c4471b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/ikwzm/items/d6d6a0223931c4a55037?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -152,50 +150,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>ガジェット関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -210,16 +183,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2676.html">
+                    <a href="Qiita_-_人気の記事_7718.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ClaudeCodeの拡張思考モード解説</span>
+                        <span class="nav-title">Ollama 17万台が（あぶねーすね）だそうな</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_7885.html">
+                    <a href="Qiita_-_人気の記事_97.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">基本無料のAIチャットリリースで確信したGPT-OSSこそ真のゲームチェンジャーといえる理由</span>
+                        <span class="nav-title">いい感じのポーリングをスキルに組み込む</span>
                     </a>
                 </div>
             </div>
@@ -232,53 +205,13 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2210.html">
-                        <h3>コスト削減と自由度アップ！商用ツールからオープンソースへの乗り換え15選</h3>
+                    <a href="気になる記になる_3835.html">
+                        <h3>DJIの360度アクションカメラの次期モデル｢DJI Osmo 360 II｣が早くもFCCの認証を取得?!</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">ガジェット</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">はじめに 開発ツールの月額料金、気づいたら結構な金額になっていませんか？Postman、GitHub、Notion. 便利なツールほど、チーム規模が大きくなると課金額も膨らんでいきます。 実は今、そん...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2791.html">
-                        <h3>GitHub Copilot Plan modeで実装の手戻りが改善した話 - Agent modeとの比較で分かる真価</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">106で正式リリースされたCopilot Plan mode、もう試しましたか？ 「Agentモードで実装したら思ってたのと違う. はじめに GMOコネクトの永田です。 VSCode 1. 」そんな手...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_1892.html">
-                        <h3>HonoとPerl 〜 異文化を持ち込む</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">Honoの面白いネタがあるので書きます。 Web標準 HonoはWeb標準のAPIを使って作られています。Web標準は元々ブラウザで動くもの（JavaScriptやCSS、HTML）に対して考えられた...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_1993.html">
-                        <h3>SDD(仕様駆動開発)と仕様について再度振り返る</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">びーぐるです🐶 Agentic Codingの開発スタイルのひとつとして、仕様駆動開発(SDD)が以前にも増して注目を浴びるようになりました。 例えば、Findy様主催のイベント「仕様駆動開発〜新たな...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4778.html">
-                        <h3>VSCode派生IDE「Google Antigravity」が、AI駆動開発の新しいパラダイムを切り拓いている</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">0を発表すると同時に、「Google Antigravity」というIDEを発表しました。 CursorやKiroのように、VSCodeから派生して作られたIDEです。 そしてさすがGoogle、今ま...</p>
+                        <p class="related-summary">DJIは昨年秋に同社初の360度アクションカメラ「DJI Osmo 360」を発売しましたが、早くもその次のモデルである「DJI Osmo 360 II」(仮称) の情報が出て来ました。 TheNew...</p>
                     </a>
                 </article>
             </div>

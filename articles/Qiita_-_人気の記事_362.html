@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話 | 日本のテックニュース速報</title>
-    <meta name="description" content="本記事は「AWSを触り始めたばかりで、Lambda/EventBridge/IAMにまだ慣れていない方」を想定しています。 こんにちは。 ソーイ株式会社、入社１年目の村上です。 会社の業務として稼働中のサービスから出力されるCloudWatchLogsのログファイル.">
-    <meta name="keywords" content="AWS,本,EV">
+    <title>純粋関数型言語ではconsole.log(&#34;Hello&#34;)をlog &#34;Hello&#34;と書くし、foo = 42をwrite 42 fooと書く | 日本のテックニュース速報</title>
+    <meta name="description" content="いわゆる純粋関数型プログラミング言語は、「状態や作用を扱うことはできない/難しい/面倒」といわれることもあります。でも、たとえばJavaScriptでコンソールにHelloを出力するには、 JavaScript console.">
+    <meta name="keywords" content="JavaScript,Java">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話">
-    <meta property="og:description" content="本記事は「AWSを触り始めたばかりで、Lambda/EventBridge/IAMにまだ慣れていない方」を想定しています。 こんにちは。 ソーイ株式会社、入社１年目の村上です。 会社の業務として稼働中のサービスから出力されるCloudWatchLogsのログファイル.">
+    <meta property="og:title" content="純粋関数型言語ではconsole.log(&#34;Hello&#34;)をlog &#34;Hello&#34;と書くし、foo = 42をwrite 42 fooと書く">
+    <meta property="og:description" content="いわゆる純粋関数型プログラミング言語は、「状態や作用を扱うことはできない/難しい/面倒」といわれることもあります。でも、たとえばJavaScriptでコンソールにHelloを出力するには、 JavaScript console.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_362.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話">
-    <meta name="twitter:description" content="本記事は「AWSを触り始めたばかりで、Lambda/EventBridge/IAMにまだ慣れていない方」を想定しています。 こんにちは。 ソーイ株式会社、入社１年目の村上です。 会社の業務として稼働中のサービスから出力されるCloudWatchLogsのログファイル.">
+    <meta name="twitter:title" content="純粋関数型言語ではconsole.log(&#34;Hello&#34;)をlog &#34;Hello&#34;と書くし、foo = 42をwrite 42 fooと書く">
+    <meta name="twitter:description" content="いわゆる純粋関数型プログラミング言語は、「状態や作用を扱うことはできない/難しい/面倒」といわれることもあります。でも、たとえばJavaScriptでコンソールにHelloを出力するには、 JavaScript console.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話",
-        "description": "本記事は「AWSを触り始めたばかりで、Lambda/EventBridge/IAMにまだ慣れていない方」を想定しています。 こんにちは。 ソーイ株式会社、入社１年目の村上です。 会社の業務として稼働中のサービスから出力されるCloudWatchLogsのログファイル.",
+        "headline": "純粋関数型言語ではconsole.log(&#34;Hello&#34;)をlog &#34;Hello&#34;と書くし、foo = 42をwrite 42 fooと書く",
+        "description": "いわゆる純粋関数型プログラミング言語は、「状態や作用を扱うことはできない/難しい/面倒」といわれることもあります。でも、たとえばJavaScriptでコンソールにHelloを出力するには、 JavaScript console.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-22T03:17:30",
-        "dateModified": "2026-01-24T04:37:21.815743",
+        "datePublished": "2026-02-01T01:36:23",
+        "dateModified": "2026-02-01T08:35:20.582182",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_362.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_362.html",
-        "articleSection": "ガジェット",
-        "keywords": ["AWS","本","EV"]
+        "articleSection": "プログラミング",
+        "keywords": ["JavaScript","Java"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "ガジェット",
-                "item": "https://toy1021.github.io/affiliate2/#category=ガジェット"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話",
+                "name": "純粋関数型言語ではconsole.log(&#34;Hello&#34;)をlog &#34;Hello&#34;と書くし、foo = 42をwrite 42 fooと書く",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_362.html"
             }
         ]
@@ -113,42 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=ガジェット">ガジェット</a></li>
-                <li aria-current="page">AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">純粋関数型言語ではconsole.log(&#34;Hello&#34;)をlog &#34;Hello&#34;と書くし、foo ...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話</h1>
+                <h1>純粋関数型言語ではconsole.log(&#34;Hello&#34;)をlog &#34;Hello&#34;と書くし、foo = 42をwrite 42 fooと書く</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/chaochire/items/5e291fdc9a199012cfc9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: ガジェット</span>
-                    <time datetime="2026-01-22T03:17:30">
-                        公開: 2026-01-22T03:17:30
+                    <span class="source">出典: <a href="https://qiita.com/hiruberuto/items/4d8a4739cd738c425ee2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-02-01T01:36:23">
+                        公開: 2026-02-01T01:36:23
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AWS</span>
-                    <span class="tag">本</span>
-                    <span class="tag">EV</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Java</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本記事は「AWSを触り始めたばかりで、Lambda/EventBridge/IAMにまだ慣れていない方」を想定しています。
+                    いわゆる純粋関数型プログラミング言語は、「状態や作用を扱うことはできない/難しい/面倒」といわれることもあります。でも、たとえばJavaScriptでコンソールにHelloを出力するには、
 
-こんにちは。
-ソーイ株式会社、入社１年目の村上です。
-会社の業務として稼働中のサービスから出力されるCloudWatchLogsのログファイル...
+JavaScript
+console.log("Hello")
+
+と書く一方で、...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/chaochire/items/5e291fdc9a199012cfc9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/hiruberuto/items/4d8a4739cd738c425ee2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,30 +161,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=JavaScript&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="JavaScript - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-title">JavaScript - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでJavaScriptに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Java&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Java - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">Java - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでJavaに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -194,23 +194,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>ガジェット関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +225,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2975.html">
+                    <a href="Zennのトレンド_5844.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ZennのシンタックスハイライターをPrism.jsからShikiに移行しました</span>
+                        <span class="nav-title">【個人開発】QAをAIがしてくれるサービスをつくった</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1338.html">
+                    <a href="気になる記になる_3053.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">[翻訳] Anthropic ハッカソン優勝者による Claude Code 完全ガイド【応用編】</span>
+                        <span class="nav-title">C smart、｢MacBook Air/Pro｣を最大15,000円オフで販売するキャンペーンを開...</span>
                     </a>
                 </div>
             </div>
@@ -247,13 +247,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6087.html">
-                        <h3>任天堂の最新玩具は「しゃべる花」--3月12日発売　特徴は</h3>
+                    <a href="Zennのトレンド_5844.html">
+                        <h3>【個人開発】QAをAIがしてくれるサービスをつくった</h3>
                         <div class="related-meta">
-                            <span class="category">ガジェット</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">任天堂が送り出す最新のガジェットは、ただの「おしゃべり」にあらず。ある時は相棒、ある時は目覚まし時計、そしてまたある時は温度計──。奇妙で愛らしい、多機能ガジェットが春にやってくる。.</p>
+                        <p class="related-summary">org/wiki/品質保証 個人開発では機能を作るだけで精一杯で、QAは後回しになりがちです。 結局、自分でちょっと触って動けばそのままリリースすることが多いです 一方、業務では品質を守るためにQAは...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_6713.html">
+                        <h3>【Antigravity】動画編集ド素人の学生が、Pythonで「ゆっくり実況」の完全自動化に挑んでみた話</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">Antigravityとは Googleが開発した最新のAIファーストな統合開発環境（IDE）です。 従来の「コード補完」にとどまらず、「こんなアプリが作りたい」とチャットで伝えるだけで、AIエージェ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_1233.html">
+                        <h3>LazyNix: 誰でも作れる再現可能な開発環境</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">dev/shundeveloper/articles/36307d821d40f7 Nixは素晴らしい Nixを使えば開発環境の辛いところは大体解決できます。再現性のある「開発環境構築」や「パッケージ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_7089.html">
+                        <h3>寿司屋のサイトをmicroCMSからpitcmsに乗り換えた</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">microCMSからpitcmsにヘッドレスCMSを移行したのでその記録をのこします。 開発した本人なので、贔屓目マックスではありますが、Jamstackアーキテクチャのサイトには最適な選択肢だと思っ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_8549.html">
+                        <h3>「オンボーディングが早い」と言われるためにやっていること</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに 転職や異動のたびに「立ち上がりが早いですね」と言われることが多いので、自分がやっていることを言語化してみました。 はじめに オンボーディングの速さは、エンジニアとしての評価に直結します。早く...</p>
                     </a>
                 </article>
             </div>

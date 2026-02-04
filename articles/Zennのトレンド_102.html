@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSSでSBOM管理ダッシュボードを作った - JVN連携・経産省ガイドライン自己チェック対応 | 日本のテックニュース速報</title>
-    <meta name="description" content="json作った。で、これどうする？ GitHubに置く？S3？ローカル？ 複数プロジェクトの脆弱性を把握したい 「うちの全システムにLog4jある？」って聞かれても即答できない 各プロジェクトのpackage. はじめに SBOMHub というOSSを作りました">
-    <meta name="keywords" content="GitHub">
+    <title>Dockerで開発して、AWSで本番運用するとはどういうことか〜タスクをこなすことに必死で、仕組みを理解していなかった自分のための整理〜 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに これまで私は、目の前の「開発タスク」をさばくに必死でした。同時にPMとしてフロントにたったり、他の作業も山ほどありAPIを書いたり、業務としては成立していたと思いますが、基礎的なことを学ぶ時間がありませんでした">
+    <meta name="keywords" content="AWS,Docker,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="OSSでSBOM管理ダッシュボードを作った - JVN連携・経産省ガイドライン自己チェック対応">
-    <meta property="og:description" content="json作った。で、これどうする？ GitHubに置く？S3？ローカル？ 複数プロジェクトの脆弱性を把握したい 「うちの全システムにLog4jある？」って聞かれても即答できない 各プロジェクトのpackage. はじめに SBOMHub というOSSを作りました">
+    <meta property="og:title" content="Dockerで開発して、AWSで本番運用するとはどういうことか〜タスクをこなすことに必死で、仕組みを理解していなかった自分のための整理〜">
+    <meta property="og:description" content="はじめに これまで私は、目の前の「開発タスク」をさばくに必死でした。同時にPMとしてフロントにたったり、他の作業も山ほどありAPIを書いたり、業務としては成立していたと思いますが、基礎的なことを学ぶ時間がありませんでした">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_102.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="OSSでSBOM管理ダッシュボードを作った - JVN連携・経産省ガイドライン自己チェック対応">
-    <meta name="twitter:description" content="json作った。で、これどうする？ GitHubに置く？S3？ローカル？ 複数プロジェクトの脆弱性を把握したい 「うちの全システムにLog4jある？」って聞かれても即答できない 各プロジェクトのpackage. はじめに SBOMHub というOSSを作りました">
+    <meta name="twitter:title" content="Dockerで開発して、AWSで本番運用するとはどういうことか〜タスクをこなすことに必死で、仕組みを理解していなかった自分のための整理〜">
+    <meta name="twitter:description" content="はじめに これまで私は、目の前の「開発タスク」をさばくに必死でした。同時にPMとしてフロントにたったり、他の作業も山ほどありAPIを書いたり、業務としては成立していたと思いますが、基礎的なことを学ぶ時間がありませんでした">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "OSSでSBOM管理ダッシュボードを作った - JVN連携・経産省ガイドライン自己チェック対応",
-        "description": "json作った。で、これどうする？ GitHubに置く？S3？ローカル？ 複数プロジェクトの脆弱性を把握したい 「うちの全システムにLog4jある？」って聞かれても即答できない 各プロジェクトのpackage. はじめに SBOMHub というOSSを作りました",
+        "headline": "Dockerで開発して、AWSで本番運用するとはどういうことか〜タスクをこなすことに必死で、仕組みを理解していなかった自分のための整理〜",
+        "description": "はじめに これまで私は、目の前の「開発タスク」をさばくに必死でした。同時にPMとしてフロントにたったり、他の作業も山ほどありAPIを書いたり、業務としては成立していたと思いますが、基礎的なことを学ぶ時間がありませんでした",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-30T17:38:25",
-        "dateModified": "2026-01-31T20:28:28.876056",
+        "datePublished": "2026-02-01T07:58:55",
+        "dateModified": "2026-02-04T20:37:00.602450",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_102.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_102.html",
         "articleSection": "プログラミング",
-        "keywords": ["GitHub"]
+        "keywords": ["AWS","Docker","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "OSSでSBOM管理ダッシュボードを作った - JVN連携・経産省ガイドライン自己チェック対応",
+                "name": "Dockerで開発して、AWSで本番運用するとはどういうことか〜タスクをこなすことに必死で、仕組みを理解していなかった自分のための整理〜",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_102.html"
             }
         ]
@@ -114,24 +114,26 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">OSSでSBOM管理ダッシュボードを作った - JVN連携・経産省ガイドライン自己チェック対応</li>
+                <li aria-current="page">Dockerで開発して、AWSで本番運用するとはどういうことか〜タスクをこなすことに必死で、仕組みを...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>OSSでSBOM管理ダッシュボードを作った - JVN連携・経産省ガイドライン自己チェック対応</h1>
+                <h1>Dockerで開発して、AWSで本番運用するとはどういうことか〜タスクをこなすことに必死で、仕組みを理解していなかった自分のための整理〜</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/y1uda/articles/af313bb7f64fbc" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/digeon/articles/a35a7aee20888b" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-01-30T17:38:25">
-                        公開: 2026-01-30T17:38:25
+                    <time datetime="2026-02-01T07:58:55">
+                        公開: 2026-02-01T07:58:55
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">GitHub</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
@@ -139,30 +141,13 @@
                 
                 <div class="article-body">
                     はじめに
-SBOMHub というOSSを作りました。
-https://github.com/youichi-uda/sbomhub
-一言で言うと: Syft/Trivy/cdxgenで生成したSBOMを放り込むと、脆弱性を追跡してくれるダッシュボード。
-
- なぜ作ったか
-
- 困っていたこと
-
-
-SBOMは生成できるけど、どこに置く？
-
-Syftでsbom.json作った。で、これどうする？
-GitHubに置く？S3？ローカル？
-
-
-
-複数プロジェクトの脆弱性を把握したい
-
-「うちの全システムにLog4jある？」って聞かれても即答できない
-各プロジェクトのpackage.jsonを目g...
+これまで私は、目の前の「開発タスク」をさばくに必死でした。同時にPMとしてフロントにたったり、他の作業も山ほどありAPIを書いたり、業務としては成立していたと思いますが、基礎的なことを学ぶ時間がありませんでした。
+ただ、「じゃあ一人でゼロからシステムを作って、本番まで持っていってください」と言われたらどうだろう、と考えました。たぶん自分はできないな、と思いました。
+DockerもECSもRDSも触っている。でもそれは「触っている」だけで、なぜその構成になっているのか、どこで何が動いているのかを説明できない。このままだと、ずっと部分的な理解のままになってしまう気がして、開発環...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/y1uda/articles/af313bb7f64fbc" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/digeon/articles/a35a7aee20888b" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -175,16 +160,6 @@ GitHubに置く？S3？ローカル？
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
@@ -195,10 +170,20 @@ GitHubに置く？S3？ローカル？
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -239,16 +224,16 @@ GitHubに置く？S3？ローカル？
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_7214.html">
+                    <a href="iPhone_Mania_216.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">｢iPhone 18｣シリーズからベースモデルの発売時期変更との情報が再び</span>
+                        <span class="nav-title">AppleオンラインストアでMacの標準構成モデルの販売終了〜各スペック選択し注文へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_3972.html">
+                    <a href="iPhone_Mania_1695.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">2025年のセキュリティ最前線：ランサムウェア対策の完全ガイド：AI時代の攻撃から組織を守る実践的な...</span>
+                        <span class="nav-title">Mac購入がiPhone風に？Apple Storeが新UI採用</span>
                     </a>
                 </div>
             </div>
@@ -261,53 +246,53 @@ GitHubに置く？S3？ローカル？
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7412.html">
-                        <h3>【AWS】Kiroのステアリングの適用タイミングとスコープの検証【Kiro】</h3>
+                    <a href="CNET_Japan_最新情報総合_12.html">
+                        <h3>JAXA、H3ロケット9号機　3月末までの打ち上げ断念</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">宇宙航空研究開発機構（JAXA）と三菱重工業は2月3日、H3ロケット9号機による準天頂衛星システム「みちびき7号機」の打ち上げについて、当初設定していた予備期間である2026年3月31日までの打ち上げ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_5970.html">
+                        <h3>newmo、自動運転タクシーでマクニカと協業　実運用を前提に</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">newmoとマクニカは2月4日、自動運転タクシーの実用化に向け、車両開発で協業を開始したと発表した。マクニカが開発・提供する自動運転車両やセンサ、制御技術を活用し、newmoが進める自動運転タクシーの...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_9049.html">
+                        <h3>【インターン 2025】~ Finatext ~</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">01 約8ヶ月間、株式会社Finatextさんの長期インターンに参加させていただきました！ 金融やインフラといった、それまでの自分には想像もできなかった世界で過ごした時間は、大変でもあり、同時にとって...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_8419.html">
+                        <h3>2026年、AWS LambdaはVSCodeで開発するのがナウい</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに KiroのSteering(ステアリング)ファイルを設定することでプロダクト開発において常に意識しなければならない独自のコーディング規約やベストプラクティスなどの知識やルールをKiroに常に...</p>
+                        <p class="related-summary">久しぶりにLambdaをマネージメントコンソールで新規作成したのですが、見慣れないボタンが。 「Open in Visual Studio Code」？？ 興味本位でやってみます。 事前準備 ローカル...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_1151.html">
-                        <h3>そのインタラクション、どう作るか？</h3>
+                    <a href="Qiita_-_人気の記事_6925.html">
+                        <h3>【前編】新人エンジニアは、なぜ「止まってしまう」のか。─教える側の“死角”</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">GestureDetectorは使ったことありますか? Flutter使ってれば何度も使ったことあると思います。 しかし、そのほとんどはシングルタップを目的としたonTapのはずです。 この記事ではさ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_104.html">
-                        <h3>Claude Code Orchestra: Claude Code × Codex CLI × Gemini CLIの...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">Claude Code Orchestra: Claude Code × Codex CLI × Gemini CLIの最適解を探る こんにちは，松尾研究所の尾崎です．25卒でデータサイエンティストを...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_5368.html">
-                        <h3>git worktreeの不満を解消するためにCLIツールを自作した</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">com/708u/twig この記事ではtwigの紹介と、開発を通じて得た知見を共有します。 git worktreeとは git work. この記事について こんにちは、Progate Prosp...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_5858.html">
-                        <h3>実装はClaude、レビューはCodex ─ tmuxで繋ぐ開発フロー</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">! この記事は2026年1月現在の検証に基づく記述です。 この記事では、複数のAIエージェントを組み合わせた開発フローと、それを支える環境構築のTipsを紹介します。 私はClaude CodeやCo...</p>
+                        <p class="related-summary">はじめまして。 株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で つまずきやすいポイントを整理して発信しています。 PRUMについて気になった方は、 コーポレート...</p>
                     </a>
                 </article>
             </div>

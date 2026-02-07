@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rustを勉強して分かったC言語経験者がつまづきやすいポイント | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 先日Rustの開発環境を構築したので、理解度を深めるためにC言語っぽい感じで構造体の連結リストを作ってみました。 ところが、いざ書き始めるとコンパイルエラーが多発してしまい、Rustのルールに慣れるまで結構時間がかかるな…というのが正直な感想です。 この記事では.">
+    <title>Cargo-competeとCargo-snippetの融合ツールを作った話。 | 日本のテックニュース速報</title>
+    <meta name="description" content="まえがき お久しぶりです入茶してからものんびり競プロを進めているホベねこです。もうそれはそれはのんびり楽しくやっていたのですが、問題を解いているうちに似たような処理を書くことが増えてきて、自作ライブラリを作ろうとしたことが何度かありました。 自作ライブラリ管理したーい！.">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Rustを勉強して分かったC言語経験者がつまづきやすいポイント">
-    <meta property="og:description" content="はじめに 先日Rustの開発環境を構築したので、理解度を深めるためにC言語っぽい感じで構造体の連結リストを作ってみました。 ところが、いざ書き始めるとコンパイルエラーが多発してしまい、Rustのルールに慣れるまで結構時間がかかるな…というのが正直な感想です。 この記事では.">
+    <meta property="og:title" content="Cargo-competeとCargo-snippetの融合ツールを作った話。">
+    <meta property="og:description" content="まえがき お久しぶりです入茶してからものんびり競プロを進めているホベねこです。もうそれはそれはのんびり楽しくやっていたのですが、問題を解いているうちに似たような処理を書くことが増えてきて、自作ライブラリを作ろうとしたことが何度かありました。 自作ライブラリ管理したーい！.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5538.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rustを勉強して分かったC言語経験者がつまづきやすいポイント">
-    <meta name="twitter:description" content="はじめに 先日Rustの開発環境を構築したので、理解度を深めるためにC言語っぽい感じで構造体の連結リストを作ってみました。 ところが、いざ書き始めるとコンパイルエラーが多発してしまい、Rustのルールに慣れるまで結構時間がかかるな…というのが正直な感想です。 この記事では.">
+    <meta name="twitter:title" content="Cargo-competeとCargo-snippetの融合ツールを作った話。">
+    <meta name="twitter:description" content="まえがき お久しぶりです入茶してからものんびり競プロを進めているホベねこです。もうそれはそれはのんびり楽しくやっていたのですが、問題を解いているうちに似たような処理を書くことが増えてきて、自作ライブラリを作ろうとしたことが何度かありました。 自作ライブラリ管理したーい！.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Rustを勉強して分かったC言語経験者がつまづきやすいポイント",
-        "description": "はじめに 先日Rustの開発環境を構築したので、理解度を深めるためにC言語っぽい感じで構造体の連結リストを作ってみました。 ところが、いざ書き始めるとコンパイルエラーが多発してしまい、Rustのルールに慣れるまで結構時間がかかるな…というのが正直な感想です。 この記事では.",
+        "headline": "Cargo-competeとCargo-snippetの融合ツールを作った話。",
+        "description": "まえがき お久しぶりです入茶してからものんびり競プロを進めているホベねこです。もうそれはそれはのんびり楽しくやっていたのですが、問題を解いているうちに似たような処理を書くことが増えてきて、自作ライブラリを作ろうとしたことが何度かありました。 自作ライブラリ管理したーい！.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-01T03:07:28",
-        "dateModified": "2026-02-03T18:59:02.918492",
+        "datePublished": "2026-02-06T12:33:14",
+        "dateModified": "2026-02-07T16:32:38.523910",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5538.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5538.html",
-        "articleSection": "プログラミング",
+        "articleSection": "テクノロジー",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Rustを勉強して分かったC言語経験者がつまづきやすいポイント",
+                "name": "Cargo-competeとCargo-snippetの融合ツールを作った話。",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5538.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Rustを勉強して分かったC言語経験者がつまづきやすいポイント</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Cargo-competeとCargo-snippetの融合ツールを作った話。</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Rustを勉強して分かったC言語経験者がつまづきやすいポイント</h1>
+                <h1>Cargo-competeとCargo-snippetの融合ツールを作った話。</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/denden888/items/1ae89e9d8d5c2cfa8180?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-02-01T03:07:28">
-                        公開: 2026-02-01T03:07:28
+                    <span class="source">出典: <a href="https://qiita.com/hovenia-azedarach/items/882b4f7a6c0be4d1f448?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-02-06T12:33:14">
+                        公開: 2026-02-06T12:33:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
@@ -135,14 +135,14 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-先日Rustの開発環境を構築したので、理解度を深めるためにC言語っぽい感じで構造体の連結リストを作ってみました。
-ところが、いざ書き始めるとコンパイルエラーが多発してしまい、Rustのルールに慣れるまで結構時間がかかるな…というのが正直な感想です。
-この記事では...
+                    まえがき
+お久しぶりです入茶してからものんびり競プロを進めているホベねこです。もうそれはそれはのんびり楽しくやっていたのですが、問題を解いているうちに似たような処理を書くことが増えてきて、自作ライブラリを作ろうとしたことが何度かありました。
+
+自作ライブラリ管理したーい！...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/denden888/items/1ae89e9d8d5c2cfa8180?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/hovenia-azedarach/items/882b4f7a6c0be4d1f448?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -151,50 +151,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -209,16 +184,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_6010.html">
+                    <a href="Zennのトレンド_3275.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">純粋関数型言語ではconsole.log(&#34;Hello&#34;)をlog &#34;Hello&#34;と書くし、foo ...</span>
+                        <span class="nav-title">Claude Opus 4.6 × Vertex AI 完全ガイド：Claude Code を GC...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_7837.html">
+                    <a href="Qiita_-_人気の記事_2696.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AppleオンラインストアでMacの標準構成モデルの販売終了〜各スペック選択し注文へ</span>
+                        <span class="nav-title">NVMe ディスクコントローラー必須のAzure VMサイズへのサイズ変更は多くの制限がある</span>
                     </a>
                 </div>
             </div>
@@ -231,53 +206,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6997.html">
-                        <h3>ランクのドロップゾーン削除はなぜ？ 新実装の「硬質光メッシュ」って何？ Apex Legends新シーズンについて聞いた</h3>
+                    <a href="CNET_Japan_最新情報総合_40.html">
+                        <h3>「引っ越しトラブル」が増加傾向、国民生活センターが注意喚起　その中身とは</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">エレクトロニック・アーツは2月4日、シーズン28となる「Apex Legends: ブリーチ」についての情報が解禁された。今回、このApex Legends: ブリーチについて開発者にインタビューを実...</p>
+                        <p class="related-summary">引越に関するトラブルの相談が増加しているとして、国民生活センターが注意を呼び掛けている。全国の消費生活センターなどに寄せられた相談を分析した結果、特に新生活が始まる3～4月に件数が増える傾向があるとい...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8023.html">
-                        <h3>【前編】新人エンジニアは、なぜ「止まってしまう」のか。─教える側の“死角”</h3>
+                    <a href="CNET_Japan_最新情報総合_2060.html">
+                        <h3>ドコモの競争激化が響き、NTTが通期営業利益予想を1090億円下方修正</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめまして。 株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で つまずきやすいポイントを整理して発信しています。 PRUMについて気になった方は、 コーポレート...</p>
+                        <p class="related-summary">NTTが2025年度通期の営業利益予想を1090億円下方修正した。ドコモでの競争激化による販促費増加と、いつでもカエドキプログラムの返却率上昇がコスト増の主因となった。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5175.html">
-                        <h3>JOI2025/2026セミファイナル参戦記</h3>
+                    <a href="CNET_Japan_最新情報総合_8267.html">
+                        <h3>ビットコイン暴落、ピーク時の半値に迫る　1000万円割れ</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">こんにちは、kazuppaです。競技プログラミングなどをしています。 JOI2025/2026セミファイナルに参加したのでその記録を書きたいと思います。 day1まで 1月上旬はのんびりJOIをやって...</p>
+                        <p class="related-summary">暗号資産「ビットコイン」が急落している。4カ月前には1ビットコインが1900万円台に迫る場面もあったが、2月6日未明には1000万円台を割り込んだ。米ドル建てても6万2000ドル台まで下落しており、5...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_2827.html">
-                        <h3>Claude Code Skillsがわからなくて焦った僕が、最初に考えるべきだったこと</h3>
+                    <a href="CNET_Japan_最新情報総合_5910.html">
+                        <h3>レシートって紙の必要ある？ イオンが当たり前を問い直した結果</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは、TOKIUMの重村です。25卒として入社した後、新卒未経験でエンジニアになり、現在はAI出張手配プロダクトの開発チームリーダーをしています。 若手エンジニアの皆さん、Claude...</p>
+                        <p class="related-summary">紙のレシートは、当たり前に受け取るものなのか。それとも、見直す余地のある「無駄」なのか。流通大手イオンが、その「問い」に具体的な数字を示した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_8733.html">
-                        <h3>Tokyo 30の舞台裏？AWSで作る！フルマネージドな大規模GPUクラスターの構築/運用のリアル</h3>
+                    <a href="CNET_Japan_最新情報総合_4142.html">
+                        <h3>なぜ「キヤノン」の社名は「キャノン」と書いてはいけないのか</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに チューリングのMLOpsチームに所属する大戸（おおど）と言います。 2025年10月に入社し、クラウド上のGPUクラスターの構築・運用や、大量のデータセット管理システムの設計・開発など、ML...</p>
+                        <p class="related-summary">筆者が記者として駆け出しの頃、先輩からよく注意された表記のひとつが「キヤノン」だ。「キャノン」と書くと、即座に赤が入る。正式な社名表記は「キヤノン」であり、小さい「ャ」を用いる小書き文字は使われない。...</p>
                     </a>
                 </article>
             </div>

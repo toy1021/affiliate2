@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録 | 日本のテックニュース速報</title>
-    <meta name="description" content="js で開発を開始し、約4年半運用しています。 技術スタックは何度か変わっていて、最初は Next. これはなに？ 本番環境で約2年間 Prisma を使っていたプロジェクトを、Atlas + Kysely に移行した記録です">
+    <title>低コスト分析基盤として DuckDB を採用したら S3 読み込みがボトルネックになった話 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんにちは。PKSHA Technology で SWE をしている須藤です。 私の所属する PKSHA Speech Insight（PSI）チームでは、分析基盤として DuckDB + Lambda + S3 Parquet という構成を検討しました">
     <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録">
-    <meta property="og:description" content="js で開発を開始し、約4年半運用しています。 技術スタックは何度か変わっていて、最初は Next. これはなに？ 本番環境で約2年間 Prisma を使っていたプロジェクトを、Atlas + Kysely に移行した記録です">
+    <meta property="og:title" content="低コスト分析基盤として DuckDB を採用したら S3 読み込みがボトルネックになった話">
+    <meta property="og:description" content="はじめに こんにちは。PKSHA Technology で SWE をしている須藤です。 私の所属する PKSHA Speech Insight（PSI）チームでは、分析基盤として DuckDB + Lambda + S3 Parquet という構成を検討しました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9046.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録">
-    <meta name="twitter:description" content="js で開発を開始し、約4年半運用しています。 技術スタックは何度か変わっていて、最初は Next. これはなに？ 本番環境で約2年間 Prisma を使っていたプロジェクトを、Atlas + Kysely に移行した記録です">
+    <meta name="twitter:title" content="低コスト分析基盤として DuckDB を採用したら S3 読み込みがボトルネックになった話">
+    <meta name="twitter:description" content="はじめに こんにちは。PKSHA Technology で SWE をしている須藤です。 私の所属する PKSHA Speech Insight（PSI）チームでは、分析基盤として DuckDB + Lambda + S3 Parquet という構成を検討しました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録",
-        "description": "js で開発を開始し、約4年半運用しています。 技術スタックは何度か変わっていて、最初は Next. これはなに？ 本番環境で約2年間 Prisma を使っていたプロジェクトを、Atlas + Kysely に移行した記録です",
+        "headline": "低コスト分析基盤として DuckDB を採用したら S3 読み込みがボトルネックになった話",
+        "description": "はじめに こんにちは。PKSHA Technology で SWE をしている須藤です。 私の所属する PKSHA Speech Insight（PSI）チームでは、分析基盤として DuckDB + Lambda + S3 Parquet という構成を検討しました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-12T09:55:43",
-        "dateModified": "2026-01-13T14:28:08.084892",
+        "datePublished": "2026-02-12T07:00:33",
+        "dateModified": "2026-02-14T08:35:25.694267",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9046.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9046.html",
-        "articleSection": "プログラミング",
+        "articleSection": "その他",
         "keywords": ["本"]
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録",
+                "name": "低コスト分析基盤として DuckDB を採用したら S3 読み込みがボトルネックになった話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9046.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">低コスト分析基盤として DuckDB を採用したら S3 読み込みがボトルネックになった話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Prisma から Atlas + Kysely への移行 - Supabase 環境での実践記録</h1>
+                <h1>低コスト分析基盤として DuckDB を採用したら S3 読み込みがボトルネックになった話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/coji/articles/prisma-to-atlas-kysely-migration-with-supabase" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-01-12T09:55:43">
-                        公開: 2026-01-12T09:55:43
+                    <span class="source">出典: <a href="https://zenn.dev/pksha/articles/duckdb-s3-read-bottleneck" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-02-12T07:00:33">
+                        公開: 2026-02-12T07:00:33
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
@@ -138,16 +138,17 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    これはなに？
-本番環境で約2年間 Prisma を使っていたプロジェクトを、Atlas + Kysely に移行した記録です。Supabase の PostgreSQL を使っている環境だったので、いくつか注意点がありました。この記事では、移行の動機から具体的な手順、そして移行リスクを抑えるために追加した E2E テストまで、一連の流れを共有します。
+                    1. はじめに
+こんにちは。PKSHA Technology で SWE をしている須藤です。
+私の所属する PKSHA Speech Insight（PSI）チームでは、分析基盤として DuckDB + Lambda + S3 Parquet という構成を検討しました。ローカルでの検証では問題なく動いていたのですが、S3 に繋いだら想定より遅く、原因調査と改善をしました。本記事では、その過程で得た知見を共有します。
 
- プロジェクトの背景
-このプロジェクトは 2021年8月に Next.js で開発を開始し、約4年半運用しています。
-技術スタックは何度か変わっていて、最初は Next.js と Supabase SDK を使っていました。認証も S...
+ なぜ DuckDB なのか
+分析基盤を構築するにあたり、Athena や Redshift Serverless も検討しました。
+スケーラビリティや運用面ではこれ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/coji/articles/prisma-to-atlas-kysely-migration-with-supabase" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/pksha/articles/duckdb-s3-read-bottleneck" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -169,47 +170,27 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +205,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_5656.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3018.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">GLM 4.7と私：Benchmarkはすべてを語らない</span>
+                        <span class="nav-title">なぜ Windows標準メモ帳に脆弱性</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6966.html">
+                    <a href="Zennのトレンド_2231.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Vivliostyle CLI v10.3.0で追加されたCMYK対応について</span>
+                        <span class="nav-title">Claude Codeにコードジェネレーターを作らせるのがとても良かった</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +227,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2669.html">
-                        <h3>【TypeScript】AWS SDK for JavaScript v2からv3への移行ガイド：S3・Lambda・S...</h3>
+                    <a href="CNET_Japan_最新情報総合_432.html">
+                        <h3>三つ折りスマホ「Galaxy Z TriFold」、日本で展示開始--東京・原宿と大阪・なんばで</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに プロジェクトで使用している AWS SDK を v2 から v3 へと移行しました。v3 はモジュラアーキテクチャを採用しており、必要なパッケージのみをバンドルできるため、アプリケーションの...</p>
+                        <p class="related-summary">サムスン電子は2月12日、日本未発売の三つ折りスマートフォン「Samsung Galaxy Z TriFold」の展示を、東京・原宿の「Galaxy Harajuku」と大阪・なんばの「Galaxy ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_6553.html">
-                        <h3>コーディングを楽しめなくなった、あなたへ</h3>
+                    <a href="ASCII_jp__トップ_1768.html">
+                        <h3>3年待っててよかった！WF-1000XM6、すべてが進化したソニーの最上級ワイヤレスイヤホンがついに登場</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">正直、最近コーディングが「作業」になってきた エンジニア4年目になった。 新人の頃は、自分の書いたコードが動くだけで嬉しかった。console. log が出力されるだけで「おお」と思ったし、APIか...</p>
+                        <p class="related-summary">ソニーが贈る完全ワイヤレスイヤホンの最高峰が、約3年ぶりに本気の進化を遂げました。「WF-1000XM6」は、音質・ノイズキャンセリング・装着性・通話品質まで刷新した最新フラッグシップモデルです。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_6557.html">
-                        <h3>Zennの自動翻訳機能から学ぶプロダクト開発の難しさ</h3>
+                    <a href="ASCII_jp__トップ_677.html">
+                        <h3>かっぱ寿司「食べ放題」を全店実施を延長！すし、ラーメンなど100種が食べ放題</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに 2026年1月、Zennに自動翻訳機能が導入されました。著者が翻訳を許可した記事について、記事URLに?locale=enをつけることで英語版が読めるようになったのです。 当初はデフォルトで...</p>
+                        <p class="related-summary">かっぱ寿司は、全店で実施している「食べ放題」の開催期間を4月15日まで延長します。期間中は「平日価格」および「平日学割」も実施。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5303.html">
-                        <h3>AtCoderで橙になりました</h3>
+                    <a href="ASCII_jp__トップ_5835.html">
+                        <h3>【長野市中条】「おぶっこおやき」販売開始！信州の“おやき”×中条の“おぶっこ”郷土の味をひとつに　道の駅中条オリジナルお...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは、a1048576です。 2026年1月11日のARC212(Div. 2)にて入橙することができました。 あまり書くことがないですが、黄色になってからの約2年間を軽く振り返ろうと...</p>
+                        <p class="related-summary">【長野市中条】「おぶっこおやき」販売開始！信州の“おやき”×中条の“おぶっこ”郷土の味をひとつに 道の駅中条オリジナルおやき.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2606.html">
-                        <h3>【Crank.js】リアクティブという欠陥を完全解決したJavaScriptフレームワーク、Crank.jsの思想と信条</h3>
+                    <a href="ASCII_jp__トップ_1974.html">
+                        <h3>本気で欲しい！ 絶滅危惧種V8 NAを積むレクサス「RC F」、最後にして最高の有終の美に心が震えた</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ReactやVueとかの記事を見ていると、useMemoしろとuseMemoするなとか、イベントハンドラにuseEffectを使えとイベントハンドラにuseEffectを使うなとか、どうすりゃええねん...</p>
+                        <p class="related-summary">今や絶滅危惧種となった、大排気量自然吸気エンジン搭載モデル。そんな絶滅危惧種の1つであるレクサス「RC F」の“絶滅”は2025年1月に宣言されました。2025年11月に生産終了したRC F、その最終...</p>
                     </a>
                 </article>
             </div>

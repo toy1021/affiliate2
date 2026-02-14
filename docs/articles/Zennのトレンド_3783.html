@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分散サービスのトランザクションでアンチパターンを設計してしまった話　〜とその改善〜 | 日本のテックニュース速報</title>
-    <meta name="description" content="この記事は、Finatext Advent Calendar 2025 の 16 日目の記事です。 はじめに 分散サービスでアプリケーションを構築する際、「分散トランザクションの壁」にぶつかることは避けられません">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>DLL Hell から .NET の自己完結型デプロイまで：30年の依存関係戦争 | 日本のテックニュース速報</title>
+    <meta name="description" content="miseに、dotnet(C#)を管理させようとして、dotnetの独自性に気が付かせられた。Microsoftには、コンシューマー向けの独自OSと、幅広い開発者コミュニティを抱え、かなり長い間（今も）バージョン問題に取り組んできた経験がある。その結果が、dotnet に集約されている">
+    <meta name="keywords" content="Windows">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="分散サービスのトランザクションでアンチパターンを設計してしまった話　〜とその改善〜">
-    <meta property="og:description" content="この記事は、Finatext Advent Calendar 2025 の 16 日目の記事です。 はじめに 分散サービスでアプリケーションを構築する際、「分散トランザクションの壁」にぶつかることは避けられません">
+    <meta property="og:title" content="DLL Hell から .NET の自己完結型デプロイまで：30年の依存関係戦争">
+    <meta property="og:description" content="miseに、dotnet(C#)を管理させようとして、dotnetの独自性に気が付かせられた。Microsoftには、コンシューマー向けの独自OSと、幅広い開発者コミュニティを抱え、かなり長い間（今も）バージョン問題に取り組んできた経験がある。その結果が、dotnet に集約されている">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3783.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="分散サービスのトランザクションでアンチパターンを設計してしまった話　〜とその改善〜">
-    <meta name="twitter:description" content="この記事は、Finatext Advent Calendar 2025 の 16 日目の記事です。 はじめに 分散サービスでアプリケーションを構築する際、「分散トランザクションの壁」にぶつかることは避けられません">
+    <meta name="twitter:title" content="DLL Hell から .NET の自己完結型デプロイまで：30年の依存関係戦争">
+    <meta name="twitter:description" content="miseに、dotnet(C#)を管理させようとして、dotnetの独自性に気が付かせられた。Microsoftには、コンシューマー向けの独自OSと、幅広い開発者コミュニティを抱え、かなり長い間（今も）バージョン問題に取り組んできた経験がある。その結果が、dotnet に集約されている">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "分散サービスのトランザクションでアンチパターンを設計してしまった話　〜とその改善〜",
-        "description": "この記事は、Finatext Advent Calendar 2025 の 16 日目の記事です。 はじめに 分散サービスでアプリケーションを構築する際、「分散トランザクションの壁」にぶつかることは避けられません",
+        "headline": "DLL Hell から .NET の自己完結型デプロイまで：30年の依存関係戦争",
+        "description": "miseに、dotnet(C#)を管理させようとして、dotnetの独自性に気が付かせられた。Microsoftには、コンシューマー向けの独自OSと、幅広い開発者コミュニティを抱え、かなり長い間（今も）バージョン問題に取り組んできた経験がある。その結果が、dotnet に集約されている",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-16T00:43:34",
-        "dateModified": "2025-12-19T22:22:04.369463",
+        "datePublished": "2026-02-12T13:18:37",
+        "dateModified": "2026-02-14T02:05:43.316993",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3783.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3783.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "プログラミング",
+        "keywords": ["Windows"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "分散サービスのトランザクションでアンチパターンを設計してしまった話　〜とその改善〜",
+                "name": "DLL Hell から .NET の自己完結型デプロイまで：30年の依存関係戦争",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3783.html"
             }
         ]
@@ -113,37 +113,37 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">分散サービスのトランザクションでアンチパターンを設計してしまった話　〜とその改善〜</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">DLL Hell から .NET の自己完結型デプロイまで：30年の依存関係戦争</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>分散サービスのトランザクションでアンチパターンを設計してしまった話　〜とその改善〜</h1>
+                <h1>DLL Hell から .NET の自己完結型デプロイまで：30年の依存関係戦争</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/finatext/articles/481416ea9afa5c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-12-16T00:43:34">
-                        公開: 2025-12-16T00:43:34
+                    <span class="source">出典: <a href="https://zenn.dev/takekazuomi/articles/dll-hell-over30y" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-02-12T13:18:37">
+                        公開: 2026-02-12T13:18:37
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">Windows</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事は、Finatext Advent Calendar 2025 の 16 日目の記事です。
-
- はじめに
-分散サービスでアプリケーションを構築する際、「分散トランザクションの壁」にぶつかることは避けられません。単一データベースで保証されていた ACID 特性（特に原子性）が、複数サービスにまたがると簡単には実現できないからです。
-業務で複数の分散サービスとデータベースを更新する処理を実装する際、「DB の ACID 特性を最大限活用すれば、シンプルに実装できるのでは？」 という考えから設計を始めました。しかし、その結果として典型的なアンチパターンに陥り、深刻なバグを埋め込む設計に...
+                    miseに、dotnet(C#)を管理させようとして、dotnetの独自性に気が付かせられた。Microsoftには、コンシューマー向けの独自OSと、幅広い開発者コミュニティを抱え、かなり長い間（今も）バージョン問題に取り組んできた経験がある。その結果が、dotnet に集約されている。ここでは、その長い歴史を振り返り、現在の実装に至る道を再度辿る。
+Windows の DLL Hell は1990年代に開発者を苦しめた共有ライブラリのバージョン競合問題であり、.NET Framework では、これの解決も含め設計されたが、皮肉にもフレームワーク自体が新たな「DLL Hell」を生み出...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/finatext/articles/481416ea9afa5c" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/takekazuomi/articles/dll-hell-over30y" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -152,25 +152,60 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Windows&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Windows - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Windows - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでWindowsに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -185,16 +220,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5381.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5539.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">React の状態管理の歴史と、最新 API に込められた React の思想</span>
+                        <span class="nav-title">PayPayが米国進出へ Visaと提携</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_6293.html">
+                    <a href="Qiita_-_人気の記事_1182.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">折りたたみiPhoneがTouch ID内蔵サイドボタンを採用する理由とは</span>
+                        <span class="nav-title">AI部下10人記事に憧れて、Claude Codeに猫型PMシステムを作ってもらいました</span>
                     </a>
                 </div>
             </div>
@@ -207,53 +242,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5979.html">
-                        <h3>サムスンの「Micro RGB」搭載テレビ、55インチから展開へ　CES 2026で詳細発表</h3>
+                    <a href="気になる記になる_2729.html">
+                        <h3>ソニー、ワイヤレスイヤホン｢WF-1000XM6｣向けに早くもソフトウェアアップデート（v1.5.0）をリリース</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">サムスンは、これまで以上に優れた色彩表現を実現するテレビ「Micro RGB TV」のラインアップを拡充し、55インチからの小型サイズを展開する。.</p>
+                        <p class="related-summary">ソニーが昨日に発表し、日本では2月27日に発売する新型ワイヤレスイヤホン「WF-1000XM6」向けに早くも最新のソフトウェアアップデートをリリースしています。 リリースされているソフトウェアのバージ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1577.html">
-                        <h3>ソニーホンダのEV「AFEELA 1」、PSリモートプレイに対応</h3>
+                    <a href="Qiita_-_人気の記事_4897.html">
+                        <h3>仕様駆動開発で育てるコラボレーション・ユニット</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ソニー・ホンダモビリティは12月18日、電気自動車「AFEELA」に「PS リモートプレイ」を搭載すると発表した。車載エンタテインメントとして同アプリを導入するのは世界初となる。.</p>
+                        <p class="related-summary">「仕様駆動開発って何？」と思っている方でも読める記事です。 後半は思想強めです。 仕様駆動開発が生まれる背景 Vibe Codingの限界とリスク コーティングAIエージェントの普及で、設計なしに感覚...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4789.html">
-                        <h3>住信SBIは「ドコモSMTBネット銀行」に　ドコモ利用者へ住宅ローン金利優遇も</h3>
+                    <a href="Qiita_-_人気の記事_7026.html">
+                        <h3>.bashrc / .zshrc を使って開発コマンドを短縮する方法</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">NTTドコモ、三井住友信託銀行、住信SBIネット銀行の3社は12月19日、「住信SBIネット銀行」の商号をは2026年8月3日付けで「ドコモSMTBネット銀行」に変更すると発表した。関係当局の認可を前...</p>
+                        <p class="related-summary">こんにちは。 ソーイ株式会社、入社１年目の村上です。 Laravel開発中、docker関係のコマンドやバッチコマンドの入力が煩わしく感じました。 READMEやドキュメント、該当のバッチファイルを確...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2382.html">
-                        <h3>成田空港、出発ロビーに衣類圧縮機　「スーツケースに入らない」を解決</h3>
+                    <a href="Zennのトレンド_3934.html">
+                        <h3>octorusはなぜ30万行のdiffを高速表示できるのか？</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">成田国際空港は12月19日、衣類圧縮機を出発ロビーに設置する実証実験を開始すると発表した。SJOYと共同で、2026年1月13日から15日までの3日間、成田空港第2ターミナルおよび第3ターミナルに専用...</p>
+                        <p class="related-summary">dev/ushironoko/articles/90d34dd61a1825 以前上記で、自作しているtuiツールを紹介しました。 需要があるかわかりませんが、今回はoctorusで行っているパフォー...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1998.html">
-                        <h3>韓国サムスン半導体、ついに2nmプロセス量産　Galaxy向け「Exnos 2600」正式発表</h3>
+                    <a href="Qiita_-_人気の記事_9105.html">
+                        <h3>エンジニアこそセルフコンパッションを学ぶべきだと思った理由</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">サムスンが新たなSoCを発表した。今後登場するGalaxyシリーズの性能を左右する存在になる可能性がある──。.</p>
+                        <p class="related-summary">理想と現実のギャップが苦しかった 理想の自分がある。 もっとできるはず。 もっと成長しているはず。 でも現実はそこに届いていない。 私はこの“理想と現実のギャップ”に強いストレスを感じていた。 足りな...</p>
                     </a>
                 </article>
             </div>

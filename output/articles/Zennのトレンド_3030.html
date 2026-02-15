@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025年版: 開発環境のツールまとめ | 日本のテックニュース速報</title>
-    <meta name="description" content="2025年版: 開発環境のツールまとめ - プログラミング関連情報をお届け。">
-    <meta name="keywords" content="AWS">
+    <title>Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装 | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました">
+    <meta name="keywords" content="Python">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="2025年版: 開発環境のツールまとめ">
-    <meta property="og:description" content="2025年版: 開発環境のツールまとめ - プログラミング関連情報をお届け。">
+    <meta property="og:title" content="Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装">
+    <meta property="og:description" content="こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3030.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="2025年版: 開発環境のツールまとめ">
-    <meta name="twitter:description" content="2025年版: 開発環境のツールまとめ - プログラミング関連情報をお届け。">
+    <meta name="twitter:title" content="Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装">
+    <meta name="twitter:description" content="こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "2025年版: 開発環境のツールまとめ",
-        "description": "2025年版: 開発環境のツールまとめ - プログラミング関連情報をお届け。",
+        "headline": "Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装",
+        "description": "こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-19T01:00:01",
-        "dateModified": "2025-12-21T16:25:43.125391",
+        "datePublished": "2026-02-14T15:13:29",
+        "dateModified": "2026-02-15T14:29:28.381254",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3030.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3030.html",
         "articleSection": "プログラミング",
-        "keywords": ["AWS"]
+        "keywords": ["Python"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "2025年版: 開発環境のツールまとめ",
+                "name": "Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3030.html"
             }
         ]
@@ -114,42 +114,49 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">2025年版: 開発環境のツールまとめ</li>
+                <li aria-current="page">Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>2025年版: 開発環境のツールまとめ</h1>
+                <h1>Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/micin/articles/2025-12-19_k-ono65_dev_environment" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/t3tra/articles/248df893b306c8" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-12-19T01:00:01">
-                        公開: 2025-12-19T01:00:01
+                    <time datetime="2026-02-14T15:13:29">
+                        公開: 2026-02-14T15:13:29
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AWS</span>
+                    <span class="tag">Python</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事は MICIN Advent Calendar 2025 の 19日目の記事です。
-前回は藤原さんのペルソナの感情からはじめる肥満症治療プロダクト設計〜 Cursorで一日ハッカソンに挑んで見えたこと〜でした。
+                    こんにちは。前回 (#9 - MLIR の導入と最適化) では、
 
- 1.はじめに
-SREチームの小野です。
-普段はAWSやGCPなどのクラウドの管理やモニタリングの整備などを行っています。
-実はIT業界に就職したのは、「映画などで黒い画面に向かってカタカタしてる人がかっこよかったから」という私にとっては、モダンなIDEよりもターミナルやvimなどの方が好みです。
-とはいえIDEでサクサクと開発している人を見るとそれはそれで憧れるので、...
+なぜ LLVM IR 直生成をやめて MLIR に寄せたのか
+Two Worlds (Boxed / Unboxed) の設計意図
+参照カウント最適化の全体像
+
+を中心に書きました。
+今回は MLIR ダイアレクトの実装そのものに言及します。
+テーマは次の 2 つです。:
+
+Lython の MLIR Dialect 設計
+各 Lowering パスの実装と接続
+
+概念の話は前回述べたので、実際にどのパスで何をしているかを中心に追います。
+(ちなみに、今回は主題ではないので割愛しますが前回実装したいと言っていた Vect...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/micin/articles/2025-12-19_k-ono65_dev_environment" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/t3tra/articles/248df893b306c8" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,6 +169,16 @@ SREチームの小野です。
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
@@ -172,20 +189,10 @@ SREチームの小野です。
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +233,16 @@ SREチームの小野です。
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5304.html">
+                    <a href="Zennのトレンド_8457.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">キリスト教の教理問答ボット 開発</span>
+                        <span class="nav-title">金融取引分析エージェント(AIとデータサイエンス)- Python &amp; Google ADKで金融取...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_5188.html">
+                    <a href="Qiita_-_人気の記事_6100.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">意外と知らない！？Claude Codeで使える小技集</span>
+                        <span class="nav-title">【テスト】カバレッジ100%は安心していいわけじゃない</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +255,53 @@ SREチームの小野です。
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Zennのトレンド_6977.html">
-                        <h3>イベントソーシングから学ぶ、削除をドメインの言葉で表現する設計</h3>
+                    <a href="Publickey_4910.html">
+                        <h3>GitHub、YAMLではなく自然言語でビルドやデプロイなどのワークフローを記述できる「GitHub Agentic W...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">GitHubは、自然言語でGitHub Actionsワークフローを記述できる「GitHub Agentic Workflows」のテクニカルプレビューを発表しました。 Imagine waking ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_5836.html">
+                        <h3>Streamlit公式Skillsでベストプラクティスに沿ったアプリを瞬時に構築</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">株式会社ジェイテックジャパン CTOの高丘 @tomohisaです。C#イベントソーシング・CQRSのフレームワーク、Sekibanを社内で開発しています。オープンソースで公開していますのでよろしけれ...</p>
+                        <p class="related-summary">はじめに こんにちは！データエンジニアの山口歩夢です。 Streamlitは便利な関数を数多く提供しており、それらを組み合わせることでデータアプリケーションを手軽に開発できることが魅力のPythonラ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_8523.html">
-                        <h3>転職して4ヶ月、開発チームのリードを任されてやってきたこと</h3>
+                    <a href="Zennのトレンド_4898.html">
+                        <h3>非エンジニアがClaude Codeでアプリを作って公開した全記録</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">この記事は MOSH Advent Calendar 2025 の21日目の記事です。 こんにちは！勝間（@ryo_katsuma）です。今年の8月にMOSHに入社して、現在は新規機能開発チームでリー...</p>
+                        <p class="related-summary">自作したタスク管理アプリ「長い長いノート」 このアプリを、エンジニアではない人間がAIコーディングツールだけで作りました。 私はライターです。コードを自分でゼロから書く力はないし、読めているのかも正直...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_91.html">
-                        <h3>【公式】準備ゼロで使えるPyxel開発環境『Pyxel Code Maker』のご紹介</h3>
+                    <a href="Qiita_-_人気の記事_1448.html">
+                        <h3>SQLにむしゃくしゃしたのでフルAIコーディングで🐟自作プログラミング言語🍣を作った</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">もっと手軽にPyxelを使いたい！ Pyxel（ピクセル）は、Pythonを使ってレトロ調のゲームやアプリを作れるゲームエンジンです。（Pyxelの名前を聞くのが初めてという方は、紹介記事「【公式】レ...</p>
+                        <p class="related-summary">発端 先日、gfxさんの自作プログラミング言語の記事を読みました。 それで自分も自作プログラミング言語作りをやってみたくなり、CodexやClaudeをしばくこと幾晩。ちょっとしたプログラミング言語と...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_1729.html">
-                        <h3>標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ ど...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_33.html">
-                        <h3>全てをなんちゃってソースコードにするクソアプリ</h3>
+                    <a href="Qiita_-_人気の記事_8815.html">
+                        <h3>保守的な現場でも負けない！「こっそり自動化」で自習時間を捻出するエンジニアの処世術</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">この記事はクソアプリアドベントカレンダー20日目の記事となります。 19日目は@kokusinさんの 特定のワードに反応してミーム音源を勝手に流すクソアプリでした。ものすごくバズっています。 日常でた...</p>
+                        <p class="related-summary">保守的な現場でも負けない！「こっそり自動化」で自習時間を捻出するエンジニアの処世術 はじめに 「自動化なんて危ないから手動でやれ」 「新しいツールを入れるなら、承認のために会議を3回開く必要がある」 ...</p>
                     </a>
                 </article>
             </div>

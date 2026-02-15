@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>チーム開発におけるバグと責任  - 個人を責めない文化が組織を強くする | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに - バグと責任は「個人」ではなく「チーム」の問題である 個人が業務で書いたコードは、厳密には「個人のコード」ではなく「チームのコード」である。なぜなら、チームメンバーによるレビューを経てマージされる以上、その成果物はチーム全体の合意と責任のもとに成立しているからだ">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装 | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました">
+    <meta name="keywords" content="Python">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="チーム開発におけるバグと責任  - 個人を責めない文化が組織を強くする">
-    <meta property="og:description" content="はじめに - バグと責任は「個人」ではなく「チーム」の問題である 個人が業務で書いたコードは、厳密には「個人のコード」ではなく「チームのコード」である。なぜなら、チームメンバーによるレビューを経てマージされる以上、その成果物はチーム全体の合意と責任のもとに成立しているからだ">
+    <meta property="og:title" content="Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装">
+    <meta property="og:description" content="こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9654.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="チーム開発におけるバグと責任  - 個人を責めない文化が組織を強くする">
-    <meta name="twitter:description" content="はじめに - バグと責任は「個人」ではなく「チーム」の問題である 個人が業務で書いたコードは、厳密には「個人のコード」ではなく「チームのコード」である。なぜなら、チームメンバーによるレビューを経てマージされる以上、その成果物はチーム全体の合意と責任のもとに成立しているからだ">
+    <meta name="twitter:title" content="Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装">
+    <meta name="twitter:description" content="こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "チーム開発におけるバグと責任  - 個人を責めない文化が組織を強くする",
-        "description": "はじめに - バグと責任は「個人」ではなく「チーム」の問題である 個人が業務で書いたコードは、厳密には「個人のコード」ではなく「チームのコード」である。なぜなら、チームメンバーによるレビューを経てマージされる以上、その成果物はチーム全体の合意と責任のもとに成立しているからだ",
+        "headline": "Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装",
+        "description": "こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-24T09:43:54",
-        "dateModified": "2025-11-25T20:24:35.368887",
+        "datePublished": "2026-02-14T15:13:29",
+        "dateModified": "2026-02-15T20:29:50.866435",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9654.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9654.html",
         "articleSection": "プログラミング",
-        "keywords": []
+        "keywords": ["Python"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "チーム開発におけるバグと責任  - 個人を責めない文化が組織を強くする",
+                "name": "Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9654.html"
             }
         ]
@@ -114,35 +114,49 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">チーム開発におけるバグと責任  - 個人を責めない文化が組織を強くする</li>
+                <li aria-current="page">Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>チーム開発におけるバグと責任  - 個人を責めない文化が組織を強くする</h1>
+                <h1>Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/hiraoku/articles/a87ee1f2fe8d75" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/t3tra/articles/248df893b306c8" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-11-24T09:43:54">
-                        公開: 2025-11-24T09:43:54
+                    <time datetime="2026-02-14T15:13:29">
+                        公開: 2026-02-14T15:13:29
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">Python</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに - バグと責任は「個人」ではなく「チーム」の問題である
-個人が業務で書いたコードは、厳密には「個人のコード」ではなく「チームのコード」である。なぜなら、チームメンバーによるレビューを経てマージされる以上、その成果物はチーム全体の合意と責任のもとに成立しているからだ。
-しかし、プロダクトで設計ミスやバグが発生した際、その責任を設計者や実装者の個人に押し付けようとするエンジニアが一定数いる。
-前述の通り、設計や実装はチームの合意によって成立している以上、責任もまたチームに帰属するべきである。それにもかかわらず責任を個人に向けてしまうのは、そのエンジニア個人の問題というより、そう...
+                    こんにちは。前回 (#9 - MLIR の導入と最適化) では、
+
+なぜ LLVM IR 直生成をやめて MLIR に寄せたのか
+Two Worlds (Boxed / Unboxed) の設計意図
+参照カウント最適化の全体像
+
+を中心に書きました。
+今回は MLIR ダイアレクトの実装そのものに言及します。
+テーマは次の 2 つです。:
+
+Lython の MLIR Dialect 設計
+各 Lowering パスの実装と接続
+
+概念の話は前回述べたので、実際にどのパスで何をしているかを中心に追います。
+(ちなみに、今回は主題ではないので割愛しますが前回実装したいと言っていた Vect...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/hiraoku/articles/a87ee1f2fe8d75" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/t3tra/articles/248df893b306c8" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -155,20 +169,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -219,16 +233,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_67.html">
+                    <a href="Zennのトレンド_5764.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【JavaScript】単位をJSで取り扱えるようにしようという提案</span>
+                        <span class="nav-title">金融取引分析エージェント(AIとデータサイエンス)- Python &amp; Google ADKで金融取...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_7496.html">
+                    <a href="Qiita_-_人気の記事_7870.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Rubular を現代化した正規表現エディタ「Rubree」をリリースしました</span>
+                        <span class="nav-title">【テスト】カバレッジ100%は安心していいわけじゃない</span>
                     </a>
                 </div>
             </div>
@@ -241,53 +255,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_7899.html">
-                        <h3>Rubyの次バージョンは「Ruby 4.0」に。「Ruby 4.0 Preview2」がリリース</h3>
+                    <a href="Publickey_6011.html">
+                        <h3>GitHub、YAMLではなく自然言語でビルドやデプロイなどのワークフローを記述できる「GitHub Agentic W...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">0 Preview Release 2」をリリースしました。 Rubyはまつもとゆきひろ氏により1993年に開発が始められたプログラミング言語です。シンプルで生産性の高いプログラムを書くことが. Ru...</p>
+                        <p class="related-summary">GitHubは、自然言語でGitHub Actionsワークフローを記述できる「GitHub Agentic Workflows」のテクニカルプレビューを発表しました。 Imagine waking ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5022.html">
-                        <h3>PythonでLLM APIを並列実行する方法</h3>
+                    <a href="Qiita_-_人気の記事_2761.html">
+                        <h3>エンジニアの勉強って結局どうやれば良いの？を再度考え直してみました</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">株式会社シンシアでは、実務未経験のエンジニアの方や学生エンジニアインターンを採用し一緒に働いています。 ※ シンシアにおける働き方の様子はこちら シンシアでは、年間100人程度の実務未経験の方が応募し...</p>
+                        <p class="related-summary">はじめに 最近は生成AIの成長が目まぐるしく、どんどん新しい技術が台頭してきています。 私自身、この技術の荒波に食らいつくため継続的に自己研鑽を続けていますが、なかなか身についている実感が得られていま...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_6185.html">
-                        <h3>QAとSREが統合したQualityチームの挑戦</h3>
+                    <a href="Zennのトレンド_301.html">
+                        <h3>Streamlit公式Skillsでベストプラクティスに沿ったアプリを瞬時に構築</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに Luupに所属している、ぐりもお（@gr1m0h）です。 2025年7月、私が所属していたInfra/SREチームとQAチームが統合し、新たにQualityチームが発足しました。この体制変更...</p>
+                        <p class="related-summary">はじめに こんにちは！データエンジニアの山口歩夢です。 Streamlitは便利な関数を数多く提供しており、それらを組み合わせることでデータアプリケーションを手軽に開発できることが魅力のPythonラ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_280.html">
-                        <h3>【スクラム開発】ETロボコンで学んだ、若手が成長するマネジメントのカタチ</h3>
+                    <a href="Zennのトレンド_788.html">
+                        <h3>非エンジニアがClaude Codeでアプリを作って公開した全記録</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">自作したタスク管理アプリ「長い長いノート」 このアプリを、エンジニアではない人間がAIコーディングツールだけで作りました。 私はライターです。コードを自分でゼロから書く力はないし、読めているのかも正直...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7455.html">
+                        <h3>SQLにむしゃくしゃしたのでフルAIコーディングで🐟自作プログラミング言語🍣を作った</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">こんな方におすすめ！ 若手育成のための手段に悩んでいる！（上司） マネジメントスキルを養いたい！（若手） スクラム開発を取り入れたい！ １. はじめに こんにちは。 私は情報システムやサービス運用の研...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_6982.html">
-                        <h3>サプライチェーン攻撃の実態解明とカナリーの防衛戦略</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに 2025 年 9 月中旬、npm パッケージマネージャでサプライチェーン攻撃が連続して発生しました。開発に欠かせないツールが標的になったこの事件は、多くのエンジニアにとって他人事ではありませ...</p>
+                        <p class="related-summary">発端 先日、gfxさんの自作プログラミング言語の記事を読みました。 それで自分も自作プログラミング言語作りをやってみたくなり、CodexやClaudeをしばくこと幾晩。ちょっとしたプログラミング言語と...</p>
                     </a>
                 </article>
             </div>

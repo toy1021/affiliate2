@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マルチテナント作るならPostgres一択。アプリ層に依存しない「RLS」によるデータ隔離が最強すぎる話 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 複数ユーザー（複数企業）のデータを 1 つのアプリケーションで扱う場合、マルチテナントという考え方がとても便利です。 ただ、マルチテナントを採用する際に必ず悩むのが DB 設計。 テナントごとに DB を分けるべきか 1 つの DB にまとめるべきか どの D.">
+    <title>X-Frame-Optionsが非推奨だよって言われたから調べたらそんなことなかった | 日本のテックニュース速報</title>
+    <meta name="description" content="調べた経緯 先日、とあるウェブサイトの脆弱性診断の結果を読んだ際に「X-Frame-Optionsは非推奨になっています。CSP frame-ancestoresの利用を検討していください。」と言われました。対応しないと思っていた中で一応MDNのページを調べてみたところ、.">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="マルチテナント作るならPostgres一択。アプリ層に依存しない「RLS」によるデータ隔離が最強すぎる話">
-    <meta property="og:description" content="はじめに 複数ユーザー（複数企業）のデータを 1 つのアプリケーションで扱う場合、マルチテナントという考え方がとても便利です。 ただ、マルチテナントを採用する際に必ず悩むのが DB 設計。 テナントごとに DB を分けるべきか 1 つの DB にまとめるべきか どの D.">
+    <meta property="og:title" content="X-Frame-Optionsが非推奨だよって言われたから調べたらそんなことなかった">
+    <meta property="og:description" content="調べた経緯 先日、とあるウェブサイトの脆弱性診断の結果を読んだ際に「X-Frame-Optionsは非推奨になっています。CSP frame-ancestoresの利用を検討していください。」と言われました。対応しないと思っていた中で一応MDNのページを調べてみたところ、.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_599.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="マルチテナント作るならPostgres一択。アプリ層に依存しない「RLS」によるデータ隔離が最強すぎる話">
-    <meta name="twitter:description" content="はじめに 複数ユーザー（複数企業）のデータを 1 つのアプリケーションで扱う場合、マルチテナントという考え方がとても便利です。 ただ、マルチテナントを採用する際に必ず悩むのが DB 設計。 テナントごとに DB を分けるべきか 1 つの DB にまとめるべきか どの D.">
+    <meta name="twitter:title" content="X-Frame-Optionsが非推奨だよって言われたから調べたらそんなことなかった">
+    <meta name="twitter:description" content="調べた経緯 先日、とあるウェブサイトの脆弱性診断の結果を読んだ際に「X-Frame-Optionsは非推奨になっています。CSP frame-ancestoresの利用を検討していください。」と言われました。対応しないと思っていた中で一応MDNのページを調べてみたところ、.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "マルチテナント作るならPostgres一択。アプリ層に依存しない「RLS」によるデータ隔離が最強すぎる話",
-        "description": "はじめに 複数ユーザー（複数企業）のデータを 1 つのアプリケーションで扱う場合、マルチテナントという考え方がとても便利です。 ただ、マルチテナントを採用する際に必ず悩むのが DB 設計。 テナントごとに DB を分けるべきか 1 つの DB にまとめるべきか どの D.",
+        "headline": "X-Frame-Optionsが非推奨だよって言われたから調べたらそんなことなかった",
+        "description": "調べた経緯 先日、とあるウェブサイトの脆弱性診断の結果を読んだ際に「X-Frame-Optionsは非推奨になっています。CSP frame-ancestoresの利用を検討していください。」と言われました。対応しないと思っていた中で一応MDNのページを調べてみたところ、.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-05T18:19:03",
-        "dateModified": "2026-02-07T16:32:38.523583",
+        "datePublished": "2026-02-15T00:43:20",
+        "dateModified": "2026-02-16T10:52:42.263435",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_599.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_599.html",
-        "articleSection": "ビジネス・経済",
+        "articleSection": "セキュリティ",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "ビジネス・経済",
-                "item": "https://toy1021.github.io/affiliate2/#category=ビジネス・経済"
+                "name": "セキュリティ",
+                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "マルチテナント作るならPostgres一択。アプリ層に依存しない「RLS」によるデータ隔離が最強すぎる話",
+                "name": "X-Frame-Optionsが非推奨だよって言われたから調べたらそんなことなかった",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_599.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=ビジネス・経済">ビジネス・経済</a></li>
-                <li aria-current="page">マルチテナント作るならPostgres一択。アプリ層に依存しない「RLS」によるデータ隔離が最強すぎ...</li>
+                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
+                <li aria-current="page">X-Frame-Optionsが非推奨だよって言われたから調べたらそんなことなかった</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>マルチテナント作るならPostgres一択。アプリ層に依存しない「RLS」によるデータ隔離が最強すぎる話</h1>
+                <h1>X-Frame-Optionsが非推奨だよって言われたから調べたらそんなことなかった</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/hey_miii/items/daac2f459d2aa76206ad?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: ビジネス・経済</span>
-                    <time datetime="2026-02-05T18:19:03">
-                        公開: 2026-02-05T18:19:03
+                    <span class="source">出典: <a href="https://qiita.com/spin_atop/items/d65f9721bb63adc69c52?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: セキュリティ</span>
+                    <time datetime="2026-02-15T00:43:20">
+                        公開: 2026-02-15T00:43:20
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
@@ -135,17 +135,12 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-複数ユーザー（複数企業）のデータを 1 つのアプリケーションで扱う場合、マルチテナントという考え方がとても便利です。
-ただ、マルチテナントを採用する際に必ず悩むのが DB 設計。
-
-テナントごとに DB を分けるべきか
-1 つの DB にまとめるべきか
-どの D...
+                    調べた経緯
+先日、とあるウェブサイトの脆弱性診断の結果を読んだ際に「X-Frame-Optionsは非推奨になっています。CSP frame-ancestoresの利用を検討していください。」と言われました。対応しないと思っていた中で一応MDNのページを調べてみたところ、...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/hey_miii/items/daac2f459d2aa76206ad?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/spin_atop/items/d65f9721bb63adc69c52?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,50 +149,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%95%E8%B3%87&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="投資 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">投資 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで投資に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ビジネス - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">ビジネス - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでビジネスに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>ビジネス・経済関連のおすすめ</h3>
+                    <h3>セキュリティ関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%95%E8%B3%87&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="投資 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">投資 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで投資に関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ビジネス - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ビジネス - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでビジネスに関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -212,16 +182,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_2381.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_8053.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ソニー、次期フラッグシップワイヤレスイヤホン｢WF-1000XM6｣を現地時間の2月12日に発表へ｜...</span>
+                        <span class="nav-title">米中で定着のロボタクシー 課題は</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_8385.html">
+                    <a href="気になる記になる_5325.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">｢iPhone 17e｣はDynamic Islandではなく引き続きノッチ有りのデザインか｜新型｢...</span>
+                        <span class="nav-title">Acer、2月20日よりパソコン製品価格を値上げへ｜メモリやSSDなど主要部材価格高騰が要因</span>
                     </a>
                 </div>
             </div>
@@ -234,33 +204,33 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8271.html">
-                        <h3>メタプラネット、ビットコイン評価損2000億円超</h3>
+                    <a href="ASCII_jp__トップ_3692.html">
+                        <h3>昨年は証券口座、今年は「オンラインストレージ」が狙われるかも！</h3>
                         <div class="related-meta">
-                            <span class="category">ビジネス・経済</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ビットコインのトレジャリー企業として知られるメタプラネットのビットコインの評価損が約2100億円に拡大している。4カ月前には1900万円に迫っていたビットコインの価格は急落が続き、2 月6日未明には1...</p>
+                        <p class="related-summary">マカフィーは、McAfee Labsの最新調査「2026年度版 詐欺の世界（State of the Scamiverse）」および、2026年に予測される詐欺手口をまとめた「2026年のサイバーセキ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5380.html">
-                        <h3>KDDI、第3四半期決算を発表できず----子会社の架空取引で売上2460億円を取り消しへ（更新）</h3>
+                    <a href="Publickey_1192.html">
+                        <h3>オープンソースの公式サポート終了後も、最小限のコストで安全に脆弱性対応を可能にする「TuxCare ELS」提供開始［P...</h3>
                         <div class="related-meta">
-                            <span class="category">ビジネス・経済</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">KDDIは2月6日、2026年3月期第3四半期決算短信の開示を延期すると発表した。四半期末後45日以内の開示ができない見通しだ。.</p>
+                        <p class="related-summary">OSやプログラミング言語のランタイムのアップデートは、プログラマやシステム運用者にとって常に悩みのタネだといえます。 一般に、数年ごとに発生するOSや言語のランタイム、ライブラリなどのメジャーアップデ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_93.html">
-                        <h3>なぜJavaのジェネリクスの型推論は同じ型を強制しないのか</h3>
+                    <a href="Publickey_1727.html">
+                        <h3>さくらのクラウド、ガバメントクラウドの条件クリアまであと3つまで到達。残りは統制やセキュリティ認証、オブジェクトストレー...</h3>
                         <div class="related-meta">
-                            <span class="category">ビジネス・経済</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは。Nstockのtouyuです。 Nstockに入社し、初めて本格的にJavaでコードを書くようになりました。 Javaの書き味は思っていたよりモダンで、他言語からの類推でもある程...</p>
+                        <p class="related-summary">デジタル庁はガバメントクラウドの構築に関して、さくらのクラウドの開発計画の進捗状況を1月30日付けで公表しました。 5つのクラウドがガバメントクラウドに選出 ガバメントクラウドは日本政府共通のクラウド...</p>
                     </a>
                 </article>
             </div>

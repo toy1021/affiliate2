@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSSを、Vitestでテストしてみる | 日本のテックニュース速報</title>
-    <meta name="description" content="dev/silverbirder/articles/df6752b230f04c ソースコードは、以下に置いています。 https://github. 以下の記事で書いた CSSをテストする方法について、試してみました">
-    <meta name="keywords" content="GitHub,EV">
+    <title>useEffect で API を叩くのを卒業しよう | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="CSSを、Vitestでテストしてみる">
-    <meta property="og:description" content="dev/silverbirder/articles/df6752b230f04c ソースコードは、以下に置いています。 https://github. 以下の記事で書いた CSSをテストする方法について、試してみました">
+    <meta property="og:title" content="useEffect で API を叩くのを卒業しよう">
+    <meta property="og:description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7314.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CSSを、Vitestでテストしてみる">
-    <meta name="twitter:description" content="dev/silverbirder/articles/df6752b230f04c ソースコードは、以下に置いています。 https://github. 以下の記事で書いた CSSをテストする方法について、試してみました">
+    <meta name="twitter:title" content="useEffect で API を叩くのを卒業しよう">
+    <meta name="twitter:description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "CSSを、Vitestでテストしてみる",
-        "description": "dev/silverbirder/articles/df6752b230f04c ソースコードは、以下に置いています。 https://github. 以下の記事で書いた CSSをテストする方法について、試してみました",
+        "headline": "useEffect で API を叩くのを卒業しよう",
+        "description": "はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-10T23:00:01",
-        "dateModified": "2026-02-12T14:49:42.605695",
+        "datePublished": "2026-02-14T10:57:20",
+        "dateModified": "2026-02-16T13:06:16.485298",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7314.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7314.html",
-        "articleSection": "プログラミング",
-        "keywords": ["GitHub","EV"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "CSSを、Vitestでテストしてみる",
+                "name": "useEffect で API を叩くのを卒業しよう",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7314.html"
             }
         ]
@@ -113,50 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">CSSを、Vitestでテストしてみる</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">useEffect で API を叩くのを卒業しよう</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>CSSを、Vitestでテストしてみる</h1>
+                <h1>useEffect で API を叩くのを卒業しよう</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/silverbirder/articles/e1a70ea756a0" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-02-10T23:00:01">
-                        公開: 2026-02-10T23:00:01
+                    <span class="source">出典: <a href="https://zenn.dev/ashunar0/articles/32419c3c60cc53" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-02-14T10:57:20">
+                        公開: 2026-02-14T10:57:20
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">GitHub</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    以下の記事で書いた CSSをテストする方法について、試してみました。
-https://zenn.dev/silverbirder/articles/df6752b230f04c
-ソースコードは、以下に置いています。
-https://github.com/silverbirder/css-testing
-検証ページは、以下のURLです。
-https://learn-layout.vercel.app
-
- 何をテストするか
-CSSを書いていて、以下のミスをしたことはありませんか？
+                    はじめに
+「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。
+でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して。チュートリアルで覚えたそのパターンを、特に疑うこともなく使い続けていた。
+「やめた方がいいのは分かった。じゃあ何を使えばいいの？」— この記事は、その疑問に対する自分なりの答えを、実際にTanStack Queryに置き換えてみた過程から書いている。
 
 
-flex-shrink の指定を忘れて、要素が押しつぶされてしまった
-
-z-index の指定を間違えて、要...
+ useEffect + fetch で書くとこうなる...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/silverbirder/articles/e1a70ea756a0" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ashunar0/articles/32419c3c60cc53" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -165,60 +154,25 @@ z-index の指定を間違えて、要...
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -233,16 +187,16 @@ z-index の指定を間違えて、要...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_6305.html">
+                    <a href="Qiita_-_人気の記事_6278.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【深掘り】AIだけのSNS「Moltbook」が3分でハッキングされた件について語らせてくれ</span>
+                        <span class="nav-title">アセンブリ言語を学ぶことで得られるメリット【アセンブリ言語さくっと入門】</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_1342.html">
+                    <a href="iPhone_Mania_1227.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">サイバー攻撃G 企業から人採用か</span>
+                        <span class="nav-title">iPhone18 ProシリーズはC2に加えN2も搭載する可能性</span>
                     </a>
                 </div>
             </div>
@@ -255,53 +209,53 @@ z-index の指定を間違えて、要...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_7020.html">
-                        <h3>なぜTypeScriptは成功しているのか。作者ヘイルスバーグ氏が語る7つの教訓</h3>
+                    <a href="CNET_Japan_最新情報総合_6182.html">
+                        <h3>自動運転タクシー、悪天候もOKに--Waymoが「第6世代システム」を始動</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">TypeScriptの言語設計を行い、現在も開発をリードしているアンダース・ヘルスバーグ（Anders Hejlsberg）氏は、1983年に発売され大きな人気を得たプログラミング言語であるTurbo...</p>
+                        <p class="related-summary">自動運転タクシーを手がけるWaymoは木曜日、第6世代の自動運転システム「Waymo Driver」を用いた新たな取り組みを発表した。サンフランシスコ・ベイエリアとロサンゼルスにおいて、完全無人による...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1618.html">
-                        <h3>【最新版】GitHub Copilotを使っている人は全員&#34;SKILL.md&#34;も導入してください</h3>
+                    <a href="CNET_Japan_最新情報総合_5568.html">
+                        <h3>「ネット検索で上位＝信頼できる業者」とは限りません--不要な電気工事で高額請求も　消費者庁</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに 本記事はGitHub Copilotを使っている人は全員&#34;copilot-instructions. md&#34;を作成してくださいの続編になります。 本記事ではカスタムインストラクション(あるい...</p>
+                        <p class="related-summary">消費者庁は2月12日、停電などの電気トラブルに便乗し、不要な工事で高額請求を行う悪質な電気工事業者について注意喚起を公表した。2024年12月以降、各地の消費生活センターに同様の相談が多数寄せられてい...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4757.html">
-                        <h3>FlutterアプリでIsolateを使ってみる</h3>
+                    <a href="CNET_Japan_最新情報総合_4181.html">
+                        <h3>2028年ロス五輪で米国チームが「金」より先に「チタン」を身に着ける理由</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Flutterアプリ開発で重いデータ処理を実装しようとしたとき、非同期処理と並んで頭に浮かぶのが Isolate です。 Isolateとは？ Dartにおけるネイティブスレッドです。ただしいくつか特...</p>
+                        <p class="related-summary">オリンピックで米国代表チームが身につけるのは、メダルだけではない。スマートリング大手のOuraは、米国代表チームおよび2028年オリンピック・パラリンピック競技大会の公式ウェアラブルとなる戦略的パート...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_2548.html">
-                        <h3>Apple、｢HomePodソフトウェア 26.3｣をリリース｜パフォーマンスと安定性を改善</h3>
+                    <a href="気になる記になる_3020.html">
+                        <h3>CIO、Qi2.2規格対応の新型モバイルバッテリーを予告｜詳細は近日公開予定</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">本日、Appleが、「HomePod」向けソフトウェアの最新アップデートとなる「HomePodソフトウェアバージョン26. 3」を正式にリリースしました。 アップデートは「HomePod（第1世代）」...</p>
+                        <p class="related-summary">2規格に対応したモバイルバッテリーを発表することを予告しています。 同社はXで「いよいよQi2. 2登場！詳細は近日公開予定」の説明と共にティザー動画を公開し、Qi2.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2419.html">
-                        <h3>ZXing を利用した実装が悪いと思ったら、Excel 作のバーコードが罠だった話</h3>
+                    <a href="ASCII_jp__トップ_3673.html">
+                        <h3>ポールトゥウィン、急拡大するEC事業のバックオフィス戦略を解説する無料ウェビナー開催　～月間処理件数10倍を支えた運用設...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに 経緯 現在参画中のプロジェクトでスマホ向けアプリを開発しています。 個人情報をフォームに入力して送信すると、 DBにデータがインサートされるという比較的シンプルな構成のものです。 ところが、...</p>
+                        <p class="related-summary">ポールトゥウィン、急拡大するEC事業のバックオフィス戦略を解説する無料ウェビナー開催 ～月間処理件数10倍を支えた運用設計プロセスを公開～.</p>
                     </a>
                 </article>
             </div>

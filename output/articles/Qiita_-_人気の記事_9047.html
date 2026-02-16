@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>意外と知らない！？Claude Codeで使える小技集 | 日本のテックニュース速報</title>
-    <meta name="description" content="71時点での情報です macOS環境での操作を前提と. Claude Codeを使い始めたけれど、もっと効率よく使いこなしたい——。 そんな方に向けて、私が日常的に使っている便利な小技をまとめてみました。 少しでも参考になれば幸いです。 Claude Code v2.">
-    <meta name="keywords" content="Claude,Mac,macOS">
+    <title>Claude Code の実装から読み解く Agent Teams の設計思想 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Claude CodeなどのAIエージェントを使い込んでいると、ある壁にぶつかる瞬間があります。 「このタスク、1つの Agent だけでは限界があるな」と。 たとえば、大規模なリファクタリング。アーキテクチャの調査と実装を同時に進めたい。あるいは、コードレビュ.">
+    <meta name="keywords" content="AI,Claude,Teams">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="意外と知らない！？Claude Codeで使える小技集">
-    <meta property="og:description" content="71時点での情報です macOS環境での操作を前提と. Claude Codeを使い始めたけれど、もっと効率よく使いこなしたい——。 そんな方に向けて、私が日常的に使っている便利な小技をまとめてみました。 少しでも参考になれば幸いです。 Claude Code v2.">
+    <meta property="og:title" content="Claude Code の実装から読み解く Agent Teams の設計思想">
+    <meta property="og:description" content="はじめに Claude CodeなどのAIエージェントを使い込んでいると、ある壁にぶつかる瞬間があります。 「このタスク、1つの Agent だけでは限界があるな」と。 たとえば、大規模なリファクタリング。アーキテクチャの調査と実装を同時に進めたい。あるいは、コードレビュ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9047.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="意外と知らない！？Claude Codeで使える小技集">
-    <meta name="twitter:description" content="71時点での情報です macOS環境での操作を前提と. Claude Codeを使い始めたけれど、もっと効率よく使いこなしたい——。 そんな方に向けて、私が日常的に使っている便利な小技をまとめてみました。 少しでも参考になれば幸いです。 Claude Code v2.">
+    <meta name="twitter:title" content="Claude Code の実装から読み解く Agent Teams の設計思想">
+    <meta name="twitter:description" content="はじめに Claude CodeなどのAIエージェントを使い込んでいると、ある壁にぶつかる瞬間があります。 「このタスク、1つの Agent だけでは限界があるな」と。 たとえば、大規模なリファクタリング。アーキテクチャの調査と実装を同時に進めたい。あるいは、コードレビュ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "意外と知らない！？Claude Codeで使える小技集",
-        "description": "71時点での情報です macOS環境での操作を前提と. Claude Codeを使い始めたけれど、もっと効率よく使いこなしたい——。 そんな方に向けて、私が日常的に使っている便利な小技をまとめてみました。 少しでも参考になれば幸いです。 Claude Code v2.",
+        "headline": "Claude Code の実装から読み解く Agent Teams の設計思想",
+        "description": "はじめに Claude CodeなどのAIエージェントを使い込んでいると、ある壁にぶつかる瞬間があります。 「このタスク、1つの Agent だけでは限界があるな」と。 たとえば、大規模なリファクタリング。アーキテクチャの調査と実装を同時に進めたい。あるいは、コードレビュ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-19T01:28:15",
-        "dateModified": "2025-12-20T16:26:08.796038",
+        "datePublished": "2026-02-15T04:09:14",
+        "dateModified": "2026-02-16T20:34:11.861636",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9047.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9047.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["Claude","Mac","macOS"]
+        "keywords": ["AI","Claude","Teams"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "意外と知らない！？Claude Codeで使える小技集",
+                "name": "Claude Code の実装から読み解く Agent Teams の設計思想",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9047.html"
             }
         ]
@@ -114,42 +114,40 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">意外と知らない！？Claude Codeで使える小技集</li>
+                <li aria-current="page">Claude Code の実装から読み解く Agent Teams の設計思想</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>意外と知らない！？Claude Codeで使える小技集</h1>
+                <h1>Claude Code の実装から読み解く Agent Teams の設計思想</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/mu7kata/items/c325740e4710120b0963?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/Dinn/items/6c0dd5107d4ce6c4b300?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-12-19T01:28:15">
-                        公開: 2025-12-19T01:28:15
+                    <time datetime="2026-02-15T04:09:14">
+                        公開: 2026-02-15T04:09:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">AI</span>
                     <span class="tag">Claude</span>
-                    <span class="tag">Mac</span>
-                    <span class="tag">macOS</span>
+                    <span class="tag">Teams</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Claude Codeを使い始めたけれど、もっと効率よく使いこなしたい——。
-そんな方に向けて、私が日常的に使っている便利な小技をまとめてみました。
-少しでも参考になれば幸いです。
-
-Claude Code v2.0.71時点での情報です
-macOS環境での操作を前提と...
+                    はじめに
+Claude CodeなどのAIエージェントを使い込んでいると、ある壁にぶつかる瞬間があります。
+「このタスク、1つの Agent だけでは限界があるな」と。
+たとえば、大規模なリファクタリング。アーキテクチャの調査と実装を同時に進めたい。あるいは、コードレビュ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/mu7kata/items/c325740e4710120b0963?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/Dinn/items/6c0dd5107d4ce6c4b300?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,6 +160,16 @@ macOS環境での操作を前提と...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">Claude - Amazon検索結果</div>
@@ -172,20 +180,10 @@ macOS環境での操作を前提と...
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Teams&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Teams - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Mac - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=macOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="macOS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">macOS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでmacOSに関連する商品をチェック</div>
+                                    <div class="product-title">Teams - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでTeamsに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +224,16 @@ macOS環境での操作を前提と...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2665.html">
+                    <a href="Zennのトレンド_2591.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">2025年版: 開発環境のツールまとめ</span>
+                        <span class="nav-title">【RPC比較】tRPC・oRPC・Hono・Elysia 結局どれを選ぶべき？</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_4798.html">
+                    <a href="Qiita_-_人気の記事_1539.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">医療業界で突然LLMを使ってくれと言われたら</span>
+                        <span class="nav-title">CloudFront と S3を利用した静的コンテンツ配信</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +246,53 @@ macOS環境での操作を前提と...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2413.html">
-                        <h3>ChatGPTに「アプリストア」が登場、誰でも公開可能に</h3>
+                    <a href="CNET_Japan_最新情報総合_1900.html">
+                        <h3>楽天、AI活用で2025年度に255億円の利益貢献　2026年度は3倍の効果を目指す</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは、ベータ版機能の発表と開発キットの公開から2カ月を経て、アプリプラットフォームを正式に立ち上げた。.</p>
+                        <p class="related-summary">楽天グループが全社的なAI戦略で収益拡大を加速している。2025年度は255億円の利益貢献を達成し、全事業部門にチーフAIオフィサーを配置してデータのクロスユースを推進。2026年度は330億円超を目...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1744.html">
-                        <h3>YouTube、AIで作った「偽の予告編」で計10億再生の2チャンネルを削除</h3>
+                    <a href="CNET_Japan_最新情報総合_8821.html">
+                        <h3>仕事でのAI利用、実は逆効果？ 労働の増加と燃え尽きのリスクが判明</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">YouTubeは、AIを使って偽の映画予告編を制作していた2つのチャンネルに対し、措置を講じた。.</p>
+                        <p class="related-summary">どの企業もAIの導入に躍起になっているようだが、その恩恵は長くは続かないかもしれない。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3455.html">
-                        <h3>いずれChatGPTで振込も--ドコモSMTBネット銀行が構想する「アプリ不要のAI銀行」とは</h3>
+                    <a href="CNET_Japan_最新情報総合_1517.html">
+                        <h3>AirPods Pro 3を打倒できるか　ソニー新型イヤホン「WF-1000XM6」レビュー</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">住信SBIネット銀行が2026年8月に「ドコモSMTBネット銀行」へ商号変更し、音声やチャットだけで銀行取引が完結する生成AI活用サービス「NEOBANK ai」を2026年2月に開始する。NTTドコ...</p>
+                        <p class="related-summary">4万5000円と決して安くはないが、ソニーの新たな旗艦ノイズキャンセリング（NC）イヤホン「WF-1000XM6」は、今買える最高の製品と言っていいだろう。その理由を解説する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1064.html">
-                        <h3>志望企業があっても志望職種が選べない人が、自分の強みが活かせる職種とその仕事で貢献(活躍)する方法を学べる初のAIサービ...</h3>
+                    <a href="CNET_Japan_最新情報総合_9504.html">
+                        <h3>PC買うなら今？メモリ不足による価格高騰から逃げ切る2つの対策</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">志望企業があっても志望職種が選べない人が、自分の強みが活かせる職種とその仕事で貢献(活躍)する方法を学べる初のAIサービス.</p>
+                        <p class="related-summary">AIブームでメモリの需給が逼迫し、今後もPCの価格上昇が見込まれる。この局面を乗り切る2つの対策を紹介する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3876.html">
-                        <h3>AWSの新認定試験「Generative AI Developer - Professional」を宇宙最速（未遂）で合...</h3>
+                    <a href="Publickey_9705.html">
+                        <h3>生成AIがGoogleテクノロジーの公式ドキュメントを参照できる「Developer Knowledge API &amp; M...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">宇宙最速になり損ねた 本当は「宇宙最速で受験してきました！」的なタイトルにしようと思っていたのですが、@yama3133さんの投稿を見たら、 45分負けてました。試験会場選びから戦いは始まっています。...</p>
+                        <p class="related-summary">Googleは、Google Cloud、Android、FirebaseなどGoogleテクノロジーの公式ドキュメントの情報を取得し、生成AIから参照できるDeveloper Knowledge A...</p>
                     </a>
                 </article>
             </div>

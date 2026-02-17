@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIコードレビュー「棚卸し」のススメ | 日本のテックニュース速報</title>
-    <meta name="description" content="AI にコードレビューを投げると、ありがたいことに山ほどレビューコメントが返ってくる。 しかし、実際に運用してみると、その中には直さなくても良さそうな細かい指摘や、そもそもレビュー内容自体が誤っているコメントが紛れ込み、PR のコメント欄があっという間にカオスな状態になることも珍しくない">
-    <meta name="keywords" content="AI">
+    <title>useEffect で API を叩くのを卒業しよう | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIコードレビュー「棚卸し」のススメ">
-    <meta property="og:description" content="AI にコードレビューを投げると、ありがたいことに山ほどレビューコメントが返ってくる。 しかし、実際に運用してみると、その中には直さなくても良さそうな細かい指摘や、そもそもレビュー内容自体が誤っているコメントが紛れ込み、PR のコメント欄があっという間にカオスな状態になることも珍しくない">
+    <meta property="og:title" content="useEffect で API を叩くのを卒業しよう">
+    <meta property="og:description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6477.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIコードレビュー「棚卸し」のススメ">
-    <meta name="twitter:description" content="AI にコードレビューを投げると、ありがたいことに山ほどレビューコメントが返ってくる。 しかし、実際に運用してみると、その中には直さなくても良さそうな細かい指摘や、そもそもレビュー内容自体が誤っているコメントが紛れ込み、PR のコメント欄があっという間にカオスな状態になることも珍しくない">
+    <meta name="twitter:title" content="useEffect で API を叩くのを卒業しよう">
+    <meta name="twitter:description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIコードレビュー「棚卸し」のススメ",
-        "description": "AI にコードレビューを投げると、ありがたいことに山ほどレビューコメントが返ってくる。 しかし、実際に運用してみると、その中には直さなくても良さそうな細かい指摘や、そもそもレビュー内容自体が誤っているコメントが紛れ込み、PR のコメント欄があっという間にカオスな状態になることも珍しくない",
+        "headline": "useEffect で API を叩くのを卒業しよう",
+        "description": "はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-27T11:54:43",
-        "dateModified": "2025-11-29T14:19:05.744303",
+        "datePublished": "2026-02-14T10:57:20",
+        "dateModified": "2026-02-17T20:40:30.487133",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6477.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6477.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIコードレビュー「棚卸し」のススメ",
+                "name": "useEffect で API を叩くのを卒業しよう",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6477.html"
             }
         ]
@@ -113,39 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIコードレビュー「棚卸し」のススメ</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">useEffect で API を叩くのを卒業しよう</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIコードレビュー「棚卸し」のススメ</h1>
+                <h1>useEffect で API を叩くのを卒業しよう</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/aki_think/articles/e8a846e9bb95b0" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-27T11:54:43">
-                        公開: 2025-11-27T11:54:43
+                    <span class="source">出典: <a href="https://zenn.dev/ashunar0/articles/32419c3c60cc53" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-02-14T10:57:20">
+                        公開: 2026-02-14T10:57:20
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    AI にコードレビューを投げると、ありがたいことに山ほどレビューコメントが返ってくる。
-しかし、実際に運用してみると、その中には直さなくても良さそうな細かい指摘や、そもそもレビュー内容自体が誤っているコメントが紛れ込み、PR のコメント欄があっという間にカオスな状態になることも珍しくない。
-結局のところ、一つひとつについて「この指摘は妥当か？」「今すぐ対応すべきか？」を目で追いながら判断していくことになり、レビューが増えたわりに仕分け作業だけが重くのしかかってくる。
-そこで発想を変え、まずは PR についたレビューコメントをすべて洗い出し、その一つひとつについて妥当性や対応方針（対応する...
+                    はじめに
+「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。
+でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して。チュートリアルで覚えたそのパターンを、特に疑うこともなく使い続けていた。
+「やめた方がいいのは分かった。じゃあ何を使えばいいの？」— この記事は、その疑問に対する自分なりの答えを、実際にTanStack Queryに置き換えてみた過程から書いている。
+
+
+ useEffect + fetch で書くとこうなる...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/aki_think/articles/e8a846e9bb95b0" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ashunar0/articles/32419c3c60cc53" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,50 +154,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -212,16 +187,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_8209.html">
+                    <a href="iPhone_Mania_6700.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple、紛争鉱物問題でNGOから提訴されるも強く反論</span>
+                        <span class="nav-title">iPhone Flipの開発に着手、発売は2028年と噂</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_4787.html">
+                    <a href="iPhone_Mania_6871.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Nothing、近日中に｢Phone (3a) Community Edition｣を発表すると正式...</span>
+                        <span class="nav-title">iPhone18 ProシリーズはC2に加えN2も搭載する可能性</span>
                     </a>
                 </div>
             </div>
@@ -234,53 +209,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_5915.html">
+                        <h3>出先でノートPC、背後が気になって集中できない… 「覗き見不安」を解消するベストアイテムを発見</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">筆者はカフェなど外出先でノートPCを使うことが多いが、どうしても他人に画面を見られていないか気になってしまう。もっとも、外出先で作業している以上、覗き見は避けられないのかもしれない。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_1305.html">
+                        <h3>スマートグラスで顔を認識される未来は目前　便利さの代償はプライバシーか？</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">スマートグラスに顔認識機能を搭載する計画が進んでいるようだ。相手が誰かが一目で分かるのは便利だが、プライバシーが犠牲になることを筆者は大いに憂慮している。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_3288.html">
+                        <h3>交通事故の保険会社への連絡、オンラインで完結　電話不要　損保ジャパン</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">損害保険ジャパンは、スマートフォンのGPSやカメラ機能を活用した新サービス「SOMPOあんしん事故連絡」を1月23日に始めた。事故現場の位置や損傷状況をより正確に把握し、初動対応の迅速化につなげる狙い...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_5765.html">
+                        <h3>もうすぐ皆既月食　2028年まで見られない貴重な天体ショーの観測方法</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">皆既月食がもうすぐやって来る。今回を逃すと次は2028年まで見られないので、ぜひとも見届けよう。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
                     <a href="CNET_Japan_最新情報総合_8607.html">
-                        <h3>子どものAIチャットを禁止したCharacter.AI、代わりに「ゲームブック風」機能を導入</h3>
+                        <h3>Amazon、Prime Video上での「Paramount+」サブスク提供を3月末で終了</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">18歳未満のユーザーによるAIキャラクターとの自由な会話を禁止すると10月に発表したCharacter. AIは今週、AIと対話する新たな方法を導入した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6313.html">
-                        <h3>OpenAI、16歳自殺とChatGPTめぐる裁判で責任否定--「誤用」を指摘</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">自殺した16歳の少年の両親が、「ChatGPT」に原因があるとして開発元のOpenAIを訴えた訴訟で、同社はその責任を否定した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1996.html">
-                        <h3>Xの画像、もう信用できない？ 「生成AIフェイクと疑ってしまう」の声　揺らぐ真実</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">宮城県女川町がXに投稿した「クマ出没画像」。ぱっと見はよくある注意喚起の一枚だが、後に「生成AIフェイク」だったことが判明し、投稿はあっさり削除された。自治体までやらかす時代となった。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7815.html">
-                        <h3>OpenAIのユーザー情報が流出の可能性、データ分析企業への不正アクセスで--影響範囲は？</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">OpenAIは、ウェブ分析のために利用していたデータ分析プロバイダーMixpanelへの不正アクセスにより、一部のAPIユーザーの情報が流出した可能性があると発表した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2416.html">
-                        <h3>アリババ、初のAIスマートグラス「Quark AI Glasses」発売--翻訳や会議メモ、「アリペイ」連携</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">中国の阿里巴巴（アリババ）は、同社初のAI搭載スマートグラス「Quark AI Glasses」を中国で発売した。.</p>
+                        <p class="related-summary">Amazonは2月17日、Prime Video上で提供している「Paramount+」のサブスクリプションサービスを3月31日に終了すると発表した。.</p>
                     </a>
                 </article>
             </div>

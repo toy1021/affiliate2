@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React×TypeScriptで事故らない型設計：現場で効くパターン10選 | 日本のテックニュース速報</title>
-    <meta name="description" content="React×TypeScriptで事故らない型設計：現場で効くパターン10選 - テクノロジーニュースをお届け。">
-    <meta name="keywords" content="React,本">
+    <title>useEffect で API を叩くのを卒業しよう | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="React×TypeScriptで事故らない型設計：現場で効くパターン10選">
-    <meta property="og:description" content="React×TypeScriptで事故らない型設計：現場で効くパターン10選 - テクノロジーニュースをお届け。">
+    <meta property="og:title" content="useEffect で API を叩くのを卒業しよう">
+    <meta property="og:description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="React×TypeScriptで事故らない型設計：現場で効くパターン10選">
-    <meta name="twitter:description" content="React×TypeScriptで事故らない型設計：現場で効くパターン10選 - テクノロジーニュースをお届け。">
+    <meta name="twitter:title" content="useEffect で API を叩くのを卒業しよう">
+    <meta name="twitter:description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "React×TypeScriptで事故らない型設計：現場で効くパターン10選",
-        "description": "React×TypeScriptで事故らない型設計：現場で効くパターン10選 - テクノロジーニュースをお届け。",
+        "headline": "useEffect で API を叩くのを卒業しよう",
+        "description": "はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-13T13:00:13",
-        "dateModified": "2026-01-15T06:36:34.261000",
+        "datePublished": "2026-02-14T10:57:20",
+        "dateModified": "2026-02-18T08:48:24.611126",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6.html",
-        "articleSection": "その他",
-        "keywords": ["React","本"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "React×TypeScriptで事故らない型設計：現場で効くパターン10選",
+                "name": "useEffect で API を叩くのを卒業しよう",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6.html"
             }
         ]
@@ -113,51 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">React×TypeScriptで事故らない型設計：現場で効くパターン10選</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">useEffect で API を叩くのを卒業しよう</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>React×TypeScriptで事故らない型設計：現場で効くパターン10選</h1>
+                <h1>useEffect で API を叩くのを卒業しよう</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/mitsuo119/articles/cd5feaee09262b" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-01-13T13:00:13">
-                        公開: 2026-01-13T13:00:13
+                    <span class="source">出典: <a href="https://zenn.dev/ashunar0/articles/32419c3c60cc53" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-02-14T10:57:20">
+                        公開: 2026-02-14T10:57:20
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">React</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    React + TypeScript は「とりあえず型が付いてる」状態だと、仕様追加や改修フェーズで 型が崩壊して事故 が起きがちです。
+                    はじめに
+「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。
+でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して。チュートリアルで覚えたそのパターンを、特に疑うこともなく使い続けていた。
+「やめた方がいいのは分かった。じゃあ何を使えばいいの？」— この記事は、その疑問に対する自分なりの答えを、実際にTanStack Queryに置き換えてみた過程から書いている。
 
-propsの組み合わせが矛盾してUIが壊れる
-状態遷移が増えて分岐漏れが起きる
 
-any が混ざって“型があるのに安全じゃない”状態になる
-APIレスポンスのズレで本番だけ落ちる
-
-この記事では、現場で効く「事故りにくい型設計」を 10パターン に絞って紹介します。
-（どれも“型オタク”に寄せず、現実的に運用できるやつだけ）
-
-!
-なぜ「型」にこだわるのか？
-「型パズルが楽しいから」ではありません。
-「未来の自分が、仕様変更でバグを埋め込むのを防ぐた...
+ useEffect + fetch で書くとこうなる...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/mitsuo119/articles/cd5feaee09262b" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ashunar0/articles/32419c3c60cc53" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -166,34 +154,9 @@ APIレスポンスのズレで本番だけ落ちる
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">React - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -224,16 +187,16 @@ APIレスポンスのズレで本番だけ落ちる
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_4980.html">
+                    <a href="iPhone_Mania_3293.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AI悪用画像 全国初の事案続く背景</span>
+                        <span class="nav-title">iPhone Flipの開発に着手、発売は2028年と噂</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2583.html">
+                    <a href="iPhone_Mania_7168.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">GitHub Copilot を極める会</span>
+                        <span class="nav-title">iPhone18 ProシリーズはC2に加えN2も搭載する可能性</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +209,53 @@ APIレスポンスのズレで本番だけ落ちる
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9187.html">
-                        <h3>【画像】NASA探査車が撮った火星の景色　シャープ山のパノラマ　朝夕の違いを1枚に</h3>
+                    <a href="CNET_Japan_最新情報総合_7061.html">
+                        <h3>交通事故の保険会社への連絡、オンラインで完結　電話不要　損保ジャパン</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">火星探査車「キュリオシティ」と「パーサヴィアランス」が届ける写真は、科学的な価値はもちろん、純粋に“見て楽しい”のも大きな魅力だ。荒涼とした大地、遠くに霞む地平線、乾いた岩肌の表情.</p>
+                        <p class="related-summary">損害保険ジャパンは、スマートフォンのGPSやカメラ機能を活用した新サービス「SOMPOあんしん事故連絡」を1月23日に始めた。事故現場の位置や損傷状況をより正確に把握し、初動対応の迅速化につなげる狙い...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8727.html">
-                        <h3>衝撃の「死んだ？」から改名、中国で人気の安否確認アプリ「Demumu」とは</h3>
+                    <a href="CNET_Japan_最新情報総合_9556.html">
+                        <h3>もうすぐ皆既月食　2028年まで見られない貴重な天体ショーの観測方法</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「死んだ？」を意味する中国語を名称とするアプリが物議を醸し、このほど「Demumu」に改称された。.</p>
+                        <p class="related-summary">皆既月食がもうすぐやって来る。今回を逃すと次は2028年まで見られないので、ぜひとも見届けよう。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4545.html">
-                        <h3>MSI「新春開運祭プレゼントキャンペーン」が早期終了、応募100名達成で締切</h3>
+                    <a href="CNET_Japan_最新情報総合_1628.html">
+                        <h3>Amazon、Prime Video上での「Paramount+」サブスク提供を3月末で終了</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">Amazonは2月17日、Prime Video上で提供している「Paramount+」のサブスクリプションサービスを3月31日に終了すると発表した。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_4338.html">
+                        <h3>サムスン「Galaxy Z Fold」にワイド版が登場か、One UIのコードに痕跡</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">サムスンの折りたたみスマートフォン「Galaxy Z Fold」のワイドバージョンが、近いうちに登場するかもしれない。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_2281.html">
+                        <h3>「私達の恋の話をたくさんしよう！」に涙腺崩壊『いなり、こんこん、恋いろは。』全10巻で880円【Kindle漫画セール情...</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">MSIが実施していた「新春開運祭プレゼントキャンペーン」が、応募予定人数100名に達したため早期終了。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_8864.html">
-                        <h3>LINEヤフーとNetflixが業務提携｜｢LYPプレミアム｣が実質無料なNetflixとのセットプランが2月より提供開...</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">本日、LINEヤフーが、世界最大級の動画配信サービスを展開するNetflixと新セットプランの提供に向け、業務提携に合意したことを発表しました。 本提携に基づき、2026年2月上旬より、LINEヤフー...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_790.html">
-                        <h3>Insta360、より大型のセンサーを搭載した新型Webカメラ｢Insta360 Link 2 Pro｣と｢Insta3...</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">本日、Insta360が、新型Webカメラ「Insta360 Link 2 Pro」と「Insta360 Link 2C Pro」を発表しました。 両製品とも「Insta360 Link 2」と「In...</p>
+                        <p class="related-summary">神様に変身の力を授かった少女の恋は、ただの初恋じゃ終わらない。アニメの先、あの大団円をぜひ読んで。心が温かくなる魔法が1巻88円です。.</p>
                     </a>
                 </article>
             </div>

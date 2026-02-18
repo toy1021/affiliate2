@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZOZO開発組織の2025年の振り返りと現状 | 日本のテックニュース速報</title>
-    <meta name="description" content="株式会社ZOZO 執行役員 兼 CTO の @sonots です。 この記事は「ZOZO Advent Calendar 2025」カレンダー1の最終回（25日目）です。 2025年は、新規プロダクトのリリース、海外企業のM&amp;A、そして開発AIエージェントの本格的な台頭など.">
-    <meta name="keywords" content="AI,M&amp;A,本">
+    <title>Javaのメモリ管理をざっくり理解する(Out-of-Memoryに至る流れ） | 日本のテックニュース速報</title>
+    <meta name="description" content="業務でもJavaアプリの性能測定や負荷試験などを実施したり、メモリを増やしたりすることがあると思います。 でもそもそも「メモリを増やす」という結論へと至る前に、メモリ不足エラー（Out-of-Memory：OOM）が発生する流れを理解しておくべきと思い、本記事に改めてまとめ.">
+    <meta name="keywords" content="Java,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ZOZO開発組織の2025年の振り返りと現状">
-    <meta property="og:description" content="株式会社ZOZO 執行役員 兼 CTO の @sonots です。 この記事は「ZOZO Advent Calendar 2025」カレンダー1の最終回（25日目）です。 2025年は、新規プロダクトのリリース、海外企業のM&amp;A、そして開発AIエージェントの本格的な台頭など.">
+    <meta property="og:title" content="Javaのメモリ管理をざっくり理解する(Out-of-Memoryに至る流れ）">
+    <meta property="og:description" content="業務でもJavaアプリの性能測定や負荷試験などを実施したり、メモリを増やしたりすることがあると思います。 でもそもそも「メモリを増やす」という結論へと至る前に、メモリ不足エラー（Out-of-Memory：OOM）が発生する流れを理解しておくべきと思い、本記事に改めてまとめ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1806.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ZOZO開発組織の2025年の振り返りと現状">
-    <meta name="twitter:description" content="株式会社ZOZO 執行役員 兼 CTO の @sonots です。 この記事は「ZOZO Advent Calendar 2025」カレンダー1の最終回（25日目）です。 2025年は、新規プロダクトのリリース、海外企業のM&amp;A、そして開発AIエージェントの本格的な台頭など.">
+    <meta name="twitter:title" content="Javaのメモリ管理をざっくり理解する(Out-of-Memoryに至る流れ）">
+    <meta name="twitter:description" content="業務でもJavaアプリの性能測定や負荷試験などを実施したり、メモリを増やしたりすることがあると思います。 でもそもそも「メモリを増やす」という結論へと至る前に、メモリ不足エラー（Out-of-Memory：OOM）が発生する流れを理解しておくべきと思い、本記事に改めてまとめ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ZOZO開発組織の2025年の振り返りと現状",
-        "description": "株式会社ZOZO 執行役員 兼 CTO の @sonots です。 この記事は「ZOZO Advent Calendar 2025」カレンダー1の最終回（25日目）です。 2025年は、新規プロダクトのリリース、海外企業のM&amp;A、そして開発AIエージェントの本格的な台頭など.",
+        "headline": "Javaのメモリ管理をざっくり理解する(Out-of-Memoryに至る流れ）",
+        "description": "業務でもJavaアプリの性能測定や負荷試験などを実施したり、メモリを増やしたりすることがあると思います。 でもそもそも「メモリを増やす」という結論へと至る前に、メモリ不足エラー（Out-of-Memory：OOM）が発生する流れを理解しておくべきと思い、本記事に改めてまとめ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-24T22:02:46",
-        "dateModified": "2025-12-26T01:45:29.648727",
+        "datePublished": "2026-02-16T07:58:14",
+        "dateModified": "2026-02-18T13:07:16.352752",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1806.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1806.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AI","M&amp;A","本"]
+        "articleSection": "その他",
+        "keywords": ["Java","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ZOZO開発組織の2025年の振り返りと現状",
+                "name": "Javaのメモリ管理をざっくり理解する(Out-of-Memoryに至る流れ）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1806.html"
             }
         ]
@@ -113,26 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">ZOZO開発組織の2025年の振り返りと現状</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">Javaのメモリ管理をざっくり理解する(Out-of-Memoryに至る流れ）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ZOZO開発組織の2025年の振り返りと現状</h1>
+                <h1>Javaのメモリ管理をざっくり理解する(Out-of-Memoryに至る流れ）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/sonots/items/785aa480635a8a5443f6?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-12-24T22:02:46">
-                        公開: 2025-12-24T22:02:46
+                    <span class="source">出典: <a href="https://qiita.com/gmo-connect-ogawa/items/497bd12cd1b80a6b6392?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-02-16T07:58:14">
+                        公開: 2026-02-16T07:58:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">M&amp;A</span>
+                    <span class="tag">Java</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -140,13 +139,12 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    株式会社ZOZO 執行役員 兼 CTO の @sonots です。
-この記事は「ZOZO Advent Calendar 2025」カレンダー1の最終回（25日目）です。
-2025年は、新規プロダクトのリリース、海外企業のM&amp;A、そして開発AIエージェントの本格的な台頭など...
+                    業務でもJavaアプリの性能測定や負荷試験などを実施したり、メモリを増やしたりすることがあると思います。
+でもそもそも「メモリを増やす」という結論へと至る前に、メモリ不足エラー（Out-of-Memory：OOM）が発生する流れを理解しておくべきと思い、本記事に改めてまとめ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/sonots/items/785aa480635a8a5443f6?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/gmo-connect-ogawa/items/497bd12cd1b80a6b6392?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,30 +157,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Java&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Java - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">Java - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでJavaに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -192,23 +180,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +211,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_3395.html">
+                    <a href="Zennのトレンド_7861.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AI検索の実態把握へ 公取委が調査</span>
+                        <span class="nav-title">ハッカソンに登録したのにClaude Codeが凄すぎて提出できなかった話</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6540.html">
+                    <a href="Zennのトレンド_4726.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">テックリードとしての苦悩と成長の１年を振り返る</span>
+                        <span class="nav-title">初心者向けプログラミング学習サービス「Codize」を公開しました</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +233,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9979.html">
-                        <h3>【個人開発】最新Web技術をフル活用して「人間語→犬語翻訳アプリ」をガチ実装した話【Web Components / W...</h3>
+                    <a href="CNET_Japan_最新情報総合_4474.html">
+                        <h3>迫るJR東日本などの運賃改定、定期券は「3月13日まで」購入がお得　Yahoo!乗換案内</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">突然ですが、皆さん疲れていませんか？ 複雑な要件定義、終わらないデバッグ、迫りくる納期. そんな現代社会に必要なのは、「知性」を捨てて「本能」に還ることだと思いました。 そこで、入力された言葉をすべて...</p>
+                        <p class="related-summary">2026年3月14日、首都圏を中心とした鉄道6社が運賃改定を実施する。Yahoo!乗換案内は2月17日、運賃改定に伴う定期券購入時の注意点について、同社の公式ブログで利用者向けの情報を公開した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1248.html">
-                        <h3>コードの話ばかりだったけれど、最後にSapeetの話を少しだけ。</h3>
+                    <a href="CNET_Japan_最新情報総合_2377.html">
+                        <h3>記録的少雨、気象庁が警戒呼びかけ　渇水や林野火災に注意</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに ついに今日がやってきましたね。メリークリスマス。 そしてSapeetのエンジニアによるアドベントカレンダーは、今日で最後です。 弊社エンジニアチームとしてアドベントカレンダーに参加するのは初...</p>
+                        <p class="related-summary">気象庁は2月17日、北・東日本太平洋側と西日本で続く少雨に関する全般気象情報第2号を発表した。東日本太平洋側と西日本では昨年11月中旬から、北日本太平洋側では今年1月上旬から降水量の少ない状態が続いて...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3367.html">
-                        <h3>VS Code全盛期にあえてScreen/Tmuxを伝えたい</h3>
+                    <a href="ASCII_jp__トップ_3747.html">
+                        <h3>定番の「角ハイボール」がうれしい安さ！ Amazonタイムセールで24本セットがお得</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに VS CodeのRemote Development拡張機能は、今やサーバーサイドエンジニアにとって「なくてはならないもの」でしょうか。SSH越しにローカルと同じ感覚でコードを書き、補完を効...</p>
+                        <p class="related-summary">サントリーが展開する「角ハイボール 缶 350ml×24本」が、Amazonタイムセールの対象商品となっています。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7690.html">
-                        <h3>【入門】Pythonにおいての辞書とは？</h3>
+                    <a href="ASCII_jp__トップ_7422.html">
+                        <h3>飲みやすさ重視の「一番搾り ホワイト」がAmazonタイムセールで特価に！</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">目次 辞書とは？ 辞書のデータ構造について Pythonでの辞書の扱い方 3. 辞書の更新 まとめ 参考文献 辞書とは？ 辞書といわれて皆さんが思い浮かべるものは、下記の画像のような.</p>
+                        <p class="related-summary">「一番搾り ホワイトビール 350ml×24本」が、Amazonタイムセールの対象商品となっています。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1801.html">
-                        <h3>顧客志向のプロダクトづくり【マルチテナントSaaSにおけるエンジニアリング大全 Day25】</h3>
+                    <a href="ASCII_jp__トップ_6640.html">
+                        <h3>2026年グラビア界の本命となるか!? 「R・I・P」が発掘した期待の21歳、秋田そなが1st DVDリリース</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに 本記事は any Advent Calendar #2 「マルチテナントSaaSにおけるエンジニアリング大全」 Day25 の記事です。 弊社anyのアドベントカレンダーをひとつ丸ごと占有し...</p>
+                        <p class="related-summary">バスト89cm・Gカップ。素朴で癒やされる雰囲気が魅力の秋田そなさんが、1st DVD「ミルキー・グラマー」の発売記念イベントをソフマップAKIBA アミューズメント館で開催した。.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prisma 7 がつらくて Atlas + Kysely に移行した - Turso + better-auth 環境での実践 | 日本のテックニュース速報</title>
-    <meta name="description" content="これはなに？ SlideCraft という、AI でスライドを修正・再構成するアプリを開発しています。React Router v7 + Turso + better-auth という構成で、認証基盤を Prisma 7 で管理していました">
-    <meta name="keywords" content="AI,React,GitHub">
+    <title>階層的 RAG (Hierarchical RAG) の実装 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです">
+    <meta name="keywords" content="Python">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Prisma 7 がつらくて Atlas + Kysely に移行した - Turso + better-auth 環境での実践">
-    <meta property="og:description" content="これはなに？ SlideCraft という、AI でスライドを修正・再構成するアプリを開発しています。React Router v7 + Turso + better-auth という構成で、認証基盤を Prisma 7 で管理していました">
+    <meta property="og:title" content="階層的 RAG (Hierarchical RAG) の実装">
+    <meta property="og:description" content="はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8938.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Prisma 7 がつらくて Atlas + Kysely に移行した - Turso + better-auth 環境での実践">
-    <meta name="twitter:description" content="これはなに？ SlideCraft という、AI でスライドを修正・再構成するアプリを開発しています。React Router v7 + Turso + better-auth という構成で、認証基盤を Prisma 7 で管理していました">
+    <meta name="twitter:title" content="階層的 RAG (Hierarchical RAG) の実装">
+    <meta name="twitter:description" content="はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Prisma 7 がつらくて Atlas + Kysely に移行した - Turso + better-auth 環境での実践",
-        "description": "これはなに？ SlideCraft という、AI でスライドを修正・再構成するアプリを開発しています。React Router v7 + Turso + better-auth という構成で、認証基盤を Prisma 7 で管理していました",
+        "headline": "階層的 RAG (Hierarchical RAG) の実装",
+        "description": "はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-20T11:40:51",
-        "dateModified": "2025-12-22T01:50:06.501565",
+        "datePublished": "2026-02-18T03:48:01",
+        "dateModified": "2026-02-19T16:56:07.462536",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8938.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8938.html",
-        "articleSection": "通信・ネットワーク",
-        "keywords": ["AI","React","GitHub"]
+        "articleSection": "プログラミング",
+        "keywords": ["Python"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "通信・ネットワーク",
-                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Prisma 7 がつらくて Atlas + Kysely に移行した - Turso + better-auth 環境での実践",
+                "name": "階層的 RAG (Hierarchical RAG) の実装",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8938.html"
             }
         ]
@@ -113,46 +113,47 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
-                <li aria-current="page">Prisma 7 がつらくて Atlas + Kysely に移行した - Turso + bett...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">階層的 RAG (Hierarchical RAG) の実装</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Prisma 7 がつらくて Atlas + Kysely に移行した - Turso + better-auth 環境での実践</h1>
+                <h1>階層的 RAG (Hierarchical RAG) の実装</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/coji/articles/prisma7-to-atlas-kysely-migration" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: 通信・ネットワーク</span>
-                    <time datetime="2025-12-20T11:40:51">
-                        公開: 2025-12-20T11:40:51
+                    <span class="source">出典: <a href="https://zenn.dev/aprender/articles/11fe7de0aef29c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-02-18T03:48:01">
+                        公開: 2026-02-18T03:48:01
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">React</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">Python</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    これはなに？
-SlideCraft という、AI でスライドを修正・再構成するアプリを開発しています。React Router v7 + Turso + better-auth という構成で、認証基盤を Prisma 7 で管理していました。
-しかし Prisma 7 へのアップグレードで色々とつらくなってきたので、思い切って Atlas + Kysely に移行したら想像以上に快適になりました。その経緯と手順を共有します。
-https://github.com/techtalkjp/slidecraft
+                    はじめに
+シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです。
+今回 HHKB (Happy Hacking Keyboard) の取扱説明書から、設定情報を抽出するサンプルコードを用意しています。
 
- Prisma 7 のつらみ
+ 階層的 RAG (Hierarchical RAG) とは
+ドキュメントを単なるフラットなテキストの塊としてではなく、見出しや段落といった階層構造を保持しながら管理・検索する手法です。
 
- ドライバーアダプター必須化
-Prisma ...
+ 技術スタック
+
+Python
+
+ChromaD...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/coji/articles/prisma7-to-atlas-kysely-migration" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/aprender/articles/11fe7de0aef29c" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -165,30 +166,30 @@ Prisma ...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">React - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -198,23 +199,23 @@ Prisma ...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>通信・ネットワーク関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -229,16 +230,16 @@ Prisma ...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3263.html">
+                    <a href="Qiita_-_人気の記事_6028.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">CF WorkersでNodeJS依存ライブラリが使えない？できらぁ！！！～黒魔術Viteプラグイン...</span>
+                        <span class="nav-title">【Gemini 3 Pro】Antigravityを「ただのエディタ」として使うのはやめろ。n8nと...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_249.html">
+                    <a href="気になる記になる_3198.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">A20/A20 Proに先行〜Exynos 2600は2nmプロセスで製造と報道</span>
+                        <span class="nav-title">Apple、3月2日〜4日にかけて毎日新製品を発表か</span>
                     </a>
                 </div>
             </div>
@@ -251,33 +252,53 @@ Prisma ...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3945.html">
-                        <h3>AWS re:Invent 2025のネットワーク関連のセッション&amp;アップデートから手を入れる場所を考える</h3>
+                    <a href="Publickey_227.html">
+                        <h3>GitHub、リポジトリに対するプルリクエストをコラボレーターのみに制限する、あるいは完全に無効にする設定を可能に</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">GitHubは、リポジトリの設定として新たな設定を2つ追加したことを発表しました。 1つはコラボレーターのみにプルリクエストを制限する設定、もう1つは完全にプルリクエストを無効する設定です。 コラボレ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_3.html">
+                        <h3>複数レポに一気通貫でAIにコンテキストを渡し開発する——Cursor Workspace × Obsidian</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">本記事はすべて人力で書きました。 はじめに AWS re:Invent 2025も終わり、2025年も終了ムードが漂ってきています。 re:Invent 2025終了時点でNetwork &amp; Cont...</p>
+                        <p class="related-summary">ウィンドウを複数開いて、各ウィンドウでひとつずつレポジトリを開き、切り替えながら開発している——そんな状況はありませんか？ 複数レポ開発の辛さとして、次のようなことが挙げられます。 Backend /...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_850.html">
-                        <h3>楽天モバイル、Beats製品の取り扱いを開始</h3>
+                    <a href="Qiita_-_人気の記事_3032.html">
+                        <h3>Claude CodeとCodexで使える、OCI構成図を自然言語から自動生成するSkillsを作った</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">本日、楽天モバイルが、「楽天モバイル公式 楽天市場店」において、Beats製品の取り扱いを開始しました。 「Powerbeats Pro 2」や「Beats Studio Pro」といったワイヤレスイ...</p>
+                        <p class="related-summary">はじめに OCIの構成図、描くの面倒じゃないですか。 draw. ioを開いて、アイコンを探して、ドラッグ&amp;ドロップして、線を引いて、配置を整えて……。設計の本質ではない作業に時間を取られがちです。 ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_6011.html">
-                        <h3>【OAuth】アクセストークンの検証を誤ると成りすまし攻撃ができます</h3>
+                    <a href="Zennのトレンド_7756.html">
+                        <h3>PRのレビューが追いつかない！もう人間がボトルネックなので、気合いではなく仕組みで少しずつなんとかしていく</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは。calloc134 です。 Digital Identity 技術勉強会 #iddance Advent Calendar 2025 18 日目の記事です。 https://qi...</p>
+                        <p class="related-summary">はじめに PRのレビューが追いつかないことがある。気がついたらレビューで1日の殆どの時間を使うこともあった。 私のチームでは、エンジニアがClaude Codeなどのエージェントを並列に起動して一人で...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_3920.html">
+                        <h3>Codex v0.102 Multi-Agent 動作検証</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">102 で multi-agent 機能が正式にサポートされました（参考ポスト）。複数のエージェントを協調させることで、単体エージェントでは難しかった「調査→修正」の分業が可能になるとのことで、実際に...</p>
                     </a>
                 </article>
             </div>

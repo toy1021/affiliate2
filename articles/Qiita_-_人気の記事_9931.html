@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HookUp作業の整理メモ（送信側／受信側・hosts／DNS 編） | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 2025年の夏〜秋にかけて、現場業務で HookUp作業 がいくつも重なりました（というか、今も）。 タスクによって「送信側」だったり「受信側」だったり、場合によっては 両方の設定と疎通確認を担当 するケースもあり、非常にややこしい状況でした。 さらに、環境によ.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>syumai/workers + GORM + Cloudflare D1 でハマったこと | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 最近Goの学習を始めました！！ 超絶初心者ですので誤ってる点などがあったら教えていただけると幸いです！ Cloudflare Workers + D1でアプリケーションを開発を試みており、 syumai/workersを使用することになりました。 その際に、GO.">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="HookUp作業の整理メモ（送信側／受信側・hosts／DNS 編）">
-    <meta property="og:description" content="はじめに 2025年の夏〜秋にかけて、現場業務で HookUp作業 がいくつも重なりました（というか、今も）。 タスクによって「送信側」だったり「受信側」だったり、場合によっては 両方の設定と疎通確認を担当 するケースもあり、非常にややこしい状況でした。 さらに、環境によ.">
+    <meta property="og:title" content="syumai/workers + GORM + Cloudflare D1 でハマったこと">
+    <meta property="og:description" content="はじめに 最近Goの学習を始めました！！ 超絶初心者ですので誤ってる点などがあったら教えていただけると幸いです！ Cloudflare Workers + D1でアプリケーションを開発を試みており、 syumai/workersを使用することになりました。 その際に、GO.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9931.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HookUp作業の整理メモ（送信側／受信側・hosts／DNS 編）">
-    <meta name="twitter:description" content="はじめに 2025年の夏〜秋にかけて、現場業務で HookUp作業 がいくつも重なりました（というか、今も）。 タスクによって「送信側」だったり「受信側」だったり、場合によっては 両方の設定と疎通確認を担当 するケースもあり、非常にややこしい状況でした。 さらに、環境によ.">
+    <meta name="twitter:title" content="syumai/workers + GORM + Cloudflare D1 でハマったこと">
+    <meta name="twitter:description" content="はじめに 最近Goの学習を始めました！！ 超絶初心者ですので誤ってる点などがあったら教えていただけると幸いです！ Cloudflare Workers + D1でアプリケーションを開発を試みており、 syumai/workersを使用することになりました。 その際に、GO.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "HookUp作業の整理メモ（送信側／受信側・hosts／DNS 編）",
-        "description": "はじめに 2025年の夏〜秋にかけて、現場業務で HookUp作業 がいくつも重なりました（というか、今も）。 タスクによって「送信側」だったり「受信側」だったり、場合によっては 両方の設定と疎通確認を担当 するケースもあり、非常にややこしい状況でした。 さらに、環境によ.",
+        "headline": "syumai/workers + GORM + Cloudflare D1 でハマったこと",
+        "description": "はじめに 最近Goの学習を始めました！！ 超絶初心者ですので誤ってる点などがあったら教えていただけると幸いです！ Cloudflare Workers + D1でアプリケーションを開発を試みており、 syumai/workersを使用することになりました。 その際に、GO.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-18T22:03:53",
-        "dateModified": "2025-12-19T20:25:18.300696",
+        "datePublished": "2026-02-17T15:52:10",
+        "dateModified": "2026-02-19T05:23:31.753733",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9931.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9931.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "HookUp作業の整理メモ（送信側／受信側・hosts／DNS 編）",
+                "name": "syumai/workers + GORM + Cloudflare D1 でハマったこと",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9931.html"
             }
         ]
@@ -113,22 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">HookUp作業の整理メモ（送信側／受信側・hosts／DNS 編）</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">syumai/workers + GORM + Cloudflare D1 でハマったこと</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>HookUp作業の整理メモ（送信側／受信側・hosts／DNS 編）</h1>
+                <h1>syumai/workers + GORM + Cloudflare D1 でハマったこと</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/r-kojima/items/fa7181f4f6d8bcc15d30?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-12-18T22:03:53">
-                        公開: 2025-12-18T22:03:53
+                    <span class="source">出典: <a href="https://qiita.com/kouphasi/items/d6b698047b9d51e5316d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-02-17T15:52:10">
+                        公開: 2026-02-17T15:52:10
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AI</span>
                 </div>
             </header>
 
@@ -136,13 +139,15 @@
                 
                 <div class="article-body">
                     はじめに
-2025年の夏〜秋にかけて、現場業務で HookUp作業 がいくつも重なりました（というか、今も）。
-タスクによって「送信側」だったり「受信側」だったり、場合によっては 両方の設定と疎通確認を担当 するケースもあり、非常にややこしい状況でした。
-さらに、環境によ...
+最近Goの学習を始めました！！
+超絶初心者ですので誤ってる点などがあったら教えていただけると幸いです！
+Cloudflare Workers + D1でアプリケーションを開発を試みており、
+syumai/workersを使用することになりました。
+その際に、GO...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/r-kojima/items/fa7181f4f6d8bcc15d30?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/kouphasi/items/d6b698047b9d51e5316d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -151,25 +156,50 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -184,16 +214,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_1117.html">
+                    <a href="気になる記になる_603.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Deno に&#34;守り&#34;のコントリビュートしていたら、TC39 に出した言語仕様変更が承認され、ついでに...</span>
+                        <span class="nav-title">｢CarPlay｣の動画視聴機能、提供開始に向け準備中であることが｢iOS 26.4｣のベータ版から...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_1983.html">
+                    <a href="Qiita_-_人気の記事_6798.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">テスト分析フェーズにおける個人的な生成AIとの向き合い方</span>
+                        <span class="nav-title">今更ながら、Defender for Endpoint の調査パッケージがとても便利</span>
                     </a>
                 </div>
             </div>
@@ -206,53 +236,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1073.html">
-                        <h3>サムスンの「Micro RGB」搭載テレビ、55インチから展開へ　CES 2026で詳細発表</h3>
+                    <a href="CNET_Japan_最新情報総合_6186.html">
+                        <h3>トム・クルーズらの偽動画が拡散、中国発のAI「Seedance 2.0」にハリウッドが猛反発</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">サムスンは、これまで以上に優れた色彩表現を実現するテレビ「Micro RGB TV」のラインアップを拡充し、55インチからの小型サイズを展開する。.</p>
+                        <p class="related-summary">俳優のブラッド・ピットとトム・クルーズが殴り合うAI生成動画がソーシャルメディアで拡散され、映画業界から大きな反発を招いている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1443.html">
-                        <h3>ソニーホンダのEV「AFEELA 1」、PSリモートプレイに対応</h3>
+                    <a href="CNET_Japan_最新情報総合_3425.html">
+                        <h3>Anker初のAIボイスレコーダー、会話をGPT-5.2で要約　2万4990円で発売</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ソニー・ホンダモビリティは12月18日、電気自動車「AFEELA」に「PS リモートプレイ」を搭載すると発表した。車載エンタテインメントとして同アプリを導入するのは世界初となる。.</p>
+                        <p class="related-summary">アンカー・ジャパンは2月18日、同社初のAIボイスレコーダー「Soundcore Work」の予約販売を開始した。価格は2万4990円。Anker Japan公式オンラインストア、直営店Anker S...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3427.html">
-                        <h3>住信SBIは「ドコモSMTBネット銀行」に　ドコモ利用者へ住宅ローン金利優遇も</h3>
+                    <a href="CNET_Japan_最新情報総合_3025.html">
+                        <h3>ヒトでは2年3カ月かかる作業、AIなら1カ月かからず--KDDI、基地局最適化を自律化</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NTTドコモ、三井住友信託銀行、住信SBIネット銀行の3社は12月19日、「住信SBIネット銀行」の商号をは2026年8月3日付けで「ドコモSMTBネット銀行」に変更すると発表した。関係当局の認可を前...</p>
+                        <p class="related-summary">KDDIとKDDI総合研究所は2月18日、基地局の動作パラメーターを複数のAIが協力して自律的に最適化する技術を一部エリアの基地局に導入したと発表した。2026年度中に全国展開する計画だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_17.html">
-                        <h3>成田空港、出発ロビーに衣類圧縮機　「スーツケースに入らない」を解決</h3>
+                    <a href="CNET_Japan_最新情報総合_7575.html">
+                        <h3>東京都主催のSusHi Tech Tokyo 2026、その詳細が明らかに--NVIDIAも登壇</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">成田国際空港は12月19日、衣類圧縮機を出発ロビーに設置する実証実験を開始すると発表した。SJOYと共同で、2026年1月13日から15日までの3日間、成田空港第2ターミナルおよび第3ターミナルに専用...</p>
+                        <p class="related-summary">アジア最大級のイノベーションカンファレンス「SusHi Tech Tokyo 2026」が4月27日から3日間開催される。注目は自動運転バスの公道試乗やNVIDIA幹部の登壇、AIを活用した国際映画祭...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4529.html">
-                        <h3>Core Ultra 7×RTX 5070 Ti搭載機が5.9万円引き、パソコンショップSEVENの24時間限定セール</h3>
+                    <a href="CNET_Japan_最新情報総合_9398.html">
+                        <h3>アップル、CarPlayに「対話型アプリ」導入へ　車内でChatGPTやGeminiが利用可能に？</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">最新ゲーミングPCを安く手に入れるチャンス。パソコンショップSEVENが12月20日限定の24時間セールを開催、最大5万9,000円引きで販売。.</p>
+                        <p class="related-summary">最新の「CarPlay」開発者向けガイドの中に、「音声ベースの対話型アプリ」への対応が含まれていることが判明した。アップルはダッシュボード上で「ChatGPT」「Gemini」「Claude」といった...</p>
                     </a>
                 </article>
             </div>

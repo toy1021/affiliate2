@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rust アプリケーションにおける実践的トランザクション設計 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Rust でエンタープライズアプリケーションを構築する際、トランザクション管理の設計と実装が壁となります。 所有権システムの制約により、他言語では当たり前のパターンが適用できず、多くの開発者が実装に悩むポイントとなっています">
-    <meta name="keywords" content="本">
+    <title>RAGで「ベクトル検索」が要る時、要らない時 | 日本のテックニュース速報</title>
+    <meta name="description" content="最近盛り上がっている「RAG不要論」をご存知でしょうか。 本記事では、RAG不要論を検証した論文について、ざっくり解説します。 株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こし、活用可能にする」プロダクトを開発しているスタートアップです">
+    <meta name="keywords" content="スタートアップ,本,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Rust アプリケーションにおける実践的トランザクション設計">
-    <meta property="og:description" content="はじめに Rust でエンタープライズアプリケーションを構築する際、トランザクション管理の設計と実装が壁となります。 所有権システムの制約により、他言語では当たり前のパターンが適用できず、多くの開発者が実装に悩むポイントとなっています">
+    <meta property="og:title" content="RAGで「ベクトル検索」が要る時、要らない時">
+    <meta property="og:description" content="最近盛り上がっている「RAG不要論」をご存知でしょうか。 本記事では、RAG不要論を検証した論文について、ざっくり解説します。 株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こし、活用可能にする」プロダクトを開発しているスタートアップです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6196.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rust アプリケーションにおける実践的トランザクション設計">
-    <meta name="twitter:description" content="はじめに Rust でエンタープライズアプリケーションを構築する際、トランザクション管理の設計と実装が壁となります。 所有権システムの制約により、他言語では当たり前のパターンが適用できず、多くの開発者が実装に悩むポイントとなっています">
+    <meta name="twitter:title" content="RAGで「ベクトル検索」が要る時、要らない時">
+    <meta name="twitter:description" content="最近盛り上がっている「RAG不要論」をご存知でしょうか。 本記事では、RAG不要論を検証した論文について、ざっくり解説します。 株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こし、活用可能にする」プロダクトを開発しているスタートアップです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Rust アプリケーションにおける実践的トランザクション設計",
-        "description": "はじめに Rust でエンタープライズアプリケーションを構築する際、トランザクション管理の設計と実装が壁となります。 所有権システムの制約により、他言語では当たり前のパターンが適用できず、多くの開発者が実装に悩むポイントとなっています",
+        "headline": "RAGで「ベクトル検索」が要る時、要らない時",
+        "description": "最近盛り上がっている「RAG不要論」をご存知でしょうか。 本記事では、RAG不要論を検証した論文について、ざっくり解説します。 株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こし、活用可能にする」プロダクトを開発しているスタートアップです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-14T15:00:01",
-        "dateModified": "2026-01-16T18:35:22.182518",
+        "datePublished": "2026-02-17T00:01:02",
+        "dateModified": "2026-02-19T05:23:31.749175",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6196.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6196.html",
         "articleSection": "プログラミング",
-        "keywords": ["本"]
+        "keywords": ["スタートアップ","本","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Rust アプリケーションにおける実践的トランザクション設計",
+                "name": "RAGで「ベクトル検索」が要る時、要らない時",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6196.html"
             }
         ]
@@ -114,40 +114,43 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Rust アプリケーションにおける実践的トランザクション設計</li>
+                <li aria-current="page">RAGで「ベクトル検索」が要る時、要らない時</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Rust アプリケーションにおける実践的トランザクション設計</h1>
+                <h1>RAGで「ベクトル検索」が要る時、要らない時</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/poi2/articles/68e3d158a6d4b9" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/knowledgesense/articles/b01609ba4f8d96" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-01-14T15:00:01">
-                        公開: 2026-01-14T15:00:01
+                    <time datetime="2026-02-17T00:01:02">
+                        公開: 2026-02-17T00:01:02
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">スタートアップ</span>
                     <span class="tag">本</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Rust でエンタープライズアプリケーションを構築する際、トランザクション管理の設計と実装が壁となります。
-所有権システムの制約により、他言語では当たり前のパターンが適用できず、多くの開発者が実装に悩むポイントとなっています。
-本記事では、実際のプロダクション環境で使用できる実装パターンを、具体的なコード例とともに解説します。
-Rust におけるスタンダードな DB アクセスライブラリーである SeaORM と sqlx の両方での実装を通じて、実践的なアプローチを提示します。
-本記事では、PostgreSQL や MySQL のようなトランザクション機能を持つ RDBMS...
+                    最近盛り上がっている「RAG不要論」をご存知でしょうか。
+本記事では、RAG不要論を検証した論文について、ざっくり解説します。
+株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こし、活用可能にする」プロダクトを開発しているスタートアップです。
+
+ この記事は何
+この記事は、「キーワード検索だけでもRAG並みの性能が出る」ということを示す論文[1]について、日本語で簡単にまとめたものです。
+https://www.amazon.science/publications/keyword-search-is-all-you-need-achieving-rag-level...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/poi2/articles/68e3d158a6d4b9" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/knowledgesense/articles/b01609ba4f8d96" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,6 +163,16 @@ Rust におけるスタンダードな DB アクセスライブラリーであ�
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="スタートアップ - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">スタートアップ - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでスタートアップに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">本 - Amazon検索結果</div>
@@ -170,20 +183,10 @@ Rust におけるスタンダードな DB アクセスライブラリーであ�
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +227,16 @@ Rust におけるスタンダードな DB アクセスライブラリーであ�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_5577.html">
+                    <a href="Zennのトレンド_9735.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple、｢iPhone Air MagSafeバッテリー｣向けに最新のファームウェアアップデート...</span>
+                        <span class="nav-title">AIを使い始めてから、ものを作るのが楽しくてたまらない</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_2452.html">
+                    <a href="Qiita_-_人気の記事_9449.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">人気PCゲームシリーズ「シヴィライゼーション」が2月5日よりApple Arcadeでプレイ可能に</span>
+                        <span class="nav-title">【15分で追いつく！】今のClaude Codeができることをざっくり解説</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +249,53 @@ Rust におけるスタンダードな DB アクセスライブラリーであ�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4497.html">
-                        <h3>CHARGESPOT、充電出力を7W→18Wに引き上げ　新型バッテリーを4月以降に展開</h3>
+                    <a href="ASCII_jp__トップ_7340.html">
+                        <h3>デル・テクノロジーズ、「Dell Private Cloud」のNutanix Cloud Platformソフトウェア...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">モバイルバッテリーのシェアリングサービス「CHARGESPOT」を運営するINFORICHは1月13日、急速充電に対応した新型モバイルバッテリーの開発を完了したと発表した。2026年1月から中国国内で...</p>
+                        <p class="related-summary">デル・テクノロジーズ、「Dell Private Cloud」のNutanix Cloud Platformソフトウェアのサポート開始を発表.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4331.html">
-                        <h3>X、スパム蔓延で「投稿に報酬を出すアプリ」を排除　APIポリシーを改定</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">X（旧Twitter）のプロダクト責任者は、開発者向けAPIポリシーを改定することを発表した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_6862.html">
-                        <h3>【セール】Adobeの｢Creative Cloud Pro｣などが新規購入者は初年度半額に</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">現在、Adobeが、Amazonにおいて、「Creative Cloud Pro」などの各種ソフトウェアを初年度約半額で販売するセールを開催しています。 対象となっているのは、「Creative Cl...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7293.html">
-                        <h3>カメラが回る開発現場で学ぶ、エンジニアがビジネスで成長するための5つの視点</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">「開発風景を撮影させてください」 そう言われた時、正直戸惑いました。 エンジニアとして、コードを書いている姿をカメラに収められることへの抵抗感。でも、後にこのドキュメンタリー撮影が、私のエンジニアとし...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_7703.html">
-                        <h3>AgentCore Gateway で MCP サーバー・ツールのアクセス制御を実現する 3 つの方法の徹底比較</h3>
+                    <a href="Zennのトレンド_8513.html">
+                        <h3>Codex v0.102 Multi-Agent 動作検証</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに AWS Japan AI/ML Specialist Solutions Architect の Kujirada です。 2026 年は、社内全体で利用可能な Agent を開発・運用する...</p>
+                        <p class="related-summary">102 で multi-agent 機能が正式にサポートされました（参考ポスト）。複数のエージェントを協調させることで、単体エージェントでは難しかった「調査→修正」の分業が可能になるとのことで、実際に...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_3257.html">
+                        <h3>Codex 5.3 と Opus 4.6 どう使い分ける？実務で使って分かったこと</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">3が同日にリリースされ、界隈が盛り上がっていますね。 「どっちの方がいいの？」「どっちを使うべき？」という議論をよく見かけますが、現時点での私の結論はシンプルです。 「どちらかを選ぶのではなく、両方使...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_4118.html">
+                        <h3>Amazonでの12年間を振り返る</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">この記事は、私のAmazonでの12年間の歩みを振り返った個人的なまとめです。自分語りがものすごく長くなってしまったので、お忙しい方は読み飛ばしてください。 だれ？ @moomindani です。20...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_4444.html">
+                        <h3>【実践】Claude Codeの開発速度を2倍にする10のTips</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに Claude Codeを使い始めたけど、思ったほど速くならない. そんな経験はありませんか？ 実は、Claude Codeは「使い方」で生産性が大きく変わるツールです。プロンプトの書き方、フ...</p>
                     </a>
                 </article>
             </div>

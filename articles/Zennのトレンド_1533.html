@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【Vue Fes Japan 2025】技術カンファレンス人生初参戦レポ | 日本のテックニュース速報</title>
-    <meta name="description" content="【Vue Fes Japan 2025】技術カンファレンス人生初参戦レポ - AI・機械学習技術のニュースをお届け。">
-    <meta name="keywords" content="AI,本">
+    <title>階層的 RAG (Hierarchical RAG) の実装 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです">
+    <meta name="keywords" content="Python">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【Vue Fes Japan 2025】技術カンファレンス人生初参戦レポ">
-    <meta property="og:description" content="【Vue Fes Japan 2025】技術カンファレンス人生初参戦レポ - AI・機械学習技術のニュースをお届け。">
+    <meta property="og:title" content="階層的 RAG (Hierarchical RAG) の実装">
+    <meta property="og:description" content="はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1533.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【Vue Fes Japan 2025】技術カンファレンス人生初参戦レポ">
-    <meta name="twitter:description" content="【Vue Fes Japan 2025】技術カンファレンス人生初参戦レポ - AI・機械学習技術のニュースをお届け。">
+    <meta name="twitter:title" content="階層的 RAG (Hierarchical RAG) の実装">
+    <meta name="twitter:description" content="はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【Vue Fes Japan 2025】技術カンファレンス人生初参戦レポ",
-        "description": "【Vue Fes Japan 2025】技術カンファレンス人生初参戦レポ - AI・機械学習技術のニュースをお届け。",
+        "headline": "階層的 RAG (Hierarchical RAG) の実装",
+        "description": "はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-09T06:51:25",
-        "dateModified": "2025-11-11T01:39:52.854041",
+        "datePublished": "2026-02-18T03:48:01",
+        "dateModified": "2026-02-19T13:08:28.985734",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1533.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1533.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","本"]
+        "articleSection": "プログラミング",
+        "keywords": ["Python"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【Vue Fes Japan 2025】技術カンファレンス人生初参戦レポ",
+                "name": "階層的 RAG (Hierarchical RAG) の実装",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1533.html"
             }
         ]
@@ -113,42 +113,47 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">【Vue Fes Japan 2025】技術カンファレンス人生初参戦レポ</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">階層的 RAG (Hierarchical RAG) の実装</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【Vue Fes Japan 2025】技術カンファレンス人生初参戦レポ</h1>
+                <h1>階層的 RAG (Hierarchical RAG) の実装</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/kakkokari_gtyih/articles/4a0ca2011130cb" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-09T06:51:25">
-                        公開: 2025-11-09T06:51:25
+                    <span class="source">出典: <a href="https://zenn.dev/aprender/articles/11fe7de0aef29c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-02-18T03:48:01">
+                        公開: 2026-02-18T03:48:01
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">本</span>
+                    <span class="tag">Python</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    This article is also available in English
-学生向けセッション パネルディスカッションのセクションまで飛ぶ
+                    はじめに
+シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです。
+今回 HHKB (Happy Hacking Keyboard) の取扱説明書から、設定情報を抽出するサンプルコードを用意しています。
 
+ 階層的 RAG (Hierarchical RAG) とは
+ドキュメントを単なるフラットなテキストの塊としてではなく、見出しや段落といった階層構造を保持しながら管理・検索する手法です。
 
-2025年10月25日に東京で開催された、Vue.jsの国内最大のカンファレンス「Vue Fes Japan 2025」に参加してまいりました！
-こういった技術カンファレンスにはいつか行ってみたいな…と漠然と思っていたものの、大きな催しはほとんどが東京開催。大阪在住の私にとっては若干の障壁となっていました。しかし、今回はなんと学生支援制度により旅費とお昼ごはんを出していただけることになりました！本当にありがとうございます。というわけで…...
+ 技術スタック
+
+Python
+
+ChromaD...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/kakkokari_gtyih/articles/4a0ca2011130cb" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/aprender/articles/11fe7de0aef29c" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,30 +166,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -194,23 +199,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +230,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_8734.html">
+                    <a href="Qiita_-_人気の記事_3744.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">OSSでTakumiを回した所感と反映した内容紹介</span>
+                        <span class="nav-title">【Gemini 3 Pro】Antigravityを「ただのエディタ」として使うのはやめろ。n8nと...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6447.html">
+                    <a href="気になる記になる_824.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Laravel v12.23.0でのArr::firstメソッドの挙動の変化</span>
+                        <span class="nav-title">Apple、3月2日〜4日にかけて毎日新製品を発表か</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +252,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2877.html">
-                        <h3>「Pixel 10」最強のAI機能？「マジックサジェスト」の設定方法と使い方</h3>
+                    <a href="Qiita_-_人気の記事_8575.html">
+                        <h3>複数レポに一気通貫でAIにコンテキストを渡し開発する——Cursor Workspace × Obsidian</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">「Pixel 10」の便利なAI機能「マジックサジェスト」の設定方法と使い方を解説する。.</p>
+                        <p class="related-summary">ウィンドウを複数開いて、各ウィンドウでひとつずつレポジトリを開き、切り替えながら開発している——そんな状況はありませんか？ 複数レポ開発の辛さとして、次のようなことが挙げられます。 Backend /...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9172.html">
-                        <h3>ソフトバンク系、コールセンターをAIで代替　安全性と信頼性を確保　外販開始</h3>
+                    <a href="Qiita_-_人気の記事_9934.html">
+                        <h3>Claude CodeとCodexで使える、OCI構成図を自然言語から自動生成するSkillsを作った</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ソフトバンク子会社のGen-AXは11月10日、自律思考型AIオペレーター「X-Ghost」の正式提供を開始した。三井住友カードとの実証を経て、一定規模以上のコンタクトセンターを持つ企業向けに販売する...</p>
+                        <p class="related-summary">はじめに OCIの構成図、描くの面倒じゃないですか。 draw. ioを開いて、アイコンを探して、ドラッグ&amp;ドロップして、線を引いて、配置を整えて……。設計の本質ではない作業に時間を取られがちです。 ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8825.html">
-                        <h3>AIの「タダ乗り」許さず--Wikipedia、AI企業に無断利用の停止と支払いを要求</h3>
+                    <a href="Zennのトレンド_3593.html">
+                        <h3>PRのレビューが追いつかない！もう人間がボトルネックなので、気合いではなく仕組みで少しずつなんとかしていく</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">「Wikipedia」運営元はAI企業に対し、AIモデルのトレーニングを目的としたデータ収集（スクレイピング）を停止し、同団体の有料APIを利用するよう求める声明を公開した。.</p>
+                        <p class="related-summary">はじめに PRのレビューが追いつかないことがある。気がついたらレビューで1日の殆どの時間を使うこともあった。 私のチームでは、エンジニアがClaude Codeなどのエージェントを並列に起動して一人で...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7905.html">
-                        <h3>驚き。20代社員の3割、AIに悩み相談「気を遣わなくていい」</h3>
+                    <a href="Zennのトレンド_9967.html">
+                        <h3>Codex v0.102 Multi-Agent 動作検証</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">ジェイックが11月11日、20代正社員173名を対象に実施した「AI相談」に関する調査結果を発表。約3割が仕事やプライベートの悩みをChatGPTなどのAIに相談していることが明らかになった。.</p>
+                        <p class="related-summary">102 で multi-agent 機能が正式にサポートされました（参考ポスト）。複数のエージェントを協調させることで、単体エージェントでは難しかった「調査→修正」の分業が可能になるとのことで、実際に...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3308.html">
-                        <h3>LLMでの苦い経験を糧に　日本の技術主権を懸けた「ロボット基盤モデル」の公共財化</h3>
+                    <a href="Zennのトレンド_7616.html">
+                        <h3>Codex 5.3 と Opus 4.6 どう使い分ける？実務で使って分かったこと</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">大規模言語モデル（LLM）が世界を席巻する中、次なるフロンティアとして注目を集めるのが、物理世界を主戦場とする「ロボット基盤モデル」だ。この次世代技術の主導権を握るべく、オープンな開発基盤の構築に挑む...</p>
+                        <p class="related-summary">3が同日にリリースされ、界隈が盛り上がっていますね。 「どっちの方がいいの？」「どっちを使うべき？」という議論をよく見かけますが、現時点での私の結論はシンプルです。 「どちらかを選ぶのではなく、両方使...</p>
                     </a>
                 </article>
             </div>

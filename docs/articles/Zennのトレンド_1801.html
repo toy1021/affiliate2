@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>防衛省サイバーコンテスト 2026 CTF Writeup | 日本のテックニュース速報</title>
-    <meta name="description" content="2026年に開催された防衛省主催のCTF「防衛省サイバーコンテスト」に参加し、結果は全問正解で、チーム総合5位、(結果がまだ発表されていませんが、おそらく)学生個人1位という結果になりました。この記事ではそれらに対する私が使った解法をまとめます">
+    <title>【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境 | 日本のテックニュース速報</title>
+    <meta name="description" content="おはようございます、こんにちは、こんばんは。 スペースマーケットでWebエンジニアをしています、s0arです。 ファッキンコールド（クソ寒い） 今日はターミナル開発環境の話をします。 この記事 is 何 以前、Zellij + Helix で軽量ターミナル開発環境を作った記事を書きました">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="防衛省サイバーコンテスト 2026 CTF Writeup">
-    <meta property="og:description" content="2026年に開催された防衛省主催のCTF「防衛省サイバーコンテスト」に参加し、結果は全問正解で、チーム総合5位、(結果がまだ発表されていませんが、おそらく)学生個人1位という結果になりました。この記事ではそれらに対する私が使った解法をまとめます">
+    <meta property="og:title" content="【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境">
+    <meta property="og:description" content="おはようございます、こんにちは、こんばんは。 スペースマーケットでWebエンジニアをしています、s0arです。 ファッキンコールド（クソ寒い） 今日はターミナル開発環境の話をします。 この記事 is 何 以前、Zellij + Helix で軽量ターミナル開発環境を作った記事を書きました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1801.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="防衛省サイバーコンテスト 2026 CTF Writeup">
-    <meta name="twitter:description" content="2026年に開催された防衛省主催のCTF「防衛省サイバーコンテスト」に参加し、結果は全問正解で、チーム総合5位、(結果がまだ発表されていませんが、おそらく)学生個人1位という結果になりました。この記事ではそれらに対する私が使った解法をまとめます">
+    <meta name="twitter:title" content="【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境">
+    <meta name="twitter:description" content="おはようございます、こんにちは、こんばんは。 スペースマーケットでWebエンジニアをしています、s0arです。 ファッキンコールド（クソ寒い） 今日はターミナル開発環境の話をします。 この記事 is 何 以前、Zellij + Helix で軽量ターミナル開発環境を作った記事を書きました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "防衛省サイバーコンテスト 2026 CTF Writeup",
-        "description": "2026年に開催された防衛省主催のCTF「防衛省サイバーコンテスト」に参加し、結果は全問正解で、チーム総合5位、(結果がまだ発表されていませんが、おそらく)学生個人1位という結果になりました。この記事ではそれらに対する私が使った解法をまとめます",
+        "headline": "【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境",
+        "description": "おはようございます、こんにちは、こんばんは。 スペースマーケットでWebエンジニアをしています、s0arです。 ファッキンコールド（クソ寒い） 今日はターミナル開発環境の話をします。 この記事 is 何 以前、Zellij + Helix で軽量ターミナル開発環境を作った記事を書きました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-04T06:23:33",
-        "dateModified": "2026-02-05T10:42:45.455723",
+        "datePublished": "2026-02-16T02:53:04",
+        "dateModified": "2026-02-19T02:12:14.754268",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1801.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1801.html",
-        "articleSection": "セキュリティ",
+        "articleSection": "プログラミング",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "セキュリティ",
-                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "防衛省サイバーコンテスト 2026 CTF Writeup",
+                "name": "【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1801.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
-                <li aria-current="page">防衛省サイバーコンテスト 2026 CTF Writeup</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>防衛省サイバーコンテスト 2026 CTF Writeup</h1>
+                <h1>【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/waki285/articles/2026-modctf-writeup" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: セキュリティ</span>
-                    <time datetime="2026-02-04T06:23:33">
-                        公開: 2026-02-04T06:23:33
+                    <span class="source">出典: <a href="https://zenn.dev/spacemarket/articles/fd6203970ba0fe" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-02-16T02:53:04">
+                        公開: 2026-02-16T02:53:04
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
@@ -135,19 +135,22 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    2026年に開催された防衛省主催のCTF「防衛省サイバーコンテスト」に参加し、結果は全問正解で、チーム総合5位、(結果がまだ発表されていませんが、おそらく)学生個人1位という結果になりました。この記事ではそれらに対する私が使った解法をまとめます。
+                    おはようございます、こんにちは、こんばんは。
+スペースマーケットでWebエンジニアをしています、s0arです。
+ファッキンコールド（クソ寒い）
+今日はターミナル開発環境の話をします。
 
- Web
+ この記事 is 何
+以前、Zellij + Helix で軽量ターミナル開発環境を作った記事を書きました。
 
- 会員限定の裏口 [10pts] (590 solves)
-問題
-SecureCorpDB は、表向きは安全に見える SQLite を使用した従業員管理システムですが、脆弱性を抱えています。悪用して隠されたフラグを取得してください。
-接続情報：http://10.2.4.100:8081
-解答形式： flag{XXXXXX} (...
+で、結局 tmux + Neovim に乗り換えました。
+!
+ちょっと前に「Neovimの設定が面倒」「tmuxのキーバインド覚えたくない」って言ったばかりなのにもう乗り換えるんか、みたいな声はさすがにないと思います。
+だって前回の記事の方が割と異端でしょ。今回は正統でしょ。ほなええでしょ。なあ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/waki285/articles/2026-modctf-writeup" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/spacemarket/articles/fd6203970ba0fe" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -156,25 +159,60 @@ SecureCorpDB は、表向きは安全に見える SQLite を使用した従業�
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>セキュリティ関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -189,16 +227,16 @@ SecureCorpDB は、表向きは安全に見える SQLite を使用した従業�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_7636.html">
+                    <a href="Qiita_-_人気の記事_9074.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Xの投票（アンケート）機能、画像を追加可能に</span>
+                        <span class="nav-title">「怖、、、」をなくす。レビューでの5つのルール</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_8116.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3753.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【Kaggle】CSIRO 上位解法振り返り</span>
+                        <span class="nav-title">サイバー攻撃 身代金払わぬ背景</span>
                     </a>
                 </div>
             </div>
@@ -211,23 +249,53 @@ SecureCorpDB は、表向きは安全に見える SQLite を使用した従業�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_9950.html">
-                        <h3>さくらのクラウド、ガバメントクラウドの条件クリアまであと3つまで到達。残りは統制やセキュリティ認証、オブジェクトストレー...</h3>
+                    <a href="ASCII_jp__トップ_1485.html">
+                        <h3>学生20名による、クラフトジン開発プロジェクトの集大成「Dear20s」がいよいよ完成。【2026年3月2日発売】</h3>
                         <div class="related-meta">
-                            <span class="category">セキュリティ</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">デジタル庁はガバメントクラウドの構築に関して、さくらのクラウドの開発計画の進捗状況を1月30日付けで公表しました。 5つのクラウドがガバメントクラウドに選出 ガバメントクラウドは日本政府共通のクラウド...</p>
+                        <p class="related-summary">学生20名による、クラフトジン開発プロジェクトの集大成「Dear20s」がいよいよ完成。【2026年3月2日発売】.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_9132.html">
-                        <h3>脱初心者のための実践バグバウンティ登竜門</h3>
+                    <a href="ASCII_jp__トップ_542.html">
+                        <h3>3/1開催「KOSENJIN SUMMIT 2026」の分科会「高専エンジニア集団が作る建設DXの最前線」にプロッセルホ...</h3>
                         <div class="related-meta">
-                            <span class="category">セキュリティ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">3/1開催「KOSENJIN SUMMIT 2026」の分科会「高専エンジニア集団が作る建設DXの最前線」にプロッセルホールディングス代表の横山が登壇.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_4277.html">
+                        <h3>Codex v0.102 Multi-Agent 動作検証</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">」や IssueHunt「P3NFEST」などで『バグバウンティ入門講座』の講師を担当 💰【備考】 ・本書の収益は全て、サイバーセキュリティに興味ある学生やコミュニティイベントなどに対して、書籍のプレ...</p>
+                        <p class="related-summary">102 で multi-agent 機能が正式にサポートされました（参考ポスト）。複数のエージェントを協調させることで、単体エージェントでは難しかった「調査→修正」の分業が可能になるとのことで、実際に...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_8507.html">
+                        <h3>Codex 5.3 と Opus 4.6 どう使い分ける？実務で使って分かったこと</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">3が同日にリリースされ、界隈が盛り上がっていますね。 「どっちの方がいいの？」「どっちを使うべき？」という議論をよく見かけますが、現時点での私の結論はシンプルです。 「どちらかを選ぶのではなく、両方使...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_7913.html">
+                        <h3>Amazonでの12年間を振り返る</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">この記事は、私のAmazonでの12年間の歩みを振り返った個人的なまとめです。自分語りがものすごく長くなってしまったので、お忙しい方は読み飛ばしてください。 だれ？ @moomindani です。20...</p>
                     </a>
                 </article>
             </div>

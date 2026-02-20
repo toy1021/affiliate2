@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>なぜ、クソコードは仕事のプログラミングでしか書かれないのか？ | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 本稿はなぜクソコードが趣味のプログラミングではあまり発生せず、仕事のプログラミングで集中的に発生するのかを説明するためのレポートです。 ここで言うクソコードとは単に見た目が汚いコードではなく、保守不能であり全体構造が理解できず、修正が指数関数的に困難になる成果物を指します">
-    <meta name="keywords" content="本">
+    <title>階層的 RAG (Hierarchical RAG) の実装 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです">
+    <meta name="keywords" content="Python">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="なぜ、クソコードは仕事のプログラミングでしか書かれないのか？">
-    <meta property="og:description" content="はじめに 本稿はなぜクソコードが趣味のプログラミングではあまり発生せず、仕事のプログラミングで集中的に発生するのかを説明するためのレポートです。 ここで言うクソコードとは単に見た目が汚いコードではなく、保守不能であり全体構造が理解できず、修正が指数関数的に困難になる成果物を指します">
+    <meta property="og:title" content="階層的 RAG (Hierarchical RAG) の実装">
+    <meta property="og:description" content="はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6783.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="なぜ、クソコードは仕事のプログラミングでしか書かれないのか？">
-    <meta name="twitter:description" content="はじめに 本稿はなぜクソコードが趣味のプログラミングではあまり発生せず、仕事のプログラミングで集中的に発生するのかを説明するためのレポートです。 ここで言うクソコードとは単に見た目が汚いコードではなく、保守不能であり全体構造が理解できず、修正が指数関数的に困難になる成果物を指します">
+    <meta name="twitter:title" content="階層的 RAG (Hierarchical RAG) の実装">
+    <meta name="twitter:description" content="はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "なぜ、クソコードは仕事のプログラミングでしか書かれないのか？",
-        "description": "はじめに 本稿はなぜクソコードが趣味のプログラミングではあまり発生せず、仕事のプログラミングで集中的に発生するのかを説明するためのレポートです。 ここで言うクソコードとは単に見た目が汚いコードではなく、保守不能であり全体構造が理解できず、修正が指数関数的に困難になる成果物を指します",
+        "headline": "階層的 RAG (Hierarchical RAG) の実装",
+        "description": "はじめに シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-13T13:16:37",
-        "dateModified": "2026-02-16T14:43:07.216565",
+        "datePublished": "2026-02-18T03:48:01",
+        "dateModified": "2026-02-20T06:59:05.532727",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6783.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6783.html",
         "articleSection": "プログラミング",
-        "keywords": ["本"]
+        "keywords": ["Python"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "なぜ、クソコードは仕事のプログラミングでしか書かれないのか？",
+                "name": "階層的 RAG (Hierarchical RAG) の実装",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6783.html"
             }
         ]
@@ -114,24 +114,24 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">なぜ、クソコードは仕事のプログラミングでしか書かれないのか？</li>
+                <li aria-current="page">階層的 RAG (Hierarchical RAG) の実装</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>なぜ、クソコードは仕事のプログラミングでしか書かれないのか？</h1>
+                <h1>階層的 RAG (Hierarchical RAG) の実装</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/pdfractal/articles/59fe7cda9b296c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/aprender/articles/11fe7de0aef29c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-02-13T13:16:37">
-                        公開: 2026-02-13T13:16:37
+                    <time datetime="2026-02-18T03:48:01">
+                        公開: 2026-02-18T03:48:01
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">Python</span>
                 </div>
             </header>
 
@@ -139,17 +139,21 @@
                 
                 <div class="article-body">
                     はじめに
-本稿はなぜクソコードが趣味のプログラミングではあまり発生せず、仕事のプログラミングで集中的に発生するのかを説明するためのレポートです。
-ここで言うクソコードとは単に見た目が汚いコードではなく、保守不能であり全体構造が理解できず、修正が指数関数的に困難になる成果物を指します。
-本稿では精神論やモラル批判を避け、能力分布と制度設計、評価構造という観点から事実を積み上げます。
-特定個人の資質を責めることが目的ではなく、再現性のある生成条件を明らかにすることが目的です。
+シンプルなベクトル検索から一歩踏み込んで、 階層的 RAG (Hierarchical RAG) を実装してみました。 ベクトル検索だけでは物足りないと感じる場合、精度向上の一つの選択肢になるはずです。
+今回 HHKB (Happy Hacking Keyboard) の取扱説明書から、設定情報を抽出するサンプルコードを用意しています。
 
- 趣味のプログラミングがクソコードにならない理由
-趣味のプログラミングには最初から強力なフィルタが存在します。...
+ 階層的 RAG (Hierarchical RAG) とは
+ドキュメントを単なるフラットなテキストの塊としてではなく、見出しや段落といった階層構造を保持しながら管理・検索する手法です。
+
+ 技術スタック
+
+Python
+
+ChromaD...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/pdfractal/articles/59fe7cda9b296c" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/aprender/articles/11fe7de0aef29c" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,6 +166,16 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
@@ -172,20 +186,10 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +230,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_9067.html">
+                    <a href="Qiita_-_人気の記事_164.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">大規模設計で学んだ「抽象化」の力：関数型的にシステムを捉えるコツ</span>
+                        <span class="nav-title">【Gemini 3 Pro】Antigravityを「ただのエディタ」として使うのはやめろ。n8nと...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_5792.html">
+                    <a href="Zennのトレンド_6825.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【本日限り】｢Apple Watch｣のチャレンジ企画｢心臓月間チャレンジ｣が開催中</span>
+                        <span class="nav-title">『Linuxのしくみ』1章：Linuxの全体像を理解する</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +252,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4988.html">
-                        <h3>【前編】「で、&#34;結局&#34;今どんな状況なの？」と言われたとき、あなたの報告はまだ“報告”になっていない</h3>
+                    <a href="CNET_Japan_最新情報総合_7010.html">
+                        <h3>東海道新幹線、ポイントのレール寿命2倍に　新形状開発　夜間作業を減らせる見通し</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめまして。 株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で つまずきやすいポイントを整理して発信しています。 PRUMについて気になった方は、 コーポレート...</p>
+                        <p class="related-summary">JR東海は2月19日、東海道新幹線のポイントに使用される「トングレール」について、長寿命化を実現する新形状のレールを開発したと発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5209.html">
-                        <h3>属人化自体は悪じゃない。“〇〇な属人化”が悪い</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに チームで開発していると、だいたい一度はこんな出来事、1度は経験したことがあるのではないでしょうか。 「それ、Aさんがまとめてくれてるところだから分からない」 「Aさんがいないとリリースできな...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_6609.html">
-                        <h3>GitHub、YAMLではなく自然言語でビルドやデプロイなどのワークフローを記述できる「GitHub Agentic W...</h3>
+                    <a href="Publickey_9799.html">
+                        <h3>GitHub、リポジトリに対するプルリクエストをコラボレーターのみに制限する、あるいは完全に無効にする設定を可能に</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">GitHubは、自然言語でGitHub Actionsワークフローを記述できる「GitHub Agentic Workflows」のテクニカルプレビューを発表しました。 Imagine waking ...</p>
+                        <p class="related-summary">GitHubは、リポジトリの設定として新たな設定を2つ追加したことを発表しました。 1つはコラボレーターのみにプルリクエストを制限する設定、もう1つは完全にプルリクエストを無効する設定です。 コラボレ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_3001.html">
-                        <h3>結局 Python は遅いのか</h3>
+                    <a href="Zennのトレンド_3665.html">
+                        <h3>図形フル活用の PowerPoint を GitHub Copilot に読ませてみた</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">結局 Python は遅いのか ! この記事では Python を用いて幾つかの方法で定積分の近似 C++ で近似 比較 を行います． はじめに 「Python は遅い」，「Python で for ...</p>
+                        <p class="related-summary">先日 Excel 方眼紙を GitHub Copilot に食わせてみた という記事を書きましたが、類似の試みとして結構複雑な PowerPoint のスライドを GitHub Copilot に読ま...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3461.html">
-                        <h3>結局 Python は遅いのか</h3>
+                    <a href="Qiita_-_人気の記事_1127.html">
+                        <h3>エンジニア復帰までの道のり（2026）</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">結局 Python は遅いのか この記事では Python を用いて幾つかの方法で定積分の近似 C++ で近似 比較 を行います． はじめに 「Python は遅い」，「Python で for 使う...</p>
+                        <p class="related-summary">はじめに この度、2026年4月（もしくは2026年5月）に東京の自社開発企業で働くことになりました。そのため、今回の転職活動の振り返りをしたく記事を書くことにしました。 これまでの経歴 ドラックスト...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_696.html">
+                        <h3>プログラミングが「全くできない人」の頭の中を解剖してみた</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに 世の中の「未経験エンジニア挑戦記」の多くは、もともと数学が得意だったり、論理的思考の化身のような人たちが書いています。 しかし、私は違います。 「ロジックを組む」その言葉の響きだけで、私の脳...</p>
                     </a>
                 </article>
             </div>

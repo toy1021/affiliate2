@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIが脆弱性を96%見つける時代に、僕らがセキュリティを学ぶ意味はあるのか | 日本のテックニュース速報</title>
-    <meta name="description" content="「このコード、セキュリティ的に大丈夫かな……」 PRレビューのたびに、なんとなく不安になる。SQLインジェクション、XSS、CSRF——知識としては知っている。でも、自分のレビューで本当に脆弱性を潰しきれているかと聞かれたら、正直自信がない。 そしてある日、こんなニュースが流れてきた">
-    <meta name="keywords" content="AI,本">
+    <title>認証ライブラリを使わずに認証してみた話 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 最近、バイブコーディングで作ったアプリのセキュリティの脆弱性が度々話題に上がる。 自分も気をつけねば、と思いつつも、仕組みがわかっていなければAIの出力の是非を見極めることなどできないだろう">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIが脆弱性を96%見つける時代に、僕らがセキュリティを学ぶ意味はあるのか">
-    <meta property="og:description" content="「このコード、セキュリティ的に大丈夫かな……」 PRレビューのたびに、なんとなく不安になる。SQLインジェクション、XSS、CSRF——知識としては知っている。でも、自分のレビューで本当に脆弱性を潰しきれているかと聞かれたら、正直自信がない。 そしてある日、こんなニュースが流れてきた">
+    <meta property="og:title" content="認証ライブラリを使わずに認証してみた話">
+    <meta property="og:description" content="はじめに 最近、バイブコーディングで作ったアプリのセキュリティの脆弱性が度々話題に上がる。 自分も気をつけねば、と思いつつも、仕組みがわかっていなければAIの出力の是非を見極めることなどできないだろう">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3697.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIが脆弱性を96%見つける時代に、僕らがセキュリティを学ぶ意味はあるのか">
-    <meta name="twitter:description" content="「このコード、セキュリティ的に大丈夫かな……」 PRレビューのたびに、なんとなく不安になる。SQLインジェクション、XSS、CSRF——知識としては知っている。でも、自分のレビューで本当に脆弱性を潰しきれているかと聞かれたら、正直自信がない。 そしてある日、こんなニュースが流れてきた">
+    <meta name="twitter:title" content="認証ライブラリを使わずに認証してみた話">
+    <meta name="twitter:description" content="はじめに 最近、バイブコーディングで作ったアプリのセキュリティの脆弱性が度々話題に上がる。 自分も気をつけねば、と思いつつも、仕組みがわかっていなければAIの出力の是非を見極めることなどできないだろう">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3697.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIが脆弱性を96%見つける時代に、僕らがセキュリティを学ぶ意味はあるのか",
-        "description": "「このコード、セキュリティ的に大丈夫かな……」 PRレビューのたびに、なんとなく不安になる。SQLインジェクション、XSS、CSRF——知識としては知っている。でも、自分のレビューで本当に脆弱性を潰しきれているかと聞かれたら、正直自信がない。 そしてある日、こんなニュースが流れてきた",
+        "headline": "認証ライブラリを使わずに認証してみた話",
+        "description": "はじめに 最近、バイブコーディングで作ったアプリのセキュリティの脆弱性が度々話題に上がる。 自分も気をつけねば、と思いつつも、仕組みがわかっていなければAIの出力の是非を見極めることなどできないだろう",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-08T13:25:40",
-        "dateModified": "2026-02-09T22:37:54.968379",
+        "datePublished": "2026-02-18T16:07:52",
+        "dateModified": "2026-02-21T18:37:46.938222",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3697.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3697.html",
         "articleSection": "セキュリティ",
-        "keywords": ["AI","本"]
+        "keywords": ["AI"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIが脆弱性を96%見つける時代に、僕らがセキュリティを学ぶ意味はあるのか",
+                "name": "認証ライブラリを使わずに認証してみた話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3697.html"
             }
         ]
@@ -114,44 +114,42 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=セキュリティ">セキュリティ</a></li>
-                <li aria-current="page">AIが脆弱性を96%見つける時代に、僕らがセキュリティを学ぶ意味はあるのか</li>
+                <li aria-current="page">認証ライブラリを使わずに認証してみた話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIが脆弱性を96%見つける時代に、僕らがセキュリティを学ぶ意味はあるのか</h1>
+                <h1>認証ライブラリを使わずに認証してみた話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/smartvain/articles/ai-finds-96pct-vulns-why-learn-security" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/ashunar0/articles/36c9fdb5bc3c27" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: セキュリティ</span>
-                    <time datetime="2026-02-08T13:25:40">
-                        公開: 2026-02-08T13:25:40
+                    <time datetime="2026-02-18T16:07:52">
+                        公開: 2026-02-18T16:07:52
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    「このコード、セキュリティ的に大丈夫かな……」
-PRレビューのたびに、なんとなく不安になる。SQLインジェクション、XSS、CSRF——知識としては知っている。でも、自分のレビューで本当に脆弱性を潰しきれているかと聞かれたら、正直自信がない。
-そしてある日、こんなニュースが流れてきた。
-「自律型AIハッカーツール Shannon、既知の脆弱性に対して96%の成功率でexploitを自動生成」
-——あ、もう僕らの出番ないじゃん。
+                    はじめに
+最近、バイブコーディングで作ったアプリのセキュリティの脆弱性が度々話題に上がる。
+自分も気をつけねば、と思いつつも、仕組みがわかっていなければAIの出力の是非を見極めることなどできないだろう。
+ということで今回は、特に認証機能に絞って、あえて全部自分で実装してみる、という取り組みである。
+Auth.js を使えばサインアップもログインも関数1つで終わる。その裏側ではどんな処理がなされているのだろうか。わかっていそうで意外とわかっていない領域をのぞいてみる。
 
- はじめに
-結論から少しだけ言うと、AIがセキュリティを自動化する時代だからこそ、僕ら開発者のセキュリティ"感覚"がむしろ重要になる——と今は思っている。
-「え...
+ この記事でやること
+Next.js + TypeScript で、Auth.js を使わずに認証を全部自前実装する...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/smartvain/articles/ai-finds-96pct-vulns-why-learn-security" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ashunar0/articles/36c9fdb5bc3c27" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -168,26 +166,6 @@ PRレビューのたびに、なんとなく不安になる。SQLインジェク
                                 <div class="product-info">
                                     <div class="product-title">AI - Amazon検索結果</div>
                                     <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -228,16 +206,16 @@ PRレビューのたびに、なんとなく不安になる。SQLインジェク
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_8916.html">
+                    <a href="Qiita_-_人気の記事_8225.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AIがニュースを集めて要約してメールしてくれる仕組みを作った（Googleアラート × Gemini...</span>
+                        <span class="nav-title">残業60時間でも年間200時間の学習を確保する技術【エンジニアの時間戦略】</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_2216.html">
+                    <a href="Zennのトレンド_1039.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">｢iPhone 17e｣は4つの新機能を搭載して”まもなく”発売</span>
+                        <span class="nav-title">クラウド型コーディングエージェントの時代がまた来る</span>
                     </a>
                 </div>
             </div>
@@ -250,13 +228,23 @@ PRレビューのたびに、なんとなく不安になる。SQLインジェク
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_1985.html">
-                        <h3>さくらのクラウド、ガバメントクラウドの条件クリアまであと3つまで到達。残りは統制やセキュリティ認証、オブジェクトストレー...</h3>
+                    <a href="Zennのトレンド_5880.html">
+                        <h3>Cloudflare無料プランだけで個人サイトのセキュリティが完結した話</h3>
+                        <div class="related-meta">
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">TL;DR Cloudflareのアドバンテージは、次の3点です。 無料プランだけでWAF・ボット対策まで揃う、セキュリティの充実度 DNS統合だからこそ、煩雑でリスクの高い設定をワンクリックで実現 ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_7515.html">
+                        <h3>オープンソースの公式サポート終了後も、最小限のコストで安全に脆弱性対応を可能にする「TuxCare ELS」提供開始［P...</h3>
                         <div class="related-meta">
                             <span class="category">セキュリティ</span>
                             <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">デジタル庁はガバメントクラウドの構築に関して、さくらのクラウドの開発計画の進捗状況を1月30日付けで公表しました。 5つのクラウドがガバメントクラウドに選出 ガバメントクラウドは日本政府共通のクラウド...</p>
+                        <p class="related-summary">OSやプログラミング言語のランタイムのアップデートは、プログラマやシステム運用者にとって常に悩みのタネだといえます。 一般に、数年ごとに発生するOSや言語のランタイム、ライブラリなどのメジャーアップデ...</p>
                     </a>
                 </article>
             </div>

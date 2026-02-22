@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>エンジニアは、なぜ生成AIで仕事が楽にならないのか | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 「生成AIで開発が楽になる」「バイブコーディングで生産性が爆上がりした」 そんな話を聞くたびに、こう思ったことはないでしょうか。 「いや、そこまで楽になってないが？むしろ忙しくなった」 実際、生成AIでコーディング作業が削れた代わりに、別のコストが前面に出てきま.">
-    <meta name="keywords" content="AI">
+    <title>async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~ | 日本のテックニュース速報</title>
+    <meta name="description" content="現在42Tokyoで最後のチーム課題（Webアプリ開発）に取り組んでいて、仕事でもなんとなくasync/awaitで書いてるけど、なぜこの書き方なんだろう？、とふと疑問に思ったので、非同期処理の歴史を辿ってみました。 JavaScript非同期処理の進化史：コールバックか.">
+    <meta name="keywords" content="AI,JavaScript,Java">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="エンジニアは、なぜ生成AIで仕事が楽にならないのか">
-    <meta property="og:description" content="はじめに 「生成AIで開発が楽になる」「バイブコーディングで生産性が爆上がりした」 そんな話を聞くたびに、こう思ったことはないでしょうか。 「いや、そこまで楽になってないが？むしろ忙しくなった」 実際、生成AIでコーディング作業が削れた代わりに、別のコストが前面に出てきま.">
+    <meta property="og:title" content="async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~">
+    <meta property="og:description" content="現在42Tokyoで最後のチーム課題（Webアプリ開発）に取り組んでいて、仕事でもなんとなくasync/awaitで書いてるけど、なぜこの書き方なんだろう？、とふと疑問に思ったので、非同期処理の歴史を辿ってみました。 JavaScript非同期処理の進化史：コールバックか.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5149.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="エンジニアは、なぜ生成AIで仕事が楽にならないのか">
-    <meta name="twitter:description" content="はじめに 「生成AIで開発が楽になる」「バイブコーディングで生産性が爆上がりした」 そんな話を聞くたびに、こう思ったことはないでしょうか。 「いや、そこまで楽になってないが？むしろ忙しくなった」 実際、生成AIでコーディング作業が削れた代わりに、別のコストが前面に出てきま.">
+    <meta name="twitter:title" content="async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~">
+    <meta name="twitter:description" content="現在42Tokyoで最後のチーム課題（Webアプリ開発）に取り組んでいて、仕事でもなんとなくasync/awaitで書いてるけど、なぜこの書き方なんだろう？、とふと疑問に思ったので、非同期処理の歴史を辿ってみました。 JavaScript非同期処理の進化史：コールバックか.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "エンジニアは、なぜ生成AIで仕事が楽にならないのか",
-        "description": "はじめに 「生成AIで開発が楽になる」「バイブコーディングで生産性が爆上がりした」 そんな話を聞くたびに、こう思ったことはないでしょうか。 「いや、そこまで楽になってないが？むしろ忙しくなった」 実際、生成AIでコーディング作業が削れた代わりに、別のコストが前面に出てきま.",
+        "headline": "async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~",
+        "description": "現在42Tokyoで最後のチーム課題（Webアプリ開発）に取り組んでいて、仕事でもなんとなくasync/awaitで書いてるけど、なぜこの書き方なんだろう？、とふと疑問に思ったので、非同期処理の歴史を辿ってみました。 JavaScript非同期処理の進化史：コールバックか.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-05T01:29:55",
-        "dateModified": "2026-02-06T18:54:13.432366",
+        "datePublished": "2026-02-21T06:19:50",
+        "dateModified": "2026-02-22T16:32:51.046390",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5149.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5149.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "keywords": ["AI","JavaScript","Java"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "エンジニアは、なぜ生成AIで仕事が楽にならないのか",
+                "name": "async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5149.html"
             }
         ]
@@ -114,39 +114,39 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">エンジニアは、なぜ生成AIで仕事が楽にならないのか</li>
+                <li aria-current="page">async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>エンジニアは、なぜ生成AIで仕事が楽にならないのか</h1>
+                <h1>async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/KYoshiyama/items/14554853372f33c3374b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/MoriP-K/items/c9590934c7e72638107b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-02-05T01:29:55">
-                        公開: 2026-02-05T01:29:55
+                    <time datetime="2026-02-21T06:19:50">
+                        公開: 2026-02-21T06:19:50
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Java</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-「生成AIで開発が楽になる」「バイブコーディングで生産性が爆上がりした」
-そんな話を聞くたびに、こう思ったことはないでしょうか。
-「いや、そこまで楽になってないが？むしろ忙しくなった」
-実際、生成AIでコーディング作業が削れた代わりに、別のコストが前面に出てきま...
+                    現在42Tokyoで最後のチーム課題（Webアプリ開発）に取り組んでいて、仕事でもなんとなくasync/awaitで書いてるけど、なぜこの書き方なんだろう？、とふと疑問に思ったので、非同期処理の歴史を辿ってみました。
+
+JavaScript非同期処理の進化史：コールバックか...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/KYoshiyama/items/14554853372f33c3374b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/MoriP-K/items/c9590934c7e72638107b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -173,6 +173,16 @@
                                 <div class="product-info">
                                     <div class="product-title">機械学習 - Amazon検索結果</div>
                                     <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=JavaScript&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="JavaScript - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">JavaScript - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでJavaScriptに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -213,16 +223,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3892.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9335.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">なぜJavaのジェネリクスの型推論は同じ型を強制しないのか</span>
+                        <span class="nav-title">テーブル決済でDX 最後は人の目</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6178.html">
+                    <a href="Zennのトレンド_7090.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【コピペOK】Ant Design コンポーネントカタログ 〜画像と用途で探せる逆引きガイド〜</span>
+                        <span class="nav-title">モデル評価をClaude Code x Agent Skillsを使って完全自動運転した話</span>
                     </a>
                 </div>
             </div>
@@ -235,53 +245,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8400.html">
-                        <h3>「Claudeに広告は表示しません」Anthropicが宣言--ChatGPTに対抗か</h3>
+                    <a href="CNET_Japan_最新情報総合_1328.html">
+                        <h3>アップル、CarPlayに「対話型アプリ」導入へ　車内でChatGPTやGeminiが利用可能に？</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AnthropicはスーパーボウルCMで競合のOpenAIを意識したメッセージを打ち出した。ただ本質的な論点は、生成AIと広告の関係そのものにある。.</p>
+                        <p class="related-summary">最新の「CarPlay」開発者向けガイドの中に、「音声ベースの対話型アプリ」への対応が含まれていることが判明した。アップルはダッシュボード上で「ChatGPT」「Gemini」「Claude」といった...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2707.html">
-                        <h3>生成AIは「実験」から「実装」へ　動画・画像AIで企業価値を高める方法を解説（2/19開催）</h3>
+                    <a href="CNET_Japan_最新情報総合_5654.html">
+                        <h3>グーグルが最新AI「Gemini 3.1 Pro」を発表、推論能力が飛躍的に向上</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">CNET JapanとZDNET Japanは、無料のオンラインセミナー「生成AIは『実験』から『実装』へ──企業価値を高める『ビジネスコンテンツ創造』としての動画・画像AI活用術」を、2月19日15...</p>
+                        <p class="related-summary">グーグルが最新AIモデル「Gemini 3.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_98.html">
-                        <h3>Fitbit創業者ら、「家族の健康管理」をAIで一元化する新会社Luffuを設立</h3>
+                    <a href="CNET_Japan_最新情報総合_1630.html">
+                        <h3>AIエージェントの進化でリスク増大も「情報開示」は置き去りに　MITが警鐘</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">フィットネス向けウェアラブル製品で知られるFitbitの共同創業者らは、家族の健康記録をまとめて管理するシステムを開発する新会社、Luffuの設立を発表した。.</p>
+                        <p class="related-summary">MITの研究者らが主導する研究によると、エージェント型AIの開発者は安全性テストの手順などに関する情報をほとんど公開していない。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9101.html">
-                        <h3>NASAの火星探査車、「AIが策定したルート走行」に初成功　Claude活用</h3>
+                    <a href="Zennのトレンド_2504.html">
+                        <h3>現地訪問必須だったRaspberryPiの管理地獄に終止符-AWS Greengrass</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">NASAの火星探査車「Perseverance」は、AIが策定したルートの走行に初めて成功した。AIにはClaudeが活用された。.</p>
+                        <p class="related-summary">対象読者 RaspberryPiを使ったIoT機器の運用を検討をしている方 OTA（Over the Air）を簡単に実装したい方 とりあえず動くけど、保守性の運用性の高い設計へステップアップしたい方...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6641.html">
-                        <h3>「AI機能を一括オフ」の需要にFirefoxブラウザーが対応</h3>
+                    <a href="Qiita_-_人気の記事_2382.html">
+                        <h3>【革命】コンテキスト長の限界を100倍突破！「Recursive Language Models」が2026年のAI開発...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Mozillaはブラウザー「Firefox」に新しいAI機能を追加する一方、それをオフにする選択肢も提供する。.</p>
+                        <p class="related-summary">結論から言うと、AIが自分自身を再帰的に呼び出して超長文を処理する「Recursive Language Models（RLM）」が登場し、コンテキスト長の限界を100倍突破しました。これは2026年...</p>
                     </a>
                 </article>
             </div>

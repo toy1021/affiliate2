@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React 19の型定義では「FC」と「ReactNodeを返す関数」が違う | 日本のテックニュース速報</title>
-    <meta name="description" content="対象読者: 現在React 18以前を使っていて、React 19にそのうち上げたいと思っている方。React 19の型定義の背景を知りたい方 みなさんこんにちは。筆者は最近気づいたのですが、React 18から19に上げるときに問題になる（型エラーになる）パターンがありま.">
-    <meta name="keywords" content="React">
+    <title>async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~ | 日本のテックニュース速報</title>
+    <meta name="description" content="現在42Tokyoで最後のチーム課題（Webアプリ開発）に取り組んでいて、仕事でもなんとなくasync/awaitで書いてるけど、なぜこの書き方なんだろう？、とふと疑問に思ったので、非同期処理の歴史を辿ってみました。 JavaScript非同期処理の進化史：コールバックか.">
+    <meta name="keywords" content="AI,JavaScript,Java">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="React 19の型定義では「FC」と「ReactNodeを返す関数」が違う">
-    <meta property="og:description" content="対象読者: 現在React 18以前を使っていて、React 19にそのうち上げたいと思っている方。React 19の型定義の背景を知りたい方 みなさんこんにちは。筆者は最近気づいたのですが、React 18から19に上げるときに問題になる（型エラーになる）パターンがありま.">
+    <meta property="og:title" content="async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~">
+    <meta property="og:description" content="現在42Tokyoで最後のチーム課題（Webアプリ開発）に取り組んでいて、仕事でもなんとなくasync/awaitで書いてるけど、なぜこの書き方なんだろう？、とふと疑問に思ったので、非同期処理の歴史を辿ってみました。 JavaScript非同期処理の進化史：コールバックか.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2927.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="React 19の型定義では「FC」と「ReactNodeを返す関数」が違う">
-    <meta name="twitter:description" content="対象読者: 現在React 18以前を使っていて、React 19にそのうち上げたいと思っている方。React 19の型定義の背景を知りたい方 みなさんこんにちは。筆者は最近気づいたのですが、React 18から19に上げるときに問題になる（型エラーになる）パターンがありま.">
+    <meta name="twitter:title" content="async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~">
+    <meta name="twitter:description" content="現在42Tokyoで最後のチーム課題（Webアプリ開発）に取り組んでいて、仕事でもなんとなくasync/awaitで書いてるけど、なぜこの書き方なんだろう？、とふと疑問に思ったので、非同期処理の歴史を辿ってみました。 JavaScript非同期処理の進化史：コールバックか.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "React 19の型定義では「FC」と「ReactNodeを返す関数」が違う",
-        "description": "対象読者: 現在React 18以前を使っていて、React 19にそのうち上げたいと思っている方。React 19の型定義の背景を知りたい方 みなさんこんにちは。筆者は最近気づいたのですが、React 18から19に上げるときに問題になる（型エラーになる）パターンがありま.",
+        "headline": "async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~",
+        "description": "現在42Tokyoで最後のチーム課題（Webアプリ開発）に取り組んでいて、仕事でもなんとなくasync/awaitで書いてるけど、なぜこの書き方なんだろう？、とふと疑問に思ったので、非同期処理の歴史を辿ってみました。 JavaScript非同期処理の進化史：コールバックか.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-04T03:16:02",
-        "dateModified": "2026-02-05T10:42:45.460618",
+        "datePublished": "2026-02-21T06:19:50",
+        "dateModified": "2026-02-22T18:38:23.555417",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2927.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2927.html",
-        "articleSection": "テクノロジー",
-        "keywords": ["React"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","JavaScript","Java"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "React 19の型定義では「FC」と「ReactNodeを返す関数」が違う",
+                "name": "async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2927.html"
             }
         ]
@@ -113,37 +113,40 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">React 19の型定義では「FC」と「ReactNodeを返す関数」が違う</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>React 19の型定義では「FC」と「ReactNodeを返す関数」が違う</h1>
+                <h1>async/awaitはなぜ生まれたのか ~ 非同期処理の歴史を辿る ~</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/uhyo/items/0d6797b848ed41d0e697?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-02-04T03:16:02">
-                        公開: 2026-02-04T03:16:02
+                    <span class="source">出典: <a href="https://qiita.com/MoriP-K/items/c9590934c7e72638107b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-02-21T06:19:50">
+                        公開: 2026-02-21T06:19:50
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">React</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Java</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    対象読者: 現在React 18以前を使っていて、React 19にそのうち上げたいと思っている方。React 19の型定義の背景を知りたい方
-みなさんこんにちは。筆者は最近気づいたのですが、React 18から19に上げるときに問題になる（型エラーになる）パターンがありま...
+                    現在42Tokyoで最後のチーム課題（Webアプリ開発）に取り組んでいて、仕事でもなんとなくasync/awaitで書いてるけど、なぜこの書き方なんだろう？、とふと疑問に思ったので、非同期処理の歴史を辿ってみました。
+
+JavaScript非同期処理の進化史：コールバックか...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/uhyo/items/0d6797b848ed41d0e697?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/MoriP-K/items/c9590934c7e72638107b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -156,10 +159,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">React - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=JavaScript&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="JavaScript - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">JavaScript - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでJavaScriptに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -169,23 +192,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -200,16 +223,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_4203.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_6622.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">SwitchBot、ラリーができるAIテニスロボット「Acemate テニスロボット」の予約受付を開...</span>
+                        <span class="nav-title">テーブル決済でDX 最後は人の目</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_5192.html">
+                    <a href="Zennのトレンド_8592.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">ちょっと社でアンケートとってみた - State of chot Inc. 2025</span>
+                        <span class="nav-title">モデル評価をClaude Code x Agent Skillsを使って完全自動運転した話</span>
                     </a>
                 </div>
             </div>
@@ -222,53 +245,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2194.html">
-                        <h3>「洗剤などをペットボトルに移し替えないで」--国民生活センターが注意喚起</h3>
+                    <a href="CNET_Japan_最新情報総合_3508.html">
+                        <h3>アップル、CarPlayに「対話型アプリ」導入へ　車内でChatGPTやGeminiが利用可能に？</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">国民生活センターは2月4日、飲料用ペットボトルに洗剤や殺虫剤などを移し替えたことによる誤飲事故が相次いでいるとして、消費者に注意を呼びかけた。中には、柔軟成分入り洗濯用合成洗剤を誤飲し、化学性肺炎を発...</p>
+                        <p class="related-summary">最新の「CarPlay」開発者向けガイドの中に、「音声ベースの対話型アプリ」への対応が含まれていることが判明した。アップルはダッシュボード上で「ChatGPT」「Gemini」「Claude」といった...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6486.html">
-                        <h3>「引っ越しトラブル」が増加傾向、国民生活センターが注意喚起　その中身とは</h3>
+                    <a href="CNET_Japan_最新情報総合_5461.html">
+                        <h3>グーグルが最新AI「Gemini 3.1 Pro」を発表、推論能力が飛躍的に向上</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">引越に関するトラブルの相談が増加しているとして、国民生活センターが注意を呼び掛けている。全国の消費生活センターなどに寄せられた相談を分析した結果、特に新生活が始まる3～4月に件数が増える傾向があるとい...</p>
+                        <p class="related-summary">グーグルが最新AIモデル「Gemini 3.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3813.html">
-                        <h3>ドコモの競争激化が響き、NTTが通期営業利益予想を1090億円下方修正</h3>
+                    <a href="CNET_Japan_最新情報総合_4582.html">
+                        <h3>AIエージェントの進化でリスク増大も「情報開示」は置き去りに　MITが警鐘</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NTTが2025年度通期の営業利益予想を1090億円下方修正した。ドコモでの競争激化による販促費増加と、いつでもカエドキプログラムの返却率上昇がコスト増の主因となった。.</p>
+                        <p class="related-summary">MITの研究者らが主導する研究によると、エージェント型AIの開発者は安全性テストの手順などに関する情報をほとんど公開していない。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7074.html">
-                        <h3>月のお小遣い3万円台でも大丈夫 安く始めるデュアルディスプレー環境</h3>
+                    <a href="Zennのトレンド_6861.html">
+                        <h3>現地訪問必須だったRaspberryPiの管理地獄に終止符-AWS Greengrass</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">月3万円台のお小遣いで、1枚追加するだけでデュアルディスプレー環境を実現するにはどうするか。「VA220-H」は手頃な価格と十分な表示性能で、作業効率を無理なく高めたい人に向いた現実的な選択肢です。.</p>
+                        <p class="related-summary">対象読者 RaspberryPiを使ったIoT機器の運用を検討をしている方 OTA（Over the Air）を簡単に実装したい方 とりあえず動くけど、保守性の運用性の高い設計へステップアップしたい方...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6890.html">
-                        <h3>「いま出せる最大限を詰め込みました」まねきケチャの神崎ひなが念願の1st写真集を発売！</h3>
+                    <a href="Qiita_-_人気の記事_8225.html">
+                        <h3>【革命】コンテキスト長の限界を100倍突破！「Recursive Language Models」が2026年のAI開発...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">人気アイドルグループ「まねきケチャ」の赤色担当として活躍する神崎ひなさんが、1st写真集「ひなたぼっこ」の発売記念イベントをソフマップAKIBA アミューズメント館で開催した。.</p>
+                        <p class="related-summary">結論から言うと、AIが自分自身を再帰的に呼び出して超長文を処理する「Recursive Language Models（RLM）」が登場し、コンテキスト長の限界を100倍突破しました。これは2026年...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIコーディング時代の開発手法を再考する：スクラムよりウォーターフォールが向いている？ | 日本のテックニュース速報</title>
-    <meta name="description" content="「AIがコードを書く時代、スクラムは本当に最適解なのか？」 この問いに、あなたは即答できますか？ 開発現場で起きている静かな革命 AIによるコーディングが当たり前になりつつある今、ソフトウェア開発の進め方そのものを見直すタイミングが来ています。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="AI,本">
+    <title>git worktreeとCursorで爆速並列開発！複数ブランチを同時に作業するワークフロー | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに ソーイ株式会社 村上です。 開発していると同時に機能を実装したいと思うことが多いと思います。 featureブランチで開発中に、本番の緊急バグ対応が入った git stash して git checkout して、対応して、また戻る…を繰り返している Cur.">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIコーディング時代の開発手法を再考する：スクラムよりウォーターフォールが向いている？">
-    <meta property="og:description" content="「AIがコードを書く時代、スクラムは本当に最適解なのか？」 この問いに、あなたは即答できますか？ 開発現場で起きている静かな革命 AIによるコーディングが当たり前になりつつある今、ソフトウェア開発の進め方そのものを見直すタイミングが来ています。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="git worktreeとCursorで爆速並列開発！複数ブランチを同時に作業するワークフロー">
+    <meta property="og:description" content="はじめに ソーイ株式会社 村上です。 開発していると同時に機能を実装したいと思うことが多いと思います。 featureブランチで開発中に、本番の緊急バグ対応が入った git stash して git checkout して、対応して、また戻る…を繰り返している Cur.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_848.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIコーディング時代の開発手法を再考する：スクラムよりウォーターフォールが向いている？">
-    <meta name="twitter:description" content="「AIがコードを書く時代、スクラムは本当に最適解なのか？」 この問いに、あなたは即答できますか？ 開発現場で起きている静かな革命 AIによるコーディングが当たり前になりつつある今、ソフトウェア開発の進め方そのものを見直すタイミングが来ています。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="git worktreeとCursorで爆速並列開発！複数ブランチを同時に作業するワークフロー">
+    <meta name="twitter:description" content="はじめに ソーイ株式会社 村上です。 開発していると同時に機能を実装したいと思うことが多いと思います。 featureブランチで開発中に、本番の緊急バグ対応が入った git stash して git checkout して、対応して、また戻る…を繰り返している Cur.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIコーディング時代の開発手法を再考する：スクラムよりウォーターフォールが向いている？",
-        "description": "「AIがコードを書く時代、スクラムは本当に最適解なのか？」 この問いに、あなたは即答できますか？ 開発現場で起きている静かな革命 AIによるコーディングが当たり前になりつつある今、ソフトウェア開発の進め方そのものを見直すタイミングが来ています。最新のテクノロジー情報をお届けします。",
+        "headline": "git worktreeとCursorで爆速並列開発！複数ブランチを同時に作業するワークフロー",
+        "description": "はじめに ソーイ株式会社 村上です。 開発していると同時に機能を実装したいと思うことが多いと思います。 featureブランチで開発中に、本番の緊急バグ対応が入った git stash して git checkout して、対応して、また戻る…を繰り返している Cur.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-10-12T02:18:50",
-        "dateModified": "2025-10-14T03:01:32.992068",
+        "datePublished": "2026-02-26T03:26:54",
+        "dateModified": "2026-02-26T22:36:09.043278",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_848.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_848.html",
         "articleSection": "プログラミング",
-        "keywords": ["AI","本"]
+        "keywords": ["本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIコーディング時代の開発手法を再考する：スクラムよりウォーターフォールが向いている？",
+                "name": "git worktreeとCursorで爆速並列開発！複数ブランチを同時に作業するワークフロー",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_848.html"
             }
         ]
@@ -114,24 +114,23 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">AIコーディング時代の開発手法を再考する：スクラムよりウォーターフォールが向いている？</li>
+                <li aria-current="page">git worktreeとCursorで爆速並列開発！複数ブランチを同時に作業するワークフロー</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIコーディング時代の開発手法を再考する：スクラムよりウォーターフォールが向いている？</h1>
+                <h1>git worktreeとCursorで爆速並列開発！複数ブランチを同時に作業するワークフロー</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/b64870d8fd6b6c225d0c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/sugumura/items/232710ff53c87c10eaba?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-10-12T02:18:50">
-                        公開: 2025-10-12T02:18:50
+                    <time datetime="2026-02-26T03:26:54">
+                        公開: 2026-02-26T03:26:54
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -139,16 +138,18 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    「AIがコードを書く時代、スクラムは本当に最適解なのか？」
-この問いに、あなたは即答できますか？
+                    はじめに
+ソーイ株式会社 村上です。
+開発していると同時に機能を実装したいと思うことが多いと思います。
 
-開発現場で起きている静かな革命
-AIによるコーディングが当たり前になりつつある今、ソフトウェア開発の進め方そのものを見直すタイミングが来ています。
-多くのチームがスクラ...
+featureブランチで開発中に、本番の緊急バグ対応が入った
+
+git stash して git checkout して、対応して、また戻る…を繰り返している
+Cur...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/nogataka/items/b64870d8fd6b6c225d0c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/sugumura/items/232710ff53c87c10eaba?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,20 +162,20 @@ AIによるコーディングが当たり前になりつつある今、ソフト
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +226,16 @@ AIによるコーディングが当たり前になりつつある今、ソフト
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_4113.html">
+                    <a href="気になる記になる_8456.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【セール】SwitchBotが公式ストアで｢秋の感謝祭｣セールを開催中｜最新製品を含む対象製品が最大...</span>
+                        <span class="nav-title">Amazon、モバイル向け｢Fire TV｣アプリの刷新を発表｜コンテンツの検索やウォッチリストの管...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_428.html">
+                    <a href="気になる記になる_9978.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">初代PlayStation 成功の舞台裏</span>
+                        <span class="nav-title">Anker、デュアルカメラ搭載で訪問者と置き配を確認出来るスマホ連動ドアホン「Eufy Video ...</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +248,53 @@ AIによるコーディングが当たり前になりつつある今、ソフト
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_9656.html">
-                        <h3>Python 3.14登場、フリースレッド版正式サポート。実験的JITコンパイラも公式バイナリで利用可能に</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">スクリプト言語Pythonの最新版となる「Python 3. 14」正式版が公開されました。 Python 3. 14での大きな新機能はフリースレッド版の正式サポートと公式バイナリでの実験的JITコン...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1834.html">
-                        <h3>「Windows 10」きょう（14日）サポート終了　一方で1年間の猶予措置も</h3>
+                    <a href="CNET_Japan_最新情報総合_4059.html">
+                        <h3>バッファロー、ブルーレイドライブの販売を2026年7月で終了へ　後継機種なし</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Microsoftは、Windows 10向けの無償ソフトウェア更新プログラム、セキュリティ修正、テクニカルサポートを本日（10月14日）に終了する。.</p>
+                        <p class="related-summary">バッファローは2月26日、ブルーレイドライブの販売を2026年7月（予定）をもって終了すると発表した。後継機種の開発予定はないという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_2657.html">
-                        <h3>Snowflake 自律化サービスがもたらすデータエンジニアの新時代</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに 私は、CCCMKホールディングス株式会社でエンジアリング全般の責任者をしていますTaroと申します。 当社は、日本最大級の共通ポイントサービス「Vポイント」を運営しており、Snowflake...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1028.html">
-                        <h3>【2025年最新版】0からReactを勉強するならこのロードマップに従え！</h3>
+                    <a href="Qiita_-_人気の記事_749.html">
+                        <h3>LINEミニアプリ審査リジェクト対応備忘録</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは@Sicut_study (Watanabe Jin)です。 2023年から始まった 「0からReactを勉強するならこのロードマップに従え」 ですが、早いもので3年目を迎えました...</p>
+                        <p class="related-summary">はじめに 今回、LINEミニアプリの開発依頼を受け、審査申請を行いました。しかし、初回の申請でリジェクト（却下） されてしまいました。 その後、指摘事項を修正して再申請 → 無事に承認 🎉 この記事で...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4693.html">
-                        <h3>React学習ログ No.11</h3>
+                    <a href="Qiita_-_人気の記事_9322.html">
+                        <h3>MinIO、知らないうちに終了していた</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">React公式ドキュメント学習メモ：UI の記述 1. 初めてのコンポーネント React UIの基本単位 マークアップ、CSS、JSを再利用可能な部品にまとめたもの 基本のルール JavaScrip...</p>
+                        <p class="related-summary">はじめに MinIO は Amazon S3 互換の API を備えたオブジェクトストレージです。 docker-compose. yml に数行書くだけで S3 互換のストレージが立ち上がるため、ロ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_2767.html">
+                        <h3>LibreOfficeがWebブラウザから利用できる「LibreOffice Online」開発の再始動を発表</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">無料で利用可能なオフィススイート「LibreOffice」を開発しているThe Document Foundationは、Webブラウザから利用可能な「LibreOffice Online」の開発を再...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_134.html">
+                        <h3>【後編】「で、&#34;結局&#34;今どんな状況なの？」と言われたとき、あなたの報告はまだ“報告”になっていない</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめまして。 株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で つまずきやすいポイントを整理して発信しています。 PRUMについて気になった方は、 コーポレート...</p>
                     </a>
                 </article>
             </div>

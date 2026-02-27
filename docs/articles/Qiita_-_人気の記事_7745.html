@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【re:Invent2025】EKSでKube Resource Orchestrator(KRO)を試してみる! | 日本のテックニュース速報</title>
-    <meta name="description" content="こんにちは、タカサオです! 先日開催されたre:Invent 2025で、EKS Capabilitiesが発表されました! EKS CapabilitiesはGitOps,プラットフォームエンジニアリングを行う際に便利な以下の機能をAWSマネージドで提供してくれる機.">
-    <meta name="keywords" content="AWS">
+    <title>Isolation Forestを使ってみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 異常検知モデルのIsolation Forestを触ってみたので、Isolation Forestの大まかな仕組みとPythonで分析した流れを説明します。 異常検知とは 異常検知は、データの中から正常なパターンと異なる異常なデータを識別する技術です。検知した.">
+    <meta name="keywords" content="Python">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【re:Invent2025】EKSでKube Resource Orchestrator(KRO)を試してみる!">
-    <meta property="og:description" content="こんにちは、タカサオです! 先日開催されたre:Invent 2025で、EKS Capabilitiesが発表されました! EKS CapabilitiesはGitOps,プラットフォームエンジニアリングを行う際に便利な以下の機能をAWSマネージドで提供してくれる機.">
+    <meta property="og:title" content="Isolation Forestを使ってみた">
+    <meta property="og:description" content="はじめに 異常検知モデルのIsolation Forestを触ってみたので、Isolation Forestの大まかな仕組みとPythonで分析した流れを説明します。 異常検知とは 異常検知は、データの中から正常なパターンと異なる異常なデータを識別する技術です。検知した.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7745.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【re:Invent2025】EKSでKube Resource Orchestrator(KRO)を試してみる!">
-    <meta name="twitter:description" content="こんにちは、タカサオです! 先日開催されたre:Invent 2025で、EKS Capabilitiesが発表されました! EKS CapabilitiesはGitOps,プラットフォームエンジニアリングを行う際に便利な以下の機能をAWSマネージドで提供してくれる機.">
+    <meta name="twitter:title" content="Isolation Forestを使ってみた">
+    <meta name="twitter:description" content="はじめに 異常検知モデルのIsolation Forestを触ってみたので、Isolation Forestの大まかな仕組みとPythonで分析した流れを説明します。 異常検知とは 異常検知は、データの中から正常なパターンと異なる異常なデータを識別する技術です。検知した.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【re:Invent2025】EKSでKube Resource Orchestrator(KRO)を試してみる!",
-        "description": "こんにちは、タカサオです! 先日開催されたre:Invent 2025で、EKS Capabilitiesが発表されました! EKS CapabilitiesはGitOps,プラットフォームエンジニアリングを行う際に便利な以下の機能をAWSマネージドで提供してくれる機.",
+        "headline": "Isolation Forestを使ってみた",
+        "description": "はじめに 異常検知モデルのIsolation Forestを触ってみたので、Isolation Forestの大まかな仕組みとPythonで分析した流れを説明します。 異常検知とは 異常検知は、データの中から正常なパターンと異なる異常なデータを識別する技術です。検知した.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-17T22:02:36",
-        "dateModified": "2025-12-18T12:45:20.303031",
+        "datePublished": "2026-02-27T01:26:01",
+        "dateModified": "2026-02-27T20:30:11.030217",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7745.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7745.html",
         "articleSection": "プログラミング",
-        "keywords": ["AWS"]
+        "keywords": ["Python"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【re:Invent2025】EKSでKube Resource Orchestrator(KRO)を試してみる!",
+                "name": "Isolation Forestを使ってみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7745.html"
             }
         ]
@@ -114,38 +114,39 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">【re:Invent2025】EKSでKube Resource Orchestrator(KRO)...</li>
+                <li aria-current="page">Isolation Forestを使ってみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【re:Invent2025】EKSでKube Resource Orchestrator(KRO)を試してみる!</h1>
+                <h1>Isolation Forestを使ってみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/daitak/items/f379f366aab8b65a04fb?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/ssc-karasawa/items/5facca343fc873b8ab4a?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-12-17T22:02:36">
-                        公開: 2025-12-17T22:02:36
+                    <time datetime="2026-02-27T01:26:01">
+                        公開: 2026-02-27T01:26:01
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AWS</span>
+                    <span class="tag">Python</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    こんにちは、タカサオです!
-先日開催されたre:Invent 2025で、EKS Capabilitiesが発表されました!
+                    はじめに
+異常検知モデルのIsolation Forestを触ってみたので、Isolation Forestの大まかな仕組みとPythonで分析した流れを説明します。
 
-EKS CapabilitiesはGitOps,プラットフォームエンジニアリングを行う際に便利な以下の機能をAWSマネージドで提供してくれる機...
+異常検知とは
+異常検知は、データの中から正常なパターンと異なる異常なデータを識別する技術です。検知した...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/daitak/items/f379f366aab8b65a04fb?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/ssc-karasawa/items/5facca343fc873b8ab4a?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,10 +159,10 @@ EKS CapabilitiesはGitOps,プラットフォームエンジニアリングを行
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +223,16 @@ EKS CapabilitiesはGitOps,プラットフォームエンジニアリングを行
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_7674.html">
+                    <a href="Qiita_-_人気の記事_9407.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple、｢iOS 26.3｣や｢macOS Tahoe 26.3｣などのパブリックベータ1を提供...</span>
+                        <span class="nav-title">提案スライドに10枚の挿絵を自動生成 — Claude Code × Gemini画像生成【プロンプ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9707.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3899.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Pythonだけで3Dクレーンゲーム作成</span>
+                        <span class="nav-title">子供が熱中「Roblox」に企業参入</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +245,53 @@ EKS CapabilitiesはGitOps,プラットフォームエンジニアリングを行
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="気になる記になる_7590.html">
-                        <h3>ソニー、ワイヤレスヘッドホン｢WH-1000XM5｣のソフトウェアをアップデート｜Quick AccessがApple ...</h3>
+                    <a href="CNET_Japan_最新情報総合_4368.html">
+                        <h3>バッファロー、ブルーレイドライブの販売を2026年7月で終了へ　後継機種なし</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">本日、ソニーが、ワイヤレスヘッドホン「WH-1000XM5」向けに最新のソフトウェアアップデートをリリースしています。 アップデート後のソフトウェアのバージョンは「2. 1」になり、アップデートにより...</p>
+                        <p class="related-summary">バッファローは2月26日、ブルーレイドライブの販売を2026年7月（予定）をもって終了すると発表した。後継機種の開発予定はないという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_9771.html">
-                        <h3>Rustを学ぶと世界が変わる</h3>
+                    <a href="CNET_Japan_最新情報総合_2000.html">
+                        <h3>金属の箱にアンテナを入れたら、電波を遮蔽して通信できないのでは？を覆す技術、パナが開発</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに GLOBISでエンジニアをしているkazukiと申します。 Rustを多くの人に学んで欲しいと感じこの記事を執筆しました。 私自身、仕事でRustを使うことはありませんがRustの学習を通し...</p>
+                        <p class="related-summary">パナソニック エレクトリックワークスは2月20日、金属筐体に内蔵したアンテナで安定した無線通信を可能にする新たな「金属ロバストアンテナ」を開発したと発表した。電波を遮蔽・反射するため無線との相性が悪い...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_959.html">
-                        <h3>技術書を「覚える」のをやめたら、使えるようになった</h3>
+                    <a href="ASCII_jp__トップ_4139.html">
+                        <h3>首都圏のデータセンター枯渇、電力コストの高騰、エンジニア不足　課題から考える最新データセンター選び</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">! この記事はRecustomer Advent Calendar 2025 18日目の記事です。 はじめに RecustomerでエンジニアをしているRyoheiです。 私は今年の4月に新卒として入...</p>
+                        <p class="related-summary">企業のサーバーを運用するためのデータセンター選びがますます難しくなっている。AIニーズの拡大で、データセンターの電力や用地の確保が難しくなり、高騰する電力コストへの対応も必要になってきた。また、データ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5527.html">
-                        <h3>入社3カ月で製造工程に入った話</h3>
+                    <a href="Qiita_-_人気の記事_1160.html">
+                        <h3>git worktreeを使用した開発の個人的詰まりポイント</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">初めての現場配属で製造工程に放り込まれた携わったときの感想・備忘録などです。 はじめに ウォーターフォール開発の真ん中らへんのあれのタイミングで現場入場しました。入社3か月目で。なぜ。 結局のところメ...</p>
+                        <p class="related-summary">はじめに 実装タスクをAIに投げている間、別のタスクを進めたいというニーズがあります。 しかし、そのたびにブランチを切り替えるのは不便です。 そこで便利なのが git worktree です。 git...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4017.html">
-                        <h3>IaC入門 ～開発環境を整えることから始めるTerraform～</h3>
+                    <a href="Qiita_-_人気の記事_5888.html">
+                        <h3>GitHub Copilot CLIの/researchが強い</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに 時代は、IaC(Infrastracture as Code)が主流ということで、コードに苦手意識ある私が開発環境を整え、Terraformの基本知識を学習したことのまとめです。 勉強方法 ...</p>
+                        <p class="related-summary">ディープリサーチの登場 &amp; 祝GA 機能更新の速度がすごいので、まだ先かなと思っていたのですが、ついにGitHub Copilot CLIがGAしました。 併せて2/25にディープリサーチを実行する/...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ローカルLLMの始め方とモデルサイズの選び方 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 自分のPCにLLM（大規模言語モデル）をダウンロードして動かします。 今回は、初めてローカルLLMを試してみたい人に向けて、快適に動くモデルの選び方などについて整理しました。 まずはツールを入れる ローカルLLMは難しそうと思われがちですが、驚くほど簡単です">
-    <meta name="keywords" content="AI,ChatGPT,GPT,LLM,PC">
+    <title>例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法 | 日本のテックニュース速報</title>
+    <meta name="description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ローカルLLMの始め方とモデルサイズの選び方">
-    <meta property="og:description" content="はじめに 自分のPCにLLM（大規模言語モデル）をダウンロードして動かします。 今回は、初めてローカルLLMを試してみたい人に向けて、快適に動くモデルの選び方などについて整理しました。 まずはツールを入れる ローカルLLMは難しそうと思われがちですが、驚くほど簡単です">
+    <meta property="og:title" content="例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法">
+    <meta property="og:description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4983.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ローカルLLMの始め方とモデルサイズの選び方">
-    <meta name="twitter:description" content="はじめに 自分のPCにLLM（大規模言語モデル）をダウンロードして動かします。 今回は、初めてローカルLLMを試してみたい人に向けて、快適に動くモデルの選び方などについて整理しました。 まずはツールを入れる ローカルLLMは難しそうと思われがちですが、驚くほど簡単です">
+    <meta name="twitter:title" content="例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法">
+    <meta name="twitter:description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ローカルLLMの始め方とモデルサイズの選び方",
-        "description": "はじめに 自分のPCにLLM（大規模言語モデル）をダウンロードして動かします。 今回は、初めてローカルLLMを試してみたい人に向けて、快適に動くモデルの選び方などについて整理しました。 まずはツールを入れる ローカルLLMは難しそうと思われがちですが、驚くほど簡単です",
+        "headline": "例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法",
+        "description": "プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-11T07:57:06",
-        "dateModified": "2026-02-13T07:01:27.299788",
+        "datePublished": "2026-02-28T12:29:00",
+        "dateModified": "2026-03-01T18:36:14.902929",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4983.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4983.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","ChatGPT","GPT","LLM","PC"]
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ローカルLLMの始め方とモデルサイズの選び方",
+                "name": "例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4983.html"
             }
         ]
@@ -114,52 +114,43 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">ローカルLLMの始め方とモデルサイズの選び方</li>
+                <li aria-current="page">例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ローカルLLMの始め方とモデルサイズの選び方</h1>
+                <h1>例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/takaha4k/articles/local-llm-mac-intro" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/okuma/articles/few_shot_collapse" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-02-11T07:57:06">
-                        公開: 2026-02-11T07:57:06
+                    <time datetime="2026-02-28T12:29:00">
+                        公開: 2026-02-28T12:29:00
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">ChatGPT</span>
-                    <span class="tag">GPT</span>
                     <span class="tag">LLM</span>
-                    <span class="tag">PC</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-自分のPCにLLM（大規模言語モデル）をダウンロードして動かします。
-今回は、初めてローカルLLMを試してみたい人に向けて、快適に動くモデルの選び方などについて整理しました。
+                    プロンプトに例を増やすと回答の精度が上がる、と言われています。
+しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。
+そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました。 AdaptGauge というツール名にしてオープンソースで公開しています。
 
- まずはツールを入れる
-ローカルLLMは難しそうと思われがちですが、驚くほど簡単です。
-以下のツールのいずれかをインストールするだけで、すぐにAIとの対話が始められます。
+ やったこと
+実務に近い以下4種のタスクに対して、shot数（例示数）を0, 1, 2, 4, 8と増やしながらLLMの性能を評価するツールにしています。
 
 
-Ollama（コマンドラインでサクサク動かしたい人向け）
-
-LM Studio（ChatGPTのような画面で直感的に使いたい人向け）
-
-例えば Ollama なら、インストール後にターミナルで以下のコマンドを1行打つだけで、モ...
+分類 — カスタマーサポートの問い合わせを8カテゴリ（請求、技術サ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/takaha4k/articles/local-llm-mac-intro" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/okuma/articles/few_shot_collapse" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -172,6 +163,16 @@ LM Studio（ChatGPTのような画面で直感的に使いたい人向け）
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">AI - Amazon検索結果</div>
@@ -182,20 +183,10 @@ LM Studio（ChatGPTのような画面で直感的に使いたい人向け）
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=ChatGPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ChatGPT - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ChatGPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでChatGPTに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GPT - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGPTに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -236,16 +227,16 @@ LM Studio（ChatGPTのような画面で直感的に使いたい人向け）
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5284.html">
+                    <a href="Qiita_-_人気の記事_9684.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【Arknights: Endfield】プレイヤーの座標を利用したマテリアル</span>
+                        <span class="nav-title">Terminal 版 Playwright 風テストツールの tuistory が便利</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_5610.html">
+                    <a href="iPhone_Mania_7883.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">なぜ現場ではCTEで書かれたクエリが少ないのか</span>
+                        <span class="nav-title">iOS26.4でApple Musicが進化！ライブ発見→チケット購入も</span>
                     </a>
                 </div>
             </div>
@@ -258,53 +249,53 @@ LM Studio（ChatGPTのような画面で直感的に使いたい人向け）
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7101.html">
-                        <h3>中国バイトダンスの動画生成AI「Seedance 2.0」が凄い　「Sora 2超え」の声も</h3>
+                    <a href="CNET_Japan_最新情報総合_7495.html">
+                        <h3>NTTドコモ、通信障害復旧にAIエージェント　対応時間を従来比50%削減へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">0」をリリースしたのに続き、TikTokを運営する字節跳動（バイトダンス）が、新たな動画生成AI「Seedance 2. 動画生成AIの主導権争いが激化している。先週、中国企業の快手（クアイショウ）が...</p>
+                        <p class="related-summary">NTTドコモは2月25日、生成AIを活用したモバイルネットワーク保守業務向けAIエージェントシステムを開発し、2月4日から商用利用を開始したと発表した。100万台以上のネットワーク装置から収集される世...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3153.html">
-                        <h3>アップル「Siri」のAI刷新がまた延期か、5～9月の可能性も</h3>
+                    <a href="CNET_Japan_最新情報総合_1578.html">
+                        <h3>グーグル、画像AI「Nano Banana 2」を公開　速さと精度の「いいとこ取り」</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アップルは音声アシスタント「Siri」をAIで強化する計画をまた延期する方針だという。Bloombergが報じた。.</p>
+                        <p class="related-summary">グーグルは、高い人気を誇る画像生成AIの次世代モデル「Nano Banana 2（Gemini 3. 1 Flash Image）」をリリースした。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4317.html">
-                        <h3>Anthropic、「Claude」無料版を大幅拡充　競合ChatGPTが広告導入の直後</h3>
+                    <a href="CNET_Japan_最新情報総合_8356.html">
+                        <h3>AI投資の75％が「推論」に移る時代、レノボはどう備えるか</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AnthropicはAIチャットボット「Claude」の有料プラン向け機能の一部を無料プランにも拡大している。.</p>
+                        <p class="related-summary">AI市場の主戦場が「学習」から「推論」へ移る今、勝負を分けるのはインフラの守備範囲だ。レノボはPC、エッジ端末、水冷サーバーまで一貫して提供できる強みを武器に、推論時代のデファクトスタンダードを目指す...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7023.html">
-                        <h3>楽天、AI活用で2025年度に255億円の利益貢献　2026年度は3倍の効果を目指す</h3>
+                    <a href="CNET_Japan_最新情報総合_5867.html">
+                        <h3>バーガーキング、従業員向けAIアシスタント導入へ　接客マナーも監視</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">楽天グループが全社的なAI戦略で収益拡大を加速している。2025年度は255億円の利益貢献を達成し、全事業部門にチーフAIオフィサーを配置してデータのクロスユースを推進。2026年度は330億円超を目...</p>
+                        <p class="related-summary">バーガーキングは、一部の従業員が着けているヘッドセットにAIチャットボット「Patty」を導入する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_474.html">
-                        <h3>仕事でのAI利用、実は逆効果？ 労働の増加と燃え尽きのリスクが判明</h3>
+                    <a href="CNET_Japan_最新情報総合_2819.html">
+                        <h3>エージェント型AIは「転換点」に--NVIDIAのジェンスン・フアンCEO</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">どの企業もAIの導入に躍起になっているようだが、その恩恵は長くは続かないかもしれない。.</p>
+                        <p class="related-summary">NVIDIAのジェンスン・フアンCEOは、エージェント型AIが「転換点」に達していると語った。.</p>
                     </a>
                 </article>
             </div>

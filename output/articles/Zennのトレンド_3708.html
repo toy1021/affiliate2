@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWSインフラ設計のベストプラクティスを目指して(IaC編) | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Terraformを用いてAWSの各リソースをコード化しました。 以前まとめた記事の構成図の各リソースが主な対象になります。 なお、赤点線枠はTerraformでは管理しづらいことから、ecspressoで管理しています">
-    <meta name="keywords" content="AWS,本">
+    <title>例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法 | 日本のテックニュース速報</title>
+    <meta name="description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AWSインフラ設計のベストプラクティスを目指して(IaC編)">
-    <meta property="og:description" content="はじめに Terraformを用いてAWSの各リソースをコード化しました。 以前まとめた記事の構成図の各リソースが主な対象になります。 なお、赤点線枠はTerraformでは管理しづらいことから、ecspressoで管理しています">
+    <meta property="og:title" content="例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法">
+    <meta property="og:description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3708.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AWSインフラ設計のベストプラクティスを目指して(IaC編)">
-    <meta name="twitter:description" content="はじめに Terraformを用いてAWSの各リソースをコード化しました。 以前まとめた記事の構成図の各リソースが主な対象になります。 なお、赤点線枠はTerraformでは管理しづらいことから、ecspressoで管理しています">
+    <meta name="twitter:title" content="例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法">
+    <meta name="twitter:description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AWSインフラ設計のベストプラクティスを目指して(IaC編)",
-        "description": "はじめに Terraformを用いてAWSの各リソースをコード化しました。 以前まとめた記事の構成図の各リソースが主な対象になります。 なお、赤点線枠はTerraformでは管理しづらいことから、ecspressoで管理しています",
+        "headline": "例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法",
+        "description": "プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-07T06:58:24",
-        "dateModified": "2026-02-09T08:55:48.535031",
+        "datePublished": "2026-02-28T12:29:00",
+        "dateModified": "2026-03-02T22:28:56.095270",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3708.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3708.html",
-        "articleSection": "その他",
-        "keywords": ["AWS","本"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AWSインフラ設計のベストプラクティスを目指して(IaC編)",
+                "name": "例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3708.html"
             }
         ]
@@ -113,52 +113,44 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">AWSインフラ設計のベストプラクティスを目指して(IaC編)</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AWSインフラ設計のベストプラクティスを目指して(IaC編)</h1>
+                <h1>例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/so_engineer/articles/45acac4e572ff3" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-02-07T06:58:24">
-                        公開: 2026-02-07T06:58:24
+                    <span class="source">出典: <a href="https://zenn.dev/okuma/articles/few_shot_collapse" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-02-28T12:29:00">
+                        公開: 2026-02-28T12:29:00
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AWS</span>
-                    <span class="tag">本</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Terraformを用いてAWSの各リソースをコード化しました。
-以前まとめた記事の構成図の各リソースが主な対象になります。
+                    プロンプトに例を増やすと回答の精度が上がる、と言われています。
+しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。
+そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました。 AdaptGauge というツール名にしてオープンソースで公開しています。
+
+ やったこと
+実務に近い以下4種のタスクに対して、shot数（例示数）を0, 1, 2, 4, 8と増やしながらLLMの性能を評価するツールにしています。
 
 
-なお、赤点線枠はTerraformでは管理しづらいことから、ecspressoで管理しています。
-
-
- モジュール群
-
-リソースごとに抽象化し、複数の環境で同じ構成を実現するために使う
-AWSのサービス単位で作ると運用しやすい
-モジュール内は過度な抽象化は避け、基本はベタ書き推奨
-とはいえあまりに繰り返しが多い箇所はunit moduleを作る
-
-※unit moduleはモジュールのモジュールのこと。基本はaws.tfからモジュールAを参照する...
+分類 — カスタマーサポートの問い合わせを8カテゴリ（請求、技術サ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/so_engineer/articles/45acac4e572ff3" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/okuma/articles/few_shot_collapse" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -171,20 +163,30 @@ AWSのサービス単位で作ると運用しやすい
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -194,23 +196,23 @@ AWSのサービス単位で作ると運用しやすい
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +227,16 @@ AWSのサービス単位で作ると運用しやすい
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_9170.html">
+                    <a href="Qiita_-_人気の記事_7399.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">NodeCG 配信グラフィック開発入門 ~Vite + React + TypeScript テンプ...</span>
+                        <span class="nav-title">Terminal 版 Playwright 風テストツールの tuistory が便利</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_4550.html">
+                    <a href="Qiita_-_人気の記事_9736.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhone16/16 Proシリーズが追加〜iPhone整備済製品【2/7】</span>
+                        <span class="nav-title">Claude Code の会話を全自動で Obsidian に記録する、または、車輪の再発明について</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +249,53 @@ AWSのサービス単位で作ると運用しやすい
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4941.html">
-                        <h3>マクドナルドアプリの「クーポンの使い方」が変わります</h3>
+                    <a href="CNET_Japan_最新情報総合_9418.html">
+                        <h3>エージェント型AIは「転換点」に--NVIDIAのジェンスン・フアンCEO</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">日本マクドナルドは、2月12日（木）から「マクドナルド公式アプリ」のクーポンの使い方を変更する。対象は店頭での注文時で、これまで必要だった「クーポン番号を1つずつ伝える」運用を見直し、店頭では複数クー...</p>
+                        <p class="related-summary">NVIDIAのジェンスン・フアンCEOは、エージェント型AIが「転換点」に達していると語った。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5904.html">
-                        <h3>JCBが「指紋認証つきカード」実現に向け実証実験--「指乗せ」で暗証番号不要に</h3>
+                    <a href="CNET_Japan_最新情報総合_8518.html">
+                        <h3>ソフトバンクG、OpenAI株式の13%を保有へ　約4.7兆円の追加出資を発表</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ジェーシービー（JCB）と大日本印刷（DNP）は2月6日、指紋認証機能付きICカードを発行し、商用化に向けた実証実験を開始すると発表した。JCB社員向けに、2月にカードを発行する。.</p>
+                        <p class="related-summary">ソフトバンクグループは2月27日（米国時間）、OpenAIへ300億ドル（約4兆6743億円）の追加出資を行うと発表した。ソフトバンク・ビジョン・ファンド2を通じて実施する。今回の追加出資により、同社...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2440.html">
-                        <h3>近未来の宇宙開拓を描いた本格ハードSF『MOONLIGHT MILE【完全版】』が全巻33円！【Kindle漫画セール情...</h3>
+                    <a href="CNET_Japan_最新情報総合_5371.html">
+                        <h3>トランプ大統領、Claudeを政府内で使用禁止に--運営元Anthropicを「極左」と非難</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">エベレストの次は、月だ！ 『ガンダム サンダーボルト』の太田垣康男が魂を削り描き続ける宇宙開拓史が、今なら全巻33円！ 下書きに近い荒々しい第3部（最新24巻）すら、物語の熱量そのものに感じてしまう。...</p>
+                        <p class="related-summary">トランプ米大統領は金曜日、連邦政府機関に対し、AnthropicのAI「Claude（クロード）」の使用を停止するよう命じた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3825.html">
-                        <h3>ヨーグルト×はちみつのおいしいとこどり！赤城乳業「たぷたぷはちみつ」アイスに期待</h3>
+                    <a href="CNET_Japan_最新情報総合_2718.html">
+                        <h3>もう「画面の中」だけじゃない--デスクで共に働く「AI同僚」をレノボが披露</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">赤城乳業は「たぷたぷはちみつwithヨーグルト味アイス」（194円）を2月10日より全国で発売します。.</p>
+                        <p class="related-summary">レノボはMobile World Congress（MWC）2026で、仕事を手伝う「AI同僚」のコンセプトなどを披露した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_1409.html">
-                        <h3>ソニー、｢DualSense ワイヤレスコントローラー｣のUSBケーブル同梱版を3月5日に発売</h3>
+                    <a href="Publickey_5018.html">
+                        <h3>AWSがOpenAIの企業向けAIエージェント基盤「OpenAI Frontier」の独占的な外部クラウドプロバイダーに...</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">本日、ソニー・インタラクティブエンタテインメントが、「DualSense ワイヤレスコントローラー ミッドナイト ブラック + USBケーブル for PC」を3月5日より発売すると発表しました。 本...</p>
+                        <p class="related-summary">Amazon Web Services（AWS）とOpenAIは、企業向けのAIエージェントプラットフォームなどに関する複数年にわたる戦略的パートナーシップを発表しました。 この戦略的パートナーシップ...</p>
                     </a>
                 </article>
             </div>

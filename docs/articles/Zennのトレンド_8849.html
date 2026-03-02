@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WSL内で起動したClaude Codeの動作を高速化する簡単な設定 | 日本のテックニュース速報</title>
-    <meta name="description" content="com/anthropics/claude-code/issues/14352 export CLAUDE_CODE_SKIP_WINDOWS_PROFILE=1 export USERPROFILE=&#34;/mnt/c/Users/&#34;. bashrc に以下の設定を追加してください">
-    <meta name="keywords" content="Claude,Windows,GitHub,EV">
+    <title>例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法 | 日本のテックニュース速報</title>
+    <meta name="description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="WSL内で起動したClaude Codeの動作を高速化する簡単な設定">
-    <meta property="og:description" content="com/anthropics/claude-code/issues/14352 export CLAUDE_CODE_SKIP_WINDOWS_PROFILE=1 export USERPROFILE=&#34;/mnt/c/Users/&#34;. bashrc に以下の設定を追加してください">
+    <meta property="og:title" content="例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法">
+    <meta property="og:description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8849.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WSL内で起動したClaude Codeの動作を高速化する簡単な設定">
-    <meta name="twitter:description" content="com/anthropics/claude-code/issues/14352 export CLAUDE_CODE_SKIP_WINDOWS_PROFILE=1 export USERPROFILE=&#34;/mnt/c/Users/&#34;. bashrc に以下の設定を追加してください">
+    <meta name="twitter:title" content="例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法">
+    <meta name="twitter:description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8849.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "WSL内で起動したClaude Codeの動作を高速化する簡単な設定",
-        "description": "com/anthropics/claude-code/issues/14352 export CLAUDE_CODE_SKIP_WINDOWS_PROFILE=1 export USERPROFILE=&#34;/mnt/c/Users/&#34;. bashrc に以下の設定を追加してください",
+        "headline": "例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法",
+        "description": "プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-26T08:10:09",
-        "dateModified": "2026-02-28T08:32:06.142391",
+        "datePublished": "2026-02-28T12:29:00",
+        "dateModified": "2026-03-02T10:45:07.144952",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8849.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8849.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Claude","Windows","GitHub","EV"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "WSL内で起動したClaude Codeの動作を高速化する簡単な設定",
+                "name": "例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8849.html"
             }
         ]
@@ -113,45 +113,44 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">WSL内で起動したClaude Codeの動作を高速化する簡単な設定</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>WSL内で起動したClaude Codeの動作を高速化する簡単な設定</h1>
+                <h1>例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/momonga/articles/ee5b114e038938" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-02-26T08:10:09">
-                        公開: 2026-02-26T08:10:09
+                    <span class="source">出典: <a href="https://zenn.dev/okuma/articles/few_shot_collapse" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-02-28T12:29:00">
+                        公開: 2026-02-28T12:29:00
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">Windows</span>
-                    <span class="tag">GitHub</span>
-                    <span class="tag">EV</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    TL;DR
-.bashrc に以下の設定を追加してください。
-# Workaround to prevent Claude Code from repeatedly spawning powershell.exe.
-# ref: https://github.com/anthropics/claude-code/issues/14352
-export CLAUDE_CODE_SKIP_WINDOWS_PROFILE=1
-export USERPROFILE="/mnt/c/Users/&lt;your_windows_username&gt;"
-&lt;your_windows_us...
+                    プロンプトに例を増やすと回答の精度が上がる、と言われています。
+しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。
+そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました。 AdaptGauge というツール名にしてオープンソースで公開しています。
+
+ やったこと
+実務に近い以下4種のタスクに対して、shot数（例示数）を0, 1, 2, 4, 8と増やしながらLLMの性能を評価するツールにしています。
+
+
+分類 — カスタマーサポートの問い合わせを8カテゴリ（請求、技術サ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/momonga/articles/ee5b114e038938" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/okuma/articles/few_shot_collapse" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -164,30 +163,30 @@ export USERPROFILE="/mnt/c/Users/&lt;your_windows_username&gt;"
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Windows&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Windows - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Windows - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでWindowsに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -197,23 +196,23 @@ export USERPROFILE="/mnt/c/Users/&lt;your_windows_username&gt;"
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -228,16 +227,16 @@ export USERPROFILE="/mnt/c/Users/&lt;your_windows_username&gt;"
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_2401.html">
+                    <a href="Qiita_-_人気の記事_62.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">技術力だけでは防げない「デスマーチへの片道切符」</span>
+                        <span class="nav-title">Terminal 版 Playwright 風テストツールの tuistory が便利</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2471.html">
+                    <a href="Qiita_-_人気の記事_3697.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AIが書いたコードで本番障害が起きたら、誰が責任を取るのか？ から考える、これからの人間の立ち位置に...</span>
+                        <span class="nav-title">Claude Code の会話を全自動で Obsidian に記録する、または、車輪の再発明について</span>
                     </a>
                 </div>
             </div>
@@ -250,53 +249,53 @@ export USERPROFILE="/mnt/c/Users/&lt;your_windows_username&gt;"
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1792.html">
-                        <h3>バッファロー、ブルーレイドライブの販売を2026年7月で終了へ　後継機種なし</h3>
+                    <a href="CNET_Japan_最新情報総合_9712.html">
+                        <h3>バーガーキング、従業員向けAIアシスタント導入へ　接客マナーも監視</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">バッファローは2月26日、ブルーレイドライブの販売を2026年7月（予定）をもって終了すると発表した。後継機種の開発予定はないという。.</p>
+                        <p class="related-summary">バーガーキングは、一部の従業員が着けているヘッドセットにAIチャットボット「Patty」を導入する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9472.html">
-                        <h3>金属の箱にアンテナを入れたら、電波を遮蔽して通信できないのでは？を覆す技術、パナが開発</h3>
+                    <a href="CNET_Japan_最新情報総合_4879.html">
+                        <h3>エージェント型AIは「転換点」に--NVIDIAのジェンスン・フアンCEO</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">パナソニック エレクトリックワークスは2月20日、金属筐体に内蔵したアンテナで安定した無線通信を可能にする新たな「金属ロバストアンテナ」を開発したと発表した。電波を遮蔽・反射するため無線との相性が悪い...</p>
+                        <p class="related-summary">NVIDIAのジェンスン・フアンCEOは、エージェント型AIが「転換点」に達していると語った。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="iPhone_Mania_657.html">
-                        <h3>27インチに加え32インチStudio Display 2も開発中か</h3>
+                    <a href="CNET_Japan_最新情報総合_2859.html">
+                        <h3>ソフトバンクG、OpenAI株式の13%を保有へ　約4.7兆円の追加出資を発表</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">iPhone Mania</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Appleが開発中と噂されている新型外部ディスプレイ「Studio Display 2」について、従来の27インチ2モデル構成ではなく、サイズの異なる2種類になる可能性が海外メディアの報道によって浮上...</p>
+                        <p class="related-summary">ソフトバンクグループは2月27日（米国時間）、OpenAIへ300億ドル（約4兆6743億円）の追加出資を行うと発表した。ソフトバンク・ビジョン・ファンド2を通じて実施する。今回の追加出資により、同社...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6661.html">
-                        <h3>Claude Code Hooks でリアルタイム監視基盤を設計する ── アーキテクチャ解説</h3>
+                    <a href="CNET_Japan_最新情報総合_9002.html">
+                        <h3>トランプ大統領、Claudeを政府内で使用禁止に--運営元Anthropicを「極左」と非難</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに 本記事は Claude Code Hooks シリーズの第2回です。 前回の記事「Claude Code Hooks で開発ワークフローを自動化する ── 全14イベント徹底解説」では、Ho...</p>
+                        <p class="related-summary">トランプ米大統領は金曜日、連邦政府機関に対し、AnthropicのAI「Claude（クロード）」の使用を停止するよう命じた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6832.html">
-                        <h3>Claude Code Hooks 実践編 ── 全操作を可視化するリアルタイムダッシュボードを作る</h3>
+                    <a href="CNET_Japan_最新情報総合_4945.html">
+                        <h3>もう「画面の中」だけじゃない--デスクで共に働く「AI同僚」をレノボが披露</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに 前回の記事「Claude Code Hooks で開発ワークフローを自動化する ── 全14イベント徹底解説」では、Hooks の仕組みと全14イベントを解説しました。 今回はその知識を活か...</p>
+                        <p class="related-summary">レノボはMobile World Congress（MWC）2026で、仕事を手伝う「AI同僚」のコンセプトなどを披露した。.</p>
                     </a>
                 </article>
             </div>

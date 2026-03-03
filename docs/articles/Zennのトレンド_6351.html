@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>もうポート番号は覚えない ── Docker Compose のポート競合を消す CLI「tug」を作った | 日本のテックニュース速報</title>
-    <meta name="description" content="前回のあらすじ 前回の記事で、portless に触発されて「Docker Compose 環境なら Traefik の defaultRule で同じことができる」という話を書きました。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="Docker">
+    <title>セキュリティって難しい | 日本のテックニュース速報</title>
+    <meta name="description" content="最近、事業会社でセキュリティに携わることの難しさについて色々と考えることがあったのでちょっと言語化してみる。いわゆる「セキュリティの知識をキャッチアップするのが大変」という直接的な話ではなく、もう少し構造的な難しさについて">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="もうポート番号は覚えない ── Docker Compose のポート競合を消す CLI「tug」を作った">
-    <meta property="og:description" content="前回のあらすじ 前回の記事で、portless に触発されて「Docker Compose 環境なら Traefik の defaultRule で同じことができる」という話を書きました。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="セキュリティって難しい">
+    <meta property="og:description" content="最近、事業会社でセキュリティに携わることの難しさについて色々と考えることがあったのでちょっと言語化してみる。いわゆる「セキュリティの知識をキャッチアップするのが大変」という直接的な話ではなく、もう少し構造的な難しさについて">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6351.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="もうポート番号は覚えない ── Docker Compose のポート競合を消す CLI「tug」を作った">
-    <meta name="twitter:description" content="前回のあらすじ 前回の記事で、portless に触発されて「Docker Compose 環境なら Traefik の defaultRule で同じことができる」という話を書きました。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="セキュリティって難しい">
+    <meta name="twitter:description" content="最近、事業会社でセキュリティに携わることの難しさについて色々と考えることがあったのでちょっと言語化してみる。いわゆる「セキュリティの知識をキャッチアップするのが大変」という直接的な話ではなく、もう少し構造的な難しさについて">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "もうポート番号は覚えない ── Docker Compose のポート競合を消す CLI「tug」を作った",
-        "description": "前回のあらすじ 前回の記事で、portless に触発されて「Docker Compose 環境なら Traefik の defaultRule で同じことができる」という話を書きました。最新のテクノロジー情報をお届けします。",
+        "headline": "セキュリティって難しい",
+        "description": "最近、事業会社でセキュリティに携わることの難しさについて色々と考えることがあったのでちょっと言語化してみる。いわゆる「セキュリティの知識をキャッチアップするのが大変」という直接的な話ではなく、もう少し構造的な難しさについて",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-27T07:50:43",
-        "dateModified": "2026-02-28T16:29:15.514487",
+        "datePublished": "2026-03-01T01:36:01",
+        "dateModified": "2026-03-03T10:44:27.337026",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6351.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6351.html",
-        "articleSection": "通信・ネットワーク",
-        "keywords": ["Docker"]
+        "articleSection": "セキュリティ",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "通信・ネットワーク",
-                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
+                "name": "セキュリティ",
+                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "もうポート番号は覚えない ── Docker Compose のポート競合を消す CLI「tug」を作った",
+                "name": "セキュリティって難しい",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6351.html"
             }
         ]
@@ -113,47 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
-                <li aria-current="page">もうポート番号は覚えない ── Docker Compose のポート競合を消す CLI「tug」を...</li>
+                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
+                <li aria-current="page">セキュリティって難しい</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>もうポート番号は覚えない ── Docker Compose のポート競合を消す CLI「tug」を作った</h1>
+                <h1>セキュリティって難しい</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/mickamy/articles/e4bb206db564a5" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: 通信・ネットワーク</span>
-                    <time datetime="2026-02-27T07:50:43">
-                        公開: 2026-02-27T07:50:43
+                    <span class="source">出典: <a href="https://zenn.dev/mizutani/articles/security-is-so-difficult" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: セキュリティ</span>
+                    <time datetime="2026-03-01T01:36:01">
+                        公開: 2026-03-01T01:36:01
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">Docker</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    前回のあらすじ
-前回の記事で、portless に触発されて「Docker Compose 環境なら Traefik の
-defaultRule で同じことができる」という話を書きました。
+                    最近、事業会社でセキュリティに携わることの難しさについて色々と考えることがあったのでちょっと言語化してみる。いわゆる「セキュリティの知識をキャッチアップするのが大変」という直接的な話ではなく、もう少し構造的な難しさについて。特に何か明快な結論や解決策を提示できるわけではないのだが、自分なりに感じていることを書いてみる。
 
-HTTP サービスは http://service.project.localhost で自動ルーティング
-git worktree との相性が良い
-ラベル不要、defaultRule の Go テンプレートだけで動く
+ 何が難しいのか
 
-ただ、実際に運用してみると手作業が残ります。
-
-Traefik 用の compose.yaml を別途管理して起動する
-各プロジェクトの compose.yaml に trae...
+ 仕組みの理解が難しい
+セキュリティに取り組むうえで、まず守るべき対象の仕組みをよく理解する必要がある。ここでいう「理解」は、単にそのシステムやサービスを「使える・動かせる」というレベルではない。そこからさらに数歩踏み込んだ、構造や原理の把握が求めら...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/mickamy/articles/e4bb206db564a5" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/mizutani/articles/security-is-so-difficult" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,24 +153,9 @@ Traefik 用の compose.yaml を別途管理して起動する
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Docker&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Docker - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Docker - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでDockerに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>通信・ネットワーク関連のおすすめ</h3>
+                    <h3>セキュリティ関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -210,16 +186,16 @@ Traefik 用の compose.yaml を別途管理して起動する
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_7452.html">
+                    <a href="Qiita_-_人気の記事_1597.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iPhone、NATO機密「制限付き」に対応─消費者向けで初</span>
+                        <span class="nav-title">Terminal 版 Playwright 風テストツールの tuistory が便利</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_3001.html">
+                    <a href="Qiita_-_人気の記事_9719.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">ORICO、M4搭載｢Mac mini｣向けドック｢ORICO MiniLink Mac Mini ...</span>
+                        <span class="nav-title">Claude Codeで「第二の脳」を作り、最終的にAIが自律運用するようになった話</span>
                     </a>
                 </div>
             </div>
@@ -232,53 +208,23 @@ Traefik 用の compose.yaml を別途管理して起動する
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4259.html">
-                        <h3>20000mAh＆670g＆衛星通信対応のBlackview「XPLORE 2 Satellite」はアウトドアで使いた...</h3>
+                    <a href="Zennのトレンド_1998.html">
+                        <h3>PRを送るだけでリポジトリを「乗っ取れる」？GitHub Actionsの危ない書き方を実際に検証してみた (hacke...</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">アウトドアユース向けのタフネススマートフォンはさまざまな製品が販売されているが、Blackviewの「XPLORE 2 Satellite」は名前のとおり、衛星通信に対応したモデルだ。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6336.html">
-                        <h3>通信会社はどうやってあなたのSIMを認証しているのか？</h3>
-                        <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">通信会社はどうやってSIMを認証しているのか？ 目次 はじめに 登場人物（コンポーネント）の紹介 5G AKAによる認証フロー 1.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_5044.html">
-                        <h3>メルカリモバイル、au回線を提供開始｜3月5日からは｢メルカリモバイル1周年祭｣のキャンペーンを開催へ</h3>
-                        <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">本日、メルカリモバイルが、au回線の提供を開始しました。 これまで、メルカリモバイルではdocomo回線のみが提供されてきましたが、本日よりau回線（音声・SMS・データ通信）の提供が開始され、doc...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_252.html">
-                        <h3>【無料】ブラウザ上で電子工作をシミュレートできる”Tinkercad”が便利すぎてヤバい</h3>
-                        <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">シミュレーターで動作確認（Tinkercad） 電子工作を行なう中で、 「使いたい部品がどれか分からない」 「配線がうまくいかず想定通り動かない」 「配線ミスで部品がショートしないか不安」 といった悩...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_6900.html">
-                        <h3>202602個人的claude code設定</h3>
-                        <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
+                            <span class="category">セキュリティ</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">同僚に共有するために書きました。 デフォルトで自走させる 基本はbypass-permissionsでいいでしょう。 $CLAUDE_CONFIG_DIR/settings. json { &#34;perm...</p>
+                        <p class="related-summary">こんにちは！エーアイセキュリティラボのはるぷです。 2026年2月下旬、オープンソース界隈を揺るがす自動攻撃キャンペーンが実施されました。ターゲットとなったのは、誰もが名前を知るような大手企業のプロジ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_8815.html">
+                        <h3>Anthropic、ルールベースではなく、コード分析により複雑な脆弱性も発見できる新機能「Claude Code Sec...</h3>
+                        <div class="related-meta">
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">AnthropicはClaude Codeの新機能として、複雑な脆弱性も発見できる「Claude Code Security」をリサーチプレビューとして提供開始したことを発表しました。 人間のセキュリ...</p>
                     </a>
                 </article>
             </div>

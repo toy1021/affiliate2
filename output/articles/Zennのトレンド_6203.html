@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>エラーのスタックトレースをAIにコピペする時代、終わらせたい | 日本のテックニュース速報</title>
-    <meta name="description" content="com/otomachiiii/DevSonar DevSonar とは ランタイムエラーを自動キャプチャし、Claude Code に渡してコード修正まで行う開発ツールです。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="AI,Claude,Mac,GitHub,EV">
+    <title>MCPはなぜCLIに負けたのか —— 経緯と構造を整理する | 日本のテックニュース速報</title>
+    <meta name="description" content="2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="エラーのスタックトレースをAIにコピペする時代、終わらせたい">
-    <meta property="og:description" content="com/otomachiiii/DevSonar DevSonar とは ランタイムエラーを自動キャプチャし、Claude Code に渡してコード修正まで行う開発ツールです。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="MCPはなぜCLIに負けたのか —— 経緯と構造を整理する">
+    <meta property="og:description" content="2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6203.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="エラーのスタックトレースをAIにコピペする時代、終わらせたい">
-    <meta name="twitter:description" content="com/otomachiiii/DevSonar DevSonar とは ランタイムエラーを自動キャプチャし、Claude Code に渡してコード修正まで行う開発ツールです。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="MCPはなぜCLIに負けたのか —— 経緯と構造を整理する">
+    <meta name="twitter:description" content="2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "エラーのスタックトレースをAIにコピペする時代、終わらせたい",
-        "description": "com/otomachiiii/DevSonar DevSonar とは ランタイムエラーを自動キャプチャし、Claude Code に渡してコード修正まで行う開発ツールです。最新のテクノロジー情報をお届けします。",
+        "headline": "MCPはなぜCLIに負けたのか —— 経緯と構造を整理する",
+        "description": "2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-13T11:12:01",
-        "dateModified": "2026-02-16T10:52:42.260017",
+        "datePublished": "2026-03-04T07:09:50",
+        "dateModified": "2026-03-06T12:58:58.206958",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6203.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6203.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","Mac","GitHub","EV"]
+        "keywords": ["AI"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "エラーのスタックトレースをAIにコピペする時代、終わらせたい",
+                "name": "MCPはなぜCLIに負けたのか —— 経緯と構造を整理する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6203.html"
             }
         ]
@@ -114,50 +114,40 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">エラーのスタックトレースをAIにコピペする時代、終わらせたい</li>
+                <li aria-current="page">MCPはなぜCLIに負けたのか —— 経緯と構造を整理する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>エラーのスタックトレースをAIにコピペする時代、終わらせたい</h1>
+                <h1>MCPはなぜCLIに負けたのか —— 経緯と構造を整理する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/otinashi/articles/bd672e8f8189df" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/hiraly/articles/3409b886607274" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-02-13T11:12:01">
-                        公開: 2026-02-13T11:12:01
+                    <time datetime="2026-03-04T07:09:50">
+                        公開: 2026-03-04T07:09:50
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">Mac</span>
-                    <span class="tag">GitHub</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    エラーが出る。ターミナルからスタックトレースをコピー。Claude に貼り付ける。返ってきた修正を手でコードに反映する。
-正直、この作業にもう飽きた。
-エラーが出た瞬間に、Claude が勝手にソースを読んで直してくれたらよくないですか？
-作りました。
-https://github.com/otomachiiii/DevSonar
+                    2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。
+それから約1年半。2026年3月現在、MCPの優位性はほぼ失われている。MCP不要論がHacker Newsのトップに繰り返し上がり、Anthropic自身がMCPのスケーリング問題を公式に認め、回避策をドキュメント化している。
+この記事では、MCPがCLIに対して優位だった期間がなぜ短かったのか、その経緯と構造を整理する。
 
- DevSonar とは
-ランタイムエラーを自動キャプチャし、Claude Code に渡してコード修正まで行う開発ツールです。
-npm install devsonar
-{
-  "scripts": {
-    "dev": "devsonar run -...
+ MCPが解決しようとした問題
+MCPの...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/otinashi/articles/bd672e8f8189df" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/hiraly/articles/3409b886607274" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -184,16 +174,6 @@ npm install devsonar
                                 <div class="product-info">
                                     <div class="product-title">機械学習 - Amazon検索結果</div>
                                     <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -234,16 +214,16 @@ npm install devsonar
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_9130.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_1921.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「Markdownだけで」顧客提案レベルのスライドを作ってみた【Slidev x Claude Op...</span>
+                        <span class="nav-title">「SANAE TOKEN」名称を変更へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_5441.html">
+                    <a href="Zennのトレンド_6251.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhone Foldの発売で折りたたみスマホ市場の変化予測〜初年度でシェア1位も？</span>
+                        <span class="nav-title">Web 標準動向 2026年2月版</span>
                     </a>
                 </div>
             </div>
@@ -256,53 +236,53 @@ npm install devsonar
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3688.html">
-                        <h3>楽天、AI活用で2025年度に255億円の利益貢献　2026年度は3倍の効果を目指す</h3>
+                    <a href="CNET_Japan_最新情報総合_4518.html">
+                        <h3>AIが「妻」になりテロや自殺を促す　Gemini開発元のグーグルを遺族が提訴</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">楽天グループが全社的なAI戦略で収益拡大を加速している。2025年度は255億円の利益貢献を達成し、全事業部門にチーフAIオフィサーを配置してデータのクロスユースを推進。2026年度は330億円超を目...</p>
+                        <p class="related-summary">AI関連の新たな不法死亡訴訟が提起された。原告側は、グーグルのAIチャットボット「Gemini」がフロリダ州の36歳の男性に自殺を促したと主張している。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5531.html">
-                        <h3>仕事でのAI利用、実は逆効果？ 労働の増加と燃え尽きのリスクが判明</h3>
+                    <a href="CNET_Japan_最新情報総合_9005.html">
+                        <h3>iPhoneの「探す」対応、AirTag対抗タグが4個入り7920→5980円に　シャオミ製</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">どの企業もAIの導入に躍起になっているようだが、その恩恵は長くは続かないかもしれない。.</p>
+                        <p class="related-summary">Xiaomiが手がけるスマートタグ「Xiaomi Tag」が、Amazonでタイムセール中だ。4個入りの場合、通常価格7920円のところ、24％オフの5980円で販売中だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6682.html">
-                        <h3>AirPods Pro 3を打倒できるか　ソニー新型イヤホン「WF-1000XM6」レビュー</h3>
+                    <a href="CNET_Japan_最新情報総合_4848.html">
+                        <h3>モフモフAIペット「iMoochi」をMWCで発見　なでると反応する癒やしロボ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">4万5000円と決して安くはないが、ソニーの新たな旗艦ノイズキャンセリング（NC）イヤホン「WF-1000XM6」は、今買える最高の製品と言っていいだろう。その理由を解説する。.</p>
+                        <p class="related-summary">スペインで開催中のMWC 2026でZTEのブースに足を踏み入れると、つぶらな瞳をした小さくてふわふわの「iMoochi（アイモーチ）」の展示に迎えられた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7583.html">
-                        <h3>PC買うなら今？メモリ不足による価格高騰から逃げ切る2つの対策</h3>
+                    <a href="CNET_Japan_最新情報総合_7195.html">
+                        <h3>ChatGPT、新モデル「GPT 5.4」公開--ハルシネーション削減、事実誤認3割減に</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AIブームでメモリの需給が逼迫し、今後もPCの価格上昇が見込まれる。この局面を乗り切る2つの対策を紹介する。.</p>
+                        <p class="related-summary">OpenAIは日本時間3月6日、新モデル「GPT 5. 4 Pro」を発表した。なかでも「Thinking」は、コーディングやAIエージェントの統括など、企業向けの業務に特化して構築されている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3578.html">
-                        <h3>AI時代だからこそ便利ツールを見直そう！</h3>
+                    <a href="CNET_Japan_最新情報総合_5719.html">
+                        <h3>スマートグラス市場が139％の急成長　Metaがシェア8割超で独走</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに Macを使い始めてから、いろいろなツールを試してきました。 その中で「これはもう手放せない！」と感じたものを、おすすめ度別にまとめてみました。 すべて実際に日常的に使っているツールです。 「...</p>
+                        <p class="related-summary">AIスマートグラスへの注目が高まっているが、調査会社Counterpoint Researchの最新データによれば、この分野はまだ初期段階にあるという。.</p>
                     </a>
                 </article>
             </div>

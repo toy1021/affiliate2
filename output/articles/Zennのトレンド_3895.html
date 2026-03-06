@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装 | 日本のテックニュース速報</title>
-    <meta name="description" content="こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました">
-    <meta name="keywords" content="Python">
+    <title>Figma不要論はまだ早い。かもしれない。AIは「りんご」の味を知らないから。 | 日本のテックニュース速報</title>
+    <meta name="description" content="! 本記事は、『試して学ぶ Figma MCPサーバー AIを活用したプロダクト開発』の著者が、書籍には書き記せなかった内容を補足するために著者自身が手作業で執筆したものです。 本記事の内容は、著者の個人的な見解であり、著者が所属する会社の公式見解ではありません">
+    <meta name="keywords" content="AI,本,書籍">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装">
-    <meta property="og:description" content="こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました">
+    <meta property="og:title" content="Figma不要論はまだ早い。かもしれない。AIは「りんご」の味を知らないから。">
+    <meta property="og:description" content="! 本記事は、『試して学ぶ Figma MCPサーバー AIを活用したプロダクト開発』の著者が、書籍には書き記せなかった内容を補足するために著者自身が手作業で執筆したものです。 本記事の内容は、著者の個人的な見解であり、著者が所属する会社の公式見解ではありません">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3895.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装">
-    <meta name="twitter:description" content="こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました">
+    <meta name="twitter:title" content="Figma不要論はまだ早い。かもしれない。AIは「りんご」の味を知らないから。">
+    <meta name="twitter:description" content="! 本記事は、『試して学ぶ Figma MCPサーバー AIを活用したプロダクト開発』の著者が、書籍には書き記せなかった内容を補足するために著者自身が手作業で執筆したものです。 本記事の内容は、著者の個人的な見解であり、著者が所属する会社の公式見解ではありません">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装",
-        "description": "こんにちは。前回 (#9 - MLIR の導入と最適化) では、 なぜ LLVM IR 直生成をやめて MLIR に寄せたのか Two Worlds (Boxed / Unboxed) の設計意図 参照カウント最適化の全体像 を中心に書きました",
+        "headline": "Figma不要論はまだ早い。かもしれない。AIは「りんご」の味を知らないから。",
+        "description": "! 本記事は、『試して学ぶ Figma MCPサーバー AIを活用したプロダクト開発』の著者が、書籍には書き記せなかった内容を補足するために著者自身が手作業で執筆したものです。 本記事の内容は、著者の個人的な見解であり、著者が所属する会社の公式見解ではありません",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-14T15:13:29",
-        "dateModified": "2026-02-15T10:28:50.365368",
+        "datePublished": "2026-03-05T09:38:00",
+        "dateModified": "2026-03-06T22:31:06.335068",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3895.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3895.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Python"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","本","書籍"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装",
+                "name": "Figma不要論はまだ早い。かもしれない。AIは「りんご」の味を知らないから。",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3895.html"
             }
         ]
@@ -113,50 +113,46 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering...</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">Figma不要論はまだ早い。かもしれない。AIは「りんご」の味を知らないから。</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Python のコンパイラを作りたい #10 - MLIR Dialect 設計と Lowering パス実装</h1>
+                <h1>Figma不要論はまだ早い。かもしれない。AIは「りんご」の味を知らないから。</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/t3tra/articles/248df893b306c8" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-02-14T15:13:29">
-                        公開: 2026-02-14T15:13:29
+                    <span class="source">出典: <a href="https://zenn.dev/kazhack/articles/ca8dcebdd9f10b" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-03-05T09:38:00">
+                        公開: 2026-03-05T09:38:00
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Python</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">本</span>
+                    <span class="tag">書籍</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    こんにちは。前回 (#9 - MLIR の導入と最適化) では、
+                    !
+本記事は、『試して学ぶ Figma MCPサーバー AIを活用したプロダクト開発』の著者が、書籍には書き記せなかった内容を補足するために著者自身が手作業で執筆したものです。
+本記事の内容は、著者の個人的な見解であり、著者が所属する会社の公式見解ではありません。
+また、特定のSNS投稿や投稿者を否定するものではなく、Figmaを活用したデザインプロセスの考察を目的としています。
+本記事で使用している画像は、Google Geminiのnano banana 2を使用して生成されています。
 
-なぜ LLVM IR 直生成をやめて MLIR に寄せたのか
-Two Worlds (Boxed / Unboxed) の設計意図
-参照カウント最適化の全体像
 
-を中心に書きました。
-今回は MLIR ダイアレクトの実装そのものに言及します。
-テーマは次の 2 つです。:
-
-Lython の MLIR Dialect 設計
-各 Lowering パスの実装と接続
-
-概念の話は前回述べたので、実際にどのパスで何をしているかを中心に追います。
-(ちなみに、今回は主題ではないので割愛しますが前回実装したいと言っていた Vect...
+ はじめに
+先日、Xでは「Figma不要論」が話題になっており、多くのデザイナーやエンジニアに...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/t3tra/articles/248df893b306c8" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/kazhack/articles/ca8dcebdd9f10b" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -169,30 +165,30 @@ Lython の MLIR Dialect 設計
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Python - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -202,23 +198,23 @@ Lython の MLIR Dialect 設計
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -233,16 +229,16 @@ Lython の MLIR Dialect 設計
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_1014.html">
+                    <a href="Qiita_-_人気の記事_4209.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">金融取引分析エージェント(AIとデータサイエンス)- Python &amp; Google ADKで金融取...</span>
+                        <span class="nav-title">フロントエンドにおけるキャッシュの全レベルを理解する</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_5633.html">
+                    <a href="iPhone_Mania_2322.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【テスト】カバレッジ100%は安心していいわけじゃない</span>
+                        <span class="nav-title">iPhone17e、MacBook Neoや他の新製品に関する初期インプレッション</span>
                     </a>
                 </div>
             </div>
@@ -255,53 +251,53 @@ Lython の MLIR Dialect 設計
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Zennのトレンド_8264.html">
-                        <h3>Streamlit公式Skillsでベストプラクティスに沿ったアプリを瞬時に構築</h3>
+                    <a href="CNET_Japan_最新情報総合_7101.html">
+                        <h3>AIが「妻」になりテロや自殺を促す　Gemini開発元のグーグルを遺族が提訴</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは！データエンジニアの山口歩夢です。 Streamlitは便利な関数を数多く提供しており、それらを組み合わせることでデータアプリケーションを手軽に開発できることが魅力のPythonラ...</p>
+                        <p class="related-summary">AI関連の新たな不法死亡訴訟が提起された。原告側は、グーグルのAIチャットボット「Gemini」がフロリダ州の36歳の男性に自殺を促したと主張している。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_6460.html">
-                        <h3>非エンジニアがClaude Codeでアプリを作って公開した全記録</h3>
+                    <a href="CNET_Japan_最新情報総合_8859.html">
+                        <h3>iPhoneの「探す」対応、AirTag対抗タグが4個入り7920→5980円に　シャオミ製</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">自作したタスク管理アプリ「長い長いノート」 このアプリを、エンジニアではない人間がAIコーディングツールだけで作りました。 私はライターです。コードを自分でゼロから書く力はないし、読めているのかも正直...</p>
+                        <p class="related-summary">Xiaomiが手がけるスマートタグ「Xiaomi Tag」が、Amazonでタイムセール中だ。4個入りの場合、通常価格7920円のところ、24％オフの5980円で販売中だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7892.html">
-                        <h3>SQLにむしゃくしゃしたのでフルAIコーディングで🐟自作プログラミング言語🍣を作った</h3>
+                    <a href="CNET_Japan_最新情報総合_7423.html">
+                        <h3>モフモフAIペット「iMoochi」をMWCで発見　なでると反応する癒やしロボ</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">発端 先日、gfxさんの自作プログラミング言語の記事を読みました。 それで自分も自作プログラミング言語作りをやってみたくなり、CodexやClaudeをしばくこと幾晩。ちょっとしたプログラミング言語と...</p>
+                        <p class="related-summary">スペインで開催中のMWC 2026でZTEのブースに足を踏み入れると、つぶらな瞳をした小さくてふわふわの「iMoochi（アイモーチ）」の展示に迎えられた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6207.html">
-                        <h3>保守的な現場でも負けない！「こっそり自動化」で自習時間を捻出するエンジニアの処世術</h3>
+                    <a href="CNET_Japan_最新情報総合_3271.html">
+                        <h3>ChatGPT、新モデル「GPT 5.4」公開--ハルシネーション削減、事実誤認3割減に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">保守的な現場でも負けない！「こっそり自動化」で自習時間を捻出するエンジニアの処世術 はじめに 「自動化なんて危ないから手動でやれ」 「新しいツールを入れるなら、承認のために会議を3回開く必要がある」 ...</p>
+                        <p class="related-summary">OpenAIは日本時間3月6日、新モデル「GPT 5. 4 Pro」を発表した。なかでも「Thinking」は、コーディングやAIエージェントの統括など、企業向けの業務に特化して構築されている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_79.html">
-                        <h3>Claude Code Skills で株スクリーニングを自動化した話【Python × yfinance × バイブコ...</h3>
+                    <a href="CNET_Japan_最新情報総合_3221.html">
+                        <h3>スマートグラス市場が139％の急成長　Metaがシェア8割超で独走</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">なぜ投資分析の自動化が必要だったのか Claude Code Skills と yfinance を使って、株式スクリーニングからポートフォリオ管理まで投資分析を自動化するシステムを作りました。Pyt...</p>
+                        <p class="related-summary">AIスマートグラスへの注目が高まっているが、調査会社Counterpoint Researchの最新データによれば、この分野はまだ初期段階にあるという。.</p>
                     </a>
                 </article>
             </div>

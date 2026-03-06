@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>useEffect で API を叩くのを卒業しよう | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
+    <title>障害対応の認知負荷を下げるCriteriaパターンとDDD | 日本のテックニュース速報</title>
+    <meta name="description" content="複雑な業務ロジックの実行過程をOpenTelemetryで可視化し、システム1の思考で障害対応を行うためのアーキテクチャと実装の連鎖。.">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="useEffect で API を叩くのを卒業しよう">
-    <meta property="og:description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
+    <meta property="og:title" content="障害対応の認知負荷を下げるCriteriaパターンとDDD">
+    <meta property="og:description" content="複雑な業務ロジックの実行過程をOpenTelemetryで可視化し、システム1の思考で障害対応を行うためのアーキテクチャと実装の連鎖。.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4722.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="useEffect で API を叩くのを卒業しよう">
-    <meta name="twitter:description" content="はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して">
+    <meta name="twitter:title" content="障害対応の認知負荷を下げるCriteriaパターンとDDD">
+    <meta name="twitter:description" content="複雑な業務ロジックの実行過程をOpenTelemetryで可視化し、システム1の思考で障害対応を行うためのアーキテクチャと実装の連鎖。.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4722.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "useEffect で API を叩くのを卒業しよう",
-        "description": "はじめに 「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。 でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して",
+        "headline": "障害対応の認知負荷を下げるCriteriaパターンとDDD",
+        "description": "複雑な業務ロジックの実行過程をOpenTelemetryで可視化し、システム1の思考で障害対応を行うためのアーキテクチャと実装の連鎖。.",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-14T10:57:20",
-        "dateModified": "2026-02-16T10:52:42.258647",
+        "datePublished": "2026-03-02T23:50:53",
+        "dateModified": "2026-03-06T22:31:06.337877",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4722.html"
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "useEffect で API を叩くのを卒業しよう",
+                "name": "障害対応の認知負荷を下げるCriteriaパターンとDDD",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4722.html"
             }
         ]
@@ -114,38 +114,32 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">useEffect で API を叩くのを卒業しよう</li>
+                <li aria-current="page">障害対応の認知負荷を下げるCriteriaパターンとDDD</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>useEffect で API を叩くのを卒業しよう</h1>
+                <h1>障害対応の認知負荷を下げるCriteriaパターンとDDD</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/ashunar0/articles/32419c3c60cc53" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/panda728/books/criteria-pattern-ddd" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-02-14T10:57:20">
-                        公開: 2026-02-14T10:57:20
+                    <time datetime="2026-03-02T23:50:53">
+                        公開: 2026-03-02T23:50:53
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-「useEffectでデータ取得するのはやめた方がいい」— こんな話を聞いたことはないだろうか。
-でも自分はずっと、useEffect + fetch でAPIを叩いていた。中でtry-catchして、useStateにセットして、ローディングもエラーも自分で管理して。チュートリアルで覚えたそのパターンを、特に疑うこともなく使い続けていた。
-「やめた方がいいのは分かった。じゃあ何を使えばいいの？」— この記事は、その疑問に対する自分なりの答えを、実際にTanStack Queryに置き換えてみた過程から書いている。
-
-
- useEffect + fetch で書くとこうなる...
+                    複雑な業務ロジックの実行過程をOpenTelemetryで可視化し、システム1の思考で障害対応を行うためのアーキテクチャと実装の連鎖。
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/ashunar0/articles/32419c3c60cc53" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/panda728/books/criteria-pattern-ddd" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -187,16 +181,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_2722.html">
+                    <a href="Publickey_3227.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">アセンブリ言語を学ぶことで得られるメリット【アセンブリ言語さくっと入門】</span>
+                        <span class="nav-title">AWSがOpenAIの企業向けAIエージェント基盤「OpenAI Frontier」の独占的な外部ク...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_2086.html">
+                    <a href="Zennのトレンド_5400.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhone18 ProシリーズはC2に加えN2も搭載する可能性</span>
+                        <span class="nav-title">CLAUDE.mdに本当は何を書くべきなのか</span>
                     </a>
                 </div>
             </div>
@@ -209,53 +203,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4912.html">
-                        <h3>自動運転タクシー、悪天候もOKに--Waymoが「第6世代システム」を始動</h3>
+                    <a href="CNET_Japan_最新情報総合_7131.html">
+                        <h3>アマゾン、注文から30分で商品が届く「Amazon Now」始動　配送料290円</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">自動運転タクシーを手がけるWaymoは木曜日、第6世代の自動運転システム「Waymo Driver」を用いた新たな取り組みを発表した。サンフランシスコ・ベイエリアとロサンゼルスにおいて、完全無人による...</p>
+                        <p class="related-summary">Amazonは3月5日、注文から約30分以内に商品を配送する新サービス「Amazon Now」の提供を開始した。まず東京都渋谷区の一部地域で始め、今後、配送エリアを順次拡大する予定だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1717.html">
-                        <h3>「ネット検索で上位＝信頼できる業者」とは限りません--不要な電気工事で高額請求も　消費者庁</h3>
+                    <a href="CNET_Japan_最新情報総合_7453.html">
+                        <h3>「紙ような見え方」をする有機ELディスプレイ、中国TCLがスマホ搭載</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">消費者庁は2月12日、停電などの電気トラブルに便乗し、不要な工事で高額請求を行う悪質な電気工事業者について注意喚起を公表した。2024年12月以降、各地の消費生活センターに同様の相談が多数寄せられてい...</p>
+                        <p class="related-summary">反射を抑えながら、鮮やかさと輝きも確保したディスプレイが登場した──。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1116.html">
-                        <h3>2028年ロス五輪で米国チームが「金」より先に「チタン」を身に着ける理由</h3>
+                    <a href="CNET_Japan_最新情報総合_8951.html">
+                        <h3>「着火できるスマホ」登場　バッテリーも超大容量2万mAhでキャンプ必携</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">オリンピックで米国代表チームが身につけるのは、メダルだけではない。スマートリング大手のOuraは、米国代表チームおよび2028年オリンピック・パラリンピック競技大会の公式ウェアラブルとなる戦略的パート...</p>
+                        <p class="related-summary">過酷な環境で何日も使えて、キャンプの火も着けられるスマートフォンが欲しいと思ったことはないだろうか。筆者はMWCに合わせて開催されたイベントで、まさにそのような製品を発見した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_990.html">
-                        <h3>家庭教師アプリTeach、株式会社バンザンの事業停止により学習継続が困難となった小中高生へ「緊急学習支援」を開始</h3>
+                    <a href="CNET_Japan_最新情報総合_4987.html">
+                        <h3>X、スレッドの途中から有料化可能に　noteなどに誘導せず収益化</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">家庭教師アプリTeach、株式会社バンザンの事業停止により学習継続が困難となった小中高生へ「緊急学習支援」を開始.</p>
+                        <p class="related-summary">0」を発表した。投稿の一部を有料購読者だけに公開できる新機能などを導入し、プラットフォーム上で直接収益を得やすくする狙いだ。. X（旧Twitter）は3月6日、クリエイター向けの収益化機能を拡充する...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7281.html">
-                        <h3>Ryzen 5搭載の14型ノートPC「FMV M55-K3」が14万円台！</h3>
+                    <a href="CNET_Japan_最新情報総合_7355.html">
+                        <h3>東京タワーの隣、都心の一等地に「データセンター」建設　ネットで物議も</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">富士通の直販サイト「富士通 WEB MART」では最新モデルを対象にセールを開催中。.</p>
+                        <p class="related-summary">東京タワーのすぐ隣という都心の一等地にデータセンターが建設される計画が明らかになり、ネット上で議論を呼んでいる。.</p>
                     </a>
                 </article>
             </div>

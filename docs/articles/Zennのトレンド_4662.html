@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0から分かる Claude Code 完全ガイド | 日本のテックニュース速報</title>
-    <meta name="description" content="ちゃんと人間が書いています。 Claude Codeをこれから使い始める初学者の方から、 すでに使っているけれど もっと活用したい上級者の方まで、 幅広く対象にしています。 2026/02/12時点のAnthropic公式のベストプラクティスと、私の開発の知見を元にまとめています">
-    <meta name="keywords" content="Claude">
+    <title>MCPはなぜCLIに負けたのか —— 経緯と構造を整理する | 日本のテックニュース速報</title>
+    <meta name="description" content="2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="0から分かる Claude Code 完全ガイド">
-    <meta property="og:description" content="ちゃんと人間が書いています。 Claude Codeをこれから使い始める初学者の方から、 すでに使っているけれど もっと活用したい上級者の方まで、 幅広く対象にしています。 2026/02/12時点のAnthropic公式のベストプラクティスと、私の開発の知見を元にまとめています">
+    <meta property="og:title" content="MCPはなぜCLIに負けたのか —— 経緯と構造を整理する">
+    <meta property="og:description" content="2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4662.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="0から分かる Claude Code 完全ガイド">
-    <meta name="twitter:description" content="ちゃんと人間が書いています。 Claude Codeをこれから使い始める初学者の方から、 すでに使っているけれど もっと活用したい上級者の方まで、 幅広く対象にしています。 2026/02/12時点のAnthropic公式のベストプラクティスと、私の開発の知見を元にまとめています">
+    <meta name="twitter:title" content="MCPはなぜCLIに負けたのか —— 経緯と構造を整理する">
+    <meta name="twitter:description" content="2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4662.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "0から分かる Claude Code 完全ガイド",
-        "description": "ちゃんと人間が書いています。 Claude Codeをこれから使い始める初学者の方から、 すでに使っているけれど もっと活用したい上級者の方まで、 幅広く対象にしています。 2026/02/12時点のAnthropic公式のベストプラクティスと、私の開発の知見を元にまとめています",
+        "headline": "MCPはなぜCLIに負けたのか —— 経緯と構造を整理する",
+        "description": "2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-10T12:38:25",
-        "dateModified": "2026-02-14T16:32:09.713582",
+        "datePublished": "2026-03-04T07:09:50",
+        "dateModified": "2026-03-07T04:07:44.900281",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4662.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4662.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Claude"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "0から分かる Claude Code 完全ガイド",
+                "name": "MCPはなぜCLIに負けたのか —— 経緯と構造を整理する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4662.html"
             }
         ]
@@ -113,44 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">0から分かる Claude Code 完全ガイド</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">MCPはなぜCLIに負けたのか —— 経緯と構造を整理する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>0から分かる Claude Code 完全ガイド</h1>
+                <h1>MCPはなぜCLIに負けたのか —— 経緯と構造を整理する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/lv/books/f611cdfe8a6e1a" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-02-10T12:38:25">
-                        公開: 2026-02-10T12:38:25
+                    <span class="source">出典: <a href="https://zenn.dev/hiraly/articles/3409b886607274" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-03-04T07:09:50">
+                        公開: 2026-03-04T07:09:50
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
+                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    ちゃんと人間が書いています。
+                    2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。
+それから約1年半。2026年3月現在、MCPの優位性はほぼ失われている。MCP不要論がHacker Newsのトップに繰り返し上がり、Anthropic自身がMCPのスケーリング問題を公式に認め、回避策をドキュメント化している。
+この記事では、MCPがCLIに対して優位だった期間がなぜ短かったのか、その経緯と構造を整理する。
 
-Claude Codeをこれから使い始める初学者の方から、
-すでに使っているけれど もっと活用したい上級者の方まで、
-幅広く対象にしています。
-
-2026/02/12時点のAnthropic公式のベストプラクティスと、私の開発の知見を元にまとめています。
-
-上から順に読んでいけば、誰でもプロになれるように書きました。
+ MCPが解決しようとした問題
+MCPの...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/lv/books/f611cdfe8a6e1a" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/hiraly/articles/3409b886607274" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,30 +160,20 @@ Claude Codeをこれから使い始める初学者の方から、
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -196,23 +183,23 @@ Claude Codeをこれから使い始める初学者の方から、
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +214,16 @@ Claude Codeをこれから使い始める初学者の方から、
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_4362.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5732.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AirPods Pro 4はカメラを搭載するも販売価格は変わらない可能性</span>
+                        <span class="nav-title">「SANAE TOKEN」名称を変更へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_7787.html">
+                    <a href="Zennのトレンド_7798.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Windowsの高速化をがんばってみた</span>
+                        <span class="nav-title">デザイナーのためのコンポーネント設計論</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +236,53 @@ Claude Codeをこれから使い始める初学者の方から、
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2950.html">
-                        <h3>Claude Code Skills で株スクリーニングを自動化した話【Python × yfinance × バイブコ...</h3>
+                    <a href="CNET_Japan_最新情報総合_3126.html">
+                        <h3>AIが「妻」になりテロや自殺を促す　Gemini開発元のグーグルを遺族が提訴</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">なぜ投資分析の自動化が必要だったのか Claude Code Skills と yfinance を使って、株式スクリーニングからポートフォリオ管理まで投資分析を自動化するシステムを作りました。Pyt...</p>
+                        <p class="related-summary">AI関連の新たな不法死亡訴訟が提起された。原告側は、グーグルのAIチャットボット「Gemini」がフロリダ州の36歳の男性に自殺を促したと主張している。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_8778.html">
-                        <h3>ソニー、ワイヤレスイヤホン｢WF-1000XM6｣向けに早くもソフトウェアアップデート（v1.5.0）をリリース</h3>
+                    <a href="CNET_Japan_最新情報総合_9578.html">
+                        <h3>iPhoneの「探す」対応、AirTag対抗タグが4個入り7920→5980円に　シャオミ製</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ソニーが昨日に発表し、日本では2月27日に発売する新型ワイヤレスイヤホン「WF-1000XM6」向けに早くも最新のソフトウェアアップデートをリリースしています。 リリースされているソフトウェアのバージ...</p>
+                        <p class="related-summary">Xiaomiが手がけるスマートタグ「Xiaomi Tag」が、Amazonでタイムセール中だ。4個入りの場合、通常価格7920円のところ、24％オフの5980円で販売中だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7280.html">
-                        <h3>【初心者向け】LINE公式アカウントのリッチメニューからWebアプリを開くまで</h3>
+                    <a href="CNET_Japan_最新情報総合_1263.html">
+                        <h3>モフモフAIペット「iMoochi」をMWCで発見　なでると反応する癒やしロボ</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに この記事はプログラミング初心者が書いた記事になります。個人開発アプリにLINEログインを実装しました。 LINE公式アカウントを作成し、LINEのトーク画面下にあるリッチメニューからアプリを...</p>
+                        <p class="related-summary">スペインで開催中のMWC 2026でZTEのブースに足を踏み入れると、つぶらな瞳をした小さくてふわふわの「iMoochi（アイモーチ）」の展示に迎えられた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_238.html">
-                        <h3>Git難すぎ問題</h3>
+                    <a href="CNET_Japan_最新情報総合_3208.html">
+                        <h3>ChatGPT、新モデル「GPT 5.4」公開--ハルシネーション削減、事実誤認3割減に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめまして。新人エンジニアのshinchaniaです。 アイドルやサンリオ、かわいいもの おいしいピザを食べることが好きな28歳男です。 そんな僕ですが、約5年間異業種で働いた後、 訓練校でJava...</p>
+                        <p class="related-summary">OpenAIは日本時間3月6日、新モデル「GPT 5. 4 Pro」を発表した。なかでも「Thinking」は、コーディングやAIエージェントの統括など、企業向けの業務に特化して構築されている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_3194.html">
-                        <h3>octorusはなぜ30万行のdiffを高速表示できるのか？</h3>
+                    <a href="CNET_Japan_最新情報総合_8587.html">
+                        <h3>スマートグラス市場が139％の急成長　Metaがシェア8割超で独走</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">dev/ushironoko/articles/90d34dd61a1825 以前上記で、自作しているtuiツールを紹介しました。 需要があるかわかりませんが、今回はoctorusで行っているパフォー...</p>
+                        <p class="related-summary">AIスマートグラスへの注目が高まっているが、調査会社Counterpoint Researchの最新データによれば、この分野はまだ初期段階にあるという。.</p>
                     </a>
                 </article>
             </div>

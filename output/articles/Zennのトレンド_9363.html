@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026年1月版 俺的AI駆動開発フロー&amp;Tips | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事は筆者がAI駆動開発を通して積み上げてきた開発フローやそのTipsを紹介するものであり、絶対的な正解を示したり、主義主張を押し付けたりするものではありません。 どこから始めたらよいかわからない方や指針を求めている方の参考になれば幸いです">
-    <meta name="keywords" content="AI,OpenAI,Claude,Azure,GitHub">
+    <title>Coding Agent に loop して欲しいのは prdじゃない skill だ | 日本のテックニュース速報</title>
+    <meta name="description" content="要約 Ralph loopから始まり、Harness Engineering, AI-DLCと名前を変えてcoding agentを長期実行するコンセプトは世の中を席巻している。 せっかくなので自分が使いやすい形でloopの実行をするためのOSSを作ってみたので中身を解説したい">
+    <meta name="keywords" content="AI,GitHub,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="2026年1月版 俺的AI駆動開発フロー&amp;Tips">
-    <meta property="og:description" content="! この記事は筆者がAI駆動開発を通して積み上げてきた開発フローやそのTipsを紹介するものであり、絶対的な正解を示したり、主義主張を押し付けたりするものではありません。 どこから始めたらよいかわからない方や指針を求めている方の参考になれば幸いです">
+    <meta property="og:title" content="Coding Agent に loop して欲しいのは prdじゃない skill だ">
+    <meta property="og:description" content="要約 Ralph loopから始まり、Harness Engineering, AI-DLCと名前を変えてcoding agentを長期実行するコンセプトは世の中を席巻している。 せっかくなので自分が使いやすい形でloopの実行をするためのOSSを作ってみたので中身を解説したい">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9363.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="2026年1月版 俺的AI駆動開発フロー&amp;Tips">
-    <meta name="twitter:description" content="! この記事は筆者がAI駆動開発を通して積み上げてきた開発フローやそのTipsを紹介するものであり、絶対的な正解を示したり、主義主張を押し付けたりするものではありません。 どこから始めたらよいかわからない方や指針を求めている方の参考になれば幸いです">
+    <meta name="twitter:title" content="Coding Agent に loop して欲しいのは prdじゃない skill だ">
+    <meta name="twitter:description" content="要約 Ralph loopから始まり、Harness Engineering, AI-DLCと名前を変えてcoding agentを長期実行するコンセプトは世の中を席巻している。 せっかくなので自分が使いやすい形でloopの実行をするためのOSSを作ってみたので中身を解説したい">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "2026年1月版 俺的AI駆動開発フロー&amp;Tips",
-        "description": "! この記事は筆者がAI駆動開発を通して積み上げてきた開発フローやそのTipsを紹介するものであり、絶対的な正解を示したり、主義主張を押し付けたりするものではありません。 どこから始めたらよいかわからない方や指針を求めている方の参考になれば幸いです",
+        "headline": "Coding Agent に loop して欲しいのは prdじゃない skill だ",
+        "description": "要約 Ralph loopから始まり、Harness Engineering, AI-DLCと名前を変えてcoding agentを長期実行するコンセプトは世の中を席巻している。 せっかくなので自分が使いやすい形でloopの実行をするためのOSSを作ってみたので中身を解説したい",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-20T01:41:43",
-        "dateModified": "2026-01-23T18:36:39.002897",
+        "datePublished": "2026-03-14T09:38:41",
+        "dateModified": "2026-03-15T12:56:20.191078",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9363.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9363.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","OpenAI","Claude","Azure","GitHub"]
+        "keywords": ["AI","GitHub","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "2026年1月版 俺的AI駆動開発フロー&amp;Tips",
+                "name": "Coding Agent に loop して欲しいのは prdじゃない skill だ",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9363.html"
             }
         ]
@@ -114,53 +114,43 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">2026年1月版 俺的AI駆動開発フロー&amp;Tips</li>
+                <li aria-current="page">Coding Agent に loop して欲しいのは prdじゃない skill だ</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>2026年1月版 俺的AI駆動開発フロー&amp;Tips</h1>
+                <h1>Coding Agent に loop して欲しいのは prdじゃない skill だ</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/microsoft/articles/2026-01-my-aidd-flow" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/takumiyoshikawa/articles/6930a0e58bc196" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-01-20T01:41:43">
-                        公開: 2026-01-20T01:41:43
+                    <time datetime="2026-03-14T09:38:41">
+                        公開: 2026-03-14T09:38:41
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">OpenAI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">Azure</span>
                     <span class="tag">GitHub</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-この記事は筆者がAI駆動開発を通して積み上げてきた開発フローやそのTipsを紹介するものであり、絶対的な正解を示したり、主義主張を押し付けたりするものではありません。
-どこから始めたらよいかわからない方や指針を求めている方の参考になれば幸いです。
+                    要約
+Ralph loopから始まり、Harness Engineering, AI-DLCと名前を変えてcoding agentを長期実行するコンセプトは世の中を席巻している。
+せっかくなので自分が使いやすい形でloopの実行をするためのOSSを作ってみたので中身を解説したい。
+https://github.com/takumiyoshikawa/skill-loop
 
-この記事ではコーディングエージェントのことをAIと表記します。
-
- 前提："俺"の現状
-
- 使っているAIとツール
-
-GitHub Copilot（Enterprise）：仕事メイン
-Claude Code（Max）：プライベートメイン
-Codex（主にAzure OpenAIのモデルで利用）
-
-メインはGitHub CopilotとCl...
+ モチベーション
+私が最初にRalph Loopのコンセプトを試した時に一番最初に感じた感想は機能しないだった。基本的には、その理由はprdと呼ばれる実行計画が粗悪なものであり、そのrepo特有の事情を全く考慮しな...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/microsoft/articles/2026-01-my-aidd-flow" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/takumiyoshikawa/articles/6930a0e58bc196" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -183,20 +173,20 @@ Codex（主にAzure OpenAIのモデルで利用）
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=OpenAI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="OpenAI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">OpenAI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでOpenAIに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -237,16 +227,16 @@ Codex（主にAzure OpenAIのモデルで利用）
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_184.html">
+                    <a href="Zennのトレンド_497.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Spec DrivenではなくImplementation Drivenを選ぶ理由</span>
+                        <span class="nav-title">ネットワーク何もわからん！そんな私がネスペ合格までに役立った本まとめ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_3487.html">
+                    <a href="Qiita_-_人気の記事_5261.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">いいから設計段階でレビュー依頼を出せ</span>
+                        <span class="nav-title">【2026年最新版】Claude Codeで行うべきセキュリティ設定 10選</span>
                     </a>
                 </div>
             </div>
@@ -259,53 +249,53 @@ Codex（主にAzure OpenAIのモデルで利用）
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4368.html">
-                        <h3>アップル、Siriを「ChatGPT」対抗の会話型AIへ大刷新か　iOS 27で登場の噂</h3>
+                    <a href="CNET_Japan_最新情報総合_2714.html">
+                        <h3>マイクロソフトの医療AI「Copilot Health」登場　データを1カ所に集約、理解を助ける</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Appleは、音声アシスタント「Siri」を本格的なAIチャットボットへと作り変えるという、これまでで最も大々的な刷新を計画している。早ければ2026年秋にも実現する見通しだ。.</p>
+                        <p class="related-summary">マイクロソフトはチャットボット「Copilot」の新機能「Copilot Health」を発表した。あらゆる医療記録やウェアラブルデバイスのデータを集約し、AIがその内容の理解を助ける新しい体験だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8049.html">
-                        <h3>世界的アーティストの音楽とAIが融合したアルバム、Spotifyで公開</h3>
+                    <a href="CNET_Japan_最新情報総合_7660.html">
+                        <h3>Claudeで「インタラクティブな図表」生成が可能に　タイヤ交換もイラスト付きで明解</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">音声生成AIを手掛けるElevenLabsは、ライザ・ミネリやアート・ガーファンクルといった著名アーティストと契約し、新たなAI音楽アルバム「Eleven Album」向けの楽曲を制作した。.</p>
+                        <p class="related-summary">Anthropicは、「Claude」のチャット内でインタラクティブなチャートや図などを作成できる新機能を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_266.html">
-                        <h3>AIで巧妙化、CEOの最大サイバー脅威はランサムウェアからオンライン詐欺へ--WEF</h3>
+                    <a href="CNET_Japan_最新情報総合_1862.html">
+                        <h3>スピルバーグ監督、映画制作にAI使わず--「創造的な人間を置き換えるなら反対」</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">生成AIによって、2026年にオンライン詐欺となりすまし攻撃が増えると予想されている。世界経済フォーラム（WEF）が発した新たな警告によると、企業のCEOにとって、詐欺がランサムウェアを抜いてサイバー...</p>
+                        <p class="related-summary">SXSWでのインタビューで、6月公開予定の新作SF映画「Disclosure Day」を手掛けるスティーブン・スピルバーグ監督が、宇宙人やソーシャルメディア、映画におけるAIなどについて語った。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2997.html">
-                        <h3>KDDI、大阪堺データセンターの稼働を開始　シャープ堺工場跡地に建設</h3>
+                    <a href="ASCII_jp__トップ_8079.html">
+                        <h3>ドコモは「絶対に繋がる」未来を作る！ 災害時はAIが自動でネットワークを構築</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">KDDIは22日、大阪府堺市に「大阪堺データセンター」を開設し、稼働を始めた。生成AI向けの計算基盤としてGPUを備えるほか、グーグルの生成AIモデル「Gemini」のオンプレミスサービスなどを提供し...</p>
+                        <p class="related-summary">ドコモはMWC26で、ネットワーク運用へのAI活用を展示しました 。AIによる5Gコアの自動構築や、トラブル対応の支援が既に始まっています 。「CNX指数」で体感品質を数値化して改善に役立てるほか、基...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5282.html">
-                        <h3>パナソニック、AI×ロボットで家電を「分解しやすく」　循環型設計を加速</h3>
+                    <a href="Zennのトレンド_7570.html">
+                        <h3>私のOSS活動元年を振り返ったらAIと下心が原動力だった</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">パナソニックがCES 2026で披露した「サーキュラーエコノミー（循環型経済）」への取り組みの1つを紹介する。.</p>
+                        <p class="related-summary">1年前、自分のGitHubプロフィールを開いても、ほぼ何もなかった。 GitHubの公開レポはほとんどなし。あるのは数年前に作ったちょっとしたものくらいで、寂しいものだった。OSS活動？「いつかやりた...</p>
                     </a>
                 </article>
             </div>

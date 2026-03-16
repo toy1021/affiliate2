@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duolingoが利用しているオープンソースライブラリを分析してみた | 日本のテックニュース速報</title>
-    <meta name="description" content="先日Xでこのようなポストをしたところ、ありがたいことに思いのほか多くの反響がありました。 せっかくなので、この記事では英語学習アプリDuolingo(デュオリンゴ)が公開しているオープンソースライブラリを確認して、領域毎にどのようなライブラリを活用しているのかを分析してみようと思います">
-    <meta name="keywords" content="React">
+    <title>Dockerイメージを深掘りしてみる | 日本のテックニュース速報</title>
+    <meta name="description" content="概要 業務や学習などでDockerを触ることは割とありましたが、ふと「自分ってDockerイメージがなんなのかあんまり理解してないな. 」と思ってしまいました。本記事はDockerイメージの実体を理解すべく、Dockerイメージを展開し各ファイルの中身を確認した際の備忘録です">
+    <meta name="keywords" content="Docker,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Duolingoが利用しているオープンソースライブラリを分析してみた">
-    <meta property="og:description" content="先日Xでこのようなポストをしたところ、ありがたいことに思いのほか多くの反響がありました。 せっかくなので、この記事では英語学習アプリDuolingo(デュオリンゴ)が公開しているオープンソースライブラリを確認して、領域毎にどのようなライブラリを活用しているのかを分析してみようと思います">
+    <meta property="og:title" content="Dockerイメージを深掘りしてみる">
+    <meta property="og:description" content="概要 業務や学習などでDockerを触ることは割とありましたが、ふと「自分ってDockerイメージがなんなのかあんまり理解してないな. 」と思ってしまいました。本記事はDockerイメージの実体を理解すべく、Dockerイメージを展開し各ファイルの中身を確認した際の備忘録です">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5329.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Duolingoが利用しているオープンソースライブラリを分析してみた">
-    <meta name="twitter:description" content="先日Xでこのようなポストをしたところ、ありがたいことに思いのほか多くの反響がありました。 せっかくなので、この記事では英語学習アプリDuolingo(デュオリンゴ)が公開しているオープンソースライブラリを確認して、領域毎にどのようなライブラリを活用しているのかを分析してみようと思います">
+    <meta name="twitter:title" content="Dockerイメージを深掘りしてみる">
+    <meta name="twitter:description" content="概要 業務や学習などでDockerを触ることは割とありましたが、ふと「自分ってDockerイメージがなんなのかあんまり理解してないな. 」と思ってしまいました。本記事はDockerイメージの実体を理解すべく、Dockerイメージを展開し各ファイルの中身を確認した際の備忘録です">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5329.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Duolingoが利用しているオープンソースライブラリを分析してみた",
-        "description": "先日Xでこのようなポストをしたところ、ありがたいことに思いのほか多くの反響がありました。 せっかくなので、この記事では英語学習アプリDuolingo(デュオリンゴ)が公開しているオープンソースライブラリを確認して、領域毎にどのようなライブラリを活用しているのかを分析してみようと思います",
+        "headline": "Dockerイメージを深掘りしてみる",
+        "description": "概要 業務や学習などでDockerを触ることは割とありましたが、ふと「自分ってDockerイメージがなんなのかあんまり理解してないな. 」と思ってしまいました。本記事はDockerイメージの実体を理解すべく、Dockerイメージを展開し各ファイルの中身を確認した際の備忘録です",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-16T15:15:41",
-        "dateModified": "2025-11-19T01:39:03.485993",
+        "datePublished": "2026-03-15T12:10:33",
+        "dateModified": "2026-03-16T17:02:59.221779",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5329.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5329.html",
-        "articleSection": "テクノロジー",
-        "keywords": ["React"]
+        "articleSection": "その他",
+        "keywords": ["Docker","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Duolingoが利用しているオープンソースライブラリを分析してみた",
+                "name": "Dockerイメージを深掘りしてみる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5329.html"
             }
         ]
@@ -113,45 +113,43 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">Duolingoが利用しているオープンソースライブラリを分析してみた</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">Dockerイメージを深掘りしてみる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Duolingoが利用しているオープンソースライブラリを分析してみた</h1>
+                <h1>Dockerイメージを深掘りしてみる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/kg_lens/articles/ba9260bee75d06" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2025-11-16T15:15:41">
-                        公開: 2025-11-16T15:15:41
+                    <span class="source">出典: <a href="https://zenn.dev/wakaka23/articles/20ad423456bb8f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-03-15T12:10:33">
+                        公開: 2026-03-15T12:10:33
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">React</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    先日Xでこのようなポストをしたところ、ありがたいことに思いのほか多くの反響がありました。
+                    概要
+業務や学習などでDockerを触ることは割とありましたが、ふと「自分ってDockerイメージがなんなのかあんまり理解してないな...」と思ってしまいました。本記事はDockerイメージの実体を理解すべく、Dockerイメージを展開し各ファイルの中身を確認した際の備忘録です。
 
-せっかくなので、この記事では英語学習アプリDuolingo(デュオリンゴ)が公開しているオープンソースライブラリを確認して、領域毎にどのようなライブラリを活用しているのかを分析してみようと思います。
-参照しているDuolingoの公開記事
-https://ja.duolingo.com/attribution
+ Dockerイメージとは
+Dockerイメージはレイヤの集合体であり、各レイヤは独自のファイルシステムをtarアーカイブファイルとして保有しています。ベースレイヤを基底として他レイヤを上部に重ね合わせることで、一つのファイルシステムとして構成していきます。
 
- 1. 全体を俯瞰した時の採用ライブラリの傾向
-Duolingoの各クライアントで利用しているOSSを俯瞰したところ、以下のような傾向が見えてきました。
-
-WebクライアントはReact ...
+https://qiita.com/zemb...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/kg_lens/articles/ba9260bee75d06" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/wakaka23/articles/20ad423456bb8f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -164,10 +162,20 @@ WebクライアントはReact ...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Docker&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Docker - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">React - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
+                                    <div class="product-title">Docker - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでDockerに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -177,7 +185,7 @@ WebクライアントはReact ...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -208,16 +216,16 @@ WebクライアントはReact ...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_8365.html">
+                    <a href="Zennのトレンド_3803.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【Claude Code】Skills機能で『AIっぽい』UIから脱却する方法！Anthropic公...</span>
+                        <span class="nav-title">課題ベースで学ぶClaude Code便利機能</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Publickey_4254.html">
+                    <a href="iPhone_Mania_3146.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">「2026年の戦略的テクノロジートレンド」を早くもガートナーが発表。AIネイティブ開発プラットフォー...</span>
+                        <span class="nav-title">iPhone Air 2、今年9月の発表はない？2027年3月に発表の可能性高まる</span>
                     </a>
                 </div>
             </div>
@@ -230,53 +238,53 @@ WebクライアントはReact ...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9837.html">
-                        <h3>エミレーツ航空、スターリンクの「爆速機内Wi-Fi」を全乗客に無償提供へ</h3>
+                    <a href="CNET_Japan_最新情報総合_1656.html">
+                        <h3>Limeが「脱・立ち乗り電動キックボード」　座れるタイプに一本化</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">エミレーツ航空は、SpaceXが提供する高速インターネットサービス「Starlink」をワイドボディ機に搭載し、全ての乗客が無料で利用できるようにする。.</p>
+                        <p class="related-summary">電動モビリティのシェアサービスを展開するLimeは、日本国内で提供する車両を、座って乗れるタイプの「Limeラクモ」に一本化した。首都圏ではすでに移行を終えており、沖縄県の那覇市と石垣市でも、2026...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3868.html">
-                        <h3>米国で1セント硬貨の製造終了--ラスト5枚に刻まれた「終わりの印」に億単位の価値か</h3>
+                    <a href="Publickey_4739.html">
+                        <h3>データセンターが武力紛争時の攻撃目標になる時代。中東の武力紛争で両陣営ともにデータセンターを狙った攻撃を実行</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">米国造幣局は先週、2世紀以上にわたる1セント硬貨の製造に幕を下ろした。最後に鋳造された硬貨は、収集家の注目を集める可能性がある。.</p>
+                        <p class="related-summary">日本時間3月1日に行われた米国とイスラエルによるイランへの攻撃開始から約2週間が経過した中東における武力紛争は、データセンターが明確な攻撃目標としてクローズアップされた歴史上初めての武力紛争になりまし...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6101.html">
-                        <h3>Facebook、リール動画の「パクリ」対策を強化--自動で検知、対処可能に</h3>
+                    <a href="気になる記になる_7934.html">
+                        <h3>CIO、薄型USB充電器｢NovaPort SLIM｣シリーズの新モデルをまもなく発表へ ｰ コンセントプラグが180度...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">Metaは、「Facebook」のリール動画を制作者に無断で使用し転載する行為への対策を強化すると発表した。.</p>
+                        <p class="related-summary">CIOが、スリムな形状が特徴のUSB充電器「NovaPort SLIM」シリーズの新モデルをまもなく発表すると予告しています。 本日、Xに投稿されたティザー動画などによると、「NovaPort SLI...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1127.html">
-                        <h3>ユニクロ、21日からの感謝祭　ヒートテックは990円、カシミヤセーターは7990円に</h3>
+                    <a href="ASCII_jp__トップ_4445.html">
+                        <h3>海外ビールのド定番、「ハイネケン」24本がAmazonタイムセールでお得！</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ユニクロは、恒例の大型セール「感謝祭」を11月21日から27日まで全国の店舗とオンラインストアで実施する。今回、セール対象品の一部が公開が公開され、具体的な値下げ価格が明らかになった。.</p>
+                        <p class="related-summary">オランダ発のプレミアムビール「ハイネケン ラガービール 缶 350ml×24本（6本×4パック）」が、Amazonタイムセールの対象商品になっています。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2839.html">
-                        <h3>Meta、「Instagram」分離を回避　米独禁訴訟でFTCに勝訴</h3>
+                    <a href="ASCII_jp__トップ_4936.html">
+                        <h3>【今週】松屋「煮込みキャベツのトマトハンバーグ」にモス「新テリヤキ」も！春を感じる新メニュー</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Metaは、米連邦取引委員会（FTC）と争っていた独占禁止法訴訟で勝訴した。FTCは、Metaがソーシャルネットワーク業界で違法な独占状態にあるとして、「WhatsApp」と「Instagram」の買...</p>
+                        <p class="related-summary">アスキーグルメが注目する、3月16日（月）～3月22日（日）のキャンペーンや新発売グルメを紹介。おいしいものを食べて今週もがんばりましょう！.</p>
                     </a>
                 </article>
             </div>

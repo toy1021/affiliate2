@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anthropic公式「マルチエージェントリサーチシステムの作り方」を読み解く──プロトタイプから本番までの教訓 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 2025年6月、Anthropicが公式エンジニアリングブログで「How we built our multi-agent research system」を公開した。Claudeの「Research」機能の裏側にあるマルチエージェントアーキテクチャを解説した記.">
-    <meta name="keywords" content="Claude,本">
+    <title>手書き・チェック・丸印も認識できる？OCI Generative AI の VLM で伝票を読ませてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="初めに OCI Generative AI の VLM（Vision Language Model） を使って、伝票識別の精度をいくつかの観点で検証してみました。 今回使用したモデルは、OCI Generative AI の gemini-2.">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Anthropic公式「マルチエージェントリサーチシステムの作り方」を読み解く──プロトタイプから本番までの教訓">
-    <meta property="og:description" content="はじめに 2025年6月、Anthropicが公式エンジニアリングブログで「How we built our multi-agent research system」を公開した。Claudeの「Research」機能の裏側にあるマルチエージェントアーキテクチャを解説した記.">
+    <meta property="og:title" content="手書き・チェック・丸印も認識できる？OCI Generative AI の VLM で伝票を読ませてみた">
+    <meta property="og:description" content="初めに OCI Generative AI の VLM（Vision Language Model） を使って、伝票識別の精度をいくつかの観点で検証してみました。 今回使用したモデルは、OCI Generative AI の gemini-2.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2003.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Anthropic公式「マルチエージェントリサーチシステムの作り方」を読み解く──プロトタイプから本番までの教訓">
-    <meta name="twitter:description" content="はじめに 2025年6月、Anthropicが公式エンジニアリングブログで「How we built our multi-agent research system」を公開した。Claudeの「Research」機能の裏側にあるマルチエージェントアーキテクチャを解説した記.">
+    <meta name="twitter:title" content="手書き・チェック・丸印も認識できる？OCI Generative AI の VLM で伝票を読ませてみた">
+    <meta name="twitter:description" content="初めに OCI Generative AI の VLM（Vision Language Model） を使って、伝票識別の精度をいくつかの観点で検証してみました。 今回使用したモデルは、OCI Generative AI の gemini-2.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Anthropic公式「マルチエージェントリサーチシステムの作り方」を読み解く──プロトタイプから本番までの教訓",
-        "description": "はじめに 2025年6月、Anthropicが公式エンジニアリングブログで「How we built our multi-agent research system」を公開した。Claudeの「Research」機能の裏側にあるマルチエージェントアーキテクチャを解説した記.",
+        "headline": "手書き・チェック・丸印も認識できる？OCI Generative AI の VLM で伝票を読ませてみた",
+        "description": "初めに OCI Generative AI の VLM（Vision Language Model） を使って、伝票識別の精度をいくつかの観点で検証してみました。 今回使用したモデルは、OCI Generative AI の gemini-2.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-20T06:04:00",
-        "dateModified": "2026-02-21T20:27:42.195068",
+        "datePublished": "2026-03-17T13:13:41",
+        "dateModified": "2026-03-18T10:55:04.633580",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2003.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2003.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["Claude","本"]
+        "keywords": ["AI"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Anthropic公式「マルチエージェントリサーチシステムの作り方」を読み解く──プロトタイプから本番までの教訓",
+                "name": "手書き・チェック・丸印も認識できる？OCI Generative AI の VLM で伝票を読ませてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2003.html"
             }
         ]
@@ -114,37 +114,38 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Anthropic公式「マルチエージェントリサーチシステムの作り方」を読み解く──プロトタイプから本...</li>
+                <li aria-current="page">手書き・チェック・丸印も認識できる？OCI Generative AI の VLM で伝票を読ませて...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Anthropic公式「マルチエージェントリサーチシステムの作り方」を読み解く──プロトタイプから本番までの教訓</h1>
+                <h1>手書き・チェック・丸印も認識できる？OCI Generative AI の VLM で伝票を読ませてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/c1d382dab8454d434d7e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/engchina/items/7accb885f62d28b67a88?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-02-20T06:04:00">
-                        公開: 2026-02-20T06:04:00
+                    <time datetime="2026-03-17T13:13:41">
+                        公開: 2026-03-17T13:13:41
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">本</span>
+                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-2025年6月、Anthropicが公式エンジニアリングブログで「How we built our multi-agent research system」を公開した。Claudeの「Research」機能の裏側にあるマルチエージェントアーキテクチャを解説した記...
+                    初めに
+OCI Generative AI の VLM（Vision Language Model） を使って、伝票識別の精度をいくつかの観点で検証してみました。
+今回使用したモデルは、OCI Generative AI の gemini-2.5-pro です。
+結論から...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/nogataka/items/c1d382dab8454d434d7e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/engchina/items/7accb885f62d28b67a88?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,30 +158,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">AI - Amazon検索結果</div>
                                     <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -221,16 +212,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_4149.html">
+                    <a href="Qiita_-_人気の記事_8613.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">DSPyでドメインエキスパートに挑んだ結果、返り討ちにあった話</span>
+                        <span class="nav-title">【JAWS DAYS 2026】基礎こそ至高。歴戦の勇士が仕掛けた「入門」という名のプレゼンバトル</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_1163.html">
+                    <a href="Zennのトレンド_9534.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Codeの「サブエージェント」と「Agent Teams」は何が違うのか──設計レイヤ...</span>
+                        <span class="nav-title">DGX SparkでNemoClawをローカル実行</span>
                     </a>
                 </div>
             </div>
@@ -243,53 +234,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4764.html">
-                        <h3>アップル、CarPlayに「対話型アプリ」導入へ　車内でChatGPTやGeminiが利用可能に？</h3>
+                    <a href="CNET_Japan_最新情報総合_4303.html">
+                        <h3>中国の動画生成AI「Seedance 2.0」、世界展開が延期か　トム・クルーズの偽動画など拡散</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">最新の「CarPlay」開発者向けガイドの中に、「音声ベースの対話型アプリ」への対応が含まれていることが判明した。アップルはダッシュボード上で「ChatGPT」「Gemini」「Claude」といった...</p>
+                        <p class="related-summary">中国の字節跳動（バイトダンス）はAI動画生成モデル「Seedance 2. 0」の世界展開を延期していると、The Informationが報じた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5430.html">
-                        <h3>グーグルが最新AI「Gemini 3.1 Pro」を発表、推論能力が飛躍的に向上</h3>
+                    <a href="CNET_Japan_最新情報総合_8470.html">
+                        <h3>Metaが「従業員の5分の1」削減か　巨額AI投資の裏で</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">グーグルが最新AIモデル「Gemini 3.</p>
+                        <p class="related-summary">Metaは大規模なレイオフで全従業員の5分の1を削減する準備を進めているという。Reutersが独占取材に基づき報じた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2320.html">
-                        <h3>AIエージェントの進化でリスク増大も「情報開示」は置き去りに　MITが警鐘</h3>
+                    <a href="CNET_Japan_最新情報総合_1150.html">
+                        <h3>「人生を台無しにされた」--性的画像で被害の少女ら、マスク氏のxAIを提訴</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">MITの研究者らが主導する研究によると、エージェント型AIの開発者は安全性テストの手順などに関する情報をほとんど公開していない。.</p>
+                        <p class="related-summary">10代の少女3人とその保護者らが新たな集団訴訟を提起した。訴状によると、イーロン・マスク氏が率いるxAIは、同社のAI「Grok」を用いて少女たちの顔や容姿を含む児童性的画像（CSAM）を生成・配布す...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1377.html">
-                        <h3>Daily AlpacaHack 2/20 Dancing Cursorのwriteup</h3>
+                    <a href="CNET_Japan_最新情報総合_943.html">
+                        <h3>ChatGPT訓練にコンテンツを無断使用、OpenAIをブリタニカとウェブスターが提訴</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Daily AlpacaHackで可愛い動画が撮れたので、writeupと称して掲載することにしました。 Dancing Cursor Topic: Control Sequences Author:...</p>
+                        <p class="related-summary">伝統ある2つの事典・辞書が、最新のテクノロジー製品に挑んでいる。Encyclopedia Britannicaと子会社Merriam-Websterは、自社のコンテンツを無断でAIモデルの訓練に使われ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="iPhone_Mania_9984.html">
-                        <h3>AirTag（第2世代）や、複数の干支モデルの未使用品 / 中古品が販売中</h3>
+                    <a href="CNET_Japan_最新情報総合_7908.html">
+                        <h3>なぜ極寒の宇宙にデータセンターを置くと「冷えない」が課題となるのか--NVIDIAのCEOも言及</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">iPhone Mania</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">先日発売されたAirTag（第2世代）や、初売りで提供されている干支をあしらった限定デザインのAirTagの中古が、じゃんぱらで販売されています。 販売されている未使用品や中古品の価格や在庫を確認しま...</p>
+                        <p class="related-summary">米NVIDIAのジェンスン・フアンCEOは、米カリフォルニア州サンノゼで開催した同社イベント「GTC」の基調講演で、軌道上AIデータセンターの実現に向けた構想に言及したが、課題として挙げたのは「冷却」...</p>
                     </a>
                 </article>
             </div>

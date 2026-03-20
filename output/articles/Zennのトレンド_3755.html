@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境 | 日本のテックニュース速報</title>
-    <meta name="description" content="おはようございます、こんにちは、こんばんは。 スペースマーケットでWebエンジニアをしています、s0arです。 ファッキンコールド（クソ寒い） 今日はターミナル開発環境の話をします。 この記事 is 何 以前、Zellij + Helix で軽量ターミナル開発環境を作った記事を書きました">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>フロントエンドのディレクトリ構成で再帰的な features 構成を推したい | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんにちは。PKSHA Technology で SWE をしている須藤です。 私の所属する PKSHA Speech Insight（PSI）チームでは、React + TypeScript で複数の Web アプリケーションを開発しています">
+    <meta name="keywords" content="React">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境">
-    <meta property="og:description" content="おはようございます、こんにちは、こんばんは。 スペースマーケットでWebエンジニアをしています、s0arです。 ファッキンコールド（クソ寒い） 今日はターミナル開発環境の話をします。 この記事 is 何 以前、Zellij + Helix で軽量ターミナル開発環境を作った記事を書きました">
+    <meta property="og:title" content="フロントエンドのディレクトリ構成で再帰的な features 構成を推したい">
+    <meta property="og:description" content="はじめに こんにちは。PKSHA Technology で SWE をしている須藤です。 私の所属する PKSHA Speech Insight（PSI）チームでは、React + TypeScript で複数の Web アプリケーションを開発しています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3755.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境">
-    <meta name="twitter:description" content="おはようございます、こんにちは、こんばんは。 スペースマーケットでWebエンジニアをしています、s0arです。 ファッキンコールド（クソ寒い） 今日はターミナル開発環境の話をします。 この記事 is 何 以前、Zellij + Helix で軽量ターミナル開発環境を作った記事を書きました">
+    <meta name="twitter:title" content="フロントエンドのディレクトリ構成で再帰的な features 構成を推したい">
+    <meta name="twitter:description" content="はじめに こんにちは。PKSHA Technology で SWE をしている須藤です。 私の所属する PKSHA Speech Insight（PSI）チームでは、React + TypeScript で複数の Web アプリケーションを開発しています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境",
-        "description": "おはようございます、こんにちは、こんばんは。 スペースマーケットでWebエンジニアをしています、s0arです。 ファッキンコールド（クソ寒い） 今日はターミナル開発環境の話をします。 この記事 is 何 以前、Zellij + Helix で軽量ターミナル開発環境を作った記事を書きました",
+        "headline": "フロントエンドのディレクトリ構成で再帰的な features 構成を推したい",
+        "description": "はじめに こんにちは。PKSHA Technology で SWE をしている須藤です。 私の所属する PKSHA Speech Insight（PSI）チームでは、React + TypeScript で複数の Web アプリケーションを開発しています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-16T02:53:04",
-        "dateModified": "2026-02-18T17:05:48.246443",
+        "datePublished": "2026-03-17T06:00:17",
+        "dateModified": "2026-03-20T08:42:48.723773",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3755.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3755.html",
         "articleSection": "プログラミング",
-        "keywords": []
+        "keywords": ["React"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境",
+                "name": "フロントエンドのディレクトリ構成で再帰的な features 構成を推したい",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3755.html"
             }
         ]
@@ -114,43 +114,39 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境</li>
+                <li aria-current="page">フロントエンドのディレクトリ構成で再帰的な features 構成を推したい</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【コピペすら不要】tmux + Neovimで作るVSCodeライクなターミナル開発環境</h1>
+                <h1>フロントエンドのディレクトリ構成で再帰的な features 構成を推したい</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/spacemarket/articles/fd6203970ba0fe" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/pksha/articles/recursive-features-directory-structure" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-02-16T02:53:04">
-                        公開: 2026-02-16T02:53:04
+                    <time datetime="2026-03-17T06:00:17">
+                        公開: 2026-03-17T06:00:17
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">React</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    おはようございます、こんにちは、こんばんは。
-スペースマーケットでWebエンジニアをしています、s0arです。
-ファッキンコールド（クソ寒い）
-今日はターミナル開発環境の話をします。
-
- この記事 is 何
-以前、Zellij + Helix で軽量ターミナル開発環境を作った記事を書きました。
-
-で、結局 tmux + Neovim に乗り換えました。
-!
-ちょっと前に「Neovimの設定が面倒」「tmuxのキーバインド覚えたくない」って言ったばかりなのにもう乗り換えるんか、みたいな声はさすがにないと思います。
-だって前回の記事の方が割と異端でしょ。今回は正統でしょ。ほなええでしょ。なあ...
+                    はじめに
+こんにちは。PKSHA Technology で SWE をしている須藤です。
+私の所属する PKSHA Speech Insight（PSI）チームでは、React + TypeScript で複数の Web アプリケーションを開発しています。
+Feature 型のディレクトリ構成は広く採用されていますが、feature の数が増えるにつれて「切り方の基準がブレる」「shared フォルダが肥大化する」「テストの粒度が定まらない」といった課題が表面化します。
+私たちのプロジェクトでも 200 を超える feature を運用する中で、フラットな features/ が構造...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/spacemarket/articles/fd6203970ba0fe" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/pksha/articles/recursive-features-directory-structure" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,20 +159,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +223,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_8748.html">
+                    <a href="Publickey_492.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「怖、、、」をなくす。レビューでの5つのルール</span>
+                        <span class="nav-title">データセンターが武力紛争時の攻撃目標になる時代。中東の武力紛争で両陣営ともにデータセンターを狙った攻...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5886.html">
+                    <a href="iPhone_Mania_7765.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">サイバー攻撃 身代金払わぬ背景</span>
+                        <span class="nav-title">iPhoneのアラームを一括オンオフするショートカットレシピ！自動でオンにする方法も</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +245,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Zennのトレンド_8485.html">
-                        <h3>Amazonでの12年間を振り返る</h3>
+                    <a href="ASCII_jp__トップ_4257.html">
+                        <h3>【DRIMAGE JAPAN　プレスリリース】『アーケロン（Arkheron）』開発中の新機能をいち早く体験できる「フラ...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">【DRIMAGE JAPAN プレスリリース】『アーケロン（Arkheron）』開発中の新機能をいち早く体験できる「フライデーナイト・ファイツ」！今週は「デュオモード」を実施！.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_2971.html">
+                        <h3>【Flutter】デバッグ画面のソースコード、ちゃんとリリースビルドから除外していますか？</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">この記事は、私のAmazonでの12年間の歩みを振り返った個人的なまとめです。自分語りがものすごく長くなってしまったので、お忙しい方は読み飛ばしてください。 だれ？ @moomindani です。20...</p>
+                        <p class="related-summary">Flutter に限らずアプリ開発、というよりフロントエンドの開発全般で、「デバッグ画面」を用意することは少なくないと思います。 Feature flag を強制的に切り替えて未公開の機能を動作確認し...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_6704.html">
-                        <h3>RAGで「ベクトル検索」が要る時、要らない時</h3>
+                    <a href="Zennのトレンド_8488.html">
+                        <h3>Claude Code × GitHubでプロダクトマネジメントを再設計した話</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">最近盛り上がっている「RAG不要論」をご存知でしょうか。 本記事では、RAG不要論を検証した論文について、ざっくり解説します。 株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こ...</p>
+                        <p class="related-summary">クラシルのプロダクト開発において、Claude Code × GitHubでプロダクトマネジメントワークを一元管理する仕組みを作ったのでその振り返り。 今は、Claude Codeを使って「競合調査・...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9768.html">
-                        <h3>Claude Code作者が全公開！9種のカスタマイズ手段と設定の全貌</h3>
+                    <a href="Qiita_-_人気の記事_6539.html">
+                        <h3>GitHub Copilot CLI の hooks をユーザーレベルで設定する方法</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに Claude Codeをインストールして、そのまま使っていないだろうか。 本記事は2026年2月13日時点の情報に基づいています。 作者のBoris Cherny氏は、カスタマイズ性がCla...</p>
+                        <p class="related-summary">この記事は GitHub Copilot CLI の力を借りて執筆しています。 普段 Claude Code を使っている人にとって、hooks 機能はすっかり日常の一部になっていると思います。最も使...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_1422.html">
-                        <h3>Claude Codeに「アイデア発掘スキル」を作らせたら、3つの穴場市場を見つけてきた</h3>
+                    <a href="Publickey_4346.html">
+                        <h3>Node.js互換でコンテナよりも高密度と高速起動を実現する「Edge.js」、Wasmerが発表</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">はじめに Claude Code の Skills は、プロンプトをパッケージ化して再利用する仕組みだ。フロントエンドのデザイン生成やコードレビューに使うのが一般的だが、コードを書かないタスクにも応用...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_7755.html">
-                        <h3>Excel 方眼紙を GitHub Copilot に食わせてみた</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">更新履歴 2026/02/16: 初版公開 2026/02/18: Claude Sonnet 4. 6 でも試してみた結果を追記 はじめに ! この記事は、以下の記事の Skill を前提にしていま...</p>
+                        <p class="related-summary">WebAssemblyランタイム「Wasmer」を開発提供するWasmer社は、Node. js互換かつコンテナよりも高密度な集約と高速起動を実現する「[Edge.</p>
                     </a>
                 </article>
             </div>

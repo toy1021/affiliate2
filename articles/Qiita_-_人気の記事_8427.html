@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新人向け「読むだけじゃ作れない」問題を解決するオンボーディングSkillとフロー | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに いえらぶＧＲＯＵＰの開発部で執行役員を務めています、和田です。わだけんです。最近はありがたいことに「新人のAI禁止の方ですか！」とか言われたりしていただいたりすることもたまにあります。 Cursorブームの到来以降、Claude Codeを使って要件定義書.">
-    <meta name="keywords" content="AI,Claude">
+    <title>GitHub Copilot CLI の公式ハンズオンざっくり和訳 (第1章/7章) | 日本のテックニュース速報</title>
+    <meta name="description" content="公式チュートリアル「GitHub Copilot CLI for Beginners」ハンズオンリポジトリを進めていきます！ これ ↓ (第 0 章 環境構築編) の続きです 🗺️ ハンズオンの全体像 2026/03/18 現在、第 0 章から第 7 章まで.">
+    <meta name="keywords" content="GitHub">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="新人向け「読むだけじゃ作れない」問題を解決するオンボーディングSkillとフロー">
-    <meta property="og:description" content="はじめに いえらぶＧＲＯＵＰの開発部で執行役員を務めています、和田です。わだけんです。最近はありがたいことに「新人のAI禁止の方ですか！」とか言われたりしていただいたりすることもたまにあります。 Cursorブームの到来以降、Claude Codeを使って要件定義書.">
+    <meta property="og:title" content="GitHub Copilot CLI の公式ハンズオンざっくり和訳 (第1章/7章)">
+    <meta property="og:description" content="公式チュートリアル「GitHub Copilot CLI for Beginners」ハンズオンリポジトリを進めていきます！ これ ↓ (第 0 章 環境構築編) の続きです 🗺️ ハンズオンの全体像 2026/03/18 現在、第 0 章から第 7 章まで.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8427.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="新人向け「読むだけじゃ作れない」問題を解決するオンボーディングSkillとフロー">
-    <meta name="twitter:description" content="はじめに いえらぶＧＲＯＵＰの開発部で執行役員を務めています、和田です。わだけんです。最近はありがたいことに「新人のAI禁止の方ですか！」とか言われたりしていただいたりすることもたまにあります。 Cursorブームの到来以降、Claude Codeを使って要件定義書.">
+    <meta name="twitter:title" content="GitHub Copilot CLI の公式ハンズオンざっくり和訳 (第1章/7章)">
+    <meta name="twitter:description" content="公式チュートリアル「GitHub Copilot CLI for Beginners」ハンズオンリポジトリを進めていきます！ これ ↓ (第 0 章 環境構築編) の続きです 🗺️ ハンズオンの全体像 2026/03/18 現在、第 0 章から第 7 章まで.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "新人向け「読むだけじゃ作れない」問題を解決するオンボーディングSkillとフロー",
-        "description": "はじめに いえらぶＧＲＯＵＰの開発部で執行役員を務めています、和田です。わだけんです。最近はありがたいことに「新人のAI禁止の方ですか！」とか言われたりしていただいたりすることもたまにあります。 Cursorブームの到来以降、Claude Codeを使って要件定義書.",
+        "headline": "GitHub Copilot CLI の公式ハンズオンざっくり和訳 (第1章/7章)",
+        "description": "公式チュートリアル「GitHub Copilot CLI for Beginners」ハンズオンリポジトリを進めていきます！ これ ↓ (第 0 章 環境構築編) の続きです 🗺️ ハンズオンの全体像 2026/03/18 現在、第 0 章から第 7 章まで.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-04T03:23:59",
-        "dateModified": "2026-03-04T12:59:28.672338",
+        "datePublished": "2026-03-18T15:03:31",
+        "dateModified": "2026-03-20T20:35:58.474459",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8427.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8427.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude"]
+        "articleSection": "プログラミング",
+        "keywords": ["GitHub"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "新人向け「読むだけじゃ作れない」問題を解決するオンボーディングSkillとフロー",
+                "name": "GitHub Copilot CLI の公式ハンズオンざっくり和訳 (第1章/7章)",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8427.html"
             }
         ]
@@ -113,40 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">新人向け「読むだけじゃ作れない」問題を解決するオンボーディングSkillとフロー</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">GitHub Copilot CLI の公式ハンズオンざっくり和訳 (第1章/7章)</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>新人向け「読むだけじゃ作れない」問題を解決するオンボーディングSkillとフロー</h1>
+                <h1>GitHub Copilot CLI の公式ハンズオンざっくり和訳 (第1章/7章)</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/WdknWdkn/items/8fdb5a85d5d78a73b6ea?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-04T03:23:59">
-                        公開: 2026-03-04T03:23:59
+                    <span class="source">出典: <a href="https://qiita.com/chomado/items/51d0727a80a14826e036?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-03-18T15:03:31">
+                        公開: 2026-03-18T15:03:31
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
+                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-いえらぶＧＲＯＵＰの開発部で執行役員を務めています、和田です。わだけんです。最近はありがたいことに「新人のAI禁止の方ですか！」とか言われたりしていただいたりすることもたまにあります。
+                    公式チュートリアル「GitHub Copilot CLI for Beginners」ハンズオンリポジトリを進めていきます！
 
-Cursorブームの到来以降、Claude Codeを使って要件定義書...
+これ ↓ (第 0 章 環境構築編) の続きです
+
+🗺️ ハンズオンの全体像
+
+2026/03/18 現在、第 0 章から第 7 章まで...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/WdknWdkn/items/8fdb5a85d5d78a73b6ea?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/chomado/items/51d0727a80a14826e036?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,30 +161,30 @@ Cursorブームの到来以降、Claude Codeを使って要件定義書...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -192,23 +194,23 @@ Cursorブームの到来以降、Claude Codeを使って要件定義書...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +225,16 @@ Cursorブームの到来以降、Claude Codeを使って要件定義書...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_5644.html">
+                    <a href="Qiita_-_人気の記事_7076.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">エンジニアが「事業を動かせる人」になるための4要素</span>
+                        <span class="nav-title">【保存版】バグバウンティ実践者のための curl  ― 偵察からPoC構築まで</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_3552.html">
+                    <a href="Zennのトレンド_9181.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Amazonの読み放題サービス｢Kindle Unlimited｣が2ヶ月無料で利用可能に!!｜3月...</span>
+                        <span class="nav-title">個人的開発環境 2026春</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +247,53 @@ Cursorブームの到来以降、Claude Codeを使って要件定義書...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9047.html">
-                        <h3>クアルコム、AIウェアラブル向け「Snapdragon Wear Elite」発表　サムスンやモトローラが採用へ</h3>
+                    <a href="気になる記になる_3757.html">
+                        <h3>米Amazonが再びスマホを開発との情報</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">クアルコムは、バルセロナで開催中のMobile World Congress（MWC）でウェアラブル向けチップの最新版「Snapdragon Wear Elite」を発表した。.</p>
+                        <p class="related-summary">Reuterが、事情に詳‌しい複数の関係者の話として、米Amazonがスマートフォンの開発に取り組んでいるようだと報じています。 Amazonは2014年に「Fire Phone」と呼ばれる自社製スマ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4559.html">
-                        <h3>NTTドコモ、個人用AIエージェント「SyncMe」　dアカウント履歴も使いパーソナライズ</h3>
+                    <a href="Qiita_-_人気の記事_3140.html">
+                        <h3>コンテキストエンジニアリングが「ツールカテゴリ」になった — 注目ツール3選が示す新潮流</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">NTTドコモは3月2日、パーソナルAIエージェント「SyncMe（シンクミー）」の先行モニター募集を開始した。2026年春頃からモニター向けにパイロット版を先行公開し、2026年夏頃に一般提供を開始す...</p>
+                        <p class="related-summary">mdの設計論、ファイルベースのメモリ管理、プロンプトキャッシュの活用法など、どれも「AIエージェントに渡. はじめに — 「コンテキストエンジニアリング」が名前を持ったツールになるまで 筆者はこれまで...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8253.html">
-                        <h3>AI生成アートに著作権を認めず--米最高裁</h3>
+                    <a href="Qiita_-_人気の記事_3334.html">
+                        <h3>【緊急】GitHub/npmを汚染する「見えないコード」の脅威：GlassWorm対策</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">AI生成アートの著作権をめぐる長い法廷闘争が終焉を迎えたようだ。米最高裁は、AIが生成した作品に関する訴訟の審理を拒否した。.</p>
+                        <p class="related-summary">【緊急】GitHub/npmを汚染する「見えないコード」の脅威：GlassWormの全貌と対策を徹底解説 2026年3月、開発者コミュニティに激震が走りました。GitHub、npm、VSCode拡張機...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1896.html">
-                        <h3>Meta、「ChatGPT」「Gemini」対抗のAIショッピングアシスタントをテストか</h3>
+                    <a href="Zennのトレンド_5004.html">
+                        <h3>React Native開発が変わる。RozeniteでCoding Agentに「目と手」を与えた話</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">Bloombergの報道によると、MetaはOpenAIの「ChatGPT」やグーグルの「Gemini」に対抗する、新しいAIショッピングアシスタント機能をテストしている。.</p>
+                        <p class="related-summary">こんにちは！テラーノベルでiOS/Android/Webとフロントエンド周りを担当している @kazutoyoです！ 以前、React Native開発でCoding Agentを活用するためのSki...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9670.html">
-                        <h3>米イラン攻撃で相次ぐ「生成AI偽動画」、Xが収益停止を警告　明示求める</h3>
+                    <a href="Zennのトレンド_3166.html">
+                        <h3>【Flutter】デバッグ画面のソースコード、ちゃんとリリースビルドから除外していますか？</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">「X」（旧Twitter）は、戦争や武力衝突に関するAI生成動画の投稿について、クリエーター向け収益分配プログラムの規制を強化すると発表した。AIで作成した動画であることを明示せずに投稿した場合、収益...</p>
+                        <p class="related-summary">Flutter に限らずアプリ開発、というよりフロントエンドの開発全般で、「デバッグ画面」を用意することは少なくないと思います。 Feature flag を強制的に切り替えて未公開の機能を動作確認し...</p>
                     </a>
                 </article>
             </div>

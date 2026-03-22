@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI時代にORMなんて必要なんですかね？ | 日本のテックニュース速報</title>
-    <meta name="description" content="AI時代にORMなんて必要なんですかね？ - AI・機械学習技術のニュースをお届け。">
+    <title>Rust の DI を試す / entrait | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Rust で DI をどうやるか調べていて entrait を試しました。 Rust で DI しようとすると、トレイトの手動定義、各構造体への impl、テスト用モック構造体の量産と、書くべきコードが多くなります">
     <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AI時代にORMなんて必要なんですかね？">
-    <meta property="og:description" content="AI時代にORMなんて必要なんですかね？ - AI・機械学習技術のニュースをお届け。">
+    <meta property="og:title" content="Rust の DI を試す / entrait">
+    <meta property="og:description" content="はじめに Rust で DI をどうやるか調べていて entrait を試しました。 Rust で DI しようとすると、トレイトの手動定義、各構造体への impl、テスト用モック構造体の量産と、書くべきコードが多くなります">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_343.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI時代にORMなんて必要なんですかね？">
-    <meta name="twitter:description" content="AI時代にORMなんて必要なんですかね？ - AI・機械学習技術のニュースをお届け。">
+    <meta name="twitter:title" content="Rust の DI を試す / entrait">
+    <meta name="twitter:description" content="はじめに Rust で DI をどうやるか調べていて entrait を試しました。 Rust で DI しようとすると、トレイトの手動定義、各構造体への impl、テスト用モック構造体の量産と、書くべきコードが多くなります">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AI時代にORMなんて必要なんですかね？",
-        "description": "AI時代にORMなんて必要なんですかね？ - AI・機械学習技術のニュースをお届け。",
+        "headline": "Rust の DI を試す / entrait",
+        "description": "はじめに Rust で DI をどうやるか調べていて entrait を試しました。 Rust で DI しようとすると、トレイトの手動定義、各構造体への impl、テスト用モック構造体の量産と、書くべきコードが多くなります",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-09T08:41:36",
-        "dateModified": "2026-01-10T22:21:39.389931",
+        "datePublished": "2026-03-20T08:31:56",
+        "dateModified": "2026-03-22T05:20:38.633475",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_343.html"
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AI時代にORMなんて必要なんですかね？",
+                "name": "Rust の DI を試す / entrait",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_343.html"
             }
         ]
@@ -114,19 +114,19 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AI時代にORMなんて必要なんですかね？</li>
+                <li aria-current="page">Rust の DI を試す / entrait</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AI時代にORMなんて必要なんですかね？</h1>
+                <h1>Rust の DI を試す / entrait</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/terurou/articles/55ffe7c6e5c96e" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/hideyuki_hori/articles/c794dcb1a0207e" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-01-09T08:41:36">
-                        公開: 2026-01-09T08:41:36
+                    <time datetime="2026-03-20T08:31:56">
+                        公開: 2026-03-20T08:31:56
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
@@ -138,23 +138,14 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    新規で構築するシステムの設計を考えていて、 「今の時代にORMなんているんか？？？」 という思いに至ったので、これを書いてます。
-
- ORMなしでAIにDBアクセスコードを生成する
-AIでコードを生成する前提として、
-
-AIは生SQLを書くのが得意
-オブジェクトマッピングみたいなボイラープレートをAIに生成させるコストは極小（人間が手で書くとめちゃくちゃ時間がかかる）
-
-という点が挙げられます。
-そのため、AIを使う前提であれば、ORMなしで以下の作業を行っても、必要なコスト（特に時間）は極小です。
-
-ドメイン要件を伝えてSQLを生成させる
-オブジェクトマッピング処理（いわゆるDAO）を...
+                    はじめに
+Rust で DI をどうやるか調べていて entrait を試しました。
+Rust で DI しようとすると、トレイトの手動定義、各構造体への impl、テスト用モック構造体の量産と、書くべきコードが多くなります。entrait はこの問題を #[entrait] マクロで解決します。関数を書くだけでトレイトが自動生成され、依存関係は Rust の trait bounds で表現されます。Impl&lt;T&gt; というラッパー型を通じて、アプリケーション状態に対してすべてのトレイトを実装します。テスト用モックの生成には unimock を使います。
+検証用に EC ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/terurou/articles/55ffe7c6e5c96e" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/hideyuki_hori/articles/c794dcb1a0207e" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -221,16 +212,16 @@ AIは生SQLを書くのが得意
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_2581.html">
+                    <a href="Zennのトレンド_638.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Grokの画像編集 有料会員限定に</span>
+                        <span class="nav-title">個人開発サイトにBOTが大量アクセス → Cloudflare無料プランで撃退した話🛡️</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_8499.html">
+                    <a href="Qiita_-_人気の記事_4565.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">身覚えない紛失防止タグ 対処法は</span>
+                        <span class="nav-title">UI UX Pro Max：AIコーディングアシスタントにデザインセンスを与えるSkill</span>
                     </a>
                 </div>
             </div>
@@ -243,53 +234,53 @@ AIは生SQLを書くのが得意
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4104.html">
-                        <h3>メモリ価格が2025年Q4に50%急騰、2026年も上昇継続へ--調査会社が予測</h3>
+                    <a href="CNET_Japan_最新情報総合_2711.html">
+                        <h3>ChatGPT訓練にコンテンツを無断使用、OpenAIをブリタニカとウェブスターが提訴</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AI需要拡大によりメモリ市場が過熱、価格は2018年ピークの2倍水準へ。iPhone 17 Pro Maxではメモリがコストの10%以上を占める見通しで、スマートフォン価格への影響は避けられない状況だ...</p>
+                        <p class="related-summary">伝統ある2つの事典・辞書が、最新のテクノロジー製品に挑んでいる。Encyclopedia Britannicaと子会社Merriam-Websterは、自社のコンテンツを無断でAIモデルの訓練に使われ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3205.html">
-                        <h3>OpenAI、健康管理に特化した「ChatGPT ヘルスケア」を発表--医療記録やApple ヘルスケアと連携</h3>
+                    <a href="CNET_Japan_最新情報総合_8823.html">
+                        <h3>なぜ極寒の宇宙にデータセンターを置くと「冷えない」が課題となるのか--NVIDIAのCEOも言及</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AI健康管理の新時代が到来。OpenAIの「ChatGPT ヘルスケア」は医療記録から日常のウェルネスアプリまで幅広く連携し、個人に最適化された健康アドバイスを実現する。まず少人数での提供開始後、数週...</p>
+                        <p class="related-summary">米NVIDIAのジェンスン・フアンCEOは、米カリフォルニア州サンノゼで開催した同社イベント「GTC」の基調講演で、軌道上AIデータセンターの実現に向けた構想に言及したが、課題として挙げたのは「冷却」...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9853.html">
-                        <h3>グーグルとCharacter.AI、少年の自殺めぐる訴訟で和解へ</h3>
+                    <a href="CNET_Japan_最新情報総合_9524.html">
+                        <h3>Perplexity、AIブラウザ「Comet」のiPhone版を公開</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AIが、AIチャットボットとの会話により未成年に被害が生じたとされる件をめぐり、4州で提起されている5件の訴訟について和解することで合意した。.</p>
+                        <p class="related-summary">Perplexityは、AI搭載ブラウザー「Comet」のiOS版を18日に公開した。これにより、iPhone利用者も、デスクトップ版やAndroid版と同様に、ブラウザー内でAIアシスタントによる回...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2434.html">
-                        <h3>レノボのディスプレイ試作機に「疲れてますね」と指摘された--ローラブルPCも披露</h3>
+                    <a href="CNET_Japan_最新情報総合_8962.html">
+                        <h3>アップルのクックCEO、引退説を否定　AI・スマホ中毒・トランプ氏との関係を語る</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「疲れて見えますね」と言われて喜ぶ人はいない。だが、レノボがCES 2026で披露した「AI-Powered Personalized Display Concept」はまさにそれを指摘してくる。.</p>
+                        <p class="related-summary">アップルのティム・クックCEOが情報番組での対談に応じ、引退説を否定。その他AIやトランプ大統領など、さまざまな話題について語った。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7781.html">
-                        <h3>NVIDIAのジェンスン・フアンCEO、「IEEE栄誉賞」を受賞</h3>
+                    <a href="CNET_Japan_最新情報総合_3092.html">
+                        <h3>「トップガン」俳優の故ヴァル・キルマーさん、AIで新作映画に登場へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">時価総額5兆ドルを突破したNVIDIAを率いるジェンスン・フアン氏が、IEEEの最高栄誉「IEEE栄誉賞」を獲得。インターネット開発者やGPS発明者らが名を連ねる歴史的な賞の受賞者に、AI時代の立役者...</p>
+                        <p class="related-summary">映画「トップガン」などへの出演で知られ、2025年に亡くなった俳優ヴァル・キルマーさんが、生前に撮影が完了しなかった新作映画に登場する。.</p>
                     </a>
                 </article>
             </div>

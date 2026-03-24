@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIエージェントが「最初から戦力になる」リポジトリ設計 — AGENTS.md・ディレクトリ構造・バリデーション戦略の実践ガイド | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに — 同じCursorを使っているのに、なぜ10倍の差がつくのか こんな経験、ないでしょうか。 チームの隣の席の人が、CursorやCopilotで爆速開発している。同じツールを使っているのに、自分のプロジェクトだと全然うまくいかない。AIが的外れなコードを吐く。.">
-    <meta name="keywords" content="AI">
+    <title>デザインシステムプロジェクトをリードして気づいたこと | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは！株式会社Schoo（以後スクー）新卒2年目の @hiroto_0411 です。エンジニアをしています。 今回の記事では、この半期（約半年間）にわたってリードした「デザインシステムプロジェクト」の振り返りをお届けします。デザインシステム自体の技術的な話だけでなく、.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIエージェントが「最初から戦力になる」リポジトリ設計 — AGENTS.md・ディレクトリ構造・バリデーション戦略の実践ガイド">
-    <meta property="og:description" content="はじめに — 同じCursorを使っているのに、なぜ10倍の差がつくのか こんな経験、ないでしょうか。 チームの隣の席の人が、CursorやCopilotで爆速開発している。同じツールを使っているのに、自分のプロジェクトだと全然うまくいかない。AIが的外れなコードを吐く。.">
+    <meta property="og:title" content="デザインシステムプロジェクトをリードして気づいたこと">
+    <meta property="og:description" content="こんにちは！株式会社Schoo（以後スクー）新卒2年目の @hiroto_0411 です。エンジニアをしています。 今回の記事では、この半期（約半年間）にわたってリードした「デザインシステムプロジェクト」の振り返りをお届けします。デザインシステム自体の技術的な話だけでなく、.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6646.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIエージェントが「最初から戦力になる」リポジトリ設計 — AGENTS.md・ディレクトリ構造・バリデーション戦略の実践ガイド">
-    <meta name="twitter:description" content="はじめに — 同じCursorを使っているのに、なぜ10倍の差がつくのか こんな経験、ないでしょうか。 チームの隣の席の人が、CursorやCopilotで爆速開発している。同じツールを使っているのに、自分のプロジェクトだと全然うまくいかない。AIが的外れなコードを吐く。.">
+    <meta name="twitter:title" content="デザインシステムプロジェクトをリードして気づいたこと">
+    <meta name="twitter:description" content="こんにちは！株式会社Schoo（以後スクー）新卒2年目の @hiroto_0411 です。エンジニアをしています。 今回の記事では、この半期（約半年間）にわたってリードした「デザインシステムプロジェクト」の振り返りをお届けします。デザインシステム自体の技術的な話だけでなく、.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIエージェントが「最初から戦力になる」リポジトリ設計 — AGENTS.md・ディレクトリ構造・バリデーション戦略の実践ガイド",
-        "description": "はじめに — 同じCursorを使っているのに、なぜ10倍の差がつくのか こんな経験、ないでしょうか。 チームの隣の席の人が、CursorやCopilotで爆速開発している。同じツールを使っているのに、自分のプロジェクトだと全然うまくいかない。AIが的外れなコードを吐く。.",
+        "headline": "デザインシステムプロジェクトをリードして気づいたこと",
+        "description": "こんにちは！株式会社Schoo（以後スクー）新卒2年目の @hiroto_0411 です。エンジニアをしています。 今回の記事では、この半期（約半年間）にわたってリードした「デザインシステムプロジェクト」の振り返りをお届けします。デザインシステム自体の技術的な話だけでなく、.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-21T00:01:09",
-        "dateModified": "2026-03-22T14:30:23.996982",
+        "datePublished": "2026-03-24T02:38:19",
+        "dateModified": "2026-03-24T20:43:34.007258",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6646.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6646.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "articleSection": "プログラミング",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIエージェントが「最初から戦力になる」リポジトリ設計 — AGENTS.md・ディレクトリ構造・バリデーション戦略の実践ガイド",
+                "name": "デザインシステムプロジェクトをリードして気づいたこと",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6646.html"
             }
         ]
@@ -113,38 +113,34 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIエージェントが「最初から戦力になる」リポジトリ設計 — AGENTS.md・ディレクトリ構造・バ...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">デザインシステムプロジェクトをリードして気づいたこと</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIエージェントが「最初から戦力になる」リポジトリ設計 — AGENTS.md・ディレクトリ構造・バリデーション戦略の実践ガイド</h1>
+                <h1>デザインシステムプロジェクトをリードして気づいたこと</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/akira_papa_AI/items/0385b6d1468e6d564b50?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-21T00:01:09">
-                        公開: 2026-03-21T00:01:09
+                    <span class="source">出典: <a href="https://qiita.com/hiroto_0411/items/46e1de307e111ca0fc1b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-03-24T02:38:19">
+                        公開: 2026-03-24T02:38:19
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに — 同じCursorを使っているのに、なぜ10倍の差がつくのか
-こんな経験、ないでしょうか。
-チームの隣の席の人が、CursorやCopilotで爆速開発している。同じツールを使っているのに、自分のプロジェクトだと全然うまくいかない。AIが的外れなコードを吐く。...
+                    こんにちは！株式会社Schoo（以後スクー）新卒2年目の @hiroto_0411 です。エンジニアをしています。
+今回の記事では、この半期（約半年間）にわたってリードした「デザインシステムプロジェクト」の振り返りをお届けします。デザインシステム自体の技術的な話だけでなく、...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/akira_papa_AI/items/0385b6d1468e6d564b50?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/hiroto_0411/items/46e1de307e111ca0fc1b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,20 +153,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -180,23 +176,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -211,16 +207,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7854.html">
+                    <a href="Qiita_-_人気の記事_3606.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AIを使うほど、判断力が落ちる人がいる理由</span>
+                        <span class="nav-title">社内開発から社外開発へ環境が変わって3ヶ月経過したのでふりかえる</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5549.html">
+                    <a href="Qiita_-_人気の記事_7792.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">SBG 米国に巨大AI拠点を建設へ</span>
+                        <span class="nav-title">「何からやれば...」を卒業する。実務の解像度を劇的に高める3ステップ</span>
                     </a>
                 </div>
             </div>
@@ -233,53 +229,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_2515.html">
-                        <h3>「Google AI Studio」がFirebaseのバックエンドとAntigravityのコーディングエージェントを...</h3>
+                    <a href="CNET_Japan_最新情報総合_4329.html">
+                        <h3>「プレゼン資料よりモノを作るほうが早い」ソフトウェア開発がAIで激変</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">Googleは、Google AI Studioのバイブコーディング機能を強化し、 プロンプトで指示するだけで高度なフルスタックアプリケーションの開発が可能になったことを発表しました。 フル機能のマル...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_723.html">
-                        <h3>AIエージェントがコマンドラインでブラウザを自動操作できる「Browser Use CLI 2.0」リリース。Chrom...</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">人間やAIエージェントがコマンドラインから指示することでWebブラウザを操作できるオープンソースのPythonライブラリ「Browser Use CLI 2. 0」がリリースされました。 Browse...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7075.html">
-                        <h3>ChatGPT訓練にコンテンツを無断使用、OpenAIをブリタニカとウェブスターが提訴</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">伝統ある2つの事典・辞書が、最新のテクノロジー製品に挑んでいる。Encyclopedia Britannicaと子会社Merriam-Websterは、自社のコンテンツを無断でAIモデルの訓練に使われ...</p>
+                        <p class="related-summary">Anthropic Japanが3月24日、日本におけるClaude利用実態を公開。ソフトウェア開発での利用が11. 5%で最多となり、人口あたりの利用量も予測を大きく上回るなど、日本の開発者がAI活...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1726.html">
-                        <h3>なぜ極寒の宇宙にデータセンターを置くと「冷えない」が課題となるのか--NVIDIAのCEOも言及</h3>
+                    <a href="ASCII_jp__トップ_1597.html">
+                        <h3>黒ラベルのコク・ヱビスの香りが融合！ 「サッポロ GOLD STAR」がAmazonタイムセールでお得に</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">米NVIDIAのジェンスン・フアンCEOは、米カリフォルニア州サンノゼで開催した同社イベント「GTC」の基調講演で、軌道上AIデータセンターの実現に向けた構想に言及したが、課題として挙げたのは「冷却」...</p>
+                        <p class="related-summary">サッポロビールの黒ラベルとヱビスの技術を活かして開発された「サッポロ GOLD STAR ゴールドスター 350ml×24本」が、Amazonタイムセールの対象となっています。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8181.html">
-                        <h3>Perplexity、AIブラウザ「Comet」のiPhone版を公開</h3>
+                    <a href="気になる記になる_1769.html">
+                        <h3>【セール】SwitchBotの小型ロボット掃除機｢Kシリーズ｣が3周年記念で最大33％オフに</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">Perplexityは、AI搭載ブラウザー「Comet」のiOS版を18日に公開した。これにより、iPhone利用者も、デスクトップ版やAndroid版と同様に、ブラウザー内でAIアシスタントによる回...</p>
+                        <p class="related-summary">SwitchBotが、小型ロボット掃除機「Kシリーズ」の発売3周年記念キャンペーンを開始しました。 本キャンペーンでは、日本の住宅環境に合わせて開発され、応援購入サービス「Makuake」の掃除機カテ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7151.html">
+                        <h3>Lighthouse CI &amp; GitHub Actions でパフォーマンスを自動計測する</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">この記事はAIの支援を受けて執筆しました。内容の正確さには注意を払っていますが、誤りがあればコメントでご指摘ください 🙏 シリーズ： Webパフォーマンス最適化 — 第5回/全10回 タグ： Java...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="iPhone_Mania_7411.html">
+                        <h3>世界開発者会議（WWDC26）を現地時間2026年6月8日から開催〜新製品の発表は？</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">iPhone Mania</span>
+                        </div>
+                        <p class="related-summary">Appleが、世界開発者会議（Worldwide Developers Conference：WWDC26）を米国太平洋時間の2026年6月8日〜12日までオンラインで開催すると発表しました。 WWD...</p>
                     </a>
                 </article>
             </div>

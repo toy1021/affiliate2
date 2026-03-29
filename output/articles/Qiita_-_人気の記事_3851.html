@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figmaから Pencil.dev に乗り換えを検討してみた【検証編】 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに この記事ではまず Pencil検証フェーズで得られた知見をまとめます。 良かった点・つまずいた点・実際に使って気づいたtipsを包み隠さず書いていきます。 今の運用 弊社ではデザインからコードに落とし込む上で以下のステップで進めています。 デザイナーがデザイ.">
-    <meta name="keywords" content="EV">
+    <title>React CompilerはどのようにReact.memoを不要にしているのか | 日本のテックニュース速報</title>
+    <meta name="description" content="結論 JSX式 ( ) のほうをメモ化すればReact. memoは必要ないです。 背景 皆さんこんにちは。ReactにおいてはReact Compilerの利用が推奨されており、これを使うことで手動でのメモ化が不要になるとされています。つ.">
+    <meta name="keywords" content="React">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Figmaから Pencil.dev に乗り換えを検討してみた【検証編】">
-    <meta property="og:description" content="はじめに この記事ではまず Pencil検証フェーズで得られた知見をまとめます。 良かった点・つまずいた点・実際に使って気づいたtipsを包み隠さず書いていきます。 今の運用 弊社ではデザインからコードに落とし込む上で以下のステップで進めています。 デザイナーがデザイ.">
+    <meta property="og:title" content="React CompilerはどのようにReact.memoを不要にしているのか">
+    <meta property="og:description" content="結論 JSX式 ( ) のほうをメモ化すればReact. memoは必要ないです。 背景 皆さんこんにちは。ReactにおいてはReact Compilerの利用が推奨されており、これを使うことで手動でのメモ化が不要になるとされています。つ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3851.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Figmaから Pencil.dev に乗り換えを検討してみた【検証編】">
-    <meta name="twitter:description" content="はじめに この記事ではまず Pencil検証フェーズで得られた知見をまとめます。 良かった点・つまずいた点・実際に使って気づいたtipsを包み隠さず書いていきます。 今の運用 弊社ではデザインからコードに落とし込む上で以下のステップで進めています。 デザイナーがデザイ.">
+    <meta name="twitter:title" content="React CompilerはどのようにReact.memoを不要にしているのか">
+    <meta name="twitter:description" content="結論 JSX式 ( ) のほうをメモ化すればReact. memoは必要ないです。 背景 皆さんこんにちは。ReactにおいてはReact Compilerの利用が推奨されており、これを使うことで手動でのメモ化が不要になるとされています。つ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Figmaから Pencil.dev に乗り換えを検討してみた【検証編】",
-        "description": "はじめに この記事ではまず Pencil検証フェーズで得られた知見をまとめます。 良かった点・つまずいた点・実際に使って気づいたtipsを包み隠さず書いていきます。 今の運用 弊社ではデザインからコードに落とし込む上で以下のステップで進めています。 デザイナーがデザイ.",
+        "headline": "React CompilerはどのようにReact.memoを不要にしているのか",
+        "description": "結論 JSX式 ( ) のほうをメモ化すればReact. memoは必要ないです。 背景 皆さんこんにちは。ReactにおいてはReact Compilerの利用が推奨されており、これを使うことで手動でのメモ化が不要になるとされています。つ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-23T04:57:07",
-        "dateModified": "2026-03-24T15:00:38.096478",
+        "datePublished": "2026-03-28T01:20:16",
+        "dateModified": "2026-03-29T10:36:07.629093",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3851.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3851.html",
         "articleSection": "テクノロジー",
-        "keywords": ["EV"]
+        "keywords": ["React"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Figmaから Pencil.dev に乗り換えを検討してみた【検証編】",
+                "name": "React CompilerはどのようにReact.memoを不要にしているのか",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3851.html"
             }
         ]
@@ -114,42 +114,39 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">Figmaから Pencil.dev に乗り換えを検討してみた【検証編】</li>
+                <li aria-current="page">React CompilerはどのようにReact.memoを不要にしているのか</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Figmaから Pencil.dev に乗り換えを検討してみた【検証編】</h1>
+                <h1>React CompilerはどのようにReact.memoを不要にしているのか</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/kobayashimakoto/items/b11ebbcf7e14ff251b76?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/uhyo/items/43d4aafae2c87a12e5ed?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-03-23T04:57:07">
-                        公開: 2026-03-23T04:57:07
+                    <time datetime="2026-03-28T01:20:16">
+                        公開: 2026-03-28T01:20:16
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">EV</span>
+                    <span class="tag">React</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-この記事ではまず Pencil検証フェーズで得られた知見をまとめます。
-良かった点・つまずいた点・実際に使って気づいたtipsを包み隠さず書いていきます。
+                    結論
+JSX式 (  ) のほうをメモ化すればReact.memoは必要ないです。
 
-今の運用
-弊社ではデザインからコードに落とし込む上で以下のステップで進めています。
-
-デザイナーがデザイ...
+背景
+皆さんこんにちは。ReactにおいてはReact Compilerの利用が推奨されており、これを使うことで手動でのメモ化が不要になるとされています。つ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/kobayashimakoto/items/b11ebbcf7e14ff251b76?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/uhyo/items/43d4aafae2c87a12e5ed?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,10 +159,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -206,16 +203,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_2162.html">
+                    <a href="気になる記になる_350.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple次期CEO最有力、ターナス氏なら何が変わるのか</span>
+                        <span class="nav-title">｢DJI Osmo Pocket 4｣の発売予定日は4月20日か ｰ コロンビアの正規販売代理店が明...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2889.html">
+                    <a href="気になる記になる_5604.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Rust で異なるシグネチャの関数に引数を自動で渡す仕組みを理解する</span>
+                        <span class="nav-title">マイナポータルの運転免許に関する全てのサービスが｢iPhoneのマイナンバーカード｣のみで利用可能に</span>
                     </a>
                 </div>
             </div>
@@ -228,52 +225,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4304.html">
-                        <h3>鉄道の高架下に「データセンター」設置　東急ら4社　電車の振動の影響など検証</h3>
+                    <a href="CNET_Japan_最新情報総合_3976.html">
+                        <h3>東京メトロ、社員の名札着用を省略へ</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">東急、東急電鉄、イッツ・コミュニケーションズ、東急建設の4社は3月23日、鉄道高架下における都市型データセンターの導入検討に向けた実証実験を2026年6月に始めると発表した。大井町線の高架下にモジュー...</p>
+                        <p class="related-summary">東京メトロは3月24日、4月1日から社員の名札着用を省略すると発表した。社員が安心して働き続けられる、より働きやすい職場環境の実現を目的とする。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_8954.html">
-                        <h3>デノン、1台で空間オーディオ再生のWi-Fiスピーカー「DENON HOME」、Dolby Atmos対応</h3>
+                    <a href="CNET_Japan_最新情報総合_4174.html">
+                        <h3>BlackBerryの再来か、物理キーボード搭載「Titan 2 Elite」がKickstarterで大躍進</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">1台で極上の空間オーディオを楽しめる、デノンの新スピーカー「DENON HOME」のクラウドファンディングが始まる。.</p>
+                        <p class="related-summary">BlackBerryのモバイル端末は2016年に提供が終了したが、物理キーボードを備えた新しいスマートフォンが登場している。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_7108.html">
-                        <h3>米 海外製新型ルーターの輸入禁止</h3>
+                    <a href="CNET_Japan_最新情報総合_9458.html">
+                        <h3>NASA、月周回基地「ゲートウェイ」建設を停止　月面基地に集中</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
+                        <p class="related-summary">NASAはここ2カ月で2度目となる、月探査計画の大幅な見直しを断行した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_611.html">
-                        <h3>ぜひ「龍が如く7」を遊んでほしい。スペースハリアーも、ファンタシーゾーンも、アウトランも楽しめますし……</h3>
+                    <a href="CNET_Japan_最新情報総合_4309.html">
+                        <h3>「ドコモの火災保険」提供開始</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">システムが大幅に変わり、シリーズの“仕切り直し”としてエポックメイキングな作品。価格も安いので、ぜひ遊んでください。.</p>
+                        <p class="related-summary">NTTドコモは3月25日、日新火災海上保険と持家向けの「ドコモの火災保険」の提供を始めた。マンションの区分所有者も対象。インターネット完結型の火災保険で、ドコモ回線の契約がないユーザーでも申し込める。...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4704.html">
-                        <h3>清楚な制服姿から一転、挑発的なメイドビキニで新境地。五百木いおが待望の「Cream」再登場！</h3>
+                    <a href="CNET_Japan_最新情報総合_356.html">
+                        <h3>火星探査を変える？　NASA、原子力宇宙船「SR-1 Freedom」を2028年打ち上げへ</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アイドルグループ「MelMi」のピュアパープル担当。その可愛さで撮影会でも大人気の五百木いおさんが、制服美少女誌「Cream 2026年4月号」の掲載記念イベントを秋葉原の書泉ブックタワーで開催した。...</p>
+                        <p class="related-summary">NASAは、火星探査機「Skyfall」を運ぶ原子力宇宙船「SR-1 Freedom」を2028年に打ち上げる計画を明らかにした。火星地下にある氷の探査や、将来の深宇宙ミッションへの応用が期待される─...</p>
                     </a>
                 </article>
             </div>

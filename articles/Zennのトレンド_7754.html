@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>生成AI時代のドキュメント基盤 | 日本のテックニュース速報</title>
-    <meta name="description" content="本項はFindy様のイベント 仕様駆動開発（Spec-Driven Development） Lunch Talk で発表した発表原稿を、加筆修正したものになります。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="AI,AWS,GitHub,本,EV">
+    <title>SDD + TDD + VDDを融合したClaude Codeプラグイン「VSDD Claude Code」を作った話 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに AI開発が当たり前となった現在、開発速度は格段に向上しました。 それでも、根本的な問題は解決されていません。 LLMが生成したコードはテストを通過し、レビューでも問題が見つからない。 「これでいける」と思い、リリースしてから初めて、問題が露呈するというようなケースが多々あります">
+    <meta name="keywords" content="AI,Claude,LLM,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="生成AI時代のドキュメント基盤">
-    <meta property="og:description" content="本項はFindy様のイベント 仕様駆動開発（Spec-Driven Development） Lunch Talk で発表した発表原稿を、加筆修正したものになります。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="SDD + TDD + VDDを融合したClaude Codeプラグイン「VSDD Claude Code」を作った話">
+    <meta property="og:description" content="はじめに AI開発が当たり前となった現在、開発速度は格段に向上しました。 それでも、根本的な問題は解決されていません。 LLMが生成したコードはテストを通過し、レビューでも問題が見つからない。 「これでいける」と思い、リリースしてから初めて、問題が露呈するというようなケースが多々あります">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7754.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="生成AI時代のドキュメント基盤">
-    <meta name="twitter:description" content="本項はFindy様のイベント 仕様駆動開発（Spec-Driven Development） Lunch Talk で発表した発表原稿を、加筆修正したものになります。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="SDD + TDD + VDDを融合したClaude Codeプラグイン「VSDD Claude Code」を作った話">
+    <meta name="twitter:description" content="はじめに AI開発が当たり前となった現在、開発速度は格段に向上しました。 それでも、根本的な問題は解決されていません。 LLMが生成したコードはテストを通過し、レビューでも問題が見つからない。 「これでいける」と思い、リリースしてから初めて、問題が露呈するというようなケースが多々あります">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "生成AI時代のドキュメント基盤",
-        "description": "本項はFindy様のイベント 仕様駆動開発（Spec-Driven Development） Lunch Talk で発表した発表原稿を、加筆修正したものになります。最新のテクノロジー情報をお届けします。",
+        "headline": "SDD + TDD + VDDを融合したClaude Codeプラグイン「VSDD Claude Code」を作った話",
+        "description": "はじめに AI開発が当たり前となった現在、開発速度は格段に向上しました。 それでも、根本的な問題は解決されていません。 LLMが生成したコードはテストを通過し、レビューでも問題が見つからない。 「これでいける」と思い、リリースしてから初めて、問題が露呈するというようなケースが多々あります",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-19T03:34:48",
-        "dateModified": "2026-03-22T14:30:23.996472",
+        "datePublished": "2026-03-28T12:30:32",
+        "dateModified": "2026-03-30T13:23:08.662831",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7754.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7754.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","AWS","GitHub","本","EV"]
+        "keywords": ["AI","Claude","LLM","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "生成AI時代のドキュメント基盤",
+                "name": "SDD + TDD + VDDを融合したClaude Codeプラグイン「VSDD Claude Code」を作った話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7754.html"
             }
         ]
@@ -114,62 +114,45 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">生成AI時代のドキュメント基盤</li>
+                <li aria-current="page">SDD + TDD + VDDを融合したClaude Codeプラグイン「VSDD Claude C...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>生成AI時代のドキュメント基盤</h1>
+                <h1>SDD + TDD + VDDを融合したClaude Codeプラグイン「VSDD Claude Code」を作った話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/nuits_jp/articles/2026-03-19-genai-documentation-foundation" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/sc30gsw/articles/1373752d9713b3" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-19T03:34:48">
-                        公開: 2026-03-19T03:34:48
+                    <time datetime="2026-03-28T12:30:32">
+                        公開: 2026-03-28T12:30:32
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">AWS</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">LLM</span>
                     <span class="tag">本</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本項はFindy様のイベント
-
-仕様駆動開発（Spec-Driven Development） Lunch Talk
-
-で発表した発表原稿を、加筆修正したものになります。
-スライドはこちら
-
-生成AI時代のドキュメント基盤 - Docswell
-
-
- 生成AI、活用されていますか？
-生成AI、活用されていますか？
-私はもう毎日、どっぷりつかっています。
-
- 仕様駆動開発にも注目
-そんな中、仕様駆動開発も注目を集めてきました。
-
-AWS - Kiro
-GitHub - Spec Kit
-Fission-AI - OpenSpec
-gotalab - cc-sdd
-
-
- ドキュメントの重要性...
+                    はじめに
+AI開発が当たり前となった現在、開発速度は格段に向上しました。
+それでも、根本的な問題は解決されていません。
+LLMが生成したコードはテストを通過し、レビューでも問題が見つからない。
+「これでいける」と思い、リリースしてから初めて、問題が露呈するというようなケースが多々あります。
+例えば、本番環境に出てから初めて仕様との乖離が見つかった、エッジケースが考慮されていない、ハッピーパスしかテストされていない、などのケースがあります。
+つまり、LLMが生成したコードの実態は抽象化が過剰で変更に脆いという問題があります。
+このような現象を総称して「AIスロップ（AI slop）」と...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/nuits_jp/articles/2026-03-19-genai-documentation-foundation" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/sc30gsw/articles/1373752d9713b3" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -192,20 +175,20 @@ gotalab - cc-sdd
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -246,16 +229,16 @@ gotalab - cc-sdd
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_8422.html">
+                    <a href="Zennのトレンド_9199.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">｢watchOS 26.4｣ではワークアウトアプリの使い勝手が向上</span>
+                        <span class="nav-title">Claude Codeで100個のSkillを育てた全記録 ── コンテキストエンジニアリング実践4...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1883.html">
+                    <a href="気になる記になる_3820.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">業務アプリのフロントエンド負債と向き合い、Tailwind CSS から Panda CSS への移...</span>
+                        <span class="nav-title">【セール】人気マウスの最新モデル｢MX Master 4｣など、Amazonでロジクール製品のセール...</span>
                     </a>
                 </div>
             </div>
@@ -268,53 +251,53 @@ gotalab - cc-sdd
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_2515.html">
-                        <h3>「Google AI Studio」がFirebaseのバックエンドとAntigravityのコーディングエージェントを...</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">Googleは、Google AI Studioのバイブコーディング機能を強化し、 プロンプトで指示するだけで高度なフルスタックアプリケーションの開発が可能になったことを発表しました。 フル機能のマル...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_723.html">
-                        <h3>AIエージェントがコマンドラインでブラウザを自動操作できる「Browser Use CLI 2.0」リリース。Chrom...</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">人間やAIエージェントがコマンドラインから指示することでWebブラウザを操作できるオープンソースのPythonライブラリ「Browser Use CLI 2. 0」がリリースされました。 Browse...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7075.html">
-                        <h3>ChatGPT訓練にコンテンツを無断使用、OpenAIをブリタニカとウェブスターが提訴</h3>
+                    <a href="CNET_Japan_最新情報総合_203.html">
+                        <h3>ChatGPTの「アダルトモード」、無期限凍結か　Sora終了に続き</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">伝統ある2つの事典・辞書が、最新のテクノロジー製品に挑んでいる。Encyclopedia Britannicaと子会社Merriam-Websterは、自社のコンテンツを無断でAIモデルの訓練に使われ...</p>
+                        <p class="related-summary">OpenAIが、ChatGPT向けに検討していた成人向けチャット機能の開発を無期限で凍結したと報じられた。動画生成ツール「Sora」の終了に続く方針転換とみられる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1726.html">
-                        <h3>なぜ極寒の宇宙にデータセンターを置くと「冷えない」が課題となるのか--NVIDIAのCEOも言及</h3>
+                    <a href="CNET_Japan_最新情報総合_6704.html">
+                        <h3>Wikipedia、AI生成コンテンツを原則禁止に　例外は2つのみ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米NVIDIAのジェンスン・フアンCEOは、米カリフォルニア州サンノゼで開催した同社イベント「GTC」の基調講演で、軌道上AIデータセンターの実現に向けた構想に言及したが、課題として挙げたのは「冷却」...</p>
+                        <p class="related-summary">Wikipediaはこの25年間、信頼でき検証できる情報源に基づく限り、誰もが知識を持ち寄れるオープンなオンライン百科事典として運営されてきた。だが、AIツールがコンテンツ制作の在り方を急速に変えつつ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8181.html">
-                        <h3>Perplexity、AIブラウザ「Comet」のiPhone版を公開</h3>
+                    <a href="CNET_Japan_最新情報総合_1553.html">
+                        <h3>AIへの恋愛相談はNG？ スタンフォード大が指摘する「迎合性」の罠</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Perplexityは、AI搭載ブラウザー「Comet」のiOS版を18日に公開した。これにより、iPhone利用者も、デスクトップ版やAndroid版と同様に、ブラウザー内でAIアシスタントによる回...</p>
+                        <p class="related-summary">AIチャットボットに恋愛相談をするべきではない。使うにしても、気を付けた方がいい。学術誌「Science」で発表された新しい研究がそのリスクを示している。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_3158.html">
+                        <h3>ソニー、新型ゲーミングヘッドセット｢INZONE H6 Air｣を4月14日に発表・発売か</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">Dealabsが、ソニーがゲーミングギア「INZONE」ブランドの新型有線ヘッドセット「INZONE H6 Air」を準備していると報じています。 「INZONE H6 Air」はオープン型の設計で、...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_9488.html">
+                        <h3>限定100台！4月3日（金）9時にCAMPFIREにて登場：【第三弾】月額不要！AI機能無料の次世代AIボイスレコーダー...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">限定100台！4月3日（金）9時にCAMPFIREにて登場：【第三弾】月額不要！AI機能無料の次世代AIボイスレコーダー「AuralAI」 今すぐ事前登録最大40％OFF！.</p>
                     </a>
                 </article>
             </div>

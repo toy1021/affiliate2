@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【ちゃんと業務で使えるようになるための】npmまとめ | 日本のテックニュース速報</title>
-    <meta name="description" content="こんにちは！ひさふるです。 今回は&#34;ちゃんと業務で使えるようになるための&#34;というテーマで、npmを取り上げたいと思います。 私自身、業務でもnpmを多用します。 ただ、新卒で案件に配属された私には、単に&#34;パッケージをインストールできるもの&#34;という理解より、一歩踏み込んだ理解.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>React のメモ化を整理する — memo / useMemo / useCallback の使い分け | 日本のテックニュース速報</title>
+    <meta name="description" content="React でパフォーマンス改善の話になると、よく memo、useMemo、useCallback というメモ化の話が出てきます。 ただ、実務ではこんなことが起きがちです。 とりあえず useCallback を付ける 再レンダリングが気になって memo で囲む u.">
+    <meta name="keywords" content="React">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【ちゃんと業務で使えるようになるための】npmまとめ">
-    <meta property="og:description" content="こんにちは！ひさふるです。 今回は&#34;ちゃんと業務で使えるようになるための&#34;というテーマで、npmを取り上げたいと思います。 私自身、業務でもnpmを多用します。 ただ、新卒で案件に配属された私には、単に&#34;パッケージをインストールできるもの&#34;という理解より、一歩踏み込んだ理解.">
+    <meta property="og:title" content="React のメモ化を整理する — memo / useMemo / useCallback の使い分け">
+    <meta property="og:description" content="React でパフォーマンス改善の話になると、よく memo、useMemo、useCallback というメモ化の話が出てきます。 ただ、実務ではこんなことが起きがちです。 とりあえず useCallback を付ける 再レンダリングが気になって memo で囲む u.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3805.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【ちゃんと業務で使えるようになるための】npmまとめ">
-    <meta name="twitter:description" content="こんにちは！ひさふるです。 今回は&#34;ちゃんと業務で使えるようになるための&#34;というテーマで、npmを取り上げたいと思います。 私自身、業務でもnpmを多用します。 ただ、新卒で案件に配属された私には、単に&#34;パッケージをインストールできるもの&#34;という理解より、一歩踏み込んだ理解.">
+    <meta name="twitter:title" content="React のメモ化を整理する — memo / useMemo / useCallback の使い分け">
+    <meta name="twitter:description" content="React でパフォーマンス改善の話になると、よく memo、useMemo、useCallback というメモ化の話が出てきます。 ただ、実務ではこんなことが起きがちです。 とりあえず useCallback を付ける 再レンダリングが気になって memo で囲む u.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【ちゃんと業務で使えるようになるための】npmまとめ",
-        "description": "こんにちは！ひさふるです。 今回は&#34;ちゃんと業務で使えるようになるための&#34;というテーマで、npmを取り上げたいと思います。 私自身、業務でもnpmを多用します。 ただ、新卒で案件に配属された私には、単に&#34;パッケージをインストールできるもの&#34;という理解より、一歩踏み込んだ理解.",
+        "headline": "React のメモ化を整理する — memo / useMemo / useCallback の使い分け",
+        "description": "React でパフォーマンス改善の話になると、よく memo、useMemo、useCallback というメモ化の話が出てきます。 ただ、実務ではこんなことが起きがちです。 とりあえず useCallback を付ける 再レンダリングが気になって memo で囲む u.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-23T23:35:27",
-        "dateModified": "2026-02-26T05:21:19.665687",
+        "datePublished": "2026-04-02T03:29:10",
+        "dateModified": "2026-04-03T07:11:35.670793",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3805.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3805.html",
         "articleSection": "テクノロジー",
-        "keywords": []
+        "keywords": ["React"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【ちゃんと業務で使えるようになるための】npmまとめ",
+                "name": "React のメモ化を整理する — memo / useMemo / useCallback の使い分け",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3805.html"
             }
         ]
@@ -114,35 +114,41 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">【ちゃんと業務で使えるようになるための】npmまとめ</li>
+                <li aria-current="page">React のメモ化を整理する — memo / useMemo / useCallback の使い...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【ちゃんと業務で使えるようになるための】npmまとめ</h1>
+                <h1>React のメモ化を整理する — memo / useMemo / useCallback の使い分け</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/kyuko/items/57116c85e990fecd6f6d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/ryo_sh/items/f394828fce8246b4b2e7?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-02-23T23:35:27">
-                        公開: 2026-02-23T23:35:27
+                    <time datetime="2026-04-02T03:29:10">
+                        公開: 2026-04-02T03:29:10
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">React</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    こんにちは！ひさふるです。
-今回は"ちゃんと業務で使えるようになるための"というテーマで、npmを取り上げたいと思います。
-私自身、業務でもnpmを多用します。
-ただ、新卒で案件に配属された私には、単に"パッケージをインストールできるもの"という理解より、一歩踏み込んだ理解...
+                    React でパフォーマンス改善の話になると、よく memo、useMemo、useCallback というメモ化の話が出てきます。
+ただ、実務ではこんなことが起きがちです。
+
+とりあえず useCallback を付ける
+再レンダリングが気になって memo で囲む
+
+u...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/kyuko/items/57116c85e990fecd6f6d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/ryo_sh/items/f394828fce8246b4b2e7?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -151,6 +157,21 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
                     <h3>テクノロジー関連のおすすめ</h3>
@@ -184,16 +205,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_385.html">
+                    <a href="Qiita_-_人気の記事_3421.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">通常の50倍、2日間で約1000人が登録したWEBアプリの話</span>
+                        <span class="nav-title">Claude Code 完全リファレンス — 全機能網羅+意外と知らない便利機能トップ10</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1869.html">
+                    <a href="Qiita_-_人気の記事_7000.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Obsidianは便利なMarkdownエディタじゃない！見落としがちなコアプラグイン4選</span>
+                        <span class="nav-title">現場で折れないマインドを作る3つのコツ</span>
                     </a>
                 </div>
             </div>
@@ -206,53 +227,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3755.html">
-                        <h3>有事に頼もしい「災害支援ローソン」1号店が千葉県富津市に開設--水、食料、電源、スターリンク完備</h3>
+                    <a href="CNET_Japan_最新情報総合_1520.html">
+                        <h3>都内の「パーキングメーター」地図、警視庁がウェブでの公開を停止</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">KDDI、およびローソンは2月24日、大規模災害の発生時に、地域の支援拠点となる「災害支援ローソン」の1号店として、千葉県富津市の「ローソン富津湊店」をリニューアルオープンした。.</p>
+                        <p class="related-summary">都市部で駐車料金が上がるなか、短時間の立ち寄りに便利なのがパーキングメーター（時間制限駐車区間）だ。都心部でも1時間あたり300円前後で利用でき、周辺の駐車場より安く済むことも少なくない。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2125.html">
-                        <h3>エレコム、発火しにくい「半固体電池」のモバイルバッテリー発売　6280円から</h3>
+                    <a href="CNET_Japan_最新情報総合_8174.html">
+                        <h3>アマゾンのクラウド拠点、イランの攻撃で被害発生か　バーレーンで</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">エレコムは2月25日、半固体電池を採用したモバイルバッテリーを3月から順次発売すると発表した。同社として半固体電池の採用は初めて。電解液をゲル化することで安全性を高め、従来製品の約4倍となる2000回...</p>
+                        <p class="related-summary">バーレーンにあるアマゾンのクラウドコンピューティング拠点が、イランの攻撃で被害を受けたという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_921.html">
-                        <h3>サムスン最新スマホGalaxy S26 Ultra、のぞき見防止機能を実装</h3>
+                    <a href="CNET_Japan_最新情報総合_417.html">
+                        <h3>宇宙旅行の予約が可能に、価格は1億円超　Virgin Galacticが再開</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">サムスンが現地時間2月25日に開催した「Galaxy Unpacked 2026」で発表した「Galaxy S26 Ultra」には、こうした場面を想定した新機能「Privacy Display」が搭...</p>
+                        <p class="related-summary">Virgin Galacticによる前回の宇宙飛行から約2年が経過し、同社は再び一般市民を宇宙に連れて行く。ただし、それは75万ドル（約1億2000万円）の余剰資金を持つ市民に限られる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2774.html">
-                        <h3>TOTOの最新トイレ、面倒な「フチ掃除」を完全自動化</h3>
+                    <a href="CNET_Japan_最新情報総合_4447.html">
+                        <h3>打ち上げ成功も「宇宙でトイレ故障」--月へ飛行中のアルテミスII乗組員、自力で修理</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">1回水を流すだけで便器がピカピカに。そんな「自動お掃除トイレ」が当たり前になる未来なら大歓迎だ──。.</p>
+                        <p class="related-summary">宇宙船でトイレが使えない――そんな切実なトラブルに見舞われたArtemis II（アルテミスII）の乗組員が、地上管制の支援を受けながらオリオン宇宙船のトイレを復旧させた。華やかな宇宙飛行の裏で、生活...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4544.html">
-                        <h3>財務省、「note」アカウントを開設--職員が月1〜2回ペースで投稿</h3>
+                    <a href="CNET_Japan_最新情報総合_3529.html">
+                        <h3>米アマゾン、物流手数料に3.5%の上乗せ　燃料費高騰で</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">財務省は公式プラットフォームとして「財務省note」を開設した。.</p>
+                        <p class="related-summary">アマゾンは、北米のサードパーティー販売業者に課すフルフィルメント手数料に、3. 5%の燃料・物流関連のサーチャージを追加する。.</p>
                     </a>
                 </article>
             </div>

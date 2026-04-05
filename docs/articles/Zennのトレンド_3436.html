@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか | 日本のテックニュース速報</title>
-    <meta name="description" content="大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います">
+    <title>C#で設計原則をどこまで適用するか — 規模別の線引きガイド | 日本のテックニュース速報</title>
+    <meta name="description" content="SOLID、DRY、KISS、YAGNI——ソフトウェア設計の原則を学ぶと「全部守らないとダメなのか？」という疑問にぶつかる。 正直に書くと、私は小さなWinFormsツール（1画面、1機能）にDIコンテナとインターフェース分離を入れて、「なんでこんなに面倒なんだ」と思ったことがある">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか">
-    <meta property="og:description" content="大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います">
+    <meta property="og:title" content="C#で設計原則をどこまで適用するか — 規模別の線引きガイド">
+    <meta property="og:description" content="SOLID、DRY、KISS、YAGNI——ソフトウェア設計の原則を学ぶと「全部守らないとダメなのか？」という疑問にぶつかる。 正直に書くと、私は小さなWinFormsツール（1画面、1機能）にDIコンテナとインターフェース分離を入れて、「なんでこんなに面倒なんだ」と思ったことがある">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3436.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか">
-    <meta name="twitter:description" content="大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います">
+    <meta name="twitter:title" content="C#で設計原則をどこまで適用するか — 規模別の線引きガイド">
+    <meta name="twitter:description" content="SOLID、DRY、KISS、YAGNI——ソフトウェア設計の原則を学ぶと「全部守らないとダメなのか？」という疑問にぶつかる。 正直に書くと、私は小さなWinFormsツール（1画面、1機能）にDIコンテナとインターフェース分離を入れて、「なんでこんなに面倒なんだ」と思ったことがある">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3436.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか",
-        "description": "大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について どのくらいの精度が期待できるのか？ どのくらい再現性があるのか？ という話題を扱います",
+        "headline": "C#で設計原則をどこまで適用するか — 規模別の線引きガイド",
+        "description": "SOLID、DRY、KISS、YAGNI——ソフトウェア設計の原則を学ぶと「全部守らないとダメなのか？」という疑問にぶつかる。 正直に書くと、私は小さなWinFormsツール（1画面、1機能）にDIコンテナとインターフェース分離を入れて、「なんでこんなに面倒なんだ」と思ったことがある",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-12-20T04:18:33",
-        "dateModified": "2025-12-24T12:44:35.083532",
+        "datePublished": "2026-04-03T13:06:05",
+        "dateModified": "2026-04-05T05:46:39.210536",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3436.html"
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか",
+                "name": "C#で設計原則をどこまで適用するか — 規模別の線引きガイド",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3436.html"
             }
         ]
@@ -114,40 +114,37 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか</li>
+                <li aria-current="page">C#で設計原則をどこまで適用するか — 規模別の線引きガイド</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>標準ライブラリーが提供する数学関数はどのくらい正確か、あるいはどの程度環境依存するのか</h1>
+                <h1>C#で設計原則をどこまで適用するか — 規模別の線引きガイド</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/mod_poppo/articles/libm-precision" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/jodycraft/articles/csharp-design-principles-scale-guide" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2025-12-20T04:18:33">
-                        公開: 2025-12-20T04:18:33
+                    <time datetime="2026-04-03T13:06:05">
+                        公開: 2026-04-03T13:06:05
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    大抵のプログラミング言語では、数の四則演算だけではなく、exp や sin や pow などの数学関数が提供されています。この記事では、これらの数学関数について
+                    SOLID、DRY、KISS、YAGNI——ソフトウェア設計の原則を学ぶと「全部守らないとダメなのか？」という疑問にぶつかる。
+正直に書くと、私は小さなWinFormsツール（1画面、1機能）にDIコンテナとインターフェース分離を入れて、「なんでこんなに面倒なんだ」と思ったことがある。3ファイルで済むはずのツールが15ファイルに膨れ上がった。
+設計原則は「常に全部適用する」ものではない。プロジェクトの規模によって、どこまで適用するかの線引きが必要。この記事では、C#プロジェクトを3段階の規模に分けて、各設計原則の適用基準を整理する。
 
-どのくらいの精度が期待できるのか？
-どのくらい再現性があるのか？
-
-という話題を扱います。
-
- 正確な計算は難しい
-無限大やNaNを除く有限の浮動小数点数は、数学的な実数を表していると考えられます。例えば、1.5 という浮動小数点数なら1.5という実数に対応します。ソースに 0.1 と書いた浮動小数点数が数学的には 0.100000000000000005551115123125782702118158340454101562...
+ まず4つの原則をおさらい
+知っている人は読み飛ばし...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/mod_poppo/articles/libm-precision" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/jodycraft/articles/csharp-design-principles-scale-guide" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -214,16 +211,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_6043.html">
+                    <a href="Qiita_-_人気の記事_9723.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">X、プレミアム加入ユーザーは回避した広告の数などのレポートを閲覧可能に</span>
+                        <span class="nav-title">Axiosサプライチェーン攻撃の手口をPostmortemで読んだら、まるでルパン三世だった</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_9442.html">
+                    <a href="Zennのトレンド_5155.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">A20/A20 Proに先行〜Exynos 2600は2nmプロセスで製造と報道</span>
+                        <span class="nav-title">AIクローラーにだけ課金する。Hono + x402で実現するCloudflare Workers上...</span>
                     </a>
                 </div>
             </div>
@@ -236,53 +233,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2848.html">
-                        <h3>学校で学ぶC言語と実務で求められるC言語</h3>
+                    <a href="気になる記になる_8783.html">
+                        <h3>X、投稿内の複数の画像や動画の表示方法をThreadsと同じカルーセル方式に変更か</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">Xが投稿内で画像や動画のメディアコンテンツを表示する方法を再設計し、Threads風に変更する予定であることが分かりました。 これはリバースエンジニアのAaron氏が発見したもので、投稿内に表示される...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_3893.html">
+                        <h3>制度の穴が社会を揺らすとき ― 少数の影響が拡大する構造と持続可能な再設計 : Pythonで学ぶ マクロ経済学入門 (...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに 私は高専卒エンジニアの新人です。 高専でC言語を体系的に学び、文法やメモリの基礎、構造体やポインタについては一通り理解しているつもりで入社しました。 そのため、 「C言語はもう基礎固まってい...</p>
+                        <p class="related-summary">user: 「Pythonで学ぶマクロ経済学入門」、第68回を始めましょう。まず 「人口減少でも成長できる国へ ― 移民依存と人材投資をどう設計するか : Pythonで学ぶ マクロ経済学入門 (67...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7993.html">
-                        <h3>Flutterにおける非同期処理のレースコンディションとその対策</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに メリークリスマス！🎅 皆さんは、アプリ開発中に「自分の端末では正常に動くのに、別の端末では動作がおかしい」という不思議な体験をしたことはありませんか？ 開発中は自分のエミュレータで動作確認を...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1199.html">
-                        <h3>【脱・天気の話】人事が教える、面接・1on1で「沈黙が怖くなくなる」アイスブレイク術</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">こんにちは。システムアイ人事担当の @ryoTSSです。 普段、私たち人事は多くのエンジニアの方と面談や1on1でお話しさせていただくのですが、実はこんな「あるある」に直面することがあります。 自分：...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7798.html">
-                        <h3>【配属2ヶ月】エンジニアとして働いて感じた事</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">■はじめに 皆様お疲れ様です！ 新卒として会社に入社してから8か月が立ってしまいました。自社勤務や配属先で業務に携わる中で色々と難しい事や大変だな等、色々と考えることがありました。 今回の記事では、配...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_5495.html">
-                        <h3>CTOをやめようと思っている話✨</h3>
+                    <a href="Zennのトレンド_5746.html">
+                        <h3>GitHub Copilot CLI の /fleet が面白い</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">CTOをやめようと思う ただし、今すぐではないです。これを見た社員や投資家の方は、びっくりしないでくださいね。 これは辞めます宣言ではなくて、この1年のMOSHの成長と、プロダクトづくりを取り巻く環境...</p>
+                        <p class="related-summary">はじめに GitHub Copilot CLI の /fleetがおもしろいです． 名前だけ見ると「並列で動くモードなんだな」ぐらいですが， 実際に触ってみると，効くかどうかは prompt の切り方...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_7936.html">
+                        <h3>WinUI 3 の悪いところ</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに WinUI 3 には明確な利点があり、現在筆者は主に WinUI 3 で開発しています。 しかし一方で悪いところ（デメリット）も多々あり、WinUI 3 での開発はイライラがつのることもまた...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_2526.html">
+                        <h3>図面解析におけるマルチモーダル Graph RAG の有効性検証とデモアプリ開発</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに 初めまして。株式会社エクサウィザーズの先端技術開発グループ（WAND）でインターンをしている宇野宏紀です。本記事では、冬インターン期間中に取り組んだマルチモーダル Graph RAG の実証...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kubernetes Deep Dive (etcd + Raft) | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに TRIAL＆RetailAI Advent Calendar 2025の1日目の記事になります。 本日のテーマは&#34;kubernetes Deep Dive (etcd + Raft)&#34;です。私はいつも開発でkubernetes（k8s）を使っています。より深くk.">
-    <meta name="keywords" content="AI,Kubernetes,本">
+    <title>Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する | 日本のテックニュース速報</title>
+    <meta name="description" content="前回の記事では、useEffect の正しい使い方について整理しました。 今回は反対に、「そもそもuseEffectを使わなくてよいパターン」 を整理します。 React公式ドキュメントでは、こうした「useEffectを使わなくてよいパターン」が明確に整理されています。.">
+    <meta name="keywords" content="React">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="kubernetes Deep Dive (etcd + Raft)">
-    <meta property="og:description" content="はじめに TRIAL＆RetailAI Advent Calendar 2025の1日目の記事になります。 本日のテーマは&#34;kubernetes Deep Dive (etcd + Raft)&#34;です。私はいつも開発でkubernetes（k8s）を使っています。より深くk.">
+    <meta property="og:title" content="Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する">
+    <meta property="og:description" content="前回の記事では、useEffect の正しい使い方について整理しました。 今回は反対に、「そもそもuseEffectを使わなくてよいパターン」 を整理します。 React公式ドキュメントでは、こうした「useEffectを使わなくてよいパターン」が明確に整理されています。.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3915.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="kubernetes Deep Dive (etcd + Raft)">
-    <meta name="twitter:description" content="はじめに TRIAL＆RetailAI Advent Calendar 2025の1日目の記事になります。 本日のテーマは&#34;kubernetes Deep Dive (etcd + Raft)&#34;です。私はいつも開発でkubernetes（k8s）を使っています。より深くk.">
+    <meta name="twitter:title" content="Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する">
+    <meta name="twitter:description" content="前回の記事では、useEffect の正しい使い方について整理しました。 今回は反対に、「そもそもuseEffectを使わなくてよいパターン」 を整理します。 React公式ドキュメントでは、こうした「useEffectを使わなくてよいパターン」が明確に整理されています。.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "kubernetes Deep Dive (etcd + Raft)",
-        "description": "はじめに TRIAL＆RetailAI Advent Calendar 2025の1日目の記事になります。 本日のテーマは&#34;kubernetes Deep Dive (etcd + Raft)&#34;です。私はいつも開発でkubernetes（k8s）を使っています。より深くk.",
+        "headline": "Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する",
+        "description": "前回の記事では、useEffect の正しい使い方について整理しました。 今回は反対に、「そもそもuseEffectを使わなくてよいパターン」 を整理します。 React公式ドキュメントでは、こうした「useEffectを使わなくてよいパターン」が明確に整理されています。.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-30T22:07:21",
-        "dateModified": "2025-12-01T22:20:00.733483",
+        "datePublished": "2026-04-06T09:38:43",
+        "dateModified": "2026-04-06T22:38:58.900443",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3915.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3915.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Kubernetes","本"]
+        "articleSection": "テクノロジー",
+        "keywords": ["React"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "kubernetes Deep Dive (etcd + Raft)",
+                "name": "Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3915.html"
             }
         ]
@@ -113,40 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">kubernetes Deep Dive (etcd + Raft)</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>kubernetes Deep Dive (etcd + Raft)</h1>
+                <h1>Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/Plath/items/6a07fbbda5b443b4079a?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2025-11-30T22:07:21">
-                        公開: 2025-11-30T22:07:21
+                    <span class="source">出典: <a href="https://qiita.com/ryo_sh/items/537094e2ad68f9275710?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-04-06T09:38:43">
+                        公開: 2026-04-06T09:38:43
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Kubernetes</span>
-                    <span class="tag">本</span>
+                    <span class="tag">React</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-TRIAL＆RetailAI Advent Calendar 2025の1日目の記事になります。
-本日のテーマは"kubernetes Deep Dive (etcd + Raft)"です。私はいつも開発でkubernetes（k8s）を使っています。より深くk...
+                    前回の記事では、useEffect の正しい使い方について整理しました。
+今回は反対に、「そもそもuseEffectを使わなくてよいパターン」 を整理します。
+React公式ドキュメントでは、こうした「useEffectを使わなくてよいパターン」が明確に整理されています。
+...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/Plath/items/6a07fbbda5b443b4079a?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/ryo_sh/items/537094e2ad68f9275710?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,30 +158,10 @@ TRIAL＆RetailAI Advent Calendar 2025の1日目の記事になります。
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Kubernetes&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Kubernetes - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Kubernetes - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでKubernetesに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -192,23 +171,23 @@ TRIAL＆RetailAI Advent Calendar 2025の1日目の記事になります。
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +202,16 @@ TRIAL＆RetailAI Advent Calendar 2025の1日目の記事になります。
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_3308.html">
+                    <a href="ASCII_jp__トップ_7186.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【現場で使える】Linuxコマンド早見表</span>
+                        <span class="nav-title">『地球防衛軍６』の全世界隊員数が100万人を突破！</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_4641.html">
+                    <a href="ASCII_jp__トップ_5739.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">文系未経験がLinuCレベル1を3か月で取得した話</span>
+                        <span class="nav-title">【川奈ホテル・ホテルゴルフコース】絶景トーナメントコースをカート周遊＆プチゴルフ体験</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +224,53 @@ TRIAL＆RetailAI Advent Calendar 2025の1日目の記事になります。
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6356.html">
-                        <h3>ついに「AirTag悪用」が法規制へ　これまでストーカー規制の対象外だったワケ</h3>
+                    <a href="CNET_Japan_最新情報総合_5218.html">
+                        <h3>打ち上げ成功も「宇宙でトイレ故障」--月へ飛行中のアルテミスII乗組員、自力で修理</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AirTag悪用ストーカー問題を受け、政府がストーカー規制法とDV防止法の改正案を決定。規制強化の内容と被害の実態、守るための対策を分かりやすく紹介。.</p>
+                        <p class="related-summary">宇宙船でトイレが使えない――そんな切実なトラブルに見舞われたArtemis II（アルテミスII）の乗組員が、地上管制の支援を受けながらオリオン宇宙船のトイレを復旧させた。華やかな宇宙飛行の裏で、生活...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1667.html">
-                        <h3>「Sora」「Nano Banana Pro」の回数制限が強化--「GPUが悲鳴」と提供元</h3>
+                    <a href="CNET_Japan_最新情報総合_5218.html">
+                        <h3>米アマゾン、物流手数料に3.5%の上乗せ　燃料費高騰で</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIとGoogleが、最新のメディア生成サービスで無料ユーザーの動画・画像生成の回数制限を引き上げた。.</p>
+                        <p class="related-summary">アマゾンは、北米のサードパーティー販売業者に課すフルフィルメント手数料に、3. 5%の燃料・物流関連のサーチャージを追加する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7979.html">
-                        <h3>OpenAI、ChatGPTで「広告」表示へ？ アプリベータ版に記述発見</h3>
+                    <a href="CNET_Japan_最新情報総合_5156.html">
+                        <h3>193歳の最高齢カメ「ジョナサン」、訃報はデマ　仮想通貨詐欺の疑いも</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIが近く「ChatGPT」に広告を導入する可能性がある。.</p>
+                        <p class="related-summary">世界で最高齢の陸生動物とされる193歳のカメ「ジョナサン」は健在だ。おそらく詐欺を目的とする偽のSNS投稿と、それに基づく死亡報道が相次いだが、事実は異なる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4879.html">
-                        <h3>ARグラス単体で映像を3D化する「XREAL 1S」発表、6万7980円で1月下旬発売</h3>
+                    <a href="CNET_Japan_最新情報総合_2762.html">
+                        <h3>「地球ってこんなに美しい」--アルテミスII飛行士が月への旅路で写した「息をのむ我が星」</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">手頃な価格でAR体験が身近に。XREALが発表した6万円台の新型ARグラス「XREAL 1S」は、AI搭載チップで2D映像を3D変換し、頭を動かしても画面が空間に固定される快適な視聴体験を実現する。.</p>
+                        <p class="related-summary">NASAが月への飛行中に撮影された地球の写真を公開。投稿では「これが私たちの星だ」と紹介した──。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7790.html">
-                        <h3>自社独自のレガシーシステムの移行・マイグレーションが容易に　AWS Transformが強化</h3>
+                    <a href="CNET_Japan_最新情報総合_2191.html">
+                        <h3>ハイセンスが投入した「アートテレビ」とは何か　先行するサムスン製と比較</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">2025年12月1日、Amazon Web Servicesは、レガシーシステムの移行とモダナイゼーションをAIエージェントで効率化する「AWS Transform」を強化。新たに「AWS Trans...</p>
+                        <p class="related-summary">ハイセンスの「S7 Canvas TV」は、サムスンの「The Frame」に近い体験を、より手ごろな価格で実現する“アートテレビ”だ。.</p>
                     </a>
                 </article>
             </div>

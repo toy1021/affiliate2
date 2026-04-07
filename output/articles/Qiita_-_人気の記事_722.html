@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ローカルLLMの脆弱性があるんか？〜CVE-2024-50050から学ぶ「自分だけで使ってるから安全」の落とし穴〜 | 日本のテックニュース速報</title>
-    <meta name="description" content="この記事の対象読者 OllamaやLM StudioでローカルLLMを動かしている方 「ローカルで動かしてるから脆弱性は関係ないでしょ？」と思っている方 セキュリティ対策が必要かどうか判断したいエンジニアの方 この記事で得られること ローカルLLM基盤を狙う主.">
-    <meta name="keywords" content="LLM">
+    <title>動かして検証する新世代ローカルLLM対決 on Windows　1Bit LLM Bonsai-8b vs Gemma4 | 日本のテックニュース速報</title>
+    <meta name="description" content="TL;DR Gemma4は実用レベルの良好な出力を誇り、本格的なローカル運用が期待できる Bonsai-8Bはメモリ利用の少なさとクイックレスポンスに強みがある、精度は今後に期待 はじめに LLMの世界はフロンティアモデルの進化が著しいですが、オープンLLMのニュー.">
+    <meta name="keywords" content="AI,LLM,Windows,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ローカルLLMの脆弱性があるんか？〜CVE-2024-50050から学ぶ「自分だけで使ってるから安全」の落とし穴〜">
-    <meta property="og:description" content="この記事の対象読者 OllamaやLM StudioでローカルLLMを動かしている方 「ローカルで動かしてるから脆弱性は関係ないでしょ？」と思っている方 セキュリティ対策が必要かどうか判断したいエンジニアの方 この記事で得られること ローカルLLM基盤を狙う主.">
+    <meta property="og:title" content="動かして検証する新世代ローカルLLM対決 on Windows　1Bit LLM Bonsai-8b vs Gemma4">
+    <meta property="og:description" content="TL;DR Gemma4は実用レベルの良好な出力を誇り、本格的なローカル運用が期待できる Bonsai-8Bはメモリ利用の少なさとクイックレスポンスに強みがある、精度は今後に期待 はじめに LLMの世界はフロンティアモデルの進化が著しいですが、オープンLLMのニュー.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_722.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ローカルLLMの脆弱性があるんか？〜CVE-2024-50050から学ぶ「自分だけで使ってるから安全」の落とし穴〜">
-    <meta name="twitter:description" content="この記事の対象読者 OllamaやLM StudioでローカルLLMを動かしている方 「ローカルで動かしてるから脆弱性は関係ないでしょ？」と思っている方 セキュリティ対策が必要かどうか判断したいエンジニアの方 この記事で得られること ローカルLLM基盤を狙う主.">
+    <meta name="twitter:title" content="動かして検証する新世代ローカルLLM対決 on Windows　1Bit LLM Bonsai-8b vs Gemma4">
+    <meta name="twitter:description" content="TL;DR Gemma4は実用レベルの良好な出力を誇り、本格的なローカル運用が期待できる Bonsai-8Bはメモリ利用の少なさとクイックレスポンスに強みがある、精度は今後に期待 はじめに LLMの世界はフロンティアモデルの進化が著しいですが、オープンLLMのニュー.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ローカルLLMの脆弱性があるんか？〜CVE-2024-50050から学ぶ「自分だけで使ってるから安全」の落とし穴〜",
-        "description": "この記事の対象読者 OllamaやLM StudioでローカルLLMを動かしている方 「ローカルで動かしてるから脆弱性は関係ないでしょ？」と思っている方 セキュリティ対策が必要かどうか判断したいエンジニアの方 この記事で得られること ローカルLLM基盤を狙う主.",
+        "headline": "動かして検証する新世代ローカルLLM対決 on Windows　1Bit LLM Bonsai-8b vs Gemma4",
+        "description": "TL;DR Gemma4は実用レベルの良好な出力を誇り、本格的なローカル運用が期待できる Bonsai-8Bはメモリ利用の少なさとクイックレスポンスに強みがある、精度は今後に期待 はじめに LLMの世界はフロンティアモデルの進化が著しいですが、オープンLLMのニュー.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-26T00:52:17",
-        "dateModified": "2026-02-28T03:57:29.833951",
+        "datePublished": "2026-04-06T17:32:27",
+        "dateModified": "2026-04-07T22:40:14.183331",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_722.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_722.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["LLM"]
+        "keywords": ["AI","LLM","Windows","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ローカルLLMの脆弱性があるんか？〜CVE-2024-50050から学ぶ「自分だけで使ってるから安全」の落とし穴〜",
+                "name": "動かして検証する新世代ローカルLLM対決 on Windows　1Bit LLM Bonsai-8b vs Gemma4",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_722.html"
             }
         ]
@@ -114,43 +114,44 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">ローカルLLMの脆弱性があるんか？〜CVE-2024-50050から学ぶ「自分だけで使ってるから安全...</li>
+                <li aria-current="page">動かして検証する新世代ローカルLLM対決 on Windows　1Bit LLM Bonsai-8b...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ローカルLLMの脆弱性があるんか？〜CVE-2024-50050から学ぶ「自分だけで使ってるから安全」の落とし穴〜</h1>
+                <h1>動かして検証する新世代ローカルLLM対決 on Windows　1Bit LLM Bonsai-8b vs Gemma4</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/GeneLab_999/items/08873f6569a2b96a276c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/mi-ta/items/0ea828992c96075e9563?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-02-26T00:52:17">
-                        公開: 2026-02-26T00:52:17
+                    <time datetime="2026-04-06T17:32:27">
+                        公開: 2026-04-06T17:32:27
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">AI</span>
                     <span class="tag">LLM</span>
+                    <span class="tag">Windows</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事の対象読者
+                    TL;DR
 
-OllamaやLM StudioでローカルLLMを動かしている方
-「ローカルで動かしてるから脆弱性は関係ないでしょ？」と思っている方
-セキュリティ対策が必要かどうか判断したいエンジニアの方
+Gemma4は実用レベルの良好な出力を誇り、本格的なローカル運用が期待できる
+Bonsai-8Bはメモリ利用の少なさとクイックレスポンスに強みがある、精度は今後に期待
 
-この記事で得られること
-
-ローカルLLM基盤を狙う主...
+はじめに
+LLMの世界はフロンティアモデルの進化が著しいですが、オープンLLMのニュー...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/GeneLab_999/items/08873f6569a2b96a276c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/mi-ta/items/0ea828992c96075e9563?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,16 +163,6 @@ OllamaやLM StudioでローカルLLMを動かしている方
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -187,6 +178,16 @@ OllamaやLM StudioでローカルLLMを動かしている方
                                 <div class="product-info">
                                     <div class="product-title">機械学習 - Amazon検索結果</div>
                                     <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +228,16 @@ OllamaやLM StudioでローカルLLMを動かしている方
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5748.html">
+                    <a href="iPhone_Mania_4624.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Claude Code Remote Control は外部からローカルへの穴を開けるのか？通信を観...</span>
+                        <span class="nav-title">iPhone17eの「実質24円」を信じていいのか検証した</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5252.html">
+                    <a href="Publickey_4974.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">サムスン のぞき見防止スマホ発表</span>
+                        <span class="nav-title">AIコーディングエディタ「Cursor 3」リリース。AIエージェントを中心に新たに構築</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +250,53 @@ OllamaやLM StudioでローカルLLMを動かしている方
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1140.html">
-                        <h3>NTTドコモ、通信障害復旧にAIエージェント　対応時間を従来比50%削減へ</h3>
+                    <a href="CNET_Japan_最新情報総合_9139.html">
+                        <h3>OpenAIが人気トーク番組「TBPN」を買収　「編集の独立性」疑う声も</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NTTドコモは2月25日、生成AIを活用したモバイルネットワーク保守業務向けAIエージェントシステムを開発し、2月4日から商用利用を開始したと発表した。100万台以上のネットワーク装置から収集される世...</p>
+                        <p class="related-summary">OpenAIは、テクノロジーについて解説する人気番組を配信するTBPNの買収を発表した。これに対し「編集の独立性」を問う声も出ている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9538.html">
-                        <h3>グーグル、画像AI「Nano Banana 2」を公開　速さと精度の「いいとこ取り」</h3>
+                    <a href="CNET_Japan_最新情報総合_2930.html">
+                        <h3>生成AI利用率、ついに5割超え　15～69歳調査　もはや使っていない人が少数派</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">グーグルは、高い人気を誇る画像生成AIの次世代モデル「Nano Banana 2（Gemini 3. 1 Flash Image）」をリリースした。.</p>
+                        <p class="related-summary">NTTドコモ モバイル社会研究所は4月6日、生成AIの利用率が2026年2月時点で51％に達したとする調査結果を発表した。2025年2月時点の27％からほぼ倍増し、初めて過半数に乗った。全国の15歳～...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5022.html">
-                        <h3>AI投資の75％が「推論」に移る時代、レノボはどう備えるか</h3>
+                    <a href="CNET_Japan_最新情報総合_6996.html">
+                        <h3>「Claude」定額プラン、OpenClawなどを締め出し　今後は追加料金が発生</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AI市場の主戦場が「学習」から「推論」へ移る今、勝負を分けるのはインフラの守備範囲だ。レノボはPC、エッジ端末、水冷サーバーまで一貫して提供できる強みを武器に、推論時代のデファクトスタンダードを目指す...</p>
+                        <p class="related-summary">Anthropicは先週末、サードパーティの自律型AIエージェント「OpenClaw」などを動かすために「Claude」のAIモデルを多用するサブスクリプション加入者に対し、追加の支払いが必要になると...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7225.html">
-                        <h3>バーガーキング、従業員向けAIアシスタント導入へ　接客マナーも監視</h3>
+                    <a href="CNET_Japan_最新情報総合_7802.html">
+                        <h3>VAIOを買収したノジマ、店内に「VAIOに精通した店員」配置</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">バーガーキングは、一部の従業員が着けているヘッドセットにAIチャットボット「Patty」を導入する。.</p>
+                        <p class="related-summary">VAIOとノジマは4月7日、ノジマ全店舗でVAIO製品に関する知識とコンサルティング力を備えた販売員を認定する「VAIOマイスター制度」を4月から導入すると発表した。あわせて、Microsoft 36...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3368.html">
-                        <h3>エージェント型AIは「転換点」に--NVIDIAのジェンスン・フアンCEO</h3>
+                    <a href="ASCII_jp__トップ_3678.html">
+                        <h3>AIによる診療録作成支援サービス「medimo」、日本語・英語の混合会話に対応する多言語機能をリリース</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">NVIDIAのジェンスン・フアンCEOは、エージェント型AIが「転換点」に達していると語った。.</p>
+                        <p class="related-summary">株式会社medimoは、同社が提供するAIによる診療録作成支援サービス「medimo」において、日本語と英語が混在する会話の認識および要約に対応した多言語機能のリリースを発表した。.</p>
                     </a>
                 </article>
             </div>

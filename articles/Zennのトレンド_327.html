@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rust向けのECS駆動な双方向通信サーバーフレームワークをリリースしました | 日本のテックニュース速報</title>
-    <meta name="description" content="0をリリースしました。 作り始めた理由 もともとは大人数に耐えられるメタバースをいつか作りたいと思ったからです。 双方向通信に最適化されており、低レイテンシよりも「高負荷対応」「多クライアント対応」を求めるフレームワークが必要でした。 ECSによる恩恵 とにかくSoAにしたかったです">
-    <meta name="keywords" content="EV">
+    <title>脱CDKしてTerraformに移行すべきn個の理由(または私はなぜCDKをやめたか) | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは。常日頃からCDKに対してのアツい気持ちを抱いているSREの@okazu_dmです。 今回はCDKをやめてTerraformを使いましょう、という記事のタイトルですが、具体的には以下のような話をします">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Rust向けのECS駆動な双方向通信サーバーフレームワークをリリースしました">
-    <meta property="og:description" content="0をリリースしました。 作り始めた理由 もともとは大人数に耐えられるメタバースをいつか作りたいと思ったからです。 双方向通信に最適化されており、低レイテンシよりも「高負荷対応」「多クライアント対応」を求めるフレームワークが必要でした。 ECSによる恩恵 とにかくSoAにしたかったです">
+    <meta property="og:title" content="脱CDKしてTerraformに移行すべきn個の理由(または私はなぜCDKをやめたか)">
+    <meta property="og:description" content="こんにちは。常日頃からCDKに対してのアツい気持ちを抱いているSREの@okazu_dmです。 今回はCDKをやめてTerraformを使いましょう、という記事のタイトルですが、具体的には以下のような話をします">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_327.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rust向けのECS駆動な双方向通信サーバーフレームワークをリリースしました">
-    <meta name="twitter:description" content="0をリリースしました。 作り始めた理由 もともとは大人数に耐えられるメタバースをいつか作りたいと思ったからです。 双方向通信に最適化されており、低レイテンシよりも「高負荷対応」「多クライアント対応」を求めるフレームワークが必要でした。 ECSによる恩恵 とにかくSoAにしたかったです">
+    <meta name="twitter:title" content="脱CDKしてTerraformに移行すべきn個の理由(または私はなぜCDKをやめたか)">
+    <meta name="twitter:description" content="こんにちは。常日頃からCDKに対してのアツい気持ちを抱いているSREの@okazu_dmです。 今回はCDKをやめてTerraformを使いましょう、という記事のタイトルですが、具体的には以下のような話をします">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Rust向けのECS駆動な双方向通信サーバーフレームワークをリリースしました",
-        "description": "0をリリースしました。 作り始めた理由 もともとは大人数に耐えられるメタバースをいつか作りたいと思ったからです。 双方向通信に最適化されており、低レイテンシよりも「高負荷対応」「多クライアント対応」を求めるフレームワークが必要でした。 ECSによる恩恵 とにかくSoAにしたかったです",
+        "headline": "脱CDKしてTerraformに移行すべきn個の理由(または私はなぜCDKをやめたか)",
+        "description": "こんにちは。常日頃からCDKに対してのアツい気持ちを抱いているSREの@okazu_dmです。 今回はCDKをやめてTerraformを使いましょう、という記事のタイトルですが、具体的には以下のような話をします",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-05T02:56:52",
-        "dateModified": "2026-04-06T09:18:22.219983",
+        "datePublished": "2026-04-05T01:00:07",
+        "dateModified": "2026-04-07T07:20:03.807447",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_327.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_327.html",
-        "articleSection": "通信・ネットワーク",
-        "keywords": ["EV"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "通信・ネットワーク",
-                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Rust向けのECS駆動な双方向通信サーバーフレームワークをリリースしました",
+                "name": "脱CDKしてTerraformに移行すべきn個の理由(または私はなぜCDKをやめたか)",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_327.html"
             }
         ]
@@ -113,50 +113,45 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
-                <li aria-current="page">Rust向けのECS駆動な双方向通信サーバーフレームワークをリリースしました</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">脱CDKしてTerraformに移行すべきn個の理由(または私はなぜCDKをやめたか)</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Rust向けのECS駆動な双方向通信サーバーフレームワークをリリースしました</h1>
+                <h1>脱CDKしてTerraformに移行すべきn個の理由(または私はなぜCDKをやめたか)</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/hino_rs/articles/73f711641e34df" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: 通信・ネットワーク</span>
-                    <time datetime="2026-04-05T02:56:52">
-                        公開: 2026-04-05T02:56:52
+                    <span class="source">出典: <a href="https://zenn.dev/okazu_dm/articles/d35f863365cabf" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-04-05T01:00:07">
+                        公開: 2026-04-05T01:00:07
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Ecson
-Rust向けのECS駆動な双方向通信サーバーフレームワーク、Ecson（エクソン） を開発しています。先日v0.1.0をリリースしました。
+                    こんにちは。常日頃からCDKに対してのアツい気持ちを抱いているSREの@okazu_dmです。
+今回はCDKをやめてTerraformを使いましょう、という記事のタイトルですが、具体的には以下のような話をします。
 
+CDKとTerraformの性質の違い
+CDKで運用すると辛い点
+とはいえTerraformでも辛いケースはある
+移行判断の軸
 
- 作り始めた理由
-もともとは大人数に耐えられるメタバースをいつか作りたいと思ったからです。
-双方向通信に最適化されており、低レイテンシよりも「高負荷対応」「多クライアント対応」を求めるフレームワークが必要でした。
+ツール自体の比較よりは、運用のときに起きる困りごとや運用時に考えることの話をします。
 
- ECSによる恩恵
-とにかくSoAにしたかったです。
-もともとBevyでの開発をしたことがあるのもあって、ECSを採用してみました。
-SoAによる恩恵は当然ですが、ECSによる副産物も多かったです。
-
-
-Arc&lt;...
+ おことわり
+そもそもこの記事自体が大いにポジショントークなので、偏りがあることはご了承ください。
+それはそれとして、記事の誤りのご指摘やCDKのメリットについ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/hino_rs/articles/73f711641e34df" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/okazu_dm/articles/d35f863365cabf" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -165,24 +160,9 @@ Arc&lt;...
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>通信・ネットワーク関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -213,16 +193,16 @@ Arc&lt;...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_898.html">
+                    <a href="Zennのトレンド_7119.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【セキュリティ】JWTの署名を信頼していたら `alg: none` で管理者権限を奪取された話</span>
+                        <span class="nav-title">誰もがGitを触る時代に、やさしい入門サイトを作った</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_5361.html">
+                    <a href="気になる記になる_8860.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【セール】CIOの半固体系セル採用モバイルバッテリーなどが特価で販売中（4月10日まで）</span>
+                        <span class="nav-title">X、投稿内の複数の画像や動画の表示方法をThreadsと同じカルーセル方式に変更か</span>
                     </a>
                 </div>
             </div>
@@ -235,53 +215,53 @@ Arc&lt;...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2185.html">
-                        <h3>ドコモでシステム障害、解約やMNPなどが利用しづらく（復旧）</h3>
+                    <a href="CNET_Japan_最新情報総合_3967.html">
+                        <h3>193歳の最高齢カメ「ジョナサン」、訃報はデマ　仮想通貨詐欺の疑いも</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NTTドコモは4月3日、顧客システムの障害により、ドコモショップ店頭や「My docomo」「ahamo」などのWebサイト、コールセンターで各種手続きを受け付けにくい事象が発生していると発表した。発...</p>
+                        <p class="related-summary">世界で最高齢の陸生動物とされる193歳のカメ「ジョナサン」は健在だ。おそらく詐欺を目的とする偽のSNS投稿と、それに基づく死亡報道が相次いだが、事実は異なる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1015.html">
-                        <h3>テストケースレビューの手間を削減！MagicPod Autopilotを活用したメンテナンス性チェックの自動化</h3>
+                    <a href="CNET_Japan_最新情報総合_9762.html">
+                        <h3>「地球ってこんなに美しい」--アルテミスII飛行士が月への旅路で写した「息をのむ我が星」</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは、QAエンジニアのヨシナです。 弊社では自動リグレッションテストにMagicPodを使用しています。 テストの品質を維持するため、テストケースの作成・修正時には可読性とメンテナンス...</p>
+                        <p class="related-summary">NASAが月への飛行中に撮影された地球の写真を公開。投稿では「これが私たちの星だ」と紹介した──。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_5361.html">
-                        <h3>【セール】CIOの半固体系セル採用モバイルバッテリーなどが特価で販売中（4月10日まで）</h3>
+                    <a href="CNET_Japan_最新情報総合_6910.html">
+                        <h3>ハイセンスが投入した「アートテレビ」とは何か　先行するサムスン製と比較</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">楽天市場が昨日より各ショップで“買いまわり”するとポイントが最大11倍になる「お買い物マラソン」のキャンペーンを開催していますが、これに合わせて、CIOが対象製品を特価で販売するセールを開催しています...</p>
+                        <p class="related-summary">ハイセンスの「S7 Canvas TV」は、サムスンの「The Frame」に近い体験を、より手ごろな価格で実現する“アートテレビ”だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_9423.html">
-                        <h3>【セール】Ankerが｢楽天お買い物マラソン｣で対象製品を最大50%オフで販売するセールを開催中（4月10日まで）</h3>
+                    <a href="CNET_Japan_最新情報総合_492.html">
+                        <h3>マイクロソフト、PC起動時に「Edge」が開く機能をテストか　不評の懸念</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">楽天市場では昨日より各ショップで“買いまわり”するとポイントが最大11倍になる「お買い物マラソン」のキャンペーンが開催中ですが、これに合わせて、Ankerが対象製品を最大50％オフで販売するセールを開...</p>
+                        <p class="related-summary">「Microsoft Edge」ブラウザの最新ベータ版は、ユーザーの明示的な許可を得ることなく、「Windows 11」搭載PCを起動するたびに自動的に開く可能性があるという。Windows Cent...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_951.html">
-                        <h3>Insta360の新型360度アクションカメラ｢Insta360 X6｣の存在が確認される</h3>
+                    <a href="CNET_Japan_最新情報総合_6320.html">
+                        <h3>4月は2つの流星群に注目　こと座＆みずがめ座流星群はいつ見える？</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Insta360の360度アクションカメラの最新モデル「Insta360 X6」に関する情報が出て来ました。 これはイタリアのテックリーカーであるMauro Tandoi氏（@MauroTandoi）...</p>
+                        <p class="related-summary">4月に2つの流星群がやってくる。こと座流星群とみずがめ座η（エータ）流星群だ。.</p>
                     </a>
                 </article>
             </div>

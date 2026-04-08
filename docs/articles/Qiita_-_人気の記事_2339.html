@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHubを使ったClaude Codeのオーケストレーションツールを作っている | 日本のテックニュース速報</title>
-    <meta name="description" content="この記事は何 以前、Claude Codeへのタスク依頼やレビュー修正依頼をGitHub上で完結できるようにした「claude-task-worker」というツールについて記事を書きました。 この記事を書いた時点では、GitHub上のラベルをトリガーにしてIssue.">
-    <meta name="keywords" content="Claude,GitHub">
+    <title>React の state とは何かを改めて整理した | 日本のテックニュース速報</title>
+    <meta name="description" content="React を使ううえで、state はとても重要な概念です。 当たり前のように使っているからこそ、改めてここで整理しておこうと思います。 この記事では、state の基本的な役割、書き方、更新の流れ、使うときの注意点についてまとめます。 1.">
+    <meta name="keywords" content="React,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="GitHubを使ったClaude Codeのオーケストレーションツールを作っている">
-    <meta property="og:description" content="この記事は何 以前、Claude Codeへのタスク依頼やレビュー修正依頼をGitHub上で完結できるようにした「claude-task-worker」というツールについて記事を書きました。 この記事を書いた時点では、GitHub上のラベルをトリガーにしてIssue.">
+    <meta property="og:title" content="React の state とは何かを改めて整理した">
+    <meta property="og:description" content="React を使ううえで、state はとても重要な概念です。 当たり前のように使っているからこそ、改めてここで整理しておこうと思います。 この記事では、state の基本的な役割、書き方、更新の流れ、使うときの注意点についてまとめます。 1.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2339.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GitHubを使ったClaude Codeのオーケストレーションツールを作っている">
-    <meta name="twitter:description" content="この記事は何 以前、Claude Codeへのタスク依頼やレビュー修正依頼をGitHub上で完結できるようにした「claude-task-worker」というツールについて記事を書きました。 この記事を書いた時点では、GitHub上のラベルをトリガーにしてIssue.">
+    <meta name="twitter:title" content="React の state とは何かを改めて整理した">
+    <meta name="twitter:description" content="React を使ううえで、state はとても重要な概念です。 当たり前のように使っているからこそ、改めてここで整理しておこうと思います。 この記事では、state の基本的な役割、書き方、更新の流れ、使うときの注意点についてまとめます。 1.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "GitHubを使ったClaude Codeのオーケストレーションツールを作っている",
-        "description": "この記事は何 以前、Claude Codeへのタスク依頼やレビュー修正依頼をGitHub上で完結できるようにした「claude-task-worker」というツールについて記事を書きました。 この記事を書いた時点では、GitHub上のラベルをトリガーにしてIssue.",
+        "headline": "React の state とは何かを改めて整理した",
+        "description": "React を使ううえで、state はとても重要な概念です。 当たり前のように使っているからこそ、改めてここで整理しておこうと思います。 この記事では、state の基本的な役割、書き方、更新の流れ、使うときの注意点についてまとめます。 1.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-29T13:30:35",
-        "dateModified": "2026-03-30T20:46:32.491399",
+        "datePublished": "2026-04-07T09:43:47",
+        "dateModified": "2026-04-08T02:31:25.802739",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2339.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2339.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Claude","GitHub"]
+        "articleSection": "その他",
+        "keywords": ["React","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "GitHubを使ったClaude Codeのオーケストレーションツールを作っている",
+                "name": "React の state とは何かを改めて整理した",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2339.html"
             }
         ]
@@ -113,40 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">GitHubを使ったClaude Codeのオーケストレーションツールを作っている</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">React の state とは何かを改めて整理した</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>GitHubを使ったClaude Codeのオーケストレーションツールを作っている</h1>
+                <h1>React の state とは何かを改めて整理した</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/getty104/items/6a0c87ba3eeba999e673?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-03-29T13:30:35">
-                        公開: 2026-03-29T13:30:35
+                    <span class="source">出典: <a href="https://qiita.com/ryo_sh/items/ef1af33a71b1e4ead816?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-04-07T09:43:47">
+                        公開: 2026-04-07T09:43:47
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">React</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事は何
-以前、Claude Codeへのタスク依頼やレビュー修正依頼をGitHub上で完結できるようにした「claude-task-worker」というツールについて記事を書きました。
+                    React を使ううえで、state はとても重要な概念です。
+当たり前のように使っているからこそ、改めてここで整理しておこうと思います。
+この記事では、state の基本的な役割、書き方、更新の流れ、使うときの注意点についてまとめます。
 
-この記事を書いた時点では、GitHub上のラベルをトリガーにしてIssue...
+1. state とは
+stat...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/getty104/items/6a0c87ba3eeba999e673?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/ryo_sh/items/ef1af33a71b1e4ead816?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,30 +161,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -192,23 +184,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +215,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3186.html">
+                    <a href="Qiita_-_人気の記事_9870.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">React やだ 2026</span>
+                        <span class="nav-title">マルチベンダー開発でAPIの管理責任の所在が曖昧になってしまった話</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_2743.html">
+                    <a href="Qiita_-_人気の記事_4558.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AIネイティブな時代への準備</span>
+                        <span class="nav-title">Java Stream APIをfor文と比較【初心者向け】</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +237,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9193.html">
-                        <h3>OKIと日立、ATM事業を統合　キャッシュレス化でも持続可能な事業成長めざす</h3>
+                    <a href="CNET_Japan_最新情報総合_5858.html">
+                        <h3>現金NGの「完全キャッシュレス化」で店の利益は増える？減る？　調査結果</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OKIと日立製作所、日立チャネルソリューションズは3月26日、ATMを含む自動化機器事業の統合に向けた契約と、合弁会社に関する株主間契約の締結で合意したと発表した。OKIがATMを含む自動化機器の開発...</p>
+                        <p class="related-summary">日本クレジットカード協会（JCCA）は4月6日、現金を一切扱わない「全面的キャッシュレス」の導入効果に関する調査結果を公表した。未導入加盟店へのアンケートを基に試算した結果、一定の条件では営業利益率の...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6584.html">
-                        <h3>「0.05度C以下の温度差」を鮮明に捉えるカメラセンサー、富士通が開発　防衛監視に活用</h3>
+                    <a href="CNET_Japan_最新情報総合_8828.html">
+                        <h3>アルテミス2飛行士、ヒト史上「地球から最も遠い場所」に到達　朝8時ごろ月へ最接近</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">富士通は3月27日、防衛・防災分野の監視能力を高める高感度・高精細な2波長赤外線センサーを開発したと発表した。防衛装備庁の「広帯域・高感度赤外線検知器の研究試作」を受注して開発したもので、試作品はすで...</p>
+                        <p class="related-summary">米航空宇宙局（NASA）の有人月探査ミッション「Artemis II」は日本時間4月7日午前8時2分ごろに月へ最接近する。それに先駆けて、午前2時50分すぎに、地球からの距離が約40万kmを超え、地球...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_700.html">
-                        <h3>Pythonで実装して理解する RDBパフォーマンスチューニング入門 ─ フルスキャンとインデックスの仕組み</h3>
+                    <a href="CNET_Japan_最新情報総合_8289.html">
+                        <h3>【画像】約50年ぶりの有人月周回、クルーが撮影した「月面」「地球の入り」公開　アルテミス2</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">株式会社ブレインパッドプロダクトユニットでRtoaster GenAIの開発をしている依田です。 今回はRDB（リレーショナルデータベース）のパフォーマンスチューニングの基礎として、インデックスの仕組...</p>
+                        <p class="related-summary">米航空宇宙局（NASA）は日本時間4月7日午前、有人月フライバイミッション「アルテミスII」で月フライバイを実施した。NASAによると、有人による月フライバイはアポロ17号以来、50年以上ぶり。クルー...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_6257.html">
-                        <h3>定常業務を自動操縦にする — Claude Code スケジューラーの育て方</h3>
+                    <a href="ASCII_jp__トップ_7493.html">
+                        <h3>【本日】マクドナルド「ベーコンポテトパイ」復活！さくら舞い散る中</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに クラシルで開発マネージャーをしているfunzinです。 本記事では、Claude Codeのスケジューラー機能を使って定常業務を自動化し、タスクを覚えておくストレスをゼロに近づける運用フロー...</p>
+                        <p class="related-summary">マクドナルドは4月8日から、人気サイドメニュー「ベーコンポテトパイ」を期間限定で発売。サクサクのパイにポテトやベーコンを詰めた定番商品で、今年も復活。待ってました！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_5206.html">
-                        <h3>よう若いの。Linuxってのはだな。</h3>
+                    <a href="ASCII_jp__トップ_3575.html">
+                        <h3>シャイな日本人のための、等身大でズルいプロポーズ。よい夫婦の日からシカケテガミ「サプライズエディション」が数量限定販売。</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">どうしたんですか 例えば20代の若者、アプリケーションエンジニアをしている若者に対して。 飲み会でLinuxってのは本当にいいんだよ。俺の話を聞けよ。って30分くらいLinuxの説明をできたらいいな、...</p>
+                        <p class="related-summary">シャイな日本人のための、等身大でズルいプロポーズ。よい夫婦の日からシカケテガミ「サプライズエディション」が数量限定販売。.</p>
                     </a>
                 </article>
             </div>

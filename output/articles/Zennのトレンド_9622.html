@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>冪等（べきとう）性という名の技術的負債 ── AIコーディングで陥った「エラー隠蔽」の罠 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに AIコーディングアシスタントと開発していて、ある落とし穴に気づいた。 エラーが発生したとき、AIはエラーを「抑え込んで」処理を継続させる方向で対応する。 その対応に「冪等性の確保」という名前がつくと、正しい設計判断に見えてしまう。しかし実際には、真の問題を隠蔽していただけだった">
-    <meta name="keywords" content="AI,本">
+    <title>全PRの83%をAIレビューだけでマージできるようにした | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに カウシェでは、PRの83%が人間のコードレビューを経ずに自動でマージされています。 GitHub Actions上で動くAIレビュー（Claude Code Action）がPRを自動でApproveし、CIが通ればそのまま自動マージされる仕組みです">
+    <meta name="keywords" content="AI,Claude,GitHub,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="冪等（べきとう）性という名の技術的負債 ── AIコーディングで陥った「エラー隠蔽」の罠">
-    <meta property="og:description" content="はじめに AIコーディングアシスタントと開発していて、ある落とし穴に気づいた。 エラーが発生したとき、AIはエラーを「抑え込んで」処理を継続させる方向で対応する。 その対応に「冪等性の確保」という名前がつくと、正しい設計判断に見えてしまう。しかし実際には、真の問題を隠蔽していただけだった">
+    <meta property="og:title" content="全PRの83%をAIレビューだけでマージできるようにした">
+    <meta property="og:description" content="はじめに カウシェでは、PRの83%が人間のコードレビューを経ずに自動でマージされています。 GitHub Actions上で動くAIレビュー（Claude Code Action）がPRを自動でApproveし、CIが通ればそのまま自動マージされる仕組みです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9622.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="冪等（べきとう）性という名の技術的負債 ── AIコーディングで陥った「エラー隠蔽」の罠">
-    <meta name="twitter:description" content="はじめに AIコーディングアシスタントと開発していて、ある落とし穴に気づいた。 エラーが発生したとき、AIはエラーを「抑え込んで」処理を継続させる方向で対応する。 その対応に「冪等性の確保」という名前がつくと、正しい設計判断に見えてしまう。しかし実際には、真の問題を隠蔽していただけだった">
+    <meta name="twitter:title" content="全PRの83%をAIレビューだけでマージできるようにした">
+    <meta name="twitter:description" content="はじめに カウシェでは、PRの83%が人間のコードレビューを経ずに自動でマージされています。 GitHub Actions上で動くAIレビュー（Claude Code Action）がPRを自動でApproveし、CIが通ればそのまま自動マージされる仕組みです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "冪等（べきとう）性という名の技術的負債 ── AIコーディングで陥った「エラー隠蔽」の罠",
-        "description": "はじめに AIコーディングアシスタントと開発していて、ある落とし穴に気づいた。 エラーが発生したとき、AIはエラーを「抑え込んで」処理を継続させる方向で対応する。 その対応に「冪等性の確保」という名前がつくと、正しい設計判断に見えてしまう。しかし実際には、真の問題を隠蔽していただけだった",
+        "headline": "全PRの83%をAIレビューだけでマージできるようにした",
+        "description": "はじめに カウシェでは、PRの83%が人間のコードレビューを経ずに自動でマージされています。 GitHub Actions上で動くAIレビュー（Claude Code Action）がPRを自動でApproveし、CIが通ればそのまま自動マージされる仕組みです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-28T06:00:40",
-        "dateModified": "2026-03-02T05:16:38.669181",
+        "datePublished": "2026-04-07T01:33:39",
+        "dateModified": "2026-04-09T07:25:17.482769",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9622.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9622.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","本"]
+        "keywords": ["AI","Claude","GitHub","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "冪等（べきとう）性という名の技術的負債 ── AIコーディングで陥った「エラー隠蔽」の罠",
+                "name": "全PRの83%をAIレビューだけでマージできるようにした",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9622.html"
             }
         ]
@@ -114,24 +114,26 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">冪等（べきとう）性という名の技術的負債 ── AIコーディングで陥った「エラー隠蔽」の罠</li>
+                <li aria-current="page">全PRの83%をAIレビューだけでマージできるようにした</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>冪等（べきとう）性という名の技術的負債 ── AIコーディングで陥った「エラー隠蔽」の罠</h1>
+                <h1>全PRの83%をAIレビューだけでマージできるようにした</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/heybombon/articles/be7b28840cd580" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/kauche/articles/e051583461c181" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-02-28T06:00:40">
-                        公開: 2026-02-28T06:00:40
+                    <time datetime="2026-04-07T01:33:39">
+                        公開: 2026-04-07T01:33:39
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">GitHub</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -140,17 +142,17 @@
                 
                 <div class="article-body">
                     はじめに
-AIコーディングアシスタントと開発していて、ある落とし穴に気づいた。
-エラーが発生したとき、AIはエラーを「抑え込んで」処理を継続させる方向で対応する。 その対応に「冪等性の確保」という名前がつくと、正しい設計判断に見えてしまう。しかし実際には、真の問題を隠蔽していただけだった。
-この記事では、Flutter アプリ開発で実際に体験した「冪等性の罠」を通じて、エラー対応の本質について考える。
+カウシェでは、PRの83%が人間のコードレビューを経ずに自動でマージされています。
+GitHub Actions上で動くAIレビュー（Claude Code Action）がPRを自動でApproveし、CIが通ればそのまま自動マージされる仕組みです。
+本記事では、レビュールールを毎晩自動改善する仕組みを作ることで、自分たちの運用で許容できるレベルまでAIレビューの精度を引き上げた話を書きます。
 
- 冪等性とは
-冪等性（idempotency）とは、ある操作を何度実行しても1回実行したときと同じ結果になる性質。
-APIでいえば、同じリクエストを2回送っても1回送ったときと同じ結...
+ これが成り立つ前提
+カウシェはtoCのECプラットフォームで、バックエンド・フロントエンド・モバイルを1つのモノレポで開発しています。
+決済や認証など不可逆な領域は人間がレビュ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/heybombon/articles/be7b28840cd580" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/kauche/articles/e051583461c181" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -183,10 +185,10 @@ APIでいえば、同じリクエストを2回送っても1回送ったときと
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +229,16 @@ APIでいえば、同じリクエストを2回送っても1回送ったときと
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_8907.html">
+                    <a href="Qiita_-_人気の記事_4490.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">OpenAIと米国防総省 AI導入で合意</span>
+                        <span class="nav-title">【35歳未経験でも理解できた】URLとHTTP</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_4864.html">
+                    <a href="Zennのトレンド_7598.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【保存版】Claude Code完全設定ガイド2026 - Hooks/Skills/MCP/権限を...</span>
+                        <span class="nav-title">1件の問い合わせから、3万件/日のユーザ体験を改善したCREの取り組み</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +251,53 @@ APIでいえば、同じリクエストを2回送っても1回送ったときと
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_314.html">
-                        <h3>バーガーキング、従業員向けAIアシスタント導入へ　接客マナーも監視</h3>
+                    <a href="CNET_Japan_最新情報総合_6628.html">
+                        <h3>インテル、イーロン・マスク氏の半導体製造計画「Terafab」に参画</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">バーガーキングは、一部の従業員が着けているヘッドセットにAIチャットボット「Patty」を導入する。.</p>
+                        <p class="related-summary">インテルは、イーロン・マスク氏のSpaceX、xAI、テスラが進める半導体製造計画「Terafab」に参画すると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1521.html">
-                        <h3>エージェント型AIは「転換点」に--NVIDIAのジェンスン・フアンCEO</h3>
+                    <a href="CNET_Japan_最新情報総合_8475.html">
+                        <h3>ソニー、aiboに新カラー「ココアシフォン エディション」</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NVIDIAのジェンスン・フアンCEOは、エージェント型AIが「転換点」に達していると語った。.</p>
+                        <p class="related-summary">ソニーグループは4月9日、自律型エンタテインメントロボット「aibo」の特別モデル「aibo ココアシフォン エディション」を抽選販売すると発表した。価格は27万2800円。応募受付は同日10時から5...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4125.html">
-                        <h3>ソフトバンクG、OpenAI株式の13%を保有へ　約4.7兆円の追加出資を発表</h3>
+                    <a href="CNET_Japan_最新情報総合_3630.html">
+                        <h3>OpenAI、「AIを悪用した搾取から子供をどう守るか」の提言を発表</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ソフトバンクグループは2月27日（米国時間）、OpenAIへ300億ドル（約4兆6743億円）の追加出資を行うと発表した。ソフトバンク・ビジョン・ファンド2を通じて実施する。今回の追加出資により、同社...</p>
+                        <p class="related-summary">OpenAIは、AI時代の最も重要な課題の1つである若年ユーザーの保護にどう取り組むべきかを示す、新たな政策の提言を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_853.html">
-                        <h3>トランプ大統領、Claudeを政府内で使用禁止に--運営元Anthropicを「極左」と非難</h3>
+                    <a href="CNET_Japan_最新情報総合_395.html">
+                        <h3>YouTuberらがアマゾンを提訴、「動画をAI訓練に使われた」と主張</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">トランプ米大統領は金曜日、連邦政府機関に対し、AnthropicのAI「Claude（クロード）」の使用を停止するよう命じた。.</p>
+                        <p class="related-summary">YouTube動画のクリエイターらが、アマゾンを提訴した。同社が動画生成AIモデルを訓練するために、無許可でひそかに動画をスクレイピングしたと主張している。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7872.html">
-                        <h3>もう「画面の中」だけじゃない--デスクで共に働く「AI同僚」をレノボが披露</h3>
+                    <a href="CNET_Japan_最新情報総合_9042.html">
+                        <h3>Metaが巨額投資で巻き返し、新AI「Muse Spark」公開</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">レノボはMobile World Congress（MWC）2026で、仕事を手伝う「AI同僚」のコンセプトなどを披露した。.</p>
+                        <p class="related-summary">Metaは、最新のAIモデル「Muse Spark」を公開した。多額の費用を投じて新たなAIチームを結成して以来、初めてのリリースとなる。.</p>
                     </a>
                 </article>
             </div>

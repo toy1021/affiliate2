@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIが出したコードを「そのまま使う」危険性に気づいた2025年 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに こんにちは、エンジニア4年目の嶋田です。 この記事を開いていただき、ありがとうございます！ 2025年、私はChatGPT、Claude、GitHub Copilot、Cursorと、ありとあらゆるAIツールを使いながら開発をしてきました。 GitHub Cop.">
-    <meta name="keywords" content="AI,ChatGPT,Claude,GPT,GitHub">
+    <title>TypeScript における any と unknown の使い分け | 日本のテックニュース速報</title>
+    <meta name="description" content="TypeScript で「型がはっきり分からない値」を扱うとき、any と unknown が候補に挙がります。 どちらも何でも代入できる型ですが、代入した後に何ができるかがまったく違います。 この記事では両者の違いと、使い分けを整理します。 any — 型チェックを無効.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIが出したコードを「そのまま使う」危険性に気づいた2025年">
-    <meta property="og:description" content="はじめに こんにちは、エンジニア4年目の嶋田です。 この記事を開いていただき、ありがとうございます！ 2025年、私はChatGPT、Claude、GitHub Copilot、Cursorと、ありとあらゆるAIツールを使いながら開発をしてきました。 GitHub Cop.">
+    <meta property="og:title" content="TypeScript における any と unknown の使い分け">
+    <meta property="og:description" content="TypeScript で「型がはっきり分からない値」を扱うとき、any と unknown が候補に挙がります。 どちらも何でも代入できる型ですが、代入した後に何ができるかがまったく違います。 この記事では両者の違いと、使い分けを整理します。 any — 型チェックを無効.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6826.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIが出したコードを「そのまま使う」危険性に気づいた2025年">
-    <meta name="twitter:description" content="はじめに こんにちは、エンジニア4年目の嶋田です。 この記事を開いていただき、ありがとうございます！ 2025年、私はChatGPT、Claude、GitHub Copilot、Cursorと、ありとあらゆるAIツールを使いながら開発をしてきました。 GitHub Cop.">
+    <meta name="twitter:title" content="TypeScript における any と unknown の使い分け">
+    <meta name="twitter:description" content="TypeScript で「型がはっきり分からない値」を扱うとき、any と unknown が候補に挙がります。 どちらも何でも代入できる型ですが、代入した後に何ができるかがまったく違います。 この記事では両者の違いと、使い分けを整理します。 any — 型チェックを無効.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIが出したコードを「そのまま使う」危険性に気づいた2025年",
-        "description": "はじめに こんにちは、エンジニア4年目の嶋田です。 この記事を開いていただき、ありがとうございます！ 2025年、私はChatGPT、Claude、GitHub Copilot、Cursorと、ありとあらゆるAIツールを使いながら開発をしてきました。 GitHub Cop.",
+        "headline": "TypeScript における any と unknown の使い分け",
+        "description": "TypeScript で「型がはっきり分からない値」を扱うとき、any と unknown が候補に挙がります。 どちらも何でも代入できる型ですが、代入した後に何ができるかがまったく違います。 この記事では両者の違いと、使い分けを整理します。 any — 型チェックを無効.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-28T00:40:53",
-        "dateModified": "2026-01-29T22:30:23.824860",
+        "datePublished": "2026-04-10T09:39:43",
+        "dateModified": "2026-04-11T08:44:55.698013",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6826.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6826.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","ChatGPT","Claude","GPT","GitHub"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIが出したコードを「そのまま使う」危険性に気づいた2025年",
+                "name": "TypeScript における any と unknown の使い分け",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6826.html"
             }
         ]
@@ -113,44 +113,37 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIが出したコードを「そのまま使う」危険性に気づいた2025年</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">TypeScript における any と unknown の使い分け</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIが出したコードを「そのまま使う」危険性に気づいた2025年</h1>
+                <h1>TypeScript における any と unknown の使い分け</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/shimada_slj/items/e84e88004b4fd7bc511c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-01-28T00:40:53">
-                        公開: 2026-01-28T00:40:53
+                    <span class="source">出典: <a href="https://qiita.com/ryo_sh/items/8c5953b7c9d11979b320?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-04-10T09:39:43">
+                        公開: 2026-04-10T09:39:43
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">ChatGPT</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">GPT</span>
-                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-こんにちは、エンジニア4年目の嶋田です。
-この記事を開いていただき、ありがとうございます！
-2025年、私はChatGPT、Claude、GitHub Copilot、Cursorと、ありとあらゆるAIツールを使いながら開発をしてきました。
-GitHub Cop...
+                    TypeScript で「型がはっきり分からない値」を扱うとき、any と unknown が候補に挙がります。
+どちらも何でも代入できる型ですが、代入した後に何ができるかがまったく違います。
+この記事では両者の違いと、使い分けを整理します。
+
+any — 型チェックを無効...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/shimada_slj/items/e84e88004b4fd7bc511c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/ryo_sh/items/8c5953b7c9d11979b320?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,60 +152,25 @@ GitHub Cop...
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=ChatGPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ChatGPT - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">ChatGPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでChatGPTに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +185,16 @@ GitHub Cop...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_1155.html">
+                    <a href="Qiita_-_人気の記事_2865.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">今の時代にマークダウンの書き方を強制すること</span>
+                        <span class="nav-title">マークダウン記法は奥深く、楽しい — テキストだけで「伝わるドキュメント」を作る技術</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_2230.html">
+                    <a href="気になる記になる_9211.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">なぜあの人と話すと仕事が止まるのか。</span>
+                        <span class="nav-title">YouTube、米国で｢YouTube Premium｣の料金を月額最大4ドル値上げ</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +207,53 @@ GitHub Cop...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9682.html">
-                        <h3>グーグル検索のAI化が止まらない　「AIモード」移行が簡単に、AI概要はGemini 3へ</h3>
+                    <a href="CNET_Japan_最新情報総合_7543.html">
+                        <h3>アマゾン、古い「Kindle」のサポートを5月に終了へ　対象機種は？</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">グーグルは「AIによる概要」の強化を発表した。「Gemini 3」をデフォルトのモデルとしたほか、追加の質問に答えるためのAIチャットウィンドウを追加した。.</p>
+                        <p class="related-summary">アマゾンは、2012年以前に発売された「Kindle」モデルのサポートを5月20日に終了する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4255.html">
-                        <h3>「終末時計」は残り85秒：AIがもたらす「情報のアルマゲドン」が人類を窮地に</h3>
+                    <a href="CNET_Japan_最新情報総合_761.html">
+                        <h3>「SNSの利用頻度」と「スポーツをする頻度」に相関はある？--ドコモ調査</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米誌「原子力科学者会報」は象徴的な「終末時計」の針を4秒も進め、滅亡を示す真夜中まで残り85秒とした。その理由の1つがAIだ。.</p>
+                        <p class="related-summary">スポーツ・運動の頻度別に見ると、「SNSを1日に複数回利用する」と答えた割合は、「ほぼ毎日」が69％、「週に1、2日程度」が64％、「月に1、2日程度以下」が61％、「まったくない」が65％だった。毎...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9719.html">
-                        <h3>「Google AI Plus」日本でも開始--月額1200円でGemini 3 Proや200GBドライブ付き（訂正）</h3>
+                    <a href="CNET_Japan_最新情報総合_9354.html">
+                        <h3>Instagram、待望のコメント編集機能を導入　投稿後15分まで</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Googleは1月28日、AI機能をまとめて使える新サブスクリプション「Google AI Plus」を日本で提供開始した。月額1200円で、Geminiを中心とした最新AIモデルや動画・画像生成、リ...</p>
+                        <p class="related-summary">「Instagram」でコメントを投稿した後に誤字や不適切な絵文字に気付いた場合、削除ではなく編集で対応できるようになった。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5377.html">
-                        <h3>AIで「恐竜の足跡」を判定するツールが登場</h3>
+                    <a href="CNET_Japan_最新情報総合_9138.html">
+                        <h3>モバイルSuica / ICOCA定期券、ICエリア外でも利用可能に--画面を見せればOK　27年春から</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">国際的な研究チームが、遠い過去に恐竜が残した足跡を調査するための未来的なツールを考案した。AIを搭載したアプリ「Dinotracker」は、恐竜の足跡を瞬時に特定できる。.</p>
+                        <p class="related-summary">JRグループは4月10日、「みせるモバイル定期券」（仮称）を2027年春から導入すると発表した。交通系ICカードの利用エリア外でも、スマートフォンアプリを用いた定期券利用を可能にする取り組みとなる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1257.html">
-                        <h3>米AI企業Genspark、日本市場に本格参入--その内容とは</h3>
+                    <a href="ASCII_jp__トップ_5776.html">
+                        <h3>3万円かと思ったら8000円以下でびっくり！USBスピーカー、マルチポイント接続にも対応したお値打ち品</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">0」と日本市場参入を発表。月額約3700円からで、スライド作成、アプリ開発、議事録作成、電話代行など多彩な機能を提供する。創業20カ月でユニコーン企業に成長した注目のスタートアップだ。. 米AI企業G...</p>
+                        <p class="related-summary">デスクスピーカー、結局どれが正解？ 高すぎず、配線もシンプルにしたい人にちょうどいいのが「EDIFIER R20BT」。USB接続とBluetooth対応で使い勝手も抜群です。.</p>
                     </a>
                 </article>
             </div>

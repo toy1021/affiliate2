@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code / CodexでKaggle金メダルを取った話 | 日本のテックニュース速報</title>
-    <meta name="description" content="TL;DR 実装と分析をAIに任せることで、実験量が桁違いに増えた（5-Fold CV合計1,515回） 実装から解放された分、人間はアイディアとデータ観察に集中できた ただし、スコアを押し上げたアイディアのほとんどは人間発。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="AI,Claude,GitHub">
+    <title>GitHub Copilot CLI で分析業務を半自動化する（フェーズ分割×サブエージェント×シェルスクリプトの設計） | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに データ分析の仕事って、意外と反復作業が多いですよね。仮説を立てて、コードを書いて、検証して、結果をまとめて、報告し、次の分析へ……。このサイクルを複数の分析テーマで繰り返していると、だんだん「これ、もっとうまく回せないかな？」と思うようになります">
+    <meta name="keywords" content="GitHub,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Code / CodexでKaggle金メダルを取った話">
-    <meta property="og:description" content="TL;DR 実装と分析をAIに任せることで、実験量が桁違いに増えた（5-Fold CV合計1,515回） 実装から解放された分、人間はアイディアとデータ観察に集中できた ただし、スコアを押し上げたアイディアのほとんどは人間発。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="GitHub Copilot CLI で分析業務を半自動化する（フェーズ分割×サブエージェント×シェルスクリプトの設計）">
+    <meta property="og:description" content="はじめに データ分析の仕事って、意外と反復作業が多いですよね。仮説を立てて、コードを書いて、検証して、結果をまとめて、報告し、次の分析へ……。このサイクルを複数の分析テーマで繰り返していると、だんだん「これ、もっとうまく回せないかな？」と思うようになります">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6795.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Code / CodexでKaggle金メダルを取った話">
-    <meta name="twitter:description" content="TL;DR 実装と分析をAIに任せることで、実験量が桁違いに増えた（5-Fold CV合計1,515回） 実装から解放された分、人間はアイディアとデータ観察に集中できた ただし、スコアを押し上げたアイディアのほとんどは人間発。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="GitHub Copilot CLI で分析業務を半自動化する（フェーズ分割×サブエージェント×シェルスクリプトの設計）">
+    <meta name="twitter:description" content="はじめに データ分析の仕事って、意外と反復作業が多いですよね。仮説を立てて、コードを書いて、検証して、結果をまとめて、報告し、次の分析へ……。このサイクルを複数の分析テーマで繰り返していると、だんだん「これ、もっとうまく回せないかな？」と思うようになります">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Code / CodexでKaggle金メダルを取った話",
-        "description": "TL;DR 実装と分析をAIに任せることで、実験量が桁違いに増えた（5-Fold CV合計1,515回） 実装から解放された分、人間はアイディアとデータ観察に集中できた ただし、スコアを押し上げたアイディアのほとんどは人間発。最新のテクノロジー情報をお届けします。",
+        "headline": "GitHub Copilot CLI で分析業務を半自動化する（フェーズ分割×サブエージェント×シェルスクリプトの設計）",
+        "description": "はじめに データ分析の仕事って、意外と反復作業が多いですよね。仮説を立てて、コードを書いて、検証して、結果をまとめて、報告し、次の分析へ……。このサイクルを複数の分析テーマで繰り返していると、だんだん「これ、もっとうまく回せないかな？」と思うようになります",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-16T00:04:33",
-        "dateModified": "2026-03-17T22:35:37.509690",
+        "datePublished": "2026-04-13T00:32:36",
+        "dateModified": "2026-04-14T02:37:50.142145",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6795.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6795.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","GitHub"]
+        "keywords": ["GitHub","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Code / CodexでKaggle金メダルを取った話",
+                "name": "GitHub Copilot CLI で分析業務を半自動化する（フェーズ分割×サブエージェント×シェルスクリプトの設計）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6795.html"
             }
         ]
@@ -114,48 +114,38 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Code / CodexでKaggle金メダルを取った話</li>
+                <li aria-current="page">GitHub Copilot CLI で分析業務を半自動化する（フェーズ分割×サブエージェント×シェ...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Code / CodexでKaggle金メダルを取った話</h1>
+                <h1>GitHub Copilot CLI で分析業務を半自動化する（フェーズ分割×サブエージェント×シェルスクリプトの設計）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/chiman/articles/b233cc808d6af3" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/mtec_blog/articles/288cab828f6773" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-16T00:04:33">
-                        公開: 2026-03-16T00:04:33
+                    <time datetime="2026-04-13T00:32:36">
+                        公開: 2026-04-13T00:32:36
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
                     <span class="tag">GitHub</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    TL;DR
-
-実装と分析をAIに任せることで、実験量が桁違いに増えた（5-Fold CV合計1,515回）
-実装から解放された分、人間はアイディアとデータ観察に集中できた
-ただし、スコアを押し上げたアイディアのほとんどは人間発。AIの提案の打率は低かった
-AIに素早く実験を回させるための環境・構成づくりも重要だった
-この構図はKaggleに限らず、定量評価できるR&amp;D全般で起きうると感じている
-
-今回のコンペで使ったコード・設定・分析結果を公開しています。
-https://github.com/Chihiro-n/csiro-biomass-agentic-solution
-
- ...
+                    はじめに
+データ分析の仕事って、意外と反復作業が多いですよね。仮説を立てて、コードを書いて、検証して、結果をまとめて、報告し、次の分析へ……。このサイクルを複数の分析テーマで繰り返していると、だんだん「これ、もっとうまく回せないかな？」と思うようになります。
+本記事では、金融業界でデータサイエンティストとして働いている筆者が GitHub Copilot CLI を使ってこの反復サイクルを半自動化した 「フェーズ分割×サブエージェント委託×シェルスクリプト自動化」 の設計を紹介します。特定の分析内容には触れないため、どんな業種・分析テーマでも応用できる「Copilot との共存の型」...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/chiman/articles/b233cc808d6af3" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/mtec_blog/articles/288cab828f6773" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -168,30 +158,30 @@ https://github.com/Chihiro-n/csiro-biomass-agentic-solution
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">GitHub - Amazon検索結果</div>
                                     <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -232,16 +222,16 @@ https://github.com/Chihiro-n/csiro-biomass-agentic-solution
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_4044.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9940.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【Unity】演出スキップがつらすぎたので、ChainRacePattern という仕組みを作った</span>
+                        <span class="nav-title">JR東 駅ホーム人物検知にAI導入へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_5722.html">
+                    <a href="Qiita_-_人気の記事_3979.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Chromium(V8)のArray.prototype.flatを最大約5倍高速化した</span>
+                        <span class="nav-title">【35歳未経験でも理解できた】サーバープッシュ技術</span>
                     </a>
                 </div>
             </div>
@@ -254,53 +244,53 @@ https://github.com/Chihiro-n/csiro-biomass-agentic-solution
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6182.html">
-                        <h3>Claude、日本で実質値上げ　10%の消費税を別途徴収　4月から</h3>
+                    <a href="CNET_Japan_最新情報総合_1457.html">
+                        <h3>「Claude」がMicrosoft Wordで利用可能に　Copilotを代替　ベータ提供開始</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">生成AIの「Claude」を展開する米Anthropicは3月16日、日本向けのClaudeについて、2026年4月1日から10％の消費税を別途徴収すると発表した。日本の消費税法に基づく対応で、同社は...</p>
+                        <p class="related-summary">Microsoft Wordで、Copilotに代わるAIツールとしてAnthropicの「Claude」を試せるようになった。現時点ではベータ版として提供されている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7426.html">
-                        <h3>ネットの流行語「ギュられる」とは　AI失業を覚悟するSNS民たち</h3>
+                    <a href="CNET_Japan_最新情報総合_5723.html">
+                        <h3>マイクロソフト、「Copilot」を刷新へ　エージェント型AIでOpenClawに対抗</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「ギュられる」は、AIの進展によって、自分の仕事やスキル、価値が奪われたり、通用しなくなったりすることを指すネット上の言い回しだ。語源は「シンギュラリティ」にあるとされ、「シンギュラリティ」を「ギュ」...</p>
+                        <p class="related-summary">マイクロソフトはエージェント型AI に注力し、AIアシスタント「Copilot」の大幅な刷新を計画しているという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3528.html">
-                        <h3>ChatGPTに実装される「アダルトモード」、その機能が明らかに--米報道</h3>
+                    <a href="ASCII_jp__トップ_3217.html">
+                        <h3>SOUNDRAW、空間音楽AI「SpaceMusic AI」を正式公開。「同じ曲が繰り返される」「著作権処理が面倒」――...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">アダルトモードでは成人向けテーマの会話をテキストで交わせるようになる。一方、性的な音声、画像、動画は生成できない。.</p>
+                        <p class="related-summary">SOUNDRAW、空間音楽AI「SpaceMusic AI」を正式公開。「同じ曲が繰り返される」「著作権処理が面倒」――店舗BGMの2大課題を解決。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6550.html">
-                        <h3>PS5 ProのAI超解像「PSSR」が進化、きょう（17日）14時配信開始　髪や草木の描写も改善</h3>
+                    <a href="ASCII_jp__トップ_7676.html">
+                        <h3>AIインサイドセールス「immedio」、日本最大級のスタートアップ展示会『Startup JAPAN EXPO 202...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ソニー・インタラクティブエンタテインメントは3月17日、PS5のシステムソフトウェア更新で、PS5 Pro向けの超解像技術「PSSR」の進化版を配信すると発表した。対応するゲームでは、画質の安定性が高...</p>
+                        <p class="related-summary">AIインサイドセールス「immedio」、日本最大級のスタートアップ展示会『Startup JAPAN EXPO 2026』に出展決定！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_846.html">
-                        <h3>NVIDIAのイベントで「アナ雪」のオラフが登壇　AIでリアルな動きを再現</h3>
+                    <a href="ASCII_jp__トップ_4706.html">
+                        <h3>「その合成音声、誰の声ですか？」無断学習されたAI音声から元の声優を特定する話者識別モデル「Paramatch」デモ版を...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">NVIDIAが開催中のカンファレンス「GTC 2026」で、映画「アナと雪の女王」に登場するオラフのロボットがCEOとともに登場した。.</p>
+                        <p class="related-summary">「その合成音声、誰の声ですか？」無断学習されたAI音声から元の声優を特定する話者識別モデル「Paramatch」デモ版を公開.</p>
                     </a>
                 </article>
             </div>

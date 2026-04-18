@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LlamaをMacでローカル実行してみた | 日本のテックニュース速報</title>
-    <meta name="description" content="概要 最近「ローカルLLM」が一気に現実的になってきました。 今回はローカルに最適化されたLLMであるLlama を、Mac上で実行し、Pythonから呼び出すところまでをまとめます。 結論から言うと 思っている10倍簡単で、普通に実用レベルでした。 Llamaとは何か.">
-    <meta name="keywords" content="Python,LLM,Mac">
+    <title>LMStudio で MLX版の Gemma 4 が動くようになったので軽く動作確認【ローカルLLM】 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Gemma 4 が登場した際、いつも通り、「とりあえず軽く動かしてみる ＆ 記事を書く」というのをやっていました。具体的には以下の記事に書いている内容で、「実行環境 LM Studio ＋ GGUF版モデル」という組み合わせでした。 ●ローカルLLM：「Gemm.">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="LlamaをMacでローカル実行してみた">
-    <meta property="og:description" content="概要 最近「ローカルLLM」が一気に現実的になってきました。 今回はローカルに最適化されたLLMであるLlama を、Mac上で実行し、Pythonから呼び出すところまでをまとめます。 結論から言うと 思っている10倍簡単で、普通に実用レベルでした。 Llamaとは何か.">
+    <meta property="og:title" content="LMStudio で MLX版の Gemma 4 が動くようになったので軽く動作確認【ローカルLLM】">
+    <meta property="og:description" content="はじめに Gemma 4 が登場した際、いつも通り、「とりあえず軽く動かしてみる ＆ 記事を書く」というのをやっていました。具体的には以下の記事に書いている内容で、「実行環境 LM Studio ＋ GGUF版モデル」という組み合わせでした。 ●ローカルLLM：「Gemm.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5283.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LlamaをMacでローカル実行してみた">
-    <meta name="twitter:description" content="概要 最近「ローカルLLM」が一気に現実的になってきました。 今回はローカルに最適化されたLLMであるLlama を、Mac上で実行し、Pythonから呼び出すところまでをまとめます。 結論から言うと 思っている10倍簡単で、普通に実用レベルでした。 Llamaとは何か.">
+    <meta name="twitter:title" content="LMStudio で MLX版の Gemma 4 が動くようになったので軽く動作確認【ローカルLLM】">
+    <meta name="twitter:description" content="はじめに Gemma 4 が登場した際、いつも通り、「とりあえず軽く動かしてみる ＆ 記事を書く」というのをやっていました。具体的には以下の記事に書いている内容で、「実行環境 LM Studio ＋ GGUF版モデル」という組み合わせでした。 ●ローカルLLM：「Gemm.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "LlamaをMacでローカル実行してみた",
-        "description": "概要 最近「ローカルLLM」が一気に現実的になってきました。 今回はローカルに最適化されたLLMであるLlama を、Mac上で実行し、Pythonから呼び出すところまでをまとめます。 結論から言うと 思っている10倍簡単で、普通に実用レベルでした。 Llamaとは何か.",
+        "headline": "LMStudio で MLX版の Gemma 4 が動くようになったので軽く動作確認【ローカルLLM】",
+        "description": "はじめに Gemma 4 が登場した際、いつも通り、「とりあえず軽く動かしてみる ＆ 記事を書く」というのをやっていました。具体的には以下の記事に書いている内容で、「実行環境 LM Studio ＋ GGUF版モデル」という組み合わせでした。 ●ローカルLLM：「Gemm.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-14T04:54:06",
-        "dateModified": "2026-01-17T04:34:27.322488",
+        "datePublished": "2026-04-15T14:11:21",
+        "dateModified": "2026-04-18T14:41:58.785154",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5283.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5283.html",
-        "articleSection": "Apple製品",
-        "keywords": ["Python","LLM","Mac"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Apple製品",
-                "item": "https://toy1021.github.io/affiliate2/#category=Apple製品"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "LlamaをMacでローカル実行してみた",
+                "name": "LMStudio で MLX版の Gemma 4 が動くようになったので軽く動作確認【ローカルLLM】",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5283.html"
             }
         ]
@@ -113,44 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=Apple製品">Apple製品</a></li>
-                <li aria-current="page">LlamaをMacでローカル実行してみた</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">LMStudio で MLX版の Gemma 4 が動くようになったので軽く動作確認【ローカルLLM...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>LlamaをMacでローカル実行してみた</h1>
+                <h1>LMStudio で MLX版の Gemma 4 が動くようになったので軽く動作確認【ローカルLLM】</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/kiura30/items/9aa5033ff691487475e8?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: Apple製品</span>
-                    <time datetime="2026-01-14T04:54:06">
-                        公開: 2026-01-14T04:54:06
+                    <span class="source">出典: <a href="https://qiita.com/youtoy/items/4afdcd73748cc7be766b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-04-15T14:11:21">
+                        公開: 2026-04-15T14:11:21
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Python</span>
                     <span class="tag">LLM</span>
-                    <span class="tag">Mac</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    概要
-最近「ローカルLLM」が一気に現実的になってきました。
-今回はローカルに最適化されたLLMであるLlama を、Mac上で実行し、Pythonから呼び出すところまでをまとめます。
-結論から言うと
-思っている10倍簡単で、普通に実用レベルでした。
-
-Llamaとは何か...
+                    はじめに
+Gemma 4 が登場した際、いつも通り、「とりあえず軽く動かしてみる ＆ 記事を書く」というのをやっていました。具体的には以下の記事に書いている内容で、「実行環境 LM Studio ＋ GGUF版モデル」という組み合わせでした。
+●ローカルLLM：「Gemm...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/kiura30/items/9aa5033ff691487475e8?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/youtoy/items/4afdcd73748cc7be766b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,16 +157,6 @@ Llamaとは何か...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Python - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">LLM - Amazon検索結果</div>
@@ -183,10 +167,20 @@ Llamaとは何か...
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Mac - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -196,23 +190,23 @@ Llamaとは何か...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>Apple製品関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">iPhone - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">MacBook - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +221,16 @@ Llamaとは何か...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_2521.html">
+                    <a href="Publickey_1678.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Web関係のセキュリティについて初心者でもわかるようにまとめてみた - OWASP Top 10:2...</span>
+                        <span class="nav-title">CloudflareがAIエージェントへの最適化を目指し、全サービスに対応するCLIの開発を表明</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_9268.html">
+                    <a href="Publickey_1054.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Reactの魔法を理解する</span>
+                        <span class="nav-title">マイクロソフト、PostgreSQL/MySQL/SQL Serverなどへの同時接続に対応した「S...</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +243,52 @@ Llamaとは何か...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4412.html">
-                        <h3>iPad mini（A17 Pro）がAmazonでセール中　注意点は？</h3>
+                    <a href="CNET_Japan_最新情報総合_5337.html">
+                        <h3>Anthropic、Claude Opus 4.7公開--「指示に従順かつセンスがあり創造的」なモデル</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">iPad miniがAmazonでセール中だ。なお、今後すぐに新モデルが登場するリスクだが、本機の発売は2024年10月と、およそ1年2カ月前だ。iPad miniの発売サイクルは2年半〜3年程度とな...</p>
+                        <p class="related-summary">Anthropicは現地時間4月16日、新たなAIモデルを公開した。とはいえ、それは「Claude Mythos Preview」ではない。一般提供が始まった「Claude Opus 4. 7」は、開...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7872.html">
-                        <h3>【Amazonセール】読書・動画にちょうどいい8.3インチ iPad mini（A17 Pro）が73,800円</h3>
+                    <a href="CNET_Japan_最新情報総合_2077.html">
+                        <h3>OpenAIの「Codex」が大幅アップデート、PCアプリ操作や自動化が可能に</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">3インチのiPad mini（A17 Pro）128GB（Wi-Fi）が参考価格78,800円→73,800円（6%OFF）。Amazonタイムセールで販売中！.</p>
+                        <p class="related-summary">「Codex」は登場から1年足らずだが、OpenAIが描く「スーパーアプリ」実現の鍵を握るかもしれない。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5675.html">
-                        <h3>最新MacBook Airがセール対象、16GBメモリ＋256GB SSD構成で14％オフ</h3>
+                    <a href="CNET_Japan_最新情報総合_7110.html">
+                        <h3>大規模データセンター「建設停止」の法案、米メイン州が可決　なぜ？</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Appleの最新ノートPC「MacBook Air M4（13. 6インチ・2025年モデル）」がAmazonのタイムセール対象に。M4チップと16GBユニファイドメモリを搭載した構成が、参考価格から...</p>
+                        <p class="related-summary">全米でAIデータセンター拡張のために膨大な土地が買収されるなか、少なくとも1つの州が、相次ぐ抗議活動や政治家からの要請を受け、この建設ブームの勢いを抑えようとしている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="iPhone_Mania_1734.html">
-                        <h3>iPhone Foldと18 Proの発売は2026年9月26日？詳細スペック予想も</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_7803.html">
+                        <h3>第一生命 AIなど4000億円投資へ</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">iPhone Mania</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">折りたたみiPhone（仮称：iPhone Fold）と、iPhone18 Proシリーズの発売日および主な仕様に関する予想を、アナリストが伝えています。 発売日は現地時間2026年9月26日（土）と...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_2232.html">
-                        <h3>Appleの次期｢MacBook Pro｣向けOLEDの量産がスタートか</h3>
+                    <a href="Zennのトレンド_9785.html">
+                        <h3>ざっくりClaude Designを触ってみたので共有する</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">韓国のNaverで様々な情報を報告しているリーカーのyeux1122氏が、Samsung Displayが、世界で初めて第8. 6世代OLEDの量産を開始したことが分かったと報告しています。 牙山A6...</p>
+                        <p class="related-summary">! この記事は人間が書き、記事の校正に生成AIを使用しています。 はじめに Claude Designが発表されました。 https://claude. ai/design/ 2026/4/18現在は...</p>
                     </a>
                 </article>
             </div>

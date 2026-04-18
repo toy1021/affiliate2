@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>無料で使い放題のローカルLLM「Ollama」を試してみた！ | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 前回の記事で紹介した「Clawdbot（現在:OpenClaw）」を触っていて、ふと思ったことがあります。 それは、「結局、AIの頭脳を外部（GeminiやClaude、ChatGPTなど）に依存している以上、制限やコストがつきまとう」ということ。 使い続けると.">
-    <meta name="keywords" content="AI,ChatGPT,Claude,GPT,LLM">
+    <title>DRY / KISS / YAGNI をC#で理解する：現場で使えるシンプル設計原則まとめ | 日本のテックニュース速報</title>
+    <meta name="description" content="「設計って難しいな…」 そう感じたこと、きっと一度や二度ではないはずです。 SOLID 原則は有名ですが、実際の現場ではそこまで厳密に意識していないことも多いですよね。 むしろ、もっとシンプルで、日常的に効く原則のほうが役に立つ場面は多いです。 そこで今回は DRY、KIS.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="無料で使い放題のローカルLLM「Ollama」を試してみた！">
-    <meta property="og:description" content="はじめに 前回の記事で紹介した「Clawdbot（現在:OpenClaw）」を触っていて、ふと思ったことがあります。 それは、「結局、AIの頭脳を外部（GeminiやClaude、ChatGPTなど）に依存している以上、制限やコストがつきまとう」ということ。 使い続けると.">
+    <meta property="og:title" content="DRY / KISS / YAGNI をC#で理解する：現場で使えるシンプル設計原則まとめ">
+    <meta property="og:description" content="「設計って難しいな…」 そう感じたこと、きっと一度や二度ではないはずです。 SOLID 原則は有名ですが、実際の現場ではそこまで厳密に意識していないことも多いですよね。 むしろ、もっとシンプルで、日常的に効く原則のほうが役に立つ場面は多いです。 そこで今回は DRY、KIS.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7464.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="無料で使い放題のローカルLLM「Ollama」を試してみた！">
-    <meta name="twitter:description" content="はじめに 前回の記事で紹介した「Clawdbot（現在:OpenClaw）」を触っていて、ふと思ったことがあります。 それは、「結局、AIの頭脳を外部（GeminiやClaude、ChatGPTなど）に依存している以上、制限やコストがつきまとう」ということ。 使い続けると.">
+    <meta name="twitter:title" content="DRY / KISS / YAGNI をC#で理解する：現場で使えるシンプル設計原則まとめ">
+    <meta name="twitter:description" content="「設計って難しいな…」 そう感じたこと、きっと一度や二度ではないはずです。 SOLID 原則は有名ですが、実際の現場ではそこまで厳密に意識していないことも多いですよね。 むしろ、もっとシンプルで、日常的に効く原則のほうが役に立つ場面は多いです。 そこで今回は DRY、KIS.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "無料で使い放題のローカルLLM「Ollama」を試してみた！",
-        "description": "はじめに 前回の記事で紹介した「Clawdbot（現在:OpenClaw）」を触っていて、ふと思ったことがあります。 それは、「結局、AIの頭脳を外部（GeminiやClaude、ChatGPTなど）に依存している以上、制限やコストがつきまとう」ということ。 使い続けると.",
+        "headline": "DRY / KISS / YAGNI をC#で理解する：現場で使えるシンプル設計原則まとめ",
+        "description": "「設計って難しいな…」 そう感じたこと、きっと一度や二度ではないはずです。 SOLID 原則は有名ですが、実際の現場ではそこまで厳密に意識していないことも多いですよね。 むしろ、もっとシンプルで、日常的に効く原則のほうが役に立つ場面は多いです。 そこで今回は DRY、KIS.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-19T09:57:10",
-        "dateModified": "2026-02-21T18:37:46.939710",
+        "datePublished": "2026-04-16T07:44:21",
+        "dateModified": "2026-04-18T16:42:54.199041",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7464.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7464.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","ChatGPT","Claude","GPT","LLM"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "無料で使い放題のローカルLLM「Ollama」を試してみた！",
+                "name": "DRY / KISS / YAGNI をC#で理解する：現場で使えるシンプル設計原則まとめ",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7464.html"
             }
         ]
@@ -113,43 +113,37 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">無料で使い放題のローカルLLM「Ollama」を試してみた！</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">DRY / KISS / YAGNI をC#で理解する：現場で使えるシンプル設計原則まとめ</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>無料で使い放題のローカルLLM「Ollama」を試してみた！</h1>
+                <h1>DRY / KISS / YAGNI をC#で理解する：現場で使えるシンプル設計原則まとめ</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/hiroki2712/items/918db5c912f436a62e52?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-02-19T09:57:10">
-                        公開: 2026-02-19T09:57:10
+                    <span class="source">出典: <a href="https://qiita.com/hiroki_notes/items/893660ef56844d62729e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-04-16T07:44:21">
+                        公開: 2026-04-16T07:44:21
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">ChatGPT</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">GPT</span>
-                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-前回の記事で紹介した「Clawdbot（現在:OpenClaw）」を触っていて、ふと思ったことがあります。
-それは、「結局、AIの頭脳を外部（GeminiやClaude、ChatGPTなど）に依存している以上、制限やコストがつきまとう」ということ。
-使い続けると...
+                    「設計って難しいな…」
+そう感じたこと、きっと一度や二度ではないはずです。
+SOLID 原則は有名ですが、実際の現場ではそこまで厳密に意識していないことも多いですよね。
+むしろ、もっとシンプルで、日常的に効く原則のほうが役に立つ場面は多いです。
+そこで今回は DRY、KIS...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/hiroki2712/items/918db5c912f436a62e52?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/hiroki_notes/items/893660ef56844d62729e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,60 +152,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=ChatGPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ChatGPT - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">ChatGPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでChatGPTに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +185,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_2490.html">
+                    <a href="Zennのトレンド_3372.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Appleが3月4日に開催するイベントのロゴ壁紙が制作公開〜新型Macなど発表見込み</span>
+                        <span class="nav-title">Gemma 4の音声認識機能でリアルタイム文字起こしを試してみた</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6170.html">
+                    <a href="Qiita_-_人気の記事_8632.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【2026年版】AWS SAP(SAP-C02)直前対策チートシート</span>
+                        <span class="nav-title">日本語性能世界一の音声認識モデルを作った</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +207,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1217.html">
-                        <h3>アップル、CarPlayに「対話型アプリ」導入へ　車内でChatGPTやGeminiが利用可能に？</h3>
+                    <a href="CNET_Japan_最新情報総合_6313.html">
+                        <h3>民放5社すべてが4K放送撤退、TBSがBS 4K終了を発表（訂正）</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">最新の「CarPlay」開発者向けガイドの中に、「音声ベースの対話型アプリ」への対応が含まれていることが判明した。アップルはダッシュボード上で「ChatGPT」「Gemini」「Claude」といった...</p>
+                        <p class="related-summary">BS-TBSは15日、4Kチャンネル「BS-TBS 4K」について、2027年1月24日以降の衛星基幹放送業務の認定更新を行わず、放送を終了すると発表した。終了の具体的な日時は、決まり次第あらためて公...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_267.html">
-                        <h3>グーグルが最新AI「Gemini 3.1 Pro」を発表、推論能力が飛躍的に向上</h3>
+                    <a href="CNET_Japan_最新情報総合_2326.html">
+                        <h3>富士フイルム、新型チェキ「instax mini 13」発表--ついにセルフタイマー搭載</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">グーグルが最新AIモデル「Gemini 3.</p>
+                        <p class="related-summary">「一緒に写りたい」という需要に応えるため、チェキの定番エントリーモデルがついてセルフタイマーを手に入れた。富士フイルムが発表した「instax mini 13」は2秒・10秒のタイマーと付属の角度調整...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5400.html">
-                        <h3>AIエージェントの進化でリスク増大も「情報開示」は置き去りに　MITが警鐘</h3>
+                    <a href="CNET_Japan_最新情報総合_4765.html">
+                        <h3>子供をネットの危険からどう守るか？ EUの答えは「年齢確認アプリ」</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">MITの研究者らが主導する研究によると、エージェント型AIの開発者は安全性テストの手順などに関する情報をほとんど公開していない。.</p>
+                        <p class="related-summary">子供のSNS利用を禁止する動きが世界中で広がる中、EUの欧州委員会は、公的な身分証明書を使って年齢を証明するアプリを発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="iPhone_Mania_1885.html">
-                        <h3>AirTag（第2世代）や、複数の干支モデルの未使用品 / 中古品が販売中</h3>
+                    <a href="CNET_Japan_最新情報総合_4122.html">
+                        <h3>PASMO・Suicaの一部サービスが5月16〜17日に停止</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">iPhone Mania</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">先日発売されたAirTag（第2世代）や、初売りで提供されている干支をあしらった限定デザインのAirTagの中古が、じゃんぱらで販売されています。 販売されている未使用品や中古品の価格や在庫を確認しま...</p>
+                        <p class="related-summary">PASMO協議会とパスモは4月16日、システム切替に伴い、5月16日夜から17日にかけて、PASMO・SuicaのICカード乗車券サービスの一部を停止すると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_4119.html">
-                        <h3>【セール】｢AirTag (第2世代)｣が早くも14％オフで販売中</h3>
+                    <a href="CNET_Japan_最新情報総合_386.html">
+                        <h3>「Meta Quest 3/3S」が最大2万円強の値上げ、「製造コスト高騰」で</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">現在、発売まもないAppleの「AirTag（第2世代）」が早くもAmazonで値引き対象となっています。 「AirTag（第2世代）」の通常価格は4,980円（税込）ですが、記事投稿時点では14％オ...</p>
+                        <p class="related-summary">Metaの仮想現実（VR）ヘッドセット「Meta Quest 3」（512GBモデル）が、4月19日から2万円以上値上げされる。.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話 | 日本のテックニュース速報</title>
-    <meta name="description" content="本記事は「AWSを触り始めたばかりで、Lambda/EventBridge/IAMにまだ慣れていない方」を想定しています。 こんにちは。 ソーイ株式会社、入社１年目の村上です。 会社の業務として稼働中のサービスから出力されるCloudWatchLogsのログファイル.">
-    <meta name="keywords" content="AWS,本,EV">
+    <title>閉域の AWS 環境からさくらのクラウドのオブジェクトストレージにアクセスする | 日本のテックニュース速報</title>
+    <meta name="description" content="これまでガバメントクラウドで実際に選択できる CSP は Amazon Web Services、Google Cloud、Microsoft Azure、Oracle Cloud Infrastructure の 4 事業者でしたが、2026 年度から新たにさくらのクラウ.">
+    <meta name="keywords" content="Azure,AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話">
-    <meta property="og:description" content="本記事は「AWSを触り始めたばかりで、Lambda/EventBridge/IAMにまだ慣れていない方」を想定しています。 こんにちは。 ソーイ株式会社、入社１年目の村上です。 会社の業務として稼働中のサービスから出力されるCloudWatchLogsのログファイル.">
+    <meta property="og:title" content="閉域の AWS 環境からさくらのクラウドのオブジェクトストレージにアクセスする">
+    <meta property="og:description" content="これまでガバメントクラウドで実際に選択できる CSP は Amazon Web Services、Google Cloud、Microsoft Azure、Oracle Cloud Infrastructure の 4 事業者でしたが、2026 年度から新たにさくらのクラウ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1028.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話">
-    <meta name="twitter:description" content="本記事は「AWSを触り始めたばかりで、Lambda/EventBridge/IAMにまだ慣れていない方」を想定しています。 こんにちは。 ソーイ株式会社、入社１年目の村上です。 会社の業務として稼働中のサービスから出力されるCloudWatchLogsのログファイル.">
+    <meta name="twitter:title" content="閉域の AWS 環境からさくらのクラウドのオブジェクトストレージにアクセスする">
+    <meta name="twitter:description" content="これまでガバメントクラウドで実際に選択できる CSP は Amazon Web Services、Google Cloud、Microsoft Azure、Oracle Cloud Infrastructure の 4 事業者でしたが、2026 年度から新たにさくらのクラウ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話",
-        "description": "本記事は「AWSを触り始めたばかりで、Lambda/EventBridge/IAMにまだ慣れていない方」を想定しています。 こんにちは。 ソーイ株式会社、入社１年目の村上です。 会社の業務として稼働中のサービスから出力されるCloudWatchLogsのログファイル.",
+        "headline": "閉域の AWS 環境からさくらのクラウドのオブジェクトストレージにアクセスする",
+        "description": "これまでガバメントクラウドで実際に選択できる CSP は Amazon Web Services、Google Cloud、Microsoft Azure、Oracle Cloud Infrastructure の 4 事業者でしたが、2026 年度から新たにさくらのクラウ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-22T03:17:30",
-        "dateModified": "2026-01-24T03:28:51.681737",
+        "datePublished": "2026-04-18T11:38:48",
+        "dateModified": "2026-04-19T13:04:25.582051",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1028.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1028.html",
-        "articleSection": "ガジェット",
-        "keywords": ["AWS","本","EV"]
+        "articleSection": "Google・Android",
+        "keywords": ["Azure","AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "ガジェット",
-                "item": "https://toy1021.github.io/affiliate2/#category=ガジェット"
+                "name": "Google・Android",
+                "item": "https://toy1021.github.io/affiliate2/#category=Google・Android"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話",
+                "name": "閉域の AWS 環境からさくらのクラウドのオブジェクトストレージにアクセスする",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1028.html"
             }
         ]
@@ -113,42 +113,37 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=ガジェット">ガジェット</a></li>
-                <li aria-current="page">AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話</li>
+                <li><a href="../#category=Google・Android">Google・Android</a></li>
+                <li aria-current="page">閉域の AWS 環境からさくらのクラウドのオブジェクトストレージにアクセスする</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AWS初心者がCloudWatch Logsを毎日S3に保存する仕組みを実装した話</h1>
+                <h1>閉域の AWS 環境からさくらのクラウドのオブジェクトストレージにアクセスする</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/chaochire/items/5e291fdc9a199012cfc9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: ガジェット</span>
-                    <time datetime="2026-01-22T03:17:30">
-                        公開: 2026-01-22T03:17:30
+                    <span class="source">出典: <a href="https://qiita.com/takeda_h/items/c67eee08b705ec0bdf60?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: Google・Android</span>
+                    <time datetime="2026-04-18T11:38:48">
+                        公開: 2026-04-18T11:38:48
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">Azure</span>
                     <span class="tag">AWS</span>
-                    <span class="tag">本</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本記事は「AWSを触り始めたばかりで、Lambda/EventBridge/IAMにまだ慣れていない方」を想定しています。
-
-こんにちは。
-ソーイ株式会社、入社１年目の村上です。
-会社の業務として稼働中のサービスから出力されるCloudWatchLogsのログファイル...
+                    これまでガバメントクラウドで実際に選択できる CSP は Amazon Web Services、Google Cloud、Microsoft Azure、Oracle Cloud Infrastructure の 4 事業者でしたが、2026 年度から新たにさくらのクラウ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/chaochire/items/5e291fdc9a199012cfc9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/takeda_h/items/c67eee08b705ec0bdf60?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,6 +156,16 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Azure&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Azure - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Azure - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAzureに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">AWS - Amazon検索結果</div>
@@ -170,31 +175,11 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>ガジェット関連のおすすめ</h3>
+                    <h3>Google・Android関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -225,16 +210,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7483.html">
+                    <a href="Qiita_-_人気の記事_6433.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ZennのシンタックスハイライターをPrism.jsからShikiに移行しました</span>
+                        <span class="nav-title">クソバズワード「ハーネスエンジニアリング」と向き合う</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_9747.html">
+                    <a href="Zennのトレンド_5035.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">[翻訳] Anthropic ハッカソン優勝者による Claude Code 完全ガイド【応用編】</span>
+                        <span class="nav-title">正しく脆弱性を怖がるために資格の過去問を通して、実際に指標値を確かめてみた</span>
                     </a>
                 </div>
             </div>
@@ -247,13 +232,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4221.html">
-                        <h3>任天堂の最新玩具は「しゃべる花」--3月12日発売　特徴は</h3>
+                    <a href="CNET_Japan_最新情報総合_7741.html">
+                        <h3>グーグル、Chromeの「AIモード」を強化　会話とページを並べて検索を容易に</h3>
                         <div class="related-meta">
-                            <span class="category">ガジェット</span>
+                            <span class="category">Google・Android</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">任天堂が送り出す最新のガジェットは、ただの「おしゃべり」にあらず。ある時は相棒、ある時は目覚まし時計、そしてまたある時は温度計──。奇妙で愛らしい、多機能ガジェットが春にやってくる。.</p>
+                        <p class="related-summary">グーグルは「Chrome」の新しい検索体験を発表し、「AIモード」を強化して調査やページの切り替えを容易にした。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_7027.html">
+                        <h3>「Pixel 10a」の旅行での使い勝手は？　新型スマートフォンと旅する奈良・吉野</h3>
+                        <div class="related-meta">
+                            <span class="category">Google・Android</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">4月14日にグーグルが国内発売した新型スマートフォン「Pixel 10a」。AI機能やカメラ機能が強化されたスマートフォンを、奈良県への旅で使用した。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_2303.html">
+                        <h3>Chrome DevTools MCP の全ツールをまとめて理解する</h3>
+                        <div class="related-meta">
+                            <span class="category">Google・Android</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">AIエージェントから Chrome DevTools を操作・解析するための chrome-devtools-mcp 完全ガイド chrome-devtools-mcp は、AI コーディングエージェ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_5327.html">
+                        <h3>【n8n】Gmailの領収書を自動でGoogle Driveに日付別保存する仕組みを作ってみた</h3>
+                        <div class="related-meta">
+                            <span class="category">Google・Android</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに 日々こんなこと思いませんか？ 領収書の整理めんどくさい Gmailに埋もれて後から探せない 月別・日別で自動整理したい そこで今回は、 Gmailに届いた領収書を自動で判別し、Google ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_1141.html">
+                        <h3>Gucciがスマートグラスを2027年に発売へ ｰ Googleと提携</h3>
+                        <div class="related-meta">
+                            <span class="category">Google・Android</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">ロイターによると、Gucciの親会社であるKeringのルカ・デ・メオCEOが、Googleとの提携により、来年にもGucciブランドのスマートグラスを発売することを目指していると明らかにしたことが分...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SREを「努力」から「仕組み」へ — Platform Engineeringという選択 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに ! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の139週目の記事です！ 3年間連続達成まで残り20週となりました！ 株式会社ログラスでSREをしている見形（mekka）です。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>Async React時代の宣言的UI 2: トランジション対応のuseDebouncedフックを作る | 日本のテックニュース速報</title>
+    <meta name="description" content="Async React時代の宣言的UI 2: トランジション対応のuseDebouncedフックを作る - テクノロジーニュースをお届け。">
+    <meta name="keywords" content="React,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="SREを「努力」から「仕組み」へ — Platform Engineeringという選択">
-    <meta property="og:description" content="はじめに ! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の139週目の記事です！ 3年間連続達成まで残り20週となりました！ 株式会社ログラスでSREをしている見形（mekka）です。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="Async React時代の宣言的UI 2: トランジション対応のuseDebouncedフックを作る">
+    <meta property="og:description" content="Async React時代の宣言的UI 2: トランジション対応のuseDebouncedフックを作る - テクノロジーニュースをお届け。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3047.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SREを「努力」から「仕組み」へ — Platform Engineeringという選択">
-    <meta name="twitter:description" content="はじめに ! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の139週目の記事です！ 3年間連続達成まで残り20週となりました！ 株式会社ログラスでSREをしている見形（mekka）です。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="Async React時代の宣言的UI 2: トランジション対応のuseDebouncedフックを作る">
+    <meta name="twitter:description" content="Async React時代の宣言的UI 2: トランジション対応のuseDebouncedフックを作る - テクノロジーニュースをお届け。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "SREを「努力」から「仕組み」へ — Platform Engineeringという選択",
-        "description": "はじめに ! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の139週目の記事です！ 3年間連続達成まで残り20週となりました！ 株式会社ログラスでSREをしている見形（mekka）です。最新のテクノロジー情報をお届けします。",
+        "headline": "Async React時代の宣言的UI 2: トランジション対応のuseDebouncedフックを作る",
+        "description": "Async React時代の宣言的UI 2: トランジション対応のuseDebouncedフックを作る - テクノロジーニュースをお届け。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-13T02:48:27",
-        "dateModified": "2026-04-16T20:51:33.178040",
+        "datePublished": "2026-04-18T08:54:05",
+        "dateModified": "2026-04-19T18:54:29.968680",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3047.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3047.html",
         "articleSection": "テクノロジー",
-        "keywords": []
+        "keywords": ["React","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "SREを「努力」から「仕組み」へ — Platform Engineeringという選択",
+                "name": "Async React時代の宣言的UI 2: トランジション対応のuseDebouncedフックを作る",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3047.html"
             }
         ]
@@ -114,39 +114,43 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">SREを「努力」から「仕組み」へ — Platform Engineeringという選択</li>
+                <li aria-current="page">Async React時代の宣言的UI 2: トランジション対応のuseDebouncedフックを作...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>SREを「努力」から「仕組み」へ — Platform Engineeringという選択</h1>
+                <h1>Async React時代の宣言的UI 2: トランジション対応のuseDebouncedフックを作る</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/loglass/articles/f4dda877788337" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/uhyo/articles/async-react-debounce-2" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-04-13T02:48:27">
-                        公開: 2026-04-13T02:48:27
+                    <time datetime="2026-04-18T08:54:05">
+                        公開: 2026-04-18T08:54:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-!
-この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の139週目の記事です！
-3年間連続達成まで残り20週となりました！
+                    皆さんこんにちは。以下の記事では、Async React時代の宣言的UIとして、デバウンスをuseDeferredValueで代替する方法を示しました。
+https://zenn.dev/uhyo/articles/async-react-debounce
+記事の末尾で「実際には、ネットワークアクセスをデバウンスしている場合とか応用形もあるのですが」と述べたので、今回はネットワークアクセスを含む場合について考えたいと思います。
+今回の記事に登場するコードは以下のStackBlitzで実際に動作を確認できます。
 
-株式会社ログラスでSREをしている見形（mekka）です。
-約1年前、ログラスにおけるSREの現状と未来という記事を書きました。当時はクラウド基盤チームとしてSREチームへの移行を検討し始めた段階で、「SREの民主化」を掲げ、組織全体で信頼性に取り組む未来像を描いていました。
-あれから1年。実際にどこまで進み、何が変わり、何が変わらなかったのか。そして、その過程でPlatform Engineeringという...
+
+ 今回の要件
+前回の記事では、ユーザーが入力すると、フロントエンドで検索結...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/loglass/articles/f4dda877788337" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/uhyo/articles/async-react-debounce-2" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -155,6 +159,31 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
                     <h3>テクノロジー関連のおすすめ</h3>
@@ -188,16 +217,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_3897.html">
+                    <a href="気になる記になる_5420.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">子が夢中のゲーム 問題が顕在化</span>
+                        <span class="nav-title">Threads、Web版の新しいUIデザインをテスト中 ｰ DM機能もWeb版にようやく導入へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_3503.html">
+                    <a href="Qiita_-_人気の記事_7300.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">技術書典に初参加して3冊しか売れなかったので、AIと振り返りした</span>
+                        <span class="nav-title">クソバズワード「ハーネスエンジニアリング」と向き合う</span>
                     </a>
                 </div>
             </div>
@@ -210,37 +239,7 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3688.html">
-                        <h3>月が「うっすら満月」のように見える不思議な現象「地球照」とは</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">月といえば満月が注目されがちだが、春先には細い月ならではの見どころもある。それが「地球照」だ。太陽光が当たっていない月の暗い部分が、地球で反射した光によってうっすら見える現象で、条件がそろえば4月から...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3870.html">
-                        <h3>「JALアプリ」全面刷新</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">JALは4月15日、スマートフォン向け「JALアプリ」を全面刷新したと発表した。顧客とのデジタル接点を見直すプロジェクト「New JAL Digital Experience」の第2弾に位置付ける取り...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6986.html">
-                        <h3>民放5社すべてが4K放送撤退、TBSがBS 4K終了を発表（訂正）</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">BS-TBSは15日、4Kチャンネル「BS-TBS 4K」について、2027年1月24日以降の衛星基幹放送業務の認定更新を行わず、放送を終了すると発表した。終了の具体的な日時は、決まり次第あらためて公...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9855.html">
+                    <a href="CNET_Japan_最新情報総合_1879.html">
                         <h3>富士フイルム、新型チェキ「instax mini 13」発表--ついにセルフタイマー搭載</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
@@ -250,13 +249,43 @@
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2514.html">
+                    <a href="CNET_Japan_最新情報総合_8253.html">
                         <h3>子供をネットの危険からどう守るか？ EUの答えは「年齢確認アプリ」</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
                         <p class="related-summary">子供のSNS利用を禁止する動きが世界中で広がる中、EUの欧州委員会は、公的な身分証明書を使って年齢を証明するアプリを発表した。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_7116.html">
+                        <h3>PASMO・Suicaの一部サービスが5月16〜17日に停止</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">PASMO協議会とパスモは4月16日、システム切替に伴い、5月16日夜から17日にかけて、PASMO・SuicaのICカード乗車券サービスの一部を停止すると発表した。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_8944.html">
+                        <h3>「Meta Quest 3/3S」が最大2万円強の値上げ、「製造コスト高騰」で</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">Metaの仮想現実（VR）ヘッドセット「Meta Quest 3」（512GBモデル）が、4月19日から2万円以上値上げされる。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_9022.html">
+                        <h3>ドクターイエロー後継は「ドクターS」--客を乗せながら検測、東海道新幹線で</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">子どもからも人気を集める東海道新幹線の検測車「ドクターイエロー」。この役割を営業運転中のN700Sが引き継ぐ。JR東海は4月16日、営業車検測装置を搭載したN700Sの名称を「ドクターS（ドクターエス...</p>
                     </a>
                 </article>
             </div>

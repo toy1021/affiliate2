@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が変えた設計の常識 | 日本のテックニュース速報</title>
-    <meta name="description" content="Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が変えた設計の常識 1994年に発表されたGoF（Gang of Four）の23のデザインパターンは、オブジェクト指向プログラミングの設計指針として30年以上にわたり参照さ.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>関数型インターフェース入門 — Function / Predicate / Consumer / Supplier を整理する | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Java 8でラムダ式とStream APIが導入されたとき、合わせて関数型インターフェースという概念が登場しました。 List names = List. of(&#34;田中&#34;, &#34;佐藤&#34;, &#34;鈴木&#34;); names.">
+    <meta name="keywords" content="Java">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が変えた設計の常識">
-    <meta property="og:description" content="Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が変えた設計の常識 1994年に発表されたGoF（Gang of Four）の23のデザインパターンは、オブジェクト指向プログラミングの設計指針として30年以上にわたり参照さ.">
+    <meta property="og:title" content="関数型インターフェース入門 — Function / Predicate / Consumer / Supplier を整理する">
+    <meta property="og:description" content="はじめに Java 8でラムダ式とStream APIが導入されたとき、合わせて関数型インターフェースという概念が登場しました。 List names = List. of(&#34;田中&#34;, &#34;佐藤&#34;, &#34;鈴木&#34;); names.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8709.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が変えた設計の常識">
-    <meta name="twitter:description" content="Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が変えた設計の常識 1994年に発表されたGoF（Gang of Four）の23のデザインパターンは、オブジェクト指向プログラミングの設計指針として30年以上にわたり参照さ.">
+    <meta name="twitter:title" content="関数型インターフェース入門 — Function / Predicate / Consumer / Supplier を整理する">
+    <meta name="twitter:description" content="はじめに Java 8でラムダ式とStream APIが導入されたとき、合わせて関数型インターフェースという概念が登場しました。 List names = List. of(&#34;田中&#34;, &#34;佐藤&#34;, &#34;鈴木&#34;); names.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が変えた設計の常識",
-        "description": "Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が変えた設計の常識 1994年に発表されたGoF（Gang of Four）の23のデザインパターンは、オブジェクト指向プログラミングの設計指針として30年以上にわたり参照さ.",
+        "headline": "関数型インターフェース入門 — Function / Predicate / Consumer / Supplier を整理する",
+        "description": "はじめに Java 8でラムダ式とStream APIが導入されたとき、合わせて関数型インターフェースという概念が登場しました。 List names = List. of(&#34;田中&#34;, &#34;佐藤&#34;, &#34;鈴木&#34;); names.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-21T12:26:10",
-        "dateModified": "2026-03-24T07:06:44.125510",
+        "datePublished": "2026-04-20T08:23:01",
+        "dateModified": "2026-04-21T13:29:47.358313",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8709.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8709.html",
-        "articleSection": "プログラミング",
-        "keywords": []
+        "articleSection": "テクノロジー",
+        "keywords": ["Java"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が変えた設計の常識",
+                "name": "関数型インターフェース入門 — Function / Predicate / Consumer / Supplier を整理する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8709.html"
             }
         ]
@@ -113,34 +113,40 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">関数型インターフェース入門 — Function / Predicate / Consumer / ...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が変えた設計の常識</h1>
+                <h1>関数型インターフェース入門 — Function / Predicate / Consumer / Supplier を整理する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/0h-n0/items/0fd6048b1fb3927d03aa?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-03-21T12:26:10">
-                        公開: 2026-03-21T12:26:10
+                    <span class="source">出典: <a href="https://qiita.com/S_kamon/items/d4df15743c952e7af31d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-04-20T08:23:01">
+                        公開: 2026-04-20T08:23:01
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">Java</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Rust・Kotlin・Go・TypeScriptで再考するGoFデザインパターン：モダン言語機能が変えた設計の常識
-1994年に発表されたGoF（Gang of Four）の23のデザインパターンは、オブジェクト指向プログラミングの設計指針として30年以上にわたり参照さ...
+                    はじめに
+Java 8でラムダ式とStream APIが導入されたとき、合わせて関数型インターフェースという概念が登場しました。
+List names = List.of("田中", "佐藤", "鈴木");
+names.stream()
+     .fi...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/0h-n0/items/0fd6048b1fb3927d03aa?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/S_kamon/items/d4df15743c952e7af31d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -153,20 +159,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Java&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Java - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">Java - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでJavaに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -176,23 +172,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -207,16 +203,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_6742.html">
+                    <a href="Qiita_-_人気の記事_893.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【AWS学習の最適解】AWS全冠がお届けする、無料学習サイト「AWS認定合格ナビゲーター」のご紹介</span>
+                        <span class="nav-title">React初心者がつまずきやすいJavaScript記法をわかりやすく整理してみた</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_1024.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_8955.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【セール】CIOの人気USB充電器やモバイルバッテリーが特価 &amp; 全品ポイント2倍で販売中（3月26...</span>
+                        <span class="nav-title">災害時 SNS上でのデマなどに注意</span>
                     </a>
                 </div>
             </div>
@@ -229,53 +225,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="気になる記になる_9764.html">
-                        <h3>【セール】SwitchBotの小型ロボット掃除機｢Kシリーズ｣が3周年記念で最大33％オフに</h3>
+                    <a href="CNET_Japan_最新情報総合_839.html">
+                        <h3>ソニー銀行、住宅ローンの融資上限を2億→3億円に引き上げ　返済期間50年にも対応</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">SwitchBotが、小型ロボット掃除機「Kシリーズ」の発売3周年記念キャンペーンを開始しました。 本キャンペーンでは、日本の住宅環境に合わせて開発され、応援購入サービス「Makuake」の掃除機カテ...</p>
+                        <p class="related-summary">ソニー銀行は4月20日、住宅ローンの最長融資期間を現行の35年から50年に延長し、融資金額の上限も2億円から3億円に引き上げると発表した。取扱開始日は5月11日。高額物件の購入や長期返済、借り換え需要...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7722.html">
-                        <h3>北朝鮮ハッカーが「偽の求人」で侵入、ドローン技術を狙うサイバー攻撃の実態</h3>
+                    <a href="CNET_Japan_最新情報総合_8576.html">
+                        <h3>訪日外国人向け「PASMO」新登場　28日間使える期間限定型</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">PASMO協議会は4月17日、訪日外国人向けのICカード乗車券「TOURIST PASMO」を2026年5月に発売すると発表した。成田空港や羽田空港の鉄道駅など、空港周辺の発売箇所で取り扱う予定だ。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_3895.html">
+                        <h3>DJI「Osmo Pocket 4」実機インプレ　数日使った印象は上々</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">新センサー搭載、フィルム調カラープロファイル、内蔵ストレージなど、「Osmo Pocket 4」には魅力的な新機能が満載だ。数日間使ってみたが、印象は上々だ。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_2682.html">
+                        <h3>Blue Originの大型ロケットが飛行停止に　衛星の軌道投入に失敗</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">Blue Originの大型ロケット「New Glenn」の3回目の飛行は部分的な失敗に終わった。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_2628.html">
+                        <h3>デカい！ 見やすい！ 音もいい！ Lenovoタブレットが33％オフ</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ESET社は、北朝鮮と関係のあるLazarusによる、ドローン技術を開発する企業を標的とした攻撃キャンペーン「DreamJob作戦」ついて分析しました。その詳細について解説します。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_4854.html">
-                        <h3>AWS、Claude Codeにアーキテクチャ設計、コスト見積もり、構成コード生成、デプロイ実行などの能力を組み込む「A...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">Amazon Web Services（AWS）は、Claude CodeとCursorに対してAWSのデプロイに関するアーキテクチャの設計、コストの見積もり、Infrastructure as Co...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_1108.html">
-                        <h3>Rust で異なるシグネチャの関数に引数を自動で渡す仕組みを理解する</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに こんにちは、ソフトウェアエンジニアの mosson です。株式会社estie では Rustでウェブアプリケーションの開発をしています。 さて Rustのウェブフレームワークを使っていると、...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_7183.html">
-                        <h3>【2026年版】Claude Code フロントエンド特化の設定・ツールまとめ</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">jsを用いたリアーキテクチャを進めています。 その際、導入したClaude Code周辺の設定・ツールが非常に開発スピードを上げてくれたので、この記事ではそれらを紹介していこうと思います。 「なんとな...</p>
+                        <p class="related-summary">Lenovoのタブレット「Lenovo Idea Tab Plus」がAmazonでタイムセール対象。参考価格59,400円のところ、33％オフの39,800円で販売中。12. 1インチの高解像度ディ...</p>
                     </a>
                 </article>
             </div>

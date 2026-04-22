@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【35歳未経験でも理解できた】従来型のアプリケーション | 日本のテックニュース速報</title>
-    <meta name="description" content="従来型Webアプリの裏側をスッキリ整理してみた はじめまして！ 35歳未経験でエンジニアを目指し日々奮闘している者です。 Webの勉強を始めてすぐ、こんなことありませんか？ 「画面は動くけど、裏で何が起きてるのか説明できない…」 僕もそんな状況でした。 この記事では、そん.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>[TypeScriptシリーズ - Part 8] Structural vs Nominal Typing | 日本のテックニュース速報</title>
+    <meta name="description" content="📝 注記 私は日本語が得意ではありません。この記事はAIの翻訳サポートを受けて書いています。ご了承ください。 📖 目次 問題の提示 – どんな時にこのテクニックが必要か 悪い例 – まずはダメなコードを見せる 良い例 – TypeScriptの高度機能で解決する P.">
+    <meta name="keywords" content="AI,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【35歳未経験でも理解できた】従来型のアプリケーション">
-    <meta property="og:description" content="従来型Webアプリの裏側をスッキリ整理してみた はじめまして！ 35歳未経験でエンジニアを目指し日々奮闘している者です。 Webの勉強を始めてすぐ、こんなことありませんか？ 「画面は動くけど、裏で何が起きてるのか説明できない…」 僕もそんな状況でした。 この記事では、そん.">
+    <meta property="og:title" content="[TypeScriptシリーズ - Part 8] Structural vs Nominal Typing">
+    <meta property="og:description" content="📝 注記 私は日本語が得意ではありません。この記事はAIの翻訳サポートを受けて書いています。ご了承ください。 📖 目次 問題の提示 – どんな時にこのテクニックが必要か 悪い例 – まずはダメなコードを見せる 良い例 – TypeScriptの高度機能で解決する P.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3929.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【35歳未経験でも理解できた】従来型のアプリケーション">
-    <meta name="twitter:description" content="従来型Webアプリの裏側をスッキリ整理してみた はじめまして！ 35歳未経験でエンジニアを目指し日々奮闘している者です。 Webの勉強を始めてすぐ、こんなことありませんか？ 「画面は動くけど、裏で何が起きてるのか説明できない…」 僕もそんな状況でした。 この記事では、そん.">
+    <meta name="twitter:title" content="[TypeScriptシリーズ - Part 8] Structural vs Nominal Typing">
+    <meta name="twitter:description" content="📝 注記 私は日本語が得意ではありません。この記事はAIの翻訳サポートを受けて書いています。ご了承ください。 📖 目次 問題の提示 – どんな時にこのテクニックが必要か 悪い例 – まずはダメなコードを見せる 良い例 – TypeScriptの高度機能で解決する P.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【35歳未経験でも理解できた】従来型のアプリケーション",
-        "description": "従来型Webアプリの裏側をスッキリ整理してみた はじめまして！ 35歳未経験でエンジニアを目指し日々奮闘している者です。 Webの勉強を始めてすぐ、こんなことありませんか？ 「画面は動くけど、裏で何が起きてるのか説明できない…」 僕もそんな状況でした。 この記事では、そん.",
+        "headline": "[TypeScriptシリーズ - Part 8] Structural vs Nominal Typing",
+        "description": "📝 注記 私は日本語が得意ではありません。この記事はAIの翻訳サポートを受けて書いています。ご了承ください。 📖 目次 問題の提示 – どんな時にこのテクニックが必要か 悪い例 – まずはダメなコードを見せる 良い例 – TypeScriptの高度機能で解決する P.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-08T01:26:57",
-        "dateModified": "2026-04-09T09:10:17.729425",
+        "datePublished": "2026-04-22T07:00:29",
+        "dateModified": "2026-04-22T22:50:26.772178",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3929.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3929.html",
-        "articleSection": "プログラミング",
-        "keywords": []
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【35歳未経験でも理解できた】従来型のアプリケーション",
+                "name": "[TypeScriptシリーズ - Part 8] Structural vs Nominal Typing",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3929.html"
             }
         ]
@@ -113,39 +113,45 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">【35歳未経験でも理解できた】従来型のアプリケーション</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">[TypeScriptシリーズ - Part 8] Structural vs Nominal Ty...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【35歳未経験でも理解できた】従来型のアプリケーション</h1>
+                <h1>[TypeScriptシリーズ - Part 8] Structural vs Nominal Typing</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/wata-sho/items/34d20cd39006cce775d0?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-04-08T01:26:57">
-                        公開: 2026-04-08T01:26:57
+                    <span class="source">出典: <a href="https://qiita.com/TOMOSIA-HieuNT/items/f2dbf76bd0fe590f9d40?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-04-22T07:00:29">
+                        公開: 2026-04-22T07:00:29
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    従来型Webアプリの裏側をスッキリ整理してみた
-はじめまして！
-35歳未経験でエンジニアを目指し日々奮闘している者です。
-Webの勉強を始めてすぐ、こんなことありませんか？
-「画面は動くけど、裏で何が起きてるのか説明できない…」
-僕もそんな状況でした。
-この記事では、そん...
+                    📝 注記
+私は日本語が得意ではありません。この記事はAIの翻訳サポートを受けて書いています。ご了承ください。
+
+📖 目次
+
+問題の提示 – どんな時にこのテクニックが必要か
+悪い例 – まずはダメなコードを見せる
+良い例 – TypeScriptの高度機能で解決する
+P...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/wata-sho/items/34d20cd39006cce775d0?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/TOMOSIA-HieuNT/items/f2dbf76bd0fe590f9d40?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,20 +164,30 @@ Webの勉強を始めてすぐ、こんなことありませんか？
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -181,23 +197,23 @@ Webの勉強を始めてすぐ、こんなことありませんか？
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -212,16 +228,16 @@ Webの勉強を始めてすぐ、こんなことありませんか？
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_1715.html">
+                    <a href="Qiita_-_人気の記事_5129.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">デザインシステムを丸ごと Skills にする</span>
+                        <span class="nav-title">[Frontend Performance - Part 4] 描画パフォーマンス最適化：ブラウザの...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_5305.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3614.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">RAGとAgentic Searchの戦争を 終わらせに来た!!!</span>
+                        <span class="nav-title">病院にサイバー攻撃 救急など休診</span>
                     </a>
                 </div>
             </div>
@@ -234,53 +250,53 @@ Webの勉強を始めてすぐ、こんなことありませんか？
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_534.html">
-                        <h3>Amazon、インターホンを4K録画対応にする「防犯ドアホンプロ」　既存配線を流用可</h3>
+                    <a href="CNET_Japan_最新情報総合_4909.html">
+                        <h3>仕事でAIを使いすぎると「自分の能力」に自信が持てなくなる？ 米心理学会が報告</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Ringが日本市場向けに初めて特化開発したスマートドアホン「防犯ドアホンプロ」は、国内既存のインターホン配線を流用しながら4Kカメラ・双方向通話・遠隔サイレンをスマートフォンで操作できる製品だ。オンラ...</p>
+                        <p class="related-summary">米心理学会の新たな研究によると、業務でAIツールに過度に依存する人は、自身の能力に対する自信が低下し、アイデアの考案者という意識も薄れるという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3876.html">
-                        <h3>【35歳未経験でも理解できた】SPAへの進化</h3>
+                    <a href="CNET_Japan_最新情報総合_2511.html">
+                        <h3>ノジマ、日立の家電事業を1100億円で買収　VAIO買収に続き</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「会議の紙資料」で例えるSPAの仕組み 〜もう全ページ印刷し直さない〜 こんにちは！ 35歳、未経験からWebエンジニアの道を歩み始めた者です。 さて、みなさんは普段スマホでSNSを見ているとき、「い...</p>
+                        <p class="related-summary">日立製作所と日立グローバルライフソリューションズは4月21日、日立ブランドの家電事業を新会社に移し、その新会社をノジマの子会社にすると発表した。日立ブランドは残るが、家電事業の経営はノジマ側に移る。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_4926.html">
-                        <h3>Terraformを使わずにGitHubをコードで管理する</h3>
+                    <a href="CNET_Japan_最新情報総合_8162.html">
+                        <h3>OpenAI、新画像モデル「ChatGPT Images 2」発表　ビジネス資料や文字入りデザインに特化</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">GitHubのリポジトリをどう管理するか GitHubのリポジトリが増えてくると、設定の管理が地味に厄介になります。OSSを複数持っていると、merge strategyやRuleset、Action...</p>
+                        <p class="related-summary">OpenAIは、次世代画像モデル「ChatGPT Images 2」をリリースすると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6668.html">
-                        <h3>Java経験者がLaravel(PHP)の文法を整理【超基本】</h3>
+                    <a href="CNET_Japan_最新情報総合_4491.html">
+                        <h3>VPNをAIが自律操作する時代に--「OpenClaw」をWindscribeがネイティブ統合</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">執筆のきっかけ これまでのエンジニア歴でほぼJavaしか経験してきませんでしたが、 ついにPHP (Laravel) という別言語を使用している業務に入ることになりました。 実際の業務が開始される前に...</p>
+                        <p class="related-summary">AIエージェントがWebの世界をかつてないスピードで侵食しつつある。そして今度は、VPNの操作権限までエージェントの手に渡ろうとしている。VPNサービスを手がけるWindscribeが、エージェント型...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6454.html">
-                        <h3>JUnitでMockを使用した単体テストの書き方</h3>
+                    <a href="CNET_Japan_最新情報総合_1314.html">
+                        <h3>[PR]あらゆる会議を「1枚のスライド」に。最新AIレコーダー「Plaud NotePin S」は仕事の頼れる相棒だ</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに Spring Bootでアプリを開発していると、「サービス層のロジックをテストしたいけど、DBへの接続はどうする？」という疑問に当たることがあります。 この記事では、そういった依存関係をモッ...</p>
+                        <p class="related-summary">会議の議事録作成は、AIの進化でかなり楽になった。今では録音データをAIでテキスト化し、要点を整理するところまでは、生産性を意識するビジネスパーソンの間では半ば一般的になりつつある。.</p>
                     </a>
                 </article>
             </div>

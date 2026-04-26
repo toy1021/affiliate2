@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIに「いい感じに作って」と言うのをやめたら、開発が回り出した — Spec-Driven Development 実践ガイド | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに — AIに雑に頼むと「速く間違う」だけ AIに「いい感じに作って」と言って、本当に「いい感じ」のものが返ってきたこと、ありますか. ? ちょっと考えてみましょう。こんなプロンプトを書いたことはないでしょうか。 ユーザー登録機能を作って で、返ってくるコードは.">
-    <meta name="keywords" content="AI,本,EV">
+    <title>DuckDB のマクロが便利だったので、テーブルデータ加工について Pandas とユースケース別に比較してみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 以前、DuckDB に関する記事を書きました。 テーブルデータの加工に SQL を使うこと自体は以前からやっていたのですが、最近新たに、DuckDB（および一部の SQL 方言）でマクロが使えることを知りました。 マクロを使うと、複雑な加工ロジックを名前付.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIに「いい感じに作って」と言うのをやめたら、開発が回り出した — Spec-Driven Development 実践ガイド">
-    <meta property="og:description" content="はじめに — AIに雑に頼むと「速く間違う」だけ AIに「いい感じに作って」と言って、本当に「いい感じ」のものが返ってきたこと、ありますか. ? ちょっと考えてみましょう。こんなプロンプトを書いたことはないでしょうか。 ユーザー登録機能を作って で、返ってくるコードは.">
+    <meta property="og:title" content="DuckDB のマクロが便利だったので、テーブルデータ加工について Pandas とユースケース別に比較してみた">
+    <meta property="og:description" content="はじめに 以前、DuckDB に関する記事を書きました。 テーブルデータの加工に SQL を使うこと自体は以前からやっていたのですが、最近新たに、DuckDB（および一部の SQL 方言）でマクロが使えることを知りました。 マクロを使うと、複雑な加工ロジックを名前付.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8611.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIに「いい感じに作って」と言うのをやめたら、開発が回り出した — Spec-Driven Development 実践ガイド">
-    <meta name="twitter:description" content="はじめに — AIに雑に頼むと「速く間違う」だけ AIに「いい感じに作って」と言って、本当に「いい感じ」のものが返ってきたこと、ありますか. ? ちょっと考えてみましょう。こんなプロンプトを書いたことはないでしょうか。 ユーザー登録機能を作って で、返ってくるコードは.">
+    <meta name="twitter:title" content="DuckDB のマクロが便利だったので、テーブルデータ加工について Pandas とユースケース別に比較してみた">
+    <meta name="twitter:description" content="はじめに 以前、DuckDB に関する記事を書きました。 テーブルデータの加工に SQL を使うこと自体は以前からやっていたのですが、最近新たに、DuckDB（および一部の SQL 方言）でマクロが使えることを知りました。 マクロを使うと、複雑な加工ロジックを名前付.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIに「いい感じに作って」と言うのをやめたら、開発が回り出した — Spec-Driven Development 実践ガイド",
-        "description": "はじめに — AIに雑に頼むと「速く間違う」だけ AIに「いい感じに作って」と言って、本当に「いい感じ」のものが返ってきたこと、ありますか. ? ちょっと考えてみましょう。こんなプロンプトを書いたことはないでしょうか。 ユーザー登録機能を作って で、返ってくるコードは.",
+        "headline": "DuckDB のマクロが便利だったので、テーブルデータ加工について Pandas とユースケース別に比較してみた",
+        "description": "はじめに 以前、DuckDB に関する記事を書きました。 テーブルデータの加工に SQL を使うこと自体は以前からやっていたのですが、最近新たに、DuckDB（および一部の SQL 方言）でマクロが使えることを知りました。 マクロを使うと、複雑な加工ロジックを名前付.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-26T22:52:14",
-        "dateModified": "2026-03-28T20:33:06.299454",
+        "datePublished": "2026-04-25T01:26:22",
+        "dateModified": "2026-04-26T20:40:22.714224",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8611.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8611.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","本","EV"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIに「いい感じに作って」と言うのをやめたら、開発が回り出した — Spec-Driven Development 実践ガイド",
+                "name": "DuckDB のマクロが便利だったので、テーブルデータ加工について Pandas とユースケース別に比較してみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8611.html"
             }
         ]
@@ -113,43 +113,37 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIに「いい感じに作って」と言うのをやめたら、開発が回り出した — Spec-Driven Deve...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">DuckDB のマクロが便利だったので、テーブルデータ加工について Pandas とユースケース別に...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIに「いい感じに作って」と言うのをやめたら、開発が回り出した — Spec-Driven Development 実践ガイド</h1>
+                <h1>DuckDB のマクロが便利だったので、テーブルデータ加工について Pandas とユースケース別に比較してみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/akira_papa_AI/items/5f66b2b289994e4a0256?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-26T22:52:14">
-                        公開: 2026-03-26T22:52:14
+                    <span class="source">出典: <a href="https://qiita.com/atsushi11o7/items/5ad223ebdb5e138534c6?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-04-25T01:26:22">
+                        公開: 2026-04-25T01:26:22
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">本</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに — AIに雑に頼むと「速く間違う」だけ
-AIに「いい感じに作って」と言って、本当に「いい感じ」のものが返ってきたこと、ありますか...?
-ちょっと考えてみましょう。こんなプロンプトを書いたことはないでしょうか。
-ユーザー登録機能を作って
+                    はじめに
+以前、DuckDB に関する記事を書きました。
 
-で、返ってくるコードは...
+テーブルデータの加工に SQL を使うこと自体は以前からやっていたのですが、最近新たに、DuckDB（および一部の SQL 方言）でマクロが使えることを知りました。
+マクロを使うと、複雑な加工ロジックを名前付...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/akira_papa_AI/items/5f66b2b289994e4a0256?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/atsushi11o7/items/5ad223ebdb5e138534c6?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,60 +152,25 @@ AIに「いい感じに作って」と言って、本当に「いい感じ」の
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +185,16 @@ AIに「いい感じに作って」と言って、本当に「いい感じ」の
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_1509.html">
+                    <a href="気になる記になる_8751.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">対話型AIは「おべっか」傾向 研究</span>
+                        <span class="nav-title">DJI、中国で新型ワイヤレスマイク「DJI Mic Mini 2」を発表 ｰ 音声トーンプリセット対...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2262.html">
+                    <a href="気になる記になる_1928.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Code同士が会話できるようになったらしいので試してみた</span>
+                        <span class="nav-title">C Smart、Appleの｢MacBook｣シリーズが最大15,000円オフとなるキャンペーンを開...</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +207,53 @@ AIに「いい感じに作って」と言って、本当に「いい感じ」の
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3440.html">
-                        <h3>「Claude」の著作権訴訟が決着へ、和解金は過去最大規模の約2400億円</h3>
+                    <a href="CNET_Japan_最新情報総合_847.html">
+                        <h3>GWで高速が大渋滞、一般道に下りる？下りない？ 判断助けるアプリ　ナビタイム公開</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">作家らとAnthropicの間で争われている、会話型AI「Claude」の学習をめぐる画期的な著作権訴訟は、10万件近い請求が提出され、終結に近づいている。.</p>
+                        <p class="related-summary">ナビタイムジャパンは4月23日、「渋滞情報マップ by NAVITIME」アプリで、渋滞多発区間における高速経由と一般道経由の所要時間とルートを比較できる新機能「迂回ルートマップ」の提供を同日開始した...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4632.html">
-                        <h3>ChatGPT、1度アップロードしたファイルを保存し再利用可能に</h3>
+                    <a href="CNET_Japan_最新情報総合_6899.html">
+                        <h3>カシオG-SHOCK、G-LIDEシリーズ初の心拍計搭載モデル</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは今週、ChatGPTにアップロードしたファイルやAIで作成したコンテンツを保存し、後から呼び出せる「ライブラリ」機能を発表した。.</p>
+                        <p class="related-summary">カシオ計算機は4月23日、耐衝撃ウオッチ「G-SHOCK」の新製品として、エクストリームスポーツ向けラインアップ「G-LIDE（ジーライド）」シリーズから、同シリーズ初の心拍計測機能を搭載した「GBX...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3149.html">
-                        <h3>ChatGPTの「アダルトモード」、無期限凍結か　Sora終了に続き</h3>
+                    <a href="CNET_Japan_最新情報総合_5186.html">
+                        <h3>Spotifyが20周年、歴代ランキング公開　最も聴かれた音楽は？</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIが、ChatGPT向けに検討していた成人向けチャット機能の開発を無期限で凍結したと報じられた。動画生成ツール「Sora」の終了に続く方針転換とみられる。.</p>
+                        <p class="related-summary">Spotifyはサービス開始20周年を記念して、歴代で最も再生されたコンテンツのリストを発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1840.html">
-                        <h3>Wikipedia、AI生成コンテンツを原則禁止に　例外は2つのみ</h3>
+                    <a href="CNET_Japan_最新情報総合_3198.html">
+                        <h3>PayPay銀行、口座数が1000万を突破</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Wikipediaはこの25年間、信頼でき検証できる情報源に基づく限り、誰もが知識を持ち寄れるオープンなオンライン百科事典として運営されてきた。だが、AIツールがコンテンツ制作の在り方を急速に変えつつ...</p>
+                        <p class="related-summary">PayPay銀行は4月24日、2026年4月に預金口座数が1000万口座を突破したと発表した。2021年4月の社名変更以降、5年間で500万口座増加したという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7316.html">
-                        <h3>株式会社AiTrax、ブラジルにおける先進的メッシュWi-Fi実証実験を実施</h3>
+                    <a href="CNET_Japan_最新情報総合_3416.html">
+                        <h3>X、コミュニティ機能を5月30日に終了　後継はXChatのグルチャ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">株式会社AiTrax、ブラジルにおける先進的メッシュWi-Fi実証実験を実施.</p>
+                        <p class="related-summary">X（旧Twitter）のプロダクト責任者を務めるNikita Bier氏は、Xのコミュニティ機能を終了し、ユーザー同士の交流機能を「XChat」のグループチャットに移行すると明らかにした。移行期限は5...</p>
                     </a>
                 </article>
             </div>

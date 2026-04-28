@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwiftのStringのAllocationsの最適化とストレージ選択の仕組み | 日本のテックニュース速報</title>
-    <meta name="description" content="SwiftのStringのAllocationsの最適化とストレージ選択の仕組み - テクノロジーニュースをお届け。">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>Matz の Ruby AOT コンパイラ Spinel を試してみました | 日本のテックニュース速報</title>
+    <meta name="description" content="RubyKaigi 2026 に参加して、Matz のキーノートで Spinel の発表を聞きました。Spinel は Ruby の AOT コンパイラで、Ruby のコードを読み、C のコードを生成し、最後は native binary として実行できる形にします">
+    <meta name="keywords" content="AI,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="SwiftのStringのAllocationsの最適化とストレージ選択の仕組み">
-    <meta property="og:description" content="SwiftのStringのAllocationsの最適化とストレージ選択の仕組み - テクノロジーニュースをお届け。">
+    <meta property="og:title" content="Matz の Ruby AOT コンパイラ Spinel を試してみました">
+    <meta property="og:description" content="RubyKaigi 2026 に参加して、Matz のキーノートで Spinel の発表を聞きました。Spinel は Ruby の AOT コンパイラで、Ruby のコードを読み、C のコードを生成し、最後は native binary として実行できる形にします">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1380.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SwiftのStringのAllocationsの最適化とストレージ選択の仕組み">
-    <meta name="twitter:description" content="SwiftのStringのAllocationsの最適化とストレージ選択の仕組み - テクノロジーニュースをお届け。">
+    <meta name="twitter:title" content="Matz の Ruby AOT コンパイラ Spinel を試してみました">
+    <meta name="twitter:description" content="RubyKaigi 2026 に参加して、Matz のキーノートで Spinel の発表を聞きました。Spinel は Ruby の AOT コンパイラで、Ruby のコードを読み、C のコードを生成し、最後は native binary として実行できる形にします">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "SwiftのStringのAllocationsの最適化とストレージ選択の仕組み",
-        "description": "SwiftのStringのAllocationsの最適化とストレージ選択の仕組み - テクノロジーニュースをお届け。",
+        "headline": "Matz の Ruby AOT コンパイラ Spinel を試してみました",
+        "description": "RubyKaigi 2026 に参加して、Matz のキーノートで Spinel の発表を聞きました。Spinel は Ruby の AOT コンパイラで、Ruby のコードを読み、C のコードを生成し、最後は native binary として実行できる形にします",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-18T02:17:06",
-        "dateModified": "2026-04-19T20:40:12.999909",
+        "datePublished": "2026-04-26T06:34:35",
+        "dateModified": "2026-04-28T22:58:33.464384",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1380.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1380.html",
-        "articleSection": "通信・ネットワーク",
-        "keywords": []
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "通信・ネットワーク",
-                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "SwiftのStringのAllocationsの最適化とストレージ選択の仕組み",
+                "name": "Matz の Ruby AOT コンパイラ Spinel を試してみました",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1380.html"
             }
         ]
@@ -113,38 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
-                <li aria-current="page">SwiftのStringのAllocationsの最適化とストレージ選択の仕組み</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">Matz の Ruby AOT コンパイラ Spinel を試してみました</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>SwiftのStringのAllocationsの最適化とストレージ選択の仕組み</h1>
+                <h1>Matz の Ruby AOT コンパイラ Spinel を試してみました</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/hinakko/articles/bfc446a24d0de0" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: 通信・ネットワーク</span>
-                    <time datetime="2026-04-18T02:17:06">
-                        公開: 2026-04-18T02:17:06
+                    <span class="source">出典: <a href="https://zenn.dev/geeknees/articles/edc3cb36ea251c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-04-26T06:34:35">
+                        公開: 2026-04-26T06:34:35
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-try! Swift Tokyo2026のPaul HudsonさんのワークショップのHigh-Performance Swiftに参加し、Swift言語のStringStorageの話を聞き、Stringの内部構造とどのように最適化されているのかについて興味を持ったので、この記事を書きました。
-https://x.com/hinakkograshi/status/2043153057278763029?s=20
-
- SwiftのStringのAllocations
-Stringのストレージの格納場所は大きく分けて、Small String Optimization・__S...
+                    RubyKaigi 2026 に参加して、Matz のキーノートで Spinel の発表を聞きました。Spinel は Ruby の AOT コンパイラで、Ruby のコードを読み、C のコードを生成し、最後は native binary として実行できる形にします。Ruby を書いている人間としては、「Ruby の AOT コンパイラ」という言葉だけでテンションが上がります。
+Ruby はかなり動的な言語でもあります。メソッド呼び出し、クラスの再オープン、メタプログラミング、eval、実行時に変わるオブジェクトの形。普通に考えると、AOT コンパイルとは相性が悪そうに見えます。
+それで...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/hinakko/articles/bfc446a24d0de0" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/geeknees/articles/edc3cb36ea251c" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -153,25 +154,60 @@ Stringのストレージの格納場所は大きく分けて、Small String Opti
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>通信・ネットワーク関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -186,16 +222,16 @@ Stringのストレージの格納場所は大きく分けて、Small String Opti
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_2667.html">
+                    <a href="iPhone_Mania_7626.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Insta360初のミラーレスカメラの実機写真が登場 ｰ マイクロフォーサーズ採用</span>
+                        <span class="nav-title">次期MacBook Proに搭載が噂される新機能まとめ〜注目はOLEDとタッチ対応</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9880.html">
+                    <a href="Zennのトレンド_5156.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Designでポートフォリオサイトをリデザインしてみた: エンジニアが1時間程度で和モ...</span>
+                        <span class="nav-title">Figma開かんでもデザインできる時代がきたで｜Claude Designで初稿まで爆速ガイド</span>
                     </a>
                 </div>
             </div>
@@ -208,33 +244,53 @@ Stringのストレージの格納場所は大きく分けて、Small String Opti
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6882.html">
-                        <h3>楽天ペイで税金や公共料金を支払うと「全額還元」に　抽選100人限定</h3>
+                    <a href="CNET_Japan_最新情報総合_8284.html">
+                        <h3>Instagram、新アプリ「Instants」をテスト中　無加工の“リアル”を24時間だけ共有</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">楽天ペイメントは4月16日、スマートフォン決済サービス「楽天ペイ」アプリで、税金や公共料金の支払いを対象にしたキャンペーン「税金・公共料金のお支払いは楽天ペイで！ 抽選で楽天ポイント全額還元！」を開始...</p>
+                        <p class="related-summary">いわゆる「完璧な投稿」は忘れて、生のまま、無加工で、AIも使わない写真を友人に送りたいとしたらどうか。それを狙ったのが、Instagramの新アプリ「Instants」だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1933.html">
-                        <h3>【自宅WiFi利用実態】「料金以外で」重視されていたのは”工事不要”、選び方と後悔を調査</h3>
+                    <a href="CNET_Japan_最新情報総合_8665.html">
+                        <h3>NTT、AIネイティブインフラ「AIOWN」発表　国内データセンター容量を33年度に約1GWへ</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">【自宅WiFi利用実態】「料金以外で」重視されていたのは”工事不要”、選び方と後悔を調査.</p>
+                        <p class="related-summary">NTT、NTTデータグループ、NTTドコモビジネスの3社は4月27日、AI向けデータセンターやネットワーク、計算リソースを一体で提供するAIネイティブインフラ「AIOWN」を展開すると発表した。AI需...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_8642.html">
-                        <h3>Bun、コマンドラインからヘッドレスブラウザの操作を行える新機能「Headless Browser Automation...</h3>
+                    <a href="CNET_Japan_最新情報総合_760.html">
+                        <h3>OpenAIが開発中のスマホ、ついにアプリをAIエージェントで代替か--新たな噂</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">オープンソースで開発されているJavaScriptランタイムの「Bun」の最新版となる「Bun v1. 12」で、コマンドラインからヘッドレスブラウザの操作を行える新機能が実装されました。BunのAP...</p>
+                        <p class="related-summary">「ChatGPT」を手がけるOpenAIによる自社製スマートフォン開発を巡り、新たな観測が浮上した。Apple関連の動向に詳しいアナリストとして知られるミンチー・クオ氏は現地時間4月25日、OpenA...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_5350.html">
+                        <h3>OpenAI、Azure以外でも製品提供可能に　Microsoftとの独占契約が改定</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">Microsoftは4月27日（現地時間）、OpenAIとの提携契約を改定したと発表した。OpenAI製品は原則としてAzureで先行提供されるが、OpenAI側はAzure以外のクラウド経由でも自社...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_4535.html">
+                        <h3>テイラー・スウィフトが「声」と「姿」を商標出願、AIディープフェイクに対抗へ</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">テイラー・スウィフトさんが、自身の声や画像がAIに悪用される可能性に対抗するため、商標による法的保護に乗り出した。.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>セキュリティ分析AIエージェント実装にみるハーネスエンジニアリング | 日本のテックニュース速報</title>
-    <meta name="description" content="先日、zennの記事にて紹介したセキュリティアラートに関する分析を担うAIエージェント Warren のハーネスエンジニアリングについて社内で共有したところ、思いの外盛り上がったので記事にしてみました。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="AI">
+    <title>コードを1行も書く前にバグを潰す — 生成AIが「理想論」だったシフトレフトを現実にする | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんにちは！TOKIUMでQAチームのリーダーをしている西田です。 「シフトレフト」「ATDD（受け入れテスト駆動開発）」「BDD（振る舞い駆動開発）」 — テストを上流に持っていこうという考え方は、ソフトウェア開発の世界で10年以上前から提唱されてきました">
+    <meta name="keywords" content="AI,Claude,GitHub">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="セキュリティ分析AIエージェント実装にみるハーネスエンジニアリング">
-    <meta property="og:description" content="先日、zennの記事にて紹介したセキュリティアラートに関する分析を担うAIエージェント Warren のハーネスエンジニアリングについて社内で共有したところ、思いの外盛り上がったので記事にしてみました。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="コードを1行も書く前にバグを潰す — 生成AIが「理想論」だったシフトレフトを現実にする">
+    <meta property="og:description" content="はじめに こんにちは！TOKIUMでQAチームのリーダーをしている西田です。 「シフトレフト」「ATDD（受け入れテスト駆動開発）」「BDD（振る舞い駆動開発）」 — テストを上流に持っていこうという考え方は、ソフトウェア開発の世界で10年以上前から提唱されてきました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_619.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="セキュリティ分析AIエージェント実装にみるハーネスエンジニアリング">
-    <meta name="twitter:description" content="先日、zennの記事にて紹介したセキュリティアラートに関する分析を担うAIエージェント Warren のハーネスエンジニアリングについて社内で共有したところ、思いの外盛り上がったので記事にしてみました。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="コードを1行も書く前にバグを潰す — 生成AIが「理想論」だったシフトレフトを現実にする">
+    <meta name="twitter:description" content="はじめに こんにちは！TOKIUMでQAチームのリーダーをしている西田です。 「シフトレフト」「ATDD（受け入れテスト駆動開発）」「BDD（振る舞い駆動開発）」 — テストを上流に持っていこうという考え方は、ソフトウェア開発の世界で10年以上前から提唱されてきました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "セキュリティ分析AIエージェント実装にみるハーネスエンジニアリング",
-        "description": "先日、zennの記事にて紹介したセキュリティアラートに関する分析を担うAIエージェント Warren のハーネスエンジニアリングについて社内で共有したところ、思いの外盛り上がったので記事にしてみました。最新のテクノロジー情報をお届けします。",
+        "headline": "コードを1行も書く前にバグを潰す — 生成AIが「理想論」だったシフトレフトを現実にする",
+        "description": "はじめに こんにちは！TOKIUMでQAチームのリーダーをしている西田です。 「シフトレフト」「ATDD（受け入れテスト駆動開発）」「BDD（振る舞い駆動開発）」 — テストを上流に持っていこうという考え方は、ソフトウェア開発の世界で10年以上前から提唱されてきました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-14T23:24:32",
-        "dateModified": "2026-04-17T09:20:09.789350",
+        "datePublished": "2026-04-26T23:00:08",
+        "dateModified": "2026-04-29T15:59:34.945765",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_619.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_619.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "keywords": ["AI","Claude","GitHub"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "セキュリティ分析AIエージェント実装にみるハーネスエンジニアリング",
+                "name": "コードを1行も書く前にバグを潰す — 生成AIが「理想論」だったシフトレフトを現実にする",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_619.html"
             }
         ]
@@ -114,42 +114,40 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">セキュリティ分析AIエージェント実装にみるハーネスエンジニアリング</li>
+                <li aria-current="page">コードを1行も書く前にバグを潰す — 生成AIが「理想論」だったシフトレフトを現実にする</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>セキュリティ分析AIエージェント実装にみるハーネスエンジニアリング</h1>
+                <h1>コードを1行も書く前にバグを潰す — 生成AIが「理想論」だったシフトレフトを現実にする</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/ubie_dev/articles/sec-agent-harness-eng" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/tokium_dev/articles/c0e6e9aca98a85" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-04-14T23:24:32">
-                        公開: 2026-04-14T23:24:32
+                    <time datetime="2026-04-26T23:00:08">
+                        公開: 2026-04-26T23:00:08
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    先日、zennの記事にて紹介したセキュリティアラートに関する分析を担うAIエージェント Warren のハーネスエンジニアリングについて社内で共有したところ、思いの外盛り上がったので記事にしてみました。一般的な生成AIエージェントの話だけでなくセキュリティ分析に特化した話も織り交ぜていますが、何かのご参考になれば幸いです。
-
-今回対象となるWarrenは各サービス・監視装置から受け取ったアラートを分析するための生成AIエージェントになります
-
- 前提：ハーネスエンジニアリングとは
-
- 一般的な定義
-ハーネスエンジニアリングという言葉は、2026年2月のMitchell Hashimoto...
+                    はじめに
+こんにちは！TOKIUMでQAチームのリーダーをしている西田です。
+「シフトレフト」「ATDD（受け入れテスト駆動開発）」「BDD（振る舞い駆動開発）」 — テストを上流に持っていこうという考え方は、ソフトウェア開発の世界で10年以上前から提唱されてきました。概念としては広く知られているのに、実際に徹底できている現場は少ない。「理想はわかるけど、やるのが大変」というのが正直なところだったと思います。
+ところが今、生成AIの急速な進化によって前提が変わりつつあります。Claude CodeやGitHub Copilotによるコーディング自動化、Playwright Agent...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/ubie_dev/articles/sec-agent-harness-eng" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/tokium_dev/articles/c0e6e9aca98a85" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -176,6 +174,16 @@
                                 <div class="product-info">
                                     <div class="product-title">機械学習 - Amazon検索結果</div>
                                     <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -216,16 +224,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2376.html">
+                    <a href="Qiita_-_人気の記事_7062.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">&#34;use server&#34; も &#34;use client&#34; も要らない —TanStack Start ...</span>
+                        <span class="nav-title">AWS公式スマホゲームでAWSを遊んで学ぼう！(AWS  Card Clash)</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_2294.html">
+                    <a href="Qiita_-_人気の記事_7199.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">予測精度より重要なもの――クオンツ運用で資金管理が支配的になる理由</span>
+                        <span class="nav-title">API入門</span>
                     </a>
                 </div>
             </div>
@@ -238,53 +246,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7166.html">
-                        <h3>スターバックス、ChatGPTで「今の気分」に最適な一杯を提案可能に</h3>
+                    <a href="CNET_Japan_最新情報総合_1488.html">
+                        <h3>Instagram、新アプリ「Instants」をテスト中　無加工の“リアル”を24時間だけ共有</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Starbucks（スターバックス）で毎日コーヒーを飲みたい人は、次の一杯を「ChatGPT」に相談できるようになる。.</p>
+                        <p class="related-summary">いわゆる「完璧な投稿」は忘れて、生のまま、無加工で、AIも使わない写真を友人に送りたいとしたらどうか。それを狙ったのが、Instagramの新アプリ「Instants」だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8625.html">
-                        <h3>Anthropic、Claude Opus 4.7公開--「指示に従順かつセンスがあり創造的」なモデル</h3>
+                    <a href="CNET_Japan_最新情報総合_6205.html">
+                        <h3>NTT、AIネイティブインフラ「AIOWN」発表　国内データセンター容量を33年度に約1GWへ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Anthropicは現地時間4月16日、新たなAIモデルを公開した。とはいえ、それは「Claude Mythos Preview」ではない。一般提供が始まった「Claude Opus 4. 7」は、開...</p>
+                        <p class="related-summary">NTT、NTTデータグループ、NTTドコモビジネスの3社は4月27日、AI向けデータセンターやネットワーク、計算リソースを一体で提供するAIネイティブインフラ「AIOWN」を展開すると発表した。AI需...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8855.html">
-                        <h3>OpenAIの「Codex」が大幅アップデート、PCアプリ操作や自動化が可能に</h3>
+                    <a href="CNET_Japan_最新情報総合_234.html">
+                        <h3>OpenAIが開発中のスマホ、ついにアプリをAIエージェントで代替か--新たな噂</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「Codex」は登場から1年足らずだが、OpenAIが描く「スーパーアプリ」実現の鍵を握るかもしれない。.</p>
+                        <p class="related-summary">「ChatGPT」を手がけるOpenAIによる自社製スマートフォン開発を巡り、新たな観測が浮上した。Apple関連の動向に詳しいアナリストとして知られるミンチー・クオ氏は現地時間4月25日、OpenA...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2146.html">
-                        <h3>大規模データセンター「建設停止」の法案、米メイン州が可決　なぜ？</h3>
+                    <a href="CNET_Japan_最新情報総合_3694.html">
+                        <h3>OpenAI、Azure以外でも製品提供可能に　Microsoftとの独占契約が改定</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">全米でAIデータセンター拡張のために膨大な土地が買収されるなか、少なくとも1つの州が、相次ぐ抗議活動や政治家からの要請を受け、この建設ブームの勢いを抑えようとしている。.</p>
+                        <p class="related-summary">Microsoftは4月27日（現地時間）、OpenAIとの提携契約を改定したと発表した。OpenAI製品は原則としてAzureで先行提供されるが、OpenAI側はAzure以外のクラウド経由でも自社...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1071.html">
-                        <h3>インテル、低価格帯向けCPU「Core Series 3」発表　AI PCを普及価格に</h3>
+                    <a href="CNET_Japan_最新情報総合_1244.html">
+                        <h3>テイラー・スウィフトが「声」と「姿」を商標出願、AIディープフェイクに対抗へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">インテルは4月16日、モバイル向けの新しい「Core Series 3」シリーズを発表した。.</p>
+                        <p class="related-summary">テイラー・スウィフトさんが、自身の声や画像がAIに悪用される可能性に対抗するため、商標による法的保護に乗り出した。.</p>
                     </a>
                 </article>
             </div>

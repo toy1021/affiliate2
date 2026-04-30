@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code Skillsは作って終わりじゃない — 事後ログで改善サイクルを回す | 日本のテックニュース速報</title>
-    <meta name="description" content="Claude Code の Custom Skills を使い込んでいると、ある問題に気づく。作った直後は快適に動くのに、数週間後に微妙にズレた出力が出始める。ユーザーがチャット上で修正を入れても、その修正は会話が終われば消える">
-    <meta name="keywords" content="Claude">
+    <title>ベクトルDBを使わないRAG。全てのナレッジを階層化する手法 | 日本のテックニュース速報</title>
+    <meta name="description" content="本記事では、RAGの性能を高めるための「Corpus2Skill」という手法について、ざっくり理解します。 株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こし、活用可能にする」プロダクトを開発しているスタートアップです">
+    <meta name="keywords" content="スタートアップ,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Code Skillsは作って終わりじゃない — 事後ログで改善サイクルを回す">
-    <meta property="og:description" content="Claude Code の Custom Skills を使い込んでいると、ある問題に気づく。作った直後は快適に動くのに、数週間後に微妙にズレた出力が出始める。ユーザーがチャット上で修正を入れても、その修正は会話が終われば消える">
+    <meta property="og:title" content="ベクトルDBを使わないRAG。全てのナレッジを階層化する手法">
+    <meta property="og:description" content="本記事では、RAGの性能を高めるための「Corpus2Skill」という手法について、ざっくり理解します。 株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こし、活用可能にする」プロダクトを開発しているスタートアップです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_134.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Code Skillsは作って終わりじゃない — 事後ログで改善サイクルを回す">
-    <meta name="twitter:description" content="Claude Code の Custom Skills を使い込んでいると、ある問題に気づく。作った直後は快適に動くのに、数週間後に微妙にズレた出力が出始める。ユーザーがチャット上で修正を入れても、その修正は会話が終われば消える">
+    <meta name="twitter:title" content="ベクトルDBを使わないRAG。全てのナレッジを階層化する手法">
+    <meta name="twitter:description" content="本記事では、RAGの性能を高めるための「Corpus2Skill」という手法について、ざっくり理解します。 株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こし、活用可能にする」プロダクトを開発しているスタートアップです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Code Skillsは作って終わりじゃない — 事後ログで改善サイクルを回す",
-        "description": "Claude Code の Custom Skills を使い込んでいると、ある問題に気づく。作った直後は快適に動くのに、数週間後に微妙にズレた出力が出始める。ユーザーがチャット上で修正を入れても、その修正は会話が終われば消える",
+        "headline": "ベクトルDBを使わないRAG。全てのナレッジを階層化する手法",
+        "description": "本記事では、RAGの性能を高めるための「Corpus2Skill」という手法について、ざっくり理解します。 株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こし、活用可能にする」プロダクトを開発しているスタートアップです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-10T01:48:46",
-        "dateModified": "2026-04-11T16:39:18.102111",
+        "datePublished": "2026-04-28T00:01:05",
+        "dateModified": "2026-04-30T02:57:19.308554",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_134.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_134.html",
         "articleSection": "プログラミング",
-        "keywords": ["Claude"]
+        "keywords": ["スタートアップ","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Code Skillsは作って終わりじゃない — 事後ログで改善サイクルを回す",
+                "name": "ベクトルDBを使わないRAG。全てのナレッジを階層化する手法",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_134.html"
             }
         ]
@@ -114,39 +114,47 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Claude Code Skillsは作って終わりじゃない — 事後ログで改善サイクルを回す</li>
+                <li aria-current="page">ベクトルDBを使わないRAG。全てのナレッジを階層化する手法</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Code Skillsは作って終わりじゃない — 事後ログで改善サイクルを回す</h1>
+                <h1>ベクトルDBを使わないRAG。全てのナレッジを階層化する手法</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/tre_conigli/articles/claude-code-skill-improvement-cycle" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/knowledgesense/articles/7dddae04a7d828" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-04-10T01:48:46">
-                        公開: 2026-04-10T01:48:46
+                    <time datetime="2026-04-28T00:01:05">
+                        公開: 2026-04-28T00:01:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
+                    <span class="tag">スタートアップ</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Claude Code の Custom Skills を使い込んでいると、ある問題に気づく。作った直後は快適に動くのに、数週間後に微妙にズレた出力が出始める。ユーザーがチャット上で修正を入れても、その修正は会話が終われば消える。
-この記事では、その「作って終わり」問題に対して、事後ログ収集という仕組みで改善サイクルを回すアプローチを解説する。具体的には、自作した capturing-run-update-logs というSkillの設計思想と仕組みを紹介する。
-対象読者: Claude Code の Skills を自作している、または自作を検討しているエンジニア。
+                    本記事では、RAGの性能を高めるための「Corpus2Skill」という手法について、ざっくり理解します。
+株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こし、活用可能にする」プロダクトを開発しているスタートアップです。
 
- Skillはな...
+ この記事は何
+この記事は、「ベクトルDB」を使わずにRAGの精度を上げる新手法「Corpus2Skill」の論文[1]について、日本語で簡単にまとめたものです。
+https://arxiv.org/abs/2604.14572
+今回も「そもそもRAGとは？」については、知っている前提で進みます（参考）
+
+ 本題
+
+ ざっくりサマリー
+「Cor...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/tre_conigli/articles/claude-code-skill-improvement-cycle" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/knowledgesense/articles/7dddae04a7d828" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,10 +167,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="スタートアップ - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">スタートアップ - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでスタートアップに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -173,16 +191,6 @@
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
                                     <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +231,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_9424.html">
+                    <a href="Zennのトレンド_4562.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">｢DJI Osmo Pocket 4｣の製品やアクセサリのレンダリング画像が流出</span>
+                        <span class="nav-title">40%キーボードに移行する前に知っておきたかったこと</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2866.html">
+                    <a href="Zennのトレンド_8470.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">世は大環境時代 - エージェントハーネスとRL環境の展開から見えてくるもの</span>
+                        <span class="nav-title">TypeScriptでunknownを扱うの、つらくない？</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +253,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1358.html">
-                        <h3>Amazon、インターホンを4K録画対応にする「防犯ドアホンプロ」　既存配線を流用可</h3>
+                    <a href="気になる記になる_1906.html">
+                        <h3>【セール】Adobeの｢Creative Cloud Pro｣などが最大36％オフに</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">Ringが日本市場向けに初めて特化開発したスマートドアホン「防犯ドアホンプロ」は、国内既存のインターホン配線を流用しながら4Kカメラ・双方向通話・遠隔サイレンをスマートフォンで操作できる製品だ。オンラ...</p>
+                        <p class="related-summary">現在、Adobeが、Amazonにおいて、「Creative Cloud Pro」などの各種ソフトウェアのセールを開催しています。 対象となっているのは、「Creative Cloud Pro」「Il...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5613.html">
-                        <h3>【必須】GitHubとnpmで脆弱なパッケージを入れないための防御設定 8選</h3>
+                    <a href="Qiita_-_人気の記事_8147.html">
+                        <h3>GitHub神話の6日間 — ガバナンス、稼働率、セキュリティ、コストが同時に揺らいだ一週間</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに こんばんは、mirukyです。 2026年3月31日、npmの Axios パッケージ（週間1億ダウンロード）がサプライチェーン攻撃を受けました。攻撃者はメンテナーへの標的型ソーシャルエンジ...</p>
+                        <p class="related-summary">今週のGitHubは運が悪かったのか、それとも18年分の請求書が一気に届いたのか。そしてその違いを我々が見分けられないのだとしたら、我々が依存していたのはインフラだったのか、それとも神話だったのか。 ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_4602.html">
-                        <h3>関数型って結局なんやねん！どないして活用せえっちゅうねん！</h3>
+                    <a href="Qiita_-_人気の記事_8736.html">
+                        <h3>相続税・低賃金・移民政策はどうつながるのか？―欧米の教訓から考える成長と財政の設計 : Pythonで学ぶ マクロ経済学...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">user: 「Pythonで学ぶマクロ経済学入門」、第76回を始めましょう。まず 「『安く使う経済』はなぜ高くつくのか？―欧米の教訓から学ぶ低賃金依存からの脱却 : Pythonで学ぶ マクロ経済学入...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_3594.html">
+                        <h3>C#で日本語識別子（変数名・メソッド名）を使う方法と実務上の注意点</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">TL;DR C# の識別子は Unicode をサポートしており、漢字・ひらがな・カタカナをそのまま変数名・メソッド名・クラス名に使える Visual Studio 2022（17. x）でインテリセ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_9813.html">
+                        <h3>Hono公式の Inertia アダプタが来た！Hono × Inertia × React によるSPA新体験</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">最近、オブジェクト指向プログラミングすなわちOOPとよく対比される概念には、「関数型プログラミング」があります。そこで、学問的ではなく、実務的な関数型プログラミングの側面を解説します。明日から活用でき...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1.html">
-                        <h3>マークダウン記法は奥深く、楽しい — テキストだけで「伝わるドキュメント」を作る技術</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">マークダウン記法は奥深く、楽しい — テキストだけで「伝わるドキュメント」を作る技術 はじめに 皆さんは Markdown（マークダウン） を「見出しと箇条書きが書ける記法」程度に思っていませんか？ ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1571.html">
-                        <h3>エンジニア歴20年の私が、素人バイブコーディング勢に物申す</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">お前がコードを書き始める前に 言っておきたい事がある かなりきびしい話もするが 俺の本音を聞いておけ はじめに これから少しの間、不器用で、偉そうで、厳しいことを言う。けれど最後まで聞いてくれれば、そ...</p>
+                        <p class="related-summary">はじめに 本日、Hono の作者 yusukebe さん から @hono/inertia が正式リリースされた。 https://x. com/yusukebe/status/20490208355...</p>
                     </a>
                 </article>
             </div>

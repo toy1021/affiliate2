@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoとRustのざっくり性能比較 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 2026年現在のGoとRustの性能差が気になったので調べました。 今回は、標準出力CLI と JSON APIサーバ という2つのパターンで、GoとRustの性能を比較しています。 ビルドの最適化オプションも含めて、LLMの力を借りて出来る限り実用的な観点で検証しています">
-    <meta name="keywords" content="LLM,Mac,macOS,GitHub">
+    <title>Claude Codeのルーチン機能で定期的にパフォーマンスチューニングをさせている | 日本のテックニュース速報</title>
+    <meta name="description" content="Claude Codeのルーチン（Routines）機能を、何に使うのが良いのかしばらく考えていました。 クラウド上でプロンプトを定期実行できる便利な機能なのですが、定期的に動かして意味のあるタスクは何だろう、と。 たどり着いたのが、パフォーマンスチューニングです">
+    <meta name="keywords" content="AI,Claude,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="GoとRustのざっくり性能比較">
-    <meta property="og:description" content="はじめに 2026年現在のGoとRustの性能差が気になったので調べました。 今回は、標準出力CLI と JSON APIサーバ という2つのパターンで、GoとRustの性能を比較しています。 ビルドの最適化オプションも含めて、LLMの力を借りて出来る限り実用的な観点で検証しています">
+    <meta property="og:title" content="Claude Codeのルーチン機能で定期的にパフォーマンスチューニングをさせている">
+    <meta property="og:description" content="Claude Codeのルーチン（Routines）機能を、何に使うのが良いのかしばらく考えていました。 クラウド上でプロンプトを定期実行できる便利な機能なのですが、定期的に動かして意味のあるタスクは何だろう、と。 たどり着いたのが、パフォーマンスチューニングです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_477.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GoとRustのざっくり性能比較">
-    <meta name="twitter:description" content="はじめに 2026年現在のGoとRustの性能差が気になったので調べました。 今回は、標準出力CLI と JSON APIサーバ という2つのパターンで、GoとRustの性能を比較しています。 ビルドの最適化オプションも含めて、LLMの力を借りて出来る限り実用的な観点で検証しています">
+    <meta name="twitter:title" content="Claude Codeのルーチン機能で定期的にパフォーマンスチューニングをさせている">
+    <meta name="twitter:description" content="Claude Codeのルーチン（Routines）機能を、何に使うのが良いのかしばらく考えていました。 クラウド上でプロンプトを定期実行できる便利な機能なのですが、定期的に動かして意味のあるタスクは何だろう、と。 たどり着いたのが、パフォーマンスチューニングです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_477.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "GoとRustのざっくり性能比較",
-        "description": "はじめに 2026年現在のGoとRustの性能差が気になったので調べました。 今回は、標準出力CLI と JSON APIサーバ という2つのパターンで、GoとRustの性能を比較しています。 ビルドの最適化オプションも含めて、LLMの力を借りて出来る限り実用的な観点で検証しています",
+        "headline": "Claude Codeのルーチン機能で定期的にパフォーマンスチューニングをさせている",
+        "description": "Claude Codeのルーチン（Routines）機能を、何に使うのが良いのかしばらく考えていました。 クラウド上でプロンプトを定期実行できる便利な機能なのですが、定期的に動かして意味のあるタスクは何だろう、と。 たどり着いたのが、パフォーマンスチューニングです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-28T10:57:53",
-        "dateModified": "2026-03-02T16:52:15.975782",
+        "datePublished": "2026-04-28T02:16:45",
+        "dateModified": "2026-04-30T19:23:40.328509",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_477.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_477.html",
-        "articleSection": "Apple製品",
-        "keywords": ["LLM","Mac","macOS","GitHub"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","Claude","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Apple製品",
-                "item": "https://toy1021.github.io/affiliate2/#category=Apple製品"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "GoとRustのざっくり性能比較",
+                "name": "Claude Codeのルーチン機能で定期的にパフォーマンスチューニングをさせている",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_477.html"
             }
         ]
@@ -113,70 +113,43 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=Apple製品">Apple製品</a></li>
-                <li aria-current="page">GoとRustのざっくり性能比較</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">Claude Codeのルーチン機能で定期的にパフォーマンスチューニングをさせている</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>GoとRustのざっくり性能比較</h1>
+                <h1>Claude Codeのルーチン機能で定期的にパフォーマンスチューニングをさせている</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/ponyo877/articles/ae398e081464ff" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: Apple製品</span>
-                    <time datetime="2026-02-28T10:57:53">
-                        公開: 2026-02-28T10:57:53
+                    <span class="source">出典: <a href="https://zenn.dev/yamadashy/articles/claude-code-routines-perf-tuning" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-04-28T02:16:45">
+                        公開: 2026-04-28T02:16:45
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">LLM</span>
-                    <span class="tag">Mac</span>
-                    <span class="tag">macOS</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-2026年現在のGoとRustの性能差が気になったので調べました。
-今回は、標準出力CLI と JSON APIサーバ という2つのパターンで、GoとRustの性能を比較しています。
-ビルドの最適化オプションも含めて、LLMの力を借りて出来る限り実用的な観点で検証しています。
-
- 検証環境
-
-
-
-項目
-バージョン
-
-
-
-
-OS
-macOS (darwin/arm64)
-
-
-Go
-1.26.0
-
-
-Rust
-1.93.1
-
-
-
-リポジトリはこちらで公開しています:
-https://github.com/ponyo877/go-vs-rust
-(めっちゃ珍しい言語割合...)
-...
+                    Claude Codeのルーチン（Routines）機能を、何に使うのが良いのかしばらく考えていました。
+クラウド上でプロンプトを定期実行できる便利な機能なのですが、定期的に動かして意味のあるタスクは何だろう、と。
+たどり着いたのが、パフォーマンスチューニングです。
+「速くなったか」は数値で判断できるので、ベンチマーク基盤さえあれば、あとはAIに任せられます。
+機能としてデグレしていないかもテストが充実していれば自動で確認できますし、ブランチを切って進めるので本流には影響しません。設計の創造性があまり要らないのもAIに任せやすいところですね。
+私が開発しているRepomixというCLIで...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/ponyo877/articles/ae398e081464ff" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/yamadashy/articles/claude-code-routines-perf-tuning" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -189,30 +162,30 @@ https://github.com/ponyo877/go-vs-rust
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Mac - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=macOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="macOS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">macOS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでmacOSに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,23 +195,23 @@ https://github.com/ponyo877/go-vs-rust
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>Apple製品関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">iPhone - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">MacBook - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -253,16 +226,16 @@ https://github.com/ponyo877/go-vs-rust
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_7551.html">
+                    <a href="Zennのトレンド_1022.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">優先席巡るSNSの議論 識者が警鐘</span>
+                        <span class="nav-title">ベクトルDBを使わないRAG。全てのナレッジを階層化する手法</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_212.html">
+                    <a href="Zennのトレンド_2239.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AppleマップにF1専用3Dマップが登場〜主な追加機能と詳細を解説</span>
+                        <span class="nav-title">AIに会社のGoogleアカウントを渡していませんか</span>
                     </a>
                 </div>
             </div>
@@ -275,53 +248,53 @@ https://github.com/ponyo877/go-vs-rust
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5706.html">
-                        <h3>iPhoneを圧倒する理想のカメラスマホ--Xiaomi「Leica Leitzphone」レビュー</h3>
+                    <a href="CNET_Japan_最新情報総合_7865.html">
+                        <h3>Meta、AIインフラ向け電力確保で新提携　宇宙太陽光を活用へ</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">呼び名が「Leica Leitzphone」でも「Xiaomi 17 Ultra Leica phone」でも構わない。この夢のようなカメラフォンに、今すっかり夢中になっている。.</p>
+                        <p class="related-summary">MetaはAIインフラとデータセンター向けの安定した電力確保に向け、Overview EnergyおよびNoon Energyと提携したと発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4334.html">
-                        <h3>シャオミ、iPad対抗「Xiaomi Pad 8」発売　スナドラ8 Elite搭載で約9万円〜</h3>
+                    <a href="CNET_Japan_最新情報総合_6599.html">
+                        <h3>グーグル、米国防総省と機密AI契約か　社員600人超が反対</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">シャオミが「薄くてもパワフル」を掲げる新タブレット「Xiaomi Pad 8」シリーズを発売。iPad Airに迫る5. 75mmの薄さに9200mAhバッテリーとSnapdragon 8 Elite...</p>
+                        <p class="related-summary">Googleが、米国防総省にAIモデルを提供する機密契約を結んだと報じられた。契約は機微な軍事用途を含む政府利用を認める内容とされ、社内では600人を超える従業員が反対を表明していた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="iPhone_Mania_9296.html">
-                        <h3>【速報】M4搭載iPad Air発表！メモリ50％増も価格は据え置き</h3>
+                    <a href="CNET_Japan_最新情報総合_6815.html">
+                        <h3>楽天トラベルがAIエージェント強化　チャットで宿探し→予約まで完結</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">iPhone Mania</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Appleは3月2日、M4を搭載したiPad Airを発表しました。価格（税込）は前モデルから据え置きで、11インチモデルが98,800円から、13インチモデルが128,800円からです。3月4日（水...</p>
+                        <p class="related-summary">楽天グループは4月30日、旅行予約サービス「楽天トラベル」のAIエージェント「Rakuten AI」に予約機能を追加したと発表した。これにより、宿泊施設の提案から予約完了までを、AIがチャット内で一貫...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_5577.html">
-                        <h3>Apple Watch向け純正バンドに2026年春の新色が登場｜Hermèsモデルにも多数追加</h3>
+                    <a href="ASCII_jp__トップ_5953.html">
+                        <h3>つかみ持ちユーザー必見！ 白一色のワイヤレスゲーミングマウスが10％オフの1.3万円</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">本日、Appleが、Apple Watch向け純正バンドの2026年春の新色を発売しました。 新色が追加されたのは「スポーツバンド」と「スポーツループ」に加え、Hermèsの各モデル。 「スポーツバン...</p>
+                        <p class="related-summary">jpにて、AIM1のワイヤレスゲーミングマウス「SHIGURE ホワイト」が販売中だ。参考価格は1万4980円だが、スマイルSALEにより10％オフの1万3482円で購入できる（4月30日時点）。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="iPhone_Mania_6843.html">
-                        <h3>iPhone17eに対応する純正アクセサリーが発売〜Watchバンドに新色を追加</h3>
+                    <a href="ASCII_jp__トップ_8607.html">
+                        <h3>AMD Ryzen AI 7 350搭載の一体型デスクトップ「FMV WF2-L1」が、特価で24万7500円！</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">iPhone Mania</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Appleが、iPhone17eとiPad Air（M4）に対応する純正アクセサリーを発売しました。 また、iPhone17シリコーンケースやクロスボディストラップ、Apple Watchバンドにも新...</p>
+                        <p class="related-summary">FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。.</p>
                     </a>
                 </article>
             </div>

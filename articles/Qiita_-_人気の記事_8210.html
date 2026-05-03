@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHubを使ったClaude Codeのオーケストレーションツールを作っている | 日本のテックニュース速報</title>
-    <meta name="description" content="この記事は何 以前、Claude Codeへのタスク依頼やレビュー修正依頼をGitHub上で完結できるようにした「claude-task-worker」というツールについて記事を書きました。 この記事を書いた時点では、GitHub上のラベルをトリガーにしてIssue.">
-    <meta name="keywords" content="Claude,GitHub">
+    <title>Claude Code のトークン消費を抑える実務テクニック5選 — Skills / .claudeignore / Subagentの使い分け | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Claude Code を業務で毎日使っていると、避けて通れないのが トークン消費の問題 です。 MAX プラン（月 $100）でも、無計画に使うとあっという間にレート制限に達します。最近、rtk-ai/rtk のように LLM トークン消費を 60〜90% 削.">
+    <meta name="keywords" content="AI,Claude,LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="GitHubを使ったClaude Codeのオーケストレーションツールを作っている">
-    <meta property="og:description" content="この記事は何 以前、Claude Codeへのタスク依頼やレビュー修正依頼をGitHub上で完結できるようにした「claude-task-worker」というツールについて記事を書きました。 この記事を書いた時点では、GitHub上のラベルをトリガーにしてIssue.">
+    <meta property="og:title" content="Claude Code のトークン消費を抑える実務テクニック5選 — Skills / .claudeignore / Subagentの使い分け">
+    <meta property="og:description" content="はじめに Claude Code を業務で毎日使っていると、避けて通れないのが トークン消費の問題 です。 MAX プラン（月 $100）でも、無計画に使うとあっという間にレート制限に達します。最近、rtk-ai/rtk のように LLM トークン消費を 60〜90% 削.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8210.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GitHubを使ったClaude Codeのオーケストレーションツールを作っている">
-    <meta name="twitter:description" content="この記事は何 以前、Claude Codeへのタスク依頼やレビュー修正依頼をGitHub上で完結できるようにした「claude-task-worker」というツールについて記事を書きました。 この記事を書いた時点では、GitHub上のラベルをトリガーにしてIssue.">
+    <meta name="twitter:title" content="Claude Code のトークン消費を抑える実務テクニック5選 — Skills / .claudeignore / Subagentの使い分け">
+    <meta name="twitter:description" content="はじめに Claude Code を業務で毎日使っていると、避けて通れないのが トークン消費の問題 です。 MAX プラン（月 $100）でも、無計画に使うとあっという間にレート制限に達します。最近、rtk-ai/rtk のように LLM トークン消費を 60〜90% 削.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "GitHubを使ったClaude Codeのオーケストレーションツールを作っている",
-        "description": "この記事は何 以前、Claude Codeへのタスク依頼やレビュー修正依頼をGitHub上で完結できるようにした「claude-task-worker」というツールについて記事を書きました。 この記事を書いた時点では、GitHub上のラベルをトリガーにしてIssue.",
+        "headline": "Claude Code のトークン消費を抑える実務テクニック5選 — Skills / .claudeignore / Subagentの使い分け",
+        "description": "はじめに Claude Code を業務で毎日使っていると、避けて通れないのが トークン消費の問題 です。 MAX プラン（月 $100）でも、無計画に使うとあっという間にレート制限に達します。最近、rtk-ai/rtk のように LLM トークン消費を 60〜90% 削.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-29T13:30:35",
-        "dateModified": "2026-03-30T19:02:58.712611",
+        "datePublished": "2026-05-02T02:35:59",
+        "dateModified": "2026-05-03T16:53:31.612999",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8210.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8210.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Claude","GitHub"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","Claude","LLM"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "GitHubを使ったClaude Codeのオーケストレーションツールを作っている",
+                "name": "Claude Code のトークン消費を抑える実務テクニック5選 — Skills / .claudeignore / Subagentの使い分け",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8210.html"
             }
         ]
@@ -113,40 +113,40 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">GitHubを使ったClaude Codeのオーケストレーションツールを作っている</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">Claude Code のトークン消費を抑える実務テクニック5選 — Skills / .claud...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>GitHubを使ったClaude Codeのオーケストレーションツールを作っている</h1>
+                <h1>Claude Code のトークン消費を抑える実務テクニック5選 — Skills / .claudeignore / Subagentの使い分け</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/getty104/items/6a0c87ba3eeba999e673?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-03-29T13:30:35">
-                        公開: 2026-03-29T13:30:35
+                    <span class="source">出典: <a href="https://qiita.com/ennagara128/items/26e7168007e80024cf54?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-05-02T02:35:59">
+                        公開: 2026-05-02T02:35:59
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">AI</span>
                     <span class="tag">Claude</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事は何
-以前、Claude Codeへのタスク依頼やレビュー修正依頼をGitHub上で完結できるようにした「claude-task-worker」というツールについて記事を書きました。
-
-この記事を書いた時点では、GitHub上のラベルをトリガーにしてIssue...
+                    はじめに
+Claude Code を業務で毎日使っていると、避けて通れないのが トークン消費の問題 です。
+MAX プラン（月 $100）でも、無計画に使うとあっという間にレート制限に達します。最近、rtk-ai/rtk のように LLM トークン消費を 60〜90% 削...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/getty104/items/6a0c87ba3eeba999e673?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/ennagara128/items/26e7168007e80024cf54?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,6 +159,16 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">Claude - Amazon検索結果</div>
@@ -169,20 +179,10 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -192,23 +192,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +223,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7206.html">
+                    <a href="気になる記になる_6490.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">React やだ 2026</span>
+                        <span class="nav-title">【セール】Buhoの｢BuhoCleaner｣などMac向けソフト4本が最大70％オフに ｰ  5月...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6352.html">
+                    <a href="Qiita_-_人気の記事_3521.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AIネイティブな時代への準備</span>
+                        <span class="nav-title">Claude Codeについて思うこと</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +245,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8778.html">
-                        <h3>OKIと日立、ATM事業を統合　キャッシュレス化でも持続可能な事業成長めざす</h3>
+                    <a href="CNET_Japan_最新情報総合_5182.html">
+                        <h3>楽天トラベルがAIエージェント強化　チャットで宿探し→予約まで完結</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OKIと日立製作所、日立チャネルソリューションズは3月26日、ATMを含む自動化機器事業の統合に向けた契約と、合弁会社に関する株主間契約の締結で合意したと発表した。OKIがATMを含む自動化機器の開発...</p>
+                        <p class="related-summary">楽天グループは4月30日、旅行予約サービス「楽天トラベル」のAIエージェント「Rakuten AI」に予約機能を追加したと発表した。これにより、宿泊施設の提案から予約完了までを、AIがチャット内で一貫...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8892.html">
-                        <h3>「0.05度C以下の温度差」を鮮明に捉えるカメラセンサー、富士通が開発　防衛監視に活用</h3>
+                    <a href="CNET_Japan_最新情報総合_4739.html">
+                        <h3>ChatGPTはなぜ「ゴブリン」に執着したのか　OpenAIが明かした不具合の正体</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">富士通は3月27日、防衛・防災分野の監視能力を高める高感度・高精細な2波長赤外線センサーを開発したと発表した。防衛装備庁の「広帯域・高感度赤外線検知器の研究試作」を受注して開発したもので、試作品はすで...</p>
+                        <p class="related-summary">「ChatGPT」は、妙なほどゴブリンに執着していた。開発元のOpenAIが原因を調べて修正に乗り出すほどだった。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_2785.html">
-                        <h3>定常業務を自動操縦にする — Claude Code スケジューラーの育て方</h3>
+                    <a href="CNET_Japan_最新情報総合_2232.html">
+                        <h3>HDRディスプレイグラス「RayNeo Air 4 Pro」レビュー：XREALやVITUREと比べて見えた差</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに クラシルで開発マネージャーをしているfunzinです。 本記事では、Claude Codeのスケジューラー機能を使って定常業務を自動化し、タスクを覚えておくストレスをゼロに近づける運用フロー...</p>
+                        <p class="related-summary">TCLの最新ディスプレイグラス「RayNeo Air 4 Pro」のレビューをお届けする。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_8959.html">
-                        <h3>よう若いの。Linuxってのはだな。</h3>
+                    <a href="Qiita_-_人気の記事_5253.html">
+                        <h3>Strands AgentsのTypeScript版がv1.0.0に到達したのでAI SDK用のアダプターを作ってみた</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">どうしたんですか 例えば20代の若者、アプリケーションエンジニアをしている若者に対して。 飲み会でLinuxってのは本当にいいんだよ。俺の話を聞けよ。って30分くらいLinuxの説明をできたらいいな、...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6702.html">
-                        <h3>【M365 Copilot】Teamsでチャットするだけで進捗管理ができた話</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">この記事はGitHub Copilotと一緒に書きました。 はじめに 普段、Teamsでチームメンバーとやり取りをしていると、チャットの中に色々な情報が散在していきます。「あのタスク完了したよ」「こう...</p>
+                        <p class="related-summary">0記念になにかしてみようと思い、以前からお世話になってるAI SDKと連携できるようにアダプターをバイブで作ってみました。 使い方 Next. Strands AgentsのTypeScript版がv...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_4322.html">
+                        <h3>数学の未解決問題 AIが相次ぎ解く</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
                     </a>
                 </article>
             </div>

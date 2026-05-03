@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>初めてのMac環境構築。モダンな次世代ツール群でターミナルを染め上げた話 | 日本のテックニュース速報</title>
-    <meta name="description" content="初めてのMac環境構築。モダンな次世代ツール群でターミナルを染め上げた話 - Apple製品の最新情報をお届け。">
-    <meta name="keywords" content="AI,MacBook,Mac,Windows">
+    <title>Neovim 0.11 -&gt; 0.12へアップデートする際の勘所とnvim-treesitterの扱い | 日本のテックニュース速報</title>
+    <meta name="description" content="! この記事はVim駅伝の2026-05-04の記事です。 Vim駅伝は常に参加者を募集しています。詳しくはこちらのページをご覧ください。 TL;DR Neovim 0. 12系ではnvim-treesitter周辺の事情が大きく変わったので気をつけましょう">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="初めてのMac環境構築。モダンな次世代ツール群でターミナルを染め上げた話">
-    <meta property="og:description" content="初めてのMac環境構築。モダンな次世代ツール群でターミナルを染め上げた話 - Apple製品の最新情報をお届け。">
+    <meta property="og:title" content="Neovim 0.11 -&gt; 0.12へアップデートする際の勘所とnvim-treesitterの扱い">
+    <meta property="og:description" content="! この記事はVim駅伝の2026-05-04の記事です。 Vim駅伝は常に参加者を募集しています。詳しくはこちらのページをご覧ください。 TL;DR Neovim 0. 12系ではnvim-treesitter周辺の事情が大きく変わったので気をつけましょう">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4641.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="初めてのMac環境構築。モダンな次世代ツール群でターミナルを染め上げた話">
-    <meta name="twitter:description" content="初めてのMac環境構築。モダンな次世代ツール群でターミナルを染め上げた話 - Apple製品の最新情報をお届け。">
+    <meta name="twitter:title" content="Neovim 0.11 -&gt; 0.12へアップデートする際の勘所とnvim-treesitterの扱い">
+    <meta name="twitter:description" content="! この記事はVim駅伝の2026-05-04の記事です。 Vim駅伝は常に参加者を募集しています。詳しくはこちらのページをご覧ください。 TL;DR Neovim 0. 12系ではnvim-treesitter周辺の事情が大きく変わったので気をつけましょう">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4641.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "初めてのMac環境構築。モダンな次世代ツール群でターミナルを染め上げた話",
-        "description": "初めてのMac環境構築。モダンな次世代ツール群でターミナルを染め上げた話 - Apple製品の最新情報をお届け。",
+        "headline": "Neovim 0.11 -&gt; 0.12へアップデートする際の勘所とnvim-treesitterの扱い",
+        "description": "! この記事はVim駅伝の2026-05-04の記事です。 Vim駅伝は常に参加者を募集しています。詳しくはこちらのページをご覧ください。 TL;DR Neovim 0. 12系ではnvim-treesitter周辺の事情が大きく変わったので気をつけましょう",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-02T01:15:23",
-        "dateModified": "2026-03-04T06:51:20.546290",
+        "datePublished": "2026-05-01T12:48:15",
+        "dateModified": "2026-05-03T20:43:53.966712",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4641.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4641.html",
-        "articleSection": "Apple製品",
-        "keywords": ["AI","MacBook","Mac","Windows"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Apple製品",
-                "item": "https://toy1021.github.io/affiliate2/#category=Apple製品"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "初めてのMac環境構築。モダンな次世代ツール群でターミナルを染め上げた話",
+                "name": "Neovim 0.11 -&gt; 0.12へアップデートする際の勘所とnvim-treesitterの扱い",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4641.html"
             }
         ]
@@ -113,56 +113,44 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=Apple製品">Apple製品</a></li>
-                <li aria-current="page">初めてのMac環境構築。モダンな次世代ツール群でターミナルを染め上げた話</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Neovim 0.11 -&gt; 0.12へアップデートする際の勘所とnvim-treesitterの扱...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>初めてのMac環境構築。モダンな次世代ツール群でターミナルを染め上げた話</h1>
+                <h1>Neovim 0.11 -&gt; 0.12へアップデートする際の勘所とnvim-treesitterの扱い</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/108_twil3akine/articles/mac-setup-263" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: Apple製品</span>
-                    <time datetime="2026-03-02T01:15:23">
-                        公開: 2026-03-02T01:15:23
+                    <span class="source">出典: <a href="https://zenn.dev/tttol/articles/2881b678ee005b" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-05-01T12:48:15">
+                        公開: 2026-05-01T12:48:15
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">MacBook</span>
-                    <span class="tag">Mac</span>
-                    <span class="tag">Windows</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-使用していたWindows機がぶっ壊れたのでMacbookを購入しました。
-音質が良かったり、画質が良かったり、タイピングがしやすい気がしたり、Command, Optionなど色々特殊キーがあったりなど感動したり困惑したり頑張ってます。
-備忘録的な意味合いも兼ねて、こういう形で残しておきます。
-
- 1. スペックについて
-今回購入したMacのスペックは以下の通りです。
+                    !
+この記事はVim駅伝の2026-05-04の記事です。
+Vim駅伝は常に参加者を募集しています。詳しくはこちらのページをご覧ください。
 
 
-モデル: M4 MacBook Air
+ TL;DR
+Neovim 0.12系ではnvim-treesitter周辺の事情が大きく変わったので気をつけましょう。
+なんとなくでtreesitterを使ってる人（私）は改めてプラグインへの理解を深めるチャンスです。
 
-メモリ (RAM): 16GB
-
-ストレージ (SSD): 512GB
-
-GPU: 10コア
-
-正直なところ、メモリは32GBにしたかったのですが、Appleの...
+ Neovim 0.12.2にアップデートするとnvim-treesitterの周辺でエラーが多発
+事の発端は自端末のNeovimを0.11系から0.12系にアップデートしたことでした。
+0.12.2にアップデートして、とある...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/108_twil3akine/articles/mac-setup-263" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/tttol/articles/2881b678ee005b" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -171,60 +159,25 @@ GPU: 10コア
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">MacBook - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Mac - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>Apple製品関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">iPhone - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">MacBook - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -239,16 +192,16 @@ GPU: 10コア
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2012.html">
+                    <a href="Qiita_-_人気の記事_2816.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">あなたはEntra IDを理解できる</span>
+                        <span class="nav-title">個人開発の運用コストを本当に0円にした技術選定と設計判断のすべて</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_4766.html">
+                    <a href="気になる記になる_8245.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">追加コストゼロでClaude Codeの個人サブスクでGitHub Actions自動化</span>
+                        <span class="nav-title">【セール】Kindleストアで｢集英社創業100周年記念セール｣が今月も開催中｜対象のマンガタイトル...</span>
                     </a>
                 </div>
             </div>
@@ -261,53 +214,53 @@ GPU: 10コア
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5974.html">
-                        <h3>アップル、新型「iPad Air」発表　M4チップ搭載で3月11日発売</h3>
+                    <a href="CNET_Japan_最新情報総合_3941.html">
+                        <h3>Uberでホテル予約が可能に、Expedia提携で70万件超に対応</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ミドルレンジのiPadを検討しているなら、アップルが発表した「iPad Air」のアップデートに注目だ。.</p>
+                        <p class="related-summary">配車サービスのUberは、Uberアプリでホテルを直接予約できるようにすると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8032.html">
-                        <h3>アップル、新型「MacBook Pro」発表　約37万円で11日発売　M5 Pro / Max搭載</h3>
+                    <a href="CNET_Japan_最新情報総合_1606.html">
+                        <h3>2人で1台のロボットを動かし職人の技を伝える--名工大Haptics Labが「身体融合」を実演</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Appleは3月3日（現地時間）、新型プロセッサ「M5 Pro」と「M5 Max」を搭載した14インチおよび16インチの「MacBook Pro」を発表した。GPUの各コアに専用のNeural Acc...</p>
+                        <p class="related-summary">名古屋工業大学のHaptics Lab（触覚学研究室）は、4月27日から29日にかけて東京ビッグサイトで開催された国際カンファレンス「SusHi Tech Tokyo 2026」に、技能伝承を目的とし...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5615.html">
-                        <h3>アップル、新型「MacBook Air」発表　M5搭載　18万4800円で11日発売</h3>
+                    <a href="CNET_Japan_最新情報総合_623.html">
+                        <h3>Instagram、転載アカウントの表示制限を強化　写真とカルーセルも対象</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Appleは3月3日（現地時間）、新開発の「M5」チップを搭載した新型MacBook Airを発表した。標準ストレージ容量は従来の2倍となる512GBに増量。Wi-Fi 7とBluetooth 6に対...</p>
+                        <p class="related-summary">Instagramは、独自に制作していない、または十分な改変を加えていないコンテンツを大量に投稿するまとめアカウントの取り締まりを強化する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5371.html">
-                        <h3>アップル、発表前に「MacBook Neo」情報をうっかり公開　10万円切る格安モデルか</h3>
+                    <a href="CNET_Japan_最新情報総合_4262.html">
+                        <h3>Netflix、「縦長の動画」をモバイルアプリで提供開始　その狙いは</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アップルは「MacBook Neo」の存在を裏付ける規制関連文書を公開（その後削除）したことで、手の内を明かしてしまった可能性がある。.</p>
+                        <p class="related-summary">Netflixはモバイルアプリを刷新し、新しい作品を見つけやすくするTikTok風の縦型動画機能「Clips」を追加すると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3000.html">
-                        <h3>【あえて直前予想】今日発表（多分）の廉価版MacBookの価格はどうなる？ 11万円台？ 外れてもゴメンね</h3>
+                    <a href="CNET_Japan_最新情報総合_7552.html">
+                        <h3>ビッグサイトに恐竜現る--「DINO-A-LIVE」が見せるアナログ機構の妙</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ほぼほぼ出るんじゃないかと思われる（多分ですよ！）廉価版MacBookについて、直前であるこのタイミングで、最注目の価格を予想してしまいます。いろいろ理屈立てはしていますが、あくまで予想なので、外れて...</p>
+                        <p class="related-summary">東京ビッグサイトで4月27日から29日にかけて開催された「SusHi Tech Tokyo 2026」の未来体験パビリオンで、ティラノサウルスが歩き回っていた。株式会社ON-ARTが手がける恐竜型メカ...</p>
                     </a>
                 </article>
             </div>

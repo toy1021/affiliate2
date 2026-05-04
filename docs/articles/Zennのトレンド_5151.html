@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>カスタムエージェントの呼び出し方で考える Copilot CLI と VS Code Agent Mode | 日本のテックニュース速報</title>
-    <meta name="description" content="dev/tomokusaba/articles/838cdac8d71e52 前回は、主に「どこで動くか」「どの粒度の変更に向くか」という観点で見ました。今回はその続きとして、もう少し細かい カスタムエージェントの呼び出し方 に注目します">
-    <meta name="keywords" content="GitHub,EV">
+    <title>Temporalのpolyfillをゼロから実装した | 日本のテックニュース速報</title>
+    <meta name="description" content="dev/package/temporal-polyfill-lite 軽量なTemporalのpolyfillであるtemporal-polyfill-liteを実装しました。 最終版（最新）の仕様を実装しており、TypeScript公式の型定義とも互換性があります">
+    <meta name="keywords" content="本,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="カスタムエージェントの呼び出し方で考える Copilot CLI と VS Code Agent Mode">
-    <meta property="og:description" content="dev/tomokusaba/articles/838cdac8d71e52 前回は、主に「どこで動くか」「どの粒度の変更に向くか」という観点で見ました。今回はその続きとして、もう少し細かい カスタムエージェントの呼び出し方 に注目します">
+    <meta property="og:title" content="Temporalのpolyfillをゼロから実装した">
+    <meta property="og:description" content="dev/package/temporal-polyfill-lite 軽量なTemporalのpolyfillであるtemporal-polyfill-liteを実装しました。 最終版（最新）の仕様を実装しており、TypeScript公式の型定義とも互換性があります">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5151.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="カスタムエージェントの呼び出し方で考える Copilot CLI と VS Code Agent Mode">
-    <meta name="twitter:description" content="dev/tomokusaba/articles/838cdac8d71e52 前回は、主に「どこで動くか」「どの粒度の変更に向くか」という観点で見ました。今回はその続きとして、もう少し細かい カスタムエージェントの呼び出し方 に注目します">
+    <meta name="twitter:title" content="Temporalのpolyfillをゼロから実装した">
+    <meta name="twitter:description" content="dev/package/temporal-polyfill-lite 軽量なTemporalのpolyfillであるtemporal-polyfill-liteを実装しました。 最終版（最新）の仕様を実装しており、TypeScript公式の型定義とも互換性があります">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "カスタムエージェントの呼び出し方で考える Copilot CLI と VS Code Agent Mode",
-        "description": "dev/tomokusaba/articles/838cdac8d71e52 前回は、主に「どこで動くか」「どの粒度の変更に向くか」という観点で見ました。今回はその続きとして、もう少し細かい カスタムエージェントの呼び出し方 に注目します",
+        "headline": "Temporalのpolyfillをゼロから実装した",
+        "description": "dev/package/temporal-polyfill-lite 軽量なTemporalのpolyfillであるtemporal-polyfill-liteを実装しました。 最終版（最新）の仕様を実装しており、TypeScript公式の型定義とも互換性があります",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-24T22:20:46",
-        "dateModified": "2026-04-26T02:48:26.751734",
+        "datePublished": "2026-05-03T19:31:36",
+        "dateModified": "2026-05-04T19:42:32.513320",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5151.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5151.html",
         "articleSection": "プログラミング",
-        "keywords": ["GitHub","EV"]
+        "keywords": ["本","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "カスタムエージェントの呼び出し方で考える Copilot CLI と VS Code Agent Mode",
+                "name": "Temporalのpolyfillをゼロから実装した",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5151.html"
             }
         ]
@@ -114,24 +114,24 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">カスタムエージェントの呼び出し方で考える Copilot CLI と VS Code Agent M...</li>
+                <li aria-current="page">Temporalのpolyfillをゼロから実装した</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>カスタムエージェントの呼び出し方で考える Copilot CLI と VS Code Agent Mode</h1>
+                <h1>Temporalのpolyfillをゼロから実装した</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/tomokusaba/articles/31e31c57cb051d" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/fabon/articles/84f7696cd8a2fb" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-04-24T22:20:46">
-                        公開: 2026-04-24T22:20:46
+                    <time datetime="2026-05-03T19:31:36">
+                        公開: 2026-05-03T19:31:36
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">GitHub</span>
+                    <span class="tag">本</span>
                     <span class="tag">EV</span>
                 </div>
             </header>
@@ -139,15 +139,21 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-以前、私は次の記事で GitHub Copilot CLI は「面で作る」作業に強く、VS Code の Copilot Chat Agent Mode は「点で整える」作業に強い、という使い分けを整理しました。
-https://zenn.dev/tomokusaba/articles/838cdac8d71e52
-前回は、主に「どこで動くか」「どの粒度の変更に向くか」という観点で見ました。今回はその続きとして、もう少し細かい カスタムエージェントの呼び出し方 に注目します。
-前回記事では Instructions / Skills / Custom Agents / Pr...
+                    自作した理由は単純で、既存のpolyfillに満足できなかったからです。
+!
+この記事は自分のブログに投稿した英語版の日本語訳で、内容はだいたい同じです。
+
+
+ 要約
+https://npmx.dev/package/temporal-polyfill-lite
+
+軽量なTemporalのpolyfillであるtemporal-polyfill-liteを実装しました。
+最終版（最新）の仕様を実装しており、TypeScript公式の型定義とも互換性があります。
+大半の（グレゴリオ暦しか使わない）開発者にとっては、2026年4月現在これが一番バンドルサイズの小さいpolyfillとなってい...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/tomokusaba/articles/31e31c57cb051d" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/fabon/articles/84f7696cd8a2fb" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,10 +166,10 @@ https://zenn.dev/tomokusaba/articles/838cdac8d71e52
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +230,16 @@ https://zenn.dev/tomokusaba/articles/838cdac8d71e52
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3613.html">
+                    <a href="Zennのトレンド_1867.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ターミナルで動く開発モニタをRustで作った — Ratatuiで実用TUIを作って見えた5つの設計...</span>
+                        <span class="nav-title">GitHubに機密情報をpushしてしまった日のために — 無効化、履歴除去、多層防御の組み立て方</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_248.html">
+                    <a href="Zennのトレンド_4430.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">オンカジ遮断 将来の導入否定せず</span>
+                        <span class="nav-title">Claude Codeの「Skill」で、自宅GPUサーバーからAIキャラ画像を自動生成する</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +252,53 @@ https://zenn.dev/tomokusaba/articles/838cdac8d71e52
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1112.html">
-                        <h3>Claude CodeのVSCode拡張が使いやすいよ</h3>
+                    <a href="CNET_Japan_最新情報総合_7749.html">
+                        <h3>「jigブラウザ」開発元の新たな挑戦、ARグラス「SABERA」実機を見る</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">ARグラス「SABERA（サベラ）」の実機が、4月末に東京ビッグサイトで開催された「SusHi Tech Tokyo 2026」のCellidブースに登場した。日本企業3社が共同開発する本格スマートグ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_529.html">
+                        <h3>[Frontend Performance - Part 9] JavaScript は速いのに、なぜ React は遅...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">皆様、Claude Code使ってますか？ CLIで利用されている方が大多数だと思いますが、VSCodeの拡張も悪くないよ、というお話です。 いつのころからか、左右にパネルが出るような構成になっていま...</p>
+                        <p class="related-summary">📝 注意 本記事はAIの補助を受けて編集しています。 内容は大規模Webアプリケーションの実務経験に基づいています。 📚 目次 0. はじめに：JavaScriptは速いのにReactが遅い理由 1.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_4338.html">
-                        <h3>ハーネスエンジニアリングを楽にする Microsoft 製の新ツール「APM」ハンズオン</h3>
+                    <a href="Qiita_-_人気の記事_8293.html">
+                        <h3>[Frontend Performance - Part 8] JavaScriptランタイム最適化：メインスレッドをブ...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">📝 注意 本記事はAIの補助を受けて編集しています。 内容は大規模Webアプリケーションの実務経験に基づいています。 📚 目次 0. はじめに：Part 5・6・7のおさらい 1. 問題の本質：なぜ「...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_1867.html">
+                        <h3>GitHubに機密情報をpushしてしまった日のために — 無効化、履歴除去、多層防御の組み立て方</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに 最近、AI エージェント（GitHub Copilot / Claude Code / Cursor / OpenCode / Codex …）に渡す「指示書」の種類が一気に増えました。 G...</p>
+                        <p class="related-summary">はじめに GitHubに機密情報が混入してしまったとき、最初に取るべき行動は履歴削除ではありません。漏れたものが何なのかで対応の順序が大きく変わります。本記事では、GitHub Enterprise ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6384.html">
-                        <h3>VOICEVOX EngineとLambda Web Adapterでサーバレスずんだもんを開発した話</h3>
+                    <a href="Zennのトレンド_4876.html">
+                        <h3>データエンジニアがオントロジーを触って、導入可能性に思いを馳せてみた</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">サーバレスずんだもんなのだ ふと「APIでずんだもんとおしゃべりしたいのだ」という発想が頭に浮かびました。浮かんでしまったのです。 最初に引っかかったのはコストです。VOICEVOX:ずんだもんをAW...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5296.html">
-                        <h3>コンテナのポートが競合する不思議を解明する【docker】</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに こんにちは！学生エンジニアのmoritomoです！ みなさん、複数プロジェクトを並行開発していて、「ポート競合エラー」に泣かされたことはありませんか？これまで僕は「別のコンテナを止めればいい...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3558.html">
-                        <h3>Claude Code は planner、Codex CLI は executor — 両方使って 3 ヶ月、役割分担...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">この記事の対象読者と得られること 対象読者 この記事で得られること 技術選定担当者 両ツールの非対称な得意領域の整理 両ツール併用を検討中のチームリード 分業アーキテクチャの具体運用 GitHub A...</p>
+                        <p class="related-summary">dev/bare64/articles/ecac1bbf510ce4 本記事ではその続編として、実際のオントロジーツールに触れ、それぞれの利点に踏み込みます。具体的には、形式論理の取り入れ度合いが異な...</p>
                     </a>
                 </article>
             </div>

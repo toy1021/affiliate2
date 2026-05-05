@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>方眼紙Excel→Markdown変換、結局LLMしか勝たん話【全手法比較】 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに ! 本記事は「方眼紙ExcelをAI/RAGに投入したいエンジニア」を対象としています。 日本の現場でよく見かける「方眼紙Excel」——全セルを正方形に統一し、セル結合を多用してレイアウトを作るあのスタイルです">
-    <meta name="keywords" content="AI,LLM,Excel,本">
+    <title>Temporalのpolyfillをゼロから実装した | 日本のテックニュース速報</title>
+    <meta name="description" content="dev/package/temporal-polyfill-lite 軽量なTemporalのpolyfillであるtemporal-polyfill-liteを実装しました。 最終版（最新）の仕様を実装しており、TypeScript公式の型定義とも互換性があります">
+    <meta name="keywords" content="本,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="方眼紙Excel→Markdown変換、結局LLMしか勝たん話【全手法比較】">
-    <meta property="og:description" content="はじめに ! 本記事は「方眼紙ExcelをAI/RAGに投入したいエンジニア」を対象としています。 日本の現場でよく見かける「方眼紙Excel」——全セルを正方形に統一し、セル結合を多用してレイアウトを作るあのスタイルです">
+    <meta property="og:title" content="Temporalのpolyfillをゼロから実装した">
+    <meta property="og:description" content="dev/package/temporal-polyfill-lite 軽量なTemporalのpolyfillであるtemporal-polyfill-liteを実装しました。 最終版（最新）の仕様を実装しており、TypeScript公式の型定義とも互換性があります">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7601.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="方眼紙Excel→Markdown変換、結局LLMしか勝たん話【全手法比較】">
-    <meta name="twitter:description" content="はじめに ! 本記事は「方眼紙ExcelをAI/RAGに投入したいエンジニア」を対象としています。 日本の現場でよく見かける「方眼紙Excel」——全セルを正方形に統一し、セル結合を多用してレイアウトを作るあのスタイルです">
+    <meta name="twitter:title" content="Temporalのpolyfillをゼロから実装した">
+    <meta name="twitter:description" content="dev/package/temporal-polyfill-lite 軽量なTemporalのpolyfillであるtemporal-polyfill-liteを実装しました。 最終版（最新）の仕様を実装しており、TypeScript公式の型定義とも互換性があります">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "方眼紙Excel→Markdown変換、結局LLMしか勝たん話【全手法比較】",
-        "description": "はじめに ! 本記事は「方眼紙ExcelをAI/RAGに投入したいエンジニア」を対象としています。 日本の現場でよく見かける「方眼紙Excel」——全セルを正方形に統一し、セル結合を多用してレイアウトを作るあのスタイルです",
+        "headline": "Temporalのpolyfillをゼロから実装した",
+        "description": "dev/package/temporal-polyfill-lite 軽量なTemporalのpolyfillであるtemporal-polyfill-liteを実装しました。 最終版（最新）の仕様を実装しており、TypeScript公式の型定義とも互換性があります",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-20T13:28:10",
-        "dateModified": "2026-03-21T14:29:17.420943",
+        "datePublished": "2026-05-03T19:31:36",
+        "dateModified": "2026-05-05T13:57:05.652981",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7601.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7601.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","LLM","Excel","本"]
+        "articleSection": "プログラミング",
+        "keywords": ["本","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "方眼紙Excel→Markdown変換、結局LLMしか勝たん話【全手法比較】",
+                "name": "Temporalのpolyfillをゼロから実装した",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7601.html"
             }
         ]
@@ -113,51 +113,47 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">方眼紙Excel→Markdown変換、結局LLMしか勝たん話【全手法比較】</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">Temporalのpolyfillをゼロから実装した</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>方眼紙Excel→Markdown変換、結局LLMしか勝たん話【全手法比較】</h1>
+                <h1>Temporalのpolyfillをゼロから実装した</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/ougotti/articles/houganshi-excel-to-markdown" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-20T13:28:10">
-                        公開: 2026-03-20T13:28:10
+                    <span class="source">出典: <a href="https://zenn.dev/fabon/articles/84f7696cd8a2fb" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-05-03T19:31:36">
+                        公開: 2026-05-03T19:31:36
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">LLM</span>
-                    <span class="tag">Excel</span>
                     <span class="tag">本</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
+                    自作した理由は単純で、既存のpolyfillに満足できなかったからです。
 !
-本記事は「方眼紙ExcelをAI/RAGに投入したいエンジニア」を対象としています。
+この記事は自分のブログに投稿した英語版の日本語訳で、内容はだいたい同じです。
 
-日本の現場でよく見かける「方眼紙Excel」——全セルを正方形に統一し、セル結合を多用してレイアウトを作るあのスタイルです。工事仕様書・工程表・設計図・申請書類など、建設・製造・行政の現場で今も現役です。
-今回使ったサンプルはこんなものです。
 
-工事仕様書：基本情報・材料仕様・施工注意事項をセル結合で構造化
+ 要約
+https://npmx.dev/package/temporal-polyfill-lite
 
-工程表：横軸が月、縦軸が工種のガントチャート。塗りつぶしセルで期間を表現
-
-数量集計表：設計・計画・実施数量の比較表と埋め込み棒グラフ
-これをMarkdownに変換したい、とい...
+軽量なTemporalのpolyfillであるtemporal-polyfill-liteを実装しました。
+最終版（最新）の仕様を実装しており、TypeScript公式の型定義とも互換性があります。
+大半の（グレゴリオ暦しか使わない）開発者にとっては、2026年4月現在これが一番バンドルサイズの小さいpolyfillとなってい...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/ougotti/articles/houganshi-excel-to-markdown" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/fabon/articles/84f7696cd8a2fb" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -170,30 +166,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Excel&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Excel - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Excel - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでExcelに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -203,23 +199,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -234,16 +230,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5562.html">
+                    <a href="Zennのトレンド_5761.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「JAPANローミング」対応機種は?</span>
+                        <span class="nav-title">GitHubに機密情報をpushしてしまった日のために — 無効化、履歴除去、多層防御の組み立て方</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_4208.html">
+                    <a href="Zennのトレンド_1115.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Codeでひとりチーム開発を回すための設定とワークフロー</span>
+                        <span class="nav-title">Claude Codeの「Skill」で、自宅GPUサーバーからAIキャラ画像を自動生成する</span>
                     </a>
                 </div>
             </div>
@@ -256,53 +252,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5781.html">
-                        <h3>ChatGPT訓練にコンテンツを無断使用、OpenAIをブリタニカとウェブスターが提訴</h3>
+                    <a href="CNET_Japan_最新情報総合_50.html">
+                        <h3>「jigブラウザ」開発元の新たな挑戦、ARグラス「SABERA」実機を見る</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">伝統ある2つの事典・辞書が、最新のテクノロジー製品に挑んでいる。Encyclopedia Britannicaと子会社Merriam-Websterは、自社のコンテンツを無断でAIモデルの訓練に使われ...</p>
+                        <p class="related-summary">ARグラス「SABERA（サベラ）」の実機が、4月末に東京ビッグサイトで開催された「SusHi Tech Tokyo 2026」のCellidブースに登場した。日本企業3社が共同開発する本格スマートグ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7956.html">
-                        <h3>なぜ極寒の宇宙にデータセンターを置くと「冷えない」が課題となるのか--NVIDIAのCEOも言及</h3>
+                    <a href="ASCII_jp__トップ_9679.html">
+                        <h3>2060万円払って「不便」を買う!? ポルシェ「911 カレラT」が世界一ぜいたくな理由</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">米NVIDIAのジェンスン・フアンCEOは、米カリフォルニア州サンノゼで開催した同社イベント「GTC」の基調講演で、軌道上AIデータセンターの実現に向けた構想に言及したが、課題として挙げたのは「冷却」...</p>
+                        <p class="related-summary">ポルシェ「911 カレラT」の後期型レビューです。遮音材を減らし後席を排した軽量ボディに、新開発の6速MTを搭載（AT設定廃止）。オープンモデルも追加されました。2060万円という価格ながら、街乗りは...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_682.html">
-                        <h3>Perplexity、AIブラウザ「Comet」のiPhone版を公開</h3>
+                    <a href="Zennのトレンド_7571.html">
+                        <h3>dbt Fusionの本質・注目ポイント・導入方法を一挙におさらい！</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">Perplexityは、AI搭載ブラウザー「Comet」のiOS版を18日に公開した。これにより、iPhone利用者も、デスクトップ版やAndroid版と同様に、ブラウザー内でAIアシスタントによる回...</p>
+                        <p class="related-summary">com/docs/dbt-versions/dbt-cloud-release-notes?version=1. 12#may-2026 これを機に、 Fusion への興味が強まった方もいらっしゃる...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8514.html">
-                        <h3>アップルのクックCEO、引退説を否定　AI・スマホ中毒・トランプ氏との関係を語る</h3>
+                    <a href="Zennのトレンド_1752.html">
+                        <h3>AI coding agent を使い続けるために、自分の開発環境の権限棚卸しをした</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">アップルのティム・クックCEOが情報番組での対談に応じ、引退説を否定。その他AIやトランプ大統領など、さまざまな話題について語った。.</p>
+                        <p class="related-summary">Claude Code や Codex を毎日使うようになって、開発の速度はかなり上がりました。 実装を頼む。テストを回してもらう。差分を見てもらう。commit して push して PR まで作っ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2819.html">
-                        <h3>「トップガン」俳優の故ヴァル・キルマーさん、AIで新作映画に登場へ</h3>
+                    <a href="Zennのトレンド_5888.html">
+                        <h3>視座を上げる・視野を広げるということ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">映画「トップガン」などへの出演で知られ、2025年に亡くなった俳優ヴァル・キルマーさんが、生前に撮影が完了しなかった新作映画に登場する。.</p>
+                        <p class="related-summary">はじめに ぺんぎん（@jitepengin）です。 エンジニアとして一定の経験を積んでくると、こんな壁にぶつかることがあると思います。 技術的には自信があるのに、なぜか提案が通らない。 上位の方針につ...</p>
                     </a>
                 </article>
             </div>

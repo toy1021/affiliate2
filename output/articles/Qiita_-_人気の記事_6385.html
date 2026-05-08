@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ | 日本のテックニュース速報</title>
-    <meta name="description" content="📝 注意 本記事はAIの補助を受けて編集しています。 内容は大規模Webアプリケーションの実務経験に基づいています。 📚 目次 1. 問題提起：なぜコードはきれいなのにUIが遅いのか？ 2. 「State Boundaries」 – stateの影響範囲を意識.">
-    <meta name="keywords" content="AI,本">
+    <title>React Router v7 入門 — 第1回：押さえておくべき基本 | 日本のテックニュース速報</title>
+    <meta name="description" content="React RouterはReactエコシステムで最も広く使われているルーティングライブラリです。Reactを触ったことがあれば一度は使ったことがあるはずですが、v7のリリースでいくつかの重要な変更が入ったこともあり、基礎から改めて整理する価値があります。 この記事では基.">
+    <meta name="keywords" content="React,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ">
-    <meta property="og:description" content="📝 注意 本記事はAIの補助を受けて編集しています。 内容は大規模Webアプリケーションの実務経験に基づいています。 📚 目次 1. 問題提起：なぜコードはきれいなのにUIが遅いのか？ 2. 「State Boundaries」 – stateの影響範囲を意識.">
+    <meta property="og:title" content="React Router v7 入門 — 第1回：押さえておくべき基本">
+    <meta property="og:description" content="React RouterはReactエコシステムで最も広く使われているルーティングライブラリです。Reactを触ったことがあれば一度は使ったことがあるはずですが、v7のリリースでいくつかの重要な変更が入ったこともあり、基礎から改めて整理する価値があります。 この記事では基.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6385.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ">
-    <meta name="twitter:description" content="📝 注意 本記事はAIの補助を受けて編集しています。 内容は大規模Webアプリケーションの実務経験に基づいています。 📚 目次 1. 問題提起：なぜコードはきれいなのにUIが遅いのか？ 2. 「State Boundaries」 – stateの影響範囲を意識.">
+    <meta name="twitter:title" content="React Router v7 入門 — 第1回：押さえておくべき基本">
+    <meta name="twitter:description" content="React RouterはReactエコシステムで最も広く使われているルーティングライブラリです。Reactを触ったことがあれば一度は使ったことがあるはずですが、v7のリリースでいくつかの重要な変更が入ったこともあり、基礎から改めて整理する価値があります。 この記事では基.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ",
-        "description": "📝 注意 本記事はAIの補助を受けて編集しています。 内容は大規模Webアプリケーションの実務経験に基づいています。 📚 目次 1. 問題提起：なぜコードはきれいなのにUIが遅いのか？ 2. 「State Boundaries」 – stateの影響範囲を意識.",
+        "headline": "React Router v7 入門 — 第1回：押さえておくべき基本",
+        "description": "React RouterはReactエコシステムで最も広く使われているルーティングライブラリです。Reactを触ったことがあれば一度は使ったことがあるはずですが、v7のリリースでいくつかの重要な変更が入ったこともあり、基礎から改めて整理する価値があります。 この記事では基.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-05T09:00:39",
-        "dateModified": "2026-05-07T10:26:03.309084",
+        "datePublished": "2026-05-07T07:11:09",
+        "dateModified": "2026-05-08T02:57:16.229996",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6385.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6385.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","本"]
+        "articleSection": "その他",
+        "keywords": ["React","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ",
+                "name": "React Router v7 入門 — 第1回：押さえておくべき基本",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6385.html"
             }
         ]
@@ -113,25 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">[Frontend Performance - Part 11] State設計最適化：無駄な再レン...</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">React Router v7 入門 — 第1回：押さえておくべき基本</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ</h1>
+                <h1>React Router v7 入門 — 第1回：押さえておくべき基本</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/tuanphan/items/5a8343dba7aa604f0a5b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-05T09:00:39">
-                        公開: 2026-05-05T09:00:39
+                    <span class="source">出典: <a href="https://qiita.com/nhatcaofedev/items/b7931e4bb7f51e1dccb6?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-05-07T07:11:09">
+                        公開: 2026-05-07T07:11:09
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">React</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -139,18 +139,12 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    📝 注意
-本記事はAIの補助を受けて編集しています。
-内容は大規模Webアプリケーションの実務経験に基づいています。
-
-📚 目次
-
-1. 問題提起：なぜコードはきれいなのにUIが遅いのか？
-2. 「State Boundaries」 – stateの影響範囲を意識...
+                    React RouterはReactエコシステムで最も広く使われているルーティングライブラリです。Reactを触ったことがあれば一度は使ったことがあるはずですが、v7のリリースでいくつかの重要な変更が入ったこともあり、基礎から改めて整理する価値があります。
+この記事では基...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/tuanphan/items/5a8343dba7aa604f0a5b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/nhatcaofedev/items/b7931e4bb7f51e1dccb6?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,10 +157,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -182,37 +176,27 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +211,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_467.html">
+                    <a href="Zennのトレンド_6141.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">C#でJavaScriptEngine+ブラウザ自作した</span>
+                        <span class="nav-title">Web 標準動向 2026年4月版</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_6575.html">
+                    <a href="Qiita_-_人気の記事_5644.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">「読書通帳」図書館が導入する訳</span>
+                        <span class="nav-title">Codexでコマンドが自動承認される設定をする</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +233,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4871.html">
-                        <h3>ChatGPTはなぜ「ゴブリン」に執着したのか　OpenAIが明かした不具合の正体</h3>
+                    <a href="ASCII_jp__トップ_6430.html">
+                        <h3>【3日間】ケンタッキー560円オトクな「母の日バーレル」本日発売</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">「ChatGPT」は、妙なほどゴブリンに執着していた。開発元のOpenAIが原因を調べて修正に乗り出すほどだった。.</p>
+                        <p class="related-summary">ケンタッキーフライドチキンは、本日5月8日から3日間限定で「母の日バーレル」を販売します。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2979.html">
-                        <h3>HDRディスプレイグラス「RayNeo Air 4 Pro」レビュー：XREALやVITUREと比べて見えた差</h3>
+                    <a href="ASCII_jp__トップ_1230.html">
+                        <h3>突然の退職届にサヨナラ。面談にお地蔵さんを置いたら隠れた本音が出始めた。</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">TCLの最新ディスプレイグラス「RayNeo Air 4 Pro」のレビューをお届けする。.</p>
+                        <p class="related-summary">突然の退職届にサヨナラ。面談にお地蔵さんを置いたら隠れた本音が出始めた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8125.html">
-                        <h3>「OpenAI製スマホ」、2028年までに3000万台出荷の予測</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5973.html">
+                        <h3>絵文字「合掌」の意味 回答に反響</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">OpenAIは2027～2028年にかけて、AIに特化したスマートフォンを数千万台規模で製造する可能性があるという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7620.html">
-                        <h3>Amazon、自社配送網を他社に開放　物流版AWS実現へ</h3>
+                    <a href="気になる記になる_9596.html">
+                        <h3>PITAKA、Qi2対応MagSafeモバイルバッテリーに10,000mAhモデルを追加</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">Amazonは現地時間5月4日、自社の物流ネットワークを他の企業に開放する「Amazon Supply Chain Services（ASCS）」を発表した。貨物輸送、流通・在庫保管、フルフィルメント...</p>
+                        <p class="related-summary">PITAKAが、一部にアラミド繊維を採用したQi2対応のMagSafeモバイルバッテリーの10,000mAhモデルを新たに発売しました。 本製品は、Qi2規格のワイヤレス充電に対応したMagSafeモ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_472.html">
-                        <h3>Anthropic、「Claude」の利用上限引き上げ　Space XのGPU資源活用で</h3>
+                    <a href="気になる記になる_272.html">
+                        <h3>Threads、DM機能をWeb版にも導入開始 ｰ 本格的な展開はまもなく</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">Anthropicは5月6日、AIチャットサービス「Claude」の利用上限を引き上げると発表した。SpaceXが保有するAIスーパーコンピュータ「Colossus 1」の計算能力を利用し、Claud...</p>
+                        <p class="related-summary">本日、Threadsが、DM（ダイレクトメッセージ）のWeb版への導入を開始しました。 ThreadsのDM機能は昨年7月に導入されたものの、モバイルアプリでのみ利用可能で、Web版では利用出来ない状...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Codeソースコード流出から学ぶハーネスパターン10選 ── 50万行のTypeScriptが明かした設計思想 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに：3月31日に何が起きたか 2026年3月31日の未明、Anthropicが公開したClaude Code v2. 88のnpmパッケージに、本来除外されるべき59. map）が同梱されていました。このファイルから約512,000行.">
-    <meta name="keywords" content="Claude,本">
+    <title>TransformerのSelf AttentionのQKVを直感的に解説する | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは、DeNAでデータサイエンティストをやっているまつけんです。 今回は、Transformerの中で重要な役割を果たしているSelf Attention、特にQKVの仕組みについて直感的に理解できるように解説してみます。 Transformer、特にGPTなどの生成.">
+    <meta name="keywords" content="GPT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Codeソースコード流出から学ぶハーネスパターン10選 ── 50万行のTypeScriptが明かした設計思想">
-    <meta property="og:description" content="はじめに：3月31日に何が起きたか 2026年3月31日の未明、Anthropicが公開したClaude Code v2. 88のnpmパッケージに、本来除外されるべき59. map）が同梱されていました。このファイルから約512,000行.">
+    <meta property="og:title" content="TransformerのSelf AttentionのQKVを直感的に解説する">
+    <meta property="og:description" content="こんにちは、DeNAでデータサイエンティストをやっているまつけんです。 今回は、Transformerの中で重要な役割を果たしているSelf Attention、特にQKVの仕組みについて直感的に理解できるように解説してみます。 Transformer、特にGPTなどの生成.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_81.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Codeソースコード流出から学ぶハーネスパターン10選 ── 50万行のTypeScriptが明かした設計思想">
-    <meta name="twitter:description" content="はじめに：3月31日に何が起きたか 2026年3月31日の未明、Anthropicが公開したClaude Code v2. 88のnpmパッケージに、本来除外されるべき59. map）が同梱されていました。このファイルから約512,000行.">
+    <meta name="twitter:title" content="TransformerのSelf AttentionのQKVを直感的に解説する">
+    <meta name="twitter:description" content="こんにちは、DeNAでデータサイエンティストをやっているまつけんです。 今回は、Transformerの中で重要な役割を果たしているSelf Attention、特にQKVの仕組みについて直感的に理解できるように解説してみます。 Transformer、特にGPTなどの生成.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Codeソースコード流出から学ぶハーネスパターン10選 ── 50万行のTypeScriptが明かした設計思想",
-        "description": "はじめに：3月31日に何が起きたか 2026年3月31日の未明、Anthropicが公開したClaude Code v2. 88のnpmパッケージに、本来除外されるべき59. map）が同梱されていました。このファイルから約512,000行.",
+        "headline": "TransformerのSelf AttentionのQKVを直感的に解説する",
+        "description": "こんにちは、DeNAでデータサイエンティストをやっているまつけんです。 今回は、Transformerの中で重要な役割を果たしているSelf Attention、特にQKVの仕組みについて直感的に理解できるように解説してみます。 Transformer、特にGPTなどの生成.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-13T02:27:23",
-        "dateModified": "2026-04-14T20:56:37.850238",
+        "datePublished": "2026-05-09T23:52:36",
+        "dateModified": "2026-05-11T14:54:40.293237",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_81.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_81.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["Claude","本"]
+        "keywords": ["GPT"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Codeソースコード流出から学ぶハーネスパターン10選 ── 50万行のTypeScriptが明かした設計思想",
+                "name": "TransformerのSelf AttentionのQKVを直感的に解説する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_81.html"
             }
         ]
@@ -114,37 +114,37 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Codeソースコード流出から学ぶハーネスパターン10選 ── 50万行のTypeScr...</li>
+                <li aria-current="page">TransformerのSelf AttentionのQKVを直感的に解説する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Codeソースコード流出から学ぶハーネスパターン10選 ── 50万行のTypeScriptが明かした設計思想</h1>
+                <h1>TransformerのSelf AttentionのQKVを直感的に解説する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/ebbbe74649eb441a34db?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/kenmatsu4/items/1b3853a3314ab66eb2a3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-04-13T02:27:23">
-                        公開: 2026-04-13T02:27:23
+                    <time datetime="2026-05-09T23:52:36">
+                        公開: 2026-05-09T23:52:36
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">本</span>
+                    <span class="tag">GPT</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに：3月31日に何が起きたか
-2026年3月31日の未明、Anthropicが公開したClaude Code v2.1.88のnpmパッケージに、本来除外されるべき59.8MBのソースマップファイル（.map）が同梱されていました。このファイルから約512,000行...
+                    こんにちは、DeNAでデータサイエンティストをやっているまつけんです。
+今回は、Transformerの中で重要な役割を果たしているSelf Attention、特にQKVの仕組みについて直感的に理解できるように解説してみます。
+Transformer、特にGPTなどの生成...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/nogataka/items/ebbbe74649eb441a34db?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/kenmatsu4/items/1b3853a3314ab66eb2a3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,20 +157,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GPT - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">GPT - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGPTに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -181,6 +171,16 @@
                                 <div class="product-info">
                                     <div class="product-title">AI - Amazon検索結果</div>
                                     <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -221,16 +221,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_3277.html">
+                    <a href="Zennのトレンド_4638.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">子が夢中のゲーム 問題が顕在化</span>
+                        <span class="nav-title">人間がMarkdownを書いたり修正しない時代に、Claude Code hookでドキュメントを自...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_7788.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_1487.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">ホワイトカラーの80%がAI導入に反抗している ── 技術者が知っておくべき「AI抵抗」の構造と乗り...</span>
+                        <span class="nav-title">ゲーム機値上げ時代 今後の展開は</span>
                     </a>
                 </div>
             </div>
@@ -243,53 +243,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_2776.html">
-                        <h3>CloudflareがAIエージェントへの最適化を目指し、全サービスに対応するCLIの開発を表明</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">Cloudflareは、AIエージェントによる利用を最適化するため、同社が提供するすべてのサービスに対応したコマンドラインインターフェイス（CLI）を開発することを明らかにしました。 Stop fly...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1198.html">
-                        <h3>「Claude」がMicrosoft Wordで利用可能に　Copilotを代替　ベータ提供開始</h3>
+                    <a href="CNET_Japan_最新情報総合_9994.html">
+                        <h3>ソニーCEO「AIはクリエイターを代替しない」　ヒトの創造性が中心と強調</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Microsoft Wordで、Copilotに代わるAIツールとしてAnthropicの「Claude」を試せるようになった。現時点ではベータ版として提供されている。.</p>
+                        <p class="related-summary">ソニーグループで社長CEOを務める十時裕樹氏は2026年度の経営方針説明会で、AIについて「ソニーグループの各事業にとって最重要テーマ」と位置付けた。一方で、「人のクリエイティビティが常に中心にあるべ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8469.html">
-                        <h3>マイクロソフト、「Copilot」を刷新へ　エージェント型AIでOpenClawに対抗</h3>
+                    <a href="CNET_Japan_最新情報総合_4379.html">
+                        <h3>Claude開発元、SpaceXと「予想外」のデータセンター契約　マスク氏と対立していたのに何故？</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">マイクロソフトはエージェント型AI に注力し、AIアシスタント「Copilot」の大幅な刷新を計画しているという。.</p>
+                        <p class="related-summary">米AI大手のAnthropicが、イーロン・マスク氏率いるSpaceXとデータセンター利用契約を結んだ。テネシー州メンフィスのスーパーコンピューター「Colossus 1」で、NVIDIA製GPU換算...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9699.html">
-                        <h3>“5分チャージで1000km”の衝撃！ ヒョンデの新型水素SUV「NEXO」が日本に来た</h3>
+                    <a href="CNET_Japan_最新情報総合_9612.html">
+                        <h3>ChatGPTの会話から自殺リスクを検知、親しい人に通知する新機能が登場</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Hyundai Mobility Japanは、新型水素電気自動車「The all-new NEXO」の日本販売を4月8日に開始した。約5分の水素充填で1014kmの走行をうたい、日本専用V2HやV2...</p>
+                        <p class="related-summary">OpenAIは先週、「ChatGPT」の成人ユーザーが友人や家族を指名し、自傷行為や自殺に関する会話があった場合に通知を受け取れるようにする、任意選択の安全機能「Trusted Contact」を導入...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4313.html">
-                        <h3>社内データをAI学習できる「ChatSense」、AIとの対話を簡単にナレッジ化する機能を公開</h3>
+                    <a href="CNET_Japan_最新情報総合_9718.html">
+                        <h3>ソフトバンク、「国産蓄電池」を27年度量産開始　年間ギガワット時規模　AI電力需要に対応</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">社内データをAI学習できる「ChatSense」、AIとの対話を簡単にナレッジ化する機能を公開.</p>
+                        <p class="related-summary">ソフトバンクは5月11日、国産バッテリー事業を始めると発表した。大阪府堺市のシャープ工場跡地に整備するAIデータセンター関連拠点で、2027年度にバッテリーセルと蓄電システム（BESS）の製造を始める...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_5574.html">
+                        <h3>AI依存が招く「思考停止」の罠　10分の利用で自力での解決能力が低下</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">AIは便利だが、骨の折れる作業をすべてAIに任せてしまえば、批判的思考や創造性、論理的思考といったスキルは使われないままだ。その影響は、われわれが考えているより大きいかもしれない。.</p>
                     </a>
                 </article>
             </div>

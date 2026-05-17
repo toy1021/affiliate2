@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法 | 日本のテックニュース速報</title>
-    <meta name="description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
-    <meta name="keywords" content="LLM">
+    <title>Qwen3-30Bを動かし、社内LANにOpenAI互換APIとしてvLLMで公開してみた | 日本のテックニュース速報</title>
+    <meta name="description" content="Qwen3-30Bを動かし、社内LANにOpenAI互換APIとしてvLLMで公開してみた - AI・機械学習技術のニュースをお届け。">
+    <meta name="keywords" content="AI,OpenAI,LLM,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法">
-    <meta property="og:description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
+    <meta property="og:title" content="Qwen3-30Bを動かし、社内LANにOpenAI互換APIとしてvLLMで公開してみた">
+    <meta property="og:description" content="Qwen3-30Bを動かし、社内LANにOpenAI互換APIとしてvLLMで公開してみた - AI・機械学習技術のニュースをお届け。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3748.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法">
-    <meta name="twitter:description" content="プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました">
+    <meta name="twitter:title" content="Qwen3-30Bを動かし、社内LANにOpenAI互換APIとしてvLLMで公開してみた">
+    <meta name="twitter:description" content="Qwen3-30Bを動かし、社内LANにOpenAI互換APIとしてvLLMで公開してみた - AI・機械学習技術のニュースをお届け。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法",
-        "description": "プロンプトに例を増やすと回答の精度が上がる、と言われています。 しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。 そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました",
+        "headline": "Qwen3-30Bを動かし、社内LANにOpenAI互換APIとしてvLLMで公開してみた",
+        "description": "Qwen3-30Bを動かし、社内LANにOpenAI互換APIとしてvLLMで公開してみた - AI・機械学習技術のニュースをお届け。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-28T12:29:00",
-        "dateModified": "2026-03-02T18:52:30.355059",
+        "datePublished": "2026-05-15T09:47:06",
+        "dateModified": "2026-05-17T13:22:48.864711",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3748.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3748.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["LLM"]
+        "keywords": ["AI","OpenAI","LLM","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法",
+                "name": "Qwen3-30Bを動かし、社内LANにOpenAI互換APIとしてvLLMで公開してみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3748.html"
             }
         ]
@@ -114,43 +114,48 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法</li>
+                <li aria-current="page">Qwen3-30Bを動かし、社内LANにOpenAI互換APIとしてvLLMで公開してみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法</h1>
+                <h1>Qwen3-30Bを動かし、社内LANにOpenAI互換APIとしてvLLMで公開してみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/okuma/articles/few_shot_collapse" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/fusic/articles/779af66b5810a9" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-02-28T12:29:00">
-                        公開: 2026-02-28T12:29:00
+                    <time datetime="2026-05-15T09:47:06">
+                        公開: 2026-05-15T09:47:06
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">OpenAI</span>
                     <span class="tag">LLM</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    プロンプトに例を増やすと回答の精度が上がる、と言われています。
-しかし、実際に計測してみると、例を増やすことで性能が下がるケースが見られました。
-そこで、few-shot promptingで渡す例を増やしたときにモデルの性能がどう変化するかを計測するツールを作って色々と試してみました。 AdaptGauge というツール名にしてオープンソースで公開しています。
+                    はじめに
+Fusicのレオナです。
+24GBのGPU 1枚で30Bクラスのモデルを動かし、別マシンからOpenAI互換APIとして叩けるところまでを通しで試してみました。本ブログでは、QuixiAI/Qwen3-30B-A3B-AWQ を vLLM でサーブし、LAN内の別端末から疎通確認するまでをステップバイステップで進めます。
+途中、AWQモデル選定や uv 環境構築でいくつか踏んだ落とし穴があったので、そこも合わせて共有します。
 
- やったこと
-実務に近い以下4種のタスクに対して、shot数（例示数）を0, 1, 2, 4, 8と増やしながらLLMの性能を評価するツールにしています。
+ 使用する技術の概要
 
 
-分類 — カスタマーサポートの問い合わせを8カテゴリ（請求、技術サ...
+vLLM: LLMの高速推論サーバ。OpenAI互換APIを提供
+
+Qwen3-30B-A3B: Alibabaが公開した...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/okuma/articles/few_shot_collapse" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/fusic/articles/779af66b5810a9" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,16 +167,6 @@
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -187,6 +182,16 @@
                                 <div class="product-info">
                                     <div class="product-title">機械学習 - Amazon検索結果</div>
                                     <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=OpenAI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="OpenAI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">OpenAI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでOpenAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +232,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_5605.html">
+                    <a href="Zennのトレンド_4963.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Terminal 版 Playwright 風テストツールの tuistory が便利</span>
+                        <span class="nav-title">一人暮らしこそOpenWrtをやれ！ (v6プラス理論編)</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_3943.html">
+                    <a href="Zennのトレンド_4549.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Code の会話を全自動で Obsidian に記録する、または、車輪の再発明について</span>
+                        <span class="nav-title">RAGナレッジベース作成を簡単にしたくてツールを作った</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +254,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2698.html">
-                        <h3>バーガーキング、従業員向けAIアシスタント導入へ　接客マナーも監視</h3>
+                    <a href="CNET_Japan_最新情報総合_2029.html">
+                        <h3>アマゾン、買い物AIアシスタント「Rufus」を終了　「Alexa for Shopping」に刷新</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">バーガーキングは、一部の従業員が着けているヘッドセットにAIチャットボット「Patty」を導入する。.</p>
+                        <p class="related-summary">「Rufus」はお役御免となった。アマゾンはこのEC向けAIアシスタントを「Alexa for Shopping」に置き換え、1週間以内に米国の全ユーザーが利用できるようにする。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4717.html">
-                        <h3>エージェント型AIは「転換点」に--NVIDIAのジェンスン・フアンCEO</h3>
+                    <a href="CNET_Japan_最新情報総合_1181.html">
+                        <h3>Androidスマホは「AIファースト」へ進化　Geminiがアプリを操作　iPhoneもSiriで追従なるか</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NVIDIAのジェンスン・フアンCEOは、エージェント型AIが「転換点」に達していると語った。.</p>
+                        <p class="related-summary">Googleが、AIアシスタント「Gemini」をAndroidにこれまで以上に深く統合する。アプリをまたいだ日常作業をAIが代行できるようになり、私たちとスマホの付き合い方そのものを変える可能性があ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8135.html">
-                        <h3>ソフトバンクG、OpenAI株式の13%を保有へ　約4.7兆円の追加出資を発表</h3>
+                    <a href="CNET_Japan_最新情報総合_2095.html">
+                        <h3>Microsoftの「Copilot」、Edgeブラウザのタブを読んでユーザーを学習へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ソフトバンクグループは2月27日（米国時間）、OpenAIへ300億ドル（約4兆6743億円）の追加出資を行うと発表した。ソフトバンク・ビジョン・ファンド2を通じて実施する。今回の追加出資により、同社...</p>
+                        <p class="related-summary">Microsoftは、Webブラウザ「Edge」のデスクトップ版とモバイル版で、AIアシスタント「Copilot」がユーザーの閲覧履歴を長期的に記憶し、ブラウジング体験を「手助けする」機能を拡大すると...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7573.html">
-                        <h3>トランプ大統領、Claudeを政府内で使用禁止に--運営元Anthropicを「極左」と非難</h3>
+                    <a href="CNET_Japan_最新情報総合_2884.html">
+                        <h3>ソニーの新フラッグシップスマホ「Xperia 1 VIII」の実機に触れた</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">トランプ米大統領は金曜日、連邦政府機関に対し、AnthropicのAI「Claude（クロード）」の使用を停止するよう命じた。.</p>
+                        <p class="related-summary">ソニーが6月11日に発売するフラッグシップスマートフォン「Xperia 1 VIII」は、シーンに応じて撮影表現を提案する「AIカメラアシスタント」、約4倍に大型化した望遠センサー、左右同一ユニットの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_11.html">
-                        <h3>もう「画面の中」だけじゃない--デスクで共に働く「AI同僚」をレノボが披露</h3>
+                    <a href="ASCII_jp__トップ_3611.html">
+                        <h3>特価で24万7500円！ AMD Ryzen AI 7 350搭載の一体型デスクトップ「FMV WF2-L1」がお買い得</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">レノボはMobile World Congress（MWC）2026で、仕事を手伝う「AI同僚」のコンセプトなどを披露した。.</p>
+                        <p class="related-summary">FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。.</p>
                     </a>
                 </article>
             </div>

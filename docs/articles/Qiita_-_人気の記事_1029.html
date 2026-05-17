@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Codeにオレたち流のコードを書かせる（前編）— プロジェクトの流儀を自動抽出する | 日本のテックニュース速報</title>
-    <meta name="description" content="この記事は Claude on SonicGarden の記事です。ソニックガーデンのプログラマが、Claude Codeの活用について書いています。#claude_on_sonicgarden きっかけ Claude Code、もはやない人生は考えられないくらいお世.">
-    <meta name="keywords" content="Claude">
+    <title>AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Codeにオレたち流のコードを書かせる（前編）— プロジェクトの流儀を自動抽出する">
-    <meta property="og:description" content="この記事は Claude on SonicGarden の記事です。ソニックガーデンのプログラマが、Claude Codeの活用について書いています。#claude_on_sonicgarden きっかけ Claude Code、もはやない人生は考えられないくらいお世.">
+    <meta property="og:title" content="AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK">
+    <meta property="og:description" content="はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1029.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Codeにオレたち流のコードを書かせる（前編）— プロジェクトの流儀を自動抽出する">
-    <meta name="twitter:description" content="この記事は Claude on SonicGarden の記事です。ソニックガーデンのプログラマが、Claude Codeの活用について書いています。#claude_on_sonicgarden きっかけ Claude Code、もはやない人生は考えられないくらいお世.">
+    <meta name="twitter:title" content="AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK">
+    <meta name="twitter:description" content="はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Codeにオレたち流のコードを書かせる（前編）— プロジェクトの流儀を自動抽出する",
-        "description": "この記事は Claude on SonicGarden の記事です。ソニックガーデンのプログラマが、Claude Codeの活用について書いています。#claude_on_sonicgarden きっかけ Claude Code、もはやない人生は考えられないくらいお世.",
+        "headline": "AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK",
+        "description": "はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-02T00:48:01",
-        "dateModified": "2026-05-02T13:14:40.277510",
+        "datePublished": "2026-05-15T08:33:17",
+        "dateModified": "2026-05-17T03:30:42.074633",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1029.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1029.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["Claude"]
+        "articleSection": "プログラミング",
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Codeにオレたち流のコードを書かせる（前編）— プロジェクトの流儀を自動抽出する",
+                "name": "AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1029.html"
             }
         ]
@@ -113,39 +113,37 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Codeにオレたち流のコードを書かせる（前編）— プロジェクトの流儀を自動抽出する</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot ...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Codeにオレたち流のコードを書かせる（前編）— プロジェクトの流儀を自動抽出する</h1>
+                <h1>AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/hiropon122/items/80e76424effeeb5431c2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-02T00:48:01">
-                        公開: 2026-05-02T00:48:01
+                    <span class="source">出典: <a href="https://qiita.com/kyonosuke/items/eee9eb3840d3f740f325?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-05-15T08:33:17">
+                        公開: 2026-05-15T08:33:17
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事は Claude on SonicGarden の記事です。ソニックガーデンのプログラマが、Claude Codeの活用について書いています。#claude_on_sonicgarden
-
-きっかけ
-Claude Code、もはやない人生は考えられないくらいお世...
+                    はじめに
+業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/hiropon122/items/80e76424effeeb5431c2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/kyonosuke/items/eee9eb3840d3f740f325?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,30 +156,30 @@ Claude Code、もはやない人生は考えられないくらいお世...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -191,23 +189,23 @@ Claude Code、もはやない人生は考えられないくらいお世...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +220,16 @@ Claude Code、もはやない人生は考えられないくらいお世...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_682.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9440.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【セール】UGREENの人気NASキットが最大23％オフとなる｢GWセール｣開催中</span>
+                        <span class="nav-title">「本人希望」でマイナ廃止 93万枚</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_1278.html">
+                    <a href="Zennのトレンド_4119.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【セール】Belkinの人気Qi2 25W対応ワイヤレス充電器などがAmazonで特価に</span>
+                        <span class="nav-title">OpenMythosがローカル環境で動くか検証してみた</span>
                     </a>
                 </div>
             </div>
@@ -244,52 +242,53 @@ Claude Code、もはやない人生は考えられないくらいお世...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1232.html">
-                        <h3>楽天トラベルがAIエージェント強化　チャットで宿探し→予約まで完結</h3>
+                    <a href="Zennのトレンド_6429.html">
+                        <h3>CodexモバイルからUbuntuのCodex Appを操作する</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">楽天グループは4月30日、旅行予約サービス「楽天トラベル」のAIエージェント「Rakuten AI」に予約機能を追加したと発表した。これにより、宿泊施設の提案から予約完了までを、AIがチャット内で一貫...</p>
+                        <p class="related-summary">はじめに 本記事では、CodexモバイルからUbuntuのCodex Appを操作する方法を、できるだけ再現性を意識して備忘録的にまとめる。本記事の対象者は以下の通り。 対象者 Ubuntuで開発して...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1142.html">
-                        <h3>ChatGPTはなぜ「ゴブリン」に執着したのか　OpenAIが明かした不具合の正体</h3>
+                    <a href="Qiita_-_人気の記事_8990.html">
+                        <h3>Zephyr RTOS 〜 debug with VSCode 〜</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">「ChatGPT」は、妙なほどゴブリンに執着していた。開発元のOpenAIが原因を調べて修正に乗り出すほどだった。.</p>
+                        <p class="related-summary">はじめに これまで Zephyr を紹介する際、何度か下記リポジトリをベースに解説してきました。 このリポジトリは、実運用を想定した環境構築手順とデバッグ環境を提供しており、 本記事では、これを使った...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9515.html">
-                        <h3>これが俺の未来パソコン！フロント全面液晶にマイク＆スピーカー内蔵でAIと会話しながらゲームできるぞ</h3>
+                    <a href="Qiita_-_人気の記事_7990.html">
+                        <h3>uvを使うと何が嬉しいのか、自分の開発環境で確かめてみた</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ゲームの攻略に行き詰まったとき、スマホや別画面に視線を移す必要はもうありません。MSIの「MEG Vision X AI」は、フロントディスプレイでAIと対話しながらの操作を実現するゲーミングPC。S...</p>
+                        <p class="related-summary">はじめに 最近、Python のパッケージマネージャとして uv を使う例を見かけるようになりました。 Qiita・Zennの記事でも、Python の環境構築で pip ではなく uv で書かれてい...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2533.html">
-                        <h3>AI強化型詐欺：犯罪は「手軽」になり、「巧妙」にもなった</h3>
+                    <a href="Zennのトレンド_2490.html">
+                        <h3>WindowsでもCodexのMobileからCodex Appに接続する方法</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">フィッシングメールの生成、ディープフェイク、マルウェア改変——。AIはサイバー犯罪を速く、安く、巧妙にした。手口の高度化と大衆化が同時に進んでいる。.</p>
+                        <p class="related-summary">! 必要条件 ・Windows ・CodexAppとChatGPTモバイルアプリを最新版にする ・ChatGPTのMFA（多要素認証）を有効化する ChatGPTモバイルアプリのCodexから、Cod...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_7690.html">
-                        <h3>米国防総省の機密にAI 8社と契約</h3>
+                    <a href="気になる記になる_4764.html">
+                        <h3>Microsoftは折りたたみ式スマホの欠点の一つを解決しかけていた模様 ｰ スプリング式ヒンジ設計に関する新たな特許が...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
+                        <p class="related-summary">Microsoftは折りたたみ式スマホの最大の欠点の一つを解決しかけていたようです。Windows Centralによって新たに発見された特許により、開発中止となった「Surface Duo 3」向け...</p>
                     </a>
                 </article>
             </div>

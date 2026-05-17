@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>graphql-ruby 実践ガイド | 日本のテックニュース速報</title>
-    <meta name="description" content="graphql-ruby 実践ガイド - プログラミング関連情報をお届け。">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>自前キャッシュをTanStack Queryに移行したらコードが半分になった | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 本サイトの地図画面には、ホテルのマーカーをタップすると詳細情報をAPIから取得して表示する機能があります。 この機能、最初は自分でキャッシュを実装していました。同じホテルを2回タップしたときにAPIを叩かないように、Map オブジェクトを使ってメモリに保存していたのです">
+    <meta name="keywords" content="React,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="graphql-ruby 実践ガイド">
-    <meta property="og:description" content="graphql-ruby 実践ガイド - プログラミング関連情報をお届け。">
+    <meta property="og:title" content="自前キャッシュをTanStack Queryに移行したらコードが半分になった">
+    <meta property="og:description" content="はじめに 本サイトの地図画面には、ホテルのマーカーをタップすると詳細情報をAPIから取得して表示する機能があります。 この機能、最初は自分でキャッシュを実装していました。同じホテルを2回タップしたときにAPIを叩かないように、Map オブジェクトを使ってメモリに保存していたのです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7134.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="graphql-ruby 実践ガイド">
-    <meta name="twitter:description" content="graphql-ruby 実践ガイド - プログラミング関連情報をお届け。">
+    <meta name="twitter:title" content="自前キャッシュをTanStack Queryに移行したらコードが半分になった">
+    <meta name="twitter:description" content="はじめに 本サイトの地図画面には、ホテルのマーカーをタップすると詳細情報をAPIから取得して表示する機能があります。 この機能、最初は自分でキャッシュを実装していました。同じホテルを2回タップしたときにAPIを叩かないように、Map オブジェクトを使ってメモリに保存していたのです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7134.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "graphql-ruby 実践ガイド",
-        "description": "graphql-ruby 実践ガイド - プログラミング関連情報をお届け。",
+        "headline": "自前キャッシュをTanStack Queryに移行したらコードが半分になった",
+        "description": "はじめに 本サイトの地図画面には、ホテルのマーカーをタップすると詳細情報をAPIから取得して表示する機能があります。 この機能、最初は自分でキャッシュを実装していました。同じホテルを2回タップしたときにAPIを叩かないように、Map オブジェクトを使ってメモリに保存していたのです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-21T09:42:02",
-        "dateModified": "2026-04-23T02:42:15.222897",
+        "datePublished": "2026-05-15T14:14:23",
+        "dateModified": "2026-05-17T03:30:42.070159",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7134.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7134.html",
-        "articleSection": "プログラミング",
-        "keywords": []
+        "articleSection": "その他",
+        "keywords": ["React","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "graphql-ruby 実践ガイド",
+                "name": "自前キャッシュをTanStack Queryに移行したらコードが半分になった",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7134.html"
             }
         ]
@@ -113,33 +113,45 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">graphql-ruby 実践ガイド</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">自前キャッシュをTanStack Queryに移行したらコードが半分になった</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>graphql-ruby 実践ガイド</h1>
+                <h1>自前キャッシュをTanStack Queryに移行したらコードが半分になった</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/saboyutaka/books/graphql-ruby-guide" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-04-21T09:42:02">
-                        公開: 2026-04-21T09:42:02
+                    <span class="source">出典: <a href="https://zenn.dev/hiroki0304/articles/tanstack-query-migration-custom-cache" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-05-15T14:14:23">
+                        公開: 2026-05-15T14:14:23
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    graphql-rubyで開発中の中級者に向けた、設計判断のための実践ガイド。GraphQL Spec・Relay Spec・graphql-js・graphql-rubyの4つのレイヤーを意識しながら、実行パイプラインの内部構造から型設計、Mutation、認可、パフォーマンス、運用まで体系的に解説します。
+                    はじめに
+
+本サイトの地図画面には、ホテルのマーカーをタップすると詳細情報をAPIから取得して表示する機能があります。
+この機能、最初は自分でキャッシュを実装していました。同じホテルを2回タップしたときにAPIを叩かないように、Map オブジェクトを使ってメモリに保存していたのです。
+動いてはいました。でも、コードを見るたびに「これ、本当に正しく動いているのか？」という不安がありました。今回 TanStack Query（React Query）に移行したら、そのコードが丸ごと消えました。
+
+
+ 移行前のコード——自前で全部やっていた
+src/hooks/hotels/useHote...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/saboyutaka/books/graphql-ruby-guide" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/hiroki0304/articles/tanstack-query-migration-custom-cache" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -152,20 +164,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -175,23 +187,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -206,16 +218,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_6251.html">
+                    <a href="気になる記になる_4764.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">== と equals() の違いを完全に理解する — なぜStringの比較は equals() ...</span>
+                        <span class="nav-title">Microsoftは折りたたみ式スマホの欠点の一つを解決しかけていた模様 ｰ スプリング式ヒンジ設計...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9031.html">
+                    <a href="Zennのトレンド_2490.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">n8nでBBCニュースを自動翻訳・要約してDiscordに通知する仕組みを作ってみた</span>
+                        <span class="nav-title">WindowsでもCodexのMobileからCodex Appに接続する方法</span>
                     </a>
                 </div>
             </div>
@@ -228,53 +240,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7257.html">
-                        <h3>xUnit で始める C# 単体テスト入門</h3>
+                    <a href="CNET_Japan_最新情報総合_1.html">
+                        <h3>落とし物の本人確認、スマホのマイナカードでも可能に　警察庁が規則改正案</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">C# で開発をしていると、単体テストを書く機会は必ず訪れます。 ただ、いざ書こうとすると「どこから手をつければいいんだろう」と迷うことも多いですよね。 この記事では、xUnit を使った単体テストの基...</p>
+                        <p class="related-summary">警察庁は、落とし物の返還時などに行う本人確認について、デジタル身分証や「カード代替電磁的記録」を使えるようにする規則改正案を示した。対象は「遺失物法施行規則の一部を改正する規則案」。施行日は公布の日と...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9030.html">
-                        <h3>【前編】9割の新人エンジニアがやっている 「承知しました」の落とし穴</h3>
+                    <a href="ASCII_jp__トップ_4539.html">
+                        <h3>人気パスタが550円！月イチ「大感謝祭」でナポリタン、ミートソースなどお得に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや考え方を整理して発信しています。 PRUMについて気になった方は、コーポレ...</p>
+                        <p class="related-summary">和風スパゲッティなどを提供するレストラン「壁の穴」は、5月19日に「大感謝祭」を開催します。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_2539.html">
-                        <h3>App Store に配布したアプリのみクラッシュした</h3>
+                    <a href="ASCII_jp__トップ_4145.html">
+                        <h3>Snow Man・宮舘涼太主演 ドラマ【ターミネーターと恋しちゃったら】のスピンオフ Travis Japan・松倉海斗...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">Snow Man・宮舘涼太主演 ドラマ【ターミネーターと恋しちゃったら】のスピンオフ Travis Japan・松倉海斗主演【ターミネーターの恋に助言しちゃったら】本日よりTELASAで独占配信開始.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_9405.html">
+                        <h3>Rustで小さなリンカーを実装する</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに ある日、App Store にリリースしたアプリが起動直後にクラッシュしているという報告が届きました。 自分が所属しているiOSチームではリリース前にテストを徹底しているので、そんなはずはな...</p>
+                        <p class="related-summary">Rustで変数を終了ステータスとして利用する実行バイナリを生成できる小さなリンカーをゼロから実装して、リンカーの動作原理を理解する本です。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_6740.html">
-                        <h3>Vercel、Webブラウザ上のターミナルエミュレータ「wterm」をオープンソースで公開。WebAssembly製でW...</h3>
+                    <a href="ASCII_jp__トップ_3275.html">
+                        <h3>にんにくガッツリ！QTTA「背徳ペペロンチーノ味」罪深そうな新作</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Vercelは、Webブラウザ上でターミナルエミュレータを実現する「wterm」（発音は“dub-term”：ダブターム）をオープンソースで公開しました。 wtermはコア部分がZig言語で開発されW...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_451.html">
-                        <h3>C# 開発者のための GitHub Copilot CLI と VS Code Agent Mode の使い分け</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに GitHub Copilot を日常的に使っていると、「ターミナルで動く Copilot CLI」 と 「VS Code の Copilot Chat Agent Mode」 という、似てい...</p>
+                        <p class="related-summary">東洋水産は「MARUCHAN QTTA（クッタ） 背徳ペペロンチーノ味」を5月25日より、全国にて発売します。.</p>
                     </a>
                 </article>
             </div>

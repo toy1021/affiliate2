@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qt 6 を Zephyr で動くようにしました | 日本のテックニュース速報</title>
-    <meta name="description" content="Qt が Zephyr で動いた。しかも、マイコンの上で Qt には様々なサンプルアプリが含まれています。 そのデモを、ソースコードを 1 行も変更せずに、Linux も Android も載っていないマイコンの上で動かしました">
-    <meta name="keywords" content="Android">
+    <title>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事 | 日本のテックニュース速報</title>
+    <meta name="description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Qt 6 を Zephyr で動くようにしました">
-    <meta property="og:description" content="Qt が Zephyr で動いた。しかも、マイコンの上で Qt には様々なサンプルアプリが含まれています。 そのデモを、ソースコードを 1 行も変更せずに、Linux も Android も載っていないマイコンの上で動かしました">
+    <meta property="og:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
+    <meta property="og:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6810.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Qt 6 を Zephyr で動くようにしました">
-    <meta name="twitter:description" content="Qt が Zephyr で動いた。しかも、マイコンの上で Qt には様々なサンプルアプリが含まれています。 そのデモを、ソースコードを 1 行も変更せずに、Linux も Android も載っていないマイコンの上で動かしました">
+    <meta name="twitter:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
+    <meta name="twitter:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6810.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Qt 6 を Zephyr で動くようにしました",
-        "description": "Qt が Zephyr で動いた。しかも、マイコンの上で Qt には様々なサンプルアプリが含まれています。 そのデモを、ソースコードを 1 行も変更せずに、Linux も Android も載っていないマイコンの上で動かしました",
+        "headline": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
+        "description": "本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-13T11:34:06",
-        "dateModified": "2026-05-15T10:25:15.660594",
+        "datePublished": "2026-05-20T16:20:43",
+        "dateModified": "2026-05-21T07:55:11.467188",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6810.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6810.html",
-        "articleSection": "Google・Android",
-        "keywords": ["Android"]
+        "articleSection": "その他",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Google・Android",
-                "item": "https://toy1021.github.io/affiliate2/#category=Google・Android"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Qt 6 を Zephyr で動くようにしました",
+                "name": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6810.html"
             }
         ]
@@ -113,42 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=Google・Android">Google・Android</a></li>
-                <li aria-current="page">Qt 6 を Zephyr で動くようにしました</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Qt 6 を Zephyr で動くようにしました</h1>
+                <h1>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/tasuku/articles/04f39f7e31c1d0" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: Google・Android</span>
-                    <time datetime="2026-05-13T11:34:06">
-                        公開: 2026-05-13T11:34:06
+                    <span class="source">出典: <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-05-20T16:20:43">
+                        公開: 2026-05-20T16:20:43
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Android</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Qt が Zephyr で動いた。しかも、マイコンの上で
-Qt には様々なサンプルアプリが含まれています。
-そのデモを、ソースコードを 1 行も変更せずに、Linux も Android も載っていないマイコンの上で動かしました。
-https://x.com/task_jp/status/2054252558198382857
-https://doc.qt.io/qt-6/gallery.html
-https://x.com/task_jp/status/2054387392375853292
-https://doc.qt.io/qt-6/qtdoc-demos-coffee-exa...
+                    本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る。つまり、ドメインモデリングの本質論ではなく、不変条件を実装へ落とす過程で表面化する技術的な論点に焦点を当てる。
+本稿の内容は、既存文献から学んだことと、筆者自身の設計・運用上の解釈に基づいている。設計に「常にこうすべき」という絶対解はない。ここで述べるのは、筆者が現時点で妥当だと考えている判断軸である。
+というか、かなり...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/tasuku/articles/04f39f7e31c1d0" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,10 +157,10 @@ https://doc.qt.io/qt-6/qtdoc-demos-coffee-exa...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Android&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Android - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Android - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAndroidに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -174,7 +170,7 @@ https://doc.qt.io/qt-6/qtdoc-demos-coffee-exa...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>Google・Android関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -205,16 +201,16 @@ https://doc.qt.io/qt-6/qtdoc-demos-coffee-exa...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_4683.html">
+                    <a href="Publickey_501.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Claude Codeキーボードショートカット17選、Tier別に全部教えたるで</span>
+                        <span class="nav-title">APIコール一発でGoogleがホストするLinux環境付きのAIエージェントを起動、Markdow...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_933.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5575.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Insta360、新型ワイヤレスマイク「Insta360 Mic Pro」を5月19日に正式に発表へ</span>
+                        <span class="nav-title">民事裁判の手続き 全面デジタル化</span>
                     </a>
                 </div>
             </div>
@@ -227,53 +223,53 @@ https://doc.qt.io/qt-6/qtdoc-demos-coffee-exa...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3831.html">
-                        <h3>AndroidとChromeOS統合の「Googlebook」、参入5社に「あの会社」が含まれない違和感</h3>
+                    <a href="ASCII_jp__トップ_3633.html">
+                        <h3>静音リニア軸＋日本語配列で、夜でも気兼ねなく打てるキーボードがタイムセールで1万円ジャスト！</h3>
                         <div class="related-meta">
-                            <span class="category">Google・Android</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Googleが新型ノートPC「Googlebook」を発表し、HP、Acer、Lenovo、Dell、Asusの主要PCメーカー5社が年内に対応機を投入することが明らかになった。期待は大きい一方で、A...</p>
+                        <p class="related-summary">jpにて、EPOMAKERのテンキーレスゲーミングキーボード「TH87 JIS（Sea Salt Silent）」が販売中だ。参考価格は1万2500円だが、タイムセールにより20％オフの1万円で購入で...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9374.html">
-                        <h3>AndroidとChromeOSを統合した「Aluminum OS」とは--現時点でわかっていること</h3>
+                    <a href="ASCII_jp__トップ_6912.html">
+                        <h3>ドングルまで猫づくしだが、その実態は…超本格派ゲーミングマウスにゃのだ！：ソフマップ なんば店</h3>
                         <div class="related-meta">
-                            <span class="category">Google・Android</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">GoogleのAndroidとChromeOSが、1つのOSへと統合される。最初の搭載先は、新ノートPC「Googlebook」だ。正式名称はまだ決まっておらず、現時点では「Aluminum OS」と...</p>
+                        <p class="related-summary">つまみ持ちに特化した極小ワイヤレスマウス「Beast Miao」。猫耳ボタンや猫型の肉抜きなど遊び心も満載です！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8730.html">
-                        <h3>「Google I/O」20日午前2時開幕　注目ポイントまとめ　Gemini 4は登場する？</h3>
+                    <a href="ASCII_jp__トップ_6992.html">
+                        <h3>【期待】ソニー「State of Play」6月3日6時から放送　「ウルヴァリン」など60分かけて紹介</h3>
                         <div class="related-meta">
-                            <span class="category">Google・Android</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Googleの年次開発者会議「Google I/O 2026」が、5月19日（米国時間）に開幕する。今年は「Gemini」をはじめとするAI、Android XR、スマートグラスなどに関するアップデー...</p>
+                        <p class="related-summary">ソニー・インタラクティブエンタテインメントは日本時間6月3日午前6時から「State of Play」を放送すると告知した。今回も60分と大ボリュームでお届けする。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_9145.html">
-                        <h3>Googleアカウントの15GBの無料ストレージ ｰ 新規作成時に電話番号認証を行わない場合は5GBに制限されるように</h3>
+                    <a href="ASCII_jp__トップ_260.html">
+                        <h3>RTX 5070も、白で統一された環境も、まとめて揃う。届いた日から遊べるドスパラPCセット</h3>
                         <div class="related-meta">
-                            <span class="category">Google・Android</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Googleアカウントでは、長年、新規登録するとGmail・ドライブ・フォトで共通利用できる15GBの無料ストレージが自動的に付与されてきましたが、Googleがアカウントのストレージポリシーを変更し...</p>
+                        <p class="related-summary">ドスパラでは、「迷わず選べる！はじめてにおすすめのゲーミングPCセット」を展開中。PC本体に加えて、モニターやキーボード、マウス、ヘッドセットなどをまとめて揃えられるセットとなっている。ラインアップに...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_6666.html">
-                        <h3>Googleの新型スマートディスプレイ「Google Home Display」の存在が明らかに</h3>
+                    <a href="ASCII_jp__トップ_784.html">
+                        <h3>「お、縁日!?」と思ったら常設ビアガーデンだったの最高すぎる！　郡山駅前・夏の大人の秘密基地「アティ郡山屋台村」</h3>
                         <div class="related-meta">
-                            <span class="category">Google・Android</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Googleの新型スマートディスプレイ「Google Home Display」の存在が明らかになりました。 これは「Google」アプリのコード内から明らかになったもので、「Google Home ...</p>
+                        <p class="related-summary">あの頃、夕暮れにワクワクした夏祭りの匂い。郡山駅前にオープンした屋台村は、射的やたこ焼き食べ放題も楽しめる「大人の秘密基地」です。手ぶらで本格BBQを囲みながら、最高の非日常に浸ってみませんか。.</p>
                     </a>
                 </article>
             </div>

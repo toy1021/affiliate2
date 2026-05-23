@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>コードを書かなくなった我々は何者か —— Product / Platform / Evaluate の3職責でエンジニアの役割を再定義する | 日本のテックニュース速報</title>
-    <meta name="description" content="jsの技術スタックでWebサービスの開発に携わっているので、「Webエンジニア」あるいは「フルスタックエンジニア」と名乗っています。バックもフロントもインフラも、必要であれば全て巻き取る一方、「TypeScriptエンジニア」「Ho. ! 本記事は前置きが長めです">
-    <meta name="keywords" content="本,EV">
+    <title>Rust + axum で画像掲示板を作る (1) プロジェクト初期化と Hello, axum! | 日本のテックニュース速報</title>
+    <meta name="description" content="toml に axum と tokio を追加する src/main. はじめに 数年前に PHP で書いた画像掲示板を、Rust の勉強として axum で書き直すことにした。 作りながら学んだ内容を、Zenn でステップごとに記事化していく">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="コードを書かなくなった我々は何者か —— Product / Platform / Evaluate の3職責でエンジニアの役割を再定義する">
-    <meta property="og:description" content="jsの技術スタックでWebサービスの開発に携わっているので、「Webエンジニア」あるいは「フルスタックエンジニア」と名乗っています。バックもフロントもインフラも、必要であれば全て巻き取る一方、「TypeScriptエンジニア」「Ho. ! 本記事は前置きが長めです">
+    <meta property="og:title" content="Rust + axum で画像掲示板を作る (1) プロジェクト初期化と Hello, axum!">
+    <meta property="og:description" content="toml に axum と tokio を追加する src/main. はじめに 数年前に PHP で書いた画像掲示板を、Rust の勉強として axum で書き直すことにした。 作りながら学んだ内容を、Zenn でステップごとに記事化していく">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2539.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="コードを書かなくなった我々は何者か —— Product / Platform / Evaluate の3職責でエンジニアの役割を再定義する">
-    <meta name="twitter:description" content="jsの技術スタックでWebサービスの開発に携わっているので、「Webエンジニア」あるいは「フルスタックエンジニア」と名乗っています。バックもフロントもインフラも、必要であれば全て巻き取る一方、「TypeScriptエンジニア」「Ho. ! 本記事は前置きが長めです">
+    <meta name="twitter:title" content="Rust + axum で画像掲示板を作る (1) プロジェクト初期化と Hello, axum!">
+    <meta name="twitter:description" content="toml に axum と tokio を追加する src/main. はじめに 数年前に PHP で書いた画像掲示板を、Rust の勉強として axum で書き直すことにした。 作りながら学んだ内容を、Zenn でステップごとに記事化していく">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "コードを書かなくなった我々は何者か —— Product / Platform / Evaluate の3職責でエンジニアの役割を再定義する",
-        "description": "jsの技術スタックでWebサービスの開発に携わっているので、「Webエンジニア」あるいは「フルスタックエンジニア」と名乗っています。バックもフロントもインフラも、必要であれば全て巻き取る一方、「TypeScriptエンジニア」「Ho. ! 本記事は前置きが長めです",
+        "headline": "Rust + axum で画像掲示板を作る (1) プロジェクト初期化と Hello, axum!",
+        "description": "toml に axum と tokio を追加する src/main. はじめに 数年前に PHP で書いた画像掲示板を、Rust の勉強として axum で書き直すことにした。 作りながら学んだ内容を、Zenn でステップごとに記事化していく",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-11T00:00:12",
-        "dateModified": "2026-05-11T19:49:03.446554",
+        "datePublished": "2026-05-22T11:43:45",
+        "dateModified": "2026-05-23T13:27:13.312937",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2539.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2539.html",
-        "articleSection": "プログラミング",
-        "keywords": ["本","EV"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "コードを書かなくなった我々は何者か —— Product / Platform / Evaluate の3職責でエンジニアの役割を再定義する",
+                "name": "Rust + axum で画像掲示板を作る (1) プロジェクト初期化と Hello, axum!",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2539.html"
             }
         ]
@@ -113,43 +113,48 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">コードを書かなくなった我々は何者か —— Product / Platform / Evaluate...</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">Rust + axum で画像掲示板を作る (1) プロジェクト初期化と Hello, axum!</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>コードを書かなくなった我々は何者か —— Product / Platform / Evaluate の3職責でエンジニアの役割を再定義する</h1>
+                <h1>Rust + axum で画像掲示板を作る (1) プロジェクト初期化と Hello, axum!</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/tokium_dev/articles/engineer-role-triangle-map" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-05-11T00:00:12">
-                        公開: 2026-05-11T00:00:12
+                    <span class="source">出典: <a href="https://zenn.dev/purenium/articles/2026_05_22_rust-axum-imgbbs-01-init" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-05-22T11:43:45">
+                        公開: 2026-05-22T11:43:45
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
-                    <span class="tag">EV</span>
+                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-本記事は前置きが長めです。早く結論を知りたい方は、3. 仮説 — エンジニアの職責は Product / Platform / Evaluate の3つに分かれる からお読みください。
+                    はじめに
+数年前に PHP で書いた画像掲示板を、Rust の勉強として axum で書き直すことにした。
+作りながら学んだ内容を、Zenn でステップごとに記事化していく。
+第1回ではプロジェクトの土台を作り、axum で最小の Hello, axum! が返るところまで進める。
+Rust 初学者として引っかかった点や、検索で出てきやすい axum 0.6 系の記事との違いも書き残しておく。
+今回やることは次の4つだ。
 
 
- 1. はじめに
-エンジニアのみなさん。突然ですが、みなさんは自己紹介で自身の仕事を何と名乗っていますか？
-僕の場合、昨年12月からTypeScript + Hono.jsの技術スタックでWebサービスの開発に携わっているので、「Webエンジニア」あるいは「フルスタックエンジニア」と名乗っています。バックもフロントもインフラも、必要であれば全て巻き取る一方、「TypeScriptエンジニア」「Ho...
+Cargo.toml に axum と tokio を追加する
+
+src/main.rs に最小の axum サーバを書く
+
+.gitignore と Just...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/tokium_dev/articles/engineer-role-triangle-map" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/purenium/articles/2026_05_22_rust-axum-imgbbs-01-init" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,30 +167,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -195,23 +190,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +221,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_799.html">
+                    <a href="Qiita_-_人気の記事_6030.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Copilot、AI Builder、Copilot Studio 等でドキュメント翻訳を試してみた</span>
+                        <span class="nav-title">JAWS-UG IoTハンズオンイベントのネットワークを自作ルータで構築した話</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_4397.html">
+                    <a href="Zennのトレンド_2817.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AI時代のMoatとは — 「もし明日、競合が同じプロダクトを出したらどう勝つか？」</span>
+                        <span class="nav-title">不可視文字による攻撃を防ぐにはパターンマッチだと厳しいという話</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +243,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3785.html">
-                        <h3>マネフォ、銀行連携停止の補償「現在検討中」--再開日時は後日公表</h3>
+                    <a href="CNET_Japan_最新情報総合_5772.html">
+                        <h3>グーグルの超リアルなAIエージェントと会話してみた　次世代技術「Beam」が示す驚きの可能性</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">マネーフォワードは5月11日、「GitHub」への不正アクセスについて、調査の進捗を第二報として公表した。現時点で本番データベースへの侵害や顧客情報の漏えい、本件に起因する不正利用は確認されておらず、...</p>
+                        <p class="related-summary">グーグルがテレプレゼンス用システム「Google Beam」の一環として披露したエージェントは実験的なものだが、そのリアルさは衝撃的だ。これは人間の助けとなる存在なのか、それとも人間の代わりとなるもの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_4791.html">
-                        <h3>JavaScriptランタイムのBun、Claudeを使って開発言語をZigからRustへ移行中</h3>
+                    <a href="CNET_Japan_最新情報総合_1260.html">
+                        <h3>AIにラジオ局を運営させたらどうなる？ Claude、GPT、Gemini、Grokそれぞれの苦闘</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">js互換のJavaScriptランタイムであるBunの作者Jarred Sumner氏は、これまでZig言語で開発してきたBunの開発言語を、Rust言語へ移行する作業を進めていることを明らかにしてい...</p>
+                        <p class="related-summary">これはシンプルな実験だ。ある企業が4つのAIモデルにそれぞれ20ドルと簡潔な指示を与え、あとは自由に任せた。半年を経た状況はどのようなものだろうか。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_1175.html">
-                        <h3>AIとの共同作業に最適化したコードエディタ「Zed 1.0」登場。Atomエディタの開発者らがRustで最初から作り直し...</h3>
+                    <a href="CNET_Japan_最新情報総合_6285.html">
+                        <h3>SpaceX、Anthropicから毎月約2000億円を受領--もはや宇宙よりAIを「自社の価値」の根拠に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">0に到達したことを発表しました。Windows、Mac、Linuxで利用可能です。 We&#39;ve shipped more. Rust製の高速コードエディタ「Zed」を開発しているZed Industr...</p>
+                        <p class="related-summary">SpaceXが米証券取引委員会（SEC）に提出したIPO目論見書（S-1）で、AI企業Anthropicとの大型契約が明らかになった。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5057.html">
-                        <h3>「今日何してた？」に詰まる新人エンジニアへ。それ、スキルではなく“進め方”の問題です。</h3>
+                    <a href="CNET_Japan_最新情報総合_4443.html">
+                        <h3>生成AIに個人情報を入力、「肯定」35% 「否定」38%で割れる--ドコモ調査</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや考え方を整理して発信しています。 PRUMについて気になった方は、コーポレ...</p>
+                        <p class="related-summary">NTTドコモ モバイル社会研究所は5月21日、生成AIへの個人情報の入力に対する意識調査の結果を公表した。「有効なアドバイスを得るためなら、ある程度の個人情報の記入はしかたない」という考え方について、...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7625.html">
-                        <h3>CSMは高すぎる…1万円で受けられるアジャイル検定Lv.1を受験してみた</h3>
+                    <a href="CNET_Japan_最新情報総合_5014.html">
+                        <h3>Yahoo!ショッピング、ChatGPTで商品を探せるように　「Apps in ChatGPT」対応で実現</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">1 を受験し、無事合格しました。 過去問が一切公開されておらず、ネット上の情報も限られている試験なので、これから受験する方の参考になればと思い、勉強法や試験の傾向、つまずきやすいポイントをまとめます。...</p>
+                        <p class="related-summary">LINEヤフーは5月21日、運営する「Yahoo!ショッピング」がChatGPTの新機能「Apps in ChatGPT」に対応し、アプリ連携を開始したと発表した。同社によると、総合ECモールがApp...</p>
                     </a>
                 </article>
             </div>

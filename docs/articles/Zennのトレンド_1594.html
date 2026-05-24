@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プロジェクトマネジメントするときのテンプレとルーティンを紹介します | 日本のテックニュース速報</title>
-    <meta name="description" content="これはなに こんにちは、昨今プロジェクト担当をやることのやることの[1]多いもりたです[2]。 先日チームリーダーとの1on1でプロジェクトについてぼやいていたら、リーダーから「でも森田さんのプロジェクトマネジメント好きですよ」と言われました[3]">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事 | 日本のテックニュース速報</title>
+    <meta name="description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="プロジェクトマネジメントするときのテンプレとルーティンを紹介します">
-    <meta property="og:description" content="これはなに こんにちは、昨今プロジェクト担当をやることのやることの[1]多いもりたです[2]。 先日チームリーダーとの1on1でプロジェクトについてぼやいていたら、リーダーから「でも森田さんのプロジェクトマネジメント好きですよ」と言われました[3]">
+    <meta property="og:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
+    <meta property="og:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1594.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="プロジェクトマネジメントするときのテンプレとルーティンを紹介します">
-    <meta name="twitter:description" content="これはなに こんにちは、昨今プロジェクト担当をやることのやることの[1]多いもりたです[2]。 先日チームリーダーとの1on1でプロジェクトについてぼやいていたら、リーダーから「でも森田さんのプロジェクトマネジメント好きですよ」と言われました[3]">
+    <meta name="twitter:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
+    <meta name="twitter:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "プロジェクトマネジメントするときのテンプレとルーティンを紹介します",
-        "description": "これはなに こんにちは、昨今プロジェクト担当をやることのやることの[1]多いもりたです[2]。 先日チームリーダーとの1on1でプロジェクトについてぼやいていたら、リーダーから「でも森田さんのプロジェクトマネジメント好きですよ」と言われました[3]",
+        "headline": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
+        "description": "本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-17T13:18:16",
-        "dateModified": "2026-05-19T21:21:00.353840",
+        "datePublished": "2026-05-20T16:20:43",
+        "dateModified": "2026-05-24T07:22:37.183290",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1594.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1594.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "その他",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "プロジェクトマネジメントするときのテンプレとルーティンを紹介します",
+                "name": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1594.html"
             }
         ]
@@ -113,48 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">プロジェクトマネジメントするときのテンプレとルーティンを紹介します</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>プロジェクトマネジメントするときのテンプレとルーティンを紹介します</h1>
+                <h1>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/levtech/articles/pjm-rutine-and-template" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-05-17T13:18:16">
-                        公開: 2026-05-17T13:18:16
+                    <span class="source">出典: <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-05-20T16:20:43">
+                        公開: 2026-05-20T16:20:43
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    これはなに
-こんにちは、昨今プロジェクト担当をやることのやることの[1]多いもりたです[2]。
-先日チームリーダーとの1on1でプロジェクトについてぼやいていたら、リーダーから「でも森田さんのプロジェクトマネジメント好きですよ」と言われました[3]。嬉しかったので、今回は自分がプロジェクトを担当する際のルーティン、プロジェクト開始時にすぐ用意するテンプレをご紹介します。
-構成
-
- 構成
-
-テンプレ・ルーティン紹介
-それぞれ解説
-おわりに
-
-テンプレを紹介してそれを解説し、おわりという流れです。特に難しいことは言いません。
-
-
- テンプレ・ルーティン紹介
-それではまずもりたが普段やって...
+                    本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る。つまり、ドメインモデリングの本質論ではなく、不変条件を実装へ落とす過程で表面化する技術的な論点に焦点を当てる。
+本稿の内容は、既存文献から学んだことと、筆者自身の設計・運用上の解釈に基づいている。設計に「常にこうすべき」という絶対解はない。ここで述べるのは、筆者が現時点で妥当だと考えている判断軸である。
+というか、かなり...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/levtech/articles/pjm-rutine-and-template" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,9 +153,24 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -196,16 +201,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_9696.html">
+                    <a href="Publickey_6876.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iPhone Ultraの開発最終段階で課題発生と指摘〜何が問題になっている？</span>
+                        <span class="nav-title">APIコール一発でGoogleがホストするLinux環境付きのAIエージェントを起動、Markdow...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_6064.html">
+                    <a href="Qiita_-_人気の記事_4620.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">新卒エンジニアがG検定を受けた話</span>
+                        <span class="nav-title">エンジニアが年収600・800・1000万円の壁を突破するための6つの能力とキャリア戦略</span>
                     </a>
                 </div>
             </div>
@@ -218,53 +223,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4439.html">
-                        <h3>「よろしければ涼みに店内へ」セブン−イレブンがクールシェア実施</h3>
+                    <a href="CNET_Japan_最新情報総合_2930.html">
+                        <h3>SpaceX、本日の「スターシップV3」の打ち上げを直前で中止（更新）理由判明</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">セブン-イレブン・ジャパンは、熱中症対策として、客が店内で気軽に涼める「クールシェア」の取り組みを5月18日以降、順次行う。実施店舗には「クールシェア」に関するポスターを掲示する。実施するかどうかは店...</p>
+                        <p class="related-summary">米SpaceXは、日本時間5月22日に予定していた「Starship」の次世代型「V3」の打ち上げを直前で中止した。カウントダウンはマイナス40秒付近から動かず、その後中止が発表された。打ち上げは明日...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2886.html">
-                        <h3>サウスウエスト航空、人型・動物型ロボットの「搭乗」を全面禁止　預け入れもNG</h3>
+                    <a href="CNET_Japan_最新情報総合_9920.html">
+                        <h3>東海道・山陽新幹線に「弱冷房車」　7〜8月導入　16両ひかりの3号車</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">サウスウエスト航空は新たな方針を適用し、サイズや用途を問わず、人型ロボットと動物型ロボットを機内持ち込みと手荷物預け入れの対象外とした。.</p>
+                        <p class="related-summary">JR東海とJR西日本は5月22日、東海道・山陽新幹線で冷房を弱めに設定した「弱冷房車」を試験的に導入すると発表した。実施期間は2026年7月1日から8月31日まで。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3032.html">
-                        <h3>中国HONORのロボットアーム搭載スマホ、7〜9月発売へ</h3>
+                    <a href="ASCII_jp__トップ_5650.html">
+                        <h3>携帯キャリアを次々乗り換える「ホッピング」は本当に得をするのか、問題はないのか考えた</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">HONORは先週、中国で2026年第3四半期にRobot Phoneを投入すると発表した。.</p>
+                        <p class="related-summary">短期のMNPで携帯事業者を次々に乗り換えて特典を得る「ホッピング」。これが総務省で議論になるなど、問題になるということは、そのメリットが大きいという証でもある。そこで、どんな得をするのかあらためて考え...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_914.html">
-                        <h3>「ドコモがつながらない」SNS投稿増加も「自社サービスは正常」と同社　一部MVNOには影響</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9390.html">
+                        <h3>連日Xの首相 問われる取材の意味</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">NTTドコモは5月19日、午前中からSNSで「ドコモの携帯電話サービスが使えない」といった投稿が増えていた件について、ドコモ設備は正常に運用されていることを確認したとする最終報を、同日午後1時15分時...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2672.html">
-                        <h3>スマホの「膨張バッテリー」をハサミで取り出そうとして発火--消費者庁が重大製品事故5件を公表</h3>
+                    <a href="ASCII_jp__トップ_3860.html">
+                        <h3>テレビで話題！『一茂×かまいたち ゲンバ』でも“今まで食べたポテトでいちばん美味い”と絶賛された、熟成炭火焼き安納芋のフ...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">消費者庁は5月19日、消費生活用製品安全法に基づき報告のあった重大製品事故5件を公表した。コロナ製の石油ストーブで建物が全焼した火災や、スマートフォンの膨張したバッテリーをはさみで取り出そうとして発火...</p>
+                        <p class="related-summary">テレビで話題！『一茂×かまいたち ゲンバ』でも“今まで食べたポテトでいちばん美味い”と絶賛された、熟成炭火焼き安納芋のフライドポテトをご自宅で。.</p>
                     </a>
                 </article>
             </div>

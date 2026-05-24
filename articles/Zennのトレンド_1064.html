@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった | 日本のテックニュース速報</title>
-    <meta name="description" content="Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった - AI・機械学習技術のニュースをお届け。">
-    <meta name="keywords" content="AI,Claude,ブロックチェーン">
+    <title>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事 | 日本のテックニュース速報</title>
+    <meta name="description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった">
-    <meta property="og:description" content="Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった - AI・機械学習技術のニュースをお届け。">
+    <meta property="og:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
+    <meta property="og:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1064.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった">
-    <meta name="twitter:description" content="Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった - AI・機械学習技術のニュースをお届け。">
+    <meta name="twitter:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
+    <meta name="twitter:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった",
-        "description": "Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった - AI・機械学習技術のニュースをお届け。",
+        "headline": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
+        "description": "本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-08T06:53:06",
-        "dateModified": "2026-03-10T22:30:41.662497",
+        "datePublished": "2026-05-20T16:20:43",
+        "dateModified": "2026-05-24T19:19:05.669433",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1064.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1064.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","ブロックチェーン"]
+        "articleSection": "その他",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった",
+                "name": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1064.html"
             }
         ]
@@ -113,45 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった</h1>
+                <h1>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/komlock_lab/articles/gsd-guide-handson" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-08T06:53:06">
-                        公開: 2026-03-08T06:53:06
+                    <span class="source">出典: <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-05-20T16:20:43">
+                        公開: 2026-05-20T16:20:43
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">ブロックチェーン</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    こんにちは！ブロックチェーンエンジニアの山口夏生です。
-ブロックチェーン×AI Agentで自律経済圏を創る開発組織Komlock labでCTOをしています。
-
- GSD（GET SHIT DONE）とは何か
-「How We Built The World's Most Powerful Coding Agent」というXの投稿が114K Viewsを記録して話題になっている。
-
-https://x.com/gsd_foundation/status/2030361888681239003?s=20
-AIコーディングエージェントの信頼性が落ちる原因は、モデルのコード生成能力ではない。状...
+                    本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る。つまり、ドメインモデリングの本質論ではなく、不変条件を実装へ落とす過程で表面化する技術的な論点に焦点を当てる。
+本稿の内容は、既存文献から学んだことと、筆者自身の設計・運用上の解釈に基づいている。設計に「常にこうすべき」という絶対解はない。ここで述べるのは、筆者が現時点で妥当だと考えている判断軸である。
+というか、かなり...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/komlock_lab/articles/gsd-guide-handson" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -164,30 +157,10 @@ AIコーディングエージェントの信頼性が落ちる原因は、モデ
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ブロックチェーン - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">ブロックチェーン - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでブロックチェーンに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -197,23 +170,23 @@ AIコーディングエージェントの信頼性が落ちる原因は、モデ
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -228,16 +201,16 @@ AIコーディングエージェントの信頼性が落ちる原因は、モデ
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_1216.html">
+                    <a href="Publickey_3844.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【レビュー】充電器が外せる！ケーブル収納式のCIO電源タップを使ってみた</span>
+                        <span class="nav-title">APIコール一発でGoogleがホストするLinux環境付きのAIエージェントを起動、Markdow...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_6173.html">
+                    <a href="Zennのトレンド_916.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">自分の結婚式でフォトコンテストLINEアプリを開発してセルフ余興をした話 &amp; 結果報告</span>
+                        <span class="nav-title">「URLを誰にも教えてない」が通じない理由 — CTログを30分監視してみた</span>
                     </a>
                 </div>
             </div>
@@ -250,53 +223,52 @@ AIコーディングエージェントの信頼性が落ちる原因は、モデ
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6951.html">
-                        <h3>ゲーム内チャットの暴言、投稿前にAIが言い換え--Robloxが新機能を導入</h3>
+                    <a href="CNET_Japan_最新情報総合_9308.html">
+                        <h3>SpaceX、本日の「スターシップV3」の打ち上げを直前で中止（更新）理由判明</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Robloxは、ゲーム内チャットの不適切な発言をAIで自動的に置き換える試みを開始する。.</p>
+                        <p class="related-summary">米SpaceXは、日本時間5月22日に予定していた「Starship」の次世代型「V3」の打ち上げを直前で中止した。カウントダウンはマイナス40秒付近から動かず、その後中止が発表された。打ち上げは明日...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_729.html">
-                        <h3>呼吸音から「結核」を検知するAIワイヤレス聴診器が登場</h3>
+                    <a href="CNET_Japan_最新情報総合_7579.html">
+                        <h3>東海道・山陽新幹線に「弱冷房車」　7〜8月導入　16両ひかりの3号車</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">南アフリカの新興企業AI DiagnosticsはMWCで新たな医療用デバイスを展示した。人の呼吸音を聞き取って結核のスクリーニング（検査）をするワイヤレス聴診器だ。.</p>
+                        <p class="related-summary">JR東海とJR西日本は5月22日、東海道・山陽新幹線で冷房を弱めに設定した「弱冷房車」を試験的に導入すると発表した。実施期間は2026年7月1日から8月31日まで。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7136.html">
-                        <h3>デジタル庁、政府で使用する「国産AI」7つを選定　さらに絞り込みへ</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_2553.html">
+                        <h3>連日Xの首相 問われる取材の意味</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">デジタル庁は3月6日、政府で試験的に利用する国産の大規模言語モデル、いわゆるLLMの公募結果を公表し、応募のあった15件の中から7件を選定した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5346.html">
-                        <h3>マイクロソフト、自律型AI機能「Copilot Cowork」発表　Anthropicと提携</h3>
+                    <a href="Qiita_-_人気の記事_8310.html">
+                        <h3>Qiita記事の毎月投稿を三年間継続できたので振り返ります！</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">マイクロソフトはAI機能「Microsoft 365 Copilot」に、Anthropicと提携して構築した「Copilot Cowork」を導入すると発表した。.</p>
+                        <p class="related-summary">はじめに 前回の記事で、Qiitaバッジ「Monthly 36」を達成することができました！！ 支えてくれている方、読んでくれる方、反応をくれる方、ありがとうございます。とても感謝しています！！ 本格...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5474.html">
-                        <h3>防衛省、AIを作戦に積極活用へ　富士通が受託し「共創パートナー」募集開始</h3>
+                    <a href="Qiita_-_人気の記事_4654.html">
+                        <h3>2025 Japan AWS Jr.Champions としての活動を振り返る</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">富士通は10日、防衛分野で新たな技術開発を進めるため、スタートアップ企業などとの共創プログラム「Fujitsu Accelerator Program for Defense Tech」を始めると発表...</p>
+                        <p class="related-summary">はじめに こんにちは、やくもです。 私は2025年度のJapan AWS Jr. Champions）として活動してきました。本記事ではこの一年間の活動を振り返っていきます。 本記事を通して、Jr.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作って学ぶAsync Rust | 日本のテックニュース速報</title>
-    <meta name="description" content="Rust非同期ランタイムを自作することで非同期処理そのものへの理解を深めることを目的とした本.">
+    <title>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事 | 日本のテックニュース速報</title>
+    <meta name="description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
     <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="作って学ぶAsync Rust">
-    <meta property="og:description" content="Rust非同期ランタイムを自作することで非同期処理そのものへの理解を深めることを目的とした本.">
+    <meta property="og:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
+    <meta property="og:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4026.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="作って学ぶAsync Rust">
-    <meta name="twitter:description" content="Rust非同期ランタイムを自作することで非同期処理そのものへの理解を深めることを目的とした本.">
+    <meta name="twitter:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
+    <meta name="twitter:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4026.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "作って学ぶAsync Rust",
-        "description": "Rust非同期ランタイムを自作することで非同期処理そのものへの理解を深めることを目的とした本.",
+        "headline": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
+        "description": "本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-11-17T03:35:21",
-        "dateModified": "2025-11-18T22:21:11.521337",
+        "datePublished": "2026-05-20T16:20:43",
+        "dateModified": "2026-05-24T17:03:11.331341",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4026.html"
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "作って学ぶAsync Rust",
+                "name": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4026.html"
             }
         ]
@@ -114,21 +114,21 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">作って学ぶAsync Rust</li>
+                <li aria-current="page">複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>作って学ぶAsync Rust</h1>
+                <h1>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/maetin/books/8e1ba228b64dbf" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-11-17T03:35:21">
-                        公開: 2025-11-17T03:35:21
+                    <time datetime="2026-05-20T16:20:43">
+                        公開: 2026-05-20T16:20:43
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">本</span>
@@ -138,11 +138,13 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    Rust非同期ランタイムを自作することで非同期処理そのものへの理解を深めることを目的とした本
+                    本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る。つまり、ドメインモデリングの本質論ではなく、不変条件を実装へ落とす過程で表面化する技術的な論点に焦点を当てる。
+本稿の内容は、既存文献から学んだことと、筆者自身の設計・運用上の解釈に基づいている。設計に「常にこうすべき」という絶対解はない。ここで述べるのは、筆者が現時点で妥当だと考えている判断軸である。
+というか、かなり...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/maetin/books/8e1ba228b64dbf" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -199,16 +201,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_5080.html">
+                    <a href="Publickey_1801.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple、12月6日に中国・北京に新しい直営店｢Apple 北京荟聚｣をオープンへ｜オリジナル壁紙...</span>
+                        <span class="nav-title">APIコール一発でGoogleがホストするLinux環境付きのAIエージェントを起動、Markdow...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_4155.html">
+                    <a href="Zennのトレンド_2627.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【TOON】JSON時代の終わり？ 話題のTOONを解説してみた</span>
+                        <span class="nav-title">「URLを誰にも教えてない」が通じない理由 — CTログを30分監視してみた</span>
                     </a>
                 </div>
             </div>
@@ -221,53 +223,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5595.html">
-                        <h3>NEXCO東日本、高速の「逆走防止」へ抜本対策　埋め込み式ブレードなど設置へ</h3>
+                    <a href="CNET_Japan_最新情報総合_501.html">
+                        <h3>SpaceX、本日の「スターシップV3」の打ち上げを直前で中止（更新）理由判明</h3>
                         <div class="related-meta">
                             <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NEXCO東日本は11月14日、高速道路で発生する逆走を防ぐための新たな実施計画を発表した。2028年度までに管内65カ所で対策を進め、視覚的に気づきやすい施策から車両の侵入自体を抑える物理的対策まで...</p>
+                        <p class="related-summary">米SpaceXは、日本時間5月22日に予定していた「Starship」の次世代型「V3」の打ち上げを直前で中止した。カウントダウンはマイナス40秒付近から動かず、その後中止が発表された。打ち上げは明日...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2008.html">
-                        <h3>日本のGDP速報を可視化、新ダッシュボード公開　「高市内閣の成果見極めに活用を」とデジタル相</h3>
+                    <a href="CNET_Japan_最新情報総合_633.html">
+                        <h3>東海道・山陽新幹線に「弱冷房車」　7〜8月導入　16両ひかりの3号車</h3>
                         <div class="related-meta">
                             <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">デジタル庁は11月17日、四半期別GDP速報をわかりやすく見られるオンラインダッシュボードを公開した。内閣府と共同で整備したもので、閲覧できるデータは2025年7〜9月期の1次速報に対応している。.</p>
+                        <p class="related-summary">JR東海とJR西日本は5月22日、東海道・山陽新幹線で冷房を弱めに設定した「弱冷房車」を試験的に導入すると発表した。実施期間は2026年7月1日から8月31日まで。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_723.html">
-                        <h3>NHK、受信料の督促を強化　民事手続きへ特別対策センター設置</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_7496.html">
+                        <h3>連日Xの首相 問われる取材の意味</h3>
                         <div class="related-meta">
                             <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">NHKは11月18日、受信料の未払い対策を強化するため、本部に「受信料特別対策センター」を設置したと発表した。受信契約を結びながら長期間にわたって受信料を支払っていない世帯や事業所に対し、支払督促によ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_6075.html">
-                        <h3>Amazon、｢ブラックフライデー｣の先行セールの前に｢サプライズプレセール｣をスタート</h3>
+                    <a href="Qiita_-_人気の記事_5668.html">
+                        <h3>Qiita記事の毎月投稿を三年間継続できたので振り返ります！</h3>
                         <div class="related-meta">
                             <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Amazonが、本日より「Amazon ブラックフライデー サプライズプレセール」を開催しています。 本セールは11月24日より開催される「Amazon ブラックフライデー」のプレセールで、11月21...</p>
+                        <p class="related-summary">はじめに 前回の記事で、Qiitaバッジ「Monthly 36」を達成することができました！！ 支えてくれている方、読んでくれる方、反応をくれる方、ありがとうございます。とても感謝しています！！ 本格...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_1901.html">
-                        <h3>［速報］マイクロソフト、ミッションクリティカルに対応するスケーラブルなPostgreSQL「Azure HorizonD...</h3>
+                    <a href="Qiita_-_人気の記事_4532.html">
+                        <h3>2025 Japan AWS Jr.Champions としての活動を振り返る</h3>
                         <div class="related-meta">
                             <span class="category">その他</span>
-                            <span class="source">Publickey</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">マイクロソフトは日本時間11月19日未明に開幕した年次インベント「Microsoft Iginte 2025」で、ミッションクリティカルに対応したPostgreSQLのデータベースサービス「Azure...</p>
+                        <p class="related-summary">はじめに こんにちは、やくもです。 私は2025年度のJapan AWS Jr. Champions）として活動してきました。本記事ではこの一年間の活動を振り返っていきます。 本記事を通して、Jr.</p>
                     </a>
                 </article>
             </div>

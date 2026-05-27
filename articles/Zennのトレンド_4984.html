@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WSL2+Docker環境における、CVE-2026-31431 (Copy Fail) への対策メモ | 日本のテックニュース速報</title>
-    <meta name="description" content="wslconfigによるalgif_aeadの無効化（暫定的）」の2段構えが現状の最適解です。 はじめに Linuxカーネルの権限昇格脆弱性「Copy Fail（CVE-2026-31431）」が、GW真っ只中の世間を騒がせています">
-    <meta name="keywords" content="AI,Docker">
+    <title>仕様駆動開発最前線 — SDLC を一周描き直す Living Book | 日本のテックニュース速報</title>
+    <meta name="description" content="AI コーディングエージェントを生産性の核に据えるための SDLC 一周分の再設計を、Anthropic / Atlassian / Cloudflare / CodeRabbit / arXiv などの公開資料を実務経験で取捨選択・解釈した編纂物として描く Living Book">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="WSL2+Docker環境における、CVE-2026-31431 (Copy Fail) への対策メモ">
-    <meta property="og:description" content="wslconfigによるalgif_aeadの無効化（暫定的）」の2段構えが現状の最適解です。 はじめに Linuxカーネルの権限昇格脆弱性「Copy Fail（CVE-2026-31431）」が、GW真っ只中の世間を騒がせています">
+    <meta property="og:title" content="仕様駆動開発最前線 — SDLC を一周描き直す Living Book">
+    <meta property="og:description" content="AI コーディングエージェントを生産性の核に据えるための SDLC 一周分の再設計を、Anthropic / Atlassian / Cloudflare / CodeRabbit / arXiv などの公開資料を実務経験で取捨選択・解釈した編纂物として描く Living Book">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4984.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WSL2+Docker環境における、CVE-2026-31431 (Copy Fail) への対策メモ">
-    <meta name="twitter:description" content="wslconfigによるalgif_aeadの無効化（暫定的）」の2段構えが現状の最適解です。 はじめに Linuxカーネルの権限昇格脆弱性「Copy Fail（CVE-2026-31431）」が、GW真っ只中の世間を騒がせています">
+    <meta name="twitter:title" content="仕様駆動開発最前線 — SDLC を一周描き直す Living Book">
+    <meta name="twitter:description" content="AI コーディングエージェントを生産性の核に据えるための SDLC 一周分の再設計を、Anthropic / Atlassian / Cloudflare / CodeRabbit / arXiv などの公開資料を実務経験で取捨選択・解釈した編纂物として描く Living Book">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "WSL2+Docker環境における、CVE-2026-31431 (Copy Fail) への対策メモ",
-        "description": "wslconfigによるalgif_aeadの無効化（暫定的）」の2段構えが現状の最適解です。 はじめに Linuxカーネルの権限昇格脆弱性「Copy Fail（CVE-2026-31431）」が、GW真っ只中の世間を騒がせています",
+        "headline": "仕様駆動開発最前線 — SDLC を一周描き直す Living Book",
+        "description": "AI コーディングエージェントを生産性の核に据えるための SDLC 一周分の再設計を、Anthropic / Atlassian / Cloudflare / CodeRabbit / arXiv などの公開資料を実務経験で取捨選択・解釈した編纂物として描く Living Book",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-02T10:07:22",
-        "dateModified": "2026-05-04T17:43:08.485675",
+        "datePublished": "2026-05-24T10:06:34",
+        "dateModified": "2026-05-27T08:06:07.074433",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4984.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4984.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Docker"]
+        "keywords": ["AI"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "WSL2+Docker環境における、CVE-2026-31431 (Copy Fail) への対策メモ",
+                "name": "仕様駆動開発最前線 — SDLC を一周描き直す Living Book",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4984.html"
             }
         ]
@@ -114,42 +114,35 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">WSL2+Docker環境における、CVE-2026-31431 (Copy Fail) への対策メ...</li>
+                <li aria-current="page">仕様駆動開発最前線 — SDLC を一周描き直す Living Book</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>WSL2+Docker環境における、CVE-2026-31431 (Copy Fail) への対策メモ</h1>
+                <h1>仕様駆動開発最前線 — SDLC を一周描き直す Living Book</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/user_thebigslee/articles/41b570658f911b" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/myntai/books/spec-driven-frontier" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-02T10:07:22">
-                        公開: 2026-05-02T10:07:22
+                    <time datetime="2026-05-24T10:06:34">
+                        公開: 2026-05-24T10:06:34
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">Docker</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    TL;DR
-結論から言うと、「Dockerをv29.4.2以降へアップデート（恒久的）」と「.wslconfigによるalgif_aeadの無効化（暫定的）」の2段構えが現状の最適解です。
-
- はじめに
-Linuxカーネルの権限昇格脆弱性「Copy Fail（CVE-2026-31431）」が、GW真っ只中の世間を騒がせています。
-https://www.ipa.go.jp/security/security-alert/2026/alert20260501.html
-ローカルユーザーが容易にroot権限を奪取できてしまう深刻なものですが、Microsoftが独自ビルドしているWSL...
+                    AI コーディングエージェントを生産性の核に据えるための SDLC 一周分の再設計を、Anthropic / Atlassian / Cloudflare / CodeRabbit / arXiv などの公開資料を実務経験で取捨選択・解釈した編纂物として描く Living Book。 仕様策定の特性違い(新規 vs 既存改修)、SDD に必要な役割整理、Living Specs の維持、UI デザイン律速の解消、仕様受領後の着手前準備、コーディング中のエージェント運用、テスト戦略(Pyramid → Trophy / Honeycomb)、レビュー自動化、Feature Flag と Progressive Delivery を含むリリースマネジメント、AI 文脈ログ設計、SDD プロセス自体の可観測性まで SDLC を一周。 完成を待たず暫定方針で公開し、検証データの蓄積に応じて継続改訂する。
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/user_thebigslee/articles/41b570658f911b" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/myntai/books/spec-driven-frontier" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,30 +155,30 @@ https://www.ipa.go.jp/security/security-alert/2026/alert20260501.html
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">AI - Amazon検索結果</div>
                                     <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Docker&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Docker - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Docker - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでDockerに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +219,16 @@ https://www.ipa.go.jp/security/security-alert/2026/alert20260501.html
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_4572.html">
+                    <a href="Qiita_-_人気の記事_16.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Remix v3 beta を触ってみる - React 経験者からみたフルスタックの新しい選択肢</span>
+                        <span class="nav-title">【悲報】100万台のAIサービスをスキャンしたら「史上最悪のセキュリティ」だった件</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_9442.html">
+                    <a href="iPhone_Mania_4001.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">次の大きな作業は GitHub Copilot CLI から始めたくなる理由</span>
+                        <span class="nav-title">iPhone20のイメージ動画が公開〜リアカメラは2眼でFace IDを画面下配置か</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +241,53 @@ https://www.ipa.go.jp/security/security-alert/2026/alert20260501.html
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6058.html">
-                        <h3>楽天トラベルがAIエージェント強化　チャットで宿探し→予約まで完結</h3>
+                    <a href="CNET_Japan_最新情報総合_8068.html">
+                        <h3>ChatGPTに相談したら意図せぬ結果に　巨人・阿部監督辞任、娘の手紙全文</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">楽天グループは4月30日、旅行予約サービス「楽天トラベル」のAIエージェント「Rakuten AI」に予約機能を追加したと発表した。これにより、宿泊施設の提案から予約完了までを、AIがチャット内で一貫...</p>
+                        <p class="related-summary">プロ野球・読売ジャイアンツの阿部慎之助監督（47）が長女への暴行容疑で逮捕・釈放され、5月26日に辞任した。同日の記者会見で、代理人を通じて長女本人による手紙が読み上げられた。手紙のなかで長女は、児童...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3473.html">
-                        <h3>ChatGPTはなぜ「ゴブリン」に執着したのか　OpenAIが明かした不具合の正体</h3>
+                    <a href="CNET_Japan_最新情報総合_5209.html">
+                        <h3>ドコモ、AIで「詐欺をチェック」する新サービスを月額999円から提供</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「ChatGPT」は、妙なほどゴブリンに執着していた。開発元のOpenAIが原因を調べて修正に乗り出すほどだった。.</p>
+                        <p class="related-summary">NTTドコモは5月25日、スマートフォンの詐欺対策機能を強化した新プラン「あんしんセキュリティ スタンダードプラン 詐欺対策プラス」（月額999円）と「あんしんセキュリティ トータルプラン 詐欺対策プ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6630.html">
-                        <h3>HDRディスプレイグラス「RayNeo Air 4 Pro」レビュー：XREALやVITUREと比べて見えた差</h3>
+                    <a href="気になる記になる_7045.html">
+                        <h3>Apple、｢AirTag (第2世代)｣向けに最新のファームウェアアップデート｢3.0.49｣をリリース</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">TCLの最新ディスプレイグラス「RayNeo Air 4 Pro」のレビューをお届けする。.</p>
+                        <p class="related-summary">本日、Appleが、紛失防止タグ「AirTag (第2世代)」向けに最新のファームウェアアップデートをリリースしていることが分かりました。 今回のアップデートにより、ファームウェアのバージョンが4月初...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5904.html">
-                        <h3>週刊アスキー No.1594(2026年5月5日発行)</h3>
+                    <a href="気になる記になる_5391.html">
+                        <h3>ASUSが｢COMPUTEX TAIPEI 2026｣で携帯ゲーム機｢ROG Ally｣の新モデルを発表するとの噂が浮上</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">特集1では、旅行や出張など移動の計画を簡単に作れるAI活用法。長期の休みや仕事などで時間を効率的に使う手助けに。特集2は表計算や画像補正などをより安く活用する方法を紹介する。.</p>
+                        <p class="related-summary">ASUSが、6月2日より台湾の台北で開催される「COMPUTEX TAIPEI 2026」において、携帯ゲーム機「ROG Ally」の改良版が発表される可能性が浮上しました。 事の発端はドイツのYou...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_5533.html">
-                        <h3>【C#】CSharpierのすすめ</h3>
+                    <a href="iPhone_Mania_301.html">
+                        <h3>AirPodsの複雑化した操作体系が刷新？WWDC26で発表か</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">editorconfigをベースに動作するフォーマッタになっていて、VSCodeのC#拡張機能などではこれが使われています。 これでもある程度は使えますが、そこまで強力ではありません。例えば以下のコー...</p>
+                        <p class="related-summary">6月8日に開幕する世界開発者会議（WWDC26）で、AirPodsの操作メニュー刷新が発表される可能性が伝えられています。直感的な操作が魅力だったAirPodsシリーズも、機能の進化とともに操作が複雑...</p>
                     </a>
                 </article>
             </div>

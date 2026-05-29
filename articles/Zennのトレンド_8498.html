@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>仕様駆動開発最前線 — SDLC を一周描き直す Living Book | 日本のテックニュース速報</title>
-    <meta name="description" content="AI コーディングエージェントを生産性の核に据えるための SDLC 一周分の再設計を、Anthropic / Atlassian / Cloudflare / CodeRabbit / arXiv などの公開資料を実務経験で取捨選択・解釈した編纂物として描く Living Book">
-    <meta name="keywords" content="AI">
+    <title>MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った | 日本のテックニュース速報</title>
+    <meta name="description" content="MCP を使うと、Agent にできることを増やしたくなります。 外部ツールを呼べる。 データにアクセスできる。 検索できる。 ファイルを読める。 API を叩ける。 便利です。 でも、Agent を作っていると、だんだん別の怖さが見えてきます。 LLM は何でも答えられます">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="仕様駆動開発最前線 — SDLC を一周描き直す Living Book">
-    <meta property="og:description" content="AI コーディングエージェントを生産性の核に据えるための SDLC 一周分の再設計を、Anthropic / Atlassian / Cloudflare / CodeRabbit / arXiv などの公開資料を実務経験で取捨選択・解釈した編纂物として描く Living Book">
+    <meta property="og:title" content="MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った">
+    <meta property="og:description" content="MCP を使うと、Agent にできることを増やしたくなります。 外部ツールを呼べる。 データにアクセスできる。 検索できる。 ファイルを読める。 API を叩ける。 便利です。 でも、Agent を作っていると、だんだん別の怖さが見えてきます。 LLM は何でも答えられます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8498.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="仕様駆動開発最前線 — SDLC を一周描き直す Living Book">
-    <meta name="twitter:description" content="AI コーディングエージェントを生産性の核に据えるための SDLC 一周分の再設計を、Anthropic / Atlassian / Cloudflare / CodeRabbit / arXiv などの公開資料を実務経験で取捨選択・解釈した編纂物として描く Living Book">
+    <meta name="twitter:title" content="MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った">
+    <meta name="twitter:description" content="MCP を使うと、Agent にできることを増やしたくなります。 外部ツールを呼べる。 データにアクセスできる。 検索できる。 ファイルを読める。 API を叩ける。 便利です。 でも、Agent を作っていると、だんだん別の怖さが見えてきます。 LLM は何でも答えられます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "仕様駆動開発最前線 — SDLC を一周描き直す Living Book",
-        "description": "AI コーディングエージェントを生産性の核に据えるための SDLC 一周分の再設計を、Anthropic / Atlassian / Cloudflare / CodeRabbit / arXiv などの公開資料を実務経験で取捨選択・解釈した編纂物として描く Living Book",
+        "headline": "MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った",
+        "description": "MCP を使うと、Agent にできることを増やしたくなります。 外部ツールを呼べる。 データにアクセスできる。 検索できる。 ファイルを読める。 API を叩ける。 便利です。 でも、Agent を作っていると、だんだん別の怖さが見えてきます。 LLM は何でも答えられます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-24T10:06:34",
-        "dateModified": "2026-05-27T03:53:43.467008",
+        "datePublished": "2026-05-28T12:05:51",
+        "dateModified": "2026-05-29T15:33:59.480352",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8498.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8498.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "仕様駆動開発最前線 — SDLC を一周描き直す Living Book",
+                "name": "MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8498.html"
             }
         ]
@@ -114,35 +114,50 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">仕様駆動開発最前線 — SDLC を一周描き直す Living Book</li>
+                <li aria-current="page">MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>仕様駆動開発最前線 — SDLC を一周描き直す Living Book</h1>
+                <h1>MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/myntai/books/spec-driven-frontier" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/mofuteq/articles/be562471f96a68" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-24T10:06:34">
-                        公開: 2026-05-24T10:06:34
+                    <time datetime="2026-05-28T12:05:51">
+                        公開: 2026-05-28T12:05:51
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    AI コーディングエージェントを生産性の核に据えるための SDLC 一周分の再設計を、Anthropic / Atlassian / Cloudflare / CodeRabbit / arXiv などの公開資料を実務経験で取捨選択・解釈した編纂物として描く Living Book。 仕様策定の特性違い(新規 vs 既存改修)、SDD に必要な役割整理、Living Specs の維持、UI デザイン律速の解消、仕様受領後の着手前準備、コーディング中のエージェント運用、テスト戦略(Pyramid → Trophy / Honeycomb)、レビュー自動化、Feature Flag と Progressive Delivery を含むリリースマネジメント、AI 文脈ログ設計、SDD プロセス自体の可観測性まで SDLC を一周。 完成を待たず暫定方針で公開し、検証データの蓄積に応じて継続改訂する。
+                    MCP を使うと、Agent にできることを増やしたくなります。
+外部ツールを呼べる。
+データにアクセスできる。
+検索できる。
+ファイルを読める。
+API を叩ける。
+便利です。
+でも、Agent を作っていると、だんだん別の怖さが見えてきます。
+LLM は何でも答えられます。
+だからこそ、何でも独自の観点で答えてしまう。
+この「何でも答えられる」は、強さでもあり、リスクでもあります。
+MCP で Agent のできることを増やす前に、そもそも Agent にどの観点で考えさせるのかを決めた方がいいのではないか。
+そう考えるようになりました。
+
+ LLMは何でも答えられる
+LLM は、た...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/myntai/books/spec-driven-frontier" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/mofuteq/articles/be562471f96a68" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -155,20 +170,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -179,6 +184,16 @@
                                 <div class="product-info">
                                     <div class="product-title">AI - Amazon検索結果</div>
                                     <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -219,16 +234,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_8910.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_1891.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【悲報】100万台のAIサービスをスキャンしたら「史上最悪のセキュリティ」だった件</span>
+                        <span class="nav-title">ガバメントAI 全府省庁で実証開始</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9339.html">
+                    <a href="Qiita_-_人気の記事_3969.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">SNSで増 カラーハンティングとは</span>
+                        <span class="nav-title">Bedrockのクオーターからrequests-per-minute (RPM)がなくなったらしい</span>
                     </a>
                 </div>
             </div>
@@ -241,53 +256,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1776.html">
-                        <h3>ローマ教皇レオ14世、AIめぐる初の回勅　巨大テックに「武装解除」を迫る</h3>
+                    <a href="CNET_Japan_最新情報総合_371.html">
+                        <h3>JR西日本、技術ビジョンを8年ぶり刷新　生成AIの進歩などを受け</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ローマ教皇レオ14世が5月25日、人工知能（AI）をテーマにした初の回勅を発表した。タイトルは「マグニフィカ・フマニタス（『輝かしき人間性』の意）」。4万2300語に及ぶこの文書は、AIの規制と、人類...</p>
+                        <p class="related-summary">JR西日本は5月27日、2018年に策定した「技術ビジョン」をアップデートしたと発表した。2026年度に策定した「中期経営計画2030」と歩調を合わせ、概ね2040年のJR西日本グループのありたい姿を...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3174.html">
-                        <h3>「ChatGPT for PowerPoint」ベータ版公開　白紙からパワポのスライド作成も</h3>
+                    <a href="CNET_Japan_最新情報総合_3197.html">
+                        <h3>アマゾン、AIで映像制作を支援　プライム・ビデオで配信予定の3作品とは</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは米国時間5月21日、Microsoft PowerPoint上でChatGPTを利用できる「ChatGPT for PowerPoint」のベータ版を公開した。スライドの新規作成や既存ス...</p>
+                        <p class="related-summary">アマゾンは生成AIの取り組みを進めており、次は「プライム・ビデオ」の視聴者が、3本の新しいアニメシリーズでその成果に触れることになりそうだ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8295.html">
-                        <h3>ChatGPTに相談したら意図せぬ結果に　巨人・阿部監督辞任、娘の手紙全文</h3>
+                    <a href="CNET_Japan_最新情報総合_5314.html">
+                        <h3>Anthropic、「ミトス級AI」を数週間以内に一般公開へ　「Claude Opus 4.8」も発表</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">プロ野球・読売ジャイアンツの阿部慎之助監督（47）が長女への暴行容疑で逮捕・釈放され、5月26日に辞任した。同日の記者会見で、代理人を通じて長女本人による手紙が読み上げられた。手紙のなかで長女は、児童...</p>
+                        <p class="related-summary">Anthropicは5月28日（米国時間）、生成AIモデル「Claude Opus 4. 7」から「控えめだが確実な改善」を加えたという。あわせて同社は、現在Project Glasswingの一環と...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6858.html">
-                        <h3>ドコモ、AIで「詐欺をチェック」する新サービスを月額999円から提供</h3>
+                    <a href="CNET_Japan_最新情報総合_4291.html">
+                        <h3>米CNNが提訴したAI企業パープレキシティ、「事実に著作権なし」と反論</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NTTドコモは5月25日、スマートフォンの詐欺対策機能を強化した新プラン「あんしんセキュリティ スタンダードプラン 詐欺対策プラス」（月額999円）と「あんしんセキュリティ トータルプラン 詐欺対策プ...</p>
+                        <p class="related-summary">米テレビネットワークのCNNが、AI検索エンジンのパープレキシティを著作権侵害で提訴した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3409.html">
-                        <h3>MSI、次世代AIハブ「AI Jinni」公開へ　ローカルAI×クラウドでPC体験刷新</h3>
+                    <a href="iPhone_Mania_804.html">
+                        <h3>iOS27でSiriやカメラ刷新か〜AI機能の詳細がイメージ画像を用いて報道</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">エムエスアイコンピュータージャパンが次世代のAIハブ「AI Jinni」を発表。同製品は、クラウドとローカルの強みを兼ね備えた画期的なAI体験を提供する。.</p>
+                        <p class="related-summary">Bloombergのマーク・ガーマン記者が、iOS27に搭載される見込みの新しいSiri、刷新されるユーザーインターフェース、Visual Intelligenceを統合するカメラアプリ、AI機能に関...</p>
                     </a>
                 </article>
             </div>

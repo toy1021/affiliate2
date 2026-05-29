@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する | 日本のテックニュース速報</title>
-    <meta name="description" content="前回の記事では、useEffect の正しい使い方について整理しました。 今回は反対に、「そもそもuseEffectを使わなくてよいパターン」 を整理します。 React公式ドキュメントでは、こうした「useEffectを使わなくてよいパターン」が明確に整理されています。.">
-    <meta name="keywords" content="React">
+    <title>Codexのコンテキスト圧縮はなぜ優秀なのか — ソースコードから読み解く設計 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに LLMベースのコーディングエージェントを長時間動かしたことがある方なら、一度は「途中で文脈を見失って急に的外れな動きを始める」現象に遭遇したはずです。この崩壊の多くは、コンテキストウィンドウの管理に起因します。 Codex CLIは、この問題に対して単なる「古い.">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する">
-    <meta property="og:description" content="前回の記事では、useEffect の正しい使い方について整理しました。 今回は反対に、「そもそもuseEffectを使わなくてよいパターン」 を整理します。 React公式ドキュメントでは、こうした「useEffectを使わなくてよいパターン」が明確に整理されています。.">
+    <meta property="og:title" content="Codexのコンテキスト圧縮はなぜ優秀なのか — ソースコードから読み解く設計">
+    <meta property="og:description" content="はじめに LLMベースのコーディングエージェントを長時間動かしたことがある方なら、一度は「途中で文脈を見失って急に的外れな動きを始める」現象に遭遇したはずです。この崩壊の多くは、コンテキストウィンドウの管理に起因します。 Codex CLIは、この問題に対して単なる「古い.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1203.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する">
-    <meta name="twitter:description" content="前回の記事では、useEffect の正しい使い方について整理しました。 今回は反対に、「そもそもuseEffectを使わなくてよいパターン」 を整理します。 React公式ドキュメントでは、こうした「useEffectを使わなくてよいパターン」が明確に整理されています。.">
+    <meta name="twitter:title" content="Codexのコンテキスト圧縮はなぜ優秀なのか — ソースコードから読み解く設計">
+    <meta name="twitter:description" content="はじめに LLMベースのコーディングエージェントを長時間動かしたことがある方なら、一度は「途中で文脈を見失って急に的外れな動きを始める」現象に遭遇したはずです。この崩壊の多くは、コンテキストウィンドウの管理に起因します。 Codex CLIは、この問題に対して単なる「古い.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する",
-        "description": "前回の記事では、useEffect の正しい使い方について整理しました。 今回は反対に、「そもそもuseEffectを使わなくてよいパターン」 を整理します。 React公式ドキュメントでは、こうした「useEffectを使わなくてよいパターン」が明確に整理されています。.",
+        "headline": "Codexのコンテキスト圧縮はなぜ優秀なのか — ソースコードから読み解く設計",
+        "description": "はじめに LLMベースのコーディングエージェントを長時間動かしたことがある方なら、一度は「途中で文脈を見失って急に的外れな動きを始める」現象に遭遇したはずです。この崩壊の多くは、コンテキストウィンドウの管理に起因します。 Codex CLIは、この問題に対して単なる「古い.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-06T09:38:43",
-        "dateModified": "2026-04-07T17:01:14.215969",
+        "datePublished": "2026-05-28T08:59:29",
+        "dateModified": "2026-05-29T15:33:59.485868",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1203.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1203.html",
-        "articleSection": "テクノロジー",
-        "keywords": ["React"]
+        "articleSection": "プログラミング",
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する",
+                "name": "Codexのコンテキスト圧縮はなぜ優秀なのか — ソースコードから読み解く設計",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1203.html"
             }
         ]
@@ -113,39 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">Codexのコンテキスト圧縮はなぜ優秀なのか — ソースコードから読み解く設計</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Reactで「useEffectを使わなくてよいパターン」をReact公式より整理する</h1>
+                <h1>Codexのコンテキスト圧縮はなぜ優秀なのか — ソースコードから読み解く設計</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/ryo_sh/items/537094e2ad68f9275710?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-04-06T09:38:43">
-                        公開: 2026-04-06T09:38:43
+                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/9b71285a9dd448e53bb1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-05-28T08:59:29">
+                        公開: 2026-05-28T08:59:29
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">React</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    前回の記事では、useEffect の正しい使い方について整理しました。
-今回は反対に、「そもそもuseEffectを使わなくてよいパターン」 を整理します。
-React公式ドキュメントでは、こうした「useEffectを使わなくてよいパターン」が明確に整理されています。
-...
+                    はじめに
+LLMベースのコーディングエージェントを長時間動かしたことがある方なら、一度は「途中で文脈を見失って急に的外れな動きを始める」現象に遭遇したはずです。この崩壊の多くは、コンテキストウィンドウの管理に起因します。
+Codex CLIは、この問題に対して単なる「古い...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/ryo_sh/items/537094e2ad68f9275710?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/nogataka/items/9b71285a9dd448e53bb1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,10 +157,30 @@ React公式ドキュメントでは、こうした「useEffectを使わなくて
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">React - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -171,23 +190,23 @@ React公式ドキュメントでは、こうした「useEffectを使わなくて
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -202,16 +221,16 @@ React公式ドキュメントでは、こうした「useEffectを使わなくて
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_1142.html">
+                    <a href="Zennのトレンド_4531.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">DNSの仕組みを理解する — 名前解決の流れをステップで追う</span>
+                        <span class="nav-title">データ分析基盤はまず動くものを作れ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_8081.html">
+                    <a href="Qiita_-_人気の記事_7580.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">開発エンジニアが保守・運用から学んだこと</span>
+                        <span class="nav-title">Claude Code Skills のアンチパターン — 「なぜ Skills か」から考え直す設...</span>
                     </a>
                 </div>
             </div>
@@ -224,53 +243,53 @@ React公式ドキュメントでは、こうした「useEffectを使わなくて
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7081.html">
-                        <h3>193歳の最高齢カメ「ジョナサン」、訃報はデマ　仮想通貨詐欺の疑いも</h3>
+                    <a href="CNET_Japan_最新情報総合_7666.html">
+                        <h3>newmo、東京に「自動運転タクシー」の開発拠点を開設</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">世界で最高齢の陸生動物とされる193歳のカメ「ジョナサン」は健在だ。おそらく詐欺を目的とする偽のSNS投稿と、それに基づく死亡報道が相次いだが、事実は異なる。.</p>
+                        <p class="related-summary">タクシー事業と自動運転タクシー事業を手がけるnewmoは5月29日、自動運転タクシーの開発拠点「Autonomy Garage Tokyo」を、東京都大田区の東京流通センター（TRC）に開設したと発表...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_730.html">
-                        <h3>「地球ってこんなに美しい」--アルテミスII飛行士が月への旅路で写した「息をのむ我が星」</h3>
+                    <a href="Qiita_-_人気の記事_6617.html">
+                        <h3>1割の“信頼される”エンジニアが実行している『問題の出し方』</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">NASAが月への飛行中に撮影された地球の写真を公開。投稿では「これが私たちの星だ」と紹介した──。.</p>
+                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや、 仕事で起きやすい“ズレ”について整理して発信しています。 誰かの助けに...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8133.html">
-                        <h3>ハイセンスが投入した「アートテレビ」とは何か　先行するサムスン製と比較</h3>
+                    <a href="Qiita_-_人気の記事_5661.html">
+                        <h3>2026年にプログラミングを学ぶべきか</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ハイセンスの「S7 Canvas TV」は、サムスンの「The Frame」に近い体験を、より手ごろな価格で実現する“アートテレビ”だ。.</p>
+                        <p class="related-summary">※ この記事の日本語には、少し不自然な部分があるかもしれません。AIの言語サポートを利用しながら作成しています。 目次 はじめに 2026年にプログラミングを学ぶべきか 市場の現状 – 一見すると怖い...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5789.html">
-                        <h3>マイクロソフト、PC起動時に「Edge」が開く機能をテストか　不評の懸念</h3>
+                    <a href="Zennのトレンド_4531.html">
+                        <h3>データ分析基盤はまず動くものを作れ</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">「Microsoft Edge」ブラウザの最新ベータ版は、ユーザーの明示的な許可を得ることなく、「Windows 11」搭載PCを起動するたびに自動的に開く可能性があるという。Windows Cent...</p>
+                        <p class="related-summary">動くものを作らないから失敗する 失敗するデータ分析基盤プロジェクトに共通する重要な特徴の1つは「動くものから作らない」ということです。 何年もかけて巨大な基盤を構築しすべてが完成してから稼働させるよう...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_144.html">
-                        <h3>4月は2つの流星群に注目　こと座＆みずがめ座流星群はいつ見える？</h3>
+                    <a href="Zennのトレンド_6244.html">
+                        <h3>スペック文書を「読みたくなるHTML」に変換するClaude Codeスキルを作った話（スキル本文付き）</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">4月に2つの流星群がやってくる。こと座流星群とみずがめ座η（エータ）流星群だ。.</p>
+                        <p class="related-summary">こんにちは！スペースマーケットの jin です🐶 今回は、仕様書やスペック文書を人間が読みやすいHTMLレポートに変換するClaude Codeスキル「spec-to-readable-html」を作...</p>
                     </a>
                 </article>
             </div>

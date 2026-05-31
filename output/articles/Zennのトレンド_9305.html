@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>社内向けAIアシスタントを3か月間試験運用してみた | 日本のテックニュース速報</title>
-    <meta name="description" content="松尾研究所のからあげ（@karaage0703）です。 松尾研究所では 2026年2月ごろから、Slack上でOpenClawライクな社内AIアシスタントソフトを、一部のプロジェクトで試験運用してきました">
-    <meta name="keywords" content="AI">
+    <title>ローカルLLM（Qwen3.6 / Gemma4 / DeepSeek V4 Flash）+ Claude ベンチマーク比較 | 日本のテックニュース速報</title>
+    <meta name="description" content="ローカルLLMの性能が気になる ローカルLLMの性能がどんなもんか気になったのでベンチマークをとってみました。 主にコーディング用途を意識していて、コーディング系でコンパクトな Aider Polyglot というベンチマークのサブセットを使っています">
+    <meta name="keywords" content="AI,Claude,LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="社内向けAIアシスタントを3か月間試験運用してみた">
-    <meta property="og:description" content="松尾研究所のからあげ（@karaage0703）です。 松尾研究所では 2026年2月ごろから、Slack上でOpenClawライクな社内AIアシスタントソフトを、一部のプロジェクトで試験運用してきました">
+    <meta property="og:title" content="ローカルLLM（Qwen3.6 / Gemma4 / DeepSeek V4 Flash）+ Claude ベンチマーク比較">
+    <meta property="og:description" content="ローカルLLMの性能が気になる ローカルLLMの性能がどんなもんか気になったのでベンチマークをとってみました。 主にコーディング用途を意識していて、コーディング系でコンパクトな Aider Polyglot というベンチマークのサブセットを使っています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9305.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="社内向けAIアシスタントを3か月間試験運用してみた">
-    <meta name="twitter:description" content="松尾研究所のからあげ（@karaage0703）です。 松尾研究所では 2026年2月ごろから、Slack上でOpenClawライクな社内AIアシスタントソフトを、一部のプロジェクトで試験運用してきました">
+    <meta name="twitter:title" content="ローカルLLM（Qwen3.6 / Gemma4 / DeepSeek V4 Flash）+ Claude ベンチマーク比較">
+    <meta name="twitter:description" content="ローカルLLMの性能が気になる ローカルLLMの性能がどんなもんか気になったのでベンチマークをとってみました。 主にコーディング用途を意識していて、コーディング系でコンパクトな Aider Polyglot というベンチマークのサブセットを使っています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "社内向けAIアシスタントを3か月間試験運用してみた",
-        "description": "松尾研究所のからあげ（@karaage0703）です。 松尾研究所では 2026年2月ごろから、Slack上でOpenClawライクな社内AIアシスタントソフトを、一部のプロジェクトで試験運用してきました",
+        "headline": "ローカルLLM（Qwen3.6 / Gemma4 / DeepSeek V4 Flash）+ Claude ベンチマーク比較",
+        "description": "ローカルLLMの性能が気になる ローカルLLMの性能がどんなもんか気になったのでベンチマークをとってみました。 主にコーディング用途を意識していて、コーディング系でコンパクトな Aider Polyglot というベンチマークのサブセットを使っています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-01T02:50:05",
-        "dateModified": "2026-05-03T10:56:52.268607",
+        "datePublished": "2026-05-29T16:43:07",
+        "dateModified": "2026-05-31T21:01:56.970154",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9305.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9305.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "keywords": ["AI","Claude","LLM"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "社内向けAIアシスタントを3か月間試験運用してみた",
+                "name": "ローカルLLM（Qwen3.6 / Gemma4 / DeepSeek V4 Flash）+ Claude ベンチマーク比較",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9305.html"
             }
         ]
@@ -114,40 +114,71 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">社内向けAIアシスタントを3か月間試験運用してみた</li>
+                <li aria-current="page">ローカルLLM（Qwen3.6 / Gemma4 / DeepSeek V4 Flash）+ Cla...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>社内向けAIアシスタントを3か月間試験運用してみた</h1>
+                <h1>ローカルLLM（Qwen3.6 / Gemma4 / DeepSeek V4 Flash）+ Claude ベンチマーク比較</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/mkj/articles/87c3ce556cde90" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/keitayamamoto/articles/4380d3f64c8bf1" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-01T02:50:05">
-                        公開: 2026-05-01T02:50:05
+                    <time datetime="2026-05-29T16:43:07">
+                        公開: 2026-05-29T16:43:07
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    松尾研究所のからあげ（@karaage0703）です。
-松尾研究所では 2026年2月ごろから、Slack上でOpenClawライクな社内AIアシスタントソフトを、一部のプロジェクトで試験運用してきました。この記事では、AIアシスタントソフトの概要・活用例・実運用アンケート結果についてまとめたものの一部を紹介します。
-社内ツールの紹介ではありますが、「どのように業務でAIを活用していくか」という同じ悩みを持つ方の参考になれば幸いです。
+                    ローカルLLMの性能が気になる
+ローカルLLMの性能がどんなもんか気になったのでベンチマークをとってみました。
+主にコーディング用途を意識していて、コーディング系でコンパクトな Aider Polyglot というベンチマークのサブセットを使っています。
 
- AIを活用して業務の負荷軽減をしたい
-松尾研究所では、共同開発案件の数が増えるにつれてPMまわりの「情報検索」「議事録・週報の作成」「PRレビューの一...
+ 計測対象モデル
+
+
+
+モデル
+量子化
+サイズ
+推論エンジン
+
+
+
+
+DeepSeek V4 Flash
+q2-imatrix
+81GB
+ds4
+
+
+Qwen3.6 35B A3B
+Q4_K_M
+22GB
+LM Studio
+
+
+Gemma 4 26B A4B
+Q4_K_M
+18GB
+LM Studio
+
+
+Claude Sonn...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/mkj/articles/87c3ce556cde90" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/keitayamamoto/articles/4380d3f64c8bf1" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -170,10 +201,20 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -214,16 +255,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_6670.html">
+                    <a href="Zennのトレンド_9082.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「BeReal」投稿で漏えい相次ぐ訳</span>
+                        <span class="nav-title">自動運転アーキテクチャの一つの提案/Tri-Modal BEV VLA Planner</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9028.html">
+                    <a href="Qiita_-_人気の記事_9913.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">コミュニケーションに課題を感じた時にまずすべきこと３選</span>
+                        <span class="nav-title">同じ業務 Web UI を Vanilla HTML / Vue / React / Thymele...</span>
                     </a>
                 </div>
             </div>
@@ -236,52 +277,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9349.html">
-                        <h3>楽天トラベルがAIエージェント強化　チャットで宿探し→予約まで完結</h3>
+                    <a href="CNET_Japan_最新情報総合_827.html">
+                        <h3>Anthropic、「ミトス級AI」を数週間以内に一般公開へ　「Claude Opus 4.8」も発表</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">楽天グループは4月30日、旅行予約サービス「楽天トラベル」のAIエージェント「Rakuten AI」に予約機能を追加したと発表した。これにより、宿泊施設の提案から予約完了までを、AIがチャット内で一貫...</p>
+                        <p class="related-summary">Anthropicは5月28日（米国時間）、生成AIモデル「Claude Opus 4. 7」から「控えめだが確実な改善」を加えたという。あわせて同社は、現在Project Glasswingの一環と...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_666.html">
-                        <h3>ChatGPTはなぜ「ゴブリン」に執着したのか　OpenAIが明かした不具合の正体</h3>
+                    <a href="CNET_Japan_最新情報総合_8758.html">
+                        <h3>米CNNが提訴したAI企業パープレキシティ、「事実に著作権なし」と反論</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「ChatGPT」は、妙なほどゴブリンに執着していた。開発元のOpenAIが原因を調べて修正に乗り出すほどだった。.</p>
+                        <p class="related-summary">米テレビネットワークのCNNが、AI検索エンジンのパープレキシティを著作権侵害で提訴した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6722.html">
-                        <h3>HDRディスプレイグラス「RayNeo Air 4 Pro」レビュー：XREALやVITUREと比べて見えた差</h3>
+                    <a href="気になる記になる_2713.html">
+                        <h3>AppleのAIスマートグラスの発売は2027年末に延期か</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">TCLの最新ディスプレイグラス「RayNeo Air 4 Pro」のレビューをお届けする。.</p>
+                        <p class="related-summary">BloombergのMark Gurman氏が、毎週日曜恒例のニュースレター「PowerOn」の最新号において、AppleのAIスマートグラスの発売は延期されたようだと報告しています。 AppleのA...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6856.html">
-                        <h3>Strands AgentsのTypeScript版がv1.0.0に到達したのでAI SDK用のアダプターを作ってみた</h3>
+                    <a href="ASCII_jp__トップ_3940.html">
+                        <h3>【衝撃】軽トラのCO2が農業を救う!? 「人とくるまのテクノロジー展」で見つけたヤバすぎる最新技術4選</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">0記念になにかしてみようと思い、以前からお世話になってるAI SDKと連携できるようにアダプターをバイブで作ってみました。 使い方 Next. Strands AgentsのTypeScript版がv...</p>
+                        <p class="related-summary">人とくるまのテクノロジー展2026のレポートです。スズキのCO2回収軽トラや電動台車、トヨタの事故を防ぐスマートポール、ホンダの事故予測AI、ダイハツの電力安定システムなど、自動車の枠を超え、私たちの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5631.html">
-                        <h3>数学の未解決問題 AIが相次ぎ解く</h3>
+                    <a href="ASCII_jp__トップ_8702.html">
+                        <h3>アムール株式会社、Zoho認定パートナーとして参画。AI検索時代の集客から営業管理まで一気通貫で支援</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
+                        <p class="related-summary">アムール株式会社、Zoho認定パートナーとして参画。AI検索時代の集客から営業管理まで一気通貫で支援.</p>
                     </a>
                 </article>
             </div>

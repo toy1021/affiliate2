@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>git worktreeの不満を解消するためにCLIツールを自作した | 日本のテックニュース速報</title>
-    <meta name="description" content="com/708u/twig この記事ではtwigの紹介と、開発を通じて得た知見を共有します。 git worktreeとは git work. この記事について こんにちは、Progate Prospects / Path のエンジニアをしている @708u です">
-    <meta name="keywords" content="Claude,GitHub">
+    <title>RDBで木構造の深さを制限したいときの設計パターン | 日本のテックニュース速報</title>
+    <meta name="description" content="RDBで木構造の深さを制限したいときの設計パターン はじめに RDBで親子関係を持つデータを扱うとき、隣接リストモデルはシンプルで扱いやすい選択肢です。 ただし、隣接リスト単体の一般的な制約だけでは「深さを最大2階層まで」といった制限を実現しにくいです">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="git worktreeの不満を解消するためにCLIツールを自作した">
-    <meta property="og:description" content="com/708u/twig この記事ではtwigの紹介と、開発を通じて得た知見を共有します。 git worktreeとは git work. この記事について こんにちは、Progate Prospects / Path のエンジニアをしている @708u です">
+    <meta property="og:title" content="RDBで木構造の深さを制限したいときの設計パターン">
+    <meta property="og:description" content="RDBで木構造の深さを制限したいときの設計パターン はじめに RDBで親子関係を持つデータを扱うとき、隣接リストモデルはシンプルで扱いやすい選択肢です。 ただし、隣接リスト単体の一般的な制約だけでは「深さを最大2階層まで」といった制限を実現しにくいです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4117.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="git worktreeの不満を解消するためにCLIツールを自作した">
-    <meta name="twitter:description" content="com/708u/twig この記事ではtwigの紹介と、開発を通じて得た知見を共有します。 git worktreeとは git work. この記事について こんにちは、Progate Prospects / Path のエンジニアをしている @708u です">
+    <meta name="twitter:title" content="RDBで木構造の深さを制限したいときの設計パターン">
+    <meta name="twitter:description" content="RDBで木構造の深さを制限したいときの設計パターン はじめに RDBで親子関係を持つデータを扱うとき、隣接リストモデルはシンプルで扱いやすい選択肢です。 ただし、隣接リスト単体の一般的な制約だけでは「深さを最大2階層まで」といった制限を実現しにくいです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "git worktreeの不満を解消するためにCLIツールを自作した",
-        "description": "com/708u/twig この記事ではtwigの紹介と、開発を通じて得た知見を共有します。 git worktreeとは git work. この記事について こんにちは、Progate Prospects / Path のエンジニアをしている @708u です",
+        "headline": "RDBで木構造の深さを制限したいときの設計パターン",
+        "description": "RDBで木構造の深さを制限したいときの設計パターン はじめに RDBで親子関係を持つデータを扱うとき、隣接リストモデルはシンプルで扱いやすい選択肢です。 ただし、隣接リスト単体の一般的な制約だけでは「深さを最大2階層まで」といった制限を実現しにくいです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-30T01:03:53",
-        "dateModified": "2026-02-01T22:26:52.337300",
+        "datePublished": "2026-06-06T07:18:21",
+        "dateModified": "2026-06-07T10:35:12.983558",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4117.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4117.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Claude","GitHub"]
+        "articleSection": "その他",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "git worktreeの不満を解消するためにCLIツールを自作した",
+                "name": "RDBで木構造の深さを制限したいときの設計パターン",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4117.html"
             }
         ]
@@ -113,44 +113,49 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">git worktreeの不満を解消するためにCLIツールを自作した</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">RDBで木構造の深さを制限したいときの設計パターン</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>git worktreeの不満を解消するためにCLIツールを自作した</h1>
+                <h1>RDBで木構造の深さを制限したいときの設計パターン</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/progate/articles/2e1e90796d82f0" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-01-30T01:03:53">
-                        公開: 2026-01-30T01:03:53
+                    <span class="source">出典: <a href="https://zenn.dev/tonbi_attack/articles/56de5502efb772" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-06-06T07:18:21">
+                        公開: 2026-06-06T07:18:21
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事について
-こんにちは、Progate Prospects / Path のエンジニアをしている @708u です。
-近年のClaude Codeを始めとするcoding agentを使った開発では、複数の作業を並列で進めるためにgit worktreeを活用する場面が増えてきます。開発フロー内でworktreeを使ううちにいくつかの課題を感じ、それを解決するためにtwigというCLIツールを作りました。
-https://github.com/708u/twig
-この記事ではtwigの紹介と、開発を通じて得た知見を共有します。
+                    RDBで木構造の深さを制限したいときの設計パターン
 
- git worktreeとは
-git work...
+ はじめに
+RDBで親子関係を持つデータを扱うとき、隣接リストモデルはシンプルで扱いやすい選択肢です。
+ただし、隣接リスト単体の一般的な制約だけでは「深さを最大2階層まで」といった制限を実現しにくいです。この記事では、深さ制限が必要になったときに取り得る設計パターンを3つ整理します。
+対象読者は次のとおりです。
+
+隣接リストモデルで木構造を管理しているが、深さを制限したくなった
+DB制約とアプリケーション制御のどちらで対応すべきか迷っている
+設計パターンのトレードオフを把握しておきたい
+
+
+ 隣接リストモデルの基本
+課題やカテゴリ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/progate/articles/2e1e90796d82f0" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/tonbi_attack/articles/56de5502efb772" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,30 +168,10 @@ git work...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -196,23 +181,23 @@ git work...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +212,16 @@ git work...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_9568.html">
+                    <a href="Zennのトレンド_1503.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">MCP Apps標準化でWeb業界が一変。MCPクライアントとMCPサーバで対応した経験をもとに解説</span>
+                        <span class="nav-title">開発者が攻撃対象になった時代に、開発環境とCI/CDについて考えていること</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9135.html">
+                    <a href="Zennのトレンド_4788.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【AWS/Terraform】Terraformを初めて触ってみた</span>
+                        <span class="nav-title">RAGで詰まったのは、検索結果ではなく検索クエリだった</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +234,53 @@ git work...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7978.html">
-                        <h3>医療用画像処理ソフトウェア「Holoeyes MD」Ver. 3.2リリース、症例共有を可能にするLibrary機能など...</h3>
+                    <a href="CNET_Japan_最新情報総合_8381.html">
+                        <h3>JR西日本、ドローン活用で「停電不要」の点検を実現</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">その他</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">JR西日本グループのJR西日本レールテックは6月5日、山陽本線・西明石駅構内で、鉄道の上空を横断する道路橋（跨線道路橋）の点検をドローンを使って実施したと発表した。列車が高頻度で走る線区において、夜間...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_8472.html">
+                        <h3>【本日最終日】『ヒナまつり』ヤクザと超能力少女の腹筋を酷使系コメディが50%還元！【Kindle漫画セール情報】</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">2）をリリースした。このアップデートで、施設を越えて3Dモデルの閲覧を可能にする「Library機能」を実装。同時に、「Navi view機能」のマルチデバイス対応（Apple Vision Pro,...</p>
+                        <p class="related-summary">ヤクザの家に転がり込んできた超能力少女。全員ダメ人間な登場人物たちが巻き起こす、電車内での読書厳禁な爆笑劇です。ゲラゲラ笑った最後に、まさかのホロリが待っている。今ならお得に読めるチャンス！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_9958.html">
-                        <h3>BunがZig製の高速なMarkdownパーサー搭載。HTMLへのレンダリング、GitHub Flavored Mark...</h3>
+                    <a href="ASCII_jp__トップ_5352.html">
+                        <h3>【本日最終日】モンゴル帝国を翻弄する魔女の物語『天幕のジャードゥーガル』が50%還元【Kindle漫画セール情報】</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">オープンソースで開発されているJavaScriptランタイム「Bun」の最新バージョン「Bun v1. 8」が公開されました。 下記はBunの作者であるJarred Sumner氏のポストです。 In...</p>
+                        <p class="related-summary">奴隷から帝国の深淵へ。13世紀モンゴル、少女は知識という名の魔術で権力を掌握する。史実に基づく緻密な考証と、愛らしい絵柄が隠す残酷な復讐劇。第5巻までのお得な還元セールも見逃せない。知性が世界を塗り替...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_3835.html">
-                        <h3>jQuery 4.0で正式にテストされた「jQuery UI 1.14.2」が公開</h3>
+                    <a href="ASCII_jp__トップ_1336.html">
+                        <h3>あずきバー計1万5500本を無料配布、4都市で開催！ 今年は福岡天神会場も</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">jQuery UI開発チームは、今月（2025年1月）にリリースされたばかりのjQuery 4. 2」の公開を発表しました。 jQuery UIはその名称から分か. 0で正式にテストされたjQuery...</p>
+                        <p class="related-summary">井村屋は6月26日・27日の2日間、全国4都市で「あずきバー祭り2026」を開催。合計約1万5500本の「あずきバー」を無料配布します。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5652.html">
-                        <h3>CodePipelineでMarkdownドキュメントを自動デプロイ：S3静的サイトホスティングへの道</h3>
+                    <a href="ASCII_jp__トップ_6667.html">
+                        <h3>間違いないやつ！一平ちゃん新作は塩だれ×レモン×豚肉</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに プロジェクトのドキュメント管理、皆さんはどうしていますか？ 私たちのプロジェクトでは、技術仕様書やAPI仕様書などのドキュメントをMarkdown形式で管理していました。しかし、ドキュメント...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3440.html">
-                        <h3>純粋関数型言語ではconsole.log(&#34;Hello&#34;)をlog &#34;Hello&#34;と書くし、foo = 42をwrite...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">いわゆる純粋関数型プログラミング言語は、「状態や作用を扱うことはできない/難しい/面倒」といわれることもあります。でも、たとえばJavaScriptでコンソールにHelloを出力するには、 JavaS...</p>
+                        <p class="related-summary">明星食品は「明星 一平ちゃん夜店の焼そば 大盛 レモン香る豚肉塩だれ味」（386円）を6月15日に全国で発売します。一平ちゃん新作は「塩だれ×レモン×豚肉」の間違いない組み合わせ.</p>
                     </a>
                 </article>
             </div>

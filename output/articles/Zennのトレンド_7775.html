@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI駆動開発時代に、おさえておきたいQA技法 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに AIを使って実装することが、かなり当たり前になってきました。 画面実装、API実装、リファクタリング、テストコードの追加まで、以前よりずっと速く進められるようになっています。少し前ならそれなりに時間がかかっていた作業も、AIを使えば短時間である程度形になります">
-    <meta name="keywords" content="AI">
+    <title>「Claude Code」を支える技術 | 日本のテックニュース速報</title>
+    <meta name="description" content="本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
+    <meta name="keywords" content="AI,Claude,PC,スタートアップ,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AI駆動開発時代に、おさえておきたいQA技法">
-    <meta property="og:description" content="はじめに AIを使って実装することが、かなり当たり前になってきました。 画面実装、API実装、リファクタリング、テストコードの追加まで、以前よりずっと速く進められるようになっています。少し前ならそれなりに時間がかかっていた作業も、AIを使えば短時間である程度形になります">
+    <meta property="og:title" content="「Claude Code」を支える技術">
+    <meta property="og:description" content="本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7775.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI駆動開発時代に、おさえておきたいQA技法">
-    <meta name="twitter:description" content="はじめに AIを使って実装することが、かなり当たり前になってきました。 画面実装、API実装、リファクタリング、テストコードの追加まで、以前よりずっと速く進められるようになっています。少し前ならそれなりに時間がかかっていた作業も、AIを使えば短時間である程度形になります">
+    <meta name="twitter:title" content="「Claude Code」を支える技術">
+    <meta name="twitter:description" content="本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7775.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AI駆動開発時代に、おさえておきたいQA技法",
-        "description": "はじめに AIを使って実装することが、かなり当たり前になってきました。 画面実装、API実装、リファクタリング、テストコードの追加まで、以前よりずっと速く進められるようになっています。少し前ならそれなりに時間がかかっていた作業も、AIを使えば短時間である程度形になります",
+        "headline": "「Claude Code」を支える技術",
+        "description": "本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-05T23:44:32",
-        "dateModified": "2026-05-07T19:44:51.864444",
+        "datePublished": "2026-06-09T00:01:05",
+        "dateModified": "2026-06-10T20:32:19.296583",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7775.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7775.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "keywords": ["AI","Claude","PC","スタートアップ","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AI駆動開発時代に、おさえておきたいQA技法",
+                "name": "「Claude Code」を支える技術",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7775.html"
             }
         ]
@@ -114,41 +114,50 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AI駆動開発時代に、おさえておきたいQA技法</li>
+                <li aria-current="page">「Claude Code」を支える技術</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AI駆動開発時代に、おさえておきたいQA技法</h1>
+                <h1>「Claude Code」を支える技術</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/frontline/articles/3a912df20d9210" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/knowledgesense/articles/7ce72924c0050f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-05T23:44:32">
-                        公開: 2026-05-05T23:44:32
+                    <time datetime="2026-06-09T00:01:05">
+                        公開: 2026-06-09T00:01:05
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">PC</span>
+                    <span class="tag">スタートアップ</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-AIを使って実装することが、かなり当たり前になってきました。
-画面実装、API実装、リファクタリング、テストコードの追加まで、以前よりずっと速く進められるようになっています。少し前ならそれなりに時間がかかっていた作業も、AIを使えば短時間である程度形になります。
-一方で、AI駆動開発には別の難しさもあります。
-それは、実装スピードが上がることと、品質を安定して守れることは別だということです。
-AIはコードを書いてくれます。テストコードもそれっぽく作ってくれます。ただ、こちらが観点を渡さない限り、どうしても正常系中心の薄いテストになりやすいです。
-ぱっと見では十分そうに見えて...
+                    本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。
+株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです。
+
+ この記事は何
+この記事は、Claude Code の内部構造を、ソースコードレベルで解析した論文[1]について、日本語で簡単にまとめたものです。
+https://arxiv.org/abs/2604.14228
+
+ 本題
+
+ ざっくりサマリー
+
+Claude Code は、最も有名な「コーディングエージェント」です。PCのコマンドを実行したり、ファイルを編集したりでき...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/frontline/articles/3a912df20d9210" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/knowledgesense/articles/7ce72924c0050f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -171,10 +180,20 @@ AIはコードを書いてくれます。テストコードもそれっぽく作
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=PC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="PC - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">PC - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPCに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -215,16 +234,16 @@ AIはコードを書いてくれます。テストコードもそれっぽく作
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_523.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9560.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「Claude Codeに全部やらせる時代が来た」のか検証してみた</span>
+                        <span class="nav-title">OpenAIがIPO申請 企業価値136兆円</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_7201.html">
+                    <a href="気になる記になる_4678.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Apple、｢AirPods Max 2｣向けにファームウェアアップデート｢8E258｣をリリース ...</span>
+                        <span class="nav-title">｢macOS 27 Golden Gate｣の壁紙がダウンロード可能に</span>
                     </a>
                 </div>
             </div>
@@ -237,53 +256,53 @@ AIはコードを書いてくれます。テストコードもそれっぽく作
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3151.html">
-                        <h3>ChatGPTはなぜ「ゴブリン」に執着したのか　OpenAIが明かした不具合の正体</h3>
+                    <a href="CNET_Japan_最新情報総合_7074.html">
+                        <h3>アップルはWWDCで28分間「AI」と言わなかった</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「ChatGPT」は、妙なほどゴブリンに執着していた。開発元のOpenAIが原因を調べて修正に乗り出すほどだった。.</p>
+                        <p class="related-summary">あなたの家庭で「AI」は好意的に受け止められている言葉だろうか。NBC Newsが最近実施した全米調査は、肯定的にとらえている回答者はわずか26%にとどまる。だとすれば、6月8日の月曜に開かれたApp...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6456.html">
-                        <h3>HDRディスプレイグラス「RayNeo Air 4 Pro」レビュー：XREALやVITUREと比べて見えた差</h3>
+                    <a href="CNET_Japan_最新情報総合_2613.html">
+                        <h3>OpenAI、IPOを非公開で申請　「リークを予想し自ら発表」</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">TCLの最新ディスプレイグラス「RayNeo Air 4 Pro」のレビューをお届けする。.</p>
+                        <p class="related-summary">OpenAIは新規株式公開（IPO）に向けた登録届出書「S-1」の草案を、非公開扱いで米証券取引委員会（SEC）に提出したと発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2061.html">
-                        <h3>「OpenAI製スマホ」、2028年までに3000万台出荷の予測</h3>
+                    <a href="CNET_Japan_最新情報総合_3599.html">
+                        <h3>グーグルの「NotebookLM」が大幅進化　「Gemini 3.5」でさらに頼れるリサーチAIに</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは2027～2028年にかけて、AIに特化したスマートフォンを数千万台規模で製造する可能性があるという。.</p>
+                        <p class="related-summary">グーグルは人気AIツール「NotebookLM」を大幅に強化し、さらに優れたリサーチアシスタントにする。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3412.html">
-                        <h3>Amazon、自社配送網を他社に開放　物流版AWS実現へ</h3>
+                    <a href="CNET_Japan_最新情報総合_5310.html">
+                        <h3>JR東日本、最短1分で「新幹線eチケット」を買える購入機　駅に導入へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Amazonは現地時間5月4日、自社の物流ネットワークを他の企業に開放する「Amazon Supply Chain Services（ASCS）」を発表した。貨物輸送、流通・在庫保管、フルフィルメント...</p>
+                        <p class="related-summary">JR東日本は6月9日、駅の券売機の体験を刷新するとうたう「新幹線eチケット購入機（仮称）」の検証を、2026年度末ごろから大宮駅と宇都宮駅で開始すると発表した。「Suica Renaissance」シ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2629.html">
-                        <h3>Anthropic、「Claude」の利用上限引き上げ　Space XのGPU資源活用で</h3>
+                    <a href="CNET_Japan_最新情報総合_1262.html">
+                        <h3>Anthropic、ミュトス級AI「Claude Fable 5」一般提供開始　22日まで追加料金なし</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Anthropicは5月6日、AIチャットサービス「Claude」の利用上限を引き上げると発表した。SpaceXが保有するAIスーパーコンピュータ「Colossus 1」の計算能力を利用し、Claud...</p>
+                        <p class="related-summary">米Anthropicは6月9日（現地時間）、新モデルファミリー「Mythos」から、一般ユーザーが使える初のモデル「Claude Fable 5」を公開した。すでに有料サブスクリプションの契約者は利用...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code を「何となく使っている」から抜け出す——『実践 Claude Code 入門』で得た気づき | 日本のテックニュース速報</title>
-    <meta name="description" content="この記事は、Claude Code を日常的に使っているものの「うまく活用できている実感がない」と感じているエンジニア向けです。 特に、「CLAUDE. md は作ってみたけど、サブエージェント・スキル・フック・MCP などはまだ使いこなせていない」という方を対象にしています">
-    <meta name="keywords" content="Claude,本,書籍">
+    <title>Claude Code のトークン削減を実測した — semble 93%・cacheRead 1800倍の内訳 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに GitHub Copilot の料金改定をきっかけに、AI コーディングのトークン削減が話題になっています。私も Claude Code の設定ファイルに削減策を仕込んでいました。 せっかくなので、実際にどれくらい効いているか測ってみました">
+    <meta name="keywords" content="AI,Claude,GitHub,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Code を「何となく使っている」から抜け出す——『実践 Claude Code 入門』で得た気づき">
-    <meta property="og:description" content="この記事は、Claude Code を日常的に使っているものの「うまく活用できている実感がない」と感じているエンジニア向けです。 特に、「CLAUDE. md は作ってみたけど、サブエージェント・スキル・フック・MCP などはまだ使いこなせていない」という方を対象にしています">
+    <meta property="og:title" content="Claude Code のトークン削減を実測した — semble 93%・cacheRead 1800倍の内訳">
+    <meta property="og:description" content="はじめに GitHub Copilot の料金改定をきっかけに、AI コーディングのトークン削減が話題になっています。私も Claude Code の設定ファイルに削減策を仕込んでいました。 せっかくなので、実際にどれくらい効いているか測ってみました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3541.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Code を「何となく使っている」から抜け出す——『実践 Claude Code 入門』で得た気づき">
-    <meta name="twitter:description" content="この記事は、Claude Code を日常的に使っているものの「うまく活用できている実感がない」と感じているエンジニア向けです。 特に、「CLAUDE. md は作ってみたけど、サブエージェント・スキル・フック・MCP などはまだ使いこなせていない」という方を対象にしています">
+    <meta name="twitter:title" content="Claude Code のトークン削減を実測した — semble 93%・cacheRead 1800倍の内訳">
+    <meta name="twitter:description" content="はじめに GitHub Copilot の料金改定をきっかけに、AI コーディングのトークン削減が話題になっています。私も Claude Code の設定ファイルに削減策を仕込んでいました。 せっかくなので、実際にどれくらい効いているか測ってみました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Code を「何となく使っている」から抜け出す——『実践 Claude Code 入門』で得た気づき",
-        "description": "この記事は、Claude Code を日常的に使っているものの「うまく活用できている実感がない」と感じているエンジニア向けです。 特に、「CLAUDE. md は作ってみたけど、サブエージェント・スキル・フック・MCP などはまだ使いこなせていない」という方を対象にしています",
+        "headline": "Claude Code のトークン削減を実測した — semble 93%・cacheRead 1800倍の内訳",
+        "description": "はじめに GitHub Copilot の料金改定をきっかけに、AI コーディングのトークン削減が話題になっています。私も Claude Code の設定ファイルに削減策を仕込んでいました。 せっかくなので、実際にどれくらい効いているか測ってみました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-31T05:52:00",
-        "dateModified": "2026-04-01T09:06:58.233820",
+        "datePublished": "2026-06-08T23:13:48",
+        "dateModified": "2026-06-10T17:22:09.910174",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3541.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3541.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["Claude","本","書籍"]
+        "keywords": ["AI","Claude","GitHub","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Code を「何となく使っている」から抜け出す——『実践 Claude Code 入門』で得た気づき",
+                "name": "Claude Code のトークン削減を実測した — semble 93%・cacheRead 1800倍の内訳",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3541.html"
             }
         ]
@@ -114,43 +114,52 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Code を「何となく使っている」から抜け出す——『実践 Claude Code 入門...</li>
+                <li aria-current="page">Claude Code のトークン削減を実測した — semble 93%・cacheRead 18...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Code を「何となく使っている」から抜け出す——『実践 Claude Code 入門』で得た気づき</h1>
+                <h1>Claude Code のトークン削減を実測した — semble 93%・cacheRead 1800倍の内訳</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/nextbeat/articles/practical-claude-code-introduction" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/pepabo/articles/claude-code-token-reduction-measured" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-31T05:52:00">
-                        公開: 2026-03-31T05:52:00
+                    <time datetime="2026-06-08T23:13:48">
+                        公開: 2026-06-08T23:13:48
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">AI</span>
                     <span class="tag">Claude</span>
+                    <span class="tag">GitHub</span>
                     <span class="tag">本</span>
-                    <span class="tag">書籍</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事は、Claude Code を日常的に使っているものの「うまく活用できている実感がない」と感じているエンジニア向けです。
-特に、「CLAUDE.md は作ってみたけど、サブエージェント・スキル・フック・MCP などはまだ使いこなせていない」という方を対象にしています。
-書籍『実践 Claude Code 入門』（技術評論社）を読んで得た気づきをベースにしているので、ぜひ本書も読んでみてください。
-読者には以下の状態になってもらうことを目指しています。
+                    はじめに
+GitHub Copilot の料金改定をきっかけに、AI コーディングのトークン削減が話題になっています。私も Claude Code の設定ファイルに削減策を仕込んでいました。
+せっかくなので、実際にどれくらい効いているか測ってみました。ccusage と semble の実ログで集計したところ、累計 cacheRead は136億トークン、コード検索の削減率は93%という数字が出ました。本記事はその実測レポートです。
 
-サブエージェント、スキル、フック、MCP がそれぞれ何のために存在するのかわかった
-「何となく使っている」から「理解して使ってい...
+ 定番手法、どれを実装していたか
+トークン削減の定番手法を自分の設定と突き合わせると、3つは実装済みでした。
+
+
+
+定番手法
+ねらい
+私の実装
+
+
+...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/nextbeat/articles/practical-claude-code-introduction" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/pepabo/articles/claude-code-token-reduction-measured" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,6 +172,16 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">Claude - Amazon検索結果</div>
@@ -173,20 +192,10 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9B%B8%E7%B1%8D&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="書籍 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">書籍 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで書籍に関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +236,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_5258.html">
+                    <a href="Zennのトレンド_2643.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">CIO、180度開閉プラグ搭載の超薄型USB充電器｢NovaPort SLIM DUO Ⅱ 65W2...</span>
+                        <span class="nav-title">ExcelVBA開発をAIエージェントで自律化させるAll-in-Oneな開発ランタイムを作りました</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_2976.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_6012.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">メルカリ、｢iOS 17｣搭載端末でアプリ上のボタンが反応しなくなる障害が発生中 ｰ アプリのアップ...</span>
+                        <span class="nav-title">OpenAIがIPO申請 企業価値136兆円</span>
                     </a>
                 </div>
             </div>
@@ -249,52 +258,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5456.html">
-                        <h3>「Claude Code」のソースコードをうっかり公開、Anthropicが人為的ミスを認める</h3>
+                    <a href="CNET_Japan_最新情報総合_4216.html">
+                        <h3>アップルはWWDCで28分間「AI」と言わなかった</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AI企業のAnthropicは、自社の人気コーディングツール「Claude Code」のソースコードを誤って公開した。.</p>
+                        <p class="related-summary">あなたの家庭で「AI」は好意的に受け止められている言葉だろうか。NBC Newsが最近実施した全米調査は、肯定的にとらえている回答者はわずか26%にとどまる。だとすれば、6月8日の月曜に開かれたApp...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_863.html">
-                        <h3>OpenAI、時価総額135兆円に　「AIスーパーアプリ」実現へ19兆円を新たに調達</h3>
+                    <a href="CNET_Japan_最新情報総合_6045.html">
+                        <h3>OpenAI、IPOを非公開で申請　「リークを予想し自ら発表」</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米OpenAIは3月31日、投資家から総額1220億ドル（約19兆3248億円）の出資を受ける大型の資金調達を決めたと発表した。調達後の企業価値は8520億ドル（約134兆9568億円）に達した。今回...</p>
+                        <p class="related-summary">OpenAIは新規株式公開（IPO）に向けた登録届出書「S-1」の草案を、非公開扱いで米証券取引委員会（SEC）に提出したと発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_3220.html">
-                        <h3>VAIO、個人・法人向けPC全製品を4月23日より値上げ ｰ メモリなどの高騰が影響</h3>
+                    <a href="CNET_Japan_最新情報総合_3043.html">
+                        <h3>グーグルの「NotebookLM」が大幅進化　「Gemini 3.5」でさらに頼れるリサーチAIに</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">本日、VAIOが、国内向けに販売する個人向け・法人向けPC製品の出荷価格改定（値上げ）を2026年4月23日より実施すると発表しました。 値上げの背景としては、昨年より生成AIの普及に伴うDRAMなど...</p>
+                        <p class="related-summary">グーグルは人気AIツール「NotebookLM」を大幅に強化し、さらに優れたリサーチアシスタントにする。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_430.html">
-                        <h3>Nothing、2027年前半にAIメガネを投入か ｰ 今年後半にはAI機能重視の新型イヤホンも</h3>
+                    <a href="CNET_Japan_最新情報総合_8397.html">
+                        <h3>JR東日本、最短1分で「新幹線eチケット」を買える購入機　駅に導入へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Apple関連ではお馴染みのBloombergのMark Gurman氏が、珍しくAppleではなくNothingに関するリーク情報を報告しています。 同氏は事情に詳しい関係者の話として、Nothin...</p>
+                        <p class="related-summary">JR東日本は6月9日、駅の券売機の体験を刷新するとうたう「新幹線eチケット購入機（仮称）」の検証を、2026年度末ごろから大宮駅と宇都宮駅で開始すると発表した。「Suica Renaissance」シ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_6830.html">
-                        <h3>Gmailアドレス変更可に 順次提供</h3>
+                    <a href="CNET_Japan_最新情報総合_8507.html">
+                        <h3>Anthropic、ミュトス級AI「Claude Fable 5」一般提供開始　22日まで追加料金なし</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
+                        <p class="related-summary">米Anthropicは6月9日（現地時間）、新モデルファミリー「Mythos」から、一般ユーザーが使える初のモデル「Claude Fable 5」を公開した。すでに有料サブスクリプションの契約者は利用...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ブラウザだけで完結する日本語OCR＋透視変換（台形補正）を作ってみた | 日本のテックニュース速報</title>
-    <meta name="description" content="js でカスタムモデルをトレーニングする方法を記事にしてきました。 今回は ブラウザ完結の日本語 OCR をさらに一歩進めて、斜めから撮影した文書画像を4点指定で台形補正してから OCR にかける仕組みを Pure TypeScript で実装しました">
-    <meta name="keywords" content="本">
+    <title>TypeScript拡張「TSRX」を触ってみて、JSXと比べて考えたこと | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Reactを書くとき、私たちはほぼ必ずJSX（TSX）で書くと思います。 そんなJSX（TSX）の代替となるようなTSRXというTypeScriptのスーパーセット言語がアルファ版として公開されていて、ちょっと面白そうだったので触れてみました">
+    <meta name="keywords" content="React,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ブラウザだけで完結する日本語OCR＋透視変換（台形補正）を作ってみた">
-    <meta property="og:description" content="js でカスタムモデルをトレーニングする方法を記事にしてきました。 今回は ブラウザ完結の日本語 OCR をさらに一歩進めて、斜めから撮影した文書画像を4点指定で台形補正してから OCR にかける仕組みを Pure TypeScript で実装しました">
+    <meta property="og:title" content="TypeScript拡張「TSRX」を触ってみて、JSXと比べて考えたこと">
+    <meta property="og:description" content="はじめに Reactを書くとき、私たちはほぼ必ずJSX（TSX）で書くと思います。 そんなJSX（TSX）の代替となるようなTSRXというTypeScriptのスーパーセット言語がアルファ版として公開されていて、ちょっと面白そうだったので触れてみました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6451.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ブラウザだけで完結する日本語OCR＋透視変換（台形補正）を作ってみた">
-    <meta name="twitter:description" content="js でカスタムモデルをトレーニングする方法を記事にしてきました。 今回は ブラウザ完結の日本語 OCR をさらに一歩進めて、斜めから撮影した文書画像を4点指定で台形補正してから OCR にかける仕組みを Pure TypeScript で実装しました">
+    <meta name="twitter:title" content="TypeScript拡張「TSRX」を触ってみて、JSXと比べて考えたこと">
+    <meta name="twitter:description" content="はじめに Reactを書くとき、私たちはほぼ必ずJSX（TSX）で書くと思います。 そんなJSX（TSX）の代替となるようなTSRXというTypeScriptのスーパーセット言語がアルファ版として公開されていて、ちょっと面白そうだったので触れてみました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ブラウザだけで完結する日本語OCR＋透視変換（台形補正）を作ってみた",
-        "description": "js でカスタムモデルをトレーニングする方法を記事にしてきました。 今回は ブラウザ完結の日本語 OCR をさらに一歩進めて、斜めから撮影した文書画像を4点指定で台形補正してから OCR にかける仕組みを Pure TypeScript で実装しました",
+        "headline": "TypeScript拡張「TSRX」を触ってみて、JSXと比べて考えたこと",
+        "description": "はじめに Reactを書くとき、私たちはほぼ必ずJSX（TSX）で書くと思います。 そんなJSX（TSX）の代替となるようなTSRXというTypeScriptのスーパーセット言語がアルファ版として公開されていて、ちょっと面白そうだったので触れてみました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-05T14:58:19",
-        "dateModified": "2026-03-08T16:31:13.729616",
+        "datePublished": "2026-06-07T08:06:54",
+        "dateModified": "2026-06-10T12:58:12.192607",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6451.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6451.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "プログラミング",
+        "keywords": ["React","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ブラウザだけで完結する日本語OCR＋透視変換（台形補正）を作ってみた",
+                "name": "TypeScript拡張「TSRX」を触ってみて、JSXと比べて考えたこと",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6451.html"
             }
         ]
@@ -113,25 +113,26 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">ブラウザだけで完結する日本語OCR＋透視変換（台形補正）を作ってみた</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">TypeScript拡張「TSRX」を触ってみて、JSXと比べて考えたこと</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ブラウザだけで完結する日本語OCR＋透視変換（台形補正）を作ってみた</h1>
+                <h1>TypeScript拡張「TSRX」を触ってみて、JSXと比べて考えたこと</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/lecto/articles/dea43a2dfa52ad" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-03-05T14:58:19">
-                        公開: 2026-03-05T14:58:19
+                    <span class="source">出典: <a href="https://zenn.dev/dip_techblog/articles/tsrx-typescript-extension" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-06-07T08:06:54">
+                        公開: 2026-06-07T08:06:54
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">React</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
@@ -139,13 +140,17 @@
                 
                 <div class="article-body">
                     はじめに
-これまで日本語 OCR について、サーバーサイドで動かす yomitoku を使った Flask + TypeScript 構成や、ブラウザ上で動く Tesseract.js でカスタムモデルをトレーニングする方法を記事にしてきました。
-今回は ブラウザ完結の日本語 OCR をさらに一歩進めて、斜めから撮影した文書画像を4点指定で台形補正してから OCR にかける仕組みを Pure TypeScript で実装しました。
-本アプリケーションは国立国会図書館が公開している NDLOCR の軽量版をベースにしており、レイアウト認識（DEIMv2）と文字列認識（PARSeq）の ...
+Reactを書くとき、私たちはほぼ必ずJSX（TSX）で書くと思います。
+そんなJSX（TSX）の代替となるようなTSRXというTypeScriptのスーパーセット言語がアルファ版として公開されていて、ちょっと面白そうだったので触れてみました。
+
+ TSRXとは？
+https://tsrx.dev/
+TSRXは、元ReactコアエンジニアであるDominic Gannawayさんが開発しているTypeScriptのスーパーセット言語です。
+Gannawayさんは現在RippleというUIライブラリを開発しており、TSRXはもともとRippleのなかで使われていた構文です。そ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/lecto/articles/dea43a2dfa52ad" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/dip_techblog/articles/tsrx-typescript-extension" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,10 +163,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -171,23 +196,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -202,16 +227,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_1017.html">
+                    <a href="Zennのトレンド_4342.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Claude Codeはプロンプトインジェクションで.envを漏洩させるのか？検証してみた</span>
+                        <span class="nav-title">バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャン...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Publickey_7311.html">
+                    <a href="Qiita_-_人気の記事_7298.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">State of JavaScript 2025公開／コーディングエージェントを安全にする分離環境／...</span>
+                        <span class="nav-title">なぜBraveは拡張機能なしで広告を消せるのか？仕組みを5分でゆるく整理する</span>
                     </a>
                 </div>
             </div>
@@ -224,53 +249,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8218.html">
-                        <h3>カイロス3号機、打ち上げ失敗</h3>
+                    <a href="CNET_Japan_最新情報総合_3162.html">
+                        <h3>宇宙飛行士もプラダを着用へ　Axiom Spaceと共同開発の冷却・換気インナーを発表</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">日本の宇宙ベンチャー、スペースワンは3月5日、同日午前11時10分に和歌山県串本町の「スペースポート紀伊」から打ち上げた小型ロケット「カイロス」3号機について、ミッション達成が困難と判断し、飛行中断措...</p>
+                        <p class="related-summary">50年ぶりに人類を月面へ送ることを目指す米航空宇宙局（NASA）の「アルテミスIV」ミッションには、多くの要素が関わっている。その1つが、Axiom Spaceとプラダが開発した新しい宇宙服用インナー...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7827.html">
-                        <h3>【本日終了】さくらももこのゆる哲学『COJI-COJI』全4巻が50%還元【Kindle漫画セール情報】</h3>
+                    <a href="Qiita_-_人気の記事_7088.html">
+                        <h3>Claude Code と Codex のレート残量を確認するためにブラウザを開くのをやめた話</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">コジコジは、ただそこにいるだけ。そんな当たり前のことが、なぜか今の自分には深く刺さる。毒気と哲学が入り混じる、さくらももこ流メルヘンの傑作が全巻50％還元中。このシュールな宇宙に、どっぷり浸りたい。.</p>
+                        <p class="related-summary">はじめに Claude Code と Codex を Pro / Plus プランで併用していると、レートリミット（5時間枠・週枠）にそれなりの頻度で当たります。当たると作業が止まるので、私は枠に当た...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_7039.html">
-                        <h3>予測市場の構造──集合知・市場設計・規制で理解する未来予測</h3>
+                    <a href="Zennのトレンド_5156.html">
+                        <h3>データエンジニアこそ組織のオントロジーに向き合うべき</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">PolymarketとKalshiは何が違うのか、そもそも予測市場とは何なのか、どのような経緯でこれらが生まれたのか。予測市場の仕組み・歴史・規制・課題を整理して、今後どうなっていくのかを考える本です...</p>
+                        <p class="related-summary">こんにちは、クラシルでデータエンジニアをしているharry(@gappy50)です。 クラシルでは、これまでAI-Readyなデータ利活用に取り組んできました。Tier設計でデータの信頼性を担保したり...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1293.html">
-                        <h3>【本日最終日】ハガレン以前の荒川弘センセイの武侠ファンタジー『獣神演武』が50%還元【Kindle漫画セール情報】</h3>
+                    <a href="Zennのトレンド_3738.html">
+                        <h3>マルチテナント化のために本番稼働中のMySQLをPostgreSQLに移行した話（マルチテナント化連載 第2回・Post...</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">荒川弘の原点がここに！武侠と宿命が混ざり合う『獣神演武』が今、実質半額です。全5巻という潔いボリュームに、後の大作へ続く魂が宿る。あの熱量に触れるなら、このセールは見逃せないぞ！.</p>
+                        <p class="related-summary">はじめに こんにちは。株式会社カウンターワークスにて、テックリードとして、リーシングのDXを実現するクラウド管理システム 「ショップカウンター エンタープライズ」（以下 SCE）を開発しております s...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3866.html">
-                        <h3>【本日最終日】2026年中に新刊出るかも!? 『ハンター×ハンター』第38巻まで全巻50%還元【Kindle漫画セール情...</h3>
+                    <a href="Qiita_-_人気の記事_3722.html">
+                        <h3>未経験からエンジニアになるために必要な3つの知識</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">冨樫先生の筆が動くたび、期待で胸が騒ぎます。全巻50%還元の今、あの深遠な念能力の世界へ再び潜りませんか。緻密な心理戦、重なる伏線。最新刊を待つこの贅沢な時間に、ゴンたちの物語を揃えておきたい。.</p>
+                        <p class="related-summary">株式会社PRUMのmasaです。 エンジニア未経験で転職する際、「何をすれば？」と考える方が多いと思います。今日は未経験からエンジニアになるために必要な3つの知識について話していきます。 1. 自走力...</p>
                     </a>
                 </article>
             </div>

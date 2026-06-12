@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodexをローカルLLMで駆動する | 日本のテックニュース速報</title>
-    <meta name="description" content="04 LTSで行っているが、一般的なLinuxや、Mac、WSL環境でもそのまま使えるかも。 背景 私は生成AIのベンチマーク評価をすることが趣味の一つなのだが、最近はLLMとClaude CodeやCodexなどのハーネスを組み合わせた際のエージェント性能を評価することが多い">
-    <meta name="keywords" content="AI,OpenAI,Claude,LLM,Mac,本">
+    <title>「Claude Code」を支える技術 | 日本のテックニュース速報</title>
+    <meta name="description" content="本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
+    <meta name="keywords" content="AI,Claude,PC,スタートアップ,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="CodexをローカルLLMで駆動する">
-    <meta property="og:description" content="04 LTSで行っているが、一般的なLinuxや、Mac、WSL環境でもそのまま使えるかも。 背景 私は生成AIのベンチマーク評価をすることが趣味の一つなのだが、最近はLLMとClaude CodeやCodexなどのハーネスを組み合わせた際のエージェント性能を評価することが多い">
+    <meta property="og:title" content="「Claude Code」を支える技術">
+    <meta property="og:description" content="本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5779.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CodexをローカルLLMで駆動する">
-    <meta name="twitter:description" content="04 LTSで行っているが、一般的なLinuxや、Mac、WSL環境でもそのまま使えるかも。 背景 私は生成AIのベンチマーク評価をすることが趣味の一つなのだが、最近はLLMとClaude CodeやCodexなどのハーネスを組み合わせた際のエージェント性能を評価することが多い">
+    <meta name="twitter:title" content="「Claude Code」を支える技術">
+    <meta name="twitter:description" content="本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5779.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "CodexをローカルLLMで駆動する",
-        "description": "04 LTSで行っているが、一般的なLinuxや、Mac、WSL環境でもそのまま使えるかも。 背景 私は生成AIのベンチマーク評価をすることが趣味の一つなのだが、最近はLLMとClaude CodeやCodexなどのハーネスを組み合わせた際のエージェント性能を評価することが多い",
+        "headline": "「Claude Code」を支える技術",
+        "description": "本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-10T07:47:08",
-        "dateModified": "2026-05-10T14:55:05.276119",
+        "datePublished": "2026-06-09T00:01:05",
+        "dateModified": "2026-06-12T16:46:16.312169",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5779.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5779.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","OpenAI","Claude","LLM","Mac","本"]
+        "keywords": ["AI","Claude","PC","スタートアップ","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "CodexをローカルLLMで駆動する",
+                "name": "「Claude Code」を支える技術",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5779.html"
             }
         ]
@@ -114,28 +114,27 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">CodexをローカルLLMで駆動する</li>
+                <li aria-current="page">「Claude Code」を支える技術</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>CodexをローカルLLMで駆動する</h1>
+                <h1>「Claude Code」を支える技術</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/robustonian/articles/codex_with_local_llm" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/knowledgesense/articles/7ce72924c0050f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-10T07:47:08">
-                        公開: 2026-05-10T07:47:08
+                    <time datetime="2026-06-09T00:01:05">
+                        公開: 2026-06-09T00:01:05
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">OpenAI</span>
                     <span class="tag">Claude</span>
-                    <span class="tag">LLM</span>
-                    <span class="tag">Mac</span>
+                    <span class="tag">PC</span>
+                    <span class="tag">スタートアップ</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -143,19 +142,22 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-本記事では、ローカルLLMを用いてCodex CLIを駆動するための方法についてまとめる。
-!
-検証環境はUbuntu 24.04 LTSで行っているが、一般的なLinuxや、Mac、WSL環境でもそのまま使えるかも。
+                    本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。
+株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです。
 
+ この記事は何
+この記事は、Claude Code の内部構造を、ソースコードレベルで解析した論文[1]について、日本語で簡単にまとめたものです。
+https://arxiv.org/abs/2604.14228
 
- 背景
-私は生成AIのベンチマーク評価をすることが趣味の一つなのだが、最近はLLMとClaude CodeやCodexなどのハーネスを組み合わせた際のエージェント性能を評価することが多い。
-一般的なハーネスはOpenAI Compatible、すなわちChat Completion APIで動くものが殆どで、それ以外としてClaude CodeはAnth...
+ 本題
+
+ ざっくりサマリー
+
+Claude Code は、最も有名な「コーディングエージェント」です。PCのコマンドを実行したり、ファイルを編集したりでき...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/robustonian/articles/codex_with_local_llm" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/knowledgesense/articles/7ce72924c0050f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -178,20 +180,20 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=OpenAI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="OpenAI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">OpenAI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでOpenAIに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=PC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="PC - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">PC - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPCに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -232,16 +234,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="ASCII_jp__トップ_9810.html">
+                    <a href="Publickey_5612.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">フォロワー数ではなく面談選考でーKATVR JAPAN、応募100名超から2026年公式アンバサダー...</span>
+                        <span class="nav-title">Ubuntu、サンドボックス化された開発環境をコマンド一発で構築。新機能「Workshop」リリース</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="ASCII_jp__トップ_5833.html">
+                    <a href="Qiita_-_人気の記事_3935.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">500円ラーメン餃子セットも！幸楽苑、3日間限ワンコイン“ブラック”フェア</span>
+                        <span class="nav-title">週末なにしてますか？忙しいですか？非IT業界の友達に「燃える」が通じなかったので、IT業界の謎用語を...</span>
                     </a>
                 </div>
             </div>
@@ -254,52 +256,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4563.html">
-                        <h3>「AIが医師を名乗るのは違法」と開発企業を提訴　米ペンシルベニア州</h3>
+                    <a href="CNET_Japan_最新情報総合_4467.html">
+                        <h3>AIエージェントの「代理購入」にVisa決済を統合　VisaとOpenAIが戦略提携</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AI」を運営するAI企業Character Technologiesを提訴した。. ペンシルベニア州政府は、「Character.</p>
+                        <p class="related-summary">Visaは米国時間6月10日、OpenAIとの戦略的提携を発表した。AIエージェントが人に代わって商品やサービスを購入する「エージェンティックコマース」に対応し、OpenAIのサービス上で安全なVis...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7410.html">
-                        <h3>ネットの求人詐欺が急増中　AIで「安く速く簡単に」</h3>
+                    <a href="CNET_Japan_最新情報総合_8770.html">
+                        <h3>今あなたが使っているミュトス級AI「Claude Fable 5」、22日を過ぎたらどうなる？--発表を整理</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">求人情報が本物かどうかを確認し、詐欺に注意することがますます重要になっている。.</p>
+                        <p class="related-summary">米Anthropicが6月9日（現地時間）に提供を開始した最上位AIモデル「Claude Fable 5」。Claudeの有料サブスクリプションユーザーはすでに利用可能になっているが、一方でAIモデル...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6743.html">
-                        <h3>ソニーCEO「AIはクリエイターを代替しない」　ヒトの創造性が中心と強調</h3>
+                    <a href="CNET_Japan_最新情報総合_8573.html">
+                        <h3>シャープ、AIサーバー事業に参入へ--鴻海の調達製造力を活用　26年度中にも販売</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ソニーグループで社長CEOを務める十時裕樹氏は2026年度の経営方針説明会で、AIについて「ソニーグループの各事業にとって最重要テーマ」と位置付けた。一方で、「人のクリエイティビティが常に中心にあるべ...</p>
+                        <p class="related-summary">シャープがAIサーバー事業に参入する。6月9日に開催した2026年度事業説明会で、社長執行役員CEOの河村哲治氏が新規事業の筆頭として表明した。親会社である鴻海精密工業（ホンハイ、Foxconn）の調...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_7416.html">
-                        <h3>米企業の新型AI 危険視される能力</h3>
+                    <a href="CNET_Japan_最新情報総合_7459.html">
+                        <h3>マスク氏のSpaceX「AI衛星100万基」構想　宇宙がゴミだらけになる懸念　専門家の見方は</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
+                        <p class="related-summary">米SpaceXが掲げる「宇宙にデータセンター100万基」構想が、SFの域を越えて現実に近づきつつある。一方で、宇宙ゴミへの懸念が強まっている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4156.html">
-                        <h3>【ノートPC】最新CPU、958g、バッテリーも1日余裕が欲しいならこれを買え</h3>
+                    <a href="CNET_Japan_最新情報総合_3202.html">
+                        <h3>「娘の自殺はChatGPTのせい」、母親がOpenAIを提訴</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「結局、仕事で毎日使う道具として、何が一番正解なの？」という問いに、これほど真正面から答えてくれるノートPCは他にありません。2026年、VAIOが世に送り出した「VAIO SX14-R」は、まさにそ...</p>
+                        <p class="related-summary">ChatGPTとの対話後に24歳の女性が自殺。遺族がOpenAIを「意図的な設計上の決定が死を招いた」として提訴した。.</p>
                     </a>
                 </article>
             </div>

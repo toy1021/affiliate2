@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIエージェントが毎回データを取りに行く設計の限界 | 日本のテックニュース速報</title>
-    <meta name="description" content="AIエージェントが毎回データを取りに行く設計の限界 この記事は独立して読めます（約8分） 以前の記事「MCPの課題とナレッジグラフ」では、MCP/RAGアーキテクチャが抱えるscatter-gather問題（毎回バラバラのシステムに問い合わせて寄せ集める方式）を論じました">
-    <meta name="keywords" content="AI,本,EV">
+    <title>Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか） | 日本のテックニュース速報</title>
+    <meta name="description" content="完成した知識グラフの可視化（622ノード・846エッジ、vis-network製）。左下のギャップ候補リストには後述する「あるバグ」が写り込んでいます 卒論のために、91本のPDF文献（約460万字）から概念を抽出して知識グラフを作りました">
+    <meta name="keywords" content="Python,Claude,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIエージェントが毎回データを取りに行く設計の限界">
-    <meta property="og:description" content="AIエージェントが毎回データを取りに行く設計の限界 この記事は独立して読めます（約8分） 以前の記事「MCPの課題とナレッジグラフ」では、MCP/RAGアーキテクチャが抱えるscatter-gather問題（毎回バラバラのシステムに問い合わせて寄せ集める方式）を論じました">
+    <meta property="og:title" content="Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）">
+    <meta property="og:description" content="完成した知識グラフの可視化（622ノード・846エッジ、vis-network製）。左下のギャップ候補リストには後述する「あるバグ」が写り込んでいます 卒論のために、91本のPDF文献（約460万字）から概念を抽出して知識グラフを作りました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1556.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIエージェントが毎回データを取りに行く設計の限界">
-    <meta name="twitter:description" content="AIエージェントが毎回データを取りに行く設計の限界 この記事は独立して読めます（約8分） 以前の記事「MCPの課題とナレッジグラフ」では、MCP/RAGアーキテクチャが抱えるscatter-gather問題（毎回バラバラのシステムに問い合わせて寄せ集める方式）を論じました">
+    <meta name="twitter:title" content="Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）">
+    <meta name="twitter:description" content="完成した知識グラフの可視化（622ノード・846エッジ、vis-network製）。左下のギャップ候補リストには後述する「あるバグ」が写り込んでいます 卒論のために、91本のPDF文献（約460万字）から概念を抽出して知識グラフを作りました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIエージェントが毎回データを取りに行く設計の限界",
-        "description": "AIエージェントが毎回データを取りに行く設計の限界 この記事は独立して読めます（約8分） 以前の記事「MCPの課題とナレッジグラフ」では、MCP/RAGアーキテクチャが抱えるscatter-gather問題（毎回バラバラのシステムに問い合わせて寄せ集める方式）を論じました",
+        "headline": "Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）",
+        "description": "完成した知識グラフの可視化（622ノード・846エッジ、vis-network製）。左下のギャップ候補リストには後述する「あるバグ」が写り込んでいます 卒論のために、91本のPDF文献（約460万字）から概念を抽出して知識グラフを作りました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-24T08:44:07",
-        "dateModified": "2026-05-26T07:49:45.890408",
+        "datePublished": "2026-06-11T15:53:34",
+        "dateModified": "2026-06-12T23:18:45.037841",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1556.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1556.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","本","EV"]
+        "articleSection": "通信・ネットワーク",
+        "keywords": ["Python","Claude","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "通信・ネットワーク",
+                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIエージェントが毎回データを取りに行く設計の限界",
+                "name": "Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1556.html"
             }
         ]
@@ -113,47 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIエージェントが毎回データを取りに行く設計の限界</li>
+                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
+                <li aria-current="page">Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIエージェントが毎回データを取りに行く設計の限界</h1>
+                <h1>Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/knowledge_graph/articles/kg-agent-memory-first-design" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-24T08:44:07">
-                        公開: 2026-05-24T08:44:07
+                    <span class="source">出典: <a href="https://zenn.dev/keipi/articles/lbd-knowledge-graph-91pdfs" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: 通信・ネットワーク</span>
+                    <time datetime="2026-06-11T15:53:34">
+                        公開: 2026-06-11T15:53:34
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Claude</span>
                     <span class="tag">本</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    AIエージェントが毎回データを取りに行く設計の限界
+                    完成した知識グラフの可視化（622ノード・846エッジ、vis-network製）。左下のギャップ候補リストには後述する「あるバグ」が写り込んでいます
+卒論のために、91本のPDF文献（約460万字）から概念を抽出して知識グラフを作りました。使ったのはClaude Code（当時のClaude Opus 4.5）とPythonスクリプト17本。最終的に622概念・846エッジのグラフになり、そこから50件の「未検証の研究ギャップ候補」と15件の異国間比較仮説を生成して、卒論の分析に使いました。
+……と書くときれいな成功談に見えますが、実際は壊れた箇所だらけです。
 
-この記事は独立して読めます（約8分）
-
-以前の記事「MCPの課題とナレッジグラフ」では、MCP/RAGアーキテクチャが抱えるscatter-gather問題（毎回バラバラのシステムに問い合わせて寄せ集める方式）を論じました。また「特許から読むDevRevの思想」では、その背景にある設計思想を特許から読み解きました。本記事ではその設計回答、すなわち「ではどう設計するか」を具体的に示します。
-
-
- 問題：PoCは動くが、本番では使われない
-「AIエージェントのPoCは動いたのに、本番に出すと遅い・不正確・使われない」
-日本のエンジニア...
+最初に組んだギャップ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/knowledge_graph/articles/kg-agent-memory-first-design" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/keipi/articles/lbd-knowledge-graph-91pdfs" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -166,20 +161,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -199,23 +194,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>通信・ネットワーク関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -230,16 +225,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7696.html">
+                    <a href="Zennのトレンド_3652.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AIに投げても解けなかったGPSアート自動生成を、最適化問題として組み立て直した話</span>
+                        <span class="nav-title">必然性から紐解くAccount Abstraction</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_4450.html">
+                    <a href="Zennのトレンド_1661.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AWS資格の価値は「誰が取ったか」で変わる</span>
+                        <span class="nav-title">Claude Codeのアドバイザーが「プロジェクトの本質」を毎回思い出させてくれる ── 公式仕様...</span>
                     </a>
                 </div>
             </div>
@@ -252,53 +247,13 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3498.html">
-                        <h3>ユニバーサルとTikTokが複数年契約、AI対策とアーティストへの還元を明記</h3>
+                    <a href="気になる記になる_7563.html">
+                        <h3>楽天モバイル、｢スマホ交換保証プラス &amp; 家電補償｣の月額料金を改定へ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">ユニバーサル ミュージック グループとTikTokは、テイラー・スウィフト、ケンドリック・ラマー、サブリナ・カーペンター、ノア・カーンらの楽曲を今後何年にもわたってTikTokで再生できるようにする契...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5490.html">
-                        <h3>データセンターを渇望するAI企業、反発する住民　米調査で浮き彫りに</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">人工知能（AI）を支えるため、演算用の大量の電力と冷却用の水を消費するデータセンターの建設に対し、地元の反発が強まっている。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4145.html">
-                        <h3>ローマ教皇レオ14世、AIめぐる初の回勅　巨大テックに「武装解除」を迫る</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">ローマ教皇レオ14世が5月25日、人工知能（AI）をテーマにした初の回勅を発表した。タイトルは「マグニフィカ・フマニタス（『輝かしき人間性』の意）」。4万2300語に及ぶこの文書は、AIの規制と、人類...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5619.html">
-                        <h3>「ChatGPT for PowerPoint」ベータ版公開　白紙からパワポのスライド作成も</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">OpenAIは米国時間5月21日、Microsoft PowerPoint上でChatGPTを利用できる「ChatGPT for PowerPoint」のベータ版を公開した。スライドの新規作成や既存ス...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6884.html">
-                        <h3>ChatGPTに相談したら意図せぬ結果に　巨人・阿部監督辞任、娘の手紙全文</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">プロ野球・読売ジャイアンツの阿部慎之助監督（47）が長女への暴行容疑で逮捕・釈放され、5月26日に辞任した。同日の記者会見で、代理人を通じて長女本人による手紙が読み上げられた。手紙のなかで長女は、児童...</p>
+                        <p class="related-summary">本日、楽天モバイルが、2026年6月17日0時の申し込み分より、オプションサービス「スマホ交換保証プラス &amp; 家電補償」の月額利用料を改定すると案内しています。 「スマホ交換保証プラス &amp; 家電補償」...</p>
                     </a>
                 </article>
             </div>

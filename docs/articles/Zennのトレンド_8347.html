@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIMMER OSINT CTF Writeup (kn1cht) | 日本のテックニュース速報</title>
-    <meta name="description" content="SWIMMER OSINT CTF Writeup (kn1cht) - テクノロジーニュースをお届け。">
-    <meta name="keywords" content="本,EV">
+    <title>Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか） | 日本のテックニュース速報</title>
+    <meta name="description" content="完成した知識グラフの可視化（622ノード・846エッジ、vis-network製）。左下のギャップ候補リストには後述する「あるバグ」が写り込んでいます 卒論のために、91本のPDF文献（約460万字）から概念を抽出して知識グラフを作りました">
+    <meta name="keywords" content="Python,Claude,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="SWIMMER OSINT CTF Writeup (kn1cht)">
-    <meta property="og:description" content="SWIMMER OSINT CTF Writeup (kn1cht) - テクノロジーニュースをお届け。">
+    <meta property="og:title" content="Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）">
+    <meta property="og:description" content="完成した知識グラフの可視化（622ノード・846エッジ、vis-network製）。左下のギャップ候補リストには後述する「あるバグ」が写り込んでいます 卒論のために、91本のPDF文献（約460万字）から概念を抽出して知識グラフを作りました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8347.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SWIMMER OSINT CTF Writeup (kn1cht)">
-    <meta name="twitter:description" content="SWIMMER OSINT CTF Writeup (kn1cht) - テクノロジーニュースをお届け。">
+    <meta name="twitter:title" content="Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）">
+    <meta name="twitter:description" content="完成した知識グラフの可視化（622ノード・846エッジ、vis-network製）。左下のギャップ候補リストには後述する「あるバグ」が写り込んでいます 卒論のために、91本のPDF文献（約460万字）から概念を抽出して知識グラフを作りました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "SWIMMER OSINT CTF Writeup (kn1cht)",
-        "description": "SWIMMER OSINT CTF Writeup (kn1cht) - テクノロジーニュースをお届け。",
+        "headline": "Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）",
+        "description": "完成した知識グラフの可視化（622ノード・846エッジ、vis-network製）。左下のギャップ候補リストには後述する「あるバグ」が写り込んでいます 卒論のために、91本のPDF文献（約460万字）から概念を抽出して知識グラフを作りました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-01-17T15:29:27",
-        "dateModified": "2026-01-18T08:29:08.924547",
+        "datePublished": "2026-06-11T15:53:34",
+        "dateModified": "2026-06-12T12:55:17.203864",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8347.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8347.html",
-        "articleSection": "その他",
-        "keywords": ["本","EV"]
+        "articleSection": "通信・ネットワーク",
+        "keywords": ["Python","Claude","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "通信・ネットワーク",
+                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "SWIMMER OSINT CTF Writeup (kn1cht)",
+                "name": "Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8347.html"
             }
         ]
@@ -113,41 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">SWIMMER OSINT CTF Writeup (kn1cht)</li>
+                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
+                <li aria-current="page">Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>SWIMMER OSINT CTF Writeup (kn1cht)</h1>
+                <h1>Claude Codeと91本のPDFで知識グラフを作って卒論を書いた（そして何が壊れたか）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/kn1cht/articles/swimmer-osint-2026-kn1cht" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-01-17T15:29:27">
-                        公開: 2026-01-17T15:29:27
+                    <span class="source">出典: <a href="https://zenn.dev/keipi/articles/lbd-knowledge-graph-91pdfs" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: 通信・ネットワーク</span>
+                    <time datetime="2026-06-11T15:53:34">
+                        公開: 2026-06-11T15:53:34
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Claude</span>
                     <span class="tag">本</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    2026年1月17日に開催されたSWIMMER OSINT CTFに参加しました。DIVER OSINT CTF 2025を開催したチームによる初心者向けOSINT CTFです。
-DIVER OSINT CTF 2025のWrite-upはこちら：
-https://zenn.dev/kn1cht/articles/diver-osint-ctf-2025-kakitsubata
-本大会は6名を上限としたチーム戦ですが、 チーム編成を忘れていたため 一人で参加しました。
-結果、全問を解いて32位（全完多数のため、全問題に正答した時刻順）となりました。（数え間違えていなければ）ソロ参加の中で...
+                    完成した知識グラフの可視化（622ノード・846エッジ、vis-network製）。左下のギャップ候補リストには後述する「あるバグ」が写り込んでいます
+卒論のために、91本のPDF文献（約460万字）から概念を抽出して知識グラフを作りました。使ったのはClaude Code（当時のClaude Opus 4.5）とPythonスクリプト17本。最終的に622概念・846エッジのグラフになり、そこから50件の「未検証の研究ギャップ候補」と15件の異国間比較仮説を生成して、卒論の分析に使いました。
+……と書くときれいな成功談に見えますが、実際は壊れた箇所だらけです。
+
+最初に組んだギャップ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/kn1cht/articles/swimmer-osint-2026-kn1cht" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/keipi/articles/lbd-knowledge-graph-91pdfs" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,6 +161,26 @@ https://zenn.dev/kn1cht/articles/diver-osint-ctf-2025-kakitsubata
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">本 - Amazon検索結果</div>
@@ -169,21 +190,11 @@ https://zenn.dev/kn1cht/articles/diver-osint-ctf-2025-kakitsubata
                                 </div>
                             </a>
                         </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>通信・ネットワーク関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -214,16 +225,16 @@ https://zenn.dev/kn1cht/articles/diver-osint-ctf-2025-kakitsubata
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_1893.html">
+                    <a href="Qiita_-_人気の記事_8020.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">マリオワールドで256回エリア移動をするとバグる理由</span>
+                        <span class="nav-title">負担は誰が払い、利益は誰が得るのか？― 中間層・人材育成・移民政策を構造から考える : Python...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9363.html">
+                    <a href="Zennのトレンド_6823.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Ruby のぶら下がり else 問題</span>
+                        <span class="nav-title">Claude Codeのアドバイザーが「プロジェクトの本質」を毎回思い出させてくれる ── 公式仕様...</span>
                     </a>
                 </div>
             </div>
@@ -236,53 +247,23 @@ https://zenn.dev/kn1cht/articles/diver-osint-ctf-2025-kakitsubata
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5753.html">
-                        <h3>東京から名古屋まで「たった4時間」で荷物が届くように--東海道新幹線を活用</h3>
+                    <a href="ASCII_jp__トップ_5252.html">
+                        <h3>「OTOTEN2026 AUDIO&amp;HOME THEATER FESTIVAL」出展のお知らせ 80周年を迎えるJBLの...</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">日本通運とJR東海は1月15日、新幹線を活用した即日荷物輸送サービス「NXスーパーエクスプレスカーゴ」をJR東海エリアで開始した。新幹線の高速性と定時性を生かし、スピードと環境配慮を両立した広域即日輸...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_617.html">
-                        <h3>イーロン・マスク氏が表明したテスラ車の「FSD買い切り終了」、日本では？</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">イーロン・マスク氏は日本時間1月14日、X（旧Twitter）を更新し、2月14日以降はFSD（フルセルフドライビング）の買い切り版の提供を終了し、月額サブスクリプションのみに移行すると宣言した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_4954.html">
-                        <h3>カレーやラーメンがワンコインから！セブンに「町中華シリーズ」が順次登場！</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">セブン‐イレブンは1月20日より、町中華をテーマにした「町中華シリーズ」8商品を販売します。.</p>
+                        <p class="related-summary">「OTOTEN2026 AUDIO&amp;HOME THEATER FESTIVAL」出展のお知らせ 80周年を迎えるJBLの新製品を中心に、多彩なラインアップを展示.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_8384.html">
-                        <h3>本当は教えたくない！タクシー運転手オススメの沖縄「亀かめそば」を日清が商品化</h3>
+                    <a href="気になる記になる_6025.html">
+                        <h3>楽天モバイル、｢スマホ交換保証プラス &amp; 家電補償｣の月額料金を改定へ</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">日清食品は「タクシー運転手100名に聞いた 本当は教えたくないウマい店in沖縄 亀かめそば監修琉球そば」（300円）を1月26日に全国で発売する。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_4201.html">
-                        <h3>メローニ首相が来日！国交樹立160周年のメモリアルイヤーにイタリアンなアイテムや食材が揃う「イタリア展2026」開催中！</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">丸善・丸の内本店でこの時期恒例の「丸善・イタリア展2026」が開催されている。今年は日伊外交関係樹立160周年に当たるメモリアルイヤーで、メローニ首相も来日中というグッドタイミングでの開催だ。.</p>
+                        <p class="related-summary">本日、楽天モバイルが、2026年6月17日0時の申し込み分より、オプションサービス「スマホ交換保証プラス &amp; 家電補償」の月額利用料を改定すると案内しています。 「スマホ交換保証プラス &amp; 家電補償」...</p>
                     </a>
                 </article>
             </div>

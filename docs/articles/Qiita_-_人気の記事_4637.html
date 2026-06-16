@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>「OSって、結局なにしてるんですか？」— 新人エンジニア向けに“裏側”を整理してみる— | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめまして。株式会社PRUMでエンジニアをしているひとみです。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや、 仕事で起きやすい“ズレ”について整理して発信しています。 誰かの助けになれば幸いです。 「OSって、結局なにしてるんですか？」— 新人エンジ.">
-    <meta name="keywords" content="プログラミング学習">
+    <title>大量ファイル移行を実装して見えた、バッチ処理で考慮すべきこと | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは、ソーイ株式会社の髙﨑です。 最近の業務で、S3からWasabiストレージへ大量のデータを移行するバッチ処理を実装する機会があり、その中で、処理時間やメモリ使用量、途中失敗時の再実行方法など、大量データを扱うバッチ処理ならではの考慮事項がいくつかありました。 今回.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="「OSって、結局なにしてるんですか？」— 新人エンジニア向けに“裏側”を整理してみる—">
-    <meta property="og:description" content="はじめまして。株式会社PRUMでエンジニアをしているひとみです。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや、 仕事で起きやすい“ズレ”について整理して発信しています。 誰かの助けになれば幸いです。 「OSって、結局なにしてるんですか？」— 新人エンジ.">
+    <meta property="og:title" content="大量ファイル移行を実装して見えた、バッチ処理で考慮すべきこと">
+    <meta property="og:description" content="こんにちは、ソーイ株式会社の髙﨑です。 最近の業務で、S3からWasabiストレージへ大量のデータを移行するバッチ処理を実装する機会があり、その中で、処理時間やメモリ使用量、途中失敗時の再実行方法など、大量データを扱うバッチ処理ならではの考慮事項がいくつかありました。 今回.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4637.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="「OSって、結局なにしてるんですか？」— 新人エンジニア向けに“裏側”を整理してみる—">
-    <meta name="twitter:description" content="はじめまして。株式会社PRUMでエンジニアをしているひとみです。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや、 仕事で起きやすい“ズレ”について整理して発信しています。 誰かの助けになれば幸いです。 「OSって、結局なにしてるんですか？」— 新人エンジ.">
+    <meta name="twitter:title" content="大量ファイル移行を実装して見えた、バッチ処理で考慮すべきこと">
+    <meta name="twitter:description" content="こんにちは、ソーイ株式会社の髙﨑です。 最近の業務で、S3からWasabiストレージへ大量のデータを移行するバッチ処理を実装する機会があり、その中で、処理時間やメモリ使用量、途中失敗時の再実行方法など、大量データを扱うバッチ処理ならではの考慮事項がいくつかありました。 今回.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "「OSって、結局なにしてるんですか？」— 新人エンジニア向けに“裏側”を整理してみる—",
-        "description": "はじめまして。株式会社PRUMでエンジニアをしているひとみです。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや、 仕事で起きやすい“ズレ”について整理して発信しています。 誰かの助けになれば幸いです。 「OSって、結局なにしてるんですか？」— 新人エンジ.",
+        "headline": "大量ファイル移行を実装して見えた、バッチ処理で考慮すべきこと",
+        "description": "こんにちは、ソーイ株式会社の髙﨑です。 最近の業務で、S3からWasabiストレージへ大量のデータを移行するバッチ処理を実装する機会があり、その中で、処理時間やメモリ使用量、途中失敗時の再実行方法など、大量データを扱うバッチ処理ならではの考慮事項がいくつかありました。 今回.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-21T23:49:35",
-        "dateModified": "2026-05-23T19:11:45.294793",
+        "datePublished": "2026-06-16T03:02:30",
+        "dateModified": "2026-06-16T23:25:25.895934",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4637.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4637.html",
-        "articleSection": "プログラミング",
-        "keywords": ["プログラミング学習"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "「OSって、結局なにしてるんですか？」— 新人エンジニア向けに“裏側”を整理してみる—",
+                "name": "大量ファイル移行を実装して見えた、バッチ処理で考慮すべきこと",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4637.html"
             }
         ]
@@ -113,41 +113,35 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">「OSって、結局なにしてるんですか？」— 新人エンジニア向けに“裏側”を整理してみる—</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">大量ファイル移行を実装して見えた、バッチ処理で考慮すべきこと</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>「OSって、結局なにしてるんですか？」— 新人エンジニア向けに“裏側”を整理してみる—</h1>
+                <h1>大量ファイル移行を実装して見えた、バッチ処理で考慮すべきこと</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/prum_hitomi/items/09dd4f6328fe3b35aae3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-05-21T23:49:35">
-                        公開: 2026-05-21T23:49:35
+                    <span class="source">出典: <a href="https://qiita.com/AkiraTakasaki/items/c6541d1ae1458d5dcae1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-06-16T03:02:30">
+                        公開: 2026-06-16T03:02:30
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">プログラミング学習</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめまして。株式会社PRUMでエンジニアをしているひとみです。
-日々、プログラミング学習や実務の中で、つまずきやすいポイントや、
-仕事で起きやすい“ズレ”について整理して発信しています。
-誰かの助けになれば幸いです。
-
-「OSって、結局なにしてるんですか？」— 新人エンジ...
+                    こんにちは、ソーイ株式会社の髙﨑です。
+最近の業務で、S3からWasabiストレージへ大量のデータを移行するバッチ処理を実装する機会があり、その中で、処理時間やメモリ使用量、途中失敗時の再実行方法など、大量データを扱うバッチ処理ならではの考慮事項がいくつかありました。
+今回...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/prum_hitomi/items/09dd4f6328fe3b35aae3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/AkiraTakasaki/items/c6541d1ae1458d5dcae1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -156,60 +150,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミング学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +183,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_5685.html">
+                    <a href="Qiita_-_人気の記事_4866.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【セール】Kindleストア、1万冊以上を33円均一で販売する｢Kindle本 33円セール｣をスタ...</span>
+                        <span class="nav-title">【まとめ】世は大AIブラウザ時代！12種類全部使って徹底レビュー！【乗るしかねえ、このBIG WAV...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_9265.html">
+                    <a href="気になる記になる_2565.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AppleがiPhone17Proのみでプロスポーツの試合を撮影すると発表</span>
+                        <span class="nav-title">Amazon、プライム会員限定のビッグセール「プライムデー」を7月10日から4日間開催へ ｰ 7月7...</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +205,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Zennのトレンド_846.html">
-                        <h3>電子カルテ開発は個人で行えるのか：OpenDolphinNext</h3>
+                    <a href="CNET_Japan_最新情報総合_8757.html">
+                        <h3>「乾太くん」で洗濯のストレスが消えた　共働き世帯の“新三種の神器”に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに これは、無謀にも電子カルテというプロジェクトを完遂させようとした、個人の反省記録です。 「OpenDolphin」というオープンソースの電子カルテをフォークし、自分のクリニックで本番運用でき...</p>
+                        <p class="related-summary">筆者宅は夫婦ともにフルタイム勤務で、幼い子どもが2人いる。典型的な共働き家庭だ。家事のなかでも洗濯、とりわけ「乾かす」工程は長年のストレスだった。それが、ガス衣類乾燥機「乾太くん」を使うようになってか...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2719.html">
-                        <h3>スキルに自信がないポンコツエンジニアの僕が本気でReactを勉強して稼げるようになろうという決意</h3>
+                    <a href="CNET_Japan_最新情報総合_2490.html">
+                        <h3>東急電鉄、「車内での充電」を控えるよう呼びかけ　モバイルバッテリー充電中の発火事案発生で</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">どうも、ポンコツです はじめまして。 現在8年ほどシステムエンジニアをやっています。 JavaやSpringBootを長く触ってましたが、 技術の表面だけしか知らないので、「その仕様なら今回はこのアー...</p>
+                        <p class="related-summary">東急電鉄は6月15日、モバイルバッテリーを使用した車内での充電を控えるよう、同社の公式Xで呼びかけた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_232.html">
-                        <h3>「再現性のある価値 ― 仕組みで解決するということ」</h3>
+                    <a href="CNET_Japan_最新情報総合_7629.html">
+                        <h3>米メディア大手Fox、動画配信のRokuを約3.5兆円で買収へ　巨大勢力が誕生</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに インフラエンジニアとして仕事をしていると、「価値を出す」という言葉に何度も出会います。障害対応で深夜に対処した、難しい移行を成功させた、複雑な要件をうまくさばいた——これらは確かに価値です。...</p>
+                        <p class="related-summary">米メディア大手のFoxは、動画配信プラットフォームのRokuを約220億ドル（約3兆5000億円）で買収すると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_935.html">
-                        <h3>日々の開発で使っているClaude Code Skills</h3>
+                    <a href="CNET_Japan_最新情報総合_4200.html">
+                        <h3>茨城県震源で震度5弱、Xが一時ダウン</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">こんにちは。ソフトウェアエンジニアの inari111 です。 弊社ではClaudeを全社で使っており、エンジニアはClaude Codeを用いて日々の開発を行っています。 本記事では、私が開発時に使...</p>
+                        <p class="related-summary">6月16日19時46分ごろ、茨城県南部を震源とするマグニチュード5. 5の地震が発生した。地震発生直後、X（旧Twitter）では一時的に接続しづらい状態が発生していた模様だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1471.html">
-                        <h3>React開発で本当に強みになるものとは？現場で役立つ5つの強みと活かし方</h3>
+                    <a href="CNET_Japan_最新情報総合_459.html">
+                        <h3>3メガバンク、普通預金金利を年0.4%に引き上げ　8月3日から--日銀の1%利上げで横並び</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">React開発で本当に強みになるものとは？ Reactを学び始めたばかりの頃、私は「どの技術をマスターすればプロとして通用するんだろう？」と常に考えていました。最新のライブラリやフレームワーク、ベスト...</p>
+                        <p class="related-summary">4%に引き上げると発表した。いずれも8月3日からで、引き上げ幅は0. 三菱UFJ銀行、三井住友銀行、みずほ銀行の3メガバンクは6月16日、円普通預金の金利を年0.</p>
                     </a>
                 </article>
             </div>

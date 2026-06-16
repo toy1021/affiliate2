@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに GMOコネクトの永田です。 「数年前に組まれた既存 DEV 環境を、別の AWS アカウントに丸ごと再現してほしい。CFn template はあるがメンテされておらず当時のメンバーは離任＋手動構築も多々ある、ビルド・構築手順書は無い。動作している環境を r.">
-    <meta name="keywords" content="Claude,AWS,EV">
+    <title>AWS DevOps AgentとCloudWatchアラームを連携して調査からレポート通知までを自動化する | 日本のテックニュース速報</title>
+    <meta name="description" content="概要 CloudWatchアラームを起点としてAWS DevOpsエージェントによる調査を自動実行し、調査結果のレポートをメールで通知する一連の仕組みを構築します。 構成図は下記のとおりです。 AWS DevOpsエージェントは一部のサードパーティ製品と統合したウェブフ.">
+    <meta name="keywords" content="AWS,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力">
-    <meta property="og:description" content="はじめに GMOコネクトの永田です。 「数年前に組まれた既存 DEV 環境を、別の AWS アカウントに丸ごと再現してほしい。CFn template はあるがメンテされておらず当時のメンバーは離任＋手動構築も多々ある、ビルド・構築手順書は無い。動作している環境を r.">
+    <meta property="og:title" content="AWS DevOps AgentとCloudWatchアラームを連携して調査からレポート通知までを自動化する">
+    <meta property="og:description" content="概要 CloudWatchアラームを起点としてAWS DevOpsエージェントによる調査を自動実行し、調査結果のレポートをメールで通知する一連の仕組みを構築します。 構成図は下記のとおりです。 AWS DevOpsエージェントは一部のサードパーティ製品と統合したウェブフ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4908.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力">
-    <meta name="twitter:description" content="はじめに GMOコネクトの永田です。 「数年前に組まれた既存 DEV 環境を、別の AWS アカウントに丸ごと再現してほしい。CFn template はあるがメンテされておらず当時のメンバーは離任＋手動構築も多々ある、ビルド・構築手順書は無い。動作している環境を r.">
+    <meta name="twitter:title" content="AWS DevOps AgentとCloudWatchアラームを連携して調査からレポート通知までを自動化する">
+    <meta name="twitter:description" content="概要 CloudWatchアラームを起点としてAWS DevOpsエージェントによる調査を自動実行し、調査結果のレポートをメールで通知する一連の仕組みを構築します。 構成図は下記のとおりです。 AWS DevOpsエージェントは一部のサードパーティ製品と統合したウェブフ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力",
-        "description": "はじめに GMOコネクトの永田です。 「数年前に組まれた既存 DEV 環境を、別の AWS アカウントに丸ごと再現してほしい。CFn template はあるがメンテされておらず当時のメンバーは離任＋手動構築も多々ある、ビルド・構築手順書は無い。動作している環境を r.",
+        "headline": "AWS DevOps AgentとCloudWatchアラームを連携して調査からレポート通知までを自動化する",
+        "description": "概要 CloudWatchアラームを起点としてAWS DevOpsエージェントによる調査を自動実行し、調査結果のレポートをメールで通知する一連の仕組みを構築します。 構成図は下記のとおりです。 AWS DevOpsエージェントは一部のサードパーティ製品と統合したウェブフ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-21T03:16:17",
-        "dateModified": "2026-05-21T23:04:59.321693",
+        "datePublished": "2026-06-15T08:40:34",
+        "dateModified": "2026-06-16T16:53:44.871310",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4908.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4908.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["Claude","AWS","EV"]
+        "articleSection": "ガジェット",
+        "keywords": ["AWS","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "ガジェット",
+                "item": "https://toy1021.github.io/affiliate2/#category=ガジェット"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力",
+                "name": "AWS DevOps AgentとCloudWatchアラームを連携して調査からレポート通知までを自動化する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4908.html"
             }
         ]
@@ -113,25 +113,24 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude O...</li>
+                <li><a href="../#category=ガジェット">ガジェット</a></li>
+                <li aria-current="page">AWS DevOps AgentとCloudWatchアラームを連携して調査からレポート通知までを自...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力</h1>
+                <h1>AWS DevOps AgentとCloudWatchアラームを連携して調査からレポート通知までを自動化する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/ntaka329/items/b1d961ce5fab8541101f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-21T03:16:17">
-                        公開: 2026-05-21T03:16:17
+                    <span class="source">出典: <a href="https://qiita.com/infra365/items/f8533af9fc6312714db2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: ガジェット</span>
+                    <time datetime="2026-06-15T08:40:34">
+                        公開: 2026-06-15T08:40:34
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
                     <span class="tag">AWS</span>
                     <span class="tag">EV</span>
                 </div>
@@ -140,14 +139,15 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-GMOコネクトの永田です。
+                    概要
+CloudWatchアラームを起点としてAWS DevOpsエージェントによる調査を自動実行し、調査結果のレポートをメールで通知する一連の仕組みを構築します。
+構成図は下記のとおりです。
 
-「数年前に組まれた既存 DEV 環境を、別の AWS アカウントに丸ごと再現してほしい。CFn template はあるがメンテされておらず当時のメンバーは離任＋手動構築も多々ある、ビルド・構築手順書は無い。動作している環境を r...
+AWS DevOpsエージェントは一部のサードパーティ製品と統合したウェブフ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/ntaka329/items/b1d961ce5fab8541101f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/infra365/items/f8533af9fc6312714db2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,16 +159,6 @@ GMOコネクトの永田です。
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -193,23 +183,23 @@ GMOコネクトの永田です。
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>ガジェット関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +214,16 @@ GMOコネクトの永田です。
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_7499.html">
+                    <a href="Qiita_-_人気の記事_6278.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AnkerのQi2 25W対応 &amp; 冷却ファン内蔵の3-in-1ワイヤレス充電器にホワイトモデルが登...</span>
+                        <span class="nav-title">【今さら聞けない証明書の仕組み】SSL/TLS証明書・認証局・TLS復号をCloudflareで理解...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_3119.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3469.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">New Relic アップデート(2026年4月)</span>
+                        <span class="nav-title">英首相 16歳未満SNS利用禁止方針</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +236,23 @@ GMOコネクトの永田です。
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6166.html">
-                        <h3>高齢者の転倒をAIが常時監視、オランダの実証実験が投げかける「プライバシー」の課題</h3>
+                    <a href="CNET_Japan_最新情報総合_7315.html">
+                        <h3>シャープ、ウェアラブルに本格参入--「スマートリング」「スマートウォッチ」発売（更新）</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">ガジェット</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">オランダでは現在、10人の高齢者が人工知能（AI）による静かな見守りの下で暮らす実証事業が行われている。.</p>
+                        <p class="related-summary">シャープがウェアラブル市場に参入する。同社初のスマートウォッチ「からだメイト Watch」（MH-W01）とスマートリング「からだメイト Ring」（MH-R01）を7月9日に発売する.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8708.html">
-                        <h3>OpenAI、9月にも上場か　早ければ数日中に申請とWSJが報じる</h3>
+                    <a href="ASCII_jp__トップ_9954.html">
+                        <h3>着替えず試着、座るだけで体調チェック、ベッドまでガジェット化！ Interopで見た未来の暮らし</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">ガジェット</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ChatGPTを開発する米OpenAIが、数日から数週間以内にも新規株式公開（IPO）を申請する見通しだ。米Wall Street Journal（WSJ））が5月20日に報じた。早ければ9月にも上場...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_875.html">
-                        <h3>GoogleのAIエージェント「Gemini Spark」に感じる恐怖--あらゆる権限を渡して大丈夫なのか【コラム】</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">Googleが、自社のソフトウェアやデバイスにAIをさらに詰め込もうとしている。同社が5月19日、開発者会議「Google I/O」で披露したのが、新しいAIエージェント「Gemini Spark」だ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7591.html">
-                        <h3>AIが生成した「偽の引用」が14万件超、科学論文の信頼性を揺るがす事態に</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">新たな研究で、主要な4つの研究データベースで公開されている科学論文から、AIが生成した偽の引用が14万6900件見つかった。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5579.html">
-                        <h3>グーグルの超リアルなAIエージェントと会話してみた　次世代技術「Beam」が示す驚きの可能性</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">グーグルがテレプレゼンス用システム「Google Beam」の一環として披露したエージェントは実験的なものだが、そのリアルさは衝撃的だ。これは人間の助けとなる存在なのか、それとも人間の代わりとなるもの...</p>
+                        <p class="related-summary">Interop Tokyo 2026で見つけた、思わず欲しくなるようなテックアイテムたち！.</p>
                     </a>
                 </article>
             </div>

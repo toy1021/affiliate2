@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.">
-    <meta name="keywords" content="AWS">
+    <title>「正規表現が0.002ミリ秒遅かった」という理由だけで、全角/半角判定をすべて『ビット演算』で実装した話 | 日本のテックニュース速報</title>
+    <meta name="description" content="この記事は Qiita Tech Festa 2026「この記事誰得？ 私しか得しないニッチな技術で記事投稿！」 の参加記事です。 はじめに みなさん、文字列の全角・半角判定、どうやってますか？ 大半の人はこう答えるでしょう。 「正規表現で /[^\x20-\x7E]/.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK">
-    <meta property="og:description" content="はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.">
+    <meta property="og:title" content="「正規表現が0.002ミリ秒遅かった」という理由だけで、全角/半角判定をすべて『ビット演算』で実装した話">
+    <meta property="og:description" content="この記事は Qiita Tech Festa 2026「この記事誰得？ 私しか得しないニッチな技術で記事投稿！」 の参加記事です。 はじめに みなさん、文字列の全角・半角判定、どうやってますか？ 大半の人はこう答えるでしょう。 「正規表現で /[^\x20-\x7E]/.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1029.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK">
-    <meta name="twitter:description" content="はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.">
+    <meta name="twitter:title" content="「正規表現が0.002ミリ秒遅かった」という理由だけで、全角/半角判定をすべて『ビット演算』で実装した話">
+    <meta name="twitter:description" content="この記事は Qiita Tech Festa 2026「この記事誰得？ 私しか得しないニッチな技術で記事投稿！」 の参加記事です。 はじめに みなさん、文字列の全角・半角判定、どうやってますか？ 大半の人はこう答えるでしょう。 「正規表現で /[^\x20-\x7E]/.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK",
-        "description": "はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.",
+        "headline": "「正規表現が0.002ミリ秒遅かった」という理由だけで、全角/半角判定をすべて『ビット演算』で実装した話",
+        "description": "この記事は Qiita Tech Festa 2026「この記事誰得？ 私しか得しないニッチな技術で記事投稿！」 の参加記事です。 はじめに みなさん、文字列の全角・半角判定、どうやってますか？ 大半の人はこう答えるでしょう。 「正規表現で /[^\x20-\x7E]/.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-15T08:33:17",
-        "dateModified": "2026-05-17T03:30:42.074633",
+        "datePublished": "2026-06-14T08:08:05",
+        "dateModified": "2026-06-16T11:12:10.091626",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1029.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1029.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AWS"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK",
+                "name": "「正規表現が0.002ミリ秒遅かった」という理由だけで、全角/半角判定をすべて『ビット演算』で実装した話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1029.html"
             }
         ]
@@ -113,37 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot ...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">「正規表現が0.002ミリ秒遅かった」という理由だけで、全角/半角判定をすべて『ビット演算』で実装し...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK</h1>
+                <h1>「正規表現が0.002ミリ秒遅かった」という理由だけで、全角/半角判定をすべて『ビット演算』で実装した話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/kyonosuke/items/eee9eb3840d3f740f325?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-05-15T08:33:17">
-                        公開: 2026-05-15T08:33:17
+                    <span class="source">出典: <a href="https://qiita.com/Shiro_Shihi/items/d18bf49f0c7a168baa19?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-06-14T08:08:05">
+                        公開: 2026-06-14T08:08:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発...
+                    この記事は Qiita Tech Festa 2026「この記事誰得？ 私しか得しないニッチな技術で記事投稿！」 の参加記事です。
+
+はじめに
+みなさん、文字列の全角・半角判定、どうやってますか？
+大半の人はこう答えるでしょう。
+「正規表現で /[^\x20-\x7E]/ ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/kyonosuke/items/eee9eb3840d3f740f325?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/Shiro_Shihi/items/d18bf49f0c7a168baa19?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -152,60 +153,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -220,16 +186,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9440.html">
+                    <a href="Qiita_-_人気の記事_871.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「本人希望」でマイナ廃止 93万枚</span>
+                        <span class="nav-title">【個人開発】本を読んだままにしない実践支援アプリを作った【React / TypeScript / ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_4119.html">
+                    <a href="Zennのトレンド_1604.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">OpenMythosがローカル環境で動くか検証してみた</span>
+                        <span class="nav-title">超精密インデックス「PageIndex」で実現する推論ベースRAG（JTC版）</span>
                     </a>
                 </div>
             </div>
@@ -242,53 +208,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Zennのトレンド_6429.html">
-                        <h3>CodexモバイルからUbuntuのCodex Appを操作する</h3>
+                    <a href="CNET_Japan_最新情報総合_2513.html">
+                        <h3>PayPay、「Vポイント」連携方法を6月29日に変更　再連携しないと一部機能が使用不可に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに 本記事では、CodexモバイルからUbuntuのCodex Appを操作する方法を、できるだけ再現性を意識して備忘録的にまとめる。本記事の対象者は以下の通り。 対象者 Ubuntuで開発して...</p>
+                        <p class="related-summary">PayPayは6月29日22時から、PayPayアプリでの「Vポイント」とのID連携方法を変更する。これまでは同意のみでID連携ができたが、今後は同意に加えてVポイントへのログインが必要になる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8990.html">
-                        <h3>Zephyr RTOS 〜 debug with VSCode 〜</h3>
+                    <a href="CNET_Japan_最新情報総合_6037.html">
+                        <h3>「乾太くん」で洗濯のストレスが消えた　共働き世帯の“新三種の神器”に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに これまで Zephyr を紹介する際、何度か下記リポジトリをベースに解説してきました。 このリポジトリは、実運用を想定した環境構築手順とデバッグ環境を提供しており、 本記事では、これを使った...</p>
+                        <p class="related-summary">筆者宅は夫婦ともにフルタイム勤務で、幼い子どもが2人いる。典型的な共働き家庭だ。家事のなかでも洗濯、とりわけ「乾かす」工程は長年のストレスだった。それが、ガス衣類乾燥機「乾太くん」を使うようになってか...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7990.html">
-                        <h3>uvを使うと何が嬉しいのか、自分の開発環境で確かめてみた</h3>
+                    <a href="CNET_Japan_最新情報総合_4274.html">
+                        <h3>東急電鉄、「車内での充電」を控えるよう呼びかけ　モバイルバッテリー充電中の発火事案発生で</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに 最近、Python のパッケージマネージャとして uv を使う例を見かけるようになりました。 Qiita・Zennの記事でも、Python の環境構築で pip ではなく uv で書かれてい...</p>
+                        <p class="related-summary">東急電鉄は6月15日、モバイルバッテリーを使用した車内での充電を控えるよう、同社の公式Xで呼びかけた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_2490.html">
-                        <h3>WindowsでもCodexのMobileからCodex Appに接続する方法</h3>
+                    <a href="CNET_Japan_最新情報総合_8140.html">
+                        <h3>米メディア大手Fox、動画配信のRokuを約3.5兆円で買収へ　巨大勢力が誕生</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">! 必要条件 ・Windows ・CodexAppとChatGPTモバイルアプリを最新版にする ・ChatGPTのMFA（多要素認証）を有効化する ChatGPTモバイルアプリのCodexから、Cod...</p>
+                        <p class="related-summary">米メディア大手のFoxは、動画配信プラットフォームのRokuを約220億ドル（約3兆5000億円）で買収すると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_4764.html">
-                        <h3>Microsoftは折りたたみ式スマホの欠点の一つを解決しかけていた模様 ｰ スプリング式ヒンジ設計に関する新たな特許が...</h3>
+                    <a href="CNET_Japan_最新情報総合_3024.html">
+                        <h3>茨城県震源で震度5弱、Xが一時ダウン</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Microsoftは折りたたみ式スマホの最大の欠点の一つを解決しかけていたようです。Windows Centralによって新たに発見された特許により、開発中止となった「Surface Duo 3」向け...</p>
+                        <p class="related-summary">6月16日19時46分ごろ、茨城県南部を震源とするマグニチュード5. 5の地震が発生した。地震発生直後、X（旧Twitter）では一時的に接続しづらい状態が発生していた模様だ。.</p>
                     </a>
                 </article>
             </div>

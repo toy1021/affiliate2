@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rust 製の事前コンパイル型 Neovim プラグインマネージャー rvpm を作った | 日本のテックニュース速報</title>
-    <meta name="description" content="自作の Neovim プラグインマネージャー rvpm を Claude Code と一緒に作りました。Rust 製で、設定ファイル (config. lua を事前コンパイルする CLI ファーストな設計になっています">
-    <meta name="keywords" content="Claude,GitHub">
+    <title>Hono でバックエンド API を作るときの個人的ベストプラクティス | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Hono で API バックエンドを何度か作ってきた中で、自分の中の構成が固まってきたのでまとめておく。フロントエンドと組まない、バックエンド単体のリポジトリを想定する。 ※あくまで個人的なベストプラクティスです">
+    <meta name="keywords" content="PC">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Rust 製の事前コンパイル型 Neovim プラグインマネージャー rvpm を作った">
-    <meta property="og:description" content="自作の Neovim プラグインマネージャー rvpm を Claude Code と一緒に作りました。Rust 製で、設定ファイル (config. lua を事前コンパイルする CLI ファーストな設計になっています">
+    <meta property="og:title" content="Hono でバックエンド API を作るときの個人的ベストプラクティス">
+    <meta property="og:description" content="はじめに Hono で API バックエンドを何度か作ってきた中で、自分の中の構成が固まってきたのでまとめておく。フロントエンドと組まない、バックエンド単体のリポジトリを想定する。 ※あくまで個人的なベストプラクティスです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8909.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rust 製の事前コンパイル型 Neovim プラグインマネージャー rvpm を作った">
-    <meta name="twitter:description" content="自作の Neovim プラグインマネージャー rvpm を Claude Code と一緒に作りました。Rust 製で、設定ファイル (config. lua を事前コンパイルする CLI ファーストな設計になっています">
+    <meta name="twitter:title" content="Hono でバックエンド API を作るときの個人的ベストプラクティス">
+    <meta name="twitter:description" content="はじめに Hono で API バックエンドを何度か作ってきた中で、自分の中の構成が固まってきたのでまとめておく。フロントエンドと組まない、バックエンド単体のリポジトリを想定する。 ※あくまで個人的なベストプラクティスです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Rust 製の事前コンパイル型 Neovim プラグインマネージャー rvpm を作った",
-        "description": "自作の Neovim プラグインマネージャー rvpm を Claude Code と一緒に作りました。Rust 製で、設定ファイル (config. lua を事前コンパイルする CLI ファーストな設計になっています",
+        "headline": "Hono でバックエンド API を作るときの個人的ベストプラクティス",
+        "description": "はじめに Hono で API バックエンドを何度か作ってきた中で、自分の中の構成が固まってきたのでまとめておく。フロントエンドと組まない、バックエンド単体のリポジトリを想定する。 ※あくまで個人的なベストプラクティスです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-19T06:46:40",
-        "dateModified": "2026-04-20T13:45:33.404760",
+        "datePublished": "2026-06-16T06:05:05",
+        "dateModified": "2026-06-18T12:53:49.140780",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8909.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8909.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Claude","GitHub"]
+        "articleSection": "テクノロジー",
+        "keywords": ["PC"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Rust 製の事前コンパイル型 Neovim プラグインマネージャー rvpm を作った",
+                "name": "Hono でバックエンド API を作るときの個人的ベストプラクティス",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8909.html"
             }
         ]
@@ -113,45 +113,48 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Rust 製の事前コンパイル型 Neovim プラグインマネージャー rvpm を作った</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Hono でバックエンド API を作るときの個人的ベストプラクティス</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Rust 製の事前コンパイル型 Neovim プラグインマネージャー rvpm を作った</h1>
+                <h1>Hono でバックエンド API を作るときの個人的ベストプラクティス</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/yukimemi/articles/2026-04-19-rvpm" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-04-19T06:46:40">
-                        公開: 2026-04-19T06:46:40
+                    <span class="source">出典: <a href="https://zenn.dev/ashunar0/articles/1ba94a110d8622" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-06-16T06:05:05">
+                        公開: 2026-06-16T06:05:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">PC</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    自作の Neovim プラグインマネージャー rvpm を Claude Code と一緒に作りました。Rust 製で、設定ファイル (config.toml) から静的な loader.lua を事前コンパイルする CLI ファーストな設計になっています。
-https://github.com/yukimemi/rvpm
+                    1. はじめに
+Hono で API バックエンドを何度か作ってきた中で、自分の中の構成が固まってきたのでまとめておく。フロントエンドと組まない、バックエンド単体のリポジトリを想定する。
+
+※あくまで個人的なベストプラクティスです。書くにあたって、Hono 公式の Best Practices と RPC ガイドの方針と矛盾しない範囲であることは確認しています。
 
 
- なぜ新しく作ったのか
-以前、Deno + denops ベースの dvpm を作り、愛用していました（過去の記事・キャッシュ機能の記事）。dvpm は denops との親和性も高く気に入っていたのですが、使い続けるうちにいくつか気になる点が出てきました。
 
-
-...
+ 2. ディレクトリ構成
+src/ の中に features/ を置いて、その配下にドメインごとのディレクトリを切っている。
+src/
+├── features/
+│   ├── users/
+│   ├── post...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/yukimemi/articles/2026-04-19-rvpm" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ashunar0/articles/1ba94a110d8622" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -164,30 +167,10 @@ https://github.com/yukimemi/rvpm
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=PC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="PC - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">PC - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPCに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -197,23 +180,23 @@ https://github.com/yukimemi/rvpm
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -228,16 +211,16 @@ https://github.com/yukimemi/rvpm
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_6133.html">
+                    <a href="Zennのトレンド_2400.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iPad/Air/Proの整備済製品が大量に入荷〜iPad整備済製品【4/19】</span>
+                        <span class="nav-title">2026年6月現在の Claude Code 開発フロー</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2600.html">
+                    <a href="Zennのトレンド_1543.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Let’s Encryptの短期証明書はかなり厳しいのでARI対応クライアントを使った方がよい</span>
+                        <span class="nav-title">`cp`はディスク上ではデータをコピーしないことがある</span>
                     </a>
                 </div>
             </div>
@@ -250,53 +233,53 @@ https://github.com/yukimemi/rvpm
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9839.html">
-                        <h3>一人で悩み続けてしまう新人エンジニアへ。その時間、無駄かもしれません。</h3>
+                    <a href="CNET_Japan_最新情報総合_3104.html">
+                        <h3>Snapの新ARグラス「SPECS」登場、約35万円でも試したくなる理由</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや考え方を整理して発信しています。 PRUMについて気になった方は、コーポレ...</p>
+                        <p class="related-summary">Snapが新型ARスマートグラス「SPECS」を発表。筆者はその進化について、SnapのCEOに話を聞いた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8847.html">
-                        <h3>[TypeScriptシリーズ] シニアエンジニアのためのTypeScript入門</h3>
+                    <a href="CNET_Japan_最新情報総合_9523.html">
+                        <h3>ゆうちょ銀行、ATMの引き出し上限を「1日50万円」へ引き下げ　理由は？</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">[TypeScriptシリーズ] シニアエンジニアのためのTypeScript入門 私は日本語が得意ではありません。この記事はAIのサポートを受けて書いています。ご了承ください。 はじめに TypeS...</p>
+                        <p class="related-summary">ゆうちょ銀行は6月17日、個人がATMで1日に引き出せる上限額を、最大50万円までに引き下げると発表した。8月17日から実施する。ATMから貯金が不正に引き出される特殊詐欺などの被害が増えていることへ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7010.html">
-                        <h3>Claude Code × MagicPod MCPでテストケースメンテナンスレビューを自動化してみた</h3>
+                    <a href="CNET_Japan_最新情報総合_3186.html">
+                        <h3>トランプスマホ、「2年前のHTCスマホを金色に塗装しただけ」説が濃厚　中国広東省で製造か</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは、QAエンジニアのヨシナです。 弊社では Claude Code を部全体で積極的に活用しており、QAチームでもテストプロセスへの取り入れを進めています。その取り組みの一環として、...</p>
+                        <p class="related-summary">トランプブランドのスマートフォン「T1」が、ここ1週間あらためて注目を集めている。修理情報サイトの米iFixitが分解したところ、台湾HTCが2024年半ばに発売した「HTC U24 Pro」とほぼ同...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_9159.html">
-                        <h3>ヘッドレスなSalesforce登場、あらゆる機能がAPI/CLI/MCPでアクセスできる「Salesforce Hea...</h3>
+                    <a href="CNET_Japan_最新情報総合_1202.html">
+                        <h3>主星に丸焼きにされる系外惑星　「HD 80606 b」、NASAウェッブ望遠鏡が観測</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Salesforceはサンフランシスコで4月15日と16日の2日間にわたり開催した開発者向けイベント「Salesforce TDX 2026」で、Salesforceのあらゆる機能をAPI、CLI（コ...</p>
+                        <p class="related-summary">宇宙には、まさに悪夢のような系外惑星が存在する。主星の周りを111日かけて一周するが、その軌道は細長い楕円を描いており、近づくたびに最大約610℃もの激しい温度変化に見舞われる。公転のたびに、惑星はい...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4587.html">
-                        <h3>移民で解決できるのか？ ― 欧州データが示す“低賃金構造”の限界と日本の選択 : Pythonで学ぶ マクロ経済学入門 ...</h3>
+                    <a href="CNET_Japan_最新情報総合_1384.html">
+                        <h3>DAZN、サッカー特化プランの新規受付停止--「誤解を招く可能性があった」ため</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">user: 「Pythonで学ぶマクロ経済学入門」、第73回を始めましょう。まず 「なぜ現場が疲弊するのか ― “財源幻想”と“移民ではない建前”が自治体に押し付けるコスト構造 : Pythonで学ぶ...</p>
+                        <p class="related-summary">DAZNは6月18日、サッカーに特化した視聴プラン「DAZN Soccer」の新規受付を停止したと発表した。プラン内容や契約条件の表示が分かりづらく、利用者に誤解を招く可能性があったためで、対応を優先...</p>
                     </a>
                 </article>
             </div>

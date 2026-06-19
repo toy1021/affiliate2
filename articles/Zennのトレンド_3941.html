@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GA した GitHub Copilot SDK (.NET) を試してみた | 日本のテックニュース速報</title>
-    <meta name="description" content="blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/ これは GitHub Copilot の agentic engine をアプリやサービス、開発ツールに組み込めるようにする SDK です">
-    <meta name="keywords" content="AI,GitHub">
+    <title>Hono でバックエンド API を作るときの個人的ベストプラクティス | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Hono で API バックエンドを何度か作ってきた中で、自分の中の構成が固まってきたのでまとめておく。フロントエンドと組まない、バックエンド単体のリポジトリを想定する。 ※あくまで個人的なベストプラクティスです">
+    <meta name="keywords" content="PC">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="GA した GitHub Copilot SDK (.NET) を試してみた">
-    <meta property="og:description" content="blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/ これは GitHub Copilot の agentic engine をアプリやサービス、開発ツールに組み込めるようにする SDK です">
+    <meta property="og:title" content="Hono でバックエンド API を作るときの個人的ベストプラクティス">
+    <meta property="og:description" content="はじめに Hono で API バックエンドを何度か作ってきた中で、自分の中の構成が固まってきたのでまとめておく。フロントエンドと組まない、バックエンド単体のリポジトリを想定する。 ※あくまで個人的なベストプラクティスです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3941.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GA した GitHub Copilot SDK (.NET) を試してみた">
-    <meta name="twitter:description" content="blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/ これは GitHub Copilot の agentic engine をアプリやサービス、開発ツールに組み込めるようにする SDK です">
+    <meta name="twitter:title" content="Hono でバックエンド API を作るときの個人的ベストプラクティス">
+    <meta name="twitter:description" content="はじめに Hono で API バックエンドを何度か作ってきた中で、自分の中の構成が固まってきたのでまとめておく。フロントエンドと組まない、バックエンド単体のリポジトリを想定する。 ※あくまで個人的なベストプラクティスです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "GA した GitHub Copilot SDK (.NET) を試してみた",
-        "description": "blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/ これは GitHub Copilot の agentic engine をアプリやサービス、開発ツールに組み込めるようにする SDK です",
+        "headline": "Hono でバックエンド API を作るときの個人的ベストプラクティス",
+        "description": "はじめに Hono で API バックエンドを何度か作ってきた中で、自分の中の構成が固まってきたのでまとめておく。フロントエンドと組まない、バックエンド単体のリポジトリを想定する。 ※あくまで個人的なベストプラクティスです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-13T16:00:54",
-        "dateModified": "2026-06-14T09:36:37.010073",
+        "datePublished": "2026-06-16T06:05:05",
+        "dateModified": "2026-06-19T10:28:04.519814",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3941.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3941.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AI","GitHub"]
+        "articleSection": "テクノロジー",
+        "keywords": ["PC"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "GA した GitHub Copilot SDK (.NET) を試してみた",
+                "name": "Hono でバックエンド API を作るときの個人的ベストプラクティス",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3941.html"
             }
         ]
@@ -113,40 +113,48 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">GA した GitHub Copilot SDK (.NET) を試してみた</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Hono でバックエンド API を作るときの個人的ベストプラクティス</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>GA した GitHub Copilot SDK (.NET) を試してみた</h1>
+                <h1>Hono でバックエンド API を作るときの個人的ベストプラクティス</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/microsoft/articles/github-copilot-sdk-dotnet-ga" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-06-13T16:00:54">
-                        公開: 2026-06-13T16:00:54
+                    <span class="source">出典: <a href="https://zenn.dev/ashunar0/articles/1ba94a110d8622" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-06-16T06:05:05">
+                        公開: 2026-06-16T06:05:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">PC</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-GitHub Copilot SDK が 2026-06-02 に GA しました。
-https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/
-これは GitHub Copilot の agentic engine をアプリやサービス、開発ツールに組み込めるようにする SDK です。GA により、安定した API と production-ready support が提供されるようになりました。ざっくり言うと、計画を立てたり、ツールを呼び出したり、ファイルを編集したり、...
+                    1. はじめに
+Hono で API バックエンドを何度か作ってきた中で、自分の中の構成が固まってきたのでまとめておく。フロントエンドと組まない、バックエンド単体のリポジトリを想定する。
+
+※あくまで個人的なベストプラクティスです。書くにあたって、Hono 公式の Best Practices と RPC ガイドの方針と矛盾しない範囲であることは確認しています。
+
+
+
+ 2. ディレクトリ構成
+src/ の中に features/ を置いて、その配下にドメインごとのディレクトリを切っている。
+src/
+├── features/
+│   ├── users/
+│   ├── post...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/microsoft/articles/github-copilot-sdk-dotnet-ga" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ashunar0/articles/1ba94a110d8622" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,30 +167,10 @@ https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=PC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="PC - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">PC - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPCに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -192,23 +180,23 @@ https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +211,16 @@ https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_6094.html">
+                    <a href="Zennのトレンド_9427.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">黄金整数環とゾムツール</span>
+                        <span class="nav-title">2026年6月現在の Claude Code 開発フロー</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="ASCII_jp__トップ_142.html">
+                    <a href="Zennのトレンド_8946.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">ERPC、月額・年額プランの支払いにも Crypto Pay を拡大 - SOL および USDC ...</span>
+                        <span class="nav-title">`cp`はディスク上ではデータをコピーしないことがある</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +233,53 @@ https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4403.html">
-                        <h3>ブースターなしで飛ぶ日本初の大型ロケット、H3「30形態」は何が新しいのか--きょう12日打ち上げ</h3>
+                    <a href="CNET_Japan_最新情報総合_5005.html">
+                        <h3>DAZN、サッカー特化プランの新規受付停止--「誤解を招く可能性があった」ため</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">宇宙航空研究開発機構（JAXA）は6月12日午前9時53分59秒、H3ロケット6号機（30形態試験機）を種子島宇宙センター大型ロケット発射場から打ち上げる。打ち上げ時間帯は11時52分46秒まで。当初...</p>
+                        <p class="related-summary">DAZNは6月18日、サッカーに特化した視聴プラン「DAZN Soccer」の新規受付を停止したと発表した。プラン内容や契約条件の表示が分かりづらく、利用者に誤解を招く可能性があったためで、対応を優先...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7596.html">
-                        <h3>国産ロケットH3、ブースターなし「見た目スッキリ」の低コスト機体　初の打ち上げ成功</h3>
+                    <a href="CNET_Japan_最新情報総合_7989.html">
+                        <h3>ディズニー、パーク設計にAdobe Firefly導入　スケッチ→3Dモデル変換も瞬時に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">宇宙航空研究開発機構（JAXA）は6月12日、H3ロケット6号機（30形態試験機）の打ち上げに成功した。種子島宇宙センターから打ち上げられた。.</p>
+                        <p class="related-summary">ディズニーのテーマパークにおけるアトラクション設計は、アドビとの新たな提携によって大幅に高速化する可能性がある。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3715.html">
-                        <h3>Python はヘビ。Rust はカニ。あなたの言語は何？プログラミング言語の動物たち、集合させてみた！</h3>
+                    <a href="CNET_Japan_最新情報総合_785.html">
+                        <h3>スマートグラスで「ながら運転」、イリノイ州が初の禁止法案</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに 言語によって、シンボルまたはマスコットとなっているモノ、ありますよね。 自分がよく使う言語のモチーフを妙に気に入ったり、言語は触ったことないけどシンボルだけ知ってたり。 技術の本筋ではないけ...</p>
+                        <p class="related-summary">米イリノイ州の知事は近く、同州が全米で初めて運転中のスマートグラス使用を禁止するかどうか決断を下す。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9981.html">
-                        <h3>エンジニアのためのワールドカップ オランダ戦観戦ガイド ── 11人の選手を技術概念で解説する</h3>
+                    <a href="CNET_Japan_最新情報総合_8504.html">
+                        <h3>こち亀に「全コマ検索」登場、公式サイトで利用可能　まず100巻分から</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">📝 はじめに こんにちは、シュートです。 前回までは React 関連の記事を書いていましたが、今回は完全に別ジャンルです。 2026年6月15日(月)朝5時から、FIFA ワールドカップで日本代表 ...</p>
+                        <p class="related-summary">集英社は6月18日、「こち亀」の連載50周年を記念したサイト「こち亀オンライン」で、セリフからマンガのコマを探せる検索システム「こち亀全コマ検索」を公開した。検索バーに単語を打ち込むと、その言葉がフキ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_1046.html">
-                        <h3>Pythonばかり書いてきた私がJavaScriptの世界観を理解するために用語(Node.js等)を整理した</h3>
+                    <a href="CNET_Japan_最新情報総合_6382.html">
+                        <h3>Waymoのロボタクシー、高速の工事区間に誤進入し約4000台リコール</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Pythonエンジニアの自分も、JavaScriptで何が起こっているのか知っておきたい時代になった（AIがなんでも作ってくれるので） 私はもともと、Pythonを中心にML/AIアプリ開発をしていま...</p>
+                        <p class="related-summary">4000台近いWaymoの第5世代ロボタクシー全車両が、新たなリコールの対象となった。高速道路の工事区間に侵入するおそれがあるためだ。.</p>
                     </a>
                 </article>
             </div>

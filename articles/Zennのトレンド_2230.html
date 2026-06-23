@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Codeのアドバイザーが「プロジェクトの本質」を毎回思い出させてくれる ── 公式仕様を踏まえたCLAUDE.mdの書き方 | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事は AI（Claude）を利用して作成し、内容は公式ドキュメント（Claude API / Claude Code）に照らして確認しています。とはいえ仕様はベータで変わりうるため、重要な点はご自身で一次情報を確認してください">
-    <meta name="keywords" content="AI,Claude,本">
+    <title>LocalStack が有料になったので MiniStack + Terraform でローカル AWS 環境を作り直した | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 個人開発で AWS のインフラを Terraform で管理していると、こういう悩みが出てきます。 「terraform apply のたびに実 AWS を使うのはコストが怖いし、壊すのも嫌だ。ローカルで試したい」 そこで従来は LocalStack を使うのが定番でした">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Codeのアドバイザーが「プロジェクトの本質」を毎回思い出させてくれる ── 公式仕様を踏まえたCLAUDE.mdの書き方">
-    <meta property="og:description" content="! この記事は AI（Claude）を利用して作成し、内容は公式ドキュメント（Claude API / Claude Code）に照らして確認しています。とはいえ仕様はベータで変わりうるため、重要な点はご自身で一次情報を確認してください">
+    <meta property="og:title" content="LocalStack が有料になったので MiniStack + Terraform でローカル AWS 環境を作り直した">
+    <meta property="og:description" content="はじめに 個人開発で AWS のインフラを Terraform で管理していると、こういう悩みが出てきます。 「terraform apply のたびに実 AWS を使うのはコストが怖いし、壊すのも嫌だ。ローカルで試したい」 そこで従来は LocalStack を使うのが定番でした">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2230.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Codeのアドバイザーが「プロジェクトの本質」を毎回思い出させてくれる ── 公式仕様を踏まえたCLAUDE.mdの書き方">
-    <meta name="twitter:description" content="! この記事は AI（Claude）を利用して作成し、内容は公式ドキュメント（Claude API / Claude Code）に照らして確認しています。とはいえ仕様はベータで変わりうるため、重要な点はご自身で一次情報を確認してください">
+    <meta name="twitter:title" content="LocalStack が有料になったので MiniStack + Terraform でローカル AWS 環境を作り直した">
+    <meta name="twitter:description" content="はじめに 個人開発で AWS のインフラを Terraform で管理していると、こういう悩みが出てきます。 「terraform apply のたびに実 AWS を使うのはコストが怖いし、壊すのも嫌だ。ローカルで試したい」 そこで従来は LocalStack を使うのが定番でした">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Codeのアドバイザーが「プロジェクトの本質」を毎回思い出させてくれる ── 公式仕様を踏まえたCLAUDE.mdの書き方",
-        "description": "! この記事は AI（Claude）を利用して作成し、内容は公式ドキュメント（Claude API / Claude Code）に照らして確認しています。とはいえ仕様はベータで変わりうるため、重要な点はご自身で一次情報を確認してください",
+        "headline": "LocalStack が有料になったので MiniStack + Terraform でローカル AWS 環境を作り直した",
+        "description": "はじめに 個人開発で AWS のインフラを Terraform で管理していると、こういう悩みが出てきます。 「terraform apply のたびに実 AWS を使うのはコストが怖いし、壊すのも嫌だ。ローカルで試したい」 そこで従来は LocalStack を使うのが定番でした",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-11T16:13:56",
-        "dateModified": "2026-06-13T07:48:59.677101",
+        "datePublished": "2026-06-21T03:26:04",
+        "dateModified": "2026-06-23T11:18:29.495581",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2230.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2230.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","本"]
+        "articleSection": "プログラミング",
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Codeのアドバイザーが「プロジェクトの本質」を毎回思い出させてくれる ── 公式仕様を踏まえたCLAUDE.mdの書き方",
+                "name": "LocalStack が有料になったので MiniStack + Terraform でローカル AWS 環境を作り直した",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2230.html"
             }
         ]
@@ -113,43 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Codeのアドバイザーが「プロジェクトの本質」を毎回思い出させてくれる ── 公式仕様...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">LocalStack が有料になったので MiniStack + Terraform でローカル A...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Codeのアドバイザーが「プロジェクトの本質」を毎回思い出させてくれる ── 公式仕様を踏まえたCLAUDE.mdの書き方</h1>
+                <h1>LocalStack が有料になったので MiniStack + Terraform でローカル AWS 環境を作り直した</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/acntechjp/articles/83f9d7bb898010" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-11T16:13:56">
-                        公開: 2026-06-11T16:13:56
+                    <span class="source">出典: <a href="https://zenn.dev/kamegoro/articles/ef1ab1c9527f9d" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-06-21T03:26:04">
+                        公開: 2026-06-21T03:26:04
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">本</span>
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-この記事は AI（Claude）を利用して作成し、内容は公式ドキュメント（Claude API / Claude Code）に照らして確認しています。とはいえ仕様はベータで変わりうるため、重要な点はご自身で一次情報を確認してください。
+                    はじめに
+個人開発で AWS のインフラを Terraform で管理していると、こういう悩みが出てきます。
 
+「terraform apply のたびに実 AWS を使うのはコストが怖いし、壊すのも嫌だ。ローカルで試したい」
 
- この記事で言いたいこと
-長いセッションでコーディングを任せていると、メインのモデル（実行モデル / executor）はだんだん「このプロジェクトが本来何を大事にしていたか」を見失います。スケールしない前提のツールに勝手にキャッシュ層を足したり、依存を増やしたくないのにライブラリを追加したり。コンテキストの後半になるほど、目先のタスクに引っ張られ...
+そこで従来は LocalStack を使うのが定番でした。ところが 2026 年 3 月、LocalStack は Community Edition を廃止し、最新版の利用にはアカウント登録と認証トークンが必須になりました。無料の Hobby プランも「非商用に限定」という制約つきです。
+代わりになるものを探していたところ、MiniStack という OS...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/acntechjp/articles/83f9d7bb898010" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/kamegoro/articles/ef1ab1c9527f9d" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,30 +161,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -195,23 +194,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +225,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_3380.html">
+                    <a href="Zennのトレンド_4402.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iPhone Ultraはミッドナイトとホワイトの2種類？アクションボタン非搭載か</span>
+                        <span class="nav-title">バグハンター視点で学ぶ Caido 実践入門</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_5063.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_4691.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">ローカルLLM（Gemma4 26B QAT）が110 tok/sで動いた</span>
+                        <span class="nav-title">海外製天気アプリ 相次ぐ誤情報</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +247,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1096.html">
-                        <h3>今あなたが使っているミュトス級AI「Claude Fable 5」、22日を過ぎたらどうなる？--発表を整理</h3>
+                    <a href="CNET_Japan_最新情報総合_3469.html">
+                        <h3>ソニーの着るエアコン「REON POCKET」、本体ボタンで最大2℃低い冷却モードを選べるように</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米Anthropicが6月9日（現地時間）に提供を開始した最上位AIモデル「Claude Fable 5」。Claudeの有料サブスクリプションユーザーはすでに利用可能になっているが、一方でAIモデル...</p>
+                        <p class="related-summary">ソニーサーモテクノロジーは6月19日、体に着けて使うウェアラブル冷温デバイス「REON POCKET」シリーズのソフトウェアアップデートを実施したと発表した。冷却・温熱を自動で調整するモードの「温度の...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8196.html">
-                        <h3>シャープ、AIサーバー事業に参入へ--鴻海の調達製造力を活用　26年度中にも販売</h3>
+                    <a href="CNET_Japan_最新情報総合_9139.html">
+                        <h3>富士登山の「お守り保険」500円で登場、捜索救助費用まで補償　Finatextらが提供</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">シャープがAIサーバー事業に参入する。6月9日に開催した2026年度事業説明会で、社長執行役員CEOの河村哲治氏が新規事業の筆頭として表明した。親会社である鴻海精密工業（ホンハイ、Foxconn）の調...</p>
+                        <p class="related-summary">共栄火災海上保険は6月22日、富士山の登山者向け保険「富士登山お守り保険」の提供を始めた。フィンテック企業のFinatextと共同開発したもので、保険料は500円から。登山中のケガや事故に加え、遭難し...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9274.html">
-                        <h3>マスク氏のSpaceX「AI衛星100万基」構想　宇宙がゴミだらけになる懸念　専門家の見方は</h3>
+                    <a href="Qiita_-_人気の記事_556.html">
+                        <h3>Claude Code の「待ち」がもったいないので、worktree で並列開発してみた</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">米SpaceXが掲げる「宇宙にデータセンター100万基」構想が、SFの域を越えて現実に近づきつつある。一方で、宇宙ゴミへの懸念が強まっている。.</p>
+                        <p class="related-summary">はじめに Claude Code に作業を投げている間の待ち時間、けっこう長いですよね。その間に別の作業も進めたくなったので、git worktree（作業ディレクトリを分ける機能）を使った並列開発を...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6708.html">
-                        <h3>「娘の自殺はChatGPTのせい」、母親がOpenAIを提訴</h3>
+                    <a href="Qiita_-_人気の記事_6589.html">
+                        <h3>新人エンジニアが最初に専門分野を決めた話</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ChatGPTとの対話後に24歳の女性が自殺。遺族がOpenAIを「意図的な設計上の決定が死を招いた」として提訴した。.</p>
+                        <p class="related-summary">はじめに はじめまして。株式会社PRUMのmasaです。 今日は、未経験から現場に入った私が最初の数ヶ月で陥った「最初から全部学ぼうとして、結局中途半端になった」状態の話をします。主にエンジニア未経験...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4575.html">
-                        <h3>Claude、日本の金融中枢へ　三井住友FG・明治安田など8社がAnthropicおよびNECと共創</h3>
+                    <a href="Publickey_781.html">
+                        <h3>GitHub、AIによる雑なプルリクエストを抑制へ。ユーザー当たりのプルリクエスト数の上限を設定できる新機能導入</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">米AnthropicとNEC、および三井住友フィナンシャルグループや明治安田生命保険など金融8社は6月11日、AIを活用した新たな価値創出に向けた検討・共創の取り組みを開始すると発表した。.</p>
+                        <p class="related-summary">GitHubは、ユーザーに対してプルリクエスト数の上限を設定できる新機能の導入を発表しました。 Pull requests are easier to open than ever, but ever...</p>
                     </a>
                 </article>
             </div>

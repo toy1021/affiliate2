@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前編】 | 日本のテックニュース速報</title>
-    <meta name="description" content="ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前編】 こんにちは、Liseと申します。 現在のゲーム開発現場では恐らく、どんな会社でもどんなプロジェクトでも、ClaudeCodeやCodexを利用した開発のAI補助を行っ.">
-    <meta name="keywords" content="AI,Claude,ゲーム">
+    <title>Claude Code の「待ち」がもったいないので、worktree で並列開発してみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Claude Code に作業を投げている間の待ち時間、けっこう長いですよね。その間に別の作業も進めたくなったので、git worktree（作業ディレクトリを分ける機能）を使った並列開発を試してみました。 やってみたら思ったより簡単で、「worktree を作.">
+    <meta name="keywords" content="Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前編】">
-    <meta property="og:description" content="ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前編】 こんにちは、Liseと申します。 現在のゲーム開発現場では恐らく、どんな会社でもどんなプロジェクトでも、ClaudeCodeやCodexを利用した開発のAI補助を行っ.">
+    <meta property="og:title" content="Claude Code の「待ち」がもったいないので、worktree で並列開発してみた">
+    <meta property="og:description" content="はじめに Claude Code に作業を投げている間の待ち時間、けっこう長いですよね。その間に別の作業も進めたくなったので、git worktree（作業ディレクトリを分ける機能）を使った並列開発を試してみました。 やってみたら思ったより簡単で、「worktree を作.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3283.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前編】">
-    <meta name="twitter:description" content="ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前編】 こんにちは、Liseと申します。 現在のゲーム開発現場では恐らく、どんな会社でもどんなプロジェクトでも、ClaudeCodeやCodexを利用した開発のAI補助を行っ.">
+    <meta name="twitter:title" content="Claude Code の「待ち」がもったいないので、worktree で並列開発してみた">
+    <meta name="twitter:description" content="はじめに Claude Code に作業を投げている間の待ち時間、けっこう長いですよね。その間に別の作業も進めたくなったので、git worktree（作業ディレクトリを分ける機能）を使った並列開発を試してみました。 やってみたら思ったより簡単で、「worktree を作.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前編】",
-        "description": "ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前編】 こんにちは、Liseと申します。 現在のゲーム開発現場では恐らく、どんな会社でもどんなプロジェクトでも、ClaudeCodeやCodexを利用した開発のAI補助を行っ.",
+        "headline": "Claude Code の「待ち」がもったいないので、worktree で並列開発してみた",
+        "description": "はじめに Claude Code に作業を投げている間の待ち時間、けっこう長いですよね。その間に別の作業も進めたくなったので、git worktree（作業ディレクトリを分ける機能）を使った並列開発を試してみました。 やってみたら思ったより簡単で、「worktree を作.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-07T23:24:52",
-        "dateModified": "2026-05-11T07:42:48.047058",
+        "datePublished": "2026-06-23T00:35:23",
+        "dateModified": "2026-06-25T07:43:41.140272",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3283.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3283.html",
         "articleSection": "プログラミング",
-        "keywords": ["AI","Claude","ゲーム"]
+        "keywords": ["Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前編】",
+                "name": "Claude Code の「待ち」がもったいないので、worktree で並列開発してみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3283.html"
             }
         ]
@@ -114,39 +114,37 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前...</li>
+                <li aria-current="page">Claude Code の「待ち」がもったいないので、worktree で並列開発してみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前編】</h1>
+                <h1>Claude Code の「待ち」がもったいないので、worktree で並列開発してみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/archeleeds/items/6fbf02174f308e31f284?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/yasuto_88/items/15f57336baed3ef64a10?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-05-07T23:24:52">
-                        公開: 2026-05-07T23:24:52
+                    <time datetime="2026-06-23T00:35:23">
+                        公開: 2026-06-23T00:35:23
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
                     <span class="tag">Claude</span>
-                    <span class="tag">ゲーム</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    ClaudeCodeとCodexにコーディングを全て任せて商用レベルのUnityゲーム開発を行う【前編】
-こんにちは、Liseと申します。
-現在のゲーム開発現場では恐らく、どんな会社でもどんなプロジェクトでも、ClaudeCodeやCodexを利用した開発のAI補助を行っ...
+                    はじめに
+Claude Code に作業を投げている間の待ち時間、けっこう長いですよね。その間に別の作業も進めたくなったので、git worktree（作業ディレクトリを分ける機能）を使った並列開発を試してみました。
+やってみたら思ったより簡単で、「worktree を作...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/archeleeds/items/6fbf02174f308e31f284?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/yasuto_88/items/15f57336baed3ef64a10?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -179,10 +177,10 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +221,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_7164.html">
+                    <a href="Qiita_-_人気の記事_6348.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AirPods Ultraの年内発表もあり得る？デザインや発売遅延の理由が報道</span>
+                        <span class="nav-title">新人エンジニアが最初に専門分野を決めた話</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_9652.html">
+                    <a href="Zennのトレンド_7052.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">あなたの Claude Code、実は前回のセッションを完全に忘れている (5 分で永続記憶を入れる...</span>
+                        <span class="nav-title">標準CSSは美しくなった、もはやTailwindは不要</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +243,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1694.html">
-                        <h3>JR東日本、自律ロボットで線路点検　カメラやLiDAR搭載</h3>
+                    <a href="CNET_Japan_最新情報総合_1727.html">
+                        <h3>マネーフォワード、GitHub不正アクセスの詳細調査を完了　確定した「流出した可能性のあるデータ」とは</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JR東日本は5月8日、線路上を自律走行して点検するロボットの開発を推進すると発表した。2026年10月末までに実用化に向けた機体を製作し、11月以降に在来線を中心とした路線で走行試験を実施する予定。.</p>
+                        <p class="related-summary">マネーフォワードは6月23日、ソースコード管理サービス「GitHub」が不正アクセスを受けた問題で、流出した可能性がある個人情報の精査が完了したと発表した。顧客や取引先、従業員らの情報が対象となったが...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2509.html">
-                        <h3>ソニーとTSMC、次世代イメージセンサーで戦略的提携--合弁設立も視野</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">ソニーセミコンダクタソリューションズ（ソニー）とTSMCは5月8日、次世代イメージセンサーの開発・製造に関する戦略的提携に向けて、法的拘束力を伴わない基本合意書を締結したと発表した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1371.html">
-                        <h3>マネフォ、銀行連携停止の補償「現在検討中」--再開日時は後日公表</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">マネーフォワードは5月11日、「GitHub」への不正アクセスについて、調査の進捗を第二報として公表した。現時点で本番データベースへの侵害や顧客情報の漏えい、本件に起因する不正利用は確認されておらず、...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_4622.html">
-                        <h3>マネーフォワード、停止中の銀行口座連携を順次再開へ</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">マネーフォワードは5月11日、同社の「GitHub」リポジトリへの不正アクセスを受けて一時停止中の「銀行口座連携機能」について、順次提供を再開することを公表した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_9240.html">
-                        <h3>コードを書かなくなった我々は何者か —— Product / Platform / Evaluate の3職責でエンジニ...</h3>
+                    <a href="Zennのトレンド_655.html">
+                        <h3>学生のためのCodex 〜Codexを学習に使う 入門編〜</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">jsの技術スタックでWebサービスの開発に携わっているので、「Webエンジニア」あるいは「フルスタックエンジニア」と名乗っています。バックもフロントもインフラも、必要であれば全て巻き取る一方、「Typ...</p>
+                        <p class="related-summary">はじめに Codexというと、プログラミングが得意な人やエンジニア向けのツールに見えるかもしれません。もしくは、Codexって何？と思う方もいると思います。 Codexはコードを書いたり、修正したり、...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_8583.html">
+                        <h3>イベントストーミングのススメ</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">こんにちは、Nstockの株式報酬事業で開発をやっているshimaです。 先日、開発チームでイベントストーミングをやってみました。終わってみたら想像の3倍くらいよかったので、準備から当日、感想まで一通...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7662.html">
+                        <h3>「言った・言わない」を防ぐ。要件定義で使うべき質問の技術</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしているひとみです。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや、 仕事で起きやすい&#34;ズレ&#34;について整理して発信しています。 誰かの助け...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_4060.html">
+                        <h3>【セール】KORGの音楽制作アプリ＆ソフトウェア全製品が最大50％オフに｜サマーセールが7月21日まで開催中</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">音楽制作アプリ＆ソフトでお馴染みのKORGが、同社の音楽制作アプリ＆ソフトウェア全製品を最大50%オフで販売するサマーセールをスタートしました。 セールでは、KORG Collectionシリーズ、K...</p>
                     </a>
                 </article>
             </div>

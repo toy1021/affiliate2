@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QAエンジニアがAIスキルを作った理由：「画面UIは5つしかない」という気づきに至るまで | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事はQAエンジニアとしての実務経験と、AIとの長い議論の中で生まれた設計思想をまとめたものです。コードを書く立場ではなく、品質を保証する立場から見たコード調査の話として読んでもらえると嬉しいです。 はじめに 私はQAエンジニアです。開発者ではありません">
-    <meta name="keywords" content="AI">
+    <title>プログラムの純粋性について考える —— Clojure/Haskellとともに | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 純粋ってなんだろう？ 「プログラムが純粋であるとは、副作用がなく参照透過であることです」 「えっと、それで？」 こうした 定義と理解の間のギャップ を埋めるために筆を執りました。 筆者が特に届けたいのは「純粋とはプログラムを ただの計算 にする考え方だ」という理解です">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="QAエンジニアがAIスキルを作った理由：「画面UIは5つしかない」という気づきに至るまで">
-    <meta property="og:description" content="! この記事はQAエンジニアとしての実務経験と、AIとの長い議論の中で生まれた設計思想をまとめたものです。コードを書く立場ではなく、品質を保証する立場から見たコード調査の話として読んでもらえると嬉しいです。 はじめに 私はQAエンジニアです。開発者ではありません">
+    <meta property="og:title" content="プログラムの純粋性について考える —— Clojure/Haskellとともに">
+    <meta property="og:description" content="はじめに 純粋ってなんだろう？ 「プログラムが純粋であるとは、副作用がなく参照透過であることです」 「えっと、それで？」 こうした 定義と理解の間のギャップ を埋めるために筆を執りました。 筆者が特に届けたいのは「純粋とはプログラムを ただの計算 にする考え方だ」という理解です">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_114.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="QAエンジニアがAIスキルを作った理由：「画面UIは5つしかない」という気づきに至るまで">
-    <meta name="twitter:description" content="! この記事はQAエンジニアとしての実務経験と、AIとの長い議論の中で生まれた設計思想をまとめたものです。コードを書く立場ではなく、品質を保証する立場から見たコード調査の話として読んでもらえると嬉しいです。 はじめに 私はQAエンジニアです。開発者ではありません">
+    <meta name="twitter:title" content="プログラムの純粋性について考える —— Clojure/Haskellとともに">
+    <meta name="twitter:description" content="はじめに 純粋ってなんだろう？ 「プログラムが純粋であるとは、副作用がなく参照透過であることです」 「えっと、それで？」 こうした 定義と理解の間のギャップ を埋めるために筆を執りました。 筆者が特に届けたいのは「純粋とはプログラムを ただの計算 にする考え方だ」という理解です">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "QAエンジニアがAIスキルを作った理由：「画面UIは5つしかない」という気づきに至るまで",
-        "description": "! この記事はQAエンジニアとしての実務経験と、AIとの長い議論の中で生まれた設計思想をまとめたものです。コードを書く立場ではなく、品質を保証する立場から見たコード調査の話として読んでもらえると嬉しいです。 はじめに 私はQAエンジニアです。開発者ではありません",
+        "headline": "プログラムの純粋性について考える —— Clojure/Haskellとともに",
+        "description": "はじめに 純粋ってなんだろう？ 「プログラムが純粋であるとは、副作用がなく参照透過であることです」 「えっと、それで？」 こうした 定義と理解の間のギャップ を埋めるために筆を執りました。 筆者が特に届けたいのは「純粋とはプログラムを ただの計算 にする考え方だ」という理解です",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-07T10:37:23",
-        "dateModified": "2026-06-09T18:08:02.143243",
+        "datePublished": "2026-06-25T06:59:53",
+        "dateModified": "2026-06-26T07:54:47.379011",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_114.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_114.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AI"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "QAエンジニアがAIスキルを作った理由：「画面UIは5つしかない」という気づきに至るまで",
+                "name": "プログラムの純粋性について考える —— Clojure/Haskellとともに",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_114.html"
             }
         ]
@@ -113,47 +113,44 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">QAエンジニアがAIスキルを作った理由：「画面UIは5つしかない」という気づきに至るまで</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">プログラムの純粋性について考える —— Clojure/Haskellとともに</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>QAエンジニアがAIスキルを作った理由：「画面UIは5つしかない」という気づきに至るまで</h1>
+                <h1>プログラムの純粋性について考える —— Clojure/Haskellとともに</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/horicchy/articles/7076932bff319b" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-06-07T10:37:23">
-                        公開: 2026-06-07T10:37:23
+                    <span class="source">出典: <a href="https://zenn.dev/studist/articles/program-purity-clojure-haskell" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-06-25T06:59:53">
+                        公開: 2026-06-25T06:59:53
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-この記事はQAエンジニアとしての実務経験と、AIとの長い議論の中で生まれた設計思想をまとめたものです。コードを書く立場ではなく、品質を保証する立場から見たコード調査の話として読んでもらえると嬉しいです。
+                    はじめに
+純粋ってなんだろう？
 
+「プログラムが純粋であるとは、副作用がなく参照透過であることです」
+「えっと、それで？」
 
- はじめに
-私はQAエンジニアです。開発者ではありません。
-コードを書くことは仕事ではありませんが、
-「品質を保証するためにコードの構造を理解する必要がある」と考えました。
-特に既存機能の改修が入った時、「この改修はどこに影響するのか」を把握することが、
-テストの網羅性に直結します。
-この記事は、その問いを解決しようとしてAIスキルを設計した過程と、
-設計中に気づいた「画面UIは...
+こうした 定義と理解の間のギャップ を埋めるために筆を執りました。
+筆者が特に届けたいのは「純粋とはプログラムを ただの計算 にする考え方だ」という理解です。
+「ただの計算」というのは f(x, y) = (x + y) * 2 のような入力だけで値が決まる式のことです。
+これはいつ、何度、並行して呼ばれるかに影響されず、テストは計算結果が正しいかのチェックだけにできる。
+コードの難しさは 考慮しないといけない範囲 に大きく左右されると筆者は考えています。
+D...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/horicchy/articles/7076932bff319b" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/studist/articles/program-purity-clojure-haskell" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,60 +159,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -230,16 +192,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3931.html">
+                    <a href="iPhone_Mania_3593.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">推薦システムの新たなパラダイム Generative Recommendation</span>
+                        <span class="nav-title">iOS27の自動字幕生成〜日本語対応の時期と通勤での使い道</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_9009.html">
+                    <a href="Zennのトレンド_1756.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">｢DJI Osmo Pocket 4P｣のパッケージ写真が流出 ｰ 主な特徴を確認</span>
+                        <span class="nav-title">Iceberg化できていないデータをどうIceberg化するか</span>
                     </a>
                 </div>
             </div>
@@ -252,53 +214,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_783.html">
-                        <h3>宇宙飛行士もプラダを着用へ　Axiom Spaceと共同開発の冷却・換気インナーを発表</h3>
+                    <a href="CNET_Japan_最新情報総合_7066.html">
+                        <h3>東京都、EV補助金を最大130万円に引き上げ　PHEVは115万円、7月以降の登録車が対象</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">50年ぶりに人類を月面へ送ることを目指す米航空宇宙局（NASA）の「アルテミスIV」ミッションには、多くの要素が関わっている。その1つが、Axiom Spaceとプラダが開発した新しい宇宙服用インナー...</p>
+                        <p class="related-summary">東京都は6月24日、電気自動車（EV）とプラグインハイブリッド車（PHEV）の購入費補助について、上限額を一部引き上げると発表した。EVは最大100万円から最大130万円に、PHEVは最大85万円から...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_3162.html">
-                        <h3>データエンジニアこそ組織のオントロジーに向き合うべき</h3>
+                    <a href="CNET_Japan_最新情報総合_6077.html">
+                        <h3>自動運転のMay Mobility、中国の配車サービス「曹操」と提携し欧州進出へ</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">こんにちは、クラシルでデータエンジニアをしているharry(@gappy50)です。 クラシルでは、これまでAI-Readyなデータ利活用に取り組んできました。Tier設計でデータの信頼性を担保したり...</p>
+                        <p class="related-summary">自動運転技術を手掛けるMay Mobilityは、中国の配車サービスである曹操（ツァオツァオ）と提携し、新たな海外市場にロボタクシーを導入する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_1355.html">
-                        <h3>マルチテナント化のために本番稼働中のMySQLをPostgreSQLに移行した話（マルチテナント化連載 第2回・Post...</h3>
+                    <a href="CNET_Japan_最新情報総合_3536.html">
+                        <h3>ドローン飛行禁止エリア、周囲300m→1000mに拡大　国会や空港・原発など対象</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは。株式会社カウンターワークスにて、テックリードとして、リーシングのDXを実現するクラウド管理システム 「ショップカウンター エンタープライズ」（以下 SCE）を開発しております s...</p>
+                        <p class="related-summary">ドローン飛行禁止エリア、主要施設の周囲「300m」→「1000m」に拡大 国会や空港・原発など対象.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_71.html">
-                        <h3>未経験からエンジニアになるために必要な3つの知識</h3>
+                    <a href="CNET_Japan_最新情報総合_2676.html">
+                        <h3>夜空に描くW杯のスコアボード、どう実現？ 開催地シアトルでドローンショーの舞台裏を取材</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">株式会社PRUMのmasaです。 エンジニア未経験で転職する際、「何をすれば？」と考える方が多いと思います。今日は未経験からエンジニアになるために必要な3つの知識について話していきます。 1. 自走力...</p>
+                        <p class="related-summary">米シアトルでは、同市で開催されたワールドカップの試合結果をドローンで表現する、世界初のパフォーマンスが行われている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_1060.html">
-                        <h3>Ubuntu、サンドボックス化された開発環境をコマンド一発で構築。新機能「Workshop」リリース</h3>
+                    <a href="CNET_Japan_最新情報総合_1004.html">
+                        <h3>JR九州の「SUGOCA」がスマホ対応　定期券も　モバイルICOCAの基盤活用</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Ubuntuの開発元であるCanonicalは、AIエージェントなどに適したサンドボックス化された開発環境をコマンド一発で構築できる新機能「Workshop」をリリースしました。 Today we a...</p>
+                        <p class="related-summary">JR九州は6月25日、ICカード「SUGOCA」をスマートフォンで使えるサービスを2027年春に始めると発表した。駅に足を運ばなくても、スマホのアプリから定期券を買ったり、残高をチャージしたりできるよ...</p>
                     </a>
                 </article>
             </div>

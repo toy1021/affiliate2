@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事 | 日本のテックニュース速報</title>
-    <meta name="description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
-    <meta name="keywords" content="本">
+    <title>パフォーマンス改善は、ユーザーが何を見たいか考えるところから | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 前回、Chrome 拡張機能の「どこホスティング」を作って、Chrome ウェブストアに公開するまでを書きました。 https://zenn. dev/aun_phonogram/articles/f2a44ea154ec96 今回はその続きです">
+    <meta name="keywords" content="Chrome,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
-    <meta property="og:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
+    <meta property="og:title" content="パフォーマンス改善は、ユーザーが何を見たいか考えるところから">
+    <meta property="og:description" content="はじめに 前回、Chrome 拡張機能の「どこホスティング」を作って、Chrome ウェブストアに公開するまでを書きました。 https://zenn. dev/aun_phonogram/articles/f2a44ea154ec96 今回はその続きです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7910.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
-    <meta name="twitter:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
+    <meta name="twitter:title" content="パフォーマンス改善は、ユーザーが何を見たいか考えるところから">
+    <meta name="twitter:description" content="はじめに 前回、Chrome 拡張機能の「どこホスティング」を作って、Chrome ウェブストアに公開するまでを書きました。 https://zenn. dev/aun_phonogram/articles/f2a44ea154ec96 今回はその続きです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
-        "description": "本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る",
+        "headline": "パフォーマンス改善は、ユーザーが何を見たいか考えるところから",
+        "description": "はじめに 前回、Chrome 拡張機能の「どこホスティング」を作って、Chrome ウェブストアに公開するまでを書きました。 https://zenn. dev/aun_phonogram/articles/f2a44ea154ec96 今回はその続きです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-20T16:20:43",
-        "dateModified": "2026-05-23T17:00:36.699035",
+        "datePublished": "2026-06-28T22:00:08",
+        "dateModified": "2026-06-29T21:28:04.541255",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7910.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7910.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "Google・Android",
+        "keywords": ["Chrome","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "Google・Android",
+                "item": "https://toy1021.github.io/affiliate2/#category=Google・Android"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
+                "name": "パフォーマンス改善は、ユーザーが何を見たいか考えるところから",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7910.html"
             }
         ]
@@ -113,38 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</li>
+                <li><a href="../#category=Google・Android">Google・Android</a></li>
+                <li aria-current="page">パフォーマンス改善は、ユーザーが何を見たいか考えるところから</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</h1>
+                <h1>パフォーマンス改善は、ユーザーが何を見たいか考えるところから</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-05-20T16:20:43">
-                        公開: 2026-05-20T16:20:43
+                    <span class="source">出典: <a href="https://zenn.dev/aun_phonogram/articles/b04c96117956fd" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: Google・Android</span>
+                    <time datetime="2026-06-28T22:00:08">
+                        公開: 2026-06-28T22:00:08
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">Chrome</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る。つまり、ドメインモデリングの本質論ではなく、不変条件を実装へ落とす過程で表面化する技術的な論点に焦点を当てる。
-本稿の内容は、既存文献から学んだことと、筆者自身の設計・運用上の解釈に基づいている。設計に「常にこうすべき」という絶対解はない。ここで述べるのは、筆者が現時点で妥当だと考えている判断軸である。
-というか、かなり...
+                    はじめに
+前回、Chrome 拡張機能の「どこホスティング」を作って、Chrome ウェブストアに公開するまでを書きました。
+https://zenn.dev/aun_phonogram/articles/f2a44ea154ec96
+今回はその続きです。
+公開した後も気が向いたときに検出精度を改善していたのですが、せっかく自分で作ったもので自由に弄れるので、フロントエンドの学びの題材としてポップアップのパフォーマンス改善に取り組んでみました。
+「どこホスティング」は、今見ているサイトの公開 DNS 情報から、サイト・メール・ネームサーバーがどこのサービスに預けられていそうかを表示す...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/aun_phonogram/articles/b04c96117956fd" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,10 +161,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Chrome&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Chrome - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">Chrome - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでChromeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -170,7 +184,7 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>Google・Android関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -201,16 +215,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Publickey_4009.html">
+                    <a href="Qiita_-_人気の記事_4190.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">APIコール一発でGoogleがホストするLinux環境付きのAIエージェントを起動、Markdow...</span>
+                        <span class="nav-title">Jenkinsの失敗ログをn8nで回収してClaudeに原因調査させ、Slackへ自動通知する</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_8258.html">
+                    <a href="Qiita_-_人気の記事_1769.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【命名規則】名前から「目的」を読み取れるコードを書くために——目的駆動名前設計のすすめ</span>
+                        <span class="nav-title">速報！！StreamlitがAWSにサーバーレスでホスティングできるようになった！！ #Lambda...</span>
                     </a>
                 </div>
             </div>
@@ -223,53 +237,43 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3871.html">
-                        <h3>SpaceX、本日の「スターシップV3」の打ち上げを直前で中止（更新）理由判明</h3>
+                    <a href="CNET_Japan_最新情報総合_9479.html">
+                        <h3>YouTube、ショート動画で「2倍速再生」を可能に　「低評価」ボタンは廃止</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">Google・Android</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米SpaceXは、日本時間5月22日に予定していた「Starship」の次世代型「V3」の打ち上げを直前で中止した。カウントダウンはマイナス40秒付近から動かず、その後中止が発表された。打ち上げは明日...</p>
+                        <p class="related-summary">Google傘下のYouTubeは米国時間6月25日、短尺動画機能「YouTubeショート」の視聴体験を向上させる複数の新機能を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2285.html">
-                        <h3>東海道・山陽新幹線に「弱冷房車」　7〜8月導入　16両ひかりの3号車</h3>
+                    <a href="CNET_Japan_最新情報総合_7588.html">
+                        <h3>グーグル、金融情報サービス「Google Finance」を大幅刷新　Androidアプリも新登場</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">Google・Android</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JR東海とJR西日本は5月22日、東海道・山陽新幹線で冷房を弱めに設定した「弱冷房車」を試験的に導入すると発表した。実施期間は2026年7月1日から8月31日まで。.</p>
+                        <p class="related-summary">グーグルは、金融情報サービス「Google Finance」の大幅なアップデートと、新たな「Android」向けアプリの提供開始を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3489.html">
-                        <h3>副編集長が「上手なめくり方」まで伝授！ グラドル1年生・えぬちゃんが「Cream」に初登場</h3>
+                    <a href="CNET_Japan_最新情報総合_3486.html">
+                        <h3>「Google Home スピーカー」レビュー：1万円台で際立つ音質、Geminiは発展途上</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">Google・Android</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">芸能活動のため、4月に熊本県から上京してきたばかり。グラドル1年生の「えぬちゃん」が、制服美少女誌「Cream 2026年6月号」の掲載記念イベントを秋葉原の書泉ブックタワーで開催した。.</p>
+                        <p class="related-summary">グーグルのGeminiを搭載する最新スマートスピーカー「Google Home スピーカー」のレビューをお届けする。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5921.html">
-                        <h3>「カラオケ愛してる！」だから心惹かれちゃう、どこでもデュエットスピーカーをおススメ</h3>
+                    <a href="Qiita_-_人気の記事_5172.html">
+                        <h3>社内でTOTPのハンズオン授業を開いてみた</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">Google・Android</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Divoomの「Songbird-SE」は、見た目はハンドバッグ風でレトロ可愛いBluetoothスピーカーですが、その実態はマイク2本を標準装備した、遊び心全開のポータブルPAシステムです！.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_583.html">
-                        <h3>この夏『リボンの騎士』が『THE RIBBON HERO リボンヒーロー』として生まれ変わる！　漫画の神様・手塚治虫のア...</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">これまでアニメ新番組特集で紹介してきた数千に上るアニメ作品。その中から、いま観るべき作品をピックアップしてお届け。第22回は日本初の連続TVアニメ『鉄腕アトム』を生み出した、漫画の神様・手塚治虫の作品...</p>
+                        <p class="related-summary">こんにちは。 以前仕事で二要素認証の実装に詰まり、デバッグのためにTOTPを原理から勉強をしました。意外とわかりやすくて面白かったので、せっかくなら共有しようと、社内でハンズオン授業という形で勉強会を...</p>
                     </a>
                 </article>
             </div>

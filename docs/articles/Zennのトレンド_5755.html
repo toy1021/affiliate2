@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anthropic社員のClaude Code活用術8選 — 公式情報から読み解く実践テクニック | 日本のテックニュース速報</title>
-    <meta name="description" content="Anthropic社の方々が「Claudeをどう使っているのか」を発信されているものを8個にまとめてみました。 ※本記事はAnthropic公式ブログ、Boris Chernyのポッドキャスト等に基づいています（詳細は末尾の参考リンク一覧）">
-    <meta name="keywords" content="Claude,本">
+    <title>Rust on ESP32ではesp-halとesp-idfのどちらを使うべきなのか | 日本のテックニュース速報</title>
+    <meta name="description" content="ESP32で使えるRust向けのHALは現在2種類開発されています。 1つ目はesp-idf-svc/halです。こちらはEspressifによるESP-IDFというフレームワークをRustでも使えるようにしたものです。 2つ目はesp-halです">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Anthropic社員のClaude Code活用術8選 — 公式情報から読み解く実践テクニック">
-    <meta property="og:description" content="Anthropic社の方々が「Claudeをどう使っているのか」を発信されているものを8個にまとめてみました。 ※本記事はAnthropic公式ブログ、Boris Chernyのポッドキャスト等に基づいています（詳細は末尾の参考リンク一覧）">
+    <meta property="og:title" content="Rust on ESP32ではesp-halとesp-idfのどちらを使うべきなのか">
+    <meta property="og:description" content="ESP32で使えるRust向けのHALは現在2種類開発されています。 1つ目はesp-idf-svc/halです。こちらはEspressifによるESP-IDFというフレームワークをRustでも使えるようにしたものです。 2つ目はesp-halです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5755.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Anthropic社員のClaude Code活用術8選 — 公式情報から読み解く実践テクニック">
-    <meta name="twitter:description" content="Anthropic社の方々が「Claudeをどう使っているのか」を発信されているものを8個にまとめてみました。 ※本記事はAnthropic公式ブログ、Boris Chernyのポッドキャスト等に基づいています（詳細は末尾の参考リンク一覧）">
+    <meta name="twitter:title" content="Rust on ESP32ではesp-halとesp-idfのどちらを使うべきなのか">
+    <meta name="twitter:description" content="ESP32で使えるRust向けのHALは現在2種類開発されています。 1つ目はesp-idf-svc/halです。こちらはEspressifによるESP-IDFというフレームワークをRustでも使えるようにしたものです。 2つ目はesp-halです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Anthropic社員のClaude Code活用術8選 — 公式情報から読み解く実践テクニック",
-        "description": "Anthropic社の方々が「Claudeをどう使っているのか」を発信されているものを8個にまとめてみました。 ※本記事はAnthropic公式ブログ、Boris Chernyのポッドキャスト等に基づいています（詳細は末尾の参考リンク一覧）",
+        "headline": "Rust on ESP32ではesp-halとesp-idfのどちらを使うべきなのか",
+        "description": "ESP32で使えるRust向けのHALは現在2種類開発されています。 1つ目はesp-idf-svc/halです。こちらはEspressifによるESP-IDFというフレームワークをRustでも使えるようにしたものです。 2つ目はesp-halです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-18T07:39:33",
-        "dateModified": "2026-03-20T20:35:58.471198",
+        "datePublished": "2026-06-28T08:06:06",
+        "dateModified": "2026-06-29T09:02:38.273652",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5755.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5755.html",
         "articleSection": "プログラミング",
-        "keywords": ["Claude","本"]
+        "keywords": []
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Anthropic社員のClaude Code活用術8選 — 公式情報から読み解く実践テクニック",
+                "name": "Rust on ESP32ではesp-halとesp-idfのどちらを使うべきなのか",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5755.html"
             }
         ]
@@ -114,41 +114,39 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Anthropic社員のClaude Code活用術8選 — 公式情報から読み解く実践テクニック</li>
+                <li aria-current="page">Rust on ESP32ではesp-halとesp-idfのどちらを使うべきなのか</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Anthropic社員のClaude Code活用術8選 — 公式情報から読み解く実践テクニック</h1>
+                <h1>Rust on ESP32ではesp-halとesp-idfのどちらを使うべきなのか</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/happy_elements/articles/046faa4f61d98f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/nazo6/articles/esp-rust-hal-or-idf" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-03-18T07:39:33">
-                        公開: 2026-03-18T07:39:33
+                    <time datetime="2026-06-28T08:06:06">
+                        公開: 2026-06-28T08:06:06
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Anthropic社の方々が「Claudeをどう使っているのか」を発信されているものを8個にまとめてみました。
-※本記事はAnthropic公式ブログ、Boris Chernyのポッドキャスト等に基づいています（詳細は末尾の参考リンク一覧）。
+                    ESP32で使えるRust向けのHALは現在2種類開発されています。
 
 
- 1. 「コンテキストエンジニアリング」— 指示の質より環境の設計、複利的エンジニアリングへ
-2026 Agentic Coding Trends Reportでは、「 プロンプトエンジニアリングからコンテキストエンジニアリングへの移行 」というパラダイムシフトが起きていると指摘しています。プロンプトが「今回の指示」であるのに対し、コンテキスト...
+1つ目はesp-idf-svc/halです。こちらはEspressifによるESP-IDFというフレームワークをRustでも使えるようにしたものです。
+2つ目はesp-halです。これはベアメタルなRust向けのライブラリで、こちらの方が開発が活発です。というかesp-idf-svc/halの方はほとんど開発が止まっており、公式にはこちらを使うことが推奨されています。
+
+ std vs no_std
+esp-idf-svcの一番大きな特徴として、Rustのstdが使えることが挙げられます。通常組み込みRustではO...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/happy_elements/articles/046faa4f61d98f" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/nazo6/articles/esp-rust-hal-or-idf" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,30 +159,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
                                     <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +213,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2803.html">
+                    <a href="Zennのトレンド_3667.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Claude Codeをフル活用！本気で使える厳選Skills/Plugin 8選</span>
+                        <span class="nav-title">ループエンジニアリングを takt exec で気軽に始めよう</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5751.html">
+                    <a href="Zennのトレンド_6704.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">アバター介して通話 新SNS発表</span>
+                        <span class="nav-title">RAGを作るのではなく、検索される知識を運用する</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +235,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="気になる記になる_3757.html">
-                        <h3>米Amazonが再びスマホを開発との情報</h3>
+                    <a href="CNET_Japan_最新情報総合_6756.html">
+                        <h3>「スマホカメラ」が「本物のカメラ」に到底かなわない6つの理由</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Reuterが、事情に詳‌しい複数の関係者の話として、米Amazonがスマートフォンの開発に取り組んでいるようだと報じています。 Amazonは2014年に「Fire Phone」と呼ばれる自社製スマ...</p>
+                        <p class="related-summary">最新スマートフォンのカメラは、写真を撮る道具として驚くほど高性能だ。大型センサー、明るいレンズ、そして豊富なソフトウェア機能を備え、プロ向けのミラーレス機に匹敵する写真が撮れる。それでも筆者は、カメラ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3140.html">
-                        <h3>コンテキストエンジニアリングが「ツールカテゴリ」になった — 注目ツール3選が示す新潮流</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_7369.html">
+                        <h3>開発遅れ 日立が伊予銀行に60億円</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7528.html">
+                        <h3>「転職はまだ早い」と思っているあなたへ。私が一歩踏み出して学んだこと</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">mdの設計論、ファイルベースのメモリ管理、プロンプトキャッシュの活用法など、どれも「AIエージェントに渡. はじめに — 「コンテキストエンジニアリング」が名前を持ったツールになるまで 筆者はこれまで...</p>
+                        <p class="related-summary">はじめまして。エンジニアをしている人見です。 未経験からエンジニアを目指していた頃、私はいつもこう思っていました。 「まだ勉強が足りない。」 「もっと資格を取ってから転職しよう。」 「もう少しコードを...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3334.html">
-                        <h3>【緊急】GitHub/npmを汚染する「見えないコード」の脅威：GlassWorm対策</h3>
+                    <a href="Qiita_-_人気の記事_6083.html">
+                        <h3>社内でエンジニア成長ワークショップをやってみた【自己チェックリスト＆年収目安付き】</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">【緊急】GitHub/npmを汚染する「見えないコード」の脅威：GlassWormの全貌と対策を徹底解説 2026年3月、開発者コミュニティに激震が走りました。GitHub、npm、VSCode拡張機...</p>
+                        <p class="related-summary">■ この記事はこんな人におすすめ エンジニアとして働き始めたばかりで、成長の方向性がわからない人 「なんとなく仕事はこなせているけど、次のステップが見えない」と感じている人 年収アップやキャリアアップ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_5004.html">
-                        <h3>React Native開発が変わる。RozeniteでCoding Agentに「目と手」を与えた話</h3>
+                    <a href="Publickey_1886.html">
+                        <h3>Deno 2.9正式リリース。起動が2倍速、消費メモリは半分に。WebViewを用いたデスクトップアプリが作れる「Den...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">こんにちは！テラーノベルでiOS/Android/Webとフロントエンド周りを担当している @kazutoyoです！ 以前、React Native開発でCoding Agentを活用するためのSki...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_3166.html">
-                        <h3>【Flutter】デバッグ画面のソースコード、ちゃんとリリースビルドから除外していますか？</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">Flutter に限らずアプリ開発、というよりフロントエンドの開発全般で、「デバッグ画面」を用意することは少なくないと思います。 Feature flag を強制的に切り替えて未公開の機能を動作確認し...</p>
+                        <p class="related-summary">JavaScript/TypeScriptランタイムのDenoを開発するDeno Landは、Deno 2. 9正式版をリリースしました。 Deno 2. 9は起動を2倍速にするなどの性能面での大幅向...</p>
                     </a>
                 </article>
             </div>

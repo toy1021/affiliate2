@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>インターンを経て起業した目線から——2026年、インターンに挑む学生へ | 日本のテックニュース速報</title>
-    <meta name="description" content="インターンを経て起業した目線から——2026年、インターンに挑む学生へ - テクノロジーニュースをお届け。">
-    <meta name="keywords" content="スタートアップ">
+    <title>C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する | 日本のテックニュース速報</title>
+    <meta name="description" content="Object / Addressables / NativeContainer の寿命管理を混同しないための記事です。 Unity 6. 2以降 で使う前提の内容ですが、GCまわりの説明は Unity 6. 2系の公式ドキュメント確認時点 を基準にしています">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="インターンを経て起業した目線から——2026年、インターンに挑む学生へ">
-    <meta property="og:description" content="インターンを経て起業した目線から——2026年、インターンに挑む学生へ - テクノロジーニュースをお届け。">
+    <meta property="og:title" content="C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する">
+    <meta property="og:description" content="Object / Addressables / NativeContainer の寿命管理を混同しないための記事です。 Unity 6. 2以降 で使う前提の内容ですが、GCまわりの説明は Unity 6. 2系の公式ドキュメント確認時点 を基準にしています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8825.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="インターンを経て起業した目線から——2026年、インターンに挑む学生へ">
-    <meta name="twitter:description" content="インターンを経て起業した目線から——2026年、インターンに挑む学生へ - テクノロジーニュースをお届け。">
+    <meta name="twitter:title" content="C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する">
+    <meta name="twitter:description" content="Object / Addressables / NativeContainer の寿命管理を混同しないための記事です。 Unity 6. 2以降 で使う前提の内容ですが、GCまわりの説明は Unity 6. 2系の公式ドキュメント確認時点 を基準にしています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "インターンを経て起業した目線から——2026年、インターンに挑む学生へ",
-        "description": "インターンを経て起業した目線から——2026年、インターンに挑む学生へ - テクノロジーニュースをお届け。",
+        "headline": "C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する",
+        "description": "Object / Addressables / NativeContainer の寿命管理を混同しないための記事です。 Unity 6. 2以降 で使う前提の内容ですが、GCまわりの説明は Unity 6. 2系の公式ドキュメント確認時点 を基準にしています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-25T08:00:12",
-        "dateModified": "2026-06-26T07:54:47.378752",
+        "datePublished": "2026-07-01T01:00:10",
+        "dateModified": "2026-07-01T16:28:18.744309",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8825.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8825.html",
-        "articleSection": "ビジネス・経済",
-        "keywords": ["スタートアップ"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "ビジネス・経済",
-                "item": "https://toy1021.github.io/affiliate2/#category=ビジネス・経済"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "インターンを経て起業した目線から——2026年、インターンに挑む学生へ",
+                "name": "C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8825.html"
             }
         ]
@@ -113,42 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=ビジネス・経済">ビジネス・経済</a></li>
-                <li aria-current="page">インターンを経て起業した目線から——2026年、インターンに挑む学生へ</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>インターンを経て起業した目線から——2026年、インターンに挑む学生へ</h1>
+                <h1>C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/emuni/articles/5edab377da1074" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: ビジネス・経済</span>
-                    <time datetime="2026-06-25T08:00:12">
-                        公開: 2026-06-25T08:00:12
+                    <span class="source">出典: <a href="https://zenn.dev/gamedev_toollab/articles/4fceb9127d8085" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-07-01T01:00:10">
+                        公開: 2026-07-01T01:00:10
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">スタートアップ</span>
+                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-大学1年からインターンを重ね、約10社のIT企業で働きました。日系大手・メガベンチャーの中期インターンから、スタートアップ・中小での長期インターンまで、経験の幅はさまざまでした。
-大学院2年で仲間と起業し、いまは株式会社エムニで、インターン生に助けてもらいながら会社を育てています（2025年、Legaseed「Infra」はたらきがい創出賞）。設立3期目の現在、正社員30名・インターン40名・副業50名程度の規模まで成長することができました。
-インターンを経て起業した身から、これからインターンを探す方へのアドバイスです。
-
-
- 1. インターンの「役割」——純粋な実装は、A...
+                    前提
+この記事は Unity 6.2以降 で使う前提の内容ですが、GCまわりの説明は Unity 6.2系の公式ドキュメント確認時点 を基準にしています。将来のUnityでは実装や説明が変わる可能性があります。
+C#側の Dispose、GC、finalizer と、Unity側の UnityEngine.Object / Addressables / NativeContainer の寿命管理を混同しないための記事です。
+Unity 6.2系では、デフォルト設定ではIncremental GCが有効です。一方、System.GC.Collect() は full blocking ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/emuni/articles/5edab377da1074" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/gamedev_toollab/articles/4fceb9127d8085" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,30 +158,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="スタートアップ - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">スタートアップ - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでスタートアップに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%95%E8%B3%87&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="投資 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">投資 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで投資に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ビジネス - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">ビジネス - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでビジネスに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -194,23 +181,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>ビジネス・経済関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%95%E8%B3%87&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="投資 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">投資 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで投資に関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ビジネス - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ビジネス - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでビジネスに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +212,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9763.html">
+                    <a href="Qiita_-_人気の記事_1765.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">芸能人肖像 AIで無断使用4万件超</span>
+                        <span class="nav-title">M365 Copilotを使って、好きなパワーポイントアイコンをつくろう</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_4509.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_803.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">読み方を間違えがちなエンジニア用語集 ~ 会議で恥ずかしい思いをしないために ~</span>
+                        <span class="nav-title">米 AnthropicのAI輸出規制を解除</span>
                     </a>
                 </div>
             </div>
@@ -247,43 +234,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_807.html">
-                        <h3>アスエネ代表の西和田、元内閣総理大臣の岸田 文雄氏をはじめ、政治家・起業家・投資家・経営者が集う「IVS CORE」に登...</h3>
+                    <a href="CNET_Japan_最新情報総合_416.html">
+                        <h3>世界初の「AI美術館」がロサンゼルスに開館　さっそく行ってみた　LLMがコンテンツ生成</h3>
                         <div class="related-meta">
-                            <span class="category">ビジネス・経済</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アスエネ代表の西和田、元内閣総理大臣の岸田 文雄氏をはじめ、政治家・起業家・投資家・経営者が集う「IVS CORE」に登壇.</p>
+                        <p class="related-summary">トルコ出身のアーティスト、レフィク・アナドール氏が手がける世界初の「AI美術館」Datalandが、米ロサンゼルス中心部で6月20日（現地時間）に開館した。大規模言語モデル（LLM）を使い、生のデータ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_8507.html">
-                        <h3>SAMANSAが経済産業省のコンテンツ産業成長投資支援事業（IP360） に採択</h3>
+                    <a href="CNET_Japan_最新情報総合_7272.html">
+                        <h3>Anthropicの「Fable 5」「Mythos 5」、復活へ　米商務省が輸出規制を解除</h3>
                         <div class="related-meta">
-                            <span class="category">ビジネス・経済</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">SAMANSAが経済産業省のコンテンツ産業成長投資支援事業（IP360） に採択.</p>
+                        <p class="related-summary">米Anthropicは7月1日、AIモデル「Fable 5」と「Mythos 5」に対する輸出規制が解除されたと、公式X（旧Twitter）アカウントへの投稿で明らかにした。米商務省が規制を撤廃したと...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3032.html">
-                        <h3>導入検討企業から高い関心を集める「Proz Answers」、「2026年上半期 BOXIL資料請求数ランキング」でチャ...</h3>
+                    <a href="CNET_Japan_最新情報総合_4292.html">
+                        <h3>「Claude Sonnet 5」公開--Opus 4.8に迫る性能を低価格で　エージェント性も付与</h3>
                         <div class="related-meta">
-                            <span class="category">ビジネス・経済</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">導入検討企業から高い関心を集める「Proz Answers」、「2026年上半期 BOXIL資料請求数ランキング」でチャットシステム、FAQシステムの計4部門1位を獲得.</p>
+                        <p class="related-summary">Anthropicは6月30日、AIモデル「Claude Sonnet 5」を発表した。自分で計画を立て、ブラウザやターミナルといったツールを使いこなし、複数の手順を最後まで自律的に進める。同社が「こ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_4012.html">
-                        <h3>AWS、コードだけでなくインフラ構成とビジネスコンテキストも理解した上で脆弱性を推論する「AWS Contiuum」発表...</h3>
+                    <a href="CNET_Japan_最新情報総合_3364.html">
+                        <h3>そのChatGPT利用、大丈夫？職場で広がる「シャドーAI」の罠と正しい向き合い方</h3>
                         <div class="related-meta">
-                            <span class="category">ビジネス・経済</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Amazon Web Services（AWS）は、コードをスキャンするだけでなく、インフラ構成やアクセス許可、ネットワークトポロジーそしてビジネス上の優先事項やドキュメントなどの非構造化データなどを...</p>
+                        <p class="related-summary">「ChatGPT」に仕事のメールを推敲（すいこう）させたり、会議の議事録をまとめさせたりしたことはないだろうか。一見すると無害に思えるかもしれないが、不適切なツールを使ったり、渡す情報を誤ったりすると...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_7357.html">
+                        <h3>「Claude Fable 5」提供再開　月額ユーザーが無料で使えるのは7月7日まで</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">米Anthropicは6月30日（米国時間）、AIモデル「Claude Fable 5」の提供を再開すると発表した。米政府による輸出規制が同日解除されたことを受けたもので、Fable 5は7月1日から...</p>
                     </a>
                 </article>
             </div>

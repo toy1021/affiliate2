@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIエージェント導入で「セキュリティどうするの？」と聞かれたときの技術的な答え方 | 日本のテックニュース速報</title>
-    <meta name="description" content="AIエージェント導入で「セキュリティどうするの？」と聞かれたときの技術的な答え方 - AI・機械学習技術のニュースをお届け。">
-    <meta name="keywords" content="AI,Claude,本">
+    <title>C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する | 日本のテックニュース速報</title>
+    <meta name="description" content="Object / Addressables / NativeContainer の寿命管理を混同しないための記事です。 Unity 6. 2以降 で使う前提の内容ですが、GCまわりの説明は Unity 6. 2系の公式ドキュメント確認時点 を基準にしています">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIエージェント導入で「セキュリティどうするの？」と聞かれたときの技術的な答え方">
-    <meta property="og:description" content="AIエージェント導入で「セキュリティどうするの？」と聞かれたときの技術的な答え方 - AI・機械学習技術のニュースをお届け。">
+    <meta property="og:title" content="C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する">
+    <meta property="og:description" content="Object / Addressables / NativeContainer の寿命管理を混同しないための記事です。 Unity 6. 2以降 で使う前提の内容ですが、GCまわりの説明は Unity 6. 2系の公式ドキュメント確認時点 を基準にしています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9388.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIエージェント導入で「セキュリティどうするの？」と聞かれたときの技術的な答え方">
-    <meta name="twitter:description" content="AIエージェント導入で「セキュリティどうするの？」と聞かれたときの技術的な答え方 - AI・機械学習技術のニュースをお届け。">
+    <meta name="twitter:title" content="C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する">
+    <meta name="twitter:description" content="Object / Addressables / NativeContainer の寿命管理を混同しないための記事です。 Unity 6. 2以降 で使う前提の内容ですが、GCまわりの説明は Unity 6. 2系の公式ドキュメント確認時点 を基準にしています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIエージェント導入で「セキュリティどうするの？」と聞かれたときの技術的な答え方",
-        "description": "AIエージェント導入で「セキュリティどうするの？」と聞かれたときの技術的な答え方 - AI・機械学習技術のニュースをお届け。",
+        "headline": "C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する",
+        "description": "Object / Addressables / NativeContainer の寿命管理を混同しないための記事です。 Unity 6. 2以降 で使う前提の内容ですが、GCまわりの説明は Unity 6. 2系の公式ドキュメント確認時点 を基準にしています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-28T08:19:47",
-        "dateModified": "2026-03-29T08:42:42.646645",
+        "datePublished": "2026-07-01T01:00:10",
+        "dateModified": "2026-07-01T23:17:17.401905",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9388.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9388.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","本"]
+        "keywords": ["AI"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIエージェント導入で「セキュリティどうするの？」と聞かれたときの技術的な答え方",
+                "name": "C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9388.html"
             }
         ]
@@ -114,48 +114,38 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIエージェント導入で「セキュリティどうするの？」と聞かれたときの技術的な答え方</li>
+                <li aria-current="page">C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIエージェント導入で「セキュリティどうするの？」と聞かれたときの技術的な答え方</h1>
+                <h1>C#のDisposeを深掘りする：GC、finalizer、UnityEngine.Objectの破棄を整理する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/sharu389no/articles/e07c926d87ac57" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/gamedev_toollab/articles/4fceb9127d8085" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-28T08:19:47">
-                        公開: 2026-03-28T08:19:47
+                    <time datetime="2026-07-01T01:00:10">
+                        公開: 2026-07-01T01:00:10
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事を読んでほしい人
-
-Claude Code / Cursor などのAIエージェントをチームに導入したいエンジニア
-情シスから「セキュリティ面の対応は？」と聞かれて技術的に答えたい人
-AIツール導入のセキュリティ面の検討材料を探している情シス担当
-
-!
-本記事はAIエージェントのセキュリティ面の技術対策に焦点を当てています。実際の導入判断には、コスト・運用体制・社内規程・契約面など他の要素も必要です。ここで紹介するのは「技術的にはこういう対策が取れます」という材料です。
-
-
- AIエージェント導入で必ず聞かれる3つの質問
-AIエージェントの導入を提案すると、情シスやセキュリテ...
+                    前提
+この記事は Unity 6.2以降 で使う前提の内容ですが、GCまわりの説明は Unity 6.2系の公式ドキュメント確認時点 を基準にしています。将来のUnityでは実装や説明が変わる可能性があります。
+C#側の Dispose、GC、finalizer と、Unity側の UnityEngine.Object / Addressables / NativeContainer の寿命管理を混同しないための記事です。
+Unity 6.2系では、デフォルト設定ではIncremental GCが有効です。一方、System.GC.Collect() は full blocking ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/sharu389no/articles/e07c926d87ac57" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/gamedev_toollab/articles/4fceb9127d8085" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -182,16 +172,6 @@ AIエージェントの導入を提案すると、情シスやセキュリテ...
                                 <div class="product-info">
                                     <div class="product-title">機械学習 - Amazon検索結果</div>
                                     <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -232,16 +212,16 @@ AIエージェントの導入を提案すると、情シスやセキュリテ...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3537.html">
+                    <a href="Qiita_-_人気の記事_4921.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ローカルLLM</span>
+                        <span class="nav-title">M365 Copilotを使って、好きなパワーポイントアイコンをつくろう</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_8123.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_1557.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">図形入りの PowerPoint を Markdown に変換</span>
+                        <span class="nav-title">米 AnthropicのAI輸出規制を解除</span>
                     </a>
                 </div>
             </div>
@@ -254,53 +234,53 @@ AIエージェントの導入を提案すると、情シスやセキュリテ...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2430.html">
-                        <h3>ChatGPT、1度アップロードしたファイルを保存し再利用可能に</h3>
+                    <a href="CNET_Japan_最新情報総合_5967.html">
+                        <h3>Anthropicの「Fable 5」「Mythos 5」、復活へ　米商務省が輸出規制を解除</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは今週、ChatGPTにアップロードしたファイルやAIで作成したコンテンツを保存し、後から呼び出せる「ライブラリ」機能を発表した。.</p>
+                        <p class="related-summary">米Anthropicは7月1日、AIモデル「Fable 5」と「Mythos 5」に対する輸出規制が解除されたと、公式X（旧Twitter）アカウントへの投稿で明らかにした。米商務省が規制を撤廃したと...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8868.html">
-                        <h3>ChatGPTの「アダルトモード」、無期限凍結か　Sora終了に続き</h3>
+                    <a href="CNET_Japan_最新情報総合_132.html">
+                        <h3>「Claude Sonnet 5」公開--Opus 4.8に迫る性能を低価格で　エージェント性も付与</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIが、ChatGPT向けに検討していた成人向けチャット機能の開発を無期限で凍結したと報じられた。動画生成ツール「Sora」の終了に続く方針転換とみられる。.</p>
+                        <p class="related-summary">Anthropicは6月30日、AIモデル「Claude Sonnet 5」を発表した。自分で計画を立て、ブラウザやターミナルといったツールを使いこなし、複数の手順を最後まで自律的に進める。同社が「こ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8760.html">
-                        <h3>Wikipedia、AI生成コンテンツを原則禁止に　例外は2つのみ</h3>
+                    <a href="CNET_Japan_最新情報総合_6180.html">
+                        <h3>そのChatGPT利用、大丈夫？職場で広がる「シャドーAI」の罠と正しい向き合い方</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Wikipediaはこの25年間、信頼でき検証できる情報源に基づく限り、誰もが知識を持ち寄れるオープンなオンライン百科事典として運営されてきた。だが、AIツールがコンテンツ制作の在り方を急速に変えつつ...</p>
+                        <p class="related-summary">「ChatGPT」に仕事のメールを推敲（すいこう）させたり、会議の議事録をまとめさせたりしたことはないだろうか。一見すると無害に思えるかもしれないが、不適切なツールを使ったり、渡す情報を誤ったりすると...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6297.html">
-                        <h3>数年使うなら、このクラス。Ryzen AI 7＋32GBメモリのLenovo IdeaPad Slim 5がタイムセール...</h3>
+                    <a href="CNET_Japan_最新情報総合_5637.html">
+                        <h3>「Claude Fable 5」提供再開　月額ユーザーが無料で使えるのは7月7日まで</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">米Anthropicは6月30日（米国時間）、AIモデル「Claude Fable 5」の提供を再開すると発表した。米政府による輸出規制が同日解除されたことを受けたもので、Fable 5は7月1日から...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_2151.html">
+                        <h3>棚卸特化型SaaS 「ラクだな」 正式リリース、写真とAIで棚卸業務を支援</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Lenovoの14型ノートPC「IdeaPad Slim 5（83HX0064JP）」がAmazonタイムセール対象。参考価格230,780円のところ、10％オフの207,000円で販売中。AMD R...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_6819.html">
-                        <h3>AIを&#34;チームの一員&#34;として迎え入れる--社内システム連携・権限設計・導入伴走をセットにしたAIプラットフォーム「AxM...</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">AIを&#34;チームの一員&#34;として迎え入れる--社内システム連携・権限設計・導入伴走をセットにしたAIプラットフォーム「AxMates」を提供開始.</p>
+                        <p class="related-summary">株式会社ソトバコは6月26日に、写真とAIを活用することで棚卸を完了するという棚卸特化型SaaS「ラクだな」の正式リリースを発表した。スマートフォンで商品を撮影し数量を入力することで、これまで現場や事...</p>
                     </a>
                 </article>
             </div>

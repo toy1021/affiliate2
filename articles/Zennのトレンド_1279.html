@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoとRustのざっくり性能比較 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 2026年現在のGoとRustの性能差が気になったので調べました。 今回は、標準出力CLI と JSON APIサーバ という2つのパターンで、GoとRustの性能を比較しています。 ビルドの最適化オプションも含めて、LLMの力を借りて出来る限り実用的な観点で検証しています">
-    <meta name="keywords" content="LLM,Mac,macOS,GitHub">
+    <title>Claude Fable 5が帰ってきたので情報を整理した | 日本のテックニュース速報</title>
+    <meta name="description" content="6月に公開からわずか3日で使えなくなった Claude Fable 5 が、7月1日に戻ってきました。 自分も停止期間中は進行中の作業を Opus 4. 8 に切り戻して過ごしていたので、Claude Code のモデル一覧に Fable 5 が再び現れたときは少しほっとしました">
+    <meta name="keywords" content="Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="GoとRustのざっくり性能比較">
-    <meta property="og:description" content="はじめに 2026年現在のGoとRustの性能差が気になったので調べました。 今回は、標準出力CLI と JSON APIサーバ という2つのパターンで、GoとRustの性能を比較しています。 ビルドの最適化オプションも含めて、LLMの力を借りて出来る限り実用的な観点で検証しています">
+    <meta property="og:title" content="Claude Fable 5が帰ってきたので情報を整理した">
+    <meta property="og:description" content="6月に公開からわずか3日で使えなくなった Claude Fable 5 が、7月1日に戻ってきました。 自分も停止期間中は進行中の作業を Opus 4. 8 に切り戻して過ごしていたので、Claude Code のモデル一覧に Fable 5 が再び現れたときは少しほっとしました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1279.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GoとRustのざっくり性能比較">
-    <meta name="twitter:description" content="はじめに 2026年現在のGoとRustの性能差が気になったので調べました。 今回は、標準出力CLI と JSON APIサーバ という2つのパターンで、GoとRustの性能を比較しています。 ビルドの最適化オプションも含めて、LLMの力を借りて出来る限り実用的な観点で検証しています">
+    <meta name="twitter:title" content="Claude Fable 5が帰ってきたので情報を整理した">
+    <meta name="twitter:description" content="6月に公開からわずか3日で使えなくなった Claude Fable 5 が、7月1日に戻ってきました。 自分も停止期間中は進行中の作業を Opus 4. 8 に切り戻して過ごしていたので、Claude Code のモデル一覧に Fable 5 が再び現れたときは少しほっとしました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1279.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "GoとRustのざっくり性能比較",
-        "description": "はじめに 2026年現在のGoとRustの性能差が気になったので調べました。 今回は、標準出力CLI と JSON APIサーバ という2つのパターンで、GoとRustの性能を比較しています。 ビルドの最適化オプションも含めて、LLMの力を借りて出来る限り実用的な観点で検証しています",
+        "headline": "Claude Fable 5が帰ってきたので情報を整理した",
+        "description": "6月に公開からわずか3日で使えなくなった Claude Fable 5 が、7月1日に戻ってきました。 自分も停止期間中は進行中の作業を Opus 4. 8 に切り戻して過ごしていたので、Claude Code のモデル一覧に Fable 5 が再び現れたときは少しほっとしました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-28T10:57:53",
-        "dateModified": "2026-03-03T20:35:15.432810",
+        "datePublished": "2026-07-01T21:29:08",
+        "dateModified": "2026-07-02T21:09:25.155462",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1279.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1279.html",
-        "articleSection": "Apple製品",
-        "keywords": ["LLM","Mac","macOS","GitHub"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["Claude"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Apple製品",
-                "item": "https://toy1021.github.io/affiliate2/#category=Apple製品"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "GoとRustのざっくり性能比較",
+                "name": "Claude Fable 5が帰ってきたので情報を整理した",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1279.html"
             }
         ]
@@ -113,70 +113,40 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=Apple製品">Apple製品</a></li>
-                <li aria-current="page">GoとRustのざっくり性能比較</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">Claude Fable 5が帰ってきたので情報を整理した</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>GoとRustのざっくり性能比較</h1>
+                <h1>Claude Fable 5が帰ってきたので情報を整理した</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/ponyo877/articles/ae398e081464ff" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: Apple製品</span>
-                    <time datetime="2026-02-28T10:57:53">
-                        公開: 2026-02-28T10:57:53
+                    <span class="source">出典: <a href="https://zenn.dev/acntechjp/articles/498c1dc866af19" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-07-01T21:29:08">
+                        公開: 2026-07-01T21:29:08
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">LLM</span>
-                    <span class="tag">Mac</span>
-                    <span class="tag">macOS</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">Claude</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-2026年現在のGoとRustの性能差が気になったので調べました。
-今回は、標準出力CLI と JSON APIサーバ という2つのパターンで、GoとRustの性能を比較しています。
-ビルドの最適化オプションも含めて、LLMの力を借りて出来る限り実用的な観点で検証しています。
-
- 検証環境
-
-
-
-項目
-バージョン
-
-
-
-
-OS
-macOS (darwin/arm64)
-
-
-Go
-1.26.0
-
-
-Rust
-1.93.1
-
-
-
-リポジトリはこちらで公開しています:
-https://github.com/ponyo877/go-vs-rust
-(めっちゃ珍しい言語割合...)
-...
+                    6月に公開からわずか3日で使えなくなった Claude Fable 5 が、7月1日に戻ってきました。
+自分も停止期間中は進行中の作業を Opus 4.8 に切り戻して過ごしていたので、Claude Code のモデル一覧に Fable 5 が再び現れたときは少しほっとしました。
+ただ、今回の復活は「元通り」ではありません。7月7日までの期間限定プロモーション付き・セーフガード強化版 としての帰還です。条件がやや複雑なので、公式サポート記事[1]と Anthropic の発表[2]を読み込んで整理しました。
+!
+7月7日（太平洋時間）まで、Pro 以上の有料プランなら週間利用枠の最大50...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/ponyo877/articles/ae398e081464ff" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/acntechjp/articles/498c1dc866af19" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -189,30 +159,30 @@ https://github.com/ponyo877/go-vs-rust
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Mac - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=macOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="macOS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">macOS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでmacOSに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,23 +192,23 @@ https://github.com/ponyo877/go-vs-rust
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>Apple製品関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">iPhone - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">MacBook - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -253,16 +223,16 @@ https://github.com/ponyo877/go-vs-rust
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5625.html">
+                    <a href="Qiita_-_人気の記事_7842.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">React不要論2026</span>
+                        <span class="nav-title">【AWS×Java】S3 + CloudFront + Lambdaでサーバーレスな動的サイトを組み...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_5953.html">
+                    <a href="Qiita_-_人気の記事_9157.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Apple Watch Ultra 4の進化～4つの注目ポイントとは？</span>
+                        <span class="nav-title">AIの会話に、心地いい「間」を。 ── Gemini Live APIでAI同士のポッドキャストを作...</span>
                     </a>
                 </div>
             </div>
@@ -275,53 +245,53 @@ https://github.com/ponyo877/go-vs-rust
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4903.html">
-                        <h3>シャオミ、iPad対抗「Xiaomi Pad 8」発売　スナドラ8 Elite搭載で約9万円〜</h3>
+                    <a href="CNET_Japan_最新情報総合_3514.html">
+                        <h3>そのChatGPT利用、大丈夫？職場で広がる「シャドーAI」の罠と正しい向き合い方</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">シャオミが「薄くてもパワフル」を掲げる新タブレット「Xiaomi Pad 8」シリーズを発売。iPad Airに迫る5. 75mmの薄さに9200mAhバッテリーとSnapdragon 8 Elite...</p>
+                        <p class="related-summary">「ChatGPT」に仕事のメールを推敲（すいこう）させたり、会議の議事録をまとめさせたりしたことはないだろうか。一見すると無害に思えるかもしれないが、不適切なツールを使ったり、渡す情報を誤ったりすると...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3106.html">
-                        <h3>アップルが「iPhone 17e」発表--容量倍増で価格据え置き　256GBモデルが10万円切り</h3>
+                    <a href="CNET_Japan_最新情報総合_788.html">
+                        <h3>「Claude Fable 5」提供再開　月額ユーザーが無料で使えるのは7月7日まで</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Appleは3月2日（現地時間）、新モデル「iPhone 17e」を発表した。最低ストレージ容量は、前モデル「16e」から倍増となる256GBに拡大。それにもかかわらず、価格は据え置きの9万9800円...</p>
+                        <p class="related-summary">米Anthropicは6月30日（米国時間）、AIモデル「Claude Fable 5」の提供を再開すると発表した。米政府による輸出規制が同日解除されたことを受けたもので、Fable 5は7月1日から...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8986.html">
-                        <h3>アップル、新型「iPad Air」発表　M4チップ搭載で3月11日発売</h3>
+                    <a href="CNET_Japan_最新情報総合_1141.html">
+                        <h3>「AIがホワイトカラーの半分を代替」と豪語したフォードの誤算　熟練技術者350人をひそかに再雇用した理由</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ミドルレンジのiPadを検討しているなら、アップルが発表した「iPad Air」のアップデートに注目だ。.</p>
+                        <p class="related-summary">自動車メーカーのフォードは、AIを過信するとどうなるかを示す典型的な例となった。350人のベテランエンジニアを呼び戻し、品質管理システムに「まともな車」を作る方法を教え込ませている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_8292.html">
-                        <h3>低価格版｢MacBook｣の正式名は｢MacBook Neo｣か｜Appleがうっかり漏らしてしまった模様</h3>
+                    <a href="気になる記になる_184.html">
+                        <h3>LINE、トークルーム内でAIエージェントを呼び出して質問への回答やタスク管理を支援してくれる新機能「Agent i i...</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">Appleは今晩に低価格版「MacBook」を発表するとみられていますが、MacRumorsによると、その低価格版「MacBook」の正式名は「MacBook Neo」になる可能性が浮上しました。 こ...</p>
+                        <p class="related-summary">本日、LINEヤフーが、コミュニケーションアプリ「LINE」のトークルーム内でAIエージェント「Agent i」を呼び出して質問への回答やタスク管理を支援する新機能「Agent i in chat」を...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2127.html">
-                        <h3>アップル、Studio Displayを刷新　上位モデルはミニLED＆2304のローカルディミングで2000ニトのピーク...</h3>
+                    <a href="iPhone_Mania_5788.html">
+                        <h3>AirDropに新たな脆弱性〜近くの第三者が機能を停止させる恐れ</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">アップルはプロ用ディスプレイ「Studio Display」を刷新。3月11日（水）に発売する（3月4日（水）予約開始）。「Studio Display」「Studio Display XDR」の2モ...</p>
+                        <p class="related-summary">iPhoneを使う上で、写真やファイルをその場で渡せるAirDropはよく使う機能です。そのAirDropに新たな脆弱性が見つかり、近くにいる第三者がAirDropや関連する連係機能を一時的に止められ...</p>
                     </a>
                 </article>
             </div>

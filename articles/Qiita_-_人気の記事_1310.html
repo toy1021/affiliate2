@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.">
-    <meta name="keywords" content="AWS">
+    <title>Lambdaのパフォーマンスチューニングで処理速度を3倍速くした話 | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは。まちやです！ 皆さんはLambdaのコールドスタート時の処理速度に悩まされたことは ありますでしょうか？ Webアプリを開発していたのですが、画面のレンダリングに平均11秒かかるという深刻なパフォーマンス問題に直面しました。 調査の結果、原因はLambdaの処理.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK">
-    <meta property="og:description" content="はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.">
+    <meta property="og:title" content="Lambdaのパフォーマンスチューニングで処理速度を3倍速くした話">
+    <meta property="og:description" content="こんにちは。まちやです！ 皆さんはLambdaのコールドスタート時の処理速度に悩まされたことは ありますでしょうか？ Webアプリを開発していたのですが、画面のレンダリングに平均11秒かかるという深刻なパフォーマンス問題に直面しました。 調査の結果、原因はLambdaの処理.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1310.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK">
-    <meta name="twitter:description" content="はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.">
+    <meta name="twitter:title" content="Lambdaのパフォーマンスチューニングで処理速度を3倍速くした話">
+    <meta name="twitter:description" content="こんにちは。まちやです！ 皆さんはLambdaのコールドスタート時の処理速度に悩まされたことは ありますでしょうか？ Webアプリを開発していたのですが、画面のレンダリングに平均11秒かかるという深刻なパフォーマンス問題に直面しました。 調査の結果、原因はLambdaの処理.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK",
-        "description": "はじめに 業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発.",
+        "headline": "Lambdaのパフォーマンスチューニングで処理速度を3倍速くした話",
+        "description": "こんにちは。まちやです！ 皆さんはLambdaのコールドスタート時の処理速度に悩まされたことは ありますでしょうか？ Webアプリを開発していたのですが、画面のレンダリングに平均11秒かかるという深刻なパフォーマンス問題に直面しました。 調査の結果、原因はLambdaの処理.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-15T08:33:17",
-        "dateModified": "2026-05-16T19:06:39.892823",
+        "datePublished": "2026-07-02T11:35:55",
+        "dateModified": "2026-07-05T13:40:41.847485",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1310.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1310.html",
         "articleSection": "プログラミング",
-        "keywords": ["AWS"]
+        "keywords": []
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK",
+                "name": "Lambdaのパフォーマンスチューニングで処理速度を3倍速くした話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1310.html"
             }
         ]
@@ -114,36 +114,36 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot ...</li>
+                <li aria-current="page">Lambdaのパフォーマンスチューニングで処理速度を3倍速くした話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AWS上にセキュアかつ安価かつ使い捨て可能なリモート開発環境を構築した話 ― SSM × Spot Instance × CDK</h1>
+                <h1>Lambdaのパフォーマンスチューニングで処理速度を3倍速くした話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/kyonosuke/items/eee9eb3840d3f740f325?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/MasatakaMachiya/items/91f5e5785ce1f7e51234?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-05-15T08:33:17">
-                        公開: 2026-05-15T08:33:17
+                    <time datetime="2026-07-02T11:35:55">
+                        公開: 2026-07-02T11:35:55
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-業務では主にkiro-cliを使用していますが、ローカルの WSL 環境がメモリ不足で頻繁に落ちるようになり、開発体験が著しく悪化していました。そのため、脱WSLを目指して「リモートに開発環境を持っていこう」と思い立ち、AWS 上に EC2 ベースのリモート開発...
+                    こんにちは。まちやです！
+皆さんはLambdaのコールドスタート時の処理速度に悩まされたことは
+ありますでしょうか？
+Webアプリを開発していたのですが、画面のレンダリングに平均11秒かかるという深刻なパフォーマンス問題に直面しました。
+調査の結果、原因はLambdaの処理...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/kyonosuke/items/eee9eb3840d3f740f325?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/MasatakaMachiya/items/91f5e5785ce1f7e51234?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -166,20 +166,10 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -220,16 +210,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_6149.html">
+                    <a href="Qiita_-_人気の記事_3632.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「本人希望」でマイナ廃止 93万枚</span>
+                        <span class="nav-title">世界で最も長い時間思考するプロンプトは何か？</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_4302.html">
+                    <a href="Qiita_-_人気の記事_7510.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">OpenMythosがローカル環境で動くか検証してみた</span>
+                        <span class="nav-title">AI BPR入門 ~ AIエージェント前提で業務を「組み替える」という発想 ~</span>
                     </a>
                 </div>
             </div>
@@ -242,53 +232,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8065.html">
-                        <h3>Zephyr RTOS 〜 debug with VSCode 〜</h3>
+                    <a href="Zennのトレンド_8674.html">
+                        <h3>Claude Code (Opus 4.8) が数分固まる問題、188セッション実測したら原因はAPIでもネットワークで...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに Claude Code を使っていると、応答が数分間「無音」になる停滞に遭遇することがあります。特にOpus 4. 8で頻発していたため、体感や推測ではなくセッションログの実測で原因を特定し...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_5654.html">
+                        <h3>プロンプトを磨くのはもう古い?「コンテキストエンジニアリング」に片足を突っ込む話</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに これまで Zephyr を紹介する際、何度か下記リポジトリをベースに解説してきました。 このリポジトリは、実運用を想定した環境構築手順とデバッグ環境を提供しており、 本記事では、これを使った...</p>
+                        <p class="related-summary">プロンプトとコンテキストの違いを1分で LLMへ入力されるのは、あなたが入力した文章だけではありません。 実際にモデルが見ているのは、例えばこんな情報です。 ここで重要なのは、 あなたが入力したプロン...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_5575.html">
-                        <h3>Elasticsearchでアイヌ語コーパスを作った</h3>
+                    <a href="Qiita_-_人気の記事_8881.html">
+                        <h3>「日本企業風GitHub」のパロディに学ぶ、なぜJTC業務システムは「警告と文字」で埋め尽くされるのか</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに 先日、Xで「日本企業がGitHubを構築した場合はこう」という画像を何気なく投稿しました。 ありがたいことに、これが信じられないくらい伸びまして。 なんと数千件のリツイートに、2万を超えるい...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_603.html">
+                        <h3>C++の謎めいたHello WorldをPythonで再実装して理解を深めよう</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">io/ja Kampisosははじめ、『Algolia』というサービスを利用して開発されていました。Algoliaは検索の精度自体には申し分ありませんでしたが、筆者が利用していた『Growプラン』では...</p>
+                        <p class="related-summary">C++という言語があります。現在普及しているオブジェクト指向を世界的に普及させた最初期の言語[1]でWindows,Chrome,Unreal Engineなどの様々なプロジェクトで利用されています。...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_12.html">
-                        <h3>WindowsでもCodexのMobileからCodex Appに接続する方法</h3>
+                    <a href="Qiita_-_人気の記事_7107.html">
+                        <h3>テスト距離という考え方で回帰テストを整理する</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">! 必要条件 ・Windows ・CodexAppとChatGPTモバイルアプリを最新版にする ・ChatGPTのMFA（多要素認証）を有効化する ChatGPTモバイルアプリのCodexから、Cod...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_6814.html">
-                        <h3>Microsoftは折りたたみ式スマホの欠点の一つを解決しかけていた模様 ｰ スプリング式ヒンジ設計に関する新たな特許が...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">Microsoftは折りたたみ式スマホの最大の欠点の一つを解決しかけていたようです。Windows Centralによって新たに発見された特許により、開発中止となった「Surface Duo 3」向け...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_2813.html">
-                        <h3>Nix使用時にGitHubのAPI Rate Limitを緩和する方法</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">com/repos/minad/corfu/commits/HEAD&#39;: HTTP error 403 response body: {. Rate Limit問題 Nix Flakesは依存関係の解...</p>
+                        <p class="related-summary">導入 ソフトウェア開発では、「機能テスト」と「回帰テスト」という用語がよく使われる。 しかし、この二つの境界は必ずしも明確ではない。 例えば「ログインできる」という同じテストケースでも、 新規実装時は...</p>
                     </a>
                 </article>
             </div>

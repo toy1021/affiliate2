@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>速報！！StreamlitがAWSにサーバーレスでホスティングできるようになった！！ #LambdaMicroVMs | 日本のテックニュース速報</title>
-    <meta name="description" content="きたきたきた～ 生成AIアプリのフロントエンドとして鉄板のStreamlitですが、AWSにデプロイするには諸々の制約があり、Fargateで行うのが一般的だと思います。Lambda Web Adapterでなんとかならないと、10回ぐらい試したのですが、WebSocket.">
-    <meta name="keywords" content="AI,AWS">
+    <title>Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 新卒研修にてコンテナアプリケーションを構築する機会がありました。 以前、Dockerfileを本番用とローカル用で分けている現場を見たことがあったため、今回はその是非も含めて「本番環境とローカル環境でDockerfileを分けるべきか」検討しました。 本記事は、.">
+    <meta name="keywords" content="Docker,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="速報！！StreamlitがAWSにサーバーレスでホスティングできるようになった！！ #LambdaMicroVMs">
-    <meta property="og:description" content="きたきたきた～ 生成AIアプリのフロントエンドとして鉄板のStreamlitですが、AWSにデプロイするには諸々の制約があり、Fargateで行うのが一般的だと思います。Lambda Web Adapterでなんとかならないと、10回ぐらい試したのですが、WebSocket.">
+    <meta property="og:title" content="Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳">
+    <meta property="og:description" content="はじめに 新卒研修にてコンテナアプリケーションを構築する機会がありました。 以前、Dockerfileを本番用とローカル用で分けている現場を見たことがあったため、今回はその是非も含めて「本番環境とローカル環境でDockerfileを分けるべきか」検討しました。 本記事は、.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1504.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="速報！！StreamlitがAWSにサーバーレスでホスティングできるようになった！！ #LambdaMicroVMs">
-    <meta name="twitter:description" content="きたきたきた～ 生成AIアプリのフロントエンドとして鉄板のStreamlitですが、AWSにデプロイするには諸々の制約があり、Fargateで行うのが一般的だと思います。Lambda Web Adapterでなんとかならないと、10回ぐらい試したのですが、WebSocket.">
+    <meta name="twitter:title" content="Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳">
+    <meta name="twitter:description" content="はじめに 新卒研修にてコンテナアプリケーションを構築する機会がありました。 以前、Dockerfileを本番用とローカル用で分けている現場を見たことがあったため、今回はその是非も含めて「本番環境とローカル環境でDockerfileを分けるべきか」検討しました。 本記事は、.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "速報！！StreamlitがAWSにサーバーレスでホスティングできるようになった！！ #LambdaMicroVMs",
-        "description": "きたきたきた～ 生成AIアプリのフロントエンドとして鉄板のStreamlitですが、AWSにデプロイするには諸々の制約があり、Fargateで行うのが一般的だと思います。Lambda Web Adapterでなんとかならないと、10回ぐらい試したのですが、WebSocket.",
+        "headline": "Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳",
+        "description": "はじめに 新卒研修にてコンテナアプリケーションを構築する機会がありました。 以前、Dockerfileを本番用とローカル用で分けている現場を見たことがあったため、今回はその是非も含めて「本番環境とローカル環境でDockerfileを分けるべきか」検討しました。 本記事は、.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-28T22:08:23",
-        "dateModified": "2026-07-01T19:57:29.690087",
+        "datePublished": "2026-07-05T17:32:58",
+        "dateModified": "2026-07-06T19:58:46.492208",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1504.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1504.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","AWS"]
+        "articleSection": "その他",
+        "keywords": ["Docker","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "速報！！StreamlitがAWSにサーバーレスでホスティングできるようになった！！ #LambdaMicroVMs",
+                "name": "Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1504.html"
             }
         ]
@@ -113,38 +113,40 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">速報！！StreamlitがAWSにサーバーレスでホスティングできるようになった！！ #Lambda...</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>速報！！StreamlitがAWSにサーバーレスでホスティングできるようになった！！ #LambdaMicroVMs</h1>
+                <h1>Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/moritalous/items/2f9ad10282775dcbd647?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-28T22:08:23">
-                        公開: 2026-06-28T22:08:23
+                    <span class="source">出典: <a href="https://qiita.com/H-Hoshihara/items/82798a46964718f6bdb0?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-07-05T17:32:58">
+                        公開: 2026-07-05T17:32:58
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">AWS</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    きたきたきた～
-生成AIアプリのフロントエンドとして鉄板のStreamlitですが、AWSにデプロイするには諸々の制約があり、Fargateで行うのが一般的だと思います。Lambda Web Adapterでなんとかならないと、10回ぐらい試したのですが、WebSocket...
+                    はじめに
+新卒研修にてコンテナアプリケーションを構築する機会がありました。
+以前、Dockerfileを本番用とローカル用で分けている現場を見たことがあったため、今回はその是非も含めて「本番環境とローカル環境でDockerfileを分けるべきか」検討しました。
+本記事は、...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/moritalous/items/2f9ad10282775dcbd647?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/H-Hoshihara/items/82798a46964718f6bdb0?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,30 +159,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Docker&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Docker - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Docker - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでDockerに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -190,23 +182,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -221,16 +213,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_8661.html">
+                    <a href="Zennのトレンド_5749.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">自治体情シスの三層分離・ガバクラ検証作業用のご自宅ネットワーク構成図</span>
+                        <span class="nav-title">Claude Fable 5の挙動をOpus 4.8で再現する — 「賢さ」を検証ループの工程に置き...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_7892.html">
+                    <a href="Qiita_-_人気の記事_2644.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Pythonで画像認識を行うためのライブラリまとめ</span>
+                        <span class="nav-title">閉域モード版源内のデプロイ手順とオンプレミスと接続する時の注意点</span>
                     </a>
                 </div>
             </div>
@@ -243,53 +235,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4296.html">
-                        <h3>世界初の「AI美術館」がロサンゼルスに開館　さっそく行ってみた　LLMがコンテンツ生成</h3>
+                    <a href="CNET_Japan_最新情報総合_2843.html">
+                        <h3>JR西日本、自動運転「レベル4」のバス走行試験を開始</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">トルコ出身のアーティスト、レフィク・アナドール氏が手がける世界初の「AI美術館」Datalandが、米ロサンゼルス中心部で6月20日（現地時間）に開館した。大規模言語モデル（LLM）を使い、生のデータ...</p>
+                        <p class="related-summary">東広島市とJR西日本は7月3日、自動運転レベル4の認可取得に向けたバスの走行試験を、7月7日から東広島市内の公道で始めると発表した。JR西条駅と広島大学東広島キャンパスを結ぶ県道・市道「ブールバール」...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1110.html">
-                        <h3>Anthropicの「Fable 5」「Mythos 5」、復活へ　米商務省が輸出規制を解除</h3>
+                    <a href="CNET_Japan_最新情報総合_9392.html">
+                        <h3>ドコモ回線契約13件で本人確認不備、エディオンと兼松に是正命令--ドコモ本体にも指導　総務省</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米Anthropicは7月1日、AIモデル「Fable 5」と「Mythos 5」に対する輸出規制が解除されたと、公式X（旧Twitter）アカウントへの投稿で明らかにした。米商務省が規制を撤廃したと...</p>
+                        <p class="related-summary">総務省は7月3日、携帯電話不正利用防止法に違反したとして、兼松コミュニケーションズ（東京都渋谷区）とエディオン（大阪市）に違反の是正を命じたと発表した。両社とエディオンの媒介業者であるライクスタッフィ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8456.html">
-                        <h3>「Claude Sonnet 5」公開--Opus 4.8に迫る性能を低価格で　エージェント性も付与</h3>
+                    <a href="CNET_Japan_最新情報総合_6487.html">
+                        <h3>ゆうパック、10月から平均10%値上げ　物価や人件費の上昇で</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Anthropicは6月30日、AIモデル「Claude Sonnet 5」を発表した。自分で計画を立て、ブラウザやターミナルといったツールを使いこなし、複数の手順を最後まで自律的に進める。同社が「こ...</p>
+                        <p class="related-summary">日本郵便は7月3日、ゆうパックとゆうパケットの基本運賃などを10月1日に改定すると発表した。ゆうパックの基本運賃は平均で約10%上がる。フリマアプリの発送などで定番のクリックポストも、185円から24...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3384.html">
-                        <h3>そのChatGPT利用、大丈夫？職場で広がる「シャドーAI」の罠と正しい向き合い方</h3>
+                    <a href="CNET_Japan_最新情報総合_6571.html">
+                        <h3>トランプ氏のコインで約100万人が計6200億円の損失、本人は大もうけ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「ChatGPT」に仕事のメールを推敲（すいこう）させたり、会議の議事録をまとめさせたりしたことはないだろうか。一見すると無害に思えるかもしれないが、不適切なツールを使ったり、渡す情報を誤ったりすると...</p>
+                        <p class="related-summary">ドナルド・トランプ米大統領のミームコイン「$TRUMP」の購入者のうち、約100万人が損失を被ったことが明らかになった。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1711.html">
-                        <h3>「Claude Fable 5」提供再開　月額ユーザーが無料で使えるのは7月7日まで</h3>
+                    <a href="気になる記になる_1054.html">
+                        <h3>【セール】UGREENの最新USB充電器・モバイルバッテリー・NAS製品などが特価に</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">米Anthropicは6月30日（米国時間）、AIモデル「Claude Fable 5」の提供を再開すると発表した。米政府による輸出規制が同日解除されたことを受けたもので、Fable 5は7月1日から...</p>
+                        <p class="related-summary">UGREENが、Amazonが本日よりスタートした「Amazon プライムデー」の先行セールにおいて、対象製品を最大45％オフで販売するセールを開催しています。 セールではUGREENのモバイルバッテ...</p>
                     </a>
                 </article>
             </div>

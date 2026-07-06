@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>n8nでBBCニュースを自動翻訳・要約してDiscordに通知する仕組みを作ってみた | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 海外ニュースを追いたいけど、毎回英語の記事を読むのは少しハードルが高い。 そこで今回は、BBCのRSSをn8nで定期取得し、新着ニュースだけをAIで日本語要約してDiscordに投稿する仕組みを作ってみました。 やっていることはシンプルです。 BBC News.">
-    <meta name="keywords" content="AI,本">
+    <title>Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 新卒研修にてコンテナアプリケーションを構築する機会がありました。 以前、Dockerfileを本番用とローカル用で分けている現場を見たことがあったため、今回はその是非も含めて「本番環境とローカル環境でDockerfileを分けるべきか」検討しました。 本記事は、.">
+    <meta name="keywords" content="Docker,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="n8nでBBCニュースを自動翻訳・要約してDiscordに通知する仕組みを作ってみた">
-    <meta property="og:description" content="はじめに 海外ニュースを追いたいけど、毎回英語の記事を読むのは少しハードルが高い。 そこで今回は、BBCのRSSをn8nで定期取得し、新着ニュースだけをAIで日本語要約してDiscordに投稿する仕組みを作ってみました。 やっていることはシンプルです。 BBC News.">
+    <meta property="og:title" content="Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳">
+    <meta property="og:description" content="はじめに 新卒研修にてコンテナアプリケーションを構築する機会がありました。 以前、Dockerfileを本番用とローカル用で分けている現場を見たことがあったため、今回はその是非も含めて「本番環境とローカル環境でDockerfileを分けるべきか」検討しました。 本記事は、.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7137.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="n8nでBBCニュースを自動翻訳・要約してDiscordに通知する仕組みを作ってみた">
-    <meta name="twitter:description" content="はじめに 海外ニュースを追いたいけど、毎回英語の記事を読むのは少しハードルが高い。 そこで今回は、BBCのRSSをn8nで定期取得し、新着ニュースだけをAIで日本語要約してDiscordに投稿する仕組みを作ってみました。 やっていることはシンプルです。 BBC News.">
+    <meta name="twitter:title" content="Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳">
+    <meta name="twitter:description" content="はじめに 新卒研修にてコンテナアプリケーションを構築する機会がありました。 以前、Dockerfileを本番用とローカル用で分けている現場を見たことがあったため、今回はその是非も含めて「本番環境とローカル環境でDockerfileを分けるべきか」検討しました。 本記事は、.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "n8nでBBCニュースを自動翻訳・要約してDiscordに通知する仕組みを作ってみた",
-        "description": "はじめに 海外ニュースを追いたいけど、毎回英語の記事を読むのは少しハードルが高い。 そこで今回は、BBCのRSSをn8nで定期取得し、新着ニュースだけをAIで日本語要約してDiscordに投稿する仕組みを作ってみました。 やっていることはシンプルです。 BBC News.",
+        "headline": "Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳",
+        "description": "はじめに 新卒研修にてコンテナアプリケーションを構築する機会がありました。 以前、Dockerfileを本番用とローカル用で分けている現場を見たことがあったため、今回はその是非も含めて「本番環境とローカル環境でDockerfileを分けるべきか」検討しました。 本記事は、.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-21T09:55:44",
-        "dateModified": "2026-04-22T20:57:21.538609",
+        "datePublished": "2026-07-05T17:32:58",
+        "dateModified": "2026-07-06T08:21:47.238904",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7137.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7137.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","本"]
+        "articleSection": "その他",
+        "keywords": ["Docker","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "n8nでBBCニュースを自動翻訳・要約してDiscordに通知する仕組みを作ってみた",
+                "name": "Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7137.html"
             }
         ]
@@ -113,25 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">n8nでBBCニュースを自動翻訳・要約してDiscordに通知する仕組みを作ってみた</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>n8nでBBCニュースを自動翻訳・要約してDiscordに通知する仕組みを作ってみた</h1>
+                <h1>Dockerfileは分けない〜本番用とローカル用を1つに保つ方法🐳</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/wan-code/items/7138654568f8ef43785b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-04-21T09:55:44">
-                        公開: 2026-04-21T09:55:44
+                    <span class="source">出典: <a href="https://qiita.com/H-Hoshihara/items/82798a46964718f6bdb0?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-07-05T17:32:58">
+                        公開: 2026-07-05T17:32:58
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">Docker</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -140,15 +140,13 @@
                 
                 <div class="article-body">
                     はじめに
-海外ニュースを追いたいけど、毎回英語の記事を読むのは少しハードルが高い。
-そこで今回は、BBCのRSSをn8nで定期取得し、新着ニュースだけをAIで日本語要約してDiscordに投稿する仕組みを作ってみました。
-やっていることはシンプルです。
-
-BBC News...
+新卒研修にてコンテナアプリケーションを構築する機会がありました。
+以前、Dockerfileを本番用とローカル用で分けている現場を見たことがあったため、今回はその是非も含めて「本番環境とローカル環境でDockerfileを分けるべきか」検討しました。
+本記事は、...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/wan-code/items/7138654568f8ef43785b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/H-Hoshihara/items/82798a46964718f6bdb0?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,10 +159,10 @@ BBC News...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Docker&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Docker - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Docker - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでDockerに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -180,37 +178,27 @@ BBC News...
                                 </div>
                             </a>
                         </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +213,16 @@ BBC News...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2588.html">
+                    <a href="Publickey_8473.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">graphql-ruby 実践ガイド</span>
+                        <span class="nav-title">プログラミングのためのBGMや環境音など。仕事や勉強の邪魔にならない無料で使えそうな音源集。2026...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_9873.html">
+                    <a href="Qiita_-_人気の記事_9108.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">テストがないコードへのテストの育て方</span>
+                        <span class="nav-title">閉域モード版源内のデプロイ手順とオンプレミスと接続する時の注意点</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +235,53 @@ BBC News...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3839.html">
-                        <h3>仕事でAIを使いすぎると「自分の能力」に自信が持てなくなる？ 米心理学会が報告</h3>
+                    <a href="CNET_Japan_最新情報総合_5992.html">
+                        <h3>JR西日本、自動運転「レベル4」のバス走行試験を開始</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米心理学会の新たな研究によると、業務でAIツールに過度に依存する人は、自身の能力に対する自信が低下し、アイデアの考案者という意識も薄れるという。.</p>
+                        <p class="related-summary">東広島市とJR西日本は7月3日、自動運転レベル4の認可取得に向けたバスの走行試験を、7月7日から東広島市内の公道で始めると発表した。JR西条駅と広島大学東広島キャンパスを結ぶ県道・市道「ブールバール」...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6983.html">
-                        <h3>ノジマ、日立の家電事業を1100億円で買収　VAIO買収に続き</h3>
+                    <a href="CNET_Japan_最新情報総合_4716.html">
+                        <h3>ドコモ回線契約13件で本人確認不備、エディオンと兼松に是正命令--ドコモ本体にも指導　総務省</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">日立製作所と日立グローバルライフソリューションズは4月21日、日立ブランドの家電事業を新会社に移し、その新会社をノジマの子会社にすると発表した。日立ブランドは残るが、家電事業の経営はノジマ側に移る。.</p>
+                        <p class="related-summary">総務省は7月3日、携帯電話不正利用防止法に違反したとして、兼松コミュニケーションズ（東京都渋谷区）とエディオン（大阪市）に違反の是正を命じたと発表した。両社とエディオンの媒介業者であるライクスタッフィ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9622.html">
-                        <h3>OpenAI、新画像モデル「ChatGPT Images 2」発表　ビジネス資料や文字入りデザインに特化</h3>
+                    <a href="CNET_Japan_最新情報総合_4198.html">
+                        <h3>ゆうパック、10月から平均10%値上げ　物価や人件費の上昇で</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは、次世代画像モデル「ChatGPT Images 2」をリリースすると発表した。.</p>
+                        <p class="related-summary">日本郵便は7月3日、ゆうパックとゆうパケットの基本運賃などを10月1日に改定すると発表した。ゆうパックの基本運賃は平均で約10%上がる。フリマアプリの発送などで定番のクリックポストも、185円から24...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3347.html">
-                        <h3>VPNをAIが自律操作する時代に--「OpenClaw」をWindscribeがネイティブ統合</h3>
+                    <a href="CNET_Japan_最新情報総合_1668.html">
+                        <h3>トランプ氏のコインで約100万人が計6200億円の損失、本人は大もうけ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AIエージェントがWebの世界をかつてないスピードで侵食しつつある。そして今度は、VPNの操作権限までエージェントの手に渡ろうとしている。VPNサービスを手がけるWindscribeが、エージェント型...</p>
+                        <p class="related-summary">ドナルド・トランプ米大統領のミームコイン「$TRUMP」の購入者のうち、約100万人が損失を被ったことが明らかになった。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2488.html">
-                        <h3>[PR]あらゆる会議を「1枚のスライド」に。最新AIレコーダー「Plaud NotePin S」は仕事の頼れる相棒だ</h3>
+                    <a href="ASCII_jp__トップ_5333.html">
+                        <h3>セイコー、大谷翔平選手に世界で1本の腕時計　約114年の時間を刻む特別モデル</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">会議の議事録作成は、AIの進化でかなり楽になった。今では録音データをAIでテキスト化し、要点を整理するところまでは、生産性を意識するビジネスパーソンの間では半ば一般的になりつつある。.</p>
+                        <p class="related-summary">セイコーウオッチは7月3日、ブランドアンバサダー就任10周年を迎えた大谷翔平選手へ、世界で1本だけの特別な機械式腕時計「Seiko Star Time」を贈呈したと発表した。.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIエージェント時代のターミナルマルチプレクサ「herdr」にtmuxから乗り換えた | 日本のテックニュース速報</title>
-    <meta name="description" content="com/Tocyuki/status/2072240028596748445 はじめに スタディポケットで執行役員 CTO をしている@Tocyukiです。 自分は長らく tmux をターミナルマルチプレクサとして使ってきました">
-    <meta name="keywords" content="AI,Claude">
+    <title>VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境 | 日本のテックニュース速報</title>
+    <meta name="description" content="! この記事は長いです。長い癖に具体的に自分が使っているdocker composeなどの設定までは記載していません。そこまで書くとさらにとんでもなく長い記事になってしまうと思ったためです。あくまで思想としてどのように最近開発環境を考えているのかを伝えられたらと思っています">
+    <meta name="keywords" content="AI,LLM,Docker,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIエージェント時代のターミナルマルチプレクサ「herdr」にtmuxから乗り換えた">
-    <meta property="og:description" content="com/Tocyuki/status/2072240028596748445 はじめに スタディポケットで執行役員 CTO をしている@Tocyukiです。 自分は長らく tmux をターミナルマルチプレクサとして使ってきました">
+    <meta property="og:title" content="VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境">
+    <meta property="og:description" content="! この記事は長いです。長い癖に具体的に自分が使っているdocker composeなどの設定までは記載していません。そこまで書くとさらにとんでもなく長い記事になってしまうと思ったためです。あくまで思想としてどのように最近開発環境を考えているのかを伝えられたらと思っています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1129.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIエージェント時代のターミナルマルチプレクサ「herdr」にtmuxから乗り換えた">
-    <meta name="twitter:description" content="com/Tocyuki/status/2072240028596748445 はじめに スタディポケットで執行役員 CTO をしている@Tocyukiです。 自分は長らく tmux をターミナルマルチプレクサとして使ってきました">
+    <meta name="twitter:title" content="VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境">
+    <meta name="twitter:description" content="! この記事は長いです。長い癖に具体的に自分が使っているdocker composeなどの設定までは記載していません。そこまで書くとさらにとんでもなく長い記事になってしまうと思ったためです。あくまで思想としてどのように最近開発環境を考えているのかを伝えられたらと思っています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIエージェント時代のターミナルマルチプレクサ「herdr」にtmuxから乗り換えた",
-        "description": "com/Tocyuki/status/2072240028596748445 はじめに スタディポケットで執行役員 CTO をしている@Tocyukiです。 自分は長らく tmux をターミナルマルチプレクサとして使ってきました",
+        "headline": "VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境",
+        "description": "! この記事は長いです。長い癖に具体的に自分が使っているdocker composeなどの設定までは記載していません。そこまで書くとさらにとんでもなく長い記事になってしまうと思ったためです。あくまで思想としてどのように最近開発環境を考えているのかを伝えられたらと思っています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-02T06:52:46",
-        "dateModified": "2026-07-05T21:01:34.296280",
+        "datePublished": "2026-07-07T08:00:09",
+        "dateModified": "2026-07-11T02:39:45.180849",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1129.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1129.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude"]
+        "keywords": ["AI","LLM","Docker","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIエージェント時代のターミナルマルチプレクサ「herdr」にtmuxから乗り換えた",
+                "name": "VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1129.html"
             }
         ]
@@ -114,41 +114,42 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIエージェント時代のターミナルマルチプレクサ「herdr」にtmuxから乗り換えた</li>
+                <li aria-current="page">VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIエージェント時代のターミナルマルチプレクサ「herdr」にtmuxから乗り換えた</h1>
+                <h1>VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/studypocket/articles/herdr-ai-agent-multiplexer" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/kenfdev/articles/1febc0052b0d71" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-07-02T06:52:46">
-                        公開: 2026-07-02T06:52:46
+                    <time datetime="2026-07-07T08:00:09">
+                        公開: 2026-07-07T08:00:09
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    https://x.com/Tocyuki/status/2072240028596748445
+                    !
+この記事は長いです。長い癖に具体的に自分が使っているdocker composeなどの設定までは記載していません。そこまで書くとさらにとんでもなく長い記事になってしまうと思ったためです。あくまで思想としてどのように最近開発環境を考えているのかを伝えられたらと思っています。コンテナ開発における環境に悩んでいる方、ぜひ読んでみて感想を聞けたらと思います。私は日々悩み続けています。
 
- はじめに
-スタディポケットで執行役員 CTO をしている@Tocyukiです。
-自分は長らく tmux をターミナルマルチプレクサとして使ってきました。Zellij や WezTerm のマルチプレクサ機能など、乗り換え候補は何度か検討したものの、tmux を育ててきたので愛着心もあり、そもそも tmux で困っていないという理由で移行には至りませんでした。
-状況が変わったのは、AI コーディングエージェントを複数並列で動かすようになってからです。自分は Claude Code を中心に...
+以前、「辿り着いた最高の開発環境は Remote な Dev Containers です」という記事を書きました。
+https://zenn.dev/kenfdev/articles/dba4dbd45261...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/studypocket/articles/herdr-ai-agent-multiplexer" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/kenfdev/articles/1febc0052b0d71" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -181,10 +182,10 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +226,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_1732.html">
+                    <a href="Zennのトレンド_1343.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AIに8割書かせたコード、半年運用の答え合わせ。効いた3つと、腐った3つ</span>
+                        <span class="nav-title">APIもDBも東京なのに、全クエリが太平洋横断していた話</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_9428.html">
+                    <a href="Publickey_4070.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Code「Fable 5」にローカルLLM用シェル支援CLIを作らせたら、コードより仕...</span>
+                        <span class="nav-title">Visual Studio Code、従量課金制になったGitHub Copilotの使用料を表示可...</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +248,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7492.html">
-                        <h3>「AIがホワイトカラーの半分を代替」と豪語したフォードの誤算　熟練技術者350人をひそかに再雇用した理由</h3>
+                    <a href="CNET_Japan_最新情報総合_4441.html">
+                        <h3>清水建設、「日本一高いビル」施工現場にフィジカルAI　2足歩行ロボが巡回　LLMで解析も</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">自動車メーカーのフォードは、AIを過信するとどうなるかを示す典型的な例となった。350人のベテランエンジニアを呼び戻し、品質管理システムに「まともな車」を作る方法を教え込ませている。.</p>
+                        <p class="related-summary">清水建設は7月8日、建設現場へのAIロボット（フィジカルAI）の実装に向けた取り組みを始めたと発表した。ヒューマノイドロボットによる現場巡回と、ロボットアームによる塗装作業の実用化を目標に、本格的な実...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4388.html">
-                        <h3>Visa、「AIエージェントが本物のECサイトで買い物開始」と発表</h3>
+                    <a href="CNET_Japan_最新情報総合_6494.html">
+                        <h3>OpenAIが最新モデル「GPT-5.6」公開、ChatGPTなどで利用可能に</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Visaは7月2日（現地時間）、AIエージェントが利用者に代わって買い物をする「エージェントコマース」の実取引が欧州で始まったと発表した。AIエージェントがカード保有者の指示にもとづき、参加加盟店のE...</p>
+                        <p class="related-summary">OpenAIは米国時間7月9日、「ChatGPT」を支える最新かつ最上位のAIモデル「GPT-5.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7090.html">
-                        <h3>OpenAI、米政府に株式5%譲渡を提案か　約6.8兆円の巨額取引の思惑とは</h3>
+                    <a href="CNET_Japan_最新情報総合_241.html">
+                        <h3>Meta、エージェント時代の新AIモデル「Muse Spark 1.1」提供開始</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「ChatGPT」を手がけるOpenAIが、米国政府に自社株の5％を譲渡することについてトランプ政権と「初期段階の交渉」を行っていると、Financial Timesがこの件に詳しい2人の匿名情報筋の...</p>
+                        <p class="related-summary">MetaはマルチモーダルAIモデル「Muse Spark」の次期バージョン、「Muse Spark 1.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3299.html">
-                        <h3>SpaceXが「謎のAIデバイス」を投資家に披露か、イーロン・マスク氏は完全否定</h3>
+                    <a href="CNET_Japan_最新情報総合_6745.html">
+                        <h3>ClaudeがあなたのAI活用を振り返る　新機能「Reflect」で使い方を分析、改善へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">SpaceXはスマートフォンではないAI搭載デバイスの初期プロトタイプを投資家に披露したと、The Wall Street Journalが報じた。イーロン・マスク氏は真っ向から否定している。.</p>
+                        <p class="related-summary">Anthropicは米国時間7月9日、AIチャットボット「Claude」の新しいベータ版機能「Reflect（振り返り）」を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6146.html">
-                        <h3>Yahoo!ニュース上に「記事のような広告」を配信可能に　プレスリリースをAIが再構成　1本3万円</h3>
+                    <a href="CNET_Japan_最新情報総合_5513.html">
+                        <h3>AIブームで「格安スマホ」が入手困難に？ 2026年は22％減の可能性</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">LINEヤフーは7月1日、「Yahoo!ニュース」上に企業や団体のプレスリリースをニュースコンテンツとして掲載できるサービス「ニュースPR by LINEヤフー」の提供を始めた。料金は1掲載につき3万...</p>
+                        <p class="related-summary">予算を抑えてスマートフォンを買いたい人にとって、厳しい状況が待っているかもしれない。その原因はAIだ。.</p>
                     </a>
                 </article>
             </div>

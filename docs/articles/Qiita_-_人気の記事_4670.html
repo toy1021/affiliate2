@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日本語性能世界一の音声認識モデルを作った | 日本のテックニュース速報</title>
-    <meta name="description" content="どうも、ラッパーです。 バイブコーディングの流行もあって、音声入力の需要は高まっていると思います。個人的にもChatGPTの音声入力を使ったり、Claude Codeの/voiceも使っています。で、アプリで単体でも使えるようにローカルで動くモデルも一通り試してみたんですが.">
-    <meta name="keywords" content="ChatGPT,Claude,GPT,本">
+    <title>Zoom AI ServicesをMCPサーバー化してClaude Codeから使ってみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Zoom AI Services には文字起こし(Scribe)・翻訳(Translator)・要約(Summarizer)の3つの API があります。これを普通に使うなら、「録音 → 文字起こし → 要約 → Slack 通知」みたいなパイプラインを組むこと.">
+    <meta name="keywords" content="AI,Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="日本語性能世界一の音声認識モデルを作った">
-    <meta property="og:description" content="どうも、ラッパーです。 バイブコーディングの流行もあって、音声入力の需要は高まっていると思います。個人的にもChatGPTの音声入力を使ったり、Claude Codeの/voiceも使っています。で、アプリで単体でも使えるようにローカルで動くモデルも一通り試してみたんですが.">
+    <meta property="og:title" content="Zoom AI ServicesをMCPサーバー化してClaude Codeから使ってみた">
+    <meta property="og:description" content="はじめに Zoom AI Services には文字起こし(Scribe)・翻訳(Translator)・要約(Summarizer)の3つの API があります。これを普通に使うなら、「録音 → 文字起こし → 要約 → Slack 通知」みたいなパイプラインを組むこと.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4670.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="日本語性能世界一の音声認識モデルを作った">
-    <meta name="twitter:description" content="どうも、ラッパーです。 バイブコーディングの流行もあって、音声入力の需要は高まっていると思います。個人的にもChatGPTの音声入力を使ったり、Claude Codeの/voiceも使っています。で、アプリで単体でも使えるようにローカルで動くモデルも一通り試してみたんですが.">
+    <meta name="twitter:title" content="Zoom AI ServicesをMCPサーバー化してClaude Codeから使ってみた">
+    <meta name="twitter:description" content="はじめに Zoom AI Services には文字起こし(Scribe)・翻訳(Translator)・要約(Summarizer)の3つの API があります。これを普通に使うなら、「録音 → 文字起こし → 要約 → Slack 通知」みたいなパイプラインを組むこと.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "日本語性能世界一の音声認識モデルを作った",
-        "description": "どうも、ラッパーです。 バイブコーディングの流行もあって、音声入力の需要は高まっていると思います。個人的にもChatGPTの音声入力を使ったり、Claude Codeの/voiceも使っています。で、アプリで単体でも使えるようにローカルで動くモデルも一通り試してみたんですが.",
+        "headline": "Zoom AI ServicesをMCPサーバー化してClaude Codeから使ってみた",
+        "description": "はじめに Zoom AI Services には文字起こし(Scribe)・翻訳(Translator)・要約(Summarizer)の3つの API があります。これを普通に使うなら、「録音 → 文字起こし → 要約 → Slack 通知」みたいなパイプラインを組むこと.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-16T07:55:06",
-        "dateModified": "2026-04-18T08:53:40.212919",
+        "datePublished": "2026-07-10T15:17:14",
+        "dateModified": "2026-07-11T14:55:09.353147",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4670.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4670.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["ChatGPT","Claude","GPT","本"]
+        "keywords": ["AI","Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "日本語性能世界一の音声認識モデルを作った",
+                "name": "Zoom AI ServicesをMCPサーバー化してClaude Codeから使ってみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4670.html"
             }
         ]
@@ -114,39 +114,37 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">日本語性能世界一の音声認識モデルを作った</li>
+                <li aria-current="page">Zoom AI ServicesをMCPサーバー化してClaude Codeから使ってみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>日本語性能世界一の音声認識モデルを作った</h1>
+                <h1>Zoom AI ServicesをMCPサーバー化してClaude Codeから使ってみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/holotherapper/items/53190c4cd9825ad825b5?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/rai03/items/eec6818fd48b0c104e47?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-04-16T07:55:06">
-                        公開: 2026-04-16T07:55:06
+                    <time datetime="2026-07-10T15:17:14">
+                        公開: 2026-07-10T15:17:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">ChatGPT</span>
+                    <span class="tag">AI</span>
                     <span class="tag">Claude</span>
-                    <span class="tag">GPT</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    どうも、ラッパーです。
-バイブコーディングの流行もあって、音声入力の需要は高まっていると思います。個人的にもChatGPTの音声入力を使ったり、Claude Codeの/voiceも使っています。で、アプリで単体でも使えるようにローカルで動くモデルも一通り試してみたんですが...
+                    はじめに
+Zoom AI Services には文字起こし(Scribe)・翻訳(Translator)・要約(Summarizer)の3つの API があります。これを普通に使うなら、「録音 → 文字起こし → 要約 → Slack 通知」みたいなパイプラインを組むこと...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/holotherapper/items/53190c4cd9825ad825b5?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/rai03/items/eec6818fd48b0c104e47?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,10 +157,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=ChatGPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ChatGPT - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ChatGPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでChatGPTに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -173,16 +181,6 @@
                                 <div class="product-info">
                                     <div class="product-title">Claude - Amazon検索結果</div>
                                     <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GPT - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGPTに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +221,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_3115.html">
+                    <a href="Zennのトレンド_2828.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">DRY / KISS / YAGNI をC#で理解する：現場で使えるシンプル設計原則まとめ</span>
+                        <span class="nav-title">CodexのdefaultをGPT-5.6 Terraにした理由：GPT-5.5/5.4との比較</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_4422.html">
+                    <a href="Zennのトレンド_1126.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">deleted_atにインデックスを雑に貼ったら本番DBが死んだ</span>
+                        <span class="nav-title">2026年7月時点で分かっている DuckDB v2 の新機能</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +243,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1340.html">
-                        <h3>Anthropic、Claude Opus 4.7公開--「指示に従順かつセンスがあり創造的」なモデル</h3>
+                    <a href="CNET_Japan_最新情報総合_3227.html">
+                        <h3>清水建設、「日本一高いビル」施工現場にフィジカルAI　2足歩行ロボが巡回　LLMで解析も</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Anthropicは現地時間4月16日、新たなAIモデルを公開した。とはいえ、それは「Claude Mythos Preview」ではない。一般提供が始まった「Claude Opus 4. 7」は、開...</p>
+                        <p class="related-summary">清水建設は7月8日、建設現場へのAIロボット（フィジカルAI）の実装に向けた取り組みを始めたと発表した。ヒューマノイドロボットによる現場巡回と、ロボットアームによる塗装作業の実用化を目標に、本格的な実...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3435.html">
-                        <h3>OpenAIの「Codex」が大幅アップデート、PCアプリ操作や自動化が可能に</h3>
+                    <a href="CNET_Japan_最新情報総合_2417.html">
+                        <h3>OpenAIが最新モデル「GPT-5.6」公開、ChatGPTなどで利用可能に</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「Codex」は登場から1年足らずだが、OpenAIが描く「スーパーアプリ」実現の鍵を握るかもしれない。.</p>
+                        <p class="related-summary">OpenAIは米国時間7月9日、「ChatGPT」を支える最新かつ最上位のAIモデル「GPT-5.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1939.html">
-                        <h3>大規模データセンター「建設停止」の法案、米メイン州が可決　なぜ？</h3>
+                    <a href="CNET_Japan_最新情報総合_2979.html">
+                        <h3>Meta、エージェント時代の新AIモデル「Muse Spark 1.1」提供開始</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">全米でAIデータセンター拡張のために膨大な土地が買収されるなか、少なくとも1つの州が、相次ぐ抗議活動や政治家からの要請を受け、この建設ブームの勢いを抑えようとしている。.</p>
+                        <p class="related-summary">MetaはマルチモーダルAIモデル「Muse Spark」の次期バージョン、「Muse Spark 1.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4095.html">
-                        <h3>果たしてどうなる？ 恐るべき『コンテンツ制作のゼロ化』の未来は？</h3>
+                    <a href="CNET_Japan_最新情報総合_2840.html">
+                        <h3>ClaudeがあなたのAI活用を振り返る　新機能「Reflect」で使い方を分析、改善へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AIエージェントを使って記事作りを自動化した結果……。.</p>
+                        <p class="related-summary">Anthropicは米国時間7月9日、AIチャットボット「Claude」の新しいベータ版機能「Reflect（振り返り）」を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_774.html">
-                        <h3>AIセキュリティチェックシート回答支援「QuickCheck」、日本を代表する財閥系グループの老舗IT企業への導入・納品...</h3>
+                    <a href="CNET_Japan_最新情報総合_4182.html">
+                        <h3>AIブームで「格安スマホ」が入手困難に？ 2026年は22％減の可能性</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AIセキュリティチェックシート回答支援「QuickCheck」、日本を代表する財閥系グループの老舗IT企業への導入・納品を完了.</p>
+                        <p class="related-summary">予算を抑えてスマートフォンを買いたい人にとって、厳しい状況が待っているかもしれない。その原因はAIだ。.</p>
                     </a>
                 </article>
             </div>

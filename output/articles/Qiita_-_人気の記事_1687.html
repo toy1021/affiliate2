@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MySQLのオプティマイザが行うanti-joinって何？ | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 「相関サブクエリはパフォーマンスが悪いから基本的に使わない」と言われて以来、特に疑問など持たずになるべく相関サブクエリは使わないようにしていました。 ですが、最近AIに作ってもらったSQLを検証していたとき、「おいおい相関サブクエリあるじゃーん」と思いながらも実.">
-    <meta name="keywords" content="AI,本">
+    <title>最近のDynamoDB設計事情：single-table偏重の見直しとGSIマルチ属性キー | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに DynamoDBには長らく「できるだけ1つのテーブルにまとめろ（single-table design）」という強いベストプラクティスがありました。 しかしここ最近、現場では「本当にそうか？」という揺り戻しが起きています。 さらに昨年末（2025年11月）、AW.">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="MySQLのオプティマイザが行うanti-joinって何？">
-    <meta property="og:description" content="はじめに 「相関サブクエリはパフォーマンスが悪いから基本的に使わない」と言われて以来、特に疑問など持たずになるべく相関サブクエリは使わないようにしていました。 ですが、最近AIに作ってもらったSQLを検証していたとき、「おいおい相関サブクエリあるじゃーん」と思いながらも実.">
+    <meta property="og:title" content="最近のDynamoDB設計事情：single-table偏重の見直しとGSIマルチ属性キー">
+    <meta property="og:description" content="はじめに DynamoDBには長らく「できるだけ1つのテーブルにまとめろ（single-table design）」という強いベストプラクティスがありました。 しかしここ最近、現場では「本当にそうか？」という揺り戻しが起きています。 さらに昨年末（2025年11月）、AW.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1687.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MySQLのオプティマイザが行うanti-joinって何？">
-    <meta name="twitter:description" content="はじめに 「相関サブクエリはパフォーマンスが悪いから基本的に使わない」と言われて以来、特に疑問など持たずになるべく相関サブクエリは使わないようにしていました。 ですが、最近AIに作ってもらったSQLを検証していたとき、「おいおい相関サブクエリあるじゃーん」と思いながらも実.">
+    <meta name="twitter:title" content="最近のDynamoDB設計事情：single-table偏重の見直しとGSIマルチ属性キー">
+    <meta name="twitter:description" content="はじめに DynamoDBには長らく「できるだけ1つのテーブルにまとめろ（single-table design）」という強いベストプラクティスがありました。 しかしここ最近、現場では「本当にそうか？」という揺り戻しが起きています。 さらに昨年末（2025年11月）、AW.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "MySQLのオプティマイザが行うanti-joinって何？",
-        "description": "はじめに 「相関サブクエリはパフォーマンスが悪いから基本的に使わない」と言われて以来、特に疑問など持たずになるべく相関サブクエリは使わないようにしていました。 ですが、最近AIに作ってもらったSQLを検証していたとき、「おいおい相関サブクエリあるじゃーん」と思いながらも実.",
+        "headline": "最近のDynamoDB設計事情：single-table偏重の見直しとGSIマルチ属性キー",
+        "description": "はじめに DynamoDBには長らく「できるだけ1つのテーブルにまとめろ（single-table design）」という強いベストプラクティスがありました。 しかしここ最近、現場では「本当にそうか？」という揺り戻しが起きています。 さらに昨年末（2025年11月）、AW.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-24T01:51:25",
-        "dateModified": "2026-06-24T23:05:03.280538",
+        "datePublished": "2026-07-10T00:58:58",
+        "dateModified": "2026-07-11T22:49:45.029487",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1687.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1687.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","本"]
+        "articleSection": "その他",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "MySQLのオプティマイザが行うanti-joinって何？",
+                "name": "最近のDynamoDB設計事情：single-table偏重の見直しとGSIマルチ属性キー",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1687.html"
             }
         ]
@@ -113,25 +113,24 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">MySQLのオプティマイザが行うanti-joinって何？</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">最近のDynamoDB設計事情：single-table偏重の見直しとGSIマルチ属性キー</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>MySQLのオプティマイザが行うanti-joinって何？</h1>
+                <h1>最近のDynamoDB設計事情：single-table偏重の見直しとGSIマルチ属性キー</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/hamham999/items/fdbf89cb4ee253b6d34e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-24T01:51:25">
-                        公開: 2026-06-24T01:51:25
+                    <span class="source">出典: <a href="https://qiita.com/Suemura/items/ce4cb4290e4e711fdc98?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-07-10T00:58:58">
+                        公開: 2026-07-10T00:58:58
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -140,12 +139,13 @@
                 
                 <div class="article-body">
                     はじめに
-「相関サブクエリはパフォーマンスが悪いから基本的に使わない」と言われて以来、特に疑問など持たずになるべく相関サブクエリは使わないようにしていました。
-ですが、最近AIに作ってもらったSQLを検証していたとき、「おいおい相関サブクエリあるじゃーん」と思いながらも実...
+DynamoDBには長らく「できるだけ1つのテーブルにまとめろ（single-table design）」という強いベストプラクティスがありました。
+しかしここ最近、現場では「本当にそうか？」という揺り戻しが起きています。
+さらに昨年末（2025年11月）、AW...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/hamham999/items/fdbf89cb4ee253b6d34e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/Suemura/items/ce4cb4290e4e711fdc98?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,16 +158,6 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">本 - Amazon検索結果</div>
@@ -177,37 +167,27 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +202,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_4260.html">
+                    <a href="Qiita_-_人気の記事_7157.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">MATECH、Qi2対応・360度回転スタンド搭載の新型モバイルバッテリー｢MagOn Watch ...</span>
+                        <span class="nav-title">15年前の『アジャイルサムライ』、AI時代に古びたのは&#34;作るコスト&#34;の教えだけだった</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_8326.html">
+                    <a href="Zennのトレンド_5328.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">MulmoClaudeで自分専用の天気アプリをVibe Craftingしてみた</span>
+                        <span class="nav-title">AI時代でも変わらない、業務自動化／効率化の考え方</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +224,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4473.html">
-                        <h3>Google DeepMindが映画スタジオA24に出資、映画制作AIツールを開発へ</h3>
+                    <a href="CNET_Japan_最新情報総合_520.html">
+                        <h3>2日続いた「モバイルSuica障害」、JR東日本が運賃払い戻しを発表　原因も明らかに</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">熱狂的なファンを持つ映画制作会社A24はAI開発企業Google DeepMindと提携し、社内の映画製作者向けのAIツールを開発するという。.</p>
+                        <p class="related-summary">JR東日本は7月10日、6月30日と7月1日に発生したモバイルSuica障害の原因と対策を発表した。障害の影響で定期券などを買えず、やむを得ずきっぷや他のICカードで支払った人には、専用フォームからの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8044.html">
-                        <h3>OpenAI、Getty Imagesと提携--その内容とは</h3>
+                    <a href="CNET_Japan_最新情報総合_1220.html">
+                        <h3>自動運転車の「ハンドルなし」解禁へ？米NHTSA長官が規制見直しを示唆</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ゲッティイメージズ（Getty Images）は6月21日、OpenAIとの提携を発表した。ChatGPTで検索や調べ物をしたときに、同社がライセンスを管理する写真や映像が表示されるようになる。.</p>
+                        <p class="related-summary">米国の自動車安全規制当局のトップの意向が通れば、近い将来、自動運転車にはブレーキペダルやハンドルが不要になるかもしれない。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5442.html">
-                        <h3>ワールドカップをAIでもっと楽しむ！ChatGPTとグーグルの最新ツール活用法</h3>
+                    <a href="CNET_Japan_最新情報総合_2534.html">
+                        <h3>忙しい共働き世帯へ、「時短調理家電」5選　エアフライヤーから電気鍋まで</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIとグーグルは、ワールドカップを存分に楽しめるよう、ChatGPTや検索などでファン向けの体験を提供している。.</p>
+                        <p class="related-summary">共働きで忙しい現在の家庭では、できる限り家事の省力化を図りたい。中でも料理は毎日3食欠かせないものだけに最も負荷が大きい。そこで時短家電を使って、一気に料理の手間をなくしてしまおう。ポイントは美味しさ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4383.html">
-                        <h3>AI開発「Anthropic優勢」報道、OpenAIに賭けるソフトバンクは大丈夫？ 孫正義氏が回答</h3>
+                    <a href="ASCII_jp__トップ_7400.html">
+                        <h3>雨の日の強い味方！ ミズノME-05 GTX3 ウォーキングシューズが11,549円から／Amazon</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">6月23日に開かれたソフトバンクの株主総会で、株主から「AI開発でAnthropicがリードしているとの報道もある。ソフトバンクはOpenAIとの関係が強いが、大丈夫なのか」という質問が出た。これに対...</p>
+                        <p class="related-summary">ミズノのME-05 GTX3はGORE-TEX素材採用で防水・透湿性を備えたウォーキングシューズ。普段使いもできるシンプルかつ機能的なデザインで、雨の日の通勤や外出に最適。30%オフなどプライムデーの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3780.html">
-                        <h3>メルカリ、ChatGPTで「商品の検索」「出品の下書き」が可能に　AIネイティブ加速</h3>
+                    <a href="気になる記になる_4589.html">
+                        <h3>【3日間限定セール】Kindleストアで集英社のマンガの半額セールがスタート ｰ 対象タイトルの全巻対象&amp;｢キャプテン翼...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">メルカリは6月23日、OpenAIが提供する「ChatGPT」上でフリマアプリ「メルカリ」を使えるようにしたと発表した。ChatGPTと会話しながら、メルカリに出品された商品を探したり、自分が出品する...</p>
+                        <p class="related-summary">AmazonのKindleストアで、本日より集英社のマンガタイトルが50％オフになる3日間限定セールがスタートしました。 セールでは、商品詳細ページにKindle価格の50%分のクーポン割引が表示され...</p>
                     </a>
                 </article>
             </div>

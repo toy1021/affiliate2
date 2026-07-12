@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS大解剖 2日目: 「文書とボックス木」 | 日本のテックニュース速報</title>
-    <meta name="description" content="本稿は、2024年2月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/21)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください">
-    <meta name="keywords" content="本">
+    <title>純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる | 日本のテックニュース速報</title>
+    <meta name="description" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。">
+    <meta name="keywords" content="React">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="CSS大解剖 2日目: 「文書とボックス木」">
-    <meta property="og:description" content="本稿は、2024年2月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/21)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください">
+    <meta property="og:title" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる">
+    <meta property="og:description" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4881.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CSS大解剖 2日目: 「文書とボックス木」">
-    <meta name="twitter:description" content="本稿は、2024年2月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/21)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください">
+    <meta name="twitter:title" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる">
+    <meta name="twitter:description" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "CSS大解剖 2日目: 「文書とボックス木」",
-        "description": "本稿は、2024年2月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/21)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください",
+        "headline": "純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる",
+        "description": "純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2025-09-21T02:58:06",
-        "dateModified": "2025-09-23T02:58:36.171271",
+        "datePublished": "2026-07-08T06:41:32",
+        "dateModified": "2026-07-12T02:47:32.551594",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4881.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4881.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "プログラミング",
+        "keywords": ["React"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "CSS大解剖 2日目: 「文書とボックス木」",
+                "name": "純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4881.html"
             }
         ]
@@ -113,44 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">CSS大解剖 2日目: 「文書とボックス木」</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>CSS大解剖 2日目: 「文書とボックス木」</h1>
+                <h1>純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/qnighy/articles/c80a3a3d8f3df4" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2025-09-21T02:58:06">
-                        公開: 2025-09-21T02:58:06
+                    <span class="source">出典: <a href="https://zenn.dev/kkeeth/articles/pure-function-referential-transparency-idempotency" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-07-08T06:41:32">
+                        公開: 2026-07-08T06:41:32
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">React</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本稿は、2024年2月頃に書き溜めていたシリーズです。最後まで温存させるのが勿体ないので、未完成ですがそのまま公開します(公開日: 2025/9/21)。そのため、内容の重複や記述方針の不一致があるかもしれませんが、ご理解ください。
+                    こんにちは．最近関数型プログラミングの概念をちゃんと理解したい欲が出てきました．Keeth こと桑原です．
+以前 「なぜ React 哲学を守らないといけないのか？」 という記事を書いたのですが，執筆中に純関数の定義に触れたとき，「これって冪等性のこと？いや，参照透過性？というか，そもそも自分はこの 2 つの概念の定義が曖昧かも…」という疑問がふっと浮かびました．良い機会なので，違いを整理してみます．コード例は今回も独断と偏見で TypeScript で書いています．
+※もし間違っている記述があればバンバンコメントいただけると嬉しいです 🙇‍♂️
 
-CSSの仕様を理解するために、1日ごとにテーマを決めて説明する企画2日目です。今日のテーマは「文書とボックス木」です。
+ TL;DR
 
- 文書
-CSSの処理モデルにおいて、 文書 (document) とはCSSのスタイルが適用される対象のことです。これはほとんどの場合HTML文書なので、以降では文書はHTML文書のことであるとします。
-
- DOM
-HTML文書の形式的...
+純関数・参照透過性・冪...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/qnighy/articles/c80a3a3d8f3df4" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/kkeeth/articles/pure-function-referential-transparency-idempotency" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,10 +161,30 @@ HTML文書の形式的...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -176,23 +194,23 @@ HTML文書の形式的...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -207,16 +225,16 @@ HTML文書の形式的...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_857.html">
+                    <a href="Publickey_468.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">CSS大解剖 1日目: 「仕様書」</span>
+                        <span class="nav-title">Visual Studio Code、従量課金制になったGitHub Copilotの使用料を表示可...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_8702.html">
+                    <a href="Zennのトレンド_9306.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">CSS大解剖 3日目: 「閲覧環境 1/3」</span>
+                        <span class="nav-title">Agent Skills自動最適化の研究、中身はほぼ深層学習の訓練ループだった</span>
                     </a>
                 </div>
             </div>
@@ -229,53 +247,53 @@ HTML文書の形式的...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1190.html">
-                        <h3>カフェのPC作業で「3画面」も実現？ 14型の外付けデュアルモニタが3万9980円で発売</h3>
+                    <a href="CNET_Japan_最新情報総合_2158.html">
+                        <h3>自動運転タクシーのWaymo、ラスベガスなど4都市に進出</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JAPANNEXTが14型デュアルモニター「JN-DMD-IPS14WX」を3万9980円で発売。重量1. 4kg、USB-Cケーブル1本で最大3画面環境を構築できる持ち運び可能なモバイルモニターだ。...</p>
+                        <p class="related-summary">自動運転車を開発するWaymoは、乗車サービスの提供地域にデンバー、サンディエゴ、ラスベガス、タンパの4都市を新たに追加した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4763.html">
-                        <h3>「えきねっと」「スマートEX」... バラバラなJR各社のネット予約、ついにログイン一元化へ</h3>
+                    <a href="CNET_Japan_最新情報総合_1515.html">
+                        <h3>携帯「060」番号、なぜ延期？　総務大臣が語った2つの要因</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JR4社がネット予約サービスの連携に乗り出す。JR東日本、JR東海、JR西日本、JR九州は、各社のネット予約サービスをつなぎ、利便性を高める取り組みを始めると発表した。JRのネット予約サービス間での本...</p>
+                        <p class="related-summary">林芳正総務大臣は閣議後記者会見で、携帯電話向け「060」番号の提供開始が延期された要因を説明した。一部の携帯電話端末が060番号を表示できず、ソフトウェアの更新が必要になっていること。加えて、通信事業...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1367.html">
-                        <h3>JR東日本、横浜線E233系で自動運転　運転士は「出発ボタン」を押すだけ　数十cm精度で駅に</h3>
+                    <a href="Zennのトレンド_7793.html">
+                        <h3>ループエンジニアリングをGitHub Copilotで組めるか調べてみた</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">JR東日本は、横浜線で使用しているE233系電車に自動列車運転装置（ATO）を導入すると発表した。対象となるのは、京浜東北線・根岸線の東神奈川駅〜大船駅を走る横浜線からの直通列車で、11月22日の始発...</p>
+                        <p class="related-summary">! 📋 この記事の前提 Superpowers導入記事、ponytail調査記事、共存記事のいずれかを読んだ GitHub Copilot CLIやClaude Codeなど、コーディングエージェント...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_3117.html">
-                        <h3>【セール】Amazonで紙の書籍が最大35％ポイント還元になる｢読書の秋 紙書籍ポイントキャンペーン｣が開催中</h3>
+                    <a href="Qiita_-_人気の記事_1127.html">
+                        <h3>新卒エンジニアが生きのこるために</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Amazonが、紙の書籍を対象とした「読書の秋 紙書籍ポイントキャンペーン」を開催しています。 本キャンペーンは、対象の紙の本のタイトルを最大35％ポイント還元で販売するもの。 対象のタイトル数は1,...</p>
+                        <p class="related-summary">はじめに こんにちは。とまと🍅好きのエンジニアです。 今回は、きのこカンファレンス2026（エンジニアがこの先生きのこるためのカンファレンス）に参加してきたので、その感想をアウトプットしようと思います...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9629.html">
-                        <h3>学童保育の基幹アプリとして機能するkintone　本職が作るとこうなる</h3>
+                    <a href="Zennのトレンド_6775.html">
+                        <h3>GitHub Actions の parallel でデプロイは8分→3分、CI はコスト3割減になった</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">「デジタル化が進んでいない学童運営にkintoneを導入し、根付かせるまでが私の挑戦でした」。仕事に忙しい保護者や職員に支えられている学童保育は、長らく紙だらけで、情報共有も難しかった。そんな現場をk...</p>
+                        <p class="related-summary">こんにちは、hatsu です。 先日、GitHub Actions で同じ job の中にある複数のステップを並列に実行できる parallel / background が 2026-06-25 に...</p>
                     </a>
                 </article>
             </div>

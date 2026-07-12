@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>『ADの横展開（ラテラルムーブメント）の技術』〜なぜドメイン管理者は気づかぬうちに陥落するのか〜 | 日本のテックニュース速報</title>
-    <meta name="description" content="要旨 Active Directory（AD）は企業ネットワークの中核として、認証・認可・リソース管理を一手に担います。その重要性ゆえに、ADは攻撃者にとって最も魅力的な標的でもあります。Verizon DBIRの2025年版によれば、侵害の74%が認証情報の窃取を伴っ.">
+    <title>SPAのContextとuseEffectについて理解を深める | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんにちは、ふくちと申します。 社内向けのWebアプリを作っていた時に、 一覧画面から詳細画面へ移動すると正常に見える ただ、同じ詳細画面のURLを新しいタブで開いたり、ブラウザをリロードしたりすると「見つかりません」と表示される という事象にぶつかりました.">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="『ADの横展開（ラテラルムーブメント）の技術』〜なぜドメイン管理者は気づかぬうちに陥落するのか〜">
-    <meta property="og:description" content="要旨 Active Directory（AD）は企業ネットワークの中核として、認証・認可・リソース管理を一手に担います。その重要性ゆえに、ADは攻撃者にとって最も魅力的な標的でもあります。Verizon DBIRの2025年版によれば、侵害の74%が認証情報の窃取を伴っ.">
+    <meta property="og:title" content="SPAのContextとuseEffectについて理解を深める">
+    <meta property="og:description" content="はじめに こんにちは、ふくちと申します。 社内向けのWebアプリを作っていた時に、 一覧画面から詳細画面へ移動すると正常に見える ただ、同じ詳細画面のURLを新しいタブで開いたり、ブラウザをリロードしたりすると「見つかりません」と表示される という事象にぶつかりました.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_659.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="『ADの横展開（ラテラルムーブメント）の技術』〜なぜドメイン管理者は気づかぬうちに陥落するのか〜">
-    <meta name="twitter:description" content="要旨 Active Directory（AD）は企業ネットワークの中核として、認証・認可・リソース管理を一手に担います。その重要性ゆえに、ADは攻撃者にとって最も魅力的な標的でもあります。Verizon DBIRの2025年版によれば、侵害の74%が認証情報の窃取を伴っ.">
+    <meta name="twitter:title" content="SPAのContextとuseEffectについて理解を深める">
+    <meta name="twitter:description" content="はじめに こんにちは、ふくちと申します。 社内向けのWebアプリを作っていた時に、 一覧画面から詳細画面へ移動すると正常に見える ただ、同じ詳細画面のURLを新しいタブで開いたり、ブラウザをリロードしたりすると「見つかりません」と表示される という事象にぶつかりました.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "『ADの横展開（ラテラルムーブメント）の技術』〜なぜドメイン管理者は気づかぬうちに陥落するのか〜",
-        "description": "要旨 Active Directory（AD）は企業ネットワークの中核として、認証・認可・リソース管理を一手に担います。その重要性ゆえに、ADは攻撃者にとって最も魅力的な標的でもあります。Verizon DBIRの2025年版によれば、侵害の74%が認証情報の窃取を伴っ.",
+        "headline": "SPAのContextとuseEffectについて理解を深める",
+        "description": "はじめに こんにちは、ふくちと申します。 社内向けのWebアプリを作っていた時に、 一覧画面から詳細画面へ移動すると正常に見える ただ、同じ詳細画面のURLを新しいタブで開いたり、ブラウザをリロードしたりすると「見つかりません」と表示される という事象にぶつかりました.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-06T00:50:49",
-        "dateModified": "2026-06-08T10:57:31.276817",
+        "datePublished": "2026-07-11T16:28:19",
+        "dateModified": "2026-07-12T14:58:18.960738",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_659.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_659.html",
-        "articleSection": "ビジネス・経済",
+        "articleSection": "テクノロジー",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "ビジネス・経済",
-                "item": "https://toy1021.github.io/affiliate2/#category=ビジネス・経済"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "『ADの横展開（ラテラルムーブメント）の技術』〜なぜドメイン管理者は気づかぬうちに陥落するのか〜",
+                "name": "SPAのContextとuseEffectについて理解を深める",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_659.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=ビジネス・経済">ビジネス・経済</a></li>
-                <li aria-current="page">『ADの横展開（ラテラルムーブメント）の技術』〜なぜドメイン管理者は気づかぬうちに陥落するのか〜</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">SPAのContextとuseEffectについて理解を深める</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>『ADの横展開（ラテラルムーブメント）の技術』〜なぜドメイン管理者は気づかぬうちに陥落するのか〜</h1>
+                <h1>SPAのContextとuseEffectについて理解を深める</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/suzukengo/items/a1341ae41bd79cd9d95d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: ビジネス・経済</span>
-                    <time datetime="2026-06-06T00:50:49">
-                        公開: 2026-06-06T00:50:49
+                    <span class="source">出典: <a href="https://qiita.com/har1101/items/01d1a3816852a135d6d9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-07-11T16:28:19">
+                        公開: 2026-07-11T16:28:19
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
@@ -135,12 +135,18 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    要旨
-　Active Directory（AD）は企業ネットワークの中核として、認証・認可・リソース管理を一手に担います。その重要性ゆえに、ADは攻撃者にとって最も魅力的な標的でもあります。Verizon DBIRの2025年版によれば、侵害の74%が認証情報の窃取を伴っ...
+                    はじめに
+こんにちは、ふくちと申します。
+社内向けのWebアプリを作っていた時に、
+
+一覧画面から詳細画面へ移動すると正常に見える
+ただ、同じ詳細画面のURLを新しいタブで開いたり、ブラウザをリロードしたりすると「見つかりません」と表示される
+
+という事象にぶつかりました...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/suzukengo/items/a1341ae41bd79cd9d95d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/har1101/items/01d1a3816852a135d6d9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -149,50 +155,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%95%E8%B3%87&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="投資 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">投資 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで投資に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ビジネス - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">ビジネス - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでビジネスに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>ビジネス・経済関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%95%E8%B3%87&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="投資 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">投資 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで投資に関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ビジネス - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ビジネス - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでビジネスに関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -207,16 +188,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_2338.html">
+                    <a href="Zennのトレンド_3766.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【セール】Kindleストアで｢集英社創業100周年記念セール｣の6月版が開催中｜対象のマンガタイト...</span>
+                        <span class="nav-title">Cloudflare Registrar + R2 で個人開発アプリの公開基盤を構築した記録</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_7546.html">
+                    <a href="Zennのトレンド_2293.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Xのコンテンツ泥棒対策の新機能｢メディア履歴｣のスクショや一部詳細が明らかに</span>
+                        <span class="nav-title">OpenFugu×ローカルLLM群でマルチAI駆動を検証① Multi-Agent System a...</span>
                     </a>
                 </div>
             </div>
@@ -229,23 +210,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_150.html">
-                        <h3>JALモバイルで「ahamo」利用可能に　ドコモと同額でマイル特典付き　25日から</h3>
+                    <a href="CNET_Japan_最新情報総合_7234.html">
+                        <h3>ドコモ、燃えにくい「準固体」モバイルバッテリー発売--不要バッテリーの無料回収も開始</h3>
                         <div class="related-meta">
-                            <span class="category">ビジネス・経済</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">日本航空（JAL）とNTTドコモは6月5日、「JALモバイル」でドコモの料金プラン「ahamo」を利用できる「JALモバイル powered by ahamo」を、2026年6月25日から提供すると共...</p>
+                        <p class="related-summary">NTTドコモは7月10日、電解質をゲル状にして発火リスクを抑えた「準固体モバイルバッテリー01M」を、全国のドコモショップとドコモオンラインショップで発売した。容量は10,000mAhで、カラーはホワ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_817.html">
-                        <h3>ヤマダとエディオンが経営統合へ　両ブランド名は当面存続</h3>
+                    <a href="CNET_Japan_最新情報総合_4810.html">
+                        <h3>「スター・ウォーズ」50周年の大展覧会、2027年開幕へ</h3>
                         <div class="related-meta">
-                            <span class="category">ビジネス・経済</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">家電量販店大手のヤマダホールディングス（ヤマダHD）とエディオンは6月5日、経営統合に向けた基本合意書を締結したと発表した。対等統合を基本方針とし、共同株式移転で持株会社を設立し、両社をその完全子会社...</p>
+                        <p class="related-summary">「スター・ウォーズ」50周年を記念する大展覧会が、2027年に開幕する。ダース・ベイダーの衣装、スピーダー・バイク、R2-D2のモデルなど、伝説的な品々を鑑賞できる。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_5314.html">
+                        <h3>家電ライターが厳選、戸建て住宅に向くロボット掃除機5選　時短＆水拭きも</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">戸建て住宅は2階建てや3階建てが多く、掃除の手間が増えがちだ。ロボット掃除機も自分で階段を上れないので、階違いで使う場合は、運ぶ必要がある。そこで今回は、比較的小型で2階や3階に持ち運んで使えるモデル...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_5029.html">
+                        <h3>11万円台はかなり狙い目！MS Office 2024搭載15.6型ノートがプライムデーで安い／16GBメモリ、512G...</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">Microsoft Office 2024搭載のHP 15. 6型ノートPCがAmazonでセール中です。Core 5、16GBメモリ、512GB SSD構成で114,800円です。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_9818.html">
+                        <h3>Core 7 350＆16GBメモリの充実PC「ASUS Vivobook 15」が15万円台で登場！／Amazonプラ...</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">6型ノートパソコン『Vivobook 15（X1504MA-C7165SIA）』がAmazonプライムデーで16％オフ。Intel Core 7 350、16GBメモリ搭載の高性能モデルが約1. 7k...</p>
                     </a>
                 </article>
             </div>

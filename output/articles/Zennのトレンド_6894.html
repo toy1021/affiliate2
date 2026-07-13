@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIエージェントが毎回データを取りに行く設計の限界 | 日本のテックニュース速報</title>
-    <meta name="description" content="AIエージェントが毎回データを取りに行く設計の限界 この記事は独立して読めます（約8分） 以前の記事「MCPの課題とナレッジグラフ」では、MCP/RAGアーキテクチャが抱えるscatter-gather問題（毎回バラバラのシステムに問い合わせて寄せ集める方式）を論じました">
-    <meta name="keywords" content="AI,本,EV">
+    <title>Goの並列処理を理解する ── Go Memory Modelとsync.Mutex/Onceの内部実装（第4回） | 日本のテックニュース速報</title>
+    <meta name="description" content="Goの並列処理を理解する ── Go Memory Modelとsync.Mutex/Onceの内部実装（第4回） - テクノロジーニュースをお届け。">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIエージェントが毎回データを取りに行く設計の限界">
-    <meta property="og:description" content="AIエージェントが毎回データを取りに行く設計の限界 この記事は独立して読めます（約8分） 以前の記事「MCPの課題とナレッジグラフ」では、MCP/RAGアーキテクチャが抱えるscatter-gather問題（毎回バラバラのシステムに問い合わせて寄せ集める方式）を論じました">
+    <meta property="og:title" content="Goの並列処理を理解する ── Go Memory Modelとsync.Mutex/Onceの内部実装（第4回）">
+    <meta property="og:description" content="Goの並列処理を理解する ── Go Memory Modelとsync.Mutex/Onceの内部実装（第4回） - テクノロジーニュースをお届け。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6894.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIエージェントが毎回データを取りに行く設計の限界">
-    <meta name="twitter:description" content="AIエージェントが毎回データを取りに行く設計の限界 この記事は独立して読めます（約8分） 以前の記事「MCPの課題とナレッジグラフ」では、MCP/RAGアーキテクチャが抱えるscatter-gather問題（毎回バラバラのシステムに問い合わせて寄せ集める方式）を論じました">
+    <meta name="twitter:title" content="Goの並列処理を理解する ── Go Memory Modelとsync.Mutex/Onceの内部実装（第4回）">
+    <meta name="twitter:description" content="Goの並列処理を理解する ── Go Memory Modelとsync.Mutex/Onceの内部実装（第4回） - テクノロジーニュースをお届け。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIエージェントが毎回データを取りに行く設計の限界",
-        "description": "AIエージェントが毎回データを取りに行く設計の限界 この記事は独立して読めます（約8分） 以前の記事「MCPの課題とナレッジグラフ」では、MCP/RAGアーキテクチャが抱えるscatter-gather問題（毎回バラバラのシステムに問い合わせて寄せ集める方式）を論じました",
+        "headline": "Goの並列処理を理解する ── Go Memory Modelとsync.Mutex/Onceの内部実装（第4回）",
+        "description": "Goの並列処理を理解する ── Go Memory Modelとsync.Mutex/Onceの内部実装（第4回） - テクノロジーニュースをお届け。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-24T08:44:07",
-        "dateModified": "2026-05-26T15:30:43.536950",
+        "datePublished": "2026-07-12T12:05:50",
+        "dateModified": "2026-07-13T20:58:35.874280",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6894.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6894.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","本","EV"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIエージェントが毎回データを取りに行く設計の限界",
+                "name": "Goの並列処理を理解する ── Go Memory Modelとsync.Mutex/Onceの内部実装（第4回）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6894.html"
             }
         ]
@@ -113,47 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIエージェントが毎回データを取りに行く設計の限界</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Goの並列処理を理解する ── Go Memory Modelとsync.Mutex/Onceの内部...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIエージェントが毎回データを取りに行く設計の限界</h1>
+                <h1>Goの並列処理を理解する ── Go Memory Modelとsync.Mutex/Onceの内部実装（第4回）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/knowledge_graph/articles/kg-agent-memory-first-design" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-24T08:44:07">
-                        公開: 2026-05-24T08:44:07
+                    <span class="source">出典: <a href="https://zenn.dev/wakame_atsushi/articles/0c512954a1698b" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-07-12T12:05:50">
+                        公開: 2026-07-12T12:05:50
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">本</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    AIエージェントが毎回データを取りに行く設計の限界
+                    はじめに
+今回はMutexとOnceの内部実装を読み、atomicは設計の考え方を押さえます。
+Go の公式仕様には The Go Memory Model というものがあります。
+これは、「ある goroutine の書き込みを、別の goroutine の読み込みがいつ観測してよいか」を happens-before という関係で定めているものです。
+そしてその関係を実際に作り出すのが、上記3つやchannelになります。
 
-この記事は独立して読めます（約8分）
-
-以前の記事「MCPの課題とナレッジグラフ」では、MCP/RAGアーキテクチャが抱えるscatter-gather問題（毎回バラバラのシステムに問い合わせて寄せ集める方式）を論じました。また「特許から読むDevRevの思想」では、その背景にある設計思想を特許から読み解きました。本記事ではその設計回答、すなわち「ではどう設計するか」を具体的に示します。
-
-
- 問題：PoCは動くが、本番では使われない
-「AIエージェントのPoCは動いたのに、本番に出すと遅い・不正確・使われない」
-日本のエンジニア...
+ 同期なしの共有変数はなぜ危ういか
+まず、同期を外した共有変数がどう壊れるかを見ます。
+2 つの goroutine が、次のように動くとします。最初 da...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/knowledge_graph/articles/kg-agent-memory-first-design" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/wakame_atsushi/articles/0c512954a1698b" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,60 +156,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -230,16 +189,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_826.html">
+                    <a href="気になる記になる_6006.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【悲報】100万台のAIサービスをスキャンしたら「史上最悪のセキュリティ」だった件</span>
+                        <span class="nav-title">｢Insta360 Luna｣シリーズのシングルカメラモデル｢Insta360 Luna Pro｣が...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_9105.html">
+                    <a href="Zennのトレンド_7705.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AWS資格の価値は「誰が取ったか」で変わる</span>
+                        <span class="nav-title">オンチェーン金融って、結局なんだろう──政府の構想から考える</span>
                     </a>
                 </div>
             </div>
@@ -252,53 +211,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_1926.html">
-                        <h3>Docker専用のAIエージェント「Gordon」が正式リリース。Dockerについて何でも答えてくれてエラーも修正して...</h3>
+                    <a href="CNET_Japan_最新情報総合_787.html">
+                        <h3>「スター・ウォーズ」50周年の大展覧会、2027年開幕へ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Docker社は、Docker DesktopとDocker CLIの新機能として、Dockerに関する質問への回答やベストプラクティスの提案、エラーの修正対応などを行ってくれるAIエージェント「Go...</p>
+                        <p class="related-summary">「スター・ウォーズ」50周年を記念する大展覧会が、2027年に開幕する。ダース・ベイダーの衣装、スピーダー・バイク、R2-D2のモデルなど、伝説的な品々を鑑賞できる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_140.html">
-                        <h3>データセンターを渇望するAI企業、反発する住民　米調査で浮き彫りに</h3>
+                    <a href="CNET_Japan_最新情報総合_38.html">
+                        <h3>家電ライターが厳選、戸建て住宅に向くロボット掃除機5選　時短＆水拭きも</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">人工知能（AI）を支えるため、演算用の大量の電力と冷却用の水を消費するデータセンターの建設に対し、地元の反発が強まっている。.</p>
+                        <p class="related-summary">戸建て住宅は2階建てや3階建てが多く、掃除の手間が増えがちだ。ロボット掃除機も自分で階段を上れないので、階違いで使う場合は、運ぶ必要がある。そこで今回は、比較的小型で2階や3階に持ち運んで使えるモデル...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7351.html">
-                        <h3>ローマ教皇レオ14世、AIめぐる初の回勅　巨大テックに「武装解除」を迫る</h3>
+                    <a href="ASCII_jp__トップ_8989.html">
+                        <h3>RTX 5090搭載BTOゲーミングPCが13万7000円引き　パソコンショップSEVENの24時間限定セール</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ローマ教皇レオ14世が5月25日、人工知能（AI）をテーマにした初の回勅を発表した。タイトルは「マグニフィカ・フマニタス（『輝かしき人間性』の意）」。4万2300語に及ぶこの文書は、AIの規制と、人類...</p>
+                        <p class="related-summary">パソコンショップSEVENを運営するセブンアールジャパンが、7月14日限定で最大137,000円オフとなるBTOパソコンセールを実施する。GeForce RTX 5090搭載モデルを含む全10商品が対...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8948.html">
-                        <h3>「ChatGPT for PowerPoint」ベータ版公開　白紙からパワポのスライド作成も</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3131.html">
+                        <h3>EUも子のSNS制限へ 13歳未満対象</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">OpenAIは米国時間5月21日、Microsoft PowerPoint上でChatGPTを利用できる「ChatGPT for PowerPoint」のベータ版を公開した。スライドの新規作成や既存ス...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7840.html">
-                        <h3>ChatGPTに相談したら意図せぬ結果に　巨人・阿部監督辞任、娘の手紙全文</h3>
+                    <a href="ASCII_jp__トップ_1308.html">
+                        <h3>【プライムデーの最後の買い物に】赤いきつねと緑のたぬき、東西両バージョン食べ比べ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">プロ野球・読売ジャイアンツの阿部慎之助監督（47）が長女への暴行容疑で逮捕・釈放され、5月26日に辞任した。同日の記者会見で、代理人を通じて長女本人による手紙が読み上げられた。手紙のなかで長女は、児童...</p>
+                        <p class="related-summary">残り時間わずかのプライムデー。最後の買い物におすすめなのが、カップ麺のまとめ買い。しかもここは一捻りして、マルちゃんの「赤いきつね」「緑のたぬき」東西両バージョンをともに購入してはどうでしょうか？.</p>
                     </a>
                 </article>
             </div>

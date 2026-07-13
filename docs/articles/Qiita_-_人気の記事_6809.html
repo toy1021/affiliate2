@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIモデルを軽量化する技術 ー 量子化（Quantization）とは？仕組みから試し方までを非エンジニア向けに解説 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 「量子化（Quantization）」という言葉を、最近よく見かけるようになりました。 ChatGPT のような大規模言語モデル（LLM）を、自分のパソコンやスマホで動かす話題と一緒に語られることが多い言葉です。 ただ、名前がなんだか難しそうで、「量子コンピュー.">
-    <meta name="keywords" content="AI,ChatGPT,GPT,LLM,スマホ">
+    <title>もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 新しいLLMがリリースされるたびに、モデルカード・ベンチマーク結果・SNS上の賛否が一斉に流れてきます。 そのたびに「うちのプロダクトは乗り換えるべきか」を判断させられるのですが、この判断は考えれば考えるほど難しい問題だと感じています。 この記事は、Anthro.">
+    <meta name="keywords" content="Claude,LLM,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIモデルを軽量化する技術 ー 量子化（Quantization）とは？仕組みから試し方までを非エンジニア向けに解説">
-    <meta property="og:description" content="はじめに 「量子化（Quantization）」という言葉を、最近よく見かけるようになりました。 ChatGPT のような大規模言語モデル（LLM）を、自分のパソコンやスマホで動かす話題と一緒に語られることが多い言葉です。 ただ、名前がなんだか難しそうで、「量子コンピュー.">
+    <meta property="og:title" content="もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方">
+    <meta property="og:description" content="はじめに 新しいLLMがリリースされるたびに、モデルカード・ベンチマーク結果・SNS上の賛否が一斉に流れてきます。 そのたびに「うちのプロダクトは乗り換えるべきか」を判断させられるのですが、この判断は考えれば考えるほど難しい問題だと感じています。 この記事は、Anthro.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6809.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIモデルを軽量化する技術 ー 量子化（Quantization）とは？仕組みから試し方までを非エンジニア向けに解説">
-    <meta name="twitter:description" content="はじめに 「量子化（Quantization）」という言葉を、最近よく見かけるようになりました。 ChatGPT のような大規模言語モデル（LLM）を、自分のパソコンやスマホで動かす話題と一緒に語られることが多い言葉です。 ただ、名前がなんだか難しそうで、「量子コンピュー.">
+    <meta name="twitter:title" content="もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方">
+    <meta name="twitter:description" content="はじめに 新しいLLMがリリースされるたびに、モデルカード・ベンチマーク結果・SNS上の賛否が一斉に流れてきます。 そのたびに「うちのプロダクトは乗り換えるべきか」を判断させられるのですが、この判断は考えれば考えるほど難しい問題だと感じています。 この記事は、Anthro.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIモデルを軽量化する技術 ー 量子化（Quantization）とは？仕組みから試し方までを非エンジニア向けに解説",
-        "description": "はじめに 「量子化（Quantization）」という言葉を、最近よく見かけるようになりました。 ChatGPT のような大規模言語モデル（LLM）を、自分のパソコンやスマホで動かす話題と一緒に語られることが多い言葉です。 ただ、名前がなんだか難しそうで、「量子コンピュー.",
+        "headline": "もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方",
+        "description": "はじめに 新しいLLMがリリースされるたびに、モデルカード・ベンチマーク結果・SNS上の賛否が一斉に流れてきます。 そのたびに「うちのプロダクトは乗り換えるべきか」を判断させられるのですが、この判断は考えれば考えるほど難しい問題だと感じています。 この記事は、Anthro.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-27T11:31:02",
-        "dateModified": "2026-06-28T10:29:38.388536",
+        "datePublished": "2026-07-13T02:05:47",
+        "dateModified": "2026-07-13T22:57:23.827504",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6809.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6809.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","ChatGPT","GPT","LLM","スマホ"]
+        "keywords": ["Claude","LLM","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIモデルを軽量化する技術 ー 量子化（Quantization）とは？仕組みから試し方までを非エンジニア向けに解説",
+                "name": "もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6809.html"
             }
         ]
@@ -114,28 +114,26 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIモデルを軽量化する技術 ー 量子化（Quantization）とは？仕組みから試し方までを非エン...</li>
+                <li aria-current="page">もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIモデルを軽量化する技術 ー 量子化（Quantization）とは？仕組みから試し方までを非エンジニア向けに解説</h1>
+                <h1>もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/5f93e41741216b829102?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/6cd8c6ea583221e45def?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-27T11:31:02">
-                        公開: 2026-06-27T11:31:02
+                    <time datetime="2026-07-13T02:05:47">
+                        公開: 2026-07-13T02:05:47
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">ChatGPT</span>
-                    <span class="tag">GPT</span>
+                    <span class="tag">Claude</span>
                     <span class="tag">LLM</span>
-                    <span class="tag">スマホ</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
@@ -143,13 +141,13 @@
                 
                 <div class="article-body">
                     はじめに
-「量子化（Quantization）」という言葉を、最近よく見かけるようになりました。
-ChatGPT のような大規模言語モデル（LLM）を、自分のパソコンやスマホで動かす話題と一緒に語られることが多い言葉です。
-ただ、名前がなんだか難しそうで、「量子コンピュー...
+新しいLLMがリリースされるたびに、モデルカード・ベンチマーク結果・SNS上の賛否が一斉に流れてきます。
+そのたびに「うちのプロダクトは乗り換えるべきか」を判断させられるのですが、この判断は考えれば考えるほど難しい問題だと感じています。
+この記事は、Anthro...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/nogataka/items/5f93e41741216b829102?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/nogataka/items/6cd8c6ea583221e45def?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,30 +160,30 @@ ChatGPT のような大規模言語モデル（LLM）を、自分のパソコン
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=ChatGPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ChatGPT - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ChatGPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでChatGPTに関連する商品をチェック</div>
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +224,16 @@ ChatGPT のような大規模言語モデル（LLM）を、自分のパソコン
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7217.html">
+                    <a href="Zennのトレンド_4819.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【Copilot Studio基礎編】コスト・ライセンス管理のロードマップ</span>
+                        <span class="nav-title">Critを導入したらコーディングAIへのフィードバックがとても楽になった</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9434.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_7867.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Antigravity SDKを触って、ようやく「自分用Antigravityを作る部品」だと少し見...</span>
+                        <span class="nav-title">日本なぜAIで遅れ 巻き返しの鍵は</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +246,53 @@ ChatGPT のような大規模言語モデル（LLM）を、自分のパソコン
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3152.html">
-                        <h3>Meta、従業員のPC追跡を停止　AI学習目的も「全社に丸見え」</h3>
+                    <a href="CNET_Japan_最新情報総合_740.html">
+                        <h3>「Claude Fable 5」、7月20日までサブスク内で利用可能に--13日から再延長</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Metaが従業員のキー入力やマウスクリック、閲覧コンテンツを追跡し、AIモデルの訓練に活用していた物議を醸す監視ツールは、計画通りにはいかなかったようだ。.</p>
+                        <p class="related-summary">米Anthropicは、AIモデル「Claude Fable 5」を有料サブスクリプションの範囲内で追加料金なく使えるプロモーションの期限を、7月19日まで再延長した。ヘルプセンターで明らかにしたもの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7660.html">
-                        <h3>OpenAIにChatGPTのチャット履歴提出を命令へ、「証拠になり得る」と米裁判所</h3>
+                    <a href="CNET_Japan_最新情報総合_3077.html">
+                        <h3>OpenAI独自ブラウザー「ChatGPT Atlas」、8月に提供終了へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">仮想通貨スタートアップZero Edgeの元CEOをめぐる詐欺事件で、米連邦判事は、検察が被告の「ChatGPT」アカウント記録の提出をOpenAIに命じることを認める判断を下した。.</p>
+                        <p class="related-summary">OpenAIがウェブブラウザー市場でグーグルの「Chrome」やMozillaの「Firefox」を打ち負かすことはなさそうだ。同社は「ChatGPT Atlas」の提供を終了すると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6427.html">
-                        <h3>ソニー、「aibo」国内販売を終了　在庫がなくなり次第</h3>
+                    <a href="CNET_Japan_最新情報総合_9804.html">
+                        <h3>アップル、OpenAIを営業秘密の窃盗で提訴</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ソニーグループとソニーマーケティングは6月25日、犬型ロボット「aibo（アイボ）」の国内販売を終了すると発表した。在庫がなくなり次第、販売を終える。対象は現行モデル「ERS-1000」。.</p>
+                        <p class="related-summary">アップルは、「ChatGPT」を開発するOpenAIに加え、2人の個人を営業秘密の窃取で提訴した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7102.html">
-                        <h3>AIでガソリン価格をつり上げか、BPやウォルマートなど大手に集団訴訟</h3>
+                    <a href="CNET_Japan_最新情報総合_2113.html">
+                        <h3>「ChatGPTワーク」提供開始　Claude Coworkの対抗機能がついに登場</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ここ数カ月でガソリン価格が高騰し、家計への圧迫を感じているカリフォルニア州民は、このほど提起された集団訴訟が認められれば、何らかの救済措置を得られる可能性がある。.</p>
+                        <p class="related-summary">米OpenAIは7月9日（現地時間）、新しい業務用エージェント「ChatGPT Work」（ChatGPTワーク）を発表した。ChatGPTに組み込まれ、SlackやGoogle Driveなどの業務...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9894.html">
-                        <h3>OpenAI、ミュトス対抗「GPT-5.6」発表　Sol・Terra・Lunaの3モデル、一般提供は数週間後</h3>
+                    <a href="CNET_Japan_最新情報総合_8039.html">
+                        <h3>グーグル、「AI生成の広告」を見分ける新機能を追加</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米OpenAIは6月26日（米国時間）、次世代モデル「GPT-5. 6」シリーズを発表した。最上位の「Sol」、日常業務向けの「Terra」、低価格の「Luna」という3モデルをそろえる。数週間のうち...</p>
+                        <p class="related-summary">グーグルは、広告が生成AIを使用して作成されたものかどうかをユーザーが識別できるようにする新機能を発表した。.</p>
                     </a>
                 </article>
             </div>

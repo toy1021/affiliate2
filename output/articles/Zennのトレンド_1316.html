@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ところで、Rustのtrait/型システムもチューリング完全らしいのでフィボナッチ数列求めてみた | 日本のテックニュース速報</title>
-    <meta name="description" content="dev/oumi0804/articles/450d54afafa303 ! 追記: かなりの内容がYOSHIMURA YuuさんのRustで型レベルプログラミングと被っています。 Whileの実装やLeanとの対比などは独自内容になっていますが、こちらの偉大な先人の記事もご参照ください">
-    <meta name="keywords" content="AI,EV">
+    <title>純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる | 日本のテックニュース速報</title>
+    <meta name="description" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。">
+    <meta name="keywords" content="React">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ところで、Rustのtrait/型システムもチューリング完全らしいのでフィボナッチ数列求めてみた">
-    <meta property="og:description" content="dev/oumi0804/articles/450d54afafa303 ! 追記: かなりの内容がYOSHIMURA YuuさんのRustで型レベルプログラミングと被っています。 Whileの実装やLeanとの対比などは独自内容になっていますが、こちらの偉大な先人の記事もご参照ください">
+    <meta property="og:title" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる">
+    <meta property="og:description" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1316.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ところで、Rustのtrait/型システムもチューリング完全らしいのでフィボナッチ数列求めてみた">
-    <meta name="twitter:description" content="dev/oumi0804/articles/450d54afafa303 ! 追記: かなりの内容がYOSHIMURA YuuさんのRustで型レベルプログラミングと被っています。 Whileの実装やLeanとの対比などは独自内容になっていますが、こちらの偉大な先人の記事もご参照ください">
+    <meta name="twitter:title" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる">
+    <meta name="twitter:description" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ところで、Rustのtrait/型システムもチューリング完全らしいのでフィボナッチ数列求めてみた",
-        "description": "dev/oumi0804/articles/450d54afafa303 ! 追記: かなりの内容がYOSHIMURA YuuさんのRustで型レベルプログラミングと被っています。 Whileの実装やLeanとの対比などは独自内容になっていますが、こちらの偉大な先人の記事もご参照ください",
+        "headline": "純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる",
+        "description": "純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-13T15:24:43",
-        "dateModified": "2026-04-15T22:43:17.098484",
+        "datePublished": "2026-07-08T06:41:32",
+        "dateModified": "2026-07-13T22:57:23.824714",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1316.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1316.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","EV"]
+        "articleSection": "プログラミング",
+        "keywords": ["React"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ところで、Rustのtrait/型システムもチューリング完全らしいのでフィボナッチ数列求めてみた",
+                "name": "純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1316.html"
             }
         ]
@@ -113,49 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">ところで、Rustのtrait/型システムもチューリング完全らしいのでフィボナッチ数列求めてみた</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ところで、Rustのtrait/型システムもチューリング完全らしいのでフィボナッチ数列求めてみた</h1>
+                <h1>純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/saqula/articles/2361ce8de47570" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-04-13T15:24:43">
-                        公開: 2026-04-13T15:24:43
+                    <span class="source">出典: <a href="https://zenn.dev/kkeeth/articles/pure-function-referential-transparency-idempotency" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-07-08T06:41:32">
+                        公開: 2026-07-08T06:41:32
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">EV</span>
+                    <span class="tag">React</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    前作はこちら
-https://zenn.dev/oumi0804/articles/450d54afafa303
+                    こんにちは．最近関数型プログラミングの概念をちゃんと理解したい欲が出てきました．Keeth こと桑原です．
+以前 「なぜ React 哲学を守らないといけないのか？」 という記事を書いたのですが，執筆中に純関数の定義に触れたとき，「これって冪等性のこと？いや，参照透過性？というか，そもそも自分はこの 2 つの概念の定義が曖昧かも…」という疑問がふっと浮かびました．良い機会なので，違いを整理してみます．コード例は今回も独断と偏見で TypeScript で書いています．
+※もし間違っている記述があればバンバンコメントいただけると嬉しいです 🙇‍♂️
 
-!
-追記: かなりの内容がYOSHIMURA YuuさんのRustで型レベルプログラミングと被っています。
-Whileの実装やLeanとの対比などは独自内容になっていますが、こちらの偉大な先人の記事もご参照ください。
+ TL;DR
 
-https://zenn.dev/yyu/articles/1eefb8f547dc1b
-!
-4/14: Whileを使ったフィボナッチ関数の実装について加筆しました。
-実際のコードは以下のgistを参照してください。
-
-https://gist.githu...
+純関数・参照透過性・冪...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/saqula/articles/2361ce8de47570" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/kkeeth/articles/pure-function-referential-transparency-idempotency" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -168,30 +161,30 @@ https://gist.githu...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -201,23 +194,23 @@ https://gist.githu...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -232,16 +225,16 @@ https://gist.githu...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_5166.html">
+                    <a href="Publickey_3313.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AIコーディング時代に必要なプログラミングスキル</span>
+                        <span class="nav-title">Visual Studio Code、従量課金制になったGitHub Copilotの使用料を表示可...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Publickey_9418.html">
+                    <a href="Zennのトレンド_9962.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AWS App Runnerが4月30日で新規受付停止、メンテナンスモードへ。Amazon RDS ...</span>
+                        <span class="nav-title">Agent Skills自動最適化の研究、中身はほぼ深層学習の訓練ループだった</span>
                     </a>
                 </div>
             </div>
@@ -254,53 +247,53 @@ https://gist.githu...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8546.html">
-                        <h3>OpenAIが「GPT-5.4-Cyber」発表、「ChatGPT」で利用できない理由とは</h3>
+                    <a href="CNET_Japan_最新情報総合_9700.html">
+                        <h3>ジブリやポケモンに着想、「宙をふわふわ飛ぶ柔らかいロボット」を慶大らが開発【動画】</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは新しいAIモデル「GPT-5. 4-Cyber」を開発したが、これは一般ユーザーが「ChatGPT」で利用できるものではない。.</p>
+                        <p class="related-summary">ティンカー・ベルやミュウ、スタジオジブリのススワタリなど、アニメに登場する飛ぶキャラクターにヒントを得て、ある研究チームが浮遊するコンパニオンロボットのプロジェクトを立ち上げた。慶應義塾大学やMITメ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5014.html">
-                        <h3>「JR東日本グループ AIポリシー」策定　その中身は</h3>
+                    <a href="CNET_Japan_最新情報総合_4043.html">
+                        <h3>冷水で5分の「冷やしカップヌードル」7月20日発売　開発に丸5年</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JR東日本は4月15日、グループ横断で適用する「JR東日本グループ AIポリシー」を策定したと発表した。AI活用の拡大に向けた方針を示すとともに、「人間の判断を介在させる仕組み」や「予期せぬ動作に対す...</p>
+                        <p class="related-summary">日清食品は7月13日、冷水専用の「冷しカップヌードル」2品を発表した。お湯の代わりに、冷蔵庫で冷やした水を注いで5分待つと食べられる。発売55年目のブランド史上、初めて「熱湯禁止」をうたう商品だ。7月...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4353.html">
-                        <h3>人のように財布へお金を入れる--次世代AIが「ロボットの器用さ」を劇的に変える</h3>
+                    <a href="CNET_Japan_最新情報総合_1231.html">
+                        <h3>「タトゥー」で発電、ウェアラブルの電源に--米大学が開発</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">洗濯物を畳む、箱を組み立てる、他のロボットを修理する、さらには薄い紙幣を財布にしまうといった一連の動作を可能にする、新しいAIモデルが登場した。.</p>
+                        <p class="related-summary">米ペンシルベニア州立大学の研究チームは7月13日（現地時間）、皮膚に直接塗って電極として使える導電性インクを開発したと発表した。絵の具のように肌へ好きなデザインを描け、乾けば脳波計（EEG）や心電計（...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8928.html">
-                        <h3>Claudeで「画像編集AI」が利用可能に　Adobeと提携</h3>
+                    <a href="iPhone_Mania_4995.html">
+                        <h3>M7シリーズ 4種類とM8が開発中〜1.4nmプロセスに移行見込み</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">Adobeは、ユーザーの指示を基に自律的に作業を進める「エージェント型AI」への取り組みをさらに強化する。AI開発企業Anthropicとの提携拡大の一環として、同社は米国時間水曜日、最新の対話型クリ...</p>
+                        <p class="related-summary">AppleはMシリーズチップの開発を加速しており、M7シリーズではベースチップのM7に加え、M7 Pro、M7 Max、M7 Ultraも発売される見込みです。 さらに、その次世代となるM8の開発も進...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3698.html">
-                        <h3>業務改革AIプラットフォーム「SmartOps」、「AI需要予測」提供開始　売上・在庫・発注データなどもとにAIが意思決...</h3>
+                    <a href="Qiita_-_人気の記事_378.html">
+                        <h3>非エンジニア_はじめてのClaude Code CLI版応用編（Slack MCP）</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">デフィデ株式会社は4月8日に、同社が提供する業務改革AIプラットフォーム「SmartOps（スマートオプス）」において、アドオン機能「AI需要予測」の提供開始を発表した。同機能は、売上・在庫・発注など...</p>
+                        <p class="related-summary">自己紹介 縁あってエンジニアの方と近い距離でお仕事をしています。 開発メンバーに教えてもらいながら、Claude Code で業務効率を図るべくセットアップをしました。 本記事は、超初心者向けのセット...</p>
                     </a>
                 </article>
             </div>

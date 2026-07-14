@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinesis Data Streamsを使う前に知っておきたかったこと | 日本のテックニュース速報</title>
-    <meta name="description" content="数年前、急遽、Kinesis Data Streams（KDS）を使うことになりました。社内での使用実績はなく、当然、有識者もいません。手探りで調べるほかありませんでした。 なんとか完成にこぎつけ、幸い、大きなトラブルなく稼働しています">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>バラバラだった staleTime を、データの性質で選ぶ4プリセットに集約した | 日本のテックニュース速報</title>
+    <meta name="description" content="画面ごとにバラバラだった staleTime 設定を、データの性質で選ぶ4プリセットに集約した はじめに このブログは Dress Code Advent Calendar 2026/07 の 10本目の記事です。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Kinesis Data Streamsを使う前に知っておきたかったこと">
-    <meta property="og:description" content="数年前、急遽、Kinesis Data Streams（KDS）を使うことになりました。社内での使用実績はなく、当然、有識者もいません。手探りで調べるほかありませんでした。 なんとか完成にこぎつけ、幸い、大きなトラブルなく稼働しています">
+    <meta property="og:title" content="バラバラだった staleTime を、データの性質で選ぶ4プリセットに集約した">
+    <meta property="og:description" content="画面ごとにバラバラだった staleTime 設定を、データの性質で選ぶ4プリセットに集約した はじめに このブログは Dress Code Advent Calendar 2026/07 の 10本目の記事です。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6021.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kinesis Data Streamsを使う前に知っておきたかったこと">
-    <meta name="twitter:description" content="数年前、急遽、Kinesis Data Streams（KDS）を使うことになりました。社内での使用実績はなく、当然、有識者もいません。手探りで調べるほかありませんでした。 なんとか完成にこぎつけ、幸い、大きなトラブルなく稼働しています">
+    <meta name="twitter:title" content="バラバラだった staleTime を、データの性質で選ぶ4プリセットに集約した">
+    <meta name="twitter:description" content="画面ごとにバラバラだった staleTime 設定を、データの性質で選ぶ4プリセットに集約した はじめに このブログは Dress Code Advent Calendar 2026/07 の 10本目の記事です。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Kinesis Data Streamsを使う前に知っておきたかったこと",
-        "description": "数年前、急遽、Kinesis Data Streams（KDS）を使うことになりました。社内での使用実績はなく、当然、有識者もいません。手探りで調べるほかありませんでした。 なんとか完成にこぎつけ、幸い、大きなトラブルなく稼働しています",
+        "headline": "バラバラだった staleTime を、データの性質で選ぶ4プリセットに集約した",
+        "description": "画面ごとにバラバラだった staleTime 設定を、データの性質で選ぶ4プリセットに集約した はじめに このブログは Dress Code Advent Calendar 2026/07 の 10本目の記事です。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-27T05:02:32",
-        "dateModified": "2026-06-29T03:58:25.976526",
+        "datePublished": "2026-07-14T03:00:13",
+        "dateModified": "2026-07-14T15:24:38.719429",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6021.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6021.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "プログラミング",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Kinesis Data Streamsを使う前に知っておきたかったこと",
+                "name": "バラバラだった staleTime を、データの性質で選ぶ4プリセットに集約した",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6021.html"
             }
         ]
@@ -113,39 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">Kinesis Data Streamsを使う前に知っておきたかったこと</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">バラバラだった staleTime を、データの性質で選ぶ4プリセットに集約した</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Kinesis Data Streamsを使う前に知っておきたかったこと</h1>
+                <h1>バラバラだった staleTime を、データの性質で選ぶ4プリセットに集約した</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/aminevsky/articles/2f0a7ebcc0359b" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-06-27T05:02:32">
-                        公開: 2026-06-27T05:02:32
+                    <span class="source">出典: <a href="https://zenn.dev/dress_code/articles/78ce46997dfe96" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-07-14T03:00:13">
+                        公開: 2026-07-14T03:00:13
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    数年前、急遽、Kinesis Data Streams（KDS）を使うことになりました。社内での使用実績はなく、当然、有識者もいません。手探りで調べるほかありませんでした。
-なんとか完成にこぎつけ、幸い、大きなトラブルなく稼働しています。しかし完成後に知ったり理解できたことも多く、今となっては作り直したい気持ちが強いです。
-そこで、今回は KDS を使う前に知っておきたかったことをまとめたいと思います。
+                    画面ごとにバラバラだった staleTime 設定を、データの性質で選ぶ4プリセットに集約した
 
- ストリームは一時停止できない
-ストリームは起動しているだけで、コストが発生します。そのため、使っていないあいだは停止したいと思うのは当然のことです。
-しかし、ストリームには「有効／無...
+ はじめに
+このブログは Dress Code Advent Calendar 2026/07 の 10本目の記事です。
+こんにちは。ぷーじ（@yug1224）です。
+約7,500ファイル規模の TypeScript フロントエンドで、同じ「5分キャッシュ」のつもりなのにタブ復帰時の挙動が画面ごとに違う、という状態がずっと続いていました。新しい画面を作るたびに「この画面の staleTime は何分にするのが正解なんだっけ？」と手が止まる。この曖昧さを消したくて、TanStack Quer...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/aminevsky/articles/2f0a7ebcc0359b" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/dress_code/articles/78ce46997dfe96" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,25 +156,60 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -187,16 +224,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2638.html">
+                    <a href="iPhone_Mania_9653.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【初学者向け】Google AI Studioでwebアプリを作ってみよう</span>
+                        <span class="nav-title">iPhone18 Proの情報流出が突きつけたApple供給網の課題</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_7469.html">
+                    <a href="気になる記になる_7207.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Codeは「コードを書くAI」で終わらせるな：公式 document-skills で...</span>
+                        <span class="nav-title">CIO、薄型USB充電器を最新モデルにお得に乗り換えられる｢NovaPort SLIM DUOⅡ乗り...</span>
                     </a>
                 </div>
             </div>
@@ -209,53 +246,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5985.html">
-                        <h3>ドローン飛行禁止エリア、周囲300m→1000mに拡大　国会や空港・原発など対象</h3>
+                    <a href="Publickey_1504.html">
+                        <h3>より小さなソフトウェアエンジニアリングチームを、2029年までに60％の組織が本格展開するとの予測、ガートナー</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">ドローン飛行禁止エリア、主要施設の周囲「300m」→「1000m」に拡大 国会や空港・原発など対象.</p>
+                        <p class="related-summary">調査会社のガートナーは、2029年までに60％の組織がより小さなソフトウェアエンジニアリングチームを本格的に展開するだろうとの予測を発表しました。 人間とAIの強みを活かすためのチームの再編成 この背...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1379.html">
-                        <h3>夜空に描くW杯のスコアボード、どう実現？ 開催地シアトルでドローンショーの舞台裏を取材</h3>
+                    <a href="CNET_Japan_最新情報総合_1979.html">
+                        <h3>冷水で5分の「冷しカップヌードル」7月20日発売　開発に丸5年</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米シアトルでは、同市で開催されたワールドカップの試合結果をドローンで表現する、世界初のパフォーマンスが行われている。.</p>
+                        <p class="related-summary">日清食品は7月13日、冷水専用の「冷しカップヌードル」2品を発表した。お湯の代わりに、冷蔵庫で冷やした水を注いで5分待つと食べられる。発売55年目のブランド史上、初めて「熱湯禁止」をうたう商品だ。7月...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8303.html">
-                        <h3>JR九州の「SUGOCA」がスマホ対応　定期券も　モバイルICOCAの基盤活用</h3>
+                    <a href="CNET_Japan_最新情報総合_1766.html">
+                        <h3>「タトゥー」で発電、ウェアラブルの電源に--米大学が開発</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JR九州は6月25日、ICカード「SUGOCA」をスマートフォンで使えるサービスを2027年春に始めると発表した。駅に足を運ばなくても、スマホのアプリから定期券を買ったり、残高をチャージしたりできるよ...</p>
+                        <p class="related-summary">米ペンシルベニア州立大学の研究チームは7月13日（現地時間）、皮膚に直接塗って電極として使える導電性インクを開発したと発表した。絵の具のように肌へ好きなデザインを描け、乾けば脳波計（EEG）や心電計（...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2372.html">
-                        <h3>現場の施設情報、360度画像でまとめて管理　山下PMC「b-platform」がkintone連携強化</h3>
+                    <a href="CNET_Japan_最新情報総合_9447.html">
+                        <h3>太陽光を鏡で反射して「夜の地球を照らす」衛星打ち上げへ　一体何のため？</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">山下PMCは6月25日、施設情報を管理するクラウドサービス「b-platform」で、サイボウズの「kintone」との連携機能を強化したと発表した。複数のkintoneアプリにバラバラに入っていた設...</p>
+                        <p class="related-summary">米連邦通信委員会（FCC）は7月9日（現地時間）、鏡で太陽光を反射して夜の地上を照らす衛星「Eärendil-1」の試験打ち上げを承認した。開発元は米宇宙企業Reflect Orbital。同社は将来...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2253.html">
-                        <h3>IBM、爪サイズに1000億個のトランジスタを搭載する0.7nmチップを発表</h3>
+                    <a href="Qiita_-_人気の記事_8709.html">
+                        <h3>【初めての技術広報】きのこカンファレンス2026 協賛＆イベントレポート</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">IBMは米国時間6月25日、同社の最新半導体技術を用いた初のチップを発表した。爪ほどの小さなハードウェアに、1000億個近くのトランジスタを搭載している。.</p>
+                        <p class="related-summary">弊社は、2026年6月28日に開催された 「エンジニアがこの先生きのこるためのカンファレンス2026（通称：きのこカンファレンス2026）」 に、はらぺこスポンサーとして協賛いたしました。 今年で2回...</p>
                     </a>
                 </article>
             </div>

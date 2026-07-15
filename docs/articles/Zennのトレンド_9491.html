@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM はマークダウンファイル全体を読んでいる。その必要はない。 | 日本のテックニュース速報</title>
-    <meta name="description" content="コーディングエージェントはマークダウンで書かれた仕様書や設計ドキュメント、長い README を日常的に読んでいる。だが必要なのはたいてい数セクションだけだ。それでもファイル全体をコンテキストに読み込んでしまう。 「ドキュメントを読んで」の隠れたコスト こんな場面は毎日のように起きる">
-    <meta name="keywords" content="LLM">
+    <title>ドメイン駆動設計を実装に落とし込むための設計方針 | 日本のテックニュース速報</title>
+    <meta name="description" content="ドメイン駆動設計を実践する際に、ドメイン知識を具体的にソースコードに落とし込む方針を簡単にまとめます。1つの例であって絶対的な基準ではありませんが、参考となる設計方針を提供するためにこの記事を書きました。プログラミング言語はJavaを前提とします">
+    <meta name="keywords" content="Java">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="LLM はマークダウンファイル全体を読んでいる。その必要はない。">
-    <meta property="og:description" content="コーディングエージェントはマークダウンで書かれた仕様書や設計ドキュメント、長い README を日常的に読んでいる。だが必要なのはたいてい数セクションだけだ。それでもファイル全体をコンテキストに読み込んでしまう。 「ドキュメントを読んで」の隠れたコスト こんな場面は毎日のように起きる">
+    <meta property="og:title" content="ドメイン駆動設計を実装に落とし込むための設計方針">
+    <meta property="og:description" content="ドメイン駆動設計を実践する際に、ドメイン知識を具体的にソースコードに落とし込む方針を簡単にまとめます。1つの例であって絶対的な基準ではありませんが、参考となる設計方針を提供するためにこの記事を書きました。プログラミング言語はJavaを前提とします">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9491.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LLM はマークダウンファイル全体を読んでいる。その必要はない。">
-    <meta name="twitter:description" content="コーディングエージェントはマークダウンで書かれた仕様書や設計ドキュメント、長い README を日常的に読んでいる。だが必要なのはたいてい数セクションだけだ。それでもファイル全体をコンテキストに読み込んでしまう。 「ドキュメントを読んで」の隠れたコスト こんな場面は毎日のように起きる">
+    <meta name="twitter:title" content="ドメイン駆動設計を実装に落とし込むための設計方針">
+    <meta name="twitter:description" content="ドメイン駆動設計を実践する際に、ドメイン知識を具体的にソースコードに落とし込む方針を簡単にまとめます。1つの例であって絶対的な基準ではありませんが、参考となる設計方針を提供するためにこの記事を書きました。プログラミング言語はJavaを前提とします">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "LLM はマークダウンファイル全体を読んでいる。その必要はない。",
-        "description": "コーディングエージェントはマークダウンで書かれた仕様書や設計ドキュメント、長い README を日常的に読んでいる。だが必要なのはたいてい数セクションだけだ。それでもファイル全体をコンテキストに読み込んでしまう。 「ドキュメントを読んで」の隠れたコスト こんな場面は毎日のように起きる",
+        "headline": "ドメイン駆動設計を実装に落とし込むための設計方針",
+        "description": "ドメイン駆動設計を実践する際に、ドメイン知識を具体的にソースコードに落とし込む方針を簡単にまとめます。1つの例であって絶対的な基準ではありませんが、参考となる設計方針を提供するためにこの記事を書きました。プログラミング言語はJavaを前提とします",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-19T04:55:33",
-        "dateModified": "2026-06-20T23:10:49.343427",
+        "datePublished": "2026-07-13T13:59:46",
+        "dateModified": "2026-07-15T15:27:48.396519",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9491.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9491.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["LLM"]
+        "articleSection": "プログラミング",
+        "keywords": ["Java"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "LLM はマークダウンファイル全体を読んでいる。その必要はない。",
+                "name": "ドメイン駆動設計を実装に落とし込むための設計方針",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9491.html"
             }
         ]
@@ -113,40 +113,40 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">LLM はマークダウンファイル全体を読んでいる。その必要はない。</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">ドメイン駆動設計を実装に落とし込むための設計方針</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>LLM はマークダウンファイル全体を読んでいる。その必要はない。</h1>
+                <h1>ドメイン駆動設計を実装に落とし込むための設計方針</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/oubakiou/articles/b9db61885cd7be" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-19T04:55:33">
-                        公開: 2026-06-19T04:55:33
+                    <span class="source">出典: <a href="https://zenn.dev/shotaro_tsuji/articles/09a99625fba620" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-07-13T13:59:46">
+                        公開: 2026-07-13T13:59:46
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">LLM</span>
+                    <span class="tag">Java</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    コーディングエージェントはマークダウンで書かれた仕様書や設計ドキュメント、長い README を日常的に読んでいる。だが必要なのはたいてい数セクションだけだ。それでもファイル全体をコンテキストに読み込んでしまう。
+                    ドメイン駆動設計を実践する際に、ドメイン知識を具体的にソースコードに落とし込む方針を簡単にまとめます。1つの例であって絶対的な基準ではありませんが、参考となる設計方針を提供するためにこの記事を書きました。プログラミング言語はJavaを前提とします。
 
- 「ドキュメントを読んで」の隠れたコスト
-こんな場面は毎日のように起きる。5,000 行の API 仕様書のエラーハンドリングのセクションを確認してほしいとエージェントに頼む。エージェントはファイルを開き、5,000 行すべてをコンテキストウィンドウに読み込み、必要な 80 行を見つけて質問に答える。
-結果は得られる。しかし不要な 4,920 行にも大量のトークンを消費する。...
+ Value Object
+Javaにおける値のように振る舞うオブジェクトを Value Object と呼びます。取り得る値の範囲が限定されていたり、固有の演算やロジックを持ちます。Value Object は単なる型安全ラッパーだけでなく、複数の値や、それらに関する制約・演算を1つの概念としてまとめるために利用します。
+単純な例として ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/oubakiou/articles/b9db61885cd7be" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/shotaro_tsuji/articles/09a99625fba620" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,30 +159,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Java&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Java - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-title">Java - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでJavaに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -192,23 +192,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +223,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_6610.html">
+                    <a href="iPhone_Mania_7465.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">リファクタリングにドメイン知識が要るなら、その知識はどこに置くのか</span>
+                        <span class="nav-title">Mac StudioとStudio Display XDRの整備済製品が販売中</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_3427.html">
+                    <a href="Qiita_-_人気の記事_1436.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Code に、自分が考えていそうなことを言語化してもらった</span>
+                        <span class="nav-title">GitHub Project に突っ込んだタスクを自動で消化する Loop Engineering ...</span>
                     </a>
                 </div>
             </div>
@@ -245,52 +245,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4032.html">
-                        <h3>「Claude」で障害発生（復旧）</h3>
+                    <a href="Publickey_9301.html">
+                        <h3>フロントエンド開発に必要なツールをまとめて統合した「Vite+」、ベータ公開</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">Anthropicの生成AIサービス「Claude」（クロード）で障害が発生している模様だ。SNSで「使えない」などの投稿が多数上がっている他、筆者の環境でも16時15分現在、利用できなくなっている。...</p>
+                        <p class="related-summary">オープンソースのWebアプリケーションビルドツール「Vite」（ヴィットあるいはヴィート）を開発しているVoidZeroは、ViteをベースとしたJavaScriptアプリケーションのための統合開発ツ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1740.html">
-                        <h3>「この写真を復元して」と入力するだけ、ChatGPTが過激な画像を生成する抜け穴が発覚</h3>
+                    <a href="Publickey_6453.html">
+                        <h3>リアルタイム共同編集が可能なJavaScriptの表計算コンポーネント、メシウスが「SpreadJS」の新バージョンをリ...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">「ChatGPT」が「この写真を復元して」というプロンプトによって、性的で生々しい暴力表現を含む画像を容易に生成していたことが分かった。AIサイバーセキュリティ・調査会社であるMindgardが報告書...</p>
+                        <p class="related-summary">メシウス（旧グレープシティ）は、Excelライクな機能とユーザーインターフェイスを備えたJavaScriptの表計算コンポーネント上で、リアルタイムな共同編集を可能にする機能を備えたJavaScrip...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4217.html">
-                        <h3>画像AIのMidjourney、体内を全身3Dスキャンする「Midjorney Scanner」発表　畑違いの医療参入</h3>
+                    <a href="Qiita_-_人気の記事_9622.html">
+                        <h3>「頑張ってます」はもう卒業。エンジニアが今日から使える『数値化の鬼』の思考法</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">画像生成AIで知られる米Midjourneyが、医療分野に乗り出す。同社は現地時間6月17日、新事業「Midjourney Medical」を立ち上げ、第1弾となるハードウェア「Midjourney ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9789.html">
-                        <h3>AI職業紹介 ハロワ実験も精度課題</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
-                        </div>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8854.html">
-                        <h3>Elixir 1.20の型システムをRust,TypeScriptと比べたら特徴が見えてきた</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">20 が公開され、型システムが入りました。ただ、これは「型を書いて安全を得る」これまでの型システムとは、目指すものが少し違います。 この記事は、私の疑問に対して AI エージェントが調べてまとめたもの...</p>
+                        <p class="related-summary">■ この記事はこんな人におすすめ 評価面談で「頑張ってるのは分かるんだけどね…」と言われたことがある人 自分の成長が正しい方向に向かっているのか不安な人 実務未経験からエンジニアとして評価されたい人 ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_2291.html">
+                        <h3>量子クラウドって実際どうなの？第1の発見：待ち時間がある</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">自分が初めてクラウドに公開された量子コンピュータにジョブを投入したのは、2024年の夏でした。 当時も量子コンピュータについての知識がほとんどなく、何から始めればいいのかも分からない状態でした。 調べ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_7230.html">
+                        <h3>より小さなソフトウェアエンジニアリングチームを、2029年までに60％の組織が本格展開するとの予測、ガートナー</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">調査会社のガートナーは、2029年までに60％の組織がより小さなソフトウェアエンジニアリングチームを本格的に展開するだろうとの予測を発表しました。 人間とAIの強みを活かすためのチームの再編成 この背...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS WAFv2のレートベースルールでIPブロック時にメール通知する仕組みを構築する | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに ソーイ村上です。 開発しているシステムでAWS上でAWS WAFを設定したWebアプリケーションを運用しています。WAFのレートベースルールを導入した際、「特定ルールによるブロックが発生した場合に通知したい」という要望がありました。本記事はその解決策として構築し.">
-    <meta name="keywords" content="AWS,本">
+    <title>そのSQL、本当に大丈夫？実務で意識したい5つの基本ルール | 日本のテックニュース速報</title>
+    <meta name="description" content="目次 はじめに SELECT * を多用しない WHERE句を意識する ORDER BYを書こう NULLの扱いを理解する エイリアスを活用する まとめ SQLを書く前に知っておきたい5つの基本ルール はじめに SQLはデータベースを扱ううえで欠かせない言語ですが.">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AWS WAFv2のレートベースルールでIPブロック時にメール通知する仕組みを構築する">
-    <meta property="og:description" content="はじめに ソーイ村上です。 開発しているシステムでAWS上でAWS WAFを設定したWebアプリケーションを運用しています。WAFのレートベースルールを導入した際、「特定ルールによるブロックが発生した場合に通知したい」という要望がありました。本記事はその解決策として構築し.">
+    <meta property="og:title" content="そのSQL、本当に大丈夫？実務で意識したい5つの基本ルール">
+    <meta property="og:description" content="目次 はじめに SELECT * を多用しない WHERE句を意識する ORDER BYを書こう NULLの扱いを理解する エイリアスを活用する まとめ SQLを書く前に知っておきたい5つの基本ルール はじめに SQLはデータベースを扱ううえで欠かせない言語ですが.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1884.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AWS WAFv2のレートベースルールでIPブロック時にメール通知する仕組みを構築する">
-    <meta name="twitter:description" content="はじめに ソーイ村上です。 開発しているシステムでAWS上でAWS WAFを設定したWebアプリケーションを運用しています。WAFのレートベースルールを導入した際、「特定ルールによるブロックが発生した場合に通知したい」という要望がありました。本記事はその解決策として構築し.">
+    <meta name="twitter:title" content="そのSQL、本当に大丈夫？実務で意識したい5つの基本ルール">
+    <meta name="twitter:description" content="目次 はじめに SELECT * を多用しない WHERE句を意識する ORDER BYを書こう NULLの扱いを理解する エイリアスを活用する まとめ SQLを書く前に知っておきたい5つの基本ルール はじめに SQLはデータベースを扱ううえで欠かせない言語ですが.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AWS WAFv2のレートベースルールでIPブロック時にメール通知する仕組みを構築する",
-        "description": "はじめに ソーイ村上です。 開発しているシステムでAWS上でAWS WAFを設定したWebアプリケーションを運用しています。WAFのレートベースルールを導入した際、「特定ルールによるブロックが発生した場合に通知したい」という要望がありました。本記事はその解決策として構築し.",
+        "headline": "そのSQL、本当に大丈夫？実務で意識したい5つの基本ルール",
+        "description": "目次 はじめに SELECT * を多用しない WHERE句を意識する ORDER BYを書こう NULLの扱いを理解する エイリアスを活用する まとめ SQLを書く前に知っておきたい5つの基本ルール はじめに SQLはデータベースを扱ううえで欠かせない言語ですが.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-02-10T02:50:50",
-        "dateModified": "2026-02-11T05:28:39.262318",
+        "datePublished": "2026-07-17T01:25:37",
+        "dateModified": "2026-07-18T02:30:32.912715",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1884.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1884.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AWS","本"]
+        "articleSection": "その他",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AWS WAFv2のレートベースルールでIPブロック時にメール通知する仕組みを構築する",
+                "name": "そのSQL、本当に大丈夫？実務で意識したい5つの基本ルール",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1884.html"
             }
         ]
@@ -113,25 +113,24 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">AWS WAFv2のレートベースルールでIPブロック時にメール通知する仕組みを構築する</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">そのSQL、本当に大丈夫？実務で意識したい5つの基本ルール</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AWS WAFv2のレートベースルールでIPブロック時にメール通知する仕組みを構築する</h1>
+                <h1>そのSQL、本当に大丈夫？実務で意識したい5つの基本ルール</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/sugumura/items/46ae44dfd78269308f04?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-02-10T02:50:50">
-                        公開: 2026-02-10T02:50:50
+                    <span class="source">出典: <a href="https://qiita.com/T-furukubo/items/3ace375e1b8aafd014a2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-07-17T01:25:37">
+                        公開: 2026-07-17T01:25:37
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AWS</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -139,13 +138,24 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-ソーイ村上です。
-開発しているシステムでAWS上でAWS WAFを設定したWebアプリケーションを運用しています。WAFのレートベースルールを導入した際、「特定ルールによるブロックが発生した場合に通知したい」という要望がありました。本記事はその解決策として構築し...
+                    目次
+
+はじめに
+SELECT * を多用しない
+WHERE句を意識する
+ORDER BYを書こう
+NULLの扱いを理解する
+エイリアスを活用する
+まとめ
+
+SQLを書く前に知っておきたい5つの基本ルール
+
+はじめに
+SQLはデータベースを扱ううえで欠かせない言語ですが...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/sugumura/items/46ae44dfd78269308f04?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/T-furukubo/items/3ace375e1b8aafd014a2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,16 +168,6 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">本 - Amazon検索結果</div>
@@ -177,37 +177,27 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +212,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2871.html">
+                    <a href="Zennのトレンド_9049.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Claude Code Agent Teams を使ってわかったチーム設計の勘所と自動化の限界</span>
+                        <span class="nav-title">Fable 5はeffort=lowでも“使える”のか？　React習熟度ベンチマーク</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_6670.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9160.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Codeがベクトル検索を採用しなくなった理由</span>
+                        <span class="nav-title">「フィジカルAI」国産で勝機狙う</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +234,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2603.html">
-                        <h3>「行きは新幹線、帰りは飛行機」の旅行商品を販売へ--JR東日本とJALが提携</h3>
+                    <a href="CNET_Japan_最新情報総合_7119.html">
+                        <h3>血圧を測定できるスマートリングが登場　本当に正確？専門家の見解は</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JR東日本と日本航空（JAL）は、航空機と新幹線を組み合わせた新たな旅行商品を開発する。行きは飛行機、帰りは新幹線といった移動手段を組み合わせることで、従来の往復利用を前提とした旅行スタイルを見直し、...</p>
+                        <p class="related-summary">まったく新しいスマートリング「Signal Ring」が発表された。空気で膨らむカフや事前のキャリブレーションなしで、血圧を継続的に測定できるという野心的な約束を掲げている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5310.html">
-                        <h3>【後編】新人エンジニアは、なぜ「止まってしまう」のか。─教える側の“死角”</h3>
+                    <a href="CNET_Japan_最新情報総合_4343.html">
+                        <h3>ローソン、郵便配達員が涼めるようにイートインスペース開放　熱中症対策で</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめまして。 株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で つまずきやすいポイントを整理して発信しています。 PRUMについて気になった方は、 コーポレート...</p>
+                        <p class="related-summary">ローソンは7月17日、郵便配達員に店内の休憩場所を提供すると発表した。日本郵便の熱中症対策に協力する。バイクや自転車で郵便物を届ける配達担当者が、配達や集荷の途中に店内でひと休みできるようになる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3920.html">
-                        <h3>【WebF】React/Vue/Svelteがそのままネイティブアプリになるよ</h3>
+                    <a href="CNET_Japan_最新情報総合_1869.html">
+                        <h3>キオクシア「到底容認できない」--米陪審が約371億円の賠償評決、株はストップ安</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">この手の話をもう何万回聞いたかわかりませんが、GitHubリポジトリのコミット数や頻度を見るにかなりの本気度を感じます。 そんなわけでJavaScriptをそのままネイティブアプリにするプロジェクトの...</p>
+                        <p class="related-summary">キオクシアホールディングス（キオクシアHD）は7月17日、子会社のキオクシアと米Kioxia Americaが米Viasat（ビアサット）から起こされていた特許侵害訴訟で、原告の主張を認める陪審評決が...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_977.html">
-                        <h3>Claude CodeのAgent Teamsをお試し様子見①「人間チーム開発の問題がなんか再現された」話</h3>
+                    <a href="ASCII_jp__トップ_3198.html">
+                        <h3>【2026夏アニメまとめ】猛暑の夏はクーラーが利いた部屋でアニメ！ 約80作品の夏アニメを全チェック！</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに いえらぶＧＲＯＵＰの開発部で執行役員を務めています、和田です。わだけんです。 みなさん、Claude CodeのAgent Teams つかってます？ 複数のClaude Codeインスタン...</p>
+                        <p class="related-summary">今年も猛暑の夏がやってくる！ そんな夏は家で夏アニメを鑑賞。今クールも80本近い作品を紹介予定です！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_7229.html">
-                        <h3>「なんか良いらしい」でDDDを導入した結果、何も得られなかった話</h3>
+                    <a href="Zennのトレンド_4183.html">
+                        <h3>OpenTelemetryのConsistent Probability Samplingを理解する</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">その他</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">「なんか良いらしいぞ」 新卒で入社して配属されたのは、新規事業の立ち上げチームでした。Web開発の経験はほぼゼロ。開発を始めて少し経った頃に、社内の他のチームがDDDという手法を使っていると知りました...</p>
+                        <p class="related-summary">SRE NEXT 2026では「サンプリングは統計学である」というタイトルで、サンプリング率を決めるときには許容誤差から標本数を逆算する必要がある、という話をしました。 このとき、トレースの一貫したサ...</p>
                     </a>
                 </article>
             </div>

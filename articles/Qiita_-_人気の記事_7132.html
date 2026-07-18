@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qiitaを書いてたら、名刺となって可能性が広がり始めた話 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに エンジニアリングの力を急に伸ばすのって、本当に難しいですよね。 テストみたいに点数が出るわけじゃないから現状を把握しづらいし、次に何をすべきかも見えにくい。しかも、最近はリモートワークでの作業であることも多いですよね。そんな中で一人で努力しようとすると、どうして.">
-    <meta name="keywords" content="本">
+    <title>Ubuntu 24.04 (WSL)でGitHub CLIを公式リポジトリから導入した手順とハマったポイント | 日本のテックニュース速報</title>
+    <meta name="description" content="目次 はじめに 環境 公式リポジトリ版を選んだ理由 インストール 認証 ポイント1 WSLではブラウザが自動起動しない場合がある ポイント2 既存のSSH鍵がそのまま利用された ポイント3 Gitリポジトリ外ではIssueの対象を自動判定できない 認証状態を確認する 動.">
+    <meta name="keywords" content="GitHub">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Qiitaを書いてたら、名刺となって可能性が広がり始めた話">
-    <meta property="og:description" content="はじめに エンジニアリングの力を急に伸ばすのって、本当に難しいですよね。 テストみたいに点数が出るわけじゃないから現状を把握しづらいし、次に何をすべきかも見えにくい。しかも、最近はリモートワークでの作業であることも多いですよね。そんな中で一人で努力しようとすると、どうして.">
+    <meta property="og:title" content="Ubuntu 24.04 (WSL)でGitHub CLIを公式リポジトリから導入した手順とハマったポイント">
+    <meta property="og:description" content="目次 はじめに 環境 公式リポジトリ版を選んだ理由 インストール 認証 ポイント1 WSLではブラウザが自動起動しない場合がある ポイント2 既存のSSH鍵がそのまま利用された ポイント3 Gitリポジトリ外ではIssueの対象を自動判定できない 認証状態を確認する 動.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7132.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Qiitaを書いてたら、名刺となって可能性が広がり始めた話">
-    <meta name="twitter:description" content="はじめに エンジニアリングの力を急に伸ばすのって、本当に難しいですよね。 テストみたいに点数が出るわけじゃないから現状を把握しづらいし、次に何をすべきかも見えにくい。しかも、最近はリモートワークでの作業であることも多いですよね。そんな中で一人で努力しようとすると、どうして.">
+    <meta name="twitter:title" content="Ubuntu 24.04 (WSL)でGitHub CLIを公式リポジトリから導入した手順とハマったポイント">
+    <meta name="twitter:description" content="目次 はじめに 環境 公式リポジトリ版を選んだ理由 インストール 認証 ポイント1 WSLではブラウザが自動起動しない場合がある ポイント2 既存のSSH鍵がそのまま利用された ポイント3 Gitリポジトリ外ではIssueの対象を自動判定できない 認証状態を確認する 動.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Qiitaを書いてたら、名刺となって可能性が広がり始めた話",
-        "description": "はじめに エンジニアリングの力を急に伸ばすのって、本当に難しいですよね。 テストみたいに点数が出るわけじゃないから現状を把握しづらいし、次に何をすべきかも見えにくい。しかも、最近はリモートワークでの作業であることも多いですよね。そんな中で一人で努力しようとすると、どうして.",
+        "headline": "Ubuntu 24.04 (WSL)でGitHub CLIを公式リポジトリから導入した手順とハマったポイント",
+        "description": "目次 はじめに 環境 公式リポジトリ版を選んだ理由 インストール 認証 ポイント1 WSLではブラウザが自動起動しない場合がある ポイント2 既存のSSH鍵がそのまま利用された ポイント3 Gitリポジトリ外ではIssueの対象を自動判定できない 認証状態を確認する 動.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-30T14:32:48",
-        "dateModified": "2026-06-01T04:07:52.172817",
+        "datePublished": "2026-07-17T08:22:14",
+        "dateModified": "2026-07-18T16:59:41.362091",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7132.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7132.html",
         "articleSection": "プログラミング",
-        "keywords": ["本"]
+        "keywords": ["GitHub"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Qiitaを書いてたら、名刺となって可能性が広がり始めた話",
+                "name": "Ubuntu 24.04 (WSL)でGitHub CLIを公式リポジトリから導入した手順とハマったポイント",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7132.html"
             }
         ]
@@ -114,37 +114,46 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Qiitaを書いてたら、名刺となって可能性が広がり始めた話</li>
+                <li aria-current="page">Ubuntu 24.04 (WSL)でGitHub CLIを公式リポジトリから導入した手順とハマった...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Qiitaを書いてたら、名刺となって可能性が広がり始めた話</h1>
+                <h1>Ubuntu 24.04 (WSL)でGitHub CLIを公式リポジトリから導入した手順とハマったポイント</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/kimuchi_a/items/537057575c7e5bcbe7c1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/honda-dev-jp/items/da280a62ca73c71c5290?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-05-30T14:32:48">
-                        公開: 2026-05-30T14:32:48
+                    <time datetime="2026-07-17T08:22:14">
+                        公開: 2026-07-17T08:22:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-エンジニアリングの力を急に伸ばすのって、本当に難しいですよね。
-テストみたいに点数が出るわけじゃないから現状を把握しづらいし、次に何をすべきかも見えにくい。しかも、最近はリモートワークでの作業であることも多いですよね。そんな中で一人で努力しようとすると、どうして...
+                    目次
+
+はじめに
+環境
+公式リポジトリ版を選んだ理由
+インストール
+認証
+ポイント1 WSLではブラウザが自動起動しない場合がある
+ポイント2 既存のSSH鍵がそのまま利用された
+ポイント3 Gitリポジトリ外ではIssueの対象を自動判定できない
+認証状態を確認する
+動...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/kimuchi_a/items/537057575c7e5bcbe7c1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/honda-dev-jp/items/da280a62ca73c71c5290?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,10 +166,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -221,16 +230,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_8037.html">
+                    <a href="Qiita_-_人気の記事_4531.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【セール】Buhoの｢BuhoCleaner｣などMac向けソフト4本が最大70％オフに ｰ 6月9...</span>
+                        <span class="nav-title">新人がすぐにできるセキュリティ対策、損害賠償になったら怖いね</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1396.html">
+                    <a href="気になる記になる_4799.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">yadm + mise で dotfiles 環境構築を整理する</span>
+                        <span class="nav-title">｢iPhone 18 Pro Max｣のカメラ仕様が明らかに ｰ メインカメラに可変絞り搭載も他のカ...</span>
                     </a>
                 </div>
             </div>
@@ -243,53 +252,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2519.html">
-                        <h3>newmo、東京に「自動運転タクシー」の開発拠点を開設</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">タクシー事業と自動運転タクシー事業を手がけるnewmoは5月29日、自動運転タクシーの開発拠点「Autonomy Garage Tokyo」を、東京都大田区の東京流通センター（TRC）に開設したと発表...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_7332.html">
-                        <h3>インテル、Intel 18Aを採用したEコア288基のXeon 6+を正式発表！前世代比で最大2.5倍の性能</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">インテルがデータセンター向けに最新CPU「Xeon 6+プロセッサー」（開発コードネーム：Clearwater Forest）を発表！.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_9077.html">
-                        <h3>TypeScript を用いた LWC 開発が完全にサポートされるようになったので試してみた</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに VS Code 用の Salesforce 拡張機能が、TypeScript を使用した Lightning Web Components (LWC) の作成と開発を完全にサポートするように...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8655.html">
-                        <h3>エンジニアを目指す学生こそ、テックカンファレンスに行こう！</h3>
+                    <a href="Qiita_-_人気の記事_3556.html">
+                        <h3>国の財布は家計と何が違うのか？ ― 財源・国債・人手不足・移民政策までつながる経済のしくみ : Pythonで学ぶ マク...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">この記事を書くきっかけ この記事はインターンで関われない多くの学生に向けて、「もっと早く知りたかった」を一人でも減らしたくて書いています。 自己紹介 hymという名前で活動しております。 大学ではCS...</p>
+                        <p class="related-summary">user: 「Pythonで学ぶマクロ経済学入門」、第100回を始めましょう。まず前回の復習として、 「スイス『民間防衛』に学ぶ、自国を守る経済とは ― 財源幻想を超えて考える日本のレジリエンス : ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_6879.html">
-                        <h3>CodexでFlutterアプリを3か月未満で公開したけど、今どきの個人開発はコード以外が大変すぎる</h3>
+                    <a href="Qiita_-_人気の記事_1648.html">
+                        <h3>数学苦手な文系でも大丈夫、ITの論理的思考・条件分岐を克服せよ</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_5753.html">
+                        <h3>Spring Data JPAのSpecificationで複雑な動的クエリを実装する</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに 新卒エンジニアとして配属されてから2か月が経ちました。現在は研修の一環で、簡単なWebアプリケーションの開発に取り組んでいます。 そのアプリ開発の中で、「複数キーワードのスペース分割検索」や...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_6068.html">
+                        <h3>PythonとC言語の違い【コード比較あり】</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">目次 はじめに Pythonで数字あてゲームを作ってみた C言語で作成した場合のコード PythonとC言語の違い 終わりに はじめに 今までC言語をメインで扱ってきましたが、新たにPythonも学び...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_1117.html">
+                        <h3>GitHub Release 作成をパッケージリリースのトリガーにするな！</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">OpenAIのCodexを試すつもりでFlutterアプリを作り始めたら、気づいたら87日でGoogle Play公開まで到達していました。 ! 出来た Flutter 製ギャラリーアプリ「マイギャラ...</p>
+                        <p class="related-summary">はじめに GitHub Actions からパッケージを公開するとき，こんなワークフローを組んでいないでしょうか？ GitHub 上で Release を作成する → on: release: typ...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った | 日本のテックニュース速報</title>
-    <meta name="description" content="MCP を使うと、Agent にできることを増やしたくなります。 外部ツールを呼べる。 データにアクセスできる。 検索できる。 ファイルを読める。 API を叩ける。 便利です。 でも、Agent を作っていると、だんだん別の怖さが見えてきます。 LLM は何でも答えられます">
-    <meta name="keywords" content="LLM">
+    <title>Strategy Pattern を ABC で書くか、Protocol で書くか | 日本のテックニュース速報</title>
+    <meta name="description" content="前回のおさらい 前回、if-else まみれの関数を Strategy Pattern で整理する話を書きました。 抽象基底クラス（ABC）で共通のインターフェースを定義して、具体的な処理はサブクラスに丸投げする、というやつです">
+    <meta name="keywords" content="Python">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った">
-    <meta property="og:description" content="MCP を使うと、Agent にできることを増やしたくなります。 外部ツールを呼べる。 データにアクセスできる。 検索できる。 ファイルを読める。 API を叩ける。 便利です。 でも、Agent を作っていると、だんだん別の怖さが見えてきます。 LLM は何でも答えられます">
+    <meta property="og:title" content="Strategy Pattern を ABC で書くか、Protocol で書くか">
+    <meta property="og:description" content="前回のおさらい 前回、if-else まみれの関数を Strategy Pattern で整理する話を書きました。 抽象基底クラス（ABC）で共通のインターフェースを定義して、具体的な処理はサブクラスに丸投げする、というやつです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5652.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った">
-    <meta name="twitter:description" content="MCP を使うと、Agent にできることを増やしたくなります。 外部ツールを呼べる。 データにアクセスできる。 検索できる。 ファイルを読める。 API を叩ける。 便利です。 でも、Agent を作っていると、だんだん別の怖さが見えてきます。 LLM は何でも答えられます">
+    <meta name="twitter:title" content="Strategy Pattern を ABC で書くか、Protocol で書くか">
+    <meta name="twitter:description" content="前回のおさらい 前回、if-else まみれの関数を Strategy Pattern で整理する話を書きました。 抽象基底クラス（ABC）で共通のインターフェースを定義して、具体的な処理はサブクラスに丸投げする、というやつです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った",
-        "description": "MCP を使うと、Agent にできることを増やしたくなります。 外部ツールを呼べる。 データにアクセスできる。 検索できる。 ファイルを読める。 API を叩ける。 便利です。 でも、Agent を作っていると、だんだん別の怖さが見えてきます。 LLM は何でも答えられます",
+        "headline": "Strategy Pattern を ABC で書くか、Protocol で書くか",
+        "description": "前回のおさらい 前回、if-else まみれの関数を Strategy Pattern で整理する話を書きました。 抽象基底クラス（ABC）で共通のインターフェースを定義して、具体的な処理はサブクラスに丸投げする、というやつです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-28T12:05:51",
-        "dateModified": "2026-05-29T11:33:00.860768",
+        "datePublished": "2026-07-16T12:59:49",
+        "dateModified": "2026-07-18T14:54:15.191834",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5652.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5652.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["LLM"]
+        "articleSection": "プログラミング",
+        "keywords": ["Python"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った",
+                "name": "Strategy Pattern を ABC で書くか、Protocol で書くか",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5652.html"
             }
         ]
@@ -113,51 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">Strategy Pattern を ABC で書くか、Protocol で書くか</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>MCPでAgentのできることを増やすのをやめたら、Context Boundaryが残った</h1>
+                <h1>Strategy Pattern を ABC で書くか、Protocol で書くか</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/mofuteq/articles/be562471f96a68" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-28T12:05:51">
-                        公開: 2026-05-28T12:05:51
+                    <span class="source">出典: <a href="https://zenn.dev/zozotech/articles/6717b887482e4e" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-07-16T12:59:49">
+                        公開: 2026-07-16T12:59:49
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">LLM</span>
+                    <span class="tag">Python</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    MCP を使うと、Agent にできることを増やしたくなります。
-外部ツールを呼べる。
-データにアクセスできる。
-検索できる。
-ファイルを読める。
-API を叩ける。
-便利です。
-でも、Agent を作っていると、だんだん別の怖さが見えてきます。
-LLM は何でも答えられます。
-だからこそ、何でも独自の観点で答えてしまう。
-この「何でも答えられる」は、強さでもあり、リスクでもあります。
-MCP で Agent のできることを増やす前に、そもそも Agent にどの観点で考えさせるのかを決めた方がいいのではないか。
-そう考えるようになりました。
-
- LLMは何でも答えられる
-LLM は、た...
+                    前回のおさらい
+前回、if-else まみれの関数を Strategy Pattern で整理する話を書きました。
+抽象基底クラス（ABC）で共通のインターフェースを定義して、具体的な処理はサブクラスに丸投げする、というやつです。
+今回はその続きで、同じ Strategy Pattern を Python の typing.Protocol で書くという選択肢について書きます。
+ABC と Protocol、どっちも「共通のインターフェースを決める」ための道具なんですが、成り立ちがけっこう違うんですよね。
+このへん、知らずに使うと「なんでこれ動くの？」ってなりがちなので整理しておきた...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/mofuteq/articles/be562471f96a68" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/zozotech/articles/6717b887482e4e" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -170,30 +160,30 @@ LLM は、た...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -203,23 +193,23 @@ LLM は、た...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -234,16 +224,16 @@ LLM は、た...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_158.html">
+                    <a href="Zennのトレンド_2387.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ガバメントAI 全府省庁で実証開始</span>
+                        <span class="nav-title">SwiftだけでWebをつくって、運用する</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_2400.html">
+                    <a href="Qiita_-_人気の記事_6270.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Bedrockのクオーターからrequests-per-minute (RPM)がなくなったらしい</span>
+                        <span class="nav-title">Excel案件管理をPower Appsで見やすくできるのか？POCを作ってみた</span>
                     </a>
                 </div>
             </div>
@@ -256,53 +246,53 @@ LLM は、た...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1659.html">
-                        <h3>JR西日本、技術ビジョンを8年ぶり刷新　生成AIの進歩などを受け</h3>
+                    <a href="Qiita_-_人気の記事_2718.html">
+                        <h3>国の財布は家計と何が違うのか？ ― 財源・国債・人手不足・移民政策までつながる経済のしくみ : Pythonで学ぶ マク...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">JR西日本は5月27日、2018年に策定した「技術ビジョン」をアップデートしたと発表した。2026年度に策定した「中期経営計画2030」と歩調を合わせ、概ね2040年のJR西日本グループのありたい姿を...</p>
+                        <p class="related-summary">user: 「Pythonで学ぶマクロ経済学入門」、第100回を始めましょう。まず前回の復習として、 「スイス『民間防衛』に学ぶ、自国を守る経済とは ― 財源幻想を超えて考える日本のレジリエンス : ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4409.html">
-                        <h3>アマゾン、AIで映像制作を支援　プライム・ビデオで配信予定の3作品とは</h3>
+                    <a href="Qiita_-_人気の記事_4229.html">
+                        <h3>Ubuntu 24.04 (WSL)でGitHub CLIを公式リポジトリから導入した手順とハマったポイント</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">アマゾンは生成AIの取り組みを進めており、次は「プライム・ビデオ」の視聴者が、3本の新しいアニメシリーズでその成果に触れることになりそうだ。.</p>
+                        <p class="related-summary">目次 はじめに 環境 公式リポジトリ版を選んだ理由 インストール 認証 ポイント1 WSLではブラウザが自動起動しない場合がある ポイント2 既存のSSH鍵がそのまま利用された ポイント3 Gitリポ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1675.html">
-                        <h3>Anthropic、「ミトス級AI」を数週間以内に一般公開へ　「Claude Opus 4.8」も発表</h3>
+                    <a href="Qiita_-_人気の記事_5175.html">
+                        <h3>数学苦手な文系でも大丈夫、ITの論理的思考・条件分岐を克服せよ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Anthropicは5月28日（米国時間）、生成AIモデル「Claude Opus 4. 7」から「控えめだが確実な改善」を加えたという。あわせて同社は、現在Project Glasswingの一環と...</p>
+                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3887.html">
-                        <h3>米CNNが提訴したAI企業パープレキシティ、「事実に著作権なし」と反論</h3>
+                    <a href="Qiita_-_人気の記事_9321.html">
+                        <h3>Spring Data JPAのSpecificationで複雑な動的クエリを実装する</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">米テレビネットワークのCNNが、AI検索エンジンのパープレキシティを著作権侵害で提訴した。.</p>
+                        <p class="related-summary">はじめに 新卒エンジニアとして配属されてから2か月が経ちました。現在は研修の一環で、簡単なWebアプリケーションの開発に取り組んでいます。 そのアプリ開発の中で、「複数キーワードのスペース分割検索」や...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_856.html">
-                        <h3>定員1000名満席につき、最終100席を追加開放--新恵社・AI Orchestra共催「非エンジニアのためのClaud...</h3>
+                    <a href="Qiita_-_人気の記事_4467.html">
+                        <h3>PythonとC言語の違い【コード比較あり】</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">定員1000名満席につき、最終100席を追加開放--新恵社・AI Orchestra共催「非エンジニアのためのClaude Code入門ウェビナー」、5月31日開催.</p>
+                        <p class="related-summary">目次 はじめに Pythonで数字あてゲームを作ってみた C言語で作成した場合のコード PythonとC言語の違い 終わりに はじめに 今までC言語をメインで扱ってきましたが、新たにPythonも学び...</p>
                     </a>
                 </article>
             </div>

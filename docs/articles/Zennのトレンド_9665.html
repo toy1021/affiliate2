@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>「AIがSQLを書いてくれる」で終わらせない − 分析基盤の育て方 | 日本のテックニュース速報</title>
-    <meta name="description" content="トリビューでCTOをしている小尾（@obiyuta）です。 弊社ではAIを前提とした全社業務の再構築に取り組んでおり、前回はその中で取り組んでいる社内MCPを載せる共通基盤（認証・認可・ログ）をご紹介しました">
-    <meta name="keywords" content="AI,Claude,本">
+    <title>オープンLLMをLambdaで動かしてみる | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Zenn 読者のみなさん、こんにちは。e-dash VPoE の伊藤です。 最近、AI コーディングエージェントや LLM ベースの自動化を業務に組み込む機会がぐっと増えました。非常に便利なのですが、コストも肥大化しがちです">
+    <meta name="keywords" content="AI,LLM,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="「AIがSQLを書いてくれる」で終わらせない − 分析基盤の育て方">
-    <meta property="og:description" content="トリビューでCTOをしている小尾（@obiyuta）です。 弊社ではAIを前提とした全社業務の再構築に取り組んでおり、前回はその中で取り組んでいる社内MCPを載せる共通基盤（認証・認可・ログ）をご紹介しました">
+    <meta property="og:title" content="オープンLLMをLambdaで動かしてみる">
+    <meta property="og:description" content="はじめに Zenn 読者のみなさん、こんにちは。e-dash VPoE の伊藤です。 最近、AI コーディングエージェントや LLM ベースの自動化を業務に組み込む機会がぐっと増えました。非常に便利なのですが、コストも肥大化しがちです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9665.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="「AIがSQLを書いてくれる」で終わらせない − 分析基盤の育て方">
-    <meta name="twitter:description" content="トリビューでCTOをしている小尾（@obiyuta）です。 弊社ではAIを前提とした全社業務の再構築に取り組んでおり、前回はその中で取り組んでいる社内MCPを載せる共通基盤（認証・認可・ログ）をご紹介しました">
+    <meta name="twitter:title" content="オープンLLMをLambdaで動かしてみる">
+    <meta name="twitter:description" content="はじめに Zenn 読者のみなさん、こんにちは。e-dash VPoE の伊藤です。 最近、AI コーディングエージェントや LLM ベースの自動化を業務に組み込む機会がぐっと増えました。非常に便利なのですが、コストも肥大化しがちです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "「AIがSQLを書いてくれる」で終わらせない − 分析基盤の育て方",
-        "description": "トリビューでCTOをしている小尾（@obiyuta）です。 弊社ではAIを前提とした全社業務の再構築に取り組んでおり、前回はその中で取り組んでいる社内MCPを載せる共通基盤（認証・認可・ログ）をご紹介しました",
+        "headline": "オープンLLMをLambdaで動かしてみる",
+        "description": "はじめに Zenn 読者のみなさん、こんにちは。e-dash VPoE の伊藤です。 最近、AI コーディングエージェントや LLM ベースの自動化を業務に組み込む機会がぐっと増えました。非常に便利なのですが、コストも肥大化しがちです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-24T09:20:35",
-        "dateModified": "2026-06-25T07:43:41.133339",
+        "datePublished": "2026-07-18T03:00:52",
+        "dateModified": "2026-07-19T20:50:24.659391",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9665.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9665.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","本"]
+        "keywords": ["AI","LLM","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "「AIがSQLを書いてくれる」で終わらせない − 分析基盤の育て方",
+                "name": "オープンLLMをLambdaで動かしてみる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9665.html"
             }
         ]
@@ -114,42 +114,45 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">「AIがSQLを書いてくれる」で終わらせない − 分析基盤の育て方</li>
+                <li aria-current="page">オープンLLMをLambdaで動かしてみる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>「AIがSQLを書いてくれる」で終わらせない − 分析基盤の育て方</h1>
+                <h1>オープンLLMをLambdaで動かしてみる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/tribeau/articles/c961141dd4c9c8" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/edash_tech_blog/articles/528ab6bd044c35" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-24T09:20:35">
-                        公開: 2026-06-24T09:20:35
+                    <time datetime="2026-07-18T03:00:52">
+                        公開: 2026-07-18T03:00:52
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">本</span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    トリビューでCTOをしている小尾（@obiyuta）です。
-弊社ではAIを前提とした全社業務の再構築に取り組んでおり、前回はその中で取り組んでいる社内MCPを載せる共通基盤（認証・認可・ログ）をご紹介しました。
-今回は具体的な活用事例として、非エンジニアが自分で本番データを分析できるような分析基盤と、作って終わらない改善ループをどう構築、運用しているかご紹介します。
+                    はじめに
+Zenn 読者のみなさん、こんにちは。e-dash VPoE の伊藤です。
+最近、AI コーディングエージェントや LLM ベースの自動化を業務に組み込む機会がぐっと増えました。非常に便利なのですが、コストも肥大化しがちです。
 
- 「SQLが書ける」と「正しく答えられる」は違う
-分析基盤そのものは特殊なものではなく、ClaudeやNotion AIなどから自然言語で問いを投げると、SQLを組み立てて、BigQueryで実行して結果を返すという、至っ...
+有償 LLM の API は、ローカルで利用できるサブスクモデルとは異なり、使えば使うほどお金がかかる。
+弊社でも活用している Devin の Ask Devin や Review 機能が有料化された。
+「コミットメッセージの整形」「diff の要約」「軽い分類」といった簡単なタスクまで高価なモデルで実行するのはもったいない。
+
+そこで考えたのが、...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/tribeau/articles/c961141dd4c9c8" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/edash_tech_blog/articles/528ab6bd044c35" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -172,20 +175,20 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -226,16 +229,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_655.html">
+                    <a href="Qiita_-_人気の記事_1847.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">学生のためのCodex 〜Codexを学習に使う 入門編〜</span>
+                        <span class="nav-title">AI時代のドキュメント駆動開発のすすめ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_6107.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3063.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Microsoft、米国で価格を抑えた｢Surface Pro 12インチ｣と｢Surface La...</span>
+                        <span class="nav-title">iPhone値上げは日本だけ?解説</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +251,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5078.html">
-                        <h3>中国ByteDance、新AI動画生成モデル「Seedance 2.5」発表　プロンプト1つで30秒・4K動画を生成</h3>
+                    <a href="CNET_Japan_最新情報総合_5674.html">
+                        <h3>日本政府、「国家AIインフラ」計画始動--NVIDIAが計算基盤を提供　高市総理「大変心強い」</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">中国ByteDanceは、AI動画生成モデルの最新版「Seedance 2. 5」を発表した。米メディアのThe Informationが報じた。現地時間6月23日に北京で開いたカンファレンスで明らか...</p>
+                        <p class="related-summary">日本政府と国内企業、米NVIDIAは7月16日、ロボットや自動運転などのフィジカルAIを支える「国家AIインフラ」の構築に乗り出すと発表した。経済産業省の事業として、実世界で動くAIの頭脳となる国産基...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2375.html">
-                        <h3>AIデータセンターは「地球で」--孫正義氏の発言全文　SpaceXと異なる見方</h3>
+                    <a href="CNET_Japan_最新情報総合_497.html">
+                        <h3>AI翻訳対応のスマートグラス「INMO GO3」、7月30日発売　価格は9万9800円</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ソフトバンクは6月23日、第40回定時株主総会を開いた。質疑応答では株主から、スペースXを率いるイーロン・マスク氏が宇宙でのデータセンター構想を打ち出すなか、ソフトバンクはどう動くのか質問が出た。これ...</p>
+                        <p class="related-summary">イノモ日本は7月16日、スマートグラス「INMO GO3」を、7月30日に国内発売すると発表した。希望小売価格は9万9800円。7月17日から29日まで予約を受け付ける。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7908.html">
-                        <h3>ClaudeがSlack上のバーチャル同僚に--Anthropicの新機能「Claude Tag」とは</h3>
+                    <a href="CNET_Japan_最新情報総合_1222.html">
+                        <h3>NVIDIAフアンCEO、日本について熱弁　一問一答（全文）</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Anthropicは、チャンネルやデータにアクセスできるユーザーとしてSlackワークスペースに追加できる「Claude Tag」を発表した。.</p>
+                        <p class="related-summary">「今の日本経済の制約は人の数だ」――。米NVIDIAのジェンスン・フアンCEOは7月16日、国産AI基盤モデルを開発する国家プロジェクト「FRONTia（フロンティア）」のキックオフイベント後、日本メ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_978.html">
-                        <h3>OpenAI、初の自社AIチップ「ハラペーニョ」発表　ブロードコムと共同開発</h3>
+                    <a href="CNET_Japan_最新情報総合_7974.html">
+                        <h3>Meta、AIチャットに自傷・自殺リスク対策　兆候検知し保護者に通知</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIと半導体大手のブロードコムは6月24日（米国時間）、OpenAIが設計した初のAIチップ「Jalapeño（ハラペーニョ）」を発表した。大規模言語モデル（LLM）の推論処理に特化した専用設...</p>
+                        <p class="related-summary">MetaはAIチャットボット「Meta AI」に、ティーンを自傷リスクから守るための新機能を導入すると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1535.html">
-                        <h3>Meta、従業員のPC追跡を停止　AI学習目的も「全社に丸見え」</h3>
+                    <a href="CNET_Japan_最新情報総合_5915.html">
+                        <h3>ChatGPTに「敬語で話す」人の割合は？ ドコモ調査</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Metaが従業員のキー入力やマウスクリック、閲覧コンテンツを追跡し、AIモデルの訓練に活用していた物議を醸す監視ツールは、計画通りにはいかなかったようだ。.</p>
+                        <p class="related-summary">NTTドコモのモバイル社会研究所は7月16日、生成AIへの話しかけ方に関する調査結果を発表した。ChatGPTなどの生成AIに「敬語で話す」人は15%、「あだ名をつけている」人は9%。単なる道具ではな...</p>
                     </a>
                 </article>
             </div>

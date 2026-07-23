@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った | 日本のテックニュース速報</title>
-    <meta name="description" content="みなさまこんにちは！エアークローゼットでCTOをしている辻です。 これまでに DB Graph MCP、社内MCP群の全体像、Biz Graph MCP と、社内向けに作っている MCP サーバーを順に紹介してきました。 今回はその中でもちょっと毛色が違うものを取り上げます">
-    <meta name="keywords" content="AI,Claude">
+    <title>Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
+    <meta name="keywords" content="GitHub,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った">
-    <meta property="og:description" content="みなさまこんにちは！エアークローゼットでCTOをしている辻です。 これまでに DB Graph MCP、社内MCP群の全体像、Biz Graph MCP と、社内向けに作っている MCP サーバーを順に紹介してきました。 今回はその中でもちょっと毛色が違うものを取り上げます">
+    <meta property="og:title" content="Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた">
+    <meta property="og:description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9210.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った">
-    <meta name="twitter:description" content="みなさまこんにちは！エアークローゼットでCTOをしている辻です。 これまでに DB Graph MCP、社内MCP群の全体像、Biz Graph MCP と、社内向けに作っている MCP サーバーを順に紹介してきました。 今回はその中でもちょっと毛色が違うものを取り上げます">
+    <meta name="twitter:title" content="Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた">
+    <meta name="twitter:description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った",
-        "description": "みなさまこんにちは！エアークローゼットでCTOをしている辻です。 これまでに DB Graph MCP、社内MCP群の全体像、Biz Graph MCP と、社内向けに作っている MCP サーバーを順に紹介してきました。 今回はその中でもちょっと毛色が違うものを取り上げます",
+        "headline": "Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた",
+        "description": "はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-27T23:02:32",
-        "dateModified": "2026-04-30T21:02:57.160268",
+        "datePublished": "2026-07-23T06:03:17",
+        "dateModified": "2026-07-23T14:00:51.856134",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9210.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9210.html",
         "articleSection": "プログラミング",
-        "keywords": ["AI","Claude"]
+        "keywords": ["GitHub","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った",
+                "name": "Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9210.html"
             }
         ]
@@ -114,41 +114,40 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った</li>
+                <li aria-current="page">Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめて...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った</h1>
+                <h1>Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/aircloset/articles/65efe9614f8e73" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/layerx/articles/f7124d4e761c1f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-04-27T23:02:32">
-                        公開: 2026-04-27T23:02:32
+                    <time datetime="2026-07-23T06:03:17">
+                        公開: 2026-07-23T06:03:17
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    みなさまこんにちは！エアークローゼットでCTOをしている辻です。
-これまでに DB Graph MCP、社内MCP群の全体像、Biz Graph MCP と、社内向けに作っている MCP サーバーを順に紹介してきました。
-今回はその中でもちょっと毛色が違うものを取り上げます。Sandbox MCP ── 非エンジニアの社員が AI と一緒に作ったアプリを、ワンコマンドで社内に安全に公開できるプラットフォームです。
-「Claude Code でアプリを作れるなら、それをそのまま社内に出せばいいじゃん」という話を、安全に実現する仕組みです。
-
- 背景：作るのは簡単になったが、公開は難しいまま...
+                    はじめに
+こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています。(諸説あり)
+さてIDチームに所属しているので当然 uuid のニュースには目を光らせているわけですが、 Go 1.27 からは標準ライブラリに uuid が追加される見込みですね！ドラフト版のリリースノートみて気になった人もいるのではないでしょうか！
+https://go.dev/doc/go1.27
+パ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/aircloset/articles/65efe9614f8e73" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/layerx/articles/f7124d4e761c1f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,20 +160,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +224,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_1213.html">
+                    <a href="気になる記になる_6750.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【書評】Qiita貢献度1位の『技術記事を書く技術』は、エンジニアの机に置いてほしい</span>
+                        <span class="nav-title">｢DJI Osmo 360 II｣はまもなく発売か ｰ 純正アクセサリも出荷開始</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9791.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9663.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">API Gateway → Lambda の間で何が行われているかを易しく解説</span>
+                        <span class="nav-title">セブンとPayPay 顧客IDの統合検討</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +246,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3526.html">
-                        <h3>「jigブラウザ」開発元の新たな挑戦、ARグラス「SABERA」実機を見る</h3>
+                    <a href="Zennのトレンド_4997.html">
+                        <h3>設計を、技術の話から始めない</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">ARグラス「SABERA（サベラ）」の実機が、4月末に東京ビッグサイトで開催された「SusHi Tech Tokyo 2026」のCellidブースに登場した。日本企業3社が共同開発する本格スマートグ...</p>
+                        <p class="related-summary">はじめに こんにちは、チームラボでエンジニアをしている茂木です。 普段は、システム全体の構造や責任の分け方、技術選定などを考える、アーキテクトに近い立場で開発に関わっています。 設計に関わる中で、採用...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7363.html">
-                        <h3>【新卒・英語苦手エンジニア必見】エンジニアなら知っておきたい現場で使われる重要英単語18選 - 徹底解説</h3>
+                    <a href="Qiita_-_人気の記事_2250.html">
+                        <h3>社会システムはなぜ誘導されるのか？ ― システム設計で読み解く認知バイアスとフレーミング : システム設計視点の行動経済...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">1章 はじめに 開発していて、英語のエラーメッセージをとりあえず AI に貼り付けて「解決！動いたからよし！」で済ませていませんか？気付いたら、いつまでも英語に苦手意識を持ったまま…という方も多いはず...</p>
+                        <p class="related-summary">user: こんにちは。「システム設計視点の行動経済学」を始めたいと思います。このシリーズは「Pythonで学ぶマクロ経済学」の姉妹連載という位置付けで考えてます。第100回総復習の記事は次のリンクの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6744.html">
-                        <h3>新卒をメンタリングするつもりが、逆にメンタルケアされていた2年目エンジニアの話</h3>
+                    <a href="Qiita_-_人気の記事_3995.html">
+                        <h3>先輩の「なぜこうしたの？」に毎回パニックになってたけど、整理するだけで上手に話せるようになった</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに 未経験からエンジニアになり、現在はSREチームに所属している入社2年目の者です。 最近、新卒研修の開発課題期間中のメンター／サポート役として、新卒社員のみなさんと1on1する機会を多くいただ...</p>
+                        <p class="related-summary">はじめに 先輩に「なぜこうしたの？」と聞かれてパニックになった新人エンジニアぷらむんが気づいたのは、&#34;考えていない&#34;んじゃなく&#34;考えを整理していない&#34;だけだったということでした。 会社で自称マスコット...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3797.html">
-                        <h3>SKILL.mdを使っている人は全員&#34;gh skill&#34;も知っておいてください</h3>
+                    <a href="Qiita_-_人気の記事_4615.html">
+                        <h3>AI を活用した開発に「いちエンジニア」が向き合い、実践している 3 つの仕組み</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">md)」について知っている前提で書いています。まだ読んでいない方は先にこちらをどうぞ！ 【最新版】GitHub Copilotを使っている人は全員&#34;SKILL. はじめに 本記事は以下の記事等で「Ag...</p>
+                        <p class="related-summary">はじめに こんにちは、@masa-asa です。 AI にコードを書いてもらうこと自体は、日に日に簡単になっています。一方で、業務で使おうとすると「出力をどこまで信頼するのか」「どうすればチームの方針...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8735.html">
-                        <h3>【初学者向け】「なんとなくコード書く」を卒業するためのアルゴリズム入門</h3>
+                    <a href="Zennのトレンド_6172.html">
+                        <h3>WebエディタのTab問題について調べてみた</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">株式会社 PRUMのmasaです。 今日は「アルゴリズムの基本概念」という内容について、プログラミング初学者向けに記事を書きました。 この記事を読むことで、難しく感じがちなアルゴリズムを身近なものとし...</p>
+                        <p class="related-summary">この記事は、CYBOZU SUMMER BLOG FES &#39;26の記事です。 こんにちは！26卒でフロントエンドエンジニア職として入社したコサキンです。 内定者バイトでもお世話になった kintone...</p>
                     </a>
                 </article>
             </div>

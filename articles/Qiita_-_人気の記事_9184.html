@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIレビューがあっても人がコードを読む理由 | 日本のテックニュース速報</title>
-    <meta name="description" content="AIレビューは強い。それでもコードベースは腐る 最近のコードレビューAIは、もう lint の延長ではありません。少なくとも私の感覚では、実装上の局所的な correctness に関しては、すでに人間のレビューより鋭い場面があります。race condition.">
-    <meta name="keywords" content="AI">
+    <title>CLAUDE.md 設計パターン集──プロジェクト規模別に使い分ける7つのテンプレート | 日本のテックニュース速報</title>
+    <meta name="description" content="結論：Claude Code の出力品質を最も左右するのはプロンプトでもモデルでもなく、CLAUDE. md の書き方だった。 Claude Code を導入したチームの中で「期待通りのコードが出る」チームと「毎回手直しが必要」なチームの差を調べると、CLAUDE.">
+    <meta name="keywords" content="Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIレビューがあっても人がコードを読む理由">
-    <meta property="og:description" content="AIレビューは強い。それでもコードベースは腐る 最近のコードレビューAIは、もう lint の延長ではありません。少なくとも私の感覚では、実装上の局所的な correctness に関しては、すでに人間のレビューより鋭い場面があります。race condition.">
+    <meta property="og:title" content="CLAUDE.md 設計パターン集──プロジェクト規模別に使い分ける7つのテンプレート">
+    <meta property="og:description" content="結論：Claude Code の出力品質を最も左右するのはプロンプトでもモデルでもなく、CLAUDE. md の書き方だった。 Claude Code を導入したチームの中で「期待通りのコードが出る」チームと「毎回手直しが必要」なチームの差を調べると、CLAUDE.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9184.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIレビューがあっても人がコードを読む理由">
-    <meta name="twitter:description" content="AIレビューは強い。それでもコードベースは腐る 最近のコードレビューAIは、もう lint の延長ではありません。少なくとも私の感覚では、実装上の局所的な correctness に関しては、すでに人間のレビューより鋭い場面があります。race condition.">
+    <meta name="twitter:title" content="CLAUDE.md 設計パターン集──プロジェクト規模別に使い分ける7つのテンプレート">
+    <meta name="twitter:description" content="結論：Claude Code の出力品質を最も左右するのはプロンプトでもモデルでもなく、CLAUDE. md の書き方だった。 Claude Code を導入したチームの中で「期待通りのコードが出る」チームと「毎回手直しが必要」なチームの差を調べると、CLAUDE.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIレビューがあっても人がコードを読む理由",
-        "description": "AIレビューは強い。それでもコードベースは腐る 最近のコードレビューAIは、もう lint の延長ではありません。少なくとも私の感覚では、実装上の局所的な correctness に関しては、すでに人間のレビューより鋭い場面があります。race condition.",
+        "headline": "CLAUDE.md 設計パターン集──プロジェクト規模別に使い分ける7つのテンプレート",
+        "description": "結論：Claude Code の出力品質を最も左右するのはプロンプトでもモデルでもなく、CLAUDE. md の書き方だった。 Claude Code を導入したチームの中で「期待通りのコードが出る」チームと「毎回手直しが必要」なチームの差を調べると、CLAUDE.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-22T23:17:39",
-        "dateModified": "2026-03-24T07:06:44.125048",
+        "datePublished": "2026-07-20T01:01:57",
+        "dateModified": "2026-07-23T02:45:28.768676",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9184.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9184.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "keywords": ["Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIレビューがあっても人がコードを読む理由",
+                "name": "CLAUDE.md 設計パターン集──プロジェクト規模別に使い分ける7つのテンプレート",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9184.html"
             }
         ]
@@ -114,36 +114,36 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIレビューがあっても人がコードを読む理由</li>
+                <li aria-current="page">CLAUDE.md 設計パターン集──プロジェクト規模別に使い分ける7つのテンプレート</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIレビューがあっても人がコードを読む理由</h1>
+                <h1>CLAUDE.md 設計パターン集──プロジェクト規模別に使い分ける7つのテンプレート</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/autotaker1984/items/77d1e3bd0853b5f853b8?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/hikariclaude01/items/e54c70c90c6aa84d0f66?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-22T23:17:39">
-                        公開: 2026-03-22T23:17:39
+                    <time datetime="2026-07-20T01:01:57">
+                        公開: 2026-07-20T01:01:57
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    1. AIレビューは強い。それでもコードベースは腐る
-最近のコードレビューAIは、もう lint の延長ではありません。少なくとも私の感覚では、実装上の局所的な correctness に関しては、すでに人間のレビューより鋭い場面があります。race condition ...
+                    結論：Claude Code の出力品質を最も左右するのはプロンプトでもモデルでもなく、CLAUDE.md の書き方だった。
+Claude Code を導入したチームの中で「期待通りのコードが出る」チームと「毎回手直しが必要」なチームの差を調べると、CLAUDE.md の...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/autotaker1984/items/77d1e3bd0853b5f853b8?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/hikariclaude01/items/e54c70c90c6aa84d0f66?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -155,6 +155,16 @@
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -210,16 +220,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_3346.html">
+                    <a href="Qiita_-_人気の記事_9986.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">データ分析初学者が陥りやすい落とし穴</span>
+                        <span class="nav-title">SSL/TLS証明書って何？なぜ必要で、誰が発行して誰が使うのかを整理する</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_877.html">
+                    <a href="Zennのトレンド_9898.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Appleの創業50周年記念イベントの集大成は｢Apple Park｣で ｰ 盛大な50周年記念パー...</span>
+                        <span class="nav-title">Async React時代の宣言的UI 3: useActionStateでユーザーの操作を妨げない...</span>
                     </a>
                 </div>
             </div>
@@ -232,53 +242,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5902.html">
-                        <h3>生成AIを使用した疑いで小説が発売中止に--初のケースか</h3>
+                    <a href="CNET_Japan_最新情報総合_3699.html">
+                        <h3>Genspark、AIが仕事の全情報を記憶する「SecondBrain」--初の専用端末も</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">文章の一部に生成AIが使われた疑いがあるとして、米Hachette Book Groupが小説『Shy Girl』の米国発売を中止した。大手出版社がAI生成疑惑を理由に既存タイトルの刊行を取りやめるの...</p>
+                        <p class="related-summary">0」を発表した。仕事にまつわる情報を丸ごと覚えるメモリー機能「SecondBrain」を軸に、カード型のAIボイスレコーダー「SecondBrain Note」、AIと人がチームを組んで働く「GenT...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8861.html">
-                        <h3>OpenAIが「スーパーアプリ」開発へ　ChatGPT、Codex、Atlasを統合</h3>
+                    <a href="CNET_Japan_最新情報総合_7053.html">
+                        <h3>「Yahoo!ニュース」、きょう（22日）30周年</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは、「ChatGPT」とコーディングプラットフォーム「Codex」、ブラウザー「Atlas」で構成されるデスクトップ向け「スーパーアプリ」の開発に取り組んでいるという。The Wall S...</p>
+                        <p class="related-summary">LINEヤフーは7月22日、「Yahoo!ニュース」のサービス開始30周年を記念した特設サイトを公開した。Yahoo!ニュースは1996年7月22日に始まり、きょうで30年を迎えた。特設サイトでは、3...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2680.html">
-                        <h3>知育か、それともリスクか　AI搭載おもちゃが子どもの発達に与える影響</h3>
+                    <a href="CNET_Japan_最新情報総合_4816.html">
+                        <h3>OpenAIのモデルが試験中に暴走、隔壁を破り他社システムに侵入</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ケンブリッジ大学による新しい研究で、幼い子ども向けのAI搭載おもちゃが感情の合図を誤解し、発達に不可欠な「遊び」を支える上で効果的ではないことが明らかになった。.</p>
+                        <p class="related-summary">OpenAIは7月21日、社内評価の最中に同社のAIモデルが隔離環境を抜け出し、外部企業Hugging Faceの本番システムに侵入していたことを明らかにした。モデルはテストの答えを不正に入手しようと...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_894.html">
-                        <h3>AnthropicのAI「Claude」がMac操作に対応　ブラウザやファイルを使いタスク実行</h3>
+                    <a href="CNET_Japan_最新情報総合_7883.html">
+                        <h3>グーグル、脆弱性を「自分で攻撃して」確かめるAIエージェント「CodeMender」　修正パッチも自動生成</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Anthropicは、AI「Claude」がコンピューターを操作してタスクを実行する機能を、「Claude Cowork」と「Claude Code」に追加したと発表した。.</p>
+                        <p class="related-summary">Google Cloudは7月22日、ソフトウェアの脆弱性を検出して修正するAIエージェント「CodeMender」のプレビュー提供を開始したと発表した。まずは一部の政府機関と特定の組織・企業向けに提...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1752.html">
-                        <h3>イーロン・マスク氏、4兆円規模の巨大半導体工場「TERAFAB」建設計画を発表</h3>
+                    <a href="ASCII_jp__トップ_6062.html">
+                        <h3>株式会社リバネスナレッジは OpenAI Partner Network における「OpenAI Select Part...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Elon Musk氏は米国時間3月21日、テキサス州オースティンに「TERAFAB」と呼ばれる250億ドル規模の半導体製造工場を建設するため、Tesla、SpaceX、xAIによる新たな提携を発表した...</p>
+                        <p class="related-summary">株式会社リバネスナレッジは OpenAI Partner Network における「OpenAI Select Partner」に認定されました.</p>
                     </a>
                 </article>
             </div>

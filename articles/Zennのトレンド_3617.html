@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ようこそ、ドメイン駆動設計へ｜無料公開中 | 日本のテックニュース速報</title>
-    <meta name="description" content="前半=解説編でドメイン駆動設計を『なぜ』から理解し、後半=実装編で勉強会アプリを1から作る、初学者のための1冊。￥500はチップ代です。本文は無料で読めます。.">
-    <meta name="keywords" content="本">
+    <title>Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
+    <meta name="keywords" content="GitHub,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ようこそ、ドメイン駆動設計へ｜無料公開中">
-    <meta property="og:description" content="前半=解説編でドメイン駆動設計を『なぜ』から理解し、後半=実装編で勉強会アプリを1から作る、初学者のための1冊。￥500はチップ代です。本文は無料で読めます。.">
+    <meta property="og:title" content="Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた">
+    <meta property="og:description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3617.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ようこそ、ドメイン駆動設計へ｜無料公開中">
-    <meta name="twitter:description" content="前半=解説編でドメイン駆動設計を『なぜ』から理解し、後半=実装編で勉強会アプリを1から作る、初学者のための1冊。￥500はチップ代です。本文は無料で読めます。.">
+    <meta name="twitter:title" content="Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた">
+    <meta name="twitter:description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3617.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ようこそ、ドメイン駆動設計へ｜無料公開中",
-        "description": "前半=解説編でドメイン駆動設計を『なぜ』から理解し、後半=実装編で勉強会アプリを1から作る、初学者のための1冊。￥500はチップ代です。本文は無料で読めます。.",
+        "headline": "Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた",
+        "description": "はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-30T02:34:16",
-        "dateModified": "2026-07-03T14:05:55.129325",
+        "datePublished": "2026-07-23T06:03:17",
+        "dateModified": "2026-07-24T17:39:16.937471",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3617.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3617.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "プログラミング",
+        "keywords": ["GitHub","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ようこそ、ドメイン駆動設計へ｜無料公開中",
+                "name": "Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3617.html"
             }
         ]
@@ -113,36 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">ようこそ、ドメイン駆動設計へ｜無料公開中</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめて...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ようこそ、ドメイン駆動設計へ｜無料公開中</h1>
+                <h1>Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/k_ing/books/ddd-first-book" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-06-30T02:34:16">
-                        公開: 2026-06-30T02:34:16
+                    <span class="source">出典: <a href="https://zenn.dev/layerx/articles/f7124d4e761c1f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-07-23T06:03:17">
+                        公開: 2026-07-23T06:03:17
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    前半=解説編でドメイン駆動設計を『なぜ』から理解し、後半=実装編で勉強会アプリを1から作る、初学者のための1冊。￥500はチップ代です。本文は無料で読めます。
+                    はじめに
+こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています。(諸説あり)
+さてIDチームに所属しているので当然 uuid のニュースには目を光らせているわけですが、 Go 1.27 からは標準ライブラリに uuid が追加される見込みですね！ドラフト版のリリースノートみて気になった人もいるのではないでしょうか！
+https://go.dev/doc/go1.27
+パ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/k_ing/books/ddd-first-book" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/layerx/articles/f7124d4e761c1f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -155,10 +160,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -168,23 +193,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -199,16 +224,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Publickey_664.html">
+                    <a href="気になる記になる_6862.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">クアルコムがPythonライクな新言語「Mojo」開発元のModular社買収を発表。AIデータセン...</span>
+                        <span class="nav-title">｢DJI Osmo 360 II｣はまもなく発売か ｰ 純正アクセサリも出荷開始</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6774.html">
+                    <a href="Zennのトレンド_486.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">エンジニアがいつのまにか知っている知識・常識・文化 12本</span>
+                        <span class="nav-title">受託小規模向けの技術選定と考えたこと</span>
                     </a>
                 </div>
             </div>
@@ -221,53 +246,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2038.html">
-                        <h3>16歳未満のSNS禁止に賛成？反対？　米国の調査結果は</h3>
+                    <a href="Zennのトレンド_3992.html">
+                        <h3>ターミナルを自作したら、1日のコミット数が500を超えて、生産性がバグった話</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">子どもの成長期におけるSNSの利用を政府が法で禁止すべきだという運動が勢いを増しており、米国の成人の過半数がこれに賛同しているようだ。.</p>
+                        <p class="related-summary">僕は長いこと、ターミナルの中で暮らしています。エディタは emacs、VS Code や GUI 系のツールはどうにも手に馴染まない。Web 上の開発環境も、あの「ちょっとした不便」が積もって結局使わ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9124.html">
-                        <h3>JR西日本、自動運転「レベル4」のバス走行試験を開始</h3>
+                    <a href="Zennのトレンド_5413.html">
+                        <h3>Astroで日英ブログを作って分かった5つの実装パターン</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">東広島市とJR西日本は7月3日、自動運転レベル4の認可取得に向けたバスの走行試験を、7月7日から東広島市内の公道で始めると発表した。JR西条駅と広島大学東広島キャンパスを結ぶ県道・市道「ブールバール」...</p>
+                        <p class="related-summary">はじめに 前段として「個人サイト、結局何で作る？元SEOがAstro + GitHub Pagesに決めるまで」を書いています。趣味の個人サイトを作るにあたって、Astro + GitHub Page...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8631.html">
-                        <h3>ドコモ回線契約13件で本人確認不備、エディオンと兼松に是正命令--ドコモ本体にも指導　総務省</h3>
+                    <a href="Zennのトレンド_2775.html">
+                        <h3>Node.js バージョン管理、Volta から mise へ移行した。Python は uv 管理のままにした。</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">総務省は7月3日、携帯電話不正利用防止法に違反したとして、兼松コミュニケーションズ（東京都渋谷区）とエディオン（大阪市）に違反の是正を命じたと発表した。両社とエディオンの媒介業者であるライクスタッフィ...</p>
+                        <p class="related-summary">js のバージョン管理には数年 Volta を使ってきました。ただ、リリースが v2. 2（2024 年 12 月）で止まっているのがずっと気になっていて、他のツールへ移りたい気持ちはありつつ、動いて...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3188.html">
-                        <h3>期間限定！ デスクトップPC購入で最大3万ポイント還元。ドスパラ大決算キャンペーン開催中</h3>
+                    <a href="Qiita_-_人気の記事_8640.html">
+                        <h3>新人エンジニアは&#34;忘れる前提&#34;で仕事をするのがベストだと気がついた</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ドスパラでは現在、「ドスパラ大決算！総額1億円分ポイント還元キャンペーン」を開催中。対象の当社製デスクトップPCを購入＆エントリーすると、購入金額に応じて最大30,000ポイントを還元する。キャンペー...</p>
+                        <p class="related-summary">はじめに 先輩に「それ、前教えたじゃん！」と言われてへこんでいた新人エンジニアぷらむんが気づいたのは、忘れるのは当然、でも思い出す回数を増やせば対策できるということでした。 会社で自称マスコットキャラ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6396.html">
-                        <h3>本物のハンドルかよっ！　ハンコン・ロジクールG「G923 TRUEFORCEレーシングシステム」の完成度高すぎ問題</h3>
+                    <a href="Qiita_-_人気の記事_5265.html">
+                        <h3>「何から始めるか問題」で、結局何も始められなかった話</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ハンドルコントローラー・ロジクールG「G923 TRUEFORCEレーシングシステム」の完成度が、高すぎると思う。.</p>
+                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
                     </a>
                 </article>
             </div>

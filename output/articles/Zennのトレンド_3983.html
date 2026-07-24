@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか | 日本のテックニュース速報</title>
-    <meta name="description" content="エンジニアの認知戦略はなぜすれ違うのか ソフトウェアエンジニアとして業界に長くいると、現場や SNS 上でのエンジニアどうしの「すれ違い」を何度も目にします。技術力の優劣ではない、性格や趣味嗜好の問題とも少し違う、なのにこの「すれ違い」は、驚くほど普遍的に業界内に存在しています">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>Async React時代の宣言的UI 3: useActionStateでユーザーの操作を妨げないUXを作る | 日本のテックニュース速報</title>
+    <meta name="description" content="useActionStateは、React 19で導入された新しいフックです。 その挙動を見ると、非同期版useReducerと言えるような挙動をします。 ただ、筆者は最近、このフックの真髄はユーザーの操作を妨げないUXを作ることにあるのではないかと考えています">
+    <meta name="keywords" content="React">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか">
-    <meta property="og:description" content="エンジニアの認知戦略はなぜすれ違うのか ソフトウェアエンジニアとして業界に長くいると、現場や SNS 上でのエンジニアどうしの「すれ違い」を何度も目にします。技術力の優劣ではない、性格や趣味嗜好の問題とも少し違う、なのにこの「すれ違い」は、驚くほど普遍的に業界内に存在しています">
+    <meta property="og:title" content="Async React時代の宣言的UI 3: useActionStateでユーザーの操作を妨げないUXを作る">
+    <meta property="og:description" content="useActionStateは、React 19で導入された新しいフックです。 その挙動を見ると、非同期版useReducerと言えるような挙動をします。 ただ、筆者は最近、このフックの真髄はユーザーの操作を妨げないUXを作ることにあるのではないかと考えています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3983.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか">
-    <meta name="twitter:description" content="エンジニアの認知戦略はなぜすれ違うのか ソフトウェアエンジニアとして業界に長くいると、現場や SNS 上でのエンジニアどうしの「すれ違い」を何度も目にします。技術力の優劣ではない、性格や趣味嗜好の問題とも少し違う、なのにこの「すれ違い」は、驚くほど普遍的に業界内に存在しています">
+    <meta name="twitter:title" content="Async React時代の宣言的UI 3: useActionStateでユーザーの操作を妨げないUXを作る">
+    <meta name="twitter:description" content="useActionStateは、React 19で導入された新しいフックです。 その挙動を見ると、非同期版useReducerと言えるような挙動をします。 ただ、筆者は最近、このフックの真髄はユーザーの操作を妨げないUXを作ることにあるのではないかと考えています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか",
-        "description": "エンジニアの認知戦略はなぜすれ違うのか ソフトウェアエンジニアとして業界に長くいると、現場や SNS 上でのエンジニアどうしの「すれ違い」を何度も目にします。技術力の優劣ではない、性格や趣味嗜好の問題とも少し違う、なのにこの「すれ違い」は、驚くほど普遍的に業界内に存在しています",
+        "headline": "Async React時代の宣言的UI 3: useActionStateでユーザーの操作を妨げないUXを作る",
+        "description": "useActionStateは、React 19で導入された新しいフックです。 その挙動を見ると、非同期版useReducerと言えるような挙動をします。 ただ、筆者は最近、このフックの真髄はユーザーの操作を妨げないUXを作ることにあるのではないかと考えています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-10T22:00:06",
-        "dateModified": "2026-05-12T14:27:37.247759",
+        "datePublished": "2026-07-20T05:29:51",
+        "dateModified": "2026-07-24T19:26:40.410847",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3983.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3983.html",
-        "articleSection": "プログラミング",
-        "keywords": []
+        "articleSection": "テクノロジー",
+        "keywords": ["React"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか",
+                "name": "Async React時代の宣言的UI 3: useActionStateでユーザーの操作を妨げないUXを作る",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3983.html"
             }
         ]
@@ -113,38 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Async React時代の宣言的UI 3: useActionStateでユーザーの操作を妨げない...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか</h1>
+                <h1>Async React時代の宣言的UI 3: useActionStateでユーザーの操作を妨げないUXを作る</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/torao/articles/20260502-differences-in-engrs-cognitive-strategies" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-05-10T22:00:06">
-                        公開: 2026-05-10T22:00:06
+                    <span class="source">出典: <a href="https://zenn.dev/uhyo/articles/async-react-action-queue" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-07-20T05:29:51">
+                        公開: 2026-07-20T05:29:51
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">React</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    エンジニアの認知戦略はなぜすれ違うのか
-ソフトウェアエンジニアとして業界に長くいると、現場や SNS 上でのエンジニアどうしの「すれ違い」を何度も目にします。技術力の優劣ではない、性格や趣味嗜好の問題とも少し違う、なのにこの「すれ違い」は、驚くほど普遍的に業界内に存在しています。
-この記事では、わたしがそのような「すれ違い」を何十年も観測し続けた末にたどり着いた一つの認知モデルに基づく見解です。科学的に証明された理論ではありません。しかし、この視点を持つだけで、日常の摩擦の見え方がかなり変わるはずです。
+                    useActionStateは、React 19で導入された新しいフックです。
+その挙動を見ると、非同期版useReducerと言えるような挙動をします。
+ただ、筆者は最近、このフックの真髄はユーザーの操作を妨げないUXを作ることにあるのではないかと考えています。ReactはUIライブラリであり、そのゴールは「良いUX」であるように思います。
+そこで、この記事では、useActionStateがどのようなUXを実現するのに役立つのか、という観点で解説していきます。
 
- チーム内での症状
-チェックリスト: あなたのチームで以下の状況を見たことはあ...
+ useActionStateのインターフェース
+まずuseActionStateのインターフェースを見ましょう。ドキュメ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/torao/articles/20260502-differences-in-engrs-cognitive-strategies" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/uhyo/articles/async-react-action-queue" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,20 +161,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -180,23 +174,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -211,16 +205,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2839.html">
+                    <a href="Zennのトレンド_7431.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">LLM に日本の法令・法規を正しく引かせるために、日本の法規 MCP ファミリーを作った話</span>
+                        <span class="nav-title">仕様駆動開発で起こる「仕様とコードのズレ」をハッシュで決定的に検出するツールを作った</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_9517.html">
+                    <a href="Publickey_5197.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">コードを書かなくなった我々は何者か —— Product / Platform / Evaluate...</span>
+                        <span class="nav-title">Rustで書き直されたBun、早くもClaude Codeアプリに本番投入された模様</span>
                     </a>
                 </div>
             </div>
@@ -233,53 +227,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4143.html">
-                        <h3>Windows 11の次期アプデで「動作の大幅な高速化」が実現する可能性</h3>
+                    <a href="CNET_Japan_最新情報総合_9574.html">
+                        <h3>サムスン「Galaxy Z Flip8」実機ハンズオン：値上げも納得の薄型化とカバー画面の進化</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Microsoftが「Windows 11」の動作を高速化する新機能を開発している模様だ。Windows Centralによれば、新たな高性能モード「Low Latency Profile」を有効にす...</p>
+                        <p class="related-summary">サムスンはロンドンでGalaxy Unpackedイベントを開催し、新型の縦折りスマートフォン「Galaxy Z Flip8」を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9626.html">
-                        <h3>NTT、触れずに「柔らかさ」「粘り気」を遠隔で伝える世界初の手法開発</h3>
+                    <a href="CNET_Japan_最新情報総合_821.html">
+                        <h3>スマホがそのままアクションカメラに？ タフネススマホ「FOSSiBOT F116 Pro」</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NTTは5月12日、専用の触覚デバイスを使わずに「柔らかさ」や「粘り気」を遠隔の相手に伝えられる、世界初の錯覚手法を考案したと発表した。パソコンやスマートフォンのカメラで取得した手の動きと、ディスプレ...</p>
+                        <p class="related-summary">「FOSSiBOT F116 Pro」は、4インチディスプレイのコンパクトサイズながら、IP68防水防塵性能のタフネススマホ。解像度48MPの広角カメラを搭載し、アクションカメラとしても使える。これ1...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_482.html">
-                        <h3>マネーフォワード、三井住友銀行との連携を再開　他行も順次</h3>
+                    <a href="CNET_Japan_最新情報総合_4895.html">
+                        <h3>テスラ、「明るすぎるヘッドライト」問題でリコール回避ならず　約2万台に影響</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">マネーフォワードは5月12日、GitHubへの不正アクセスを受けて一時停止していた銀行口座等の連携機能について、最終確認が完了した金融機関から本日付で順次再開すると発表した。同社の不正アクセス事案に関...</p>
+                        <p class="related-summary">テスラは一部の自社製EVのヘッドライトが明るさの上限を超えている問題について、リコールは不要と訴えていたが、米当局はこれを却下した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5868.html">
-                        <h3>KEECOON次世代調理家電を使い倒す「アンバサダー」を公募。美食家・料理愛好家と共に、“究極のほったらかしレシピ”を開...</h3>
+                    <a href="CNET_Japan_最新情報総合_1490.html">
+                        <h3>おさんぽ案内人が行く宮島散歩　厳島神社との縁が深い境外社を参詣</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_7206.html">
+                        <h3>天井から風、この価格ならアリ。山善の小型シーリングファンライトが5,980円</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">KEECOON次世代調理家電を使い倒す「アンバサダー」を公募。美食家・料理愛好家と共に、“究極のほったらかしレシピ”を開発.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6163.html">
-                        <h3>エンジニアの成長を加速させる3つの考え方</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">株式会社 PRUMのmasaです。 今日はエンジニアの成長を加速させる3つの考え方という内容について、これまでの現場経験を元にプログラミング初学者、エンジニア初心者向けに記事を書きました。 この記事を...</p>
+                        <p class="related-summary">山善の「シーリングファンライト（FFLC-S60VR）」がAmazonタイムセール対象。過去価格6,480円のところ、8％オフの5,980円で販売中。天井付近の空気を循環させるファンに加え、人感センサ...</p>
                     </a>
                 </article>
             </div>

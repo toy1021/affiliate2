@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PdMの脳みそをClaude Codeに移植した仕組み | 日本のテックニュース速報</title>
-    <meta name="description" content="「あの件、ビジネス側に投げたあと、どうなったんだっけ？」 複数のプロダクトを同時に見ていると、こういう「ボールは自分にないけど、把握はしておきたい」案件が次々と頭の隅に溜まっていきます。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="Claude">
+    <title>Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
+    <meta name="keywords" content="GitHub,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="PdMの脳みそをClaude Codeに移植した仕組み">
-    <meta property="og:description" content="「あの件、ビジネス側に投げたあと、どうなったんだっけ？」 複数のプロダクトを同時に見ていると、こういう「ボールは自分にないけど、把握はしておきたい」案件が次々と頭の隅に溜まっていきます。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた">
+    <meta property="og:description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3113.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PdMの脳みそをClaude Codeに移植した仕組み">
-    <meta name="twitter:description" content="「あの件、ビジネス側に投げたあと、どうなったんだっけ？」 複数のプロダクトを同時に見ていると、こういう「ボールは自分にないけど、把握はしておきたい」案件が次々と頭の隅に溜まっていきます。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた">
+    <meta name="twitter:description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "PdMの脳みそをClaude Codeに移植した仕組み",
-        "description": "「あの件、ビジネス側に投げたあと、どうなったんだっけ？」 複数のプロダクトを同時に見ていると、こういう「ボールは自分にないけど、把握はしておきたい」案件が次々と頭の隅に溜まっていきます。最新のテクノロジー情報をお届けします。",
+        "headline": "Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた",
+        "description": "はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-01T09:00:05",
-        "dateModified": "2026-06-03T04:10:07.592040",
+        "datePublished": "2026-07-23T06:03:17",
+        "dateModified": "2026-07-25T20:54:18.017700",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3113.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3113.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["Claude"]
+        "articleSection": "プログラミング",
+        "keywords": ["GitHub","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "PdMの脳みそをClaude Codeに移植した仕組み",
+                "name": "Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3113.html"
             }
         ]
@@ -113,42 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">PdMの脳みそをClaude Codeに移植した仕組み</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめて...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>PdMの脳みそをClaude Codeに移植した仕組み</h1>
+                <h1>Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/tokium_dev/articles/pdm-brain-on-claude-code" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-01T09:00:05">
-                        公開: 2026-06-01T09:00:05
+                    <span class="source">出典: <a href="https://zenn.dev/layerx/articles/f7124d4e761c1f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-07-23T06:03:17">
+                        公開: 2026-07-23T06:03:17
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    「あの件、ビジネス側に投げたあと、どうなったんだっけ？」
-複数のプロダクトを同時に見ていると、こういう「ボールは自分にないけど、把握はしておきたい」案件が次々と頭の隅に溜まっていきます。Claude Codeに情報収集やドキュメント作業を任せられるようになったぶん、セッションは増え、並行作業も増え、今度は覚えておくこと自体が追いつかなくなりました。
-そこで、「もう自分で覚えなくていい」をコンセプトに、自分の脳みそをClaude Codeの外に再現してみました。この記事では、その仕組みを紹介します。
-
- 仕組みの全体像
-まず全体像を紹介します。
-構成としては下記の4つのレイヤーに分けて、そ...
+                    はじめに
+こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています。(諸説あり)
+さてIDチームに所属しているので当然 uuid のニュースには目を光らせているわけですが、 Go 1.27 からは標準ライブラリに uuid が追加される見込みですね！ドラフト版のリリースノートみて気になった人もいるのではないでしょうか！
+https://go.dev/doc/go1.27
+パ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/tokium_dev/articles/pdm-brain-on-claude-code" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/layerx/articles/f7124d4e761c1f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,30 +160,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -194,23 +193,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +224,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_1662.html">
+                    <a href="気になる記になる_1084.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">VISA、｢Apple Payでも! タッチでVisa割キャンペーン​!｣を6月11日より開催へ ｰ...</span>
+                        <span class="nav-title">｢DJI Osmo 360 II｣はまもなく発売か ｰ 純正アクセサリも出荷開始</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_8191.html">
+                    <a href="Zennのトレンド_7865.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Apple Pencilの整備済製品が販売中〜iPad整備済製品【6/1】</span>
+                        <span class="nav-title">受託小規模向けの技術選定と考えたこと</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +246,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2238.html">
-                        <h3>「ChatGPT」の危険性めぐりフロリダ州がOpenAIを提訴、「欺瞞と搾取」を猛批判</h3>
+                    <a href="Qiita_-_人気の記事_4820.html">
+                        <h3>非エンジニアが気楽に始める仕様駆動開発</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">フロリダ州は、「ChatGPT」の安全性と設計をめぐってOpenAIを提訴した米国初の州となった。.</p>
+                        <p class="related-summary">この記事はAIと壁打ちしながら人間が書きました。 流行りの仕様駆動開発、とっつきづらく感じませんか？ サービスデザイナーという肩書きで仕事している非エンジニアの僕には、正直ちょっと難しいと感じてました...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9839.html">
-                        <h3>レノボ、FIFAワールドカップ出場48チームに「生成AI」を提供　その中身とは</h3>
+                    <a href="ASCII_jp__トップ_8161.html">
+                        <h3>AIと血流シミュレーションの融合で、心血管疾患の診断支援を迅速に｜Medical Circulatorのソフトウェア開発...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">レノボ・ジャパンは5月28日、FIFAワールドカップ2026における取り組みを説明した。レノボはこの大会で、テクノロジー領域における初の公式テクノロジーパートナーを務める。.</p>
+                        <p class="related-summary">AIと血流シミュレーションの融合で、心血管疾患の診断支援を迅速に｜Medical Circulatorのソフトウェア開発がFukushima Tech Create アクセラレーションプログラム採択.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2034.html">
-                        <h3>人気上昇DuckDuckGoの「AIなし検索」、ChromeやFirefoxのデフォルトにする拡張機能が公開</h3>
+                    <a href="Qiita_-_人気の記事_6024.html">
+                        <h3>個人開発でApp Storeリリースフローを学ぶ（続編）― 3回のリジェクトと審査通過までにやったこと</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">DuckDuckGoが「Chrome」と「Firefox」向けに新たに提供するブラウザ拡張機能を使えば、AIを排除した検索体験を提供する「noai. com」をデフォルトの検索エンジンに設定できる。.</p>
+                        <p class="related-summary">個人開発でApp Storeリリースフローを学ぶ（続編）― 3回のリジェクトと審査通過までにやったこと 前回の記事で、iOS（UIKit）+ FastAPI + Kubernetesで作ったMinec...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8456.html">
-                        <h3>トランプ氏の新大統領令は「骨抜き」？ OpenAIなどへの強制力なく専門家から冷ややかな声</h3>
+                    <a href="Qiita_-_人気の記事_7002.html">
+                        <h3>JenkinsでGitHub Copilot CLIにPRを自動レビューさせる ― E2BIG・プロンプトインジェクショ...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ドナルド・トランプ米大統領は、OpenAIやAnthropicなどのAI開発企業に対し、高度なAIモデルを提供する前に政府に提出するよう求める大統領令に署名した。.</p>
+                        <p class="related-summary">PR が来るたびに @github/copilot で差分を自動レビューし、結果を PR コメントに 貼る Jenkins パイプラインを作りました。 「Copilot CLI を -p で叩くだけで...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1325.html">
-                        <h3>Instagram著名アカウントが相次ぎ乗っ取られる　原因はMetaのAIサポートか</h3>
+                    <a href="Qiita_-_人気の記事_3259.html">
+                        <h3>Claude Code・Codexに動作確認まで自走させる｜ビルド・操作・録画・証跡を残す開発フロー</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">先週末、Instagramの著名アカウントが複数ハッキングされたという話を耳にした人もいるだろう。中でも最も大きな被害といえるのが、米国のバラク・オバマ元大統領のホワイトハウス関連アカウントだ。.</p>
+                        <p class="related-summary">Claude CodeやCodexに実装を依頼すると、コードの変更とビルドまでは比較的安定して進められます。 しかし、画面を持つアプリでは、ビルドに成功しただけでは完成とは言えません。 自分のプロジェ...</p>
                     </a>
                 </article>
             </div>

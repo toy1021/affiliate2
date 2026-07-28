@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloudflare Workers + better-auth で全リクエストが無応答になる - hanging promise の罠 | 日本のテックニュース速報</title>
-    <meta name="description" content="これはなに？ Cloudflare Workers + D1 + better-auth で運用している Web サービスで、「特定のユーザーだけ、サイトへの全リクエストが応答待ちのまま固まり、ブラウザを再起動しないと直らない」という障害に繰り返し遭遇しました">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
+    <meta name="keywords" content="GitHub,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Cloudflare Workers + better-auth で全リクエストが無応答になる - hanging promise の罠">
-    <meta property="og:description" content="これはなに？ Cloudflare Workers + D1 + better-auth で運用している Web サービスで、「特定のユーザーだけ、サイトへの全リクエストが応答待ちのまま固まり、ブラウザを再起動しないと直らない」という障害に繰り返し遭遇しました">
+    <meta property="og:title" content="Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた">
+    <meta property="og:description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7741.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cloudflare Workers + better-auth で全リクエストが無応答になる - hanging promise の罠">
-    <meta name="twitter:description" content="これはなに？ Cloudflare Workers + D1 + better-auth で運用している Web サービスで、「特定のユーザーだけ、サイトへの全リクエストが応答待ちのまま固まり、ブラウザを再起動しないと直らない」という障害に繰り返し遭遇しました">
+    <meta name="twitter:title" content="Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた">
+    <meta name="twitter:description" content="はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Cloudflare Workers + better-auth で全リクエストが無応答になる - hanging promise の罠",
-        "description": "これはなに？ Cloudflare Workers + D1 + better-auth で運用している Web サービスで、「特定のユーザーだけ、サイトへの全リクエストが応答待ちのまま固まり、ブラウザを再起動しないと直らない」という障害に繰り返し遭遇しました",
+        "headline": "Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた",
+        "description": "はじめに こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-05T10:11:56",
-        "dateModified": "2026-07-06T16:53:19.199107",
+        "datePublished": "2026-07-23T06:03:17",
+        "dateModified": "2026-07-28T02:33:21.827723",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7741.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7741.html",
-        "articleSection": "通信・ネットワーク",
-        "keywords": []
+        "articleSection": "プログラミング",
+        "keywords": ["GitHub","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "通信・ネットワーク",
-                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Cloudflare Workers + better-auth で全リクエストが無応答になる - hanging promise の罠",
+                "name": "Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7741.html"
             }
         ]
@@ -113,35 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
-                <li aria-current="page">Cloudflare Workers + better-auth で全リクエストが無応答になる - ...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめて...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Cloudflare Workers + better-auth で全リクエストが無応答になる - hanging promise の罠</h1>
+                <h1>Go 1.27 から uuid 実装がサポートされる！ので個人的に気になった議論とその着地をまとめてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/coji/articles/cloudflare-workers-better-auth-hanging-promise" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: 通信・ネットワーク</span>
-                    <time datetime="2026-07-05T10:11:56">
-                        公開: 2026-07-05T10:11:56
+                    <span class="source">出典: <a href="https://zenn.dev/layerx/articles/f7124d4e761c1f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-07-23T06:03:17">
+                        公開: 2026-07-23T06:03:17
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">GitHub</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    これはなに？
-Cloudflare Workers + D1 + better-auth で運用している Web サービスで、「特定のユーザーだけ、サイトへの全リクエストが応答待ちのまま固まり、ブラウザを再起動しないと直らない」という障害に繰り返し遭遇しました。丸一日かけて原因を特定して解決したので、同じ構成でハマった人が解決策にたどり着けるように、調査の過程と修正をまとめておきます。
-原因は Cloudflare Workers の hanging promise でした。リクエスト処理中に生成された promise は、そのリクエストがクライアントに中断されると永遠に解決しなくな...
+                    はじめに
+こんにちは、バクラク事業部アカウント基盤開発部IDチームの @convto です。各種利用サービスのIDに一貫性があり、 GitHub も X も大体 convto を確保できているのが密かな自慢です。やはりIDチーム所属なので、自分のIDにも一貫性が必要とされています。(諸説あり)
+さてIDチームに所属しているので当然 uuid のニュースには目を光らせているわけですが、 Go 1.27 からは標準ライブラリに uuid が追加される見込みですね！ドラフト版のリリースノートみて気になった人もいるのではないでしょうか！
+https://go.dev/doc/go1.27
+パ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/coji/articles/cloudflare-workers-better-auth-hanging-promise" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/layerx/articles/f7124d4e761c1f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -150,25 +156,60 @@ Cloudflare Workers + D1 + better-auth で運用している Web サービスで�
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>通信・ネットワーク関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -183,16 +224,16 @@ Cloudflare Workers + D1 + better-auth で運用している Web サービスで�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_8298.html">
+                    <a href="Zennのトレンド_7516.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AIと1日8時間超会話 男性の告白</span>
+                        <span class="nav-title">Go の設計、どこまでやる？〜小さく作って、壊さず育てる〜</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_6666.html">
+                    <a href="Publickey_6707.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">JavaScriptのメソッドチェインが遅い理由</span>
+                        <span class="nav-title">.NET MAUI、iOS/AndoridのランタイムがMonoからCoreCLRに更新、開発者は動...</span>
                     </a>
                 </div>
             </div>
@@ -205,53 +246,53 @@ Cloudflare Workers + D1 + better-auth で運用している Web サービスで�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2254.html">
-                        <h3>楽天ペイ、楽天カードのキャッシングで残高チャージが可能に</h3>
+                    <a href="ASCII_jp__トップ_5528.html">
+                        <h3>「何から始めればいいかわからない」製品開発を、構想段階から支援。グラフィックデザイン会社発の3Dサービス「mopri3D...</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">楽天カードと楽天ペイメントは7月2日、「楽天ペイ」アプリから楽天カードのキャッシング（借り入れ）で「楽天ペイ残高」にチャージできる機能の本格提供を始めた。通常のキャッシングは1万円からだが、この機能で...</p>
+                        <p class="related-summary">「何から始めればいいかわからない」製品開発を、構想段階から支援。グラフィックデザイン会社発の3Dサービス「mopri3D」が本格展開.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2594.html">
-                        <h3>ローソンでWi-Fiルーターを即日レンタル　「WiFiBOX」を都内13店舗に試験導入　1日840円</h3>
+                    <a href="気になる記になる_428.html">
+                        <h3>Apple、｢HomePodソフトウェア 26.6｣をリリース ｰ パフォーマンスと安定性を改善</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">テレコムスクエアは7月1日、セルフWi-Fiレンタル「WiFiBOX」をローソンの東京都内13店舗に試験導入し、サービスを始めた。月末のギガ不足や急なリモート会議の際に、身近なコンビニでモバイルWi-...</p>
+                        <p class="related-summary">本日、Appleが、「HomePod」向けソフトウェアの最新アップデートとなる「HomePodソフトウェアバージョン26. 6」を正式にリリースしました。 アップデートは「HomePod（第1世代）」...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6532.html">
-                        <h3>アマゾンの衛星ブロードバンド「Leo」が年内開始へ、スターリンクを追う</h3>
+                    <a href="Publickey_2060.html">
+                        <h3>SaaSにおけるUI開発のよくある課題とその解決方法、教えます［PR］</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">アマゾンの衛星ブロードバンド通信サービス「Leo」は、2026年内に限定的な提供を開始する準備が整った。ただし、先行する「Starlink」には大きく後れをとっている。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_3858.html">
-                        <h3>MCPにエンタープライズ向け新機能、アクセスを一括管理できる「Enterprise-Managed Authorizat...</h3>
-                        <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">生成AIとツールとの接続プロトコルとしてLinux Foundation傘下で標準化と機能拡張が進められているMCP（Model Context Protocol）の企業向けの新機能「Enterpri...</p>
+                        <p class="related-summary">jetform-wrapper { border: 2px solid #ccc; /* 枠線 / padding: 20px; / 内側の余白 / border-radius: 12p.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3661.html">
-                        <h3>Aurora PostgreSQLの基本設計で押さえておきたいポイント</h3>
+                    <a href="Zennのトレンド_4805.html">
+                        <h3>ステージング環境をセルフサービス化しチームの開発速度を向上させた方法</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに 現在、複数人の開発メンバーで新規のWebアプリケーションを開発しています。 開発メンバーは5人、さらに、仕様駆動開発の考えを導入した上でDevinも実装者に加わっています。 インフラの構築が...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7720.html">
+                        <h3>「経験がないから」を言い訳にしなくていい時代になった</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Aurora PostgreSQLの基本設計で押さえておきたいポイント 導入・背景 AWS案件でAurora PostgreSQLの基本設計を担当するなかで、「これは最初に決めておかないと後から困る」...</p>
+                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
                     </a>
                 </article>
             </div>

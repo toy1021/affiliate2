@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docker Buildを106秒→44秒、32秒→3秒に高速化した3つの改善 | 日本のテックニュース速報</title>
-    <meta name="description" content="jsのフロントエンド1台、Goのバックエンド2台、Go Worker1台をビルドしており、開発中に頻繁にDocker Buildを実行していました。 しかし、ビルド時間が1分以上かかるようになり、修正 → ビルド → 動作確認のサイクルが大きなストレスになっていました">
-    <meta name="keywords" content="Docker">
+    <title>ステージング環境をセルフサービス化しチームの開発速度を向上させた方法 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 現在、複数人の開発メンバーで新規のWebアプリケーションを開発しています。 開発メンバーは5人、さらに、仕様駆動開発の考えを導入した上でDevinも実装者に加わっています。 インフラの構築が落ち着き、ある程度の開発基盤も整った段階で、運用上以下の状況が発生していました">
+    <meta name="keywords" content="AI,AWS,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Docker Buildを106秒→44秒、32秒→3秒に高速化した3つの改善">
-    <meta property="og:description" content="jsのフロントエンド1台、Goのバックエンド2台、Go Worker1台をビルドしており、開発中に頻繁にDocker Buildを実行していました。 しかし、ビルド時間が1分以上かかるようになり、修正 → ビルド → 動作確認のサイクルが大きなストレスになっていました">
+    <meta property="og:title" content="ステージング環境をセルフサービス化しチームの開発速度を向上させた方法">
+    <meta property="og:description" content="はじめに 現在、複数人の開発メンバーで新規のWebアプリケーションを開発しています。 開発メンバーは5人、さらに、仕様駆動開発の考えを導入した上でDevinも実装者に加わっています。 インフラの構築が落ち着き、ある程度の開発基盤も整った段階で、運用上以下の状況が発生していました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2526.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Docker Buildを106秒→44秒、32秒→3秒に高速化した3つの改善">
-    <meta name="twitter:description" content="jsのフロントエンド1台、Goのバックエンド2台、Go Worker1台をビルドしており、開発中に頻繁にDocker Buildを実行していました。 しかし、ビルド時間が1分以上かかるようになり、修正 → ビルド → 動作確認のサイクルが大きなストレスになっていました">
+    <meta name="twitter:title" content="ステージング環境をセルフサービス化しチームの開発速度を向上させた方法">
+    <meta name="twitter:description" content="はじめに 現在、複数人の開発メンバーで新規のWebアプリケーションを開発しています。 開発メンバーは5人、さらに、仕様駆動開発の考えを導入した上でDevinも実装者に加わっています。 インフラの構築が落ち着き、ある程度の開発基盤も整った段階で、運用上以下の状況が発生していました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Docker Buildを106秒→44秒、32秒→3秒に高速化した3つの改善",
-        "description": "jsのフロントエンド1台、Goのバックエンド2台、Go Worker1台をビルドしており、開発中に頻繁にDocker Buildを実行していました。 しかし、ビルド時間が1分以上かかるようになり、修正 → ビルド → 動作確認のサイクルが大きなストレスになっていました",
+        "headline": "ステージング環境をセルフサービス化しチームの開発速度を向上させた方法",
+        "description": "はじめに 現在、複数人の開発メンバーで新規のWebアプリケーションを開発しています。 開発メンバーは5人、さらに、仕様駆動開発の考えを導入した上でDevinも実装者に加わっています。 インフラの構築が落ち着き、ある程度の開発基盤も整った段階で、運用上以下の状況が発生していました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-08T10:18:04",
-        "dateModified": "2026-06-10T03:44:56.168801",
+        "datePublished": "2026-07-27T09:46:14",
+        "dateModified": "2026-07-29T20:57:08.175746",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2526.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2526.html",
         "articleSection": "プログラミング",
-        "keywords": ["Docker"]
+        "keywords": ["AI","AWS","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Docker Buildを106秒→44秒、32秒→3秒に高速化した3つの改善",
+                "name": "ステージング環境をセルフサービス化しチームの開発速度を向上させた方法",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2526.html"
             }
         ]
@@ -114,41 +114,44 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Docker Buildを106秒→44秒、32秒→3秒に高速化した3つの改善</li>
+                <li aria-current="page">ステージング環境をセルフサービス化しチームの開発速度を向上させた方法</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Docker Buildを106秒→44秒、32秒→3秒に高速化した3つの改善</h1>
+                <h1>ステージング環境をセルフサービス化しチームの開発速度を向上させた方法</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/engharu/articles/b3aa073c3694de" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/fusic/articles/83c6b9a1e7c7d0" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-06-08T10:18:04">
-                        公開: 2026-06-08T10:18:04
+                    <time datetime="2026-07-27T09:46:14">
+                        公開: 2026-07-27T09:46:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Docker</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Docker Composeで複数のコンテナを管理していると、気づかないうちにDocker Buildの待ち時間が長くなりがちです。
-私の関わっているプロジェクトでは、Next.jsのフロントエンド1台、Goのバックエンド2台、Go Worker1台をビルドしており、開発中に頻繁にDocker Buildを実行していました。
-しかし、ビルド時間が1分以上かかるようになり、修正 → ビルド → 動作確認のサイクルが大きなストレスになっていました。
-そこでDocker Buildの処理内容を見直し、
+                    はじめに
+現在、複数人の開発メンバーで新規のWebアプリケーションを開発しています。
+開発メンバーは5人、さらに、仕様駆動開発の考えを導入した上でDevinも実装者に加わっています。
+インフラの構築が落ち着き、ある程度の開発基盤も整った段階で、運用上以下の状況が発生していました。
 
-.dockerignore によるBuild Contextの削減
-Docker Laye...
+チーム内でリリース前の動作確認として単一のStaging環境(AWS環境)を払い出していた。
+各自の動作確認をstagingブランチに取り込んでいたが、AI前提の開発速度が速すぎて待ちが発生し、そのブランチ運用がボトルネックとなってしまっていた。
+Staging環境の取り合いによりチーム内での余計なコミュ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/engharu/articles/b3aa073c3694de" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/fusic/articles/83c6b9a1e7c7d0" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,16 +164,6 @@ Docker Laye...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Docker&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Docker - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Docker - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでDockerに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
@@ -181,10 +174,20 @@ Docker Laye...
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +228,16 @@ Docker Laye...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_865.html">
+                    <a href="Qiita_-_人気の記事_9733.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">NTT アイオンAIファンド設立方針</span>
+                        <span class="nav-title">「経験がないから」を言い訳にしなくていい時代になった</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_1524.html">
+                    <a href="Qiita_-_人気の記事_3660.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">「OpenTelemetry...?」</span>
+                        <span class="nav-title">【ProcrastiNation】今日できることは明日でもできる、全力で先延ばしにしよう【Next....</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +250,53 @@ Docker Laye...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_18.html">
-                        <h3>宇宙飛行士もプラダを着用へ　Axiom Spaceと共同開発の冷却・換気インナーを発表</h3>
+                    <a href="Qiita_-_人気の記事_3238.html">
+                        <h3>「ゴリゴリのエンジニアじゃなくても大丈夫」 企業の内製化を加速するVibe Coding実践ガイド｜業務で使えるプロンプ...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">50年ぶりに人類を月面へ送ることを目指す米航空宇宙局（NASA）の「アルテミスIV」ミッションには、多くの要素が関わっている。その1つが、Axiom Spaceとプラダが開発した新しい宇宙服用インナー...</p>
+                        <p class="related-summary">ソフトウェア保守をVibe Codingで段階的に内製化するためのPromptと実践チュートリアル 背景 生成AIやVibe Codingの話をしていると、どうしても「どこまでコードを書けるか」に議論...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1408.html">
-                        <h3>セラミックス膜を使った世界唯一の独自技術で超高純度リチウム回収、資源循環を目指す</h3>
+                    <a href="気になる記になる_862.html">
+                        <h3>【セール】EarFunのワイヤレスイヤホンがAmazonで特価に｜追加で6％オフになるクーポンも配布中</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">社会実装につながる研究開発現場を紹介する「イノベ見て歩き」。第30回では、リチウムイオンのみを選択的に分離するセラミックス膜を開発し、超高純度分離・回収システムの商用化を目指すLiSTie株式会社CE...</p>
+                        <p class="related-summary">コスパの高いワイヤレスオーディオ機器で有名なEarFunが、Amazonにおいて、対象製品を特別価格で販売するセールを開催しています。 同社は2018年に経験豊富な工業デザイナー・音響エンジニア・音楽...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5946.html">
-                        <h3>800名のエンジニアが作る無料Wi-Fiって何だ!? 会場限定ネットワークが本気すぎる</h3>
+                    <a href="Qiita_-_人気の記事_7343.html">
+                        <h3>フロントエンド挫折勢！StreamlitならPythonだけで実用的なWebアプリ、ツールが即作れる。導入、初心者へ</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Interop Tokyo 2026の会場には、すごいWi-Fiがあるんですよ。.</p>
+                        <p class="related-summary">あの！！！ フロントエンドってわかりにくくないですか！！！！！ まずプログラムしてバグにぶち当たって、ものが出来上がって使える喜びを感じるの大事じゃないですか！？ なのにWebアプリ作ろうとするとHT...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_9512.html">
-                        <h3>データエンジニアこそ組織のオントロジーに向き合うべき</h3>
+                    <a href="Zennのトレンド_5287.html">
+                        <h3>NVIDIA DGX Spark でソフトウェア開発に最適な Gemma 4 モデルを検証する (31B vs 26B)</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">こんにちは、クラシルでデータエンジニアをしているharry(@gappy50)です。 クラシルでは、これまでAI-Readyなデータ利活用に取り組んできました。Tier設計でデータの信頼性を担保したり...</p>
+                        <p class="related-summary">NVIDIA DGX Spark 環境において、ソフトウェア開発のパートナーとして最適な Gemma 4 モデルはどちらか。 その疑問を解消するため、nvidia/Gemma-4-31B-IT-NVF...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_2116.html">
-                        <h3>マルチテナント化のために本番稼働中のMySQLをPostgreSQLに移行した話（マルチテナント化連載 第2回・Post...</h3>
+                    <a href="Zennのトレンド_6390.html">
+                        <h3>AI時代に感じた危機感と、エンジニアがこれから考えるべきこと</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは。株式会社カウンターワークスにて、テックリードとして、リーシングのDXを実現するクラウド管理システム 「ショップカウンター エンタープライズ」（以下 SCE）を開発しております s...</p>
+                        <p class="related-summary">最近感じている危機感 非エンジニアがAIツールでプロトタイプを組み、これと同じ動きのアプリを作ってほしいと依頼してくる。先日、これに近いことが実際に起こりました。 今はまだ単発の出来事ですが、近い将来...</p>
                     </a>
                 </article>
             </div>

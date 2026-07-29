@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwiftのStringのAllocationsの最適化とストレージ選択の仕組み | 日本のテックニュース速報</title>
-    <meta name="description" content="SwiftのStringのAllocationsの最適化とストレージ選択の仕組み - テクノロジーニュースをお届け。">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>「Simple Made Easy」の観点から、UI/UXはどうあるべきか | 日本のテックニュース速報</title>
+    <meta name="description" content="要約 Rich Hickey の講演「Simple Made Easy」の考え方を、UI/UX に当てはめて整理した記事です。「シンプル(Simple)」と「簡単(Easy)」は別物で、Simple は「モノの構造」の話、Easy は「人との親近性」の話です">
+    <meta name="keywords" content="Excel,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="SwiftのStringのAllocationsの最適化とストレージ選択の仕組み">
-    <meta property="og:description" content="SwiftのStringのAllocationsの最適化とストレージ選択の仕組み - テクノロジーニュースをお届け。">
+    <meta property="og:title" content="「Simple Made Easy」の観点から、UI/UXはどうあるべきか">
+    <meta property="og:description" content="要約 Rich Hickey の講演「Simple Made Easy」の考え方を、UI/UX に当てはめて整理した記事です。「シンプル(Simple)」と「簡単(Easy)」は別物で、Simple は「モノの構造」の話、Easy は「人との親近性」の話です">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9831.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SwiftのStringのAllocationsの最適化とストレージ選択の仕組み">
-    <meta name="twitter:description" content="SwiftのStringのAllocationsの最適化とストレージ選択の仕組み - テクノロジーニュースをお届け。">
+    <meta name="twitter:title" content="「Simple Made Easy」の観点から、UI/UXはどうあるべきか">
+    <meta name="twitter:description" content="要約 Rich Hickey の講演「Simple Made Easy」の考え方を、UI/UX に当てはめて整理した記事です。「シンプル(Simple)」と「簡単(Easy)」は別物で、Simple は「モノの構造」の話、Easy は「人との親近性」の話です">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "SwiftのStringのAllocationsの最適化とストレージ選択の仕組み",
-        "description": "SwiftのStringのAllocationsの最適化とストレージ選択の仕組み - テクノロジーニュースをお届け。",
+        "headline": "「Simple Made Easy」の観点から、UI/UXはどうあるべきか",
+        "description": "要約 Rich Hickey の講演「Simple Made Easy」の考え方を、UI/UX に当てはめて整理した記事です。「シンプル(Simple)」と「簡単(Easy)」は別物で、Simple は「モノの構造」の話、Easy は「人との親近性」の話です",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-18T02:17:06",
-        "dateModified": "2026-04-19T10:41:15.245055",
+        "datePublished": "2026-07-27T07:22:43",
+        "dateModified": "2026-07-29T06:32:05.174247",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9831.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9831.html",
-        "articleSection": "通信・ネットワーク",
-        "keywords": []
+        "articleSection": "その他",
+        "keywords": ["Excel","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "通信・ネットワーク",
-                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "SwiftのStringのAllocationsの最適化とストレージ選択の仕組み",
+                "name": "「Simple Made Easy」の観点から、UI/UXはどうあるべきか",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9831.html"
             }
         ]
@@ -113,38 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
-                <li aria-current="page">SwiftのStringのAllocationsの最適化とストレージ選択の仕組み</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">「Simple Made Easy」の観点から、UI/UXはどうあるべきか</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>SwiftのStringのAllocationsの最適化とストレージ選択の仕組み</h1>
+                <h1>「Simple Made Easy」の観点から、UI/UXはどうあるべきか</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/hinakko/articles/bfc446a24d0de0" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: 通信・ネットワーク</span>
-                    <time datetime="2026-04-18T02:17:06">
-                        公開: 2026-04-18T02:17:06
+                    <span class="source">出典: <a href="https://zenn.dev/pksha/articles/6cdf19e5fe8065" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-07-27T07:22:43">
+                        公開: 2026-07-27T07:22:43
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">Excel</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-try! Swift Tokyo2026のPaul HudsonさんのワークショップのHigh-Performance Swiftに参加し、Swift言語のStringStorageの話を聞き、Stringの内部構造とどのように最適化されているのかについて興味を持ったので、この記事を書きました。
-https://x.com/hinakkograshi/status/2043153057278763029?s=20
-
- SwiftのStringのAllocations
-Stringのストレージの格納場所は大きく分けて、Small String Optimization・__S...
+                    要約
+Rich Hickey の講演「Simple Made Easy」の考え方を、UI/UX に当てはめて整理した記事です。「シンプル(Simple)」と「簡単(Easy)」は別物で、Simple は「モノの構造」の話、Easy は「人との親近性」の話です。Easy を優先した UI は「Easy but Complex」の罠に陥りがちです。最初こそ快適でも、育つほど絡み合いが効いてきて Hard(変更が怖い・誰も読めない)になります。典型例が Excel です。
+本文では、UI で起きる絡み合い(complect)の定番パターンを「表示と操作」など5つに整理します。そこから Si...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/hinakko/articles/bfc446a24d0de0" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/pksha/articles/6cdf19e5fe8065" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -153,9 +154,34 @@ Stringのストレージの格納場所は大きく分けて、Small String Opti
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Excel&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Excel - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Excel - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでExcelに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>通信・ネットワーク関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -186,16 +212,16 @@ Stringのストレージの格納場所は大きく分けて、Small String Opti
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_440.html">
+                    <a href="Zennのトレンド_8079.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Insta360初のミラーレスカメラの実機写真が登場 ｰ マイクロフォーサーズ採用</span>
+                        <span class="nav-title">コードレビューでの見落としをきっかけに『ITエンジニア1年目の教科書』を読んだ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9993.html">
+                    <a href="Qiita_-_人気の記事_6556.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Designでポートフォリオサイトをリデザインしてみた: エンジニアが1時間程度で和モ...</span>
+                        <span class="nav-title">【全6問】ITパスポートと基本情報、実際どのくらい難しいの?比べてみた</span>
                     </a>
                 </div>
             </div>
@@ -208,33 +234,53 @@ Stringのストレージの格納場所は大きく分けて、Small String Opti
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8105.html">
-                        <h3>楽天ペイで税金や公共料金を支払うと「全額還元」に　抽選100人限定</h3>
+                    <a href="CNET_Japan_最新情報総合_1912.html">
+                        <h3>90年代の音楽体験を今のスタイルで！ ポータブルカセットプレーヤー「Miko cassette player」</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
+                            <span class="category">その他</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">楽天ペイメントは4月16日、スマートフォン決済サービス「楽天ペイ」アプリで、税金や公共料金の支払いを対象にしたキャンペーン「税金・公共料金のお支払いは楽天ペイで！ 抽選で楽天ポイント全額還元！」を開始...</p>
+                        <p class="related-summary">「Miko cassette player」は、タイのブランドが手がけたポータブルカセットプレーヤー。90年代日本のプロダクトを思わせるレトロなデザインながら、外部スピーカーとのBluetooth接続...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_253.html">
-                        <h3>【自宅WiFi利用実態】「料金以外で」重視されていたのは”工事不要”、選び方と後悔を調査</h3>
+                    <a href="ASCII_jp__トップ_3789.html">
+                        <h3>熊本地震の被災者を支援　パソコン工房熊本店が修理・データ復旧を特別対応</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
+                            <span class="category">その他</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">【自宅WiFi利用実態】「料金以外で」重視されていたのは”工事不要”、選び方と後悔を調査.</p>
+                        <p class="related-summary">ユニットコムが令和8年熊本地震の被災者向けに、パソコン工房 熊本店で故障品1,000円買取、iiyama PC修理見積もり無料、代替機無償レンタル、データ復旧検証無料などの特別支援を2026年7月29...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_4467.html">
-                        <h3>Bun、コマンドラインからヘッドレスブラウザの操作を行える新機能「Headless Browser Automation...</h3>
+                    <a href="気になる記になる_1333.html">
+                        <h3>【セール】MinisforumのミニPCが｢Amazon 暮らし応援サマーSale｣で特価に</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">オープンソースで開発されているJavaScriptランタイムの「Bun」の最新版となる「Bun v1. 12」で、コマンドラインからヘッドレスブラウザの操作を行える新機能が実装されました。BunのAP...</p>
+                        <p class="related-summary">Amazonでは本日より「暮らし応援サマーSale」が開催されていますが、同セールではMinisforumのミニPCが多数特価で販売されています。 セールでは、Core Ultra 7 356H搭載の...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_3003.html">
+                        <h3>【セール】SwitchBotのスマートロックやハブ製品などスマートホーム製品が最大50%オフに</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">Amazonでは本日より「暮らし応援サマーSale」が開催されていますが、同セールではSwitchBotのスマートホーム製品が多数特価で販売されています。 対象となっているのは、ハブ製品やスマートロッ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_6284.html">
+                        <h3>【セール】Ankerのモバイルバッテリーや充電器など160製品以上が最大47％オフに</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">Amazonでは本日より「暮らし応援サマーSale」が開催されていますが、同セールではAnkerのモバイルバッテリーなど多数の製品が特価で販売されています。 対象となっているのは、モバイルバッテリー、...</p>
                     </a>
                 </article>
             </div>

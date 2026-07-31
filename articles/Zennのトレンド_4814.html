@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マネーフォワードのGitHub不正アクセス事件をエンジニア視点で読み解く — なぜソースコードに本番カード情報と認証キーが入っていたのか | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 2026 年 5 月 1 日、マネーフォワードが「GitHub への不正アクセス発生に関するお知らせとお詫び（第一報）」を公表しました。GitHub の認証情報が漏えいし、第三者によりリポジトリがコピーされ、ソースコードと一部の個人情報が流出した可能性があるという内容です">
-    <meta name="keywords" content="GitHub,本">
+    <title>1日500コミットは、もう読めない ── だからコードレビューをやめた | 日本のテックニュース速報</title>
+    <meta name="description" content="最近、マージボタンを押すとき、僕はその diff を読んでいないことのほうが多くなりました。 コードレビューをしていません。 場合によっては、動作確認もしていません。 こう書くと無責任に聞こえると思います。実際、少し前の僕がこれを読んだら「そんなの事故るに決まってる」と言ったはずです">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="マネーフォワードのGitHub不正アクセス事件をエンジニア視点で読み解く — なぜソースコードに本番カード情報と認証キーが入っていたのか">
-    <meta property="og:description" content="はじめに 2026 年 5 月 1 日、マネーフォワードが「GitHub への不正アクセス発生に関するお知らせとお詫び（第一報）」を公表しました。GitHub の認証情報が漏えいし、第三者によりリポジトリがコピーされ、ソースコードと一部の個人情報が流出した可能性があるという内容です">
+    <meta property="og:title" content="1日500コミットは、もう読めない ── だからコードレビューをやめた">
+    <meta property="og:description" content="最近、マージボタンを押すとき、僕はその diff を読んでいないことのほうが多くなりました。 コードレビューをしていません。 場合によっては、動作確認もしていません。 こう書くと無責任に聞こえると思います。実際、少し前の僕がこれを読んだら「そんなの事故るに決まってる」と言ったはずです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4814.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="マネーフォワードのGitHub不正アクセス事件をエンジニア視点で読み解く — なぜソースコードに本番カード情報と認証キーが入っていたのか">
-    <meta name="twitter:description" content="はじめに 2026 年 5 月 1 日、マネーフォワードが「GitHub への不正アクセス発生に関するお知らせとお詫び（第一報）」を公表しました。GitHub の認証情報が漏えいし、第三者によりリポジトリがコピーされ、ソースコードと一部の個人情報が流出した可能性があるという内容です">
+    <meta name="twitter:title" content="1日500コミットは、もう読めない ── だからコードレビューをやめた">
+    <meta name="twitter:description" content="最近、マージボタンを押すとき、僕はその diff を読んでいないことのほうが多くなりました。 コードレビューをしていません。 場合によっては、動作確認もしていません。 こう書くと無責任に聞こえると思います。実際、少し前の僕がこれを読んだら「そんなの事故るに決まってる」と言ったはずです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "マネーフォワードのGitHub不正アクセス事件をエンジニア視点で読み解く — なぜソースコードに本番カード情報と認証キーが入っていたのか",
-        "description": "はじめに 2026 年 5 月 1 日、マネーフォワードが「GitHub への不正アクセス発生に関するお知らせとお詫び（第一報）」を公表しました。GitHub の認証情報が漏えいし、第三者によりリポジトリがコピーされ、ソースコードと一部の個人情報が流出した可能性があるという内容です",
+        "headline": "1日500コミットは、もう読めない ── だからコードレビューをやめた",
+        "description": "最近、マージボタンを押すとき、僕はその diff を読んでいないことのほうが多くなりました。 コードレビューをしていません。 場合によっては、動作確認もしていません。 こう書くと無責任に聞こえると思います。実際、少し前の僕がこれを読んだら「そんなの事故るに決まってる」と言ったはずです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-01T13:29:45",
-        "dateModified": "2026-05-03T22:43:26.672870",
+        "datePublished": "2026-07-26T20:06:28",
+        "dateModified": "2026-07-31T14:07:29.297187",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4814.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4814.html",
-        "articleSection": "プログラミング",
-        "keywords": ["GitHub","本"]
+        "articleSection": "AI・機械学習",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "マネーフォワードのGitHub不正アクセス事件をエンジニア視点で読み解く — なぜソースコードに本番カード情報と認証キーが入っていたのか",
+                "name": "1日500コミットは、もう読めない ── だからコードレビューをやめた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4814.html"
             }
         ]
@@ -113,39 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">マネーフォワードのGitHub不正アクセス事件をエンジニア視点で読み解く — なぜソースコードに本番...</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">1日500コミットは、もう読めない ── だからコードレビューをやめた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>マネーフォワードのGitHub不正アクセス事件をエンジニア視点で読み解く — なぜソースコードに本番カード情報と認証キーが入っていたのか</h1>
+                <h1>1日500コミットは、もう読めない ── だからコードレビューをやめた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/awesome_kou/articles/moneyforward-github-source-leak" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-05-01T13:29:45">
-                        公開: 2026-05-01T13:29:45
+                    <span class="source">出典: <a href="https://zenn.dev/singularity/articles/stopped-reviewing-my-code" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-07-26T20:06:28">
+                        公開: 2026-07-26T20:06:28
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">GitHub</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-2026 年 5 月 1 日、マネーフォワードが「GitHub への不正アクセス発生に関するお知らせとお詫び（第一報）」を公表しました。GitHub の認証情報が漏えいし、第三者によりリポジトリがコピーされ、ソースコードと一部の個人情報が流出した可能性があるという内容です。同時に、銀行口座連携機能を一時停止する措置もとられました。
-この事案は、エンジニア視点で見ると「仕方ない部分」と「明らかにアウトな部分」がはっきり分かれる、教科書のような事例になっています。GitHub 認証情報の漏えい自体は、正直に言ってどの会社でも起こり得ます。一方で、流出したとされる中身に 本番カー...
+                    最近、マージボタンを押すとき、僕はその diff を読んでいないことのほうが多くなりました。
+コードレビューをしていません。 場合によっては、動作確認もしていません。
+こう書くと無責任に聞こえると思います。実際、少し前の僕がこれを読んだら「そんなの事故るに決まってる」と言ったはずです。
+でも、事故っていないのです。簡単なバグは、ほぼ出ません。
+なぜかというと、レビューでしか捕まらないものを、先に減らしたからです。この記事は、その「先に減らす」ために何を整えたかの話です。
+エージェントを並列で回すようになって、コミットは1日500を超えました。この数字自体は、正直かなり気に入っています。
+...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/awesome_kou/articles/moneyforward-github-source-leak" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/singularity/articles/stopped-reviewing-my-code" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,30 +158,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -191,23 +181,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +212,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_775.html">
+                    <a href="Publickey_3313.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ミスド内部情報写り込み SNS拡散</span>
+                        <span class="nav-title">MCP仕様が明日アップデート、7月28日版MCPからはステートレスな接続が正式仕様に。GitHub ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_506.html">
+                    <a href="Zennのトレンド_9864.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【検出率100%】セキュリティ診断、Claude Codeに全部やらせる時代が来た</span>
+                        <span class="nav-title">最近の開発の流れ</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +234,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6153.html">
-                        <h3>「jigブラウザ」開発元の新たな挑戦、ARグラス「SABERA」実機を見る</h3>
+                    <a href="CNET_Japan_最新情報総合_5834.html">
+                        <h3>AIは「核兵器級の脅威」にも--OpenAIやAnthropicなどの1000人超、開発減速の仕組みづくりを提言</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ARグラス「SABERA（サベラ）」の実機が、4月末に東京ビッグサイトで開催された「SusHi Tech Tokyo 2026」のCellidブースに登場した。日本企業3社が共同開発する本格スマートグ...</p>
+                        <p class="related-summary">OpenAI、Anthropic、Google DeepMind、Meta AIなど主要AI企業の従業員有志は米国時間7月29日、共同声明「Pacing the Frontier」を公開した。AI開発...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1399.html">
-                        <h3>非エンジニアが数百万円級のツールを開発　画像＆動画生成AIツールがゼロから作れた話</h3>
+                    <a href="CNET_Japan_最新情報総合_3919.html">
+                        <h3>OpenAI、「GPT-5.6」のAPI料金を最大80%値下げ　最安Lunaは100万トークン0.2ドルに</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">米OpenAIは7月30日（現地時間）、大規模言語モデル「GPT-5. 6」ファミリーのAPI料金を引き下げた。最速・最安をうたう「GPT-5. 6 Luna」は80%、日常業務向けの標準モデル「GP...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_1348.html">
+                        <h3>米高校が「人型ロボット」導入で物議、契約先とアダルト人形の関係もやり玉に</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">ロボット関連スタートアップのRealbotixがある高校に対し、ヒューマノイドロボットと家庭向けAI宿題支援ツールを提供する。教員組合は、生徒はモルモットではないと反発している。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_8188.html">
+                        <h3>EUが生成AIの監督強化 暴走を抑止</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_1963.html">
+                        <h3>ビックリするほどの軽さ！ ASUSの有線ゲーミングマウスが22％オフの5518円で販売中</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">筆者はプログラミングほぼ初心者にもかかわらず、本格的なアプリを開発できるようになってきました。数年前であれば数百万円の費用がかかってもおかしくないものが、動いていることに驚きを隠せません。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_3905.html">
-                        <h3>エミライ自社開発のイヤホン「em NEXIEM Limited（Sound Master Edition）」がスゴい、F...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">FIIOブランドの日本初公開製品だけでも毎回かなりの数になる、販売代理店エミライのブース。今回は自社開発したこだわりイヤホンも登場でさらにスゴいことに。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7746.html">
-                        <h3>【個人開発：制作期間1ヶ月】自分の美容（髪型・ヘアカラー・ネイルなど）を記録し、予算も管理するアプリを作成しました！【R...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに こんにちは！ WEBアプリケーションエンジニアとして活動しているPOMです。 元々はPHPやJavaScriptなどをメインとしていましたが、 今年3月からはアウトプットコミュニティであるJ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_304.html">
-                        <h3>[学生必見]プログラミングアルバイトの罠</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">こんにちは、river0525です。 本記事ではプログラミングアルバイトの罠について解説します。 特に学生の方には必見の内容となっているため、是非最後までお付き合いください。 注意点 ネット上に公開さ...</p>
+                        <p class="related-summary">jpにて、ASUSの有線ゲーミングマウス「TUF Gaming M4 Air」が販売中だ。参考価格は7051円だが、執筆時点では22％オフの5518円で購入できる（7月31日時点）。.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【AWS CDK】「IaCにすれば工数削減」は本当か？ AWS CDKの再利用性を整理してみた【概念編】 | 日本のテックニュース速報</title>
-    <meta name="description" content="本記事は、BIPROGY / ユニアデックス社内AWSコミュニティ「BIPROGY AWS SPARK」の定期投稿企画第1回目の記事です。 他の定期投稿企画の記事はインデックスページをご覧ください。 1. はじめに BIPROGYの豊田です。 今回は、AWS S.">
-    <meta name="keywords" content="AWS,本">
+    <title>SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか | 日本のテックニュース速報</title>
+    <meta name="description" content="「バインド変数を使いましょう」と言われて、素直に従ってはいるものの、それが具体的に何を防いでいるのか説明できるかというと、少し怪しい。そういう人は案外多いのではないかと思います。この記事では、SQLインジェクションが成立する仕組みを、実際のクエリの組み立て方に沿って追いかけ.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【AWS CDK】「IaCにすれば工数削減」は本当か？ AWS CDKの再利用性を整理してみた【概念編】">
-    <meta property="og:description" content="本記事は、BIPROGY / ユニアデックス社内AWSコミュニティ「BIPROGY AWS SPARK」の定期投稿企画第1回目の記事です。 他の定期投稿企画の記事はインデックスページをご覧ください。 1. はじめに BIPROGYの豊田です。 今回は、AWS S.">
+    <meta property="og:title" content="SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか">
+    <meta property="og:description" content="「バインド変数を使いましょう」と言われて、素直に従ってはいるものの、それが具体的に何を防いでいるのか説明できるかというと、少し怪しい。そういう人は案外多いのではないかと思います。この記事では、SQLインジェクションが成立する仕組みを、実際のクエリの組み立て方に沿って追いかけ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2413.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【AWS CDK】「IaCにすれば工数削減」は本当か？ AWS CDKの再利用性を整理してみた【概念編】">
-    <meta name="twitter:description" content="本記事は、BIPROGY / ユニアデックス社内AWSコミュニティ「BIPROGY AWS SPARK」の定期投稿企画第1回目の記事です。 他の定期投稿企画の記事はインデックスページをご覧ください。 1. はじめに BIPROGYの豊田です。 今回は、AWS S.">
+    <meta name="twitter:title" content="SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか">
+    <meta name="twitter:description" content="「バインド変数を使いましょう」と言われて、素直に従ってはいるものの、それが具体的に何を防いでいるのか説明できるかというと、少し怪しい。そういう人は案外多いのではないかと思います。この記事では、SQLインジェクションが成立する仕組みを、実際のクエリの組み立て方に沿って追いかけ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【AWS CDK】「IaCにすれば工数削減」は本当か？ AWS CDKの再利用性を整理してみた【概念編】",
-        "description": "本記事は、BIPROGY / ユニアデックス社内AWSコミュニティ「BIPROGY AWS SPARK」の定期投稿企画第1回目の記事です。 他の定期投稿企画の記事はインデックスページをご覧ください。 1. はじめに BIPROGYの豊田です。 今回は、AWS S.",
+        "headline": "SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか",
+        "description": "「バインド変数を使いましょう」と言われて、素直に従ってはいるものの、それが具体的に何を防いでいるのか説明できるかというと、少し怪しい。そういう人は案外多いのではないかと思います。この記事では、SQLインジェクションが成立する仕組みを、実際のクエリの組み立て方に沿って追いかけ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-27T00:37:49",
-        "dateModified": "2026-07-28T23:00:03.519313",
+        "datePublished": "2026-07-28T22:09:14",
+        "dateModified": "2026-07-31T02:50:24.308472",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2413.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2413.html",
-        "articleSection": "その他",
-        "keywords": ["AWS","本"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【AWS CDK】「IaCにすれば工数削減」は本当か？ AWS CDKの再利用性を整理してみた【概念編】",
+                "name": "SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2413.html"
             }
         ]
@@ -113,42 +113,33 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">【AWS CDK】「IaCにすれば工数削減」は本当か？ AWS CDKの再利用性を整理してみた【概念...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【AWS CDK】「IaCにすれば工数削減」は本当か？ AWS CDKの再利用性を整理してみた【概念編】</h1>
+                <h1>SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/toyoday_8/items/a9a50da72a79d9e91a6e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-07-27T00:37:49">
-                        公開: 2026-07-27T00:37:49
+                    <span class="source">出典: <a href="https://qiita.com/gts/items/7718da8016d1ce2ca43f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-07-28T22:09:14">
+                        公開: 2026-07-28T22:09:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AWS</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本記事は、BIPROGY / ユニアデックス社内AWSコミュニティ「BIPROGY AWS SPARK」の定期投稿企画第1回目の記事です。
-他の定期投稿企画の記事はインデックスページをご覧ください。
-
-1. はじめに
-BIPROGYの豊田です。
-今回は、AWS S...
+                    「バインド変数を使いましょう」と言われて、素直に従ってはいるものの、それが具体的に何を防いでいるのか説明できるかというと、少し怪しい。そういう人は案外多いのではないかと思います。この記事では、SQLインジェクションが成立する仕組みを、実際のクエリの組み立て方に沿って追いかけ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/toyoday_8/items/a9a50da72a79d9e91a6e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/gts/items/7718da8016d1ce2ca43f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,34 +148,9 @@ BIPROGYの豊田です。
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -215,16 +181,16 @@ BIPROGYの豊田です。
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3609.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_2407.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">最近の開発の流れ</span>
+                        <span class="nav-title">電池や通信 スマホの災害時の対策</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_3700.html">
+                    <a href="Zennのトレンド_7294.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">App Storeの偽ウォレットで2億9,000万円被害〜Appleを提訴</span>
+                        <span class="nav-title">自分で作るクラウド競技</span>
                     </a>
                 </div>
             </div>
@@ -237,53 +203,53 @@ BIPROGYの豊田です。
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7863.html">
-                        <h3>90年代の音楽体験を今のスタイルで！ ポータブルカセットプレーヤー「Miko cassette player」</h3>
+                    <a href="CNET_Japan_最新情報総合_3516.html">
+                        <h3>マイナカードで「独身」「年収」を証明--マッチングアプリ「ゴージャス」が開始</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「Miko cassette player」は、タイのブランドが手がけたポータブルカセットプレーヤー。90年代日本のプロダクトを思わせるレトロなデザインながら、外部スピーカーとのBluetooth接続...</p>
+                        <p class="related-summary">リンクは7月29日、完全審査制の恋活・婚活マッチングアプリ「ゴージャス」で、マイナンバーカードを使った「独身証明」「年収証明」機能の提供を始めた。スマートフォンでカードを読み取るだけで、独身であること...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_8106.html">
-                        <h3>【情シス担当者へ】ぶっちゃけ、あのSaaSってどう？ 現場のホンネで作る「最強SaaSティア表」アンケート実施中！</h3>
+                    <a href="CNET_Japan_最新情報総合_9643.html">
+                        <h3>理想のコーヒーをボタン1つで！ デロンギ「リヴェリア 全自動コーヒーマシン」</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">営業トークはもうお腹いっぱい。カタログスペックではなく、現場で汗を流す情シスの皆様の「リアルな評価（ホンネ）」こそが今一番求められています。本当に「使える」SaaSを、情シスの皆様と一緒に決めるアンケ...</p>
+                        <p class="related-summary">計16メニューをワンタッチで作れるデロンギの「リヴェリア全自動コーヒーマシン」。豆量・抽出量などはメニューごとに調整可能、さらにその設定をユーザーごと（最大4人）に保存できる。理想の1杯をいつでも思い...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2014.html">
-                        <h3>【本日】マクドナルド、3年目の「ベーコンポテトパイ」発売</h3>
+                    <a href="CNET_Japan_最新情報総合_5733.html">
+                        <h3>FacebookとInstagramに「ヌード化」アプリ広告数千件、Metaの中国パートナーから</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">マクドナルドは、本日7月29日より「チーズベーコンポテトパイ」を期間限定販売します。待ってた！.</p>
+                        <p class="related-summary">Metaの「Facebook」と「Instagram」で配信された「ヌード化」アプリの広告数千件が、中国の広告パートナーであるGatherOneによるものだった。Tech Transparency P...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_7825.html">
-                        <h3>セサミ、超スリムな新型スマートロック｢SEAMI 6 Pro mini｣を発表 ｰ 引き戸に対応した｢SESAME 6 ...</h3>
+                    <a href="CNET_Japan_最新情報総合_3678.html">
+                        <h3>ispaceの月着陸船、H3ロケットで月へ　三菱重工と打ち上げ契約</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">本日、スマートロックでお馴染みのセサミが、超スリムな新型スマートロック「SEAMI 6 Pro mini」を発表しました。 「SEAMI 6 Pro mini」は、「SEAMI 6 Pro」と比較して...</p>
+                        <p class="related-summary">ispaceと三菱重工業は7月29日、新型月着陸船「ULTRA」をH3ロケットで打ち上げる輸送サービス契約を締結したと発表した。ULTRAは、ispaceが2028年に予定する月面着陸ミッション「ミッ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9704.html">
-                        <h3>コーラはゼロ！ 在庫は24！ ラベルレスの「コカ・コーラ ゼロ」が20％オフ</h3>
+                    <a href="CNET_Japan_最新情報総合_5782.html">
+                        <h3>メモリ不足、2027年はさらに深刻化へ--サムスンが見通し</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「コカ・コーラゼロ ラベルレス 500mlPET×24本」が、Amazonタイムセールで20％オフの1,999円で販売中です。.</p>
+                        <p class="related-summary">韓国サムスン電子は7月30日（現地時間）に開いた2026年第2四半期の決算説明会で、世界的なメモリチップ不足が2028年まで続くとの見通しを示した。メモリ不足はテック製品の値上がりを招いており、価格が...</p>
                     </a>
                 </article>
             </div>

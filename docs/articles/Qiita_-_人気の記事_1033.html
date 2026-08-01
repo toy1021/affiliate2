@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI × Pythonで研究が“30秒で終わる”ようになった話 ― データ基盤 → 仮説量産 → 高速検証の時代へ | 日本のテックニュース速報</title>
-    <meta name="description" content="最近、研究の進め方が劇的に変わりました。 きっかけは AIとPythonを本格的に導入したこと。 昔ながらの 「テーマ決め → データ収集 → 分析」 という研究フローは、もう完全に過去のものになりました。 今は、 データ基盤を先に作り、AIで仮説を量産し、Pythonで高.">
-    <meta name="keywords" content="AI,Python,本">
+    <title>SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか | 日本のテックニュース速報</title>
+    <meta name="description" content="「バインド変数を使いましょう」と言われて、素直に従ってはいるものの、それが具体的に何を防いでいるのか説明できるかというと、少し怪しい。そういう人は案外多いのではないかと思います。この記事では、SQLインジェクションが成立する仕組みを、実際のクエリの組み立て方に沿って追いかけ.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AI × Pythonで研究が“30秒で終わる”ようになった話 ― データ基盤 → 仮説量産 → 高速検証の時代へ">
-    <meta property="og:description" content="最近、研究の進め方が劇的に変わりました。 きっかけは AIとPythonを本格的に導入したこと。 昔ながらの 「テーマ決め → データ収集 → 分析」 という研究フローは、もう完全に過去のものになりました。 今は、 データ基盤を先に作り、AIで仮説を量産し、Pythonで高.">
+    <meta property="og:title" content="SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか">
+    <meta property="og:description" content="「バインド変数を使いましょう」と言われて、素直に従ってはいるものの、それが具体的に何を防いでいるのか説明できるかというと、少し怪しい。そういう人は案外多いのではないかと思います。この記事では、SQLインジェクションが成立する仕組みを、実際のクエリの組み立て方に沿って追いかけ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1033.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI × Pythonで研究が“30秒で終わる”ようになった話 ― データ基盤 → 仮説量産 → 高速検証の時代へ">
-    <meta name="twitter:description" content="最近、研究の進め方が劇的に変わりました。 きっかけは AIとPythonを本格的に導入したこと。 昔ながらの 「テーマ決め → データ収集 → 分析」 という研究フローは、もう完全に過去のものになりました。 今は、 データ基盤を先に作り、AIで仮説を量産し、Pythonで高.">
+    <meta name="twitter:title" content="SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか">
+    <meta name="twitter:description" content="「バインド変数を使いましょう」と言われて、素直に従ってはいるものの、それが具体的に何を防いでいるのか説明できるかというと、少し怪しい。そういう人は案外多いのではないかと思います。この記事では、SQLインジェクションが成立する仕組みを、実際のクエリの組み立て方に沿って追いかけ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AI × Pythonで研究が“30秒で終わる”ようになった話 ― データ基盤 → 仮説量産 → 高速検証の時代へ",
-        "description": "最近、研究の進め方が劇的に変わりました。 きっかけは AIとPythonを本格的に導入したこと。 昔ながらの 「テーマ決め → データ収集 → 分析」 という研究フローは、もう完全に過去のものになりました。 今は、 データ基盤を先に作り、AIで仮説を量産し、Pythonで高.",
+        "headline": "SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか",
+        "description": "「バインド変数を使いましょう」と言われて、素直に従ってはいるものの、それが具体的に何を防いでいるのか説明できるかというと、少し怪しい。そういう人は案外多いのではないかと思います。この記事では、SQLインジェクションが成立する仕組みを、実際のクエリの組み立て方に沿って追いかけ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-11T14:29:41",
-        "dateModified": "2026-03-13T22:30:26.877974",
+        "datePublished": "2026-07-28T22:09:14",
+        "dateModified": "2026-08-01T06:30:37.122202",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1033.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1033.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Python","本"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AI × Pythonで研究が“30秒で終わる”ようになった話 ― データ基盤 → 仮説量産 → 高速検証の時代へ",
+                "name": "SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1033.html"
             }
         ]
@@ -113,44 +113,33 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AI × Pythonで研究が“30秒で終わる”ようになった話 ― データ基盤 → 仮説量産 → 高...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AI × Pythonで研究が“30秒で終わる”ようになった話 ― データ基盤 → 仮説量産 → 高速検証の時代へ</h1>
+                <h1>SQLインジェクションを丁寧に解説 — なぜ「文字列を連結してSQLを作る」と危険なのか</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/d94231/items/0bf79993886f7d73a81b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-11T14:29:41">
-                        公開: 2026-03-11T14:29:41
+                    <span class="source">出典: <a href="https://qiita.com/gts/items/7718da8016d1ce2ca43f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-07-28T22:09:14">
+                        公開: 2026-07-28T22:09:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    最近、研究の進め方が劇的に変わりました。
-きっかけは AIとPythonを本格的に導入したこと。
-昔ながらの
-「テーマ決め → データ収集 → 分析」
-という研究フローは、もう完全に過去のものになりました。
-今は、
-データ基盤を先に作り、AIで仮説を量産し、Pythonで高...
+                    「バインド変数を使いましょう」と言われて、素直に従ってはいるものの、それが具体的に何を防いでいるのか説明できるかというと、少し怪しい。そういう人は案外多いのではないかと思います。この記事では、SQLインジェクションが成立する仕組みを、実際のクエリの組み立て方に沿って追いかけ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/d94231/items/0bf79993886f7d73a81b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/gts/items/7718da8016d1ce2ca43f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,60 +148,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Python - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +181,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2365.html">
+                    <a href="Publickey_8714.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Go言語 基礎から始める完全ガイド 2026</span>
+                        <span class="nav-title">Google Cloud、AIが自律的にコードの脆弱性検出からサンドボックス内でのリスク検証、修正ま...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_4688.html">
+                    <a href="Zennのトレンド_901.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【2026年3月最新版】コーディングが楽になったからこそ気をつけるべきセキュリティ</span>
+                        <span class="nav-title">自分で作るクラウド競技</span>
                     </a>
                 </div>
             </div>
@@ -249,52 +203,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6803.html">
-                        <h3>マイクロソフトの医療AI「Copilot Health」登場　データを1カ所に集約、理解を助ける</h3>
+                    <a href="CNET_Japan_最新情報総合_1688.html">
+                        <h3>FacebookとInstagramに「ヌード化」アプリ広告数千件、Metaの中国パートナーから</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">マイクロソフトはチャットボット「Copilot」の新機能「Copilot Health」を発表した。あらゆる医療記録やウェアラブルデバイスのデータを集約し、AIがその内容の理解を助ける新しい体験だ。.</p>
+                        <p class="related-summary">Metaの「Facebook」と「Instagram」で配信された「ヌード化」アプリの広告数千件が、中国の広告パートナーであるGatherOneによるものだった。Tech Transparency P...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6661.html">
-                        <h3>Claudeで「インタラクティブな図表」生成が可能に　タイヤ交換もイラスト付きで明解</h3>
+                    <a href="CNET_Japan_最新情報総合_2367.html">
+                        <h3>ispaceの月着陸船、H3ロケットで月へ　三菱重工と打ち上げ契約</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Anthropicは、「Claude」のチャット内でインタラクティブなチャートや図などを作成できる新機能を発表した。.</p>
+                        <p class="related-summary">ispaceと三菱重工業は7月29日、新型月着陸船「ULTRA」をH3ロケットで打ち上げる輸送サービス契約を締結したと発表した。ULTRAは、ispaceが2028年に予定する月面着陸ミッション「ミッ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1764.html">
-                        <h3>Strands AgentsにAgent Skillsがきたぞ～</h3>
+                    <a href="CNET_Japan_最新情報総合_8592.html">
+                        <h3>メモリ不足、2027年はさらに深刻化へ--サムスンが見通し</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Strands AgentsにAgent Skills機能が追加されました🎉🎉🎉 Agent Skillsは、AIエージェントに独自の機能を追加できる機能です。skillsディレクトリにMarkdow...</p>
+                        <p class="related-summary">韓国サムスン電子は7月30日（現地時間）に開いた2026年第2四半期の決算説明会で、世界的なメモリチップ不足が2028年まで続くとの見通しを示した。メモリ不足はテック製品の値上がりを招いており、価格が...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_2789.html">
-                        <h3>AI音声で初の議員点呼 衆院本会議</h3>
+                    <a href="CNET_Japan_最新情報総合_4699.html">
+                        <h3>蛍光灯、2027年末までに製造禁止　パナが設備用LED照明で新ラインナップを追加</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
+                        <p class="related-summary">一般照明用の蛍光灯は、2027年末までに製造と輸出入が禁止される。LEDへの切り替えが課題となる中、パナソニックは7月28日、棒状のLEDランプを利用者自身で交換できる設備照明「パルックLEDラインラ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5522.html">
-                        <h3>【入門記事】ClaudeCodeの中級者になりたい人は集合してください</h3>
+                    <a href="ASCII_jp__トップ_2290.html">
+                        <h3>【9万円台】15.6型・16GB・512GBのASUSノート「Vivobook Go 15」がセール中</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに この記事はClaudeCodeと共同で執筆しました。 ただ内容については100%投稿主の意図したものであり、隅々まで監修しております。 みなさん、ClaudeCodeを使っていますか？ (「...</p>
+                        <p class="related-summary">ASUSのAmazon限定ノートPC「Vivobook Go 15」が98,800円で販売中。16GBメモリ、512GB SSD、15. 6型フルHDノングレア液晶を備えたモデルです。.</p>
                     </a>
                 </article>
             </div>

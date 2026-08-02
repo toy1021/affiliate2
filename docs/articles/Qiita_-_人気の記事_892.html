@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 新しいLLMがリリースされるたびに、モデルカード・ベンチマーク結果・SNS上の賛否が一斉に流れてきます。 そのたびに「うちのプロダクトは乗り換えるべきか」を判断させられるのですが、この判断は考えれば考えるほど難しい問題だと感じています。 この記事は、Anthro.">
-    <meta name="keywords" content="Claude,LLM,EV">
+    <title>検証！Claude Codeのサブエージェント並列はお得なのか | 日本のテックニュース速報</title>
+    <meta name="description" content="Claude Codeのサブエージェント、並列にすると本当に速い・お得なのか実測してみた 前回はモデルごとのトークン消費比較をやりました。今回は第3弾として、Claude Codeのサブエージェント(Agentツール)を並列実行するとどれだけ効果があるのかを実際に測定して.">
+    <meta name="keywords" content="Claude,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方">
-    <meta property="og:description" content="はじめに 新しいLLMがリリースされるたびに、モデルカード・ベンチマーク結果・SNS上の賛否が一斉に流れてきます。 そのたびに「うちのプロダクトは乗り換えるべきか」を判断させられるのですが、この判断は考えれば考えるほど難しい問題だと感じています。 この記事は、Anthro.">
+    <meta property="og:title" content="検証！Claude Codeのサブエージェント並列はお得なのか">
+    <meta property="og:description" content="Claude Codeのサブエージェント、並列にすると本当に速い・お得なのか実測してみた 前回はモデルごとのトークン消費比較をやりました。今回は第3弾として、Claude Codeのサブエージェント(Agentツール)を並列実行するとどれだけ効果があるのかを実際に測定して.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_892.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方">
-    <meta name="twitter:description" content="はじめに 新しいLLMがリリースされるたびに、モデルカード・ベンチマーク結果・SNS上の賛否が一斉に流れてきます。 そのたびに「うちのプロダクトは乗り換えるべきか」を判断させられるのですが、この判断は考えれば考えるほど難しい問題だと感じています。 この記事は、Anthro.">
+    <meta name="twitter:title" content="検証！Claude Codeのサブエージェント並列はお得なのか">
+    <meta name="twitter:description" content="Claude Codeのサブエージェント、並列にすると本当に速い・お得なのか実測してみた 前回はモデルごとのトークン消費比較をやりました。今回は第3弾として、Claude Codeのサブエージェント(Agentツール)を並列実行するとどれだけ効果があるのかを実際に測定して.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方",
-        "description": "はじめに 新しいLLMがリリースされるたびに、モデルカード・ベンチマーク結果・SNS上の賛否が一斉に流れてきます。 そのたびに「うちのプロダクトは乗り換えるべきか」を判断させられるのですが、この判断は考えれば考えるほど難しい問題だと感じています。 この記事は、Anthro.",
+        "headline": "検証！Claude Codeのサブエージェント並列はお得なのか",
+        "description": "Claude Codeのサブエージェント、並列にすると本当に速い・お得なのか実測してみた 前回はモデルごとのトークン消費比較をやりました。今回は第3弾として、Claude Codeのサブエージェント(Agentツール)を並列実行するとどれだけ効果があるのかを実際に測定して.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-13T02:05:47",
-        "dateModified": "2026-07-13T19:24:53.274124",
+        "datePublished": "2026-07-31T01:46:31",
+        "dateModified": "2026-08-02T09:58:07.590196",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_892.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_892.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["Claude","LLM","EV"]
+        "keywords": ["Claude","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方",
+                "name": "検証！Claude Codeのサブエージェント並列はお得なのか",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_892.html"
             }
         ]
@@ -114,40 +114,37 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「...</li>
+                <li aria-current="page">検証！Claude Codeのサブエージェント並列はお得なのか</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>もうClaudeのモデル選びで迷わない — Anthropicが教える独自Eval（評価テスト）と「成功1件あたりのコスト」の測り方</h1>
+                <h1>検証！Claude Codeのサブエージェント並列はお得なのか</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/6cd8c6ea583221e45def?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/tamashiro_nobuyuki/items/ff9004b66b7761c4d34c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-07-13T02:05:47">
-                        公開: 2026-07-13T02:05:47
+                    <time datetime="2026-07-31T01:46:31">
+                        公開: 2026-07-31T01:46:31
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">Claude</span>
-                    <span class="tag">LLM</span>
-                    <span class="tag">EV</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-新しいLLMがリリースされるたびに、モデルカード・ベンチマーク結果・SNS上の賛否が一斉に流れてきます。
-そのたびに「うちのプロダクトは乗り換えるべきか」を判断させられるのですが、この判断は考えれば考えるほど難しい問題だと感じています。
-この記事は、Anthro...
+                    Claude Codeのサブエージェント、並列にすると本当に速い・お得なのか実測してみた
+前回はモデルごとのトークン消費比較をやりました。今回は第3弾として、Claude Codeのサブエージェント(Agentツール)を並列実行するとどれだけ効果があるのかを実際に測定して...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/nogataka/items/6cd8c6ea583221e45def?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/tamashiro_nobuyuki/items/ff9004b66b7761c4d34c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -170,20 +167,20 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +221,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_6054.html">
+                    <a href="Qiita_-_人気の記事_5297.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【今更きけないCodex】2026年7月アップデート版：ChatGPTデスクトップで最初に見るべき機...</span>
+                        <span class="nav-title">Vue.js 入門編</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5059.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_4396.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">日本なぜAIで遅れ 巻き返しの鍵は</span>
+                        <span class="nav-title">アンソロピックAI 3社に不正侵入</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +243,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2548.html">
-                        <h3>AIブームで「格安スマホ」が入手困難に？ 2026年は22％減の可能性</h3>
+                    <a href="CNET_Japan_最新情報総合_8611.html">
+                        <h3>AIは「核兵器級の脅威」にも--OpenAIやAnthropicなどの1000人超、開発減速の仕組みづくりを提言</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">予算を抑えてスマートフォンを買いたい人にとって、厳しい状況が待っているかもしれない。その原因はAIだ。.</p>
+                        <p class="related-summary">OpenAI、Anthropic、Google DeepMind、Meta AIなど主要AI企業の従業員有志は米国時間7月29日、共同声明「Pacing the Frontier」を公開した。AI開発...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_152.html">
-                        <h3>「Claude Fable 5」、7月20日までサブスク内で利用可能に--13日から再延長</h3>
+                    <a href="CNET_Japan_最新情報総合_9026.html">
+                        <h3>OpenAI、「GPT-5.6」のAPI料金を最大80%値下げ　最安Lunaは100万トークン0.2ドルに</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米Anthropicは、AIモデル「Claude Fable 5」を有料サブスクリプションの範囲内で追加料金なく使えるプロモーションの期限を、7月19日まで再延長した。ヘルプセンターで明らかにしたもの...</p>
+                        <p class="related-summary">米OpenAIは7月30日（現地時間）、大規模言語モデル「GPT-5. 6」ファミリーのAPI料金を引き下げた。最速・最安をうたう「GPT-5. 6 Luna」は80%、日常業務向けの標準モデル「GP...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7280.html">
-                        <h3>OpenAI独自ブラウザー「ChatGPT Atlas」、8月に提供終了へ</h3>
+                    <a href="CNET_Japan_最新情報総合_5319.html">
+                        <h3>米高校が「人型ロボット」導入で物議、契約先とアダルト人形の関係もやり玉に</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIがウェブブラウザー市場でグーグルの「Chrome」やMozillaの「Firefox」を打ち負かすことはなさそうだ。同社は「ChatGPT Atlas」の提供を終了すると発表した。.</p>
+                        <p class="related-summary">ロボット関連スタートアップのRealbotixがある高校に対し、ヒューマノイドロボットと家庭向けAI宿題支援ツールを提供する。教員組合は、生徒はモルモットではないと反発している。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3698.html">
-                        <h3>アップル、OpenAIを営業秘密の窃盗で提訴</h3>
+                    <a href="ASCII_jp__トップ_3489.html">
+                        <h3>画面のないスマートバンド「Fitbit Air」はAIコーチ機能が親切　AIフル活用で情報追加も簡単</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">アップルは、「ChatGPT」を開発するOpenAIに加え、2人の個人を営業秘密の窃取で提訴した。.</p>
+                        <p class="related-summary">画面がないスマートバンド「Fitbit Air」の連続レビューです。本製品で用いるアプリにはAIによるコーチ機能がありますが、特に便利なのが食事の記録。AIをフル活用するので、アバウトに口頭で伝えたり...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_534.html">
-                        <h3>「ChatGPTワーク」提供開始　Claude Coworkの対抗機能がついに登場</h3>
+                    <a href="Qiita_-_人気の記事_262.html">
+                        <h3>ガバメント AI 源内（genai-web）を Entra ID シングルサインオン + カスタムドメインで運用する</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">米OpenAIは7月9日（現地時間）、新しい業務用エージェント「ChatGPT Work」（ChatGPTワーク）を発表した。ChatGPTに組み込まれ、SlackやGoogle Driveなどの業務...</p>
+                        <p class="related-summary">ガバメント AI 源内の AI インターフェース（genai-web）は、ユーザー認証に Cognito を使っており、デフォルトではメールアドレスを使ったパスワード認証をするようになっています。 g...</p>
                     </a>
                 </article>
             </div>

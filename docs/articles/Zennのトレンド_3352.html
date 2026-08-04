@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code (Opus 4.8) で全ツール呼び出しが壊れる — 日本語環境で踏みやすい未修正バグと回避策 | 日本のテックニュース速報</title>
-    <meta name="description" content="長時間・常時起動でClaude Codeを使っていると、ある時からすべてのツール呼び出しが壊れて動かなくなることがある。日本語環境で複数のセッションを何時間も回していて、実際にこれを踏んだ。原因と回避策が分かったので、特に日本語ユーザーが踏みやすい点を含めて共有する">
-    <meta name="keywords" content="Claude,本">
+    <title>オリジン・CORS・セッションを基礎から理解する | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Web開発をしていると「CORSエラーが出た」「セッションが切れた」という言葉をよく耳にします。しかしこれらの仕組みを「なんとなく」でしか理解できていないと、エラーの原因がわからなかったり、セキュリティ上の設定ミスを引き起こしたりすることがあります">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Code (Opus 4.8) で全ツール呼び出しが壊れる — 日本語環境で踏みやすい未修正バグと回避策">
-    <meta property="og:description" content="長時間・常時起動でClaude Codeを使っていると、ある時からすべてのツール呼び出しが壊れて動かなくなることがある。日本語環境で複数のセッションを何時間も回していて、実際にこれを踏んだ。原因と回避策が分かったので、特に日本語ユーザーが踏みやすい点を含めて共有する">
+    <meta property="og:title" content="オリジン・CORS・セッションを基礎から理解する">
+    <meta property="og:description" content="はじめに Web開発をしていると「CORSエラーが出た」「セッションが切れた」という言葉をよく耳にします。しかしこれらの仕組みを「なんとなく」でしか理解できていないと、エラーの原因がわからなかったり、セキュリティ上の設定ミスを引き起こしたりすることがあります">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3352.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Code (Opus 4.8) で全ツール呼び出しが壊れる — 日本語環境で踏みやすい未修正バグと回避策">
-    <meta name="twitter:description" content="長時間・常時起動でClaude Codeを使っていると、ある時からすべてのツール呼び出しが壊れて動かなくなることがある。日本語環境で複数のセッションを何時間も回していて、実際にこれを踏んだ。原因と回避策が分かったので、特に日本語ユーザーが踏みやすい点を含めて共有する">
+    <meta name="twitter:title" content="オリジン・CORS・セッションを基礎から理解する">
+    <meta name="twitter:description" content="はじめに Web開発をしていると「CORSエラーが出た」「セッションが切れた」という言葉をよく耳にします。しかしこれらの仕組みを「なんとなく」でしか理解できていないと、エラーの原因がわからなかったり、セキュリティ上の設定ミスを引き起こしたりすることがあります">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3352.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Code (Opus 4.8) で全ツール呼び出しが壊れる — 日本語環境で踏みやすい未修正バグと回避策",
-        "description": "長時間・常時起動でClaude Codeを使っていると、ある時からすべてのツール呼び出しが壊れて動かなくなることがある。日本語環境で複数のセッションを何時間も回していて、実際にこれを踏んだ。原因と回避策が分かったので、特に日本語ユーザーが踏みやすい点を含めて共有する",
+        "headline": "オリジン・CORS・セッションを基礎から理解する",
+        "description": "はじめに Web開発をしていると「CORSエラーが出た」「セッションが切れた」という言葉をよく耳にします。しかしこれらの仕組みを「なんとなく」でしか理解できていないと、エラーの原因がわからなかったり、セキュリティ上の設定ミスを引き起こしたりすることがあります",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-03T14:11:27",
-        "dateModified": "2026-06-06T10:05:50.508620",
+        "datePublished": "2026-08-02T13:51:06",
+        "dateModified": "2026-08-04T02:32:15.465503",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3352.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3352.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["Claude","本"]
+        "articleSection": "プログラミング",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Code (Opus 4.8) で全ツール呼び出しが壊れる — 日本語環境で踏みやすい未修正バグと回避策",
+                "name": "オリジン・CORS・セッションを基礎から理解する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3352.html"
             }
         ]
@@ -113,46 +113,40 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Code (Opus 4.8) で全ツール呼び出しが壊れる — 日本語環境で踏みやすい...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">オリジン・CORS・セッションを基礎から理解する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Code (Opus 4.8) で全ツール呼び出しが壊れる — 日本語環境で踏みやすい未修正バグと回避策</h1>
+                <h1>オリジン・CORS・セッションを基礎から理解する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/edhiblemeer/articles/claude-code-opus48-tool-corruption" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-03T14:11:27">
-                        公開: 2026-06-03T14:11:27
+                    <span class="source">出典: <a href="https://zenn.dev/owade/articles/cors-session-origin-guide" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-08-02T13:51:06">
+                        公開: 2026-08-02T13:51:06
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">本</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    長時間・常時起動でClaude Codeを使っていると、ある時からすべてのツール呼び出しが壊れて動かなくなることがある。日本語環境で複数のセッションを何時間も回していて、実際にこれを踏んだ。原因と回避策が分かったので、特に日本語ユーザーが踏みやすい点を含めて共有する。
+                    はじめに
+Web開発をしていると「CORSエラーが出た」「セッションが切れた」という言葉をよく耳にします。しかしこれらの仕組みを「なんとなく」でしか理解できていないと、エラーの原因がわからなかったり、セキュリティ上の設定ミスを引き起こしたりすることがあります。
+この記事では オリジン・同一オリジンポリシー・CORS・セッション・ブラウザのプロセスモデル を順番に整理し、実務で注意すべきポイントもまとめます。
 
- 起きること
 
-function callの開始タグが count / court など意味不明なトークンに化ける
-
-引数が生テキストとして会話に漏れる（ファイル名などがそのまま出力される）
-MCP接続は正常（/mcp は Connected）＝ツール/サーバー側の問題ではない
-
-一度始まると自己修復しない。モデルが履歴...
+ オリジン（Origin）とは
+オリジンとは 「スキーム + ホスト + ポート」の3点セット のことです。
+https://example.com:443/path?que...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/edhiblemeer/articles/claude-code-opus48-tool-corruption" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/owade/articles/cors-session-origin-guide" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -165,30 +159,20 @@ MCP接続は正常（/mcp は Connected）＝ツール/サーバー側の問題�
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -198,23 +182,23 @@ MCP接続は正常（/mcp は Connected）＝ツール/サーバー側の問題�
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -229,16 +213,16 @@ MCP接続は正常（/mcp は Connected）＝ツール/サーバー側の問題�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_6619.html">
+                    <a href="Zennのトレンド_8835.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">RTX 4080でローカルLLM 7モデルを実測したら「16GB VRAMの壁」が見えた</span>
+                        <span class="nav-title">ある日エンジニアが突然無職になってしまったら？ — 離職インシデント対応ランブック</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5051.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9888.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">不法滞在巡る市のX 抗議受け削除</span>
+                        <span class="nav-title">EU AI規制法で透明性確保を義務化</span>
                     </a>
                 </div>
             </div>
@@ -251,53 +235,53 @@ MCP接続は正常（/mcp は Connected）＝ツール/サーバー側の問題�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9717.html">
-                        <h3>ウェブの父バーナーズ＝リー氏らが開発、ユーザーの情報を守るAI「Charlie」とは</h3>
+                    <a href="CNET_Japan_最新情報総合_4745.html">
+                        <h3>東芝が「国産迎撃ドローン」開発へ　スタートアップと共同で</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ウェブの発明者であるティム・バーナーズ＝リー氏はSXSW Londonに登壇し、AIエージェント「Charlie」を紹介した。.</p>
+                        <p class="related-summary">東芝は7月31日、産業用ドローンを手掛けるスタートアップのProdrone（プロドローン）と、防衛分野で「国産迎撃ドローン」の技術連携を始めると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9675.html">
-                        <h3>マイクロソフトのAIデータセンター建設に抗議の声、ナデラCEOは「地域との共生」を強調</h3>
+                    <a href="ASCII_jp__トップ_3520.html">
+                        <h3>「ほの暮しの庭」わずか4日で10万本突破　「面白くて時間溶ける」「シリーズ化よろしく」</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">企業の貪欲さや環境汚染を描いたカラフルな看板とともに、AIデータセンターに反対する抗議者たちが、マイクロソフトの年次カンファレンス「Build」の会場に集まった。.</p>
+                        <p class="related-summary">日本一ソフトウェアは生活シミュレーションゲーム「ほの暮しの庭」について、発売から4日間で国内累計販売本数が10万本を突破したと発表。ユーザーから祝福と喜びの声が寄せられている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3566.html">
-                        <h3>政府、国会答弁に生成AIを活用へ　批判に対する松本デジタル大臣の回答は</h3>
+                    <a href="Publickey_2467.html">
+                        <h3>Rust製のフルスタックWebアプリフレームワーク「Topcoat」登場。非同期ランタイム「Tokio」上でサーバサイド...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">国会答弁書の作成に政府が生成AIを活用するとした方針をめぐり、読売新聞が5月31日の社説で「答弁は単なる政策の説明ではなく新たな政策決定であり、それ自体創造的な行為」「いずれは省庁や国会の不要論も招き...</p>
+                        <p class="related-summary">Rust言語の代表的な非同期ランタイムライブラリ「Tokio」の開発チームが、フルスタックのWebアプリケーションフレームワーク「Topcoat」のリリースを発表しました。 下記はTokioの作者でT...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_109.html">
-                        <h3>「蚊をレーザー光線で次々撃退」がAIの進化で現実に【動画】</h3>
+                    <a href="Zennのトレンド_5453.html">
+                        <h3>Web 標準動向 2026年7月版</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">夏到来で再び蚊が大量発生するなか、AIとレーザーで蚊を自動撃墜する自作プロトタイプがX（旧Twitter）上で話題になっている。開発したのは発明家のSteven Cheng氏。コンピュータービジョンと...</p>
+                        <p class="related-summary">io/entry/joining-w3c 標準化プロセスに関わることができるようになるための最初の一歩として、フロントエンドエンジニアの一部のメンバーは積極的に Web 標準のキャッチアップを行ってい...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3405.html">
-                        <h3>AIで「生物兵器を簡単に作れる時代」到来--OpenAIらが米議会に「合成DNA規制」を要請</h3>
+                    <a href="Zennのトレンド_484.html">
+                        <h3>Herdr で止まらず、精度の高い開発を進める工夫 ─ intent-cli で意図をもとに開発する</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">OpenAIのサム・アルトマンCEO、Anthropicのダリオ・アモデイCEOら世界の主要AI企業トップが連名で、合成DNAの取り扱い規制強化を求める公開書簡を米政府に提出した。AIが急速に高度な生...</p>
+                        <p class="related-summary">株式会社ジェイテックジャパン CTOの高丘 @tomohisaです。 AIエージェントを4体、止まりを見つけて再開させながら回して開発を進める、ということを日常的にやっています。設計・オーケストレーシ...</p>
                     </a>
                 </article>
             </div>

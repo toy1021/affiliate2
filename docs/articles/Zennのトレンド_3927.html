@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code に `cc` というエイリアスをつけたら PC がハングした話 | 日本のテックニュース速報</title>
-    <meta name="description" content="zshrc に設定していた cc は Unix/macOS における Cコンパイラ の伝統的なコマンド名 あらゆるビルドツールが裏で cc を呼ぶので、コンパイルしようとする. と思っていたら、ある日マシンのメモリが 40GB 食われてハングしました">
-    <meta name="keywords" content="Claude,Mac,macOS,PC">
+    <title>ローカルタスク管理アプリを設計してみた | 日本のテックニュース速報</title>
+    <meta name="description" content="背景 今まではタスクは自分の頭で整理するか、メモ帳のようなものに書き留めていました。 それくらいの管理で十分でした。 しかし最近、案件業務・社内業務とタスクが増え、整理していかないと厳しい状態になってきました。 課題 課題なのが、私自身タスク管理というものが苦手ということ">
+    <meta name="keywords" content="Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Code に `cc` というエイリアスをつけたら PC がハングした話">
-    <meta property="og:description" content="zshrc に設定していた cc は Unix/macOS における Cコンパイラ の伝統的なコマンド名 あらゆるビルドツールが裏で cc を呼ぶので、コンパイルしようとする. と思っていたら、ある日マシンのメモリが 40GB 食われてハングしました">
+    <meta property="og:title" content="ローカルタスク管理アプリを設計してみた">
+    <meta property="og:description" content="背景 今まではタスクは自分の頭で整理するか、メモ帳のようなものに書き留めていました。 それくらいの管理で十分でした。 しかし最近、案件業務・社内業務とタスクが増え、整理していかないと厳しい状態になってきました。 課題 課題なのが、私自身タスク管理というものが苦手ということ">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3927.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Code に `cc` というエイリアスをつけたら PC がハングした話">
-    <meta name="twitter:description" content="zshrc に設定していた cc は Unix/macOS における Cコンパイラ の伝統的なコマンド名 あらゆるビルドツールが裏で cc を呼ぶので、コンパイルしようとする. と思っていたら、ある日マシンのメモリが 40GB 食われてハングしました">
+    <meta name="twitter:title" content="ローカルタスク管理アプリを設計してみた">
+    <meta name="twitter:description" content="背景 今まではタスクは自分の頭で整理するか、メモ帳のようなものに書き留めていました。 それくらいの管理で十分でした。 しかし最近、案件業務・社内業務とタスクが増え、整理していかないと厳しい状態になってきました。 課題 課題なのが、私自身タスク管理というものが苦手ということ">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Code に `cc` というエイリアスをつけたら PC がハングした話",
-        "description": "zshrc に設定していた cc は Unix/macOS における Cコンパイラ の伝統的なコマンド名 あらゆるビルドツールが裏で cc を呼ぶので、コンパイルしようとする. と思っていたら、ある日マシンのメモリが 40GB 食われてハングしました",
+        "headline": "ローカルタスク管理アプリを設計してみた",
+        "description": "背景 今まではタスクは自分の頭で整理するか、メモ帳のようなものに書き留めていました。 それくらいの管理で十分でした。 しかし最近、案件業務・社内業務とタスクが増え、整理していかないと厳しい状態になってきました。 課題 課題なのが、私自身タスク管理というものが苦手ということ",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-05T13:35:36",
-        "dateModified": "2026-03-08T06:44:52.552887",
+        "datePublished": "2026-07-31T23:36:46",
+        "dateModified": "2026-08-04T23:05:00.585211",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3927.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3927.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["Claude","Mac","macOS","PC"]
+        "keywords": ["Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Code に `cc` というエイリアスをつけたら PC がハングした話",
+                "name": "ローカルタスク管理アプリを設計してみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3927.html"
             }
         ]
@@ -114,48 +114,45 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Code に `cc` というエイリアスをつけたら PC がハングした話</li>
+                <li aria-current="page">ローカルタスク管理アプリを設計してみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Code に `cc` というエイリアスをつけたら PC がハングした話</h1>
+                <h1>ローカルタスク管理アプリを設計してみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/owayo/articles/6190821ac1dd1e" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/headwaters/articles/76f20490b76952" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-03-05T13:35:36">
-                        公開: 2026-03-05T13:35:36
+                    <time datetime="2026-07-31T23:36:46">
+                        公開: 2026-07-31T23:36:46
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">Claude</span>
-                    <span class="tag">Mac</span>
-                    <span class="tag">macOS</span>
-                    <span class="tag">PC</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Claude Code を普段からターミナルで使っています。毎回 claude と打つのが面倒だったので、cc というエイリアスを設定していました。
-Claude Code だから cc。完璧な略称ですよね？
-...と思っていたら、ある日マシンのメモリが 40GB 食われてハングしました。
+                    背景
+今まではタスクは自分の頭で整理するか、メモ帳のようなものに書き留めていました。
+それくらいの管理で十分でした。
+しかし最近、案件業務・社内業務とタスクが増え、整理していかないと厳しい状態になってきました。
 
- TL;DR
+ 課題
+課題なのが、私自身タスク管理というものが苦手ということ。アプリを開いたり記入したりするのが面倒になりがちで、何かにメモしておこうとしてもベタ書き（用件だけ書いて締め切りなどは書かない、など）になってしまいがちです。
 
-Claude Code のエイリアスとして alias cc='claude ...' を .zshrc に設定していた
-
-cc は Unix/macOS における Cコンパイラ の伝統的なコマンド名
-あらゆるビルドツールが裏で cc を呼ぶので、コンパイルしようとする...
+ 解決策
+これを解決するために、音声入力 + 文章整形 + 保存ができれば良いのではないかと思いました。
+そこで今回取り入れたのが Claude Co...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/owayo/articles/6190821ac1dd1e" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/headwaters/articles/76f20490b76952" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -178,20 +175,20 @@ cc は Unix/macOS における Cコンパイラ の伝統的なコマンド名
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Mac - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=macOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="macOS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">macOS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでmacOSに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -232,16 +229,16 @@ cc は Unix/macOS における Cコンパイラ の伝統的なコマンド名
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_8270.html">
+                    <a href="Zennのトレンド_5735.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">MacBook Neoの人気モデルは？予約状況からカラーとスペックを確認</span>
+                        <span class="nav-title">GitHubにスタック型プルリクエストが登場。gh stackでPRを分割して積み上げよう</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_9196.html">
+                    <a href="Zennのトレンド_7189.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">手動でのコーディングをやめていく際のメモ</span>
+                        <span class="nav-title">AI フレンドリーな CLI を開発するテクニック</span>
                     </a>
                 </div>
             </div>
@@ -254,53 +251,53 @@ cc は Unix/macOS における Cコンパイラ の伝統的なコマンド名
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2494.html">
-                        <h3>AIが「妻」になりテロや自殺を促す　Gemini開発元のグーグルを遺族が提訴</h3>
+                    <a href="CNET_Japan_最新情報総合_6840.html">
+                        <h3>カメラもAIも搭載しない「反監視」サングラス、DuckDuckGoが発売</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">AI関連の新たな不法死亡訴訟が提起された。原告側は、グーグルのAIチャットボット「Gemini」がフロリダ州の36歳の男性に自殺を促したと主張している。.</p>
+                        <p class="related-summary">プライバシー重視の検索エンジンとブラウザーを手がけるDuckDuckGoが、「反監視」をうたうサングラスを発売した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9817.html">
-                        <h3>iPhoneの「探す」対応、AirTag対抗タグが4個入り7920→5980円に　シャオミ製</h3>
+                    <a href="CNET_Japan_最新情報総合_6876.html">
+                        <h3>ソフトバンクのクラウド・AI売上が31％増--宮川社長「まだまだこんなもんじゃない」</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Xiaomiが手がけるスマートタグ「Xiaomi Tag」が、Amazonでタイムセール中だ。4個入りの場合、通常価格7920円のところ、24％オフの5980円で販売中だ。.</p>
+                        <p class="related-summary">ソフトバンクは8月4日、2027年3月期第1四半期の決算を発表した。中期経営計画で新たにサブセグメントとして切り出したクラウド・AI領域の売上高は、前年同期比31. 0％増の771億円だった。AIデー...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1400.html">
-                        <h3>モフモフAIペット「iMoochi」をMWCで発見　なでると反応する癒やしロボ</h3>
+                    <a href="CNET_Japan_最新情報総合_6545.html">
+                        <h3>OpenAI、Appleの提訴に全面反論「雑で攻撃的で、妙に個人的な訴訟」　メールやiMessageも公開</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">スペインで開催中のMWC 2026でZTEのブースに足を踏み入れると、つぶらな瞳をした小さくてふわふわの「iMoochi（アイモーチ）」の展示に迎えられた。.</p>
+                        <p class="related-summary">OpenAIは8月3日（現地時間）、Appleが同社を相手取って起こした訴訟に全面的に反論する声明を発表した。タイトルは「Apple is getting this wrong（Appleは間違ってい...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1444.html">
-                        <h3>ChatGPT、新モデル「GPT 5.4」公開--ハルシネーション削減、事実誤認3割減に</h3>
+                    <a href="ASCII_jp__トップ_7458.html">
+                        <h3>自治体に導入拡大する無償のファンラーニング型AI英語アプリ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">OpenAIは日本時間3月6日、新モデル「GPT 5. 4 Pro」を発表した。なかでも「Thinking」は、コーディングやAIエージェントの統括など、企業向けの業務に特化して構築されている。.</p>
+                        <p class="related-summary">KKT合同会社が7月22日、AI英語学習アプリ「マグナとふしぎの少女」を開発・運営するミントフラッグ株式会社へ1億円強の投資を実施したと発表した。同アプリは個人向けユーザー数が45万人いるほか、学校版...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5620.html">
-                        <h3>スマートグラス市場が139％の急成長　Metaがシェア8割超で独走</h3>
+                    <a href="ASCII_jp__トップ_9111.html">
+                        <h3>印メガベンチャー「Paytm」も惹きつけるルクセンブルクが仕掛ける産業育成エコシステム</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">AIスマートグラスへの注目が高まっているが、調査会社Counterpoint Researchの最新データによれば、この分野はまだ初期段階にあるという。.</p>
+                        <p class="related-summary">欧州が人工知能（AI）、デジタル金融、宇宙開発といった次世代テクノロジーの主権確保に向けて、国家を挙げた動きを加速させている。その中心的なテストベッドとして世界中から注目を集めているのが西欧の小国・ル...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>最近の開発の流れ | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに ここ数ヶ月で開発の流れがかなり変わった。 リファインメントで grill して認識を合わせ、実装は LLM に任せられる範囲が増え、多層モデルのレビュー と 厚い CI を通し、babysit-pr で green になるまで面倒を見させる">
-    <meta name="keywords" content="AI,Claude,LLM">
+    <title>仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ | 日本のテックニュース速報</title>
+    <meta name="description" content="Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました">
+    <meta name="keywords" content="Claude,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="最近の開発の流れ">
-    <meta property="og:description" content="はじめに ここ数ヶ月で開発の流れがかなり変わった。 リファインメントで grill して認識を合わせ、実装は LLM に任せられる範囲が増え、多層モデルのレビュー と 厚い CI を通し、babysit-pr で green になるまで面倒を見させる">
+    <meta property="og:title" content="仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ">
+    <meta property="og:description" content="Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_576.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="最近の開発の流れ">
-    <meta name="twitter:description" content="はじめに ここ数ヶ月で開発の流れがかなり変わった。 リファインメントで grill して認識を合わせ、実装は LLM に任せられる範囲が増え、多層モデルのレビュー と 厚い CI を通し、babysit-pr で green になるまで面倒を見させる">
+    <meta name="twitter:title" content="仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ">
+    <meta name="twitter:description" content="Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_576.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "最近の開発の流れ",
-        "description": "はじめに ここ数ヶ月で開発の流れがかなり変わった。 リファインメントで grill して認識を合わせ、実装は LLM に任せられる範囲が増え、多層モデルのレビュー と 厚い CI を通し、babysit-pr で green になるまで面倒を見させる",
+        "headline": "仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ",
+        "description": "Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-27T00:31:05",
-        "dateModified": "2026-07-29T06:32:05.174869",
+        "datePublished": "2026-08-05T07:42:28",
+        "dateModified": "2026-08-08T03:26:57.979341",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_576.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_576.html",
         "articleSection": "プログラミング",
-        "keywords": ["AI","Claude","LLM"]
+        "keywords": ["Claude","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "最近の開発の流れ",
+                "name": "仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_576.html"
             }
         ]
@@ -114,45 +114,38 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">最近の開発の流れ</li>
+                <li aria-current="page">仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>最近の開発の流れ</h1>
+                <h1>仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/kimuchan/articles/bc8e98682f8594" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/yktsnet/articles/202608-guarantee-driven-development" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-07-27T00:31:05">
-                        公開: 2026-07-27T00:31:05
+                    <time datetime="2026-08-05T07:42:28">
+                        公開: 2026-08-05T07:42:28
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
                     <span class="tag">Claude</span>
-                    <span class="tag">LLM</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-ここ数ヶ月で開発の流れがかなり変わった。
-リファインメントで grill して認識を合わせ、実装は LLM に任せられる範囲が増え、多層モデルのレビュー と 厚い CI を通し、babysit-pr で green になるまで面倒を見させる。この流れが回り始めてから、かなりの信頼度の change list が安定して生産できるようになった。
-
- 全体の流れ
-リファインメント（grill）
-  → プランニング（順番とキャパシティを詰めるだけ）
-    → 実装（Claude Code が書く）
-      → 多層 AI レビュー（Copilot / Codex）+ 厚い...
+                    Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました。
+守ってくれるのはテストです。ただ、そのテストも Claude Code が書いています。走らせれば緑になり、diff をざっと見て通し、本数だけが増えていきます。そして次に手を入れるとき、いま何が守られているのかを知る方法が tests/ を上から読むことしかありません。
+かといって、変更のたびに「壊していないか全部確認...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/kimuchan/articles/bc8e98682f8594" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/yktsnet/articles/202608-guarantee-driven-development" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -185,10 +178,10 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -229,16 +222,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2720.html">
+                    <a href="Qiita_-_人気の記事_9089.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">エンジニアの習熟度は、トークン消費量として露呈していく</span>
+                        <span class="nav-title">新人エンジニア、定年まで続く勉強量に震えてやばいと思った話</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_1921.html">
+                    <a href="Zennのトレンド_2427.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【AWS CDK】「IaCにすれば工数削減」は本当か？ AWS CDKの再利用性を整理してみた【概念...</span>
+                        <span class="nav-title">脆弱性を作り込まないために、Claude公式「Security Guidance Plugin」を導...</span>
                     </a>
                 </div>
             </div>
@@ -251,53 +244,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6988.html">
-                        <h3>受注本数6万超え「ほの暮しの庭」ついに発売　1年間かけた異例のプロモーションを振り返る</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">日本一ソフトウェアの新作田舎暮らし生活シミュレーション「ほの暮しの庭」が、いよいよ7月30日に発売する。この1年の動きを振り返ってみよう。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_9978.html">
-                        <h3>【セール】EarFunのワイヤレスイヤホンがAmazonで特価に｜追加で6％オフになるクーポンも配布中</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">コスパの高いワイヤレスオーディオ機器で有名なEarFunが、Amazonにおいて、対象製品を特別価格で販売するセールを開催しています。 同社は2018年に経験豊富な工業デザイナー・音響エンジニア・音楽...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9506.html">
-                        <h3>FindyのDevRelインターンとして、イベント参加者から運営になって。</h3>
+                    <a href="Qiita_-_人気の記事_2589.html">
+                        <h3>OS？カーネル開発？聞いたことありませんねその単語🤔【ITパスポート】</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">先日、Findyで「学生向けハンズオン～イケてるターミナルをつくろう！～」というイベントを開催いたしました。 今回はイベントの感想と、今までエンジニアイベントへの関わり方が「参加者」だった私が、Dev...</p>
+                        <p class="related-summary">はじめに iPhoneのアップデート通知で見る「iOS 26」。あの「OS」って結局何なのか、聞かれてもうまく答えられなかったぷらむんが、ITパスポートの勉強中に真正面から向き合ってみた話です。 こん...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_7834.html">
-                        <h3>Nothingがスマートウォッチを開発中 ｰ 9月に限られた市場で発売予定</h3>
+                    <a href="Qiita_-_人気の記事_205.html">
+                        <h3>【超初心者エンジニアのgit失敗談】`git pull` すれば最新になると思ってた</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Nothingが、新型スマートウォッチを開発中であることが分かりました。 これはリーカーのYogesh Brar氏が明らかにしたもので、デザインはNothingならではのDNAを受け継いたものになると...</p>
+                        <p class="related-summary">はじめに こんにちは。新卒未経験でエンジニアとして配属されて2か月が経ちました。 この記事では、gitに触れて間もない私が研修中にやらかしたgit pullについての小さな失敗を紹介します。 同じよう...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_9013.html">
-                        <h3>【決着】Claude CodeとCodexの設定ファイルを同期させる (みんな仲良く)</h3>
+                    <a href="Zennのトレンド_2794.html">
+                        <h3>楽観ロックの実装でおさえたいポイントと、よくあるしくじり</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">ごまんと触れられてきた話題であるのにも関わらず、細かい所に手の届くツールが無かったので作成しました。 有名どころから個人で制作されているツールまで、一通り使わせていただいたのですが実際に困った場面があ...</p>
+                        <p class="related-summary">これはなに こんにちは、レバテック開発部のもりたです。 今回はアプリケーションを作る上でわりと出会う楽観ロックの実装方法についてまとめます。 コードの例はPHP/Laravelですが、基本的には言語や...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_2452.html">
+                        <h3>手を動かしてStacked pull requestのgh stackを理解してみた</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/ Stacked pull requestという機能...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_7616.html">
+                        <h3>ミッチェル・ハシモト氏が新会社「Superlogical」を設立、あらゆる仕事に使えるマルチプレクサの開発へ</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">HashiCorpの共同創業者であり、同社を退社後は個人開発者としてターミナルソフト「Ghostty」の開発を進めていたミッチェル・ハシモト氏が、新会社［Superlogical」の設立を発表しました...</p>
                     </a>
                 </article>
             </div>

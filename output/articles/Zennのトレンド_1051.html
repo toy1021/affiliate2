@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opus 4.8 とGPT-5.5 で開発サイクルを1日で回した——AI同士のレビュー応酬と、CIが拾った実バグ | 日本のテックニュース速報</title>
-    <meta name="description" content="8 と1セッションで、法務SaaSの設計・実装・レビュー・マージまで丸ごと回した記録」の技術編です。「AIと開発サイクルを回した」物語の側はそちらに譲り、本記事では実装の技術的論点を掘ります. 8 技術編 弁護士・税理士の太田垣（@yoshiki_otagaki）です">
-    <meta name="keywords" content="AI,GPT,本">
+    <title>LLM Wikiパターンの標準化 OKF(Open Knowledge Format) | 日本のテックニュース速報</title>
+    <meta name="description" content="Open Knowledge Format（OKF）— LLM Wikiパターンの標準化 ナウキャストで長期LLMインターンをしている北川です。LLM系のタスクのキャッチアップをする中で、最近「OKF」という技術を耳にする機会が増えました">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Opus 4.8 とGPT-5.5 で開発サイクルを1日で回した——AI同士のレビュー応酬と、CIが拾った実バグ">
-    <meta property="og:description" content="8 と1セッションで、法務SaaSの設計・実装・レビュー・マージまで丸ごと回した記録」の技術編です。「AIと開発サイクルを回した」物語の側はそちらに譲り、本記事では実装の技術的論点を掘ります. 8 技術編 弁護士・税理士の太田垣（@yoshiki_otagaki）です">
+    <meta property="og:title" content="LLM Wikiパターンの標準化 OKF(Open Knowledge Format)">
+    <meta property="og:description" content="Open Knowledge Format（OKF）— LLM Wikiパターンの標準化 ナウキャストで長期LLMインターンをしている北川です。LLM系のタスクのキャッチアップをする中で、最近「OKF」という技術を耳にする機会が増えました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1051.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Opus 4.8 とGPT-5.5 で開発サイクルを1日で回した——AI同士のレビュー応酬と、CIが拾った実バグ">
-    <meta name="twitter:description" content="8 と1セッションで、法務SaaSの設計・実装・レビュー・マージまで丸ごと回した記録」の技術編です。「AIと開発サイクルを回した」物語の側はそちらに譲り、本記事では実装の技術的論点を掘ります. 8 技術編 弁護士・税理士の太田垣（@yoshiki_otagaki）です">
+    <meta name="twitter:title" content="LLM Wikiパターンの標準化 OKF(Open Knowledge Format)">
+    <meta name="twitter:description" content="Open Knowledge Format（OKF）— LLM Wikiパターンの標準化 ナウキャストで長期LLMインターンをしている北川です。LLM系のタスクのキャッチアップをする中で、最近「OKF」という技術を耳にする機会が増えました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Opus 4.8 とGPT-5.5 で開発サイクルを1日で回した——AI同士のレビュー応酬と、CIが拾った実バグ",
-        "description": "8 と1セッションで、法務SaaSの設計・実装・レビュー・マージまで丸ごと回した記録」の技術編です。「AIと開発サイクルを回した」物語の側はそちらに譲り、本記事では実装の技術的論点を掘ります. 8 技術編 弁護士・税理士の太田垣（@yoshiki_otagaki）です",
+        "headline": "LLM Wikiパターンの標準化 OKF(Open Knowledge Format)",
+        "description": "Open Knowledge Format（OKF）— LLM Wikiパターンの標準化 ナウキャストで長期LLMインターンをしている北川です。LLM系のタスクのキャッチアップをする中で、最近「OKF」という技術を耳にする機会が増えました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-30T13:00:28",
-        "dateModified": "2026-05-31T17:07:44.852837",
+        "datePublished": "2026-08-06T02:00:05",
+        "dateModified": "2026-08-08T20:31:00.226126",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1051.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1051.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","GPT","本"]
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Opus 4.8 とGPT-5.5 で開発サイクルを1日で回した——AI同士のレビュー応酬と、CIが拾った実バグ",
+                "name": "LLM Wikiパターンの標準化 OKF(Open Knowledge Format)",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1051.html"
             }
         ]
@@ -114,43 +114,37 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Opus 4.8 とGPT-5.5 で開発サイクルを1日で回した——AI同士のレビュー応酬と、CIが...</li>
+                <li aria-current="page">LLM Wikiパターンの標準化 OKF(Open Knowledge Format)</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Opus 4.8 とGPT-5.5 で開発サイクルを1日で回した——AI同士のレビュー応酬と、CIが拾った実バグ</h1>
+                <h1>LLM Wikiパターンの標準化 OKF(Open Knowledge Format)</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/yoshiki_otagaki/articles/c2dfe8efe5c5a3" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/finatext/articles/2ea88e4b1c2e5b" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-30T13:00:28">
-                        公開: 2026-05-30T13:00:28
+                    <time datetime="2026-08-06T02:00:05">
+                        公開: 2026-08-06T02:00:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">GPT</span>
-                    <span class="tag">本</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Zennウェブエディタ用：Opus 4.8 技術編
-
-弁護士・税理士の太田垣（@yoshiki_otagaki）です。
-士業の現場で実際に動かしている AI 活用・業務自動化を発信しています。
-Next.js + Supabase + Anthropic API + 独自 MCP サーバで法律事務所向け SaaS「LegalFlow」を1人で開発・運用中。
-
-本記事は、note 版「Opus 4.8 と1セッションで、法務SaaSの設計・実装・レビュー・マージまで丸ごと回した記録」の技術編です。「AIと開発サイクルを回した」物語の側はそちらに譲り、本記事では実装の技術的論点を掘ります...
+                    Open Knowledge Format（OKF）— LLM Wikiパターンの標準化
+ナウキャストで長期LLMインターンをしている北川です。LLM系のタスクのキャッチアップをする中で、最近「OKF」という技術を耳にする機会が増えました。
+OKFはまだ登場したばかりの仕様で、その概念を理解するにはRAGやLLM wikiといった周辺技術への理解が欠かせません。しかし、OKF関連の記事の多くはOKF単体の説明にとどまっており、それだけでは体系的に理解しづらいと感じています。OKFはこうした周辺技術を前提として設計された概念でもあるため、それらへの理解があって初めて実感を持って捉えられ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/yoshiki_otagaki/articles/c2dfe8efe5c5a3" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/finatext/articles/2ea88e4b1c2e5b" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,6 +156,16 @@ Next.js + Supabase + Anthropic API + 独自 MCP サーバで法律事務所向�
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -177,16 +181,6 @@ Next.js + Supabase + Anthropic API + 独自 MCP サーバで法律事務所向�
                                 <div class="product-info">
                                     <div class="product-title">機械学習 - Amazon検索結果</div>
                                     <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GPT - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGPTに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +221,16 @@ Next.js + Supabase + Anthropic API + 独自 MCP サーバで法律事務所向�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_4172.html">
+                    <a href="Qiita_-_人気の記事_4491.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">首相の動向発信する速報X 話題</span>
+                        <span class="nav-title">Lean 4 とは何か ── AI が数学オリンピックに挑み、フェルマーの最終定理がコードに書き写さ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_71.html">
+                    <a href="iPhone_Mania_558.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【セール】Buhoの｢BuhoCleaner｣などMac向けソフト4本が最大70％オフに ｰ 6月9...</span>
+                        <span class="nav-title">AppleがPlasmaSolve買収〜iPhoneの傷対策は進むのか</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +243,52 @@ Next.js + Supabase + Anthropic API + 独自 MCP サーバで法律事務所向�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5193.html">
-                        <h3>Anthropic、「ミトス級AI」を数週間以内に一般公開へ　「Claude Opus 4.8」も発表</h3>
+                    <a href="CNET_Japan_最新情報総合_8521.html">
+                        <h3>無料版「ChatGPT」で無限の会話が可能に、新モデル「GPT‑5.6 Luna」も開放</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Anthropicは5月28日（米国時間）、生成AIモデル「Claude Opus 4. 7」から「控えめだが確実な改善」を加えたという。あわせて同社は、現在Project Glasswingの一環と...</p>
+                        <p class="related-summary">OpenAIは、無料版ChatGPTでテキストチャットを無制限に利用できるようにすると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9499.html">
-                        <h3>米CNNが提訴したAI企業パープレキシティ、「事実に著作権なし」と反論</h3>
+                    <a href="CNET_Japan_最新情報総合_2374.html">
+                        <h3>音楽生成AIのSuno、著作権問題を受け楽曲に「電子透かし」導入へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米テレビネットワークのCNNが、AI検索エンジンのパープレキシティを著作権侵害で提訴した。.</p>
+                        <p class="related-summary">AI楽曲生成プラットフォーム「Suno」は、楽曲が同社のツールで作られたものかどうかを、より簡単に判別できるようにする計画だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_2118.html">
-                        <h3>AppleのAIスマートグラスの発売は2027年末に延期か</h3>
+                    <a href="CNET_Japan_最新情報総合_1801.html">
+                        <h3>「かなりイケてる」KDDI社長が推すAI　auショップ全店の業務負荷を大幅低減</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">auショップのスタッフはもう分厚いマニュアルと格闘しなくていい。KDDIが導入したAIエージェントが複雑な問い合わせに30秒で回答し、人材定着の妨げとなってきた「情報習得の重荷」を軽減しつつある。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_8981.html">
+                        <h3>SOUNDPEATS、音質・ノイキャン・軽量化を追求した新型イヤホン「Air6 Pro」を8月28日に発売へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">BloombergのMark Gurman氏が、毎週日曜恒例のニュースレター「PowerOn」の最新号において、AppleのAIスマートグラスの発売は延期されたようだと報告しています。 AppleのA...</p>
+                        <p class="related-summary">SOUNDPEATSが、新型完全ワイヤレスイヤホン「Air6 Pro」を8月28日に発売します。 「Air6 Pro」は、軽さと音質を追求した最新の完全ワイヤレスイヤホンで、ボーカルの質感や楽器の自然...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_155.html">
-                        <h3>【衝撃】軽トラのCO2が農業を救う!? 「人とくるまのテクノロジー展」で見つけたヤバすぎる最新技術4選</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5218.html">
+                        <h3>オープンAI 対話スピーカー発売か</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">人とくるまのテクノロジー展2026のレポートです。スズキのCO2回収軽トラや電動台車、トヨタの事故を防ぐスマートポール、ホンダの事故予測AI、ダイハツの電力安定システムなど、自動車の枠を超え、私たちの...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_3819.html">
-                        <h3>アムール株式会社、Zoho認定パートナーとして参画。AI検索時代の集客から営業管理まで一気通貫で支援</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">アムール株式会社、Zoho認定パートナーとして参画。AI検索時代の集客から営業管理まで一気通貫で支援.</p>
                     </a>
                 </article>
             </div>

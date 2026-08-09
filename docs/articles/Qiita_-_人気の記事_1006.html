@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS Batch と ECS Service は何が違うのか - Terraform で最小構成を作って理解する | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 自社サービスの運用ですでに ECS を使っています。ただし用途は AWS Batch 経由のバッチ処理で、 Web サービスを常時稼働させる、いわゆる普通の ECS の使い方をしたことがありませんでした。 次の案件でコンテナ基盤の選択肢として ECS を検討する.">
+    <title>Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する | 日本のテックニュース速報</title>
+    <meta name="description" content="前書き 2026年8月5日、Amazon DynamoDBがリアルタイムベクトル検索に対応しました。 これまでAWSでベクトル検索をやりたい場合、AWS Marketplace利用しない場合、選択肢はだいたい次の5つでした。 Amazon OpenSearch S.">
     <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AWS Batch と ECS Service は何が違うのか - Terraform で最小構成を作って理解する">
-    <meta property="og:description" content="はじめに 自社サービスの運用ですでに ECS を使っています。ただし用途は AWS Batch 経由のバッチ処理で、 Web サービスを常時稼働させる、いわゆる普通の ECS の使い方をしたことがありませんでした。 次の案件でコンテナ基盤の選択肢として ECS を検討する.">
+    <meta property="og:title" content="Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する">
+    <meta property="og:description" content="前書き 2026年8月5日、Amazon DynamoDBがリアルタイムベクトル検索に対応しました。 これまでAWSでベクトル検索をやりたい場合、AWS Marketplace利用しない場合、選択肢はだいたい次の5つでした。 Amazon OpenSearch S.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1006.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AWS Batch と ECS Service は何が違うのか - Terraform で最小構成を作って理解する">
-    <meta name="twitter:description" content="はじめに 自社サービスの運用ですでに ECS を使っています。ただし用途は AWS Batch 経由のバッチ処理で、 Web サービスを常時稼働させる、いわゆる普通の ECS の使い方をしたことがありませんでした。 次の案件でコンテナ基盤の選択肢として ECS を検討する.">
+    <meta name="twitter:title" content="Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する">
+    <meta name="twitter:description" content="前書き 2026年8月5日、Amazon DynamoDBがリアルタイムベクトル検索に対応しました。 これまでAWSでベクトル検索をやりたい場合、AWS Marketplace利用しない場合、選択肢はだいたい次の5つでした。 Amazon OpenSearch S.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AWS Batch と ECS Service は何が違うのか - Terraform で最小構成を作って理解する",
-        "description": "はじめに 自社サービスの運用ですでに ECS を使っています。ただし用途は AWS Batch 経由のバッチ処理で、 Web サービスを常時稼働させる、いわゆる普通の ECS の使い方をしたことがありませんでした。 次の案件でコンテナ基盤の選択肢として ECS を検討する.",
+        "headline": "Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する",
+        "description": "前書き 2026年8月5日、Amazon DynamoDBがリアルタイムベクトル検索に対応しました。 これまでAWSでベクトル検索をやりたい場合、AWS Marketplace利用しない場合、選択肢はだいたい次の5つでした。 Amazon OpenSearch S.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-05T03:21:00",
-        "dateModified": "2026-08-07T07:16:15.716850",
+        "datePublished": "2026-08-08T06:15:11",
+        "dateModified": "2026-08-09T03:43:54.422804",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1006.html"
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AWS Batch と ECS Service は何が違うのか - Terraform で最小構成を作って理解する",
+                "name": "Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1006.html"
             }
         ]
@@ -114,19 +114,19 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">AWS Batch と ECS Service は何が違うのか - Terraform で最小構成を...</li>
+                <li aria-current="page">Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AWS Batch と ECS Service は何が違うのか - Terraform で最小構成を作って理解する</h1>
+                <h1>Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/sugumura/items/db166669c5dba836871a?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/Syoitu/items/068db63a8bf3bb961b2b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-08-05T03:21:00">
-                        公開: 2026-08-05T03:21:00
+                    <time datetime="2026-08-08T06:15:11">
+                        公開: 2026-08-08T06:15:11
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
@@ -138,14 +138,16 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-自社サービスの運用ですでに ECS を使っています。ただし用途は AWS Batch 経由のバッチ処理で、
-Web サービスを常時稼働させる、いわゆる普通の ECS の使い方をしたことがありませんでした。
-次の案件でコンテナ基盤の選択肢として ECS を検討する...
+                    前書き
+2026年8月5日、Amazon DynamoDBがリアルタイムベクトル検索に対応しました。
+
+これまでAWSでベクトル検索をやりたい場合、AWS Marketplace利用しない場合、選択肢はだいたい次の5つでした。
+
+Amazon OpenSearch S...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/sugumura/items/db166669c5dba836871a?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/Syoitu/items/068db63a8bf3bb961b2b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -202,16 +204,16 @@ Web サービスを常時稼働させる、いわゆる普通の ECS の使い�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5851.html">
+                    <a href="Qiita_-_人気の記事_8976.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Claude が書く長いコメントは、Claude 自身の役に立っていなかった</span>
+                        <span class="nav-title">SES現場で信頼を失わない報告・確認・問題解析の基本</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_2781.html">
+                    <a href="iPhone_Mania_8774.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Codeで超軽量なMacのメモアプリを自作！プロンプト付き</span>
+                        <span class="nav-title">iPhone17が8月10日に値上げか〜噂の確度と買い時を検証</span>
                     </a>
                 </div>
             </div>
@@ -224,37 +226,7 @@ Web サービスを常時稼働させる、いわゆる普通の ECS の使い�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_770.html">
-                        <h3>ビールと水を交互に飲まないと倒れるグラス発売　適正飲酒を促す</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">「よなよなエール」などのクラフトビールを手がけるヤッホーブルーイング（長野県軽井沢町）は8月4日、ビールだけを飲むと倒れてしまうU字型のグラス「ふらつくビアグラス by よなよなエール」を発表した。U...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5739.html">
-                        <h3>Linuxのトラフィックが北米で急増、一体なぜ？</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">Linuxのデスクトップ市場シェアが、北米で数週間のうちに通常の3～5％から約10％へと倍増したとの報告が相次いでいる。その理由を探ってみた。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4603.html">
-                        <h3>豪ジェットスター、「頭上の荷物入れ」を有料に--ジェットスター・ジャパン運航便は対象外</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">豪ジェットスター航空は8月5日、機内の頭上荷物入れを有料とする制度を、2027年2月に導入すると発表した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5346.html">
+                    <a href="CNET_Japan_最新情報総合_2934.html">
                         <h3>「アプリより直接会いたい」Z世代の恋愛観の変化、Tinder運営元CEOが語る</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
@@ -264,13 +236,43 @@ Web サービスを常時稼働させる、いわゆる普通の ECS の使い�
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3040.html">
+                    <a href="CNET_Japan_最新情報総合_7745.html">
                         <h3>ディズニープラス、「無料プラン」を検討中　TikTokとの提携も発表</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
                         <p class="related-summary">ディズニーのCEOは、動画配信サービス「Disney+（ディズニープラス）」の利用者を増やすため、無料プランの追加を検討していると明らかにした。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_3817.html">
+                        <h3>ドコモ・バイクシェアの障害、あす7日復旧へ--背景に「NOLL」刷新へのシステム移行</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">「NOLL（ノル）」へのブランド刷新を9月に控えたドコモ・バイクシェアで、システム移行に伴う大規模障害が発生した。全エリアでの提供停止は4日間以上に及び、NTTドコモの前田社長が決算会見で謝罪する事態...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_6291.html">
+                        <h3>Metaに約900億円の支払い命令、子どものSNS被害めぐる裁判で</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">米ニューメキシコ州の裁判所は、MetaのSNSプラットフォームが子どもにもたらす危険性を一般に警告しなかったとして、同社に5億6700万ドル（約900億円）の支払いを命じた。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_7306.html">
+                        <h3>太陽表面を過去最高の解像度で観測　理論予測の渦「ケルビン・ヘルムホルツ不安定性」を初確認</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">米国立科学財団（NSF）の国立太陽天文台（NSO）は8月5日（現地時間）、太陽の表面で「ケルビン・ヘルムホルツ不安定性」と呼ばれる渦巻き現象を初めて観測したと発表した。世界最大の太陽望遠鏡「ダニエル・...</p>
                     </a>
                 </article>
             </div>

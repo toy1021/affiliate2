@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude CodeでExcel仕様書を効率的に解析・引き継ぎするための命名・管理術 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 開発の現場では、いまだに大量の仕様書が Excel（xlsx） で管理されています。調査結果、機能一覧、対応状況、データ項目定義……。これらをAIエージェント（私の場合は Claude Code）に読み込ませて「解析」「要約」「引き継ぎ資料化」させたい、というニ.">
-    <meta name="keywords" content="AI,Claude,Excel">
+    <title>今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude CodeでExcel仕様書を効率的に解析・引き継ぎするための命名・管理術">
-    <meta property="og:description" content="はじめに 開発の現場では、いまだに大量の仕様書が Excel（xlsx） で管理されています。調査結果、機能一覧、対応状況、データ項目定義……。これらをAIエージェント（私の場合は Claude Code）に読み込ませて「解析」「要約」「引き継ぎ資料化」させたい、というニ.">
+    <meta property="og:title" content="今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた">
+    <meta property="og:description" content="はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9855.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude CodeでExcel仕様書を効率的に解析・引き継ぎするための命名・管理術">
-    <meta name="twitter:description" content="はじめに 開発の現場では、いまだに大量の仕様書が Excel（xlsx） で管理されています。調査結果、機能一覧、対応状況、データ項目定義……。これらをAIエージェント（私の場合は Claude Code）に読み込ませて「解析」「要約」「引き継ぎ資料化」させたい、というニ.">
+    <meta name="twitter:title" content="今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた">
+    <meta name="twitter:description" content="はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude CodeでExcel仕様書を効率的に解析・引き継ぎするための命名・管理術",
-        "description": "はじめに 開発の現場では、いまだに大量の仕様書が Excel（xlsx） で管理されています。調査結果、機能一覧、対応状況、データ項目定義……。これらをAIエージェント（私の場合は Claude Code）に読み込ませて「解析」「要約」「引き継ぎ資料化」させたい、というニ.",
+        "headline": "今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた",
+        "description": "はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-23T02:17:46",
-        "dateModified": "2026-06-23T11:18:29.499341",
+        "datePublished": "2026-08-08T08:58:27",
+        "dateModified": "2026-08-09T12:51:23.114426",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9855.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9855.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","Excel"]
+        "articleSection": "テクノロジー",
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude CodeでExcel仕様書を効率的に解析・引き継ぎするための命名・管理術",
+                "name": "今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9855.html"
             }
         ]
@@ -113,27 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude CodeでExcel仕様書を効率的に解析・引き継ぎするための命名・管理術</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude CodeでExcel仕様書を効率的に解析・引き継ぎするための命名・管理術</h1>
+                <h1>今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/oguri-gmoconnect/items/ff7546e2eef855ef6aa1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-23T02:17:46">
-                        公開: 2026-06-23T02:17:46
+                    <span class="source">出典: <a href="https://qiita.com/miruky/items/c7beb2fbed6492d195d1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-08-08T08:58:27">
+                        公開: 2026-08-08T08:58:27
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">Excel</span>
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
@@ -141,11 +139,12 @@
                 
                 <div class="article-body">
                     はじめに
-開発の現場では、いまだに大量の仕様書が Excel（xlsx） で管理されています。調査結果、機能一覧、対応状況、データ項目定義……。これらをAIエージェント（私の場合は Claude Code）に読み込ませて「解析」「要約」「引き継ぎ資料化」させたい、というニ...
+こんばんは、mirukyです。
+突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/oguri-gmoconnect/items/ff7546e2eef855ef6aa1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/miruky/items/c7beb2fbed6492d195d1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,30 +157,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Excel&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Excel - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Excel - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでExcelに関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -191,23 +170,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +201,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_5106.html">
+                    <a href="Qiita_-_人気の記事_2605.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">並列で思考を分けたら、AIレビューの精度もコンテキスト効率も同時に上がった話</span>
+                        <span class="nav-title">Codex CLI /goalの6状態を実例で理解する --- Blockedからの再開、Budge...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6491.html">
+                    <a href="Qiita_-_人気の記事_7836.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AWS CDKとTerraformで書き比べてみた - Lambda × S3 署名URLアップロー...</span>
+                        <span class="nav-title">WindowsでDNSサーバーを構築して、オンプレ想定VPCからGenU閉域モードへ接続してみた</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +223,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1172.html">
-                        <h3>OpenAI、一度やって見せるだけで、以降やってくれる新機能「Record＆Replay」--PC作業を自動化</h3>
+                    <a href="CNET_Japan_最新情報総合_8010.html">
+                        <h3>「アプリより直接会いたい」Z世代の恋愛観の変化、Tinder運営元CEOが語る</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは6月19日、macOS版のAIエージェント「Codex」アプリに、繰り返しの作業を実演して教えられる新機能「Record＆Replay」を発表した。自動化したい操作を一度やって見せると、...</p>
+                        <p class="related-summary">マッチングアプリ「Tinder」などを展開するMatch Groupのトップは今週、独身者の間ではスマートフォンでプロフィールをスワイプするより、直接会うことを好む傾向が強まっていると述べた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9724.html">
-                        <h3>サムスン電子、韓国の全社員と世界のDX部門に「ChatGPT Enterprise」「Codex」を展開へ</h3>
+                    <a href="CNET_Japan_最新情報総合_9051.html">
+                        <h3>ディズニープラス、「無料プラン」を検討中　TikTokとの提携も発表</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは、同社のAIツールである「ChatGPT Enterprise」と「Codex」を韓国のサムスン電子が大規模に導入すると発表した。OpenAIにとって過去最大級の企業向け展開の1つだとい...</p>
+                        <p class="related-summary">ディズニーのCEOは、動画配信サービス「Disney+（ディズニープラス）」の利用者を増やすため、無料プランの追加を検討していると明らかにした。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2883.html">
-                        <h3>Google DeepMindが映画スタジオA24に出資、映画制作AIツールを開発へ</h3>
+                    <a href="CNET_Japan_最新情報総合_8341.html">
+                        <h3>ドコモ・バイクシェアの障害、あす7日復旧へ--背景に「NOLL」刷新へのシステム移行</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">熱狂的なファンを持つ映画制作会社A24はAI開発企業Google DeepMindと提携し、社内の映画製作者向けのAIツールを開発するという。.</p>
+                        <p class="related-summary">「NOLL（ノル）」へのブランド刷新を9月に控えたドコモ・バイクシェアで、システム移行に伴う大規模障害が発生した。全エリアでの提供停止は4日間以上に及び、NTTドコモの前田社長が決算会見で謝罪する事態...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2307.html">
-                        <h3>OpenAI、Getty Imagesと提携--その内容とは</h3>
+                    <a href="CNET_Japan_最新情報総合_2624.html">
+                        <h3>Metaに約900億円の支払い命令、子どものSNS被害めぐる裁判で</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ゲッティイメージズ（Getty Images）は6月21日、OpenAIとの提携を発表した。ChatGPTで検索や調べ物をしたときに、同社がライセンスを管理する写真や映像が表示されるようになる。.</p>
+                        <p class="related-summary">米ニューメキシコ州の裁判所は、MetaのSNSプラットフォームが子どもにもたらす危険性を一般に警告しなかったとして、同社に5億6700万ドル（約900億円）の支払いを命じた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3746.html">
-                        <h3>ワールドカップをAIでもっと楽しむ！ChatGPTとグーグルの最新ツール活用法</h3>
+                    <a href="CNET_Japan_最新情報総合_2518.html">
+                        <h3>太陽表面を過去最高の解像度で観測　理論予測の渦「ケルビン・ヘルムホルツ不安定性」を初確認</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIとグーグルは、ワールドカップを存分に楽しめるよう、ChatGPTや検索などでファン向けの体験を提供している。.</p>
+                        <p class="related-summary">米国立科学財団（NSF）の国立太陽天文台（NSO）は8月5日（現地時間）、太陽の表面で「ケルビン・ヘルムホルツ不安定性」と呼ばれる渦巻き現象を初めて観測したと発表した。世界最大の太陽望遠鏡「ダニエル・...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTTP 418を本当に返すページをCloudflare Pages (+ functions)で作る | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 418 I&#39;m a teapot というHTTPステータスコードをご存知でしょうか。RFC 2324（Hyper Text Coffee Pot Control Protocol）という、1998年のエイプリルフールに公開されたジョークRFCで定義されたステータスコードです">
+    <title>楽観ロックの実装でおさえたいポイントと、よくあるしくじり | 日本のテックニュース速報</title>
+    <meta name="description" content="これはなに こんにちは、レバテック開発部のもりたです。 今回はアプリケーションを作る上でわりと出会う楽観ロックの実装方法についてまとめます。 コードの例はPHP/Laravelですが、基本的には言語やフレームワークに制限はありません">
     <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="HTTP 418を本当に返すページをCloudflare Pages (+ functions)で作る">
-    <meta property="og:description" content="はじめに 418 I&#39;m a teapot というHTTPステータスコードをご存知でしょうか。RFC 2324（Hyper Text Coffee Pot Control Protocol）という、1998年のエイプリルフールに公開されたジョークRFCで定義されたステータスコードです">
+    <meta property="og:title" content="楽観ロックの実装でおさえたいポイントと、よくあるしくじり">
+    <meta property="og:description" content="これはなに こんにちは、レバテック開発部のもりたです。 今回はアプリケーションを作る上でわりと出会う楽観ロックの実装方法についてまとめます。 コードの例はPHP/Laravelですが、基本的には言語やフレームワークに制限はありません">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_294.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HTTP 418を本当に返すページをCloudflare Pages (+ functions)で作る">
-    <meta name="twitter:description" content="はじめに 418 I&#39;m a teapot というHTTPステータスコードをご存知でしょうか。RFC 2324（Hyper Text Coffee Pot Control Protocol）という、1998年のエイプリルフールに公開されたジョークRFCで定義されたステータスコードです">
+    <meta name="twitter:title" content="楽観ロックの実装でおさえたいポイントと、よくあるしくじり">
+    <meta name="twitter:description" content="これはなに こんにちは、レバテック開発部のもりたです。 今回はアプリケーションを作る上でわりと出会う楽観ロックの実装方法についてまとめます。 コードの例はPHP/Laravelですが、基本的には言語やフレームワークに制限はありません">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "HTTP 418を本当に返すページをCloudflare Pages (+ functions)で作る",
-        "description": "はじめに 418 I&#39;m a teapot というHTTPステータスコードをご存知でしょうか。RFC 2324（Hyper Text Coffee Pot Control Protocol）という、1998年のエイプリルフールに公開されたジョークRFCで定義されたステータスコードです",
+        "headline": "楽観ロックの実装でおさえたいポイントと、よくあるしくじり",
+        "description": "これはなに こんにちは、レバテック開発部のもりたです。 今回はアプリケーションを作る上でわりと出会う楽観ロックの実装方法についてまとめます。 コードの例はPHP/Laravelですが、基本的には言語やフレームワークに制限はありません",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-20T07:04:10",
-        "dateModified": "2026-06-22T11:56:09.047914",
+        "datePublished": "2026-08-07T03:03:06",
+        "dateModified": "2026-08-09T12:51:23.111748",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_294.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_294.html",
-        "articleSection": "その他",
+        "articleSection": "プログラミング",
         "keywords": ["本"]
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "HTTP 418を本当に返すページをCloudflare Pages (+ functions)で作る",
+                "name": "楽観ロックの実装でおさえたいポイントと、よくあるしくじり",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_294.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">HTTP 418を本当に返すページをCloudflare Pages (+ functions)で作...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">楽観ロックの実装でおさえたいポイントと、よくあるしくじり</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>HTTP 418を本当に返すページをCloudflare Pages (+ functions)で作る</h1>
+                <h1>楽観ロックの実装でおさえたいポイントと、よくあるしくじり</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/taka1156/articles/faf79d1b3712bc" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-06-20T07:04:10">
-                        公開: 2026-06-20T07:04:10
+                    <span class="source">出典: <a href="https://zenn.dev/levtech/articles/how-to-concrete-optimistic-lock" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-08-07T03:03:06">
+                        公開: 2026-08-07T03:03:06
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
@@ -138,13 +138,39 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-418 I'm a teapot というHTTPステータスコードをご存知でしょうか。RFC 2324（Hyper Text Coffee Pot Control Protocol）という、1998年のエイプリルフールに公開されたジョークRFCで定義されたステータスコードです。「サーバーはティーポットであるため、コーヒーを淹れることを拒否する」という、なんとも遊び心のある仕様です。
-今回、この418ネタをただのデコレーションではなく実際に動くHTTPレスポンスとして返す静的ページを作り、Cloudflare Pagesにデプロイしました。本記事ではそのセットアップ手順と、途中...
+                    これはなに
+こんにちは、レバテック開発部のもりたです。
+今回はアプリケーションを作る上でわりと出会う楽観ロックの実装方法についてまとめます。
+コードの例はPHP/Laravelですが、基本的には言語やフレームワークに制限はありません。
+構成
+
+ 構成
+
+楽観ロックとは
+
+課題
+楽観ロックによる解決
+
+
+実装方法
+
+実装例
+おさえたいポイント
+
+
+よくあるしくじり
+おわりに
+
+概要、詳細、ミスったケースという流れです。それでは参りましょう。
+
+
+ 楽観ロックとは
+楽観ロックは、複数クライアントによる並行処理から更新データを守る仕組みです。
+と言ってもピンとこない人はピンとこないはずなの...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/taka1156/articles/faf79d1b3712bc" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/levtech/articles/how-to-concrete-optimistic-lock" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -166,27 +192,47 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -201,16 +247,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_14.html">
+                    <a href="Qiita_-_人気の記事_7873.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Elixir 1.20の型システムをRust,TypeScriptと比べたら特徴が見えてきた</span>
+                        <span class="nav-title">UE6 で Verse は「何として」パッケージに乗るのか：ue6-main のコンパイル・クック・...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_195.html">
+                    <a href="Qiita_-_人気の記事_3896.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AI以後の受託システム開発はどうなっていくのか（2026年6月版）</span>
+                        <span class="nav-title">Web API設計の現在地2026</span>
                     </a>
                 </div>
             </div>
@@ -223,53 +269,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2556.html">
-                        <h3>moomoo証券に業務停止命令、NISA対象外のETFを「対象」と偽り販売</h3>
+                    <a href="Qiita_-_人気の記事_3711.html">
+                        <h3>新人エンジニアにとって大切なことは技術力だけではない話</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">moomoo証券が関東財務局から業務停止命令などの行政処分を受けたと発表した。NISAの対象外である米国ETFなどを「NISA対象商品」と偽って販売していたためだ。6月19日から9月18日までの3カ月...</p>
+                        <p class="related-summary">エンジニアにとって大切なことって何だろう？ 新人エンジニアやソフトウェアエンジニアとして成長していく中で、「エンジニアにとって大切なことは何か」と考える場面は多いと思います。この記事では、私が3年目ま...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1842.html">
-                        <h3>サッカー日本代表応援タオル付き、「一番搾り」24本が22％オフ！</h3>
+                    <a href="ASCII_jp__トップ_8453.html">
+                        <h3>テックジム、法人向けにプログラミング講師を客先常駐派遣。Claude Code講座・Python講座を永田町にて毎週無料...</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">「一番搾り」24本にサッカー日本代表2026応援冷感タオルが付属したセットががAmazonタイムセールに登場しています。.</p>
+                        <p class="related-summary">テックジム、法人向けにプログラミング講師を客先常駐派遣。Claude Code講座・Python講座を永田町にて毎週無料で対面開催.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9230.html">
-                        <h3>オーラス株式会社、Sonus faber「Amati Supreme」を日本初常設展示。建築家・設計事務所に向けた「オー...</h3>
+                    <a href="Qiita_-_人気の記事_2605.html">
+                        <h3>Codex CLI /goalの6状態を実例で理解する --- Blockedからの再開、BudgetLimited、C...</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">オーラス株式会社、Sonus faber「Amati Supreme」を日本初常設展示。建築家・設計事務所に向けた「オーディオ空間デザイン」の提案を強化.</p>
+                        <p class="related-summary">Codex CLIで長時間タスクを動かしていると、最終出力に「停止しました」と書かれることがあります。 しかし、その停止には少なくとも次の違いがあります。 Paused 人間が一時停止した Block...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4802.html">
-                        <h3>ナッジ、シンガーソングライターや俳優として活躍「阪本奨悟」の公式クレジットカードを提供開始</h3>
+                    <a href="Zennのトレンド_4295.html">
+                        <h3>Claude Code で「ループエンジニアリング」を実践してみた</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">ナッジ、シンガーソングライターや俳優として活躍「阪本奨悟」の公式クレジットカードを提供開始.</p>
+                        <p class="related-summary">Claude Code で「ループエンジニアリング」を実践し、Maker-Checker構成で本物のバグを検出できた話 はじめに てつどんです。データエンジニアとして 日々業務をこなしております。 最...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_3515.html">
-                        <h3>CIO、10000mAhの大容量・Qi2.2対応・厚さ約14mmの半固体系モバイルバッテリー『SMARTCOBY SLI...</h3>
+                    <a href="Qiita_-_人気の記事_7379.html">
+                        <h3>検証環境にEC2 Spot Instanceは最適解なのか？コストと可用性の観点から考えてみた</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">本日、CIOが、10000mAhの大容量ながら厚さ約14mmの薄型設計を実現した半固体系モバイルバッテリー『SMARTCOBY SLIMⅡ Wireless2. 2 SS10K』を発売しました。 本製...</p>
+                        <p class="related-summary">Champions 真夏のQiitaリレー」の7日目の記事です！ 下記URLから他の方の記事を確認できます。ぜひご覧ください！ さて、本題に移ります。 最近仕事をしていて、開発・検証環境は、稼働時間が...</p>
                     </a>
                 </article>
             </div>

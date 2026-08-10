@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>なぜニチレイは、たった10日で復旧できたのか | 日本のテックニュース速報</title>
-    <meta name="description" content="この記事は 「誰でもわかるセキュリティの話」シリーズ の記事です。 Python歴5年以上、セキュリティにも興味がある変態が書いています。 ランサムウェアに攻撃された企業の末路は、だいたい決まっている。 数ヶ月止まる。売上が壊滅する。信頼を失う。 同じ攻撃者(Ran.">
-    <meta name="keywords" content="Python,売上">
+    <title>今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="なぜニチレイは、たった10日で復旧できたのか">
-    <meta property="og:description" content="この記事は 「誰でもわかるセキュリティの話」シリーズ の記事です。 Python歴5年以上、セキュリティにも興味がある変態が書いています。 ランサムウェアに攻撃された企業の末路は、だいたい決まっている。 数ヶ月止まる。売上が壊滅する。信頼を失う。 同じ攻撃者(Ran.">
+    <meta property="og:title" content="今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた">
+    <meta property="og:description" content="はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_731.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="なぜニチレイは、たった10日で復旧できたのか">
-    <meta name="twitter:description" content="この記事は 「誰でもわかるセキュリティの話」シリーズ の記事です。 Python歴5年以上、セキュリティにも興味がある変態が書いています。 ランサムウェアに攻撃された企業の末路は、だいたい決まっている。 数ヶ月止まる。売上が壊滅する。信頼を失う。 同じ攻撃者(Ran.">
+    <meta name="twitter:title" content="今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた">
+    <meta name="twitter:description" content="はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "なぜニチレイは、たった10日で復旧できたのか",
-        "description": "この記事は 「誰でもわかるセキュリティの話」シリーズ の記事です。 Python歴5年以上、セキュリティにも興味がある変態が書いています。 ランサムウェアに攻撃された企業の末路は、だいたい決まっている。 数ヶ月止まる。売上が壊滅する。信頼を失う。 同じ攻撃者(Ran.",
+        "headline": "今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた",
+        "description": "はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-27T05:29:26",
-        "dateModified": "2026-07-29T19:17:10.388736",
+        "datePublished": "2026-08-08T08:58:27",
+        "dateModified": "2026-08-10T03:56:05.998563",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_731.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_731.html",
-        "articleSection": "ビジネス・経済",
-        "keywords": ["Python","売上"]
+        "articleSection": "テクノロジー",
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "ビジネス・経済",
-                "item": "https://toy1021.github.io/affiliate2/#category=ビジネス・経済"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "なぜニチレイは、たった10日で復旧できたのか",
+                "name": "今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_731.html"
             }
         ]
@@ -113,42 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=ビジネス・経済">ビジネス・経済</a></li>
-                <li aria-current="page">なぜニチレイは、たった10日で復旧できたのか</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>なぜニチレイは、たった10日で復旧できたのか</h1>
+                <h1>今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/harupython/items/3ca158f89a6e38d762aa?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: ビジネス・経済</span>
-                    <time datetime="2026-07-27T05:29:26">
-                        公開: 2026-07-27T05:29:26
+                    <span class="source">出典: <a href="https://qiita.com/miruky/items/c7beb2fbed6492d195d1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-08-08T08:58:27">
+                        公開: 2026-08-08T08:58:27
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">売上</span>
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事は 「誰でもわかるセキュリティの話」シリーズ の記事です。
-Python歴5年以上、セキュリティにも興味がある変態が書いています。
-
-ランサムウェアに攻撃された企業の末路は、だいたい決まっている。
-数ヶ月止まる。売上が壊滅する。信頼を失う。
-同じ攻撃者(Ran...
+                    はじめに
+こんばんは、mirukyです。
+突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/harupython/items/3ca158f89a6e38d762aa?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/miruky/items/c7beb2fbed6492d195d1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,30 +157,10 @@ Python歴5年以上、セキュリティにも興味がある変態が書いて�
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Python - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E5%A3%B2%E4%B8%8A&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="売上 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">売上 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで売上に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%95%E8%B3%87&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="投資 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">投資 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで投資に関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -194,23 +170,23 @@ Python歴5年以上、セキュリティにも興味がある変態が書いて�
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>ビジネス・経済関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%95%E8%B3%87&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="投資 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">投資 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで投資に関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ビジネス - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ビジネス - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでビジネスに関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +201,16 @@ Python歴5年以上、セキュリティにも興味がある変態が書いて�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3824.html">
+                    <a href="iPhone_Mania_6775.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【2026年版】MIXI 新卒向け技術研修を公開しました。</span>
+                        <span class="nav-title">iPhone17が8月10日に値上げか〜噂の確度と買い時を検証</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_7426.html">
+                    <a href="Qiita_-_人気の記事_1545.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">コードレビューでの見落としをきっかけに『ITエンジニア1年目の教科書』を読んだ</span>
+                        <span class="nav-title">LTできたらバンジー飛べる</span>
                     </a>
                 </div>
             </div>
@@ -247,23 +223,53 @@ Python歴5年以上、セキュリティにも興味がある変態が書いて�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4653.html">
-                        <h3>迫るベテラン退職ラッシュ、企業の建物管理をどう引き継ぐ？ 山下PMC「b-platform」の挑戦</h3>
+                    <a href="CNET_Japan_最新情報総合_2337.html">
+                        <h3>ドコモ・バイクシェアの障害、あす7日復旧へ--背景に「NOLL」刷新へのシステム移行</h3>
                         <div class="related-meta">
-                            <span class="category">ビジネス・経済</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">オフィスビルや工場は、竣工した瞬間から数十年に及ぶ「管理」の世界に入る。だが、建てた後の建物を誰がどう支えているのかは、あまり知られていない。建物のコンサルティングを手がける山下PMCは、施設情報を3...</p>
+                        <p class="related-summary">「NOLL（ノル）」へのブランド刷新を9月に控えたドコモ・バイクシェアで、システム移行に伴う大規模障害が発生した。全エリアでの提供停止は4日間以上に及び、NTTドコモの前田社長が決算会見で謝罪する事態...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5056.html">
-                        <h3>「警察の監視カメラ」の位置を示す無料の地図が米国で大注目</h3>
+                    <a href="CNET_Japan_最新情報総合_8414.html">
+                        <h3>Metaに約900億円の支払い命令、子どものSNS被害めぐる裁判で</h3>
                         <div class="related-meta">
-                            <span class="category">ビジネス・経済</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米国でいま、警察の監視カメラを巡る攻防が過熱している。渦中にいるのは、ナンバープレートを自動で読み取るカメラ（ALPR）を全米の警察に提供して急成長した新興企業Flock Safetyだ。「大規模監視...</p>
+                        <p class="related-summary">米ニューメキシコ州の裁判所は、MetaのSNSプラットフォームが子どもにもたらす危険性を一般に警告しなかったとして、同社に5億6700万ドル（約900億円）の支払いを命じた。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_3211.html">
+                        <h3>太陽表面を過去最高の解像度で観測　理論予測の渦「ケルビン・ヘルムホルツ不安定性」を初確認</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">米国立科学財団（NSF）の国立太陽天文台（NSO）は8月5日（現地時間）、太陽の表面で「ケルビン・ヘルムホルツ不安定性」と呼ばれる渦巻き現象を初めて観測したと発表した。世界最大の太陽望遠鏡「ダニエル・...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_2126.html">
+                        <h3>ドコモ・バイクシェア、8月1日以降の利用料金を全額返金へ　正常に使えた人も対象</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">ドコモ・バイクシェアは8月7日、一連のサービス不具合を受け、8月1日以降の利用料金を全額返金すると発表した。不具合の影響を受けず正常に利用できた人も含め、期間中のすべての利用者が対象となる。返金にあた...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_4545.html">
+                        <h3>X、収益プログラムを刷新　インプレゾンビを排除　条件厳しく</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">Xは米国時間8月7日、クリエイター向けの新たな収益プログラム「Original Content Rewards Program」を発表した。自分で作ったオリジナルの投稿だけを報酬の対象とする仕組みで、...</p>
                     </a>
                 </article>
             </div>

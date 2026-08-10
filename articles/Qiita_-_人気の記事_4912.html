@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLAUDE.md を厚くしても意味がなかった話 | 日本のテックニュース速報</title>
-    <meta name="description" content="2%。 これ、何の数字だと思いますか。 AIエージェントに「このルールを守って作業して」と指示書を渡したとき、実際にちゃんと守れた割合です。しかも、これが一番マシだったモデルのスコア。ほとんどのモデルは25%を下回りました。 2026年7月28日に arXiv に上が.">
-    <meta name="keywords" content="AI,Claude">
+    <title>トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った | 日本のテックニュース速報</title>
+    <meta name="description" content="長いセッションの終盤で、Claude Code の様子が変わったと感じたことが何度もあります。 序盤に伝えた制約を忘れる。 さっき読んだファイルをまた読み始める。 「モデルが悪くなったのでは」と疑いたくなりますが、私の場合、そう感じたときはたいていコンテキストの使用率が膨ら.">
+    <meta name="keywords" content="Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="CLAUDE.md を厚くしても意味がなかった話">
-    <meta property="og:description" content="2%。 これ、何の数字だと思いますか。 AIエージェントに「このルールを守って作業して」と指示書を渡したとき、実際にちゃんと守れた割合です。しかも、これが一番マシだったモデルのスコア。ほとんどのモデルは25%を下回りました。 2026年7月28日に arXiv に上が.">
+    <meta property="og:title" content="トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った">
+    <meta property="og:description" content="長いセッションの終盤で、Claude Code の様子が変わったと感じたことが何度もあります。 序盤に伝えた制約を忘れる。 さっき読んだファイルをまた読み始める。 「モデルが悪くなったのでは」と疑いたくなりますが、私の場合、そう感じたときはたいていコンテキストの使用率が膨ら.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4912.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CLAUDE.md を厚くしても意味がなかった話">
-    <meta name="twitter:description" content="2%。 これ、何の数字だと思いますか。 AIエージェントに「このルールを守って作業して」と指示書を渡したとき、実際にちゃんと守れた割合です。しかも、これが一番マシだったモデルのスコア。ほとんどのモデルは25%を下回りました。 2026年7月28日に arXiv に上が.">
+    <meta name="twitter:title" content="トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った">
+    <meta name="twitter:description" content="長いセッションの終盤で、Claude Code の様子が変わったと感じたことが何度もあります。 序盤に伝えた制約を忘れる。 さっき読んだファイルをまた読み始める。 「モデルが悪くなったのでは」と疑いたくなりますが、私の場合、そう感じたときはたいていコンテキストの使用率が膨ら.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "CLAUDE.md を厚くしても意味がなかった話",
-        "description": "2%。 これ、何の数字だと思いますか。 AIエージェントに「このルールを守って作業して」と指示書を渡したとき、実際にちゃんと守れた割合です。しかも、これが一番マシだったモデルのスコア。ほとんどのモデルは25%を下回りました。 2026年7月28日に arXiv に上が.",
+        "headline": "トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った",
+        "description": "長いセッションの終盤で、Claude Code の様子が変わったと感じたことが何度もあります。 序盤に伝えた制約を忘れる。 さっき読んだファイルをまた読み始める。 「モデルが悪くなったのでは」と疑いたくなりますが、私の場合、そう感じたときはたいていコンテキストの使用率が膨ら.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-03T00:32:33",
-        "dateModified": "2026-08-03T17:52:12.081366",
+        "datePublished": "2026-08-07T20:46:14",
+        "dateModified": "2026-08-10T11:09:34.758982",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4912.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4912.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude"]
+        "keywords": ["Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "CLAUDE.md を厚くしても意味がなかった話",
+                "name": "トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4912.html"
             }
         ]
@@ -114,24 +114,23 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">CLAUDE.md を厚くしても意味がなかった話</li>
+                <li aria-current="page">トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>CLAUDE.md を厚くしても意味がなかった話</h1>
+                <h1>トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/jqit_suwa/items/2dee3e3d53080c3676a0?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/tomada/items/46e675f6ced44dcd10ad?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-08-03T00:32:33">
-                        公開: 2026-08-03T00:32:33
+                    <time datetime="2026-08-07T20:46:14">
+                        公開: 2026-08-07T20:46:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
                     <span class="tag">Claude</span>
                 </div>
             </header>
@@ -139,14 +138,14 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    36.2%。
-これ、何の数字だと思いますか。
-AIエージェントに「このルールを守って作業して」と指示書を渡したとき、実際にちゃんと守れた割合です。しかも、これが一番マシだったモデルのスコア。ほとんどのモデルは25%を下回りました。
-2026年7月28日に arXiv に上が...
+                    長いセッションの終盤で、Claude Code の様子が変わったと感じたことが何度もあります。
+序盤に伝えた制約を忘れる。
+さっき読んだファイルをまた読み始める。
+「モデルが悪くなったのでは」と疑いたくなりますが、私の場合、そう感じたときはたいていコンテキストの使用率が膨ら...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/jqit_suwa/items/2dee3e3d53080c3676a0?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/tomada/items/46e675f6ced44dcd10ad?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,20 +158,20 @@ AIエージェントに「このルールを守って作業して」と指示書
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +222,16 @@ AIエージェントに「このルールを守って作業して」と指示書
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_3134.html">
+                    <a href="iPhone_Mania_9956.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">MagSafe対応クリアケース「ESR Classic ハイブリッドマグネットケース」に黄ばみへの耐...</span>
+                        <span class="nav-title">iCloudプライベートリレーで実IPアドレスが漏れる可能性</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9498.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5309.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AWSで作った洗濯botを2ヶ月使い続けた話</span>
+                        <span class="nav-title">オープンAI 対話スピーカー発売か</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +244,53 @@ AIエージェントに「このルールを守って作業して」と指示書
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2359.html">
-                        <h3>OpenAI、「GPT-5.6」のAPI料金を最大80%値下げ　最安Lunaは100万トークン0.2ドルに</h3>
+                    <a href="CNET_Japan_最新情報総合_611.html">
+                        <h3>音楽生成AIのSuno、著作権問題を受け楽曲に「電子透かし」導入へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米OpenAIは7月30日（現地時間）、大規模言語モデル「GPT-5. 6」ファミリーのAPI料金を引き下げた。最速・最安をうたう「GPT-5. 6 Luna」は80%、日常業務向けの標準モデル「GP...</p>
+                        <p class="related-summary">AI楽曲生成プラットフォーム「Suno」は、楽曲が同社のツールで作られたものかどうかを、より簡単に判別できるようにする計画だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8284.html">
-                        <h3>米高校が「人型ロボット」導入で物議、契約先とアダルト人形の関係もやり玉に</h3>
+                    <a href="CNET_Japan_最新情報総合_5442.html">
+                        <h3>「かなりイケてる」KDDI社長が推すAI　auショップ全店の業務負荷を大幅低減</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ロボット関連スタートアップのRealbotixがある高校に対し、ヒューマノイドロボットと家庭向けAI宿題支援ツールを提供する。教員組合は、生徒はモルモットではないと反発している。.</p>
+                        <p class="related-summary">auショップのスタッフはもう分厚いマニュアルと格闘しなくていい。KDDIが導入したAIエージェントが複雑な問い合わせに30秒で回答し、人材定着の妨げとなってきた「情報習得の重荷」を軽減しつつある。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4686.html">
-                        <h3>Claudeも他社システムに不正侵入--「本物かもしれない」と気づいても攻撃続行</h3>
+                    <a href="CNET_Japan_最新情報総合_1042.html">
+                        <h3>OpenAIの「ドーナツ型」AIスピーカー、詳細がリークか　約5万円で2027年発売</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Anthropicは米国時間7月30日、サイバーセキュリティ評価の最中に自社のAIモデル「Claude」が実在する3社のシステムへ不正に侵入していたと発表した。.</p>
+                        <p class="related-summary">米OpenAIが2027年にAIスマートスピーカーを発売する計画だ。米Bloombergが8月6日（現地時間）に報じた。手のひらに収まるドーナツ型で、ワイヤレスで持ち運べる設計になるという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6407.html">
-                        <h3>「Siri AI」は使いすぎると有料に？ アップルCEOが示唆</h3>
+                    <a href="CNET_Japan_最新情報総合_1292.html">
+                        <h3>VAIO、内蔵カメラに写る「顔」から心拍数や血管情報を推定する新機能　個人向けPCに搭載</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アップルのティム・クックCEOは新たに提供する「Siri AI」について、利用が多い場合は料金が発生する可能性があることを示唆した。.</p>
+                        <p class="related-summary">VAIOは8月10日、PCの内蔵カメラで「血管情報」と「心拍情報」を測定できるアプリ「VAIO ウェルネスケア」の先行プレビュー版を、個人向けノートPC「VAIO SX14-R」（VJS4R2シリーズ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1144.html">
-                        <h3>【北陸・東日本初】空港滑走路を駆け抜ける！「AIRPORT-CRIT 2026 FUKUI」2026年10月24日・25...</h3>
+                    <a href="CNET_Japan_最新情報総合_6684.html">
+                        <h3>「ChatGPTの小説」と「人間の小説」、人はどちらを好むのか？ 研究結果が公開</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">【北陸・東日本初】空港滑走路を駆け抜ける！「AIRPORT-CRIT 2026 FUKUI」2026年10月24日・25日開催決定！8月1日より各種エントリー受付スタート.</p>
+                        <p class="related-summary">AIが生成した文章よりも、人間が書いた文章の方が好きだと思っている人は多いだろう。しかし、新たな研究によると、実際にはそうではない可能性がある。.</p>
                     </a>
                 </article>
             </div>

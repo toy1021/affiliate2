@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code の仕組み — ハーネスの動作と Claude API | 日本のテックニュース速報</title>
-    <meta name="description" content="本記事は Claude Code が動作する仕組みについてまとめたものです。 過去に調査を断片的に行い、記事にしてきました。 Claude Code のドキュメントを読んで気になったことを検証してみた Claude Code が LLM に渡すコンテキストの中身を調査する.">
-    <meta name="keywords" content="Claude,LLM,本">
+    <title>トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った | 日本のテックニュース速報</title>
+    <meta name="description" content="長いセッションの終盤で、Claude Code の様子が変わったと感じたことが何度もあります。 序盤に伝えた制約を忘れる。 さっき読んだファイルをまた読み始める。 「モデルが悪くなったのでは」と疑いたくなりますが、私の場合、そう感じたときはたいていコンテキストの使用率が膨ら.">
+    <meta name="keywords" content="Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Code の仕組み — ハーネスの動作と Claude API">
-    <meta property="og:description" content="本記事は Claude Code が動作する仕組みについてまとめたものです。 過去に調査を断片的に行い、記事にしてきました。 Claude Code のドキュメントを読んで気になったことを検証してみた Claude Code が LLM に渡すコンテキストの中身を調査する.">
+    <meta property="og:title" content="トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った">
+    <meta property="og:description" content="長いセッションの終盤で、Claude Code の様子が変わったと感じたことが何度もあります。 序盤に伝えた制約を忘れる。 さっき読んだファイルをまた読み始める。 「モデルが悪くなったのでは」と疑いたくなりますが、私の場合、そう感じたときはたいていコンテキストの使用率が膨ら.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2405.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Code の仕組み — ハーネスの動作と Claude API">
-    <meta name="twitter:description" content="本記事は Claude Code が動作する仕組みについてまとめたものです。 過去に調査を断片的に行い、記事にしてきました。 Claude Code のドキュメントを読んで気になったことを検証してみた Claude Code が LLM に渡すコンテキストの中身を調査する.">
+    <meta name="twitter:title" content="トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った">
+    <meta name="twitter:description" content="長いセッションの終盤で、Claude Code の様子が変わったと感じたことが何度もあります。 序盤に伝えた制約を忘れる。 さっき読んだファイルをまた読み始める。 「モデルが悪くなったのでは」と疑いたくなりますが、私の場合、そう感じたときはたいていコンテキストの使用率が膨ら.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Code の仕組み — ハーネスの動作と Claude API",
-        "description": "本記事は Claude Code が動作する仕組みについてまとめたものです。 過去に調査を断片的に行い、記事にしてきました。 Claude Code のドキュメントを読んで気になったことを検証してみた Claude Code が LLM に渡すコンテキストの中身を調査する.",
+        "headline": "トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った",
+        "description": "長いセッションの終盤で、Claude Code の様子が変わったと感じたことが何度もあります。 序盤に伝えた制約を忘れる。 さっき読んだファイルをまた読み始める。 「モデルが悪くなったのでは」と疑いたくなりますが、私の場合、そう感じたときはたいていコンテキストの使用率が膨ら.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-30T12:55:51",
-        "dateModified": "2026-08-02T19:10:40.205611",
+        "datePublished": "2026-08-07T20:46:14",
+        "dateModified": "2026-08-11T07:08:11.110234",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2405.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2405.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["Claude","LLM","本"]
+        "keywords": ["Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Code の仕組み — ハーネスの動作と Claude API",
+                "name": "トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2405.html"
             }
         ]
@@ -114,41 +114,38 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Code の仕組み — ハーネスの動作と Claude API</li>
+                <li aria-current="page">トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Code の仕組み — ハーネスの動作と Claude API</h1>
+                <h1>トークン浪費と性能低下を防ぐ、Claude Code の自動引き継ぎ hook を作った</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/megmogmog1965/items/7db66f5a5aa306c68eb8?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/tomada/items/46e675f6ced44dcd10ad?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-07-30T12:55:51">
-                        公開: 2026-07-30T12:55:51
+                    <time datetime="2026-08-07T20:46:14">
+                        公開: 2026-08-07T20:46:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">Claude</span>
-                    <span class="tag">LLM</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本記事は Claude Code が動作する仕組みについてまとめたものです。
-過去に調査を断片的に行い、記事にしてきました。
-
-Claude Code のドキュメントを読んで気になったことを検証してみた
-Claude Code が LLM に渡すコンテキストの中身を調査する...
+                    長いセッションの終盤で、Claude Code の様子が変わったと感じたことが何度もあります。
+序盤に伝えた制約を忘れる。
+さっき読んだファイルをまた読み始める。
+「モデルが悪くなったのでは」と疑いたくなりますが、私の場合、そう感じたときはたいていコンテキストの使用率が膨ら...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/megmogmog1965/items/7db66f5a5aa306c68eb8?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/tomada/items/46e675f6ced44dcd10ad?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -171,20 +168,20 @@ Claude Code が LLM に渡すコンテキストの中身を調査する...
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +222,16 @@ Claude Code が LLM に渡すコンテキストの中身を調査する...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_4451.html">
+                    <a href="Zennのトレンド_5195.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Copilot Chat（Microsoft 365）の会話を Markdown に保存・エクスポー...</span>
+                        <span class="nav-title">[Claude Code] AIの説明が「それっぽいだけ」で終わる問題を、Skill設計で解決した話</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Publickey_4548.html">
+                    <a href="Zennのトレンド_886.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">JetBrains、AIが少ないトークンでコンテキストを取得しやすく、よりよいコード生成を可能にする...</span>
+                        <span class="nav-title">経費精算アプリもExcelも捨てる。Claude Desktop（MCP）＋マネーフォワードAPIで...</span>
                     </a>
                 </div>
             </div>
@@ -247,52 +244,53 @@ Claude Code が LLM に渡すコンテキストの中身を調査する...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8756.html">
-                        <h3>AIは「核兵器級の脅威」にも--OpenAIやAnthropicなどの1000人超、開発減速の仕組みづくりを提言</h3>
+                    <a href="CNET_Japan_最新情報総合_1122.html">
+                        <h3>音楽生成AIのSuno、著作権問題を受け楽曲に「電子透かし」導入へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAI、Anthropic、Google DeepMind、Meta AIなど主要AI企業の従業員有志は米国時間7月29日、共同声明「Pacing the Frontier」を公開した。AI開発...</p>
+                        <p class="related-summary">AI楽曲生成プラットフォーム「Suno」は、楽曲が同社のツールで作られたものかどうかを、より簡単に判別できるようにする計画だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3904.html">
-                        <h3>OpenAI、「GPT-5.6」のAPI料金を最大80%値下げ　最安Lunaは100万トークン0.2ドルに</h3>
+                    <a href="CNET_Japan_最新情報総合_689.html">
+                        <h3>「かなりイケてる」KDDI社長が推すAI　auショップ全店の業務負荷を大幅低減</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米OpenAIは7月30日（現地時間）、大規模言語モデル「GPT-5. 6」ファミリーのAPI料金を引き下げた。最速・最安をうたう「GPT-5. 6 Luna」は80%、日常業務向けの標準モデル「GP...</p>
+                        <p class="related-summary">auショップのスタッフはもう分厚いマニュアルと格闘しなくていい。KDDIが導入したAIエージェントが複雑な問い合わせに30秒で回答し、人材定着の妨げとなってきた「情報習得の重荷」を軽減しつつある。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7959.html">
-                        <h3>米高校が「人型ロボット」導入で物議、契約先とアダルト人形の関係もやり玉に</h3>
+                    <a href="CNET_Japan_最新情報総合_53.html">
+                        <h3>OpenAIの「ドーナツ型」AIスピーカー、詳細がリークか　約5万円で2027年発売</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ロボット関連スタートアップのRealbotixがある高校に対し、ヒューマノイドロボットと家庭向けAI宿題支援ツールを提供する。教員組合は、生徒はモルモットではないと反発している。.</p>
+                        <p class="related-summary">米OpenAIが2027年にAIスマートスピーカーを発売する計画だ。米Bloombergが8月6日（現地時間）に報じた。手のひらに収まるドーナツ型で、ワイヤレスで持ち運べる設計になるという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_9865.html">
-                        <h3>アトラシアン、AI時代の仕事用ブラウザ「Diaブラウザ」のWindows版リリースへ。ウェイトリストへの登録開始</h3>
+                    <a href="CNET_Japan_最新情報総合_4481.html">
+                        <h3>VAIO、内蔵カメラに写る「顔」から心拍数や血管情報を推定する新機能　個人向けPCに搭載</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アトラシアンは、現在Mac版がリリースされているDiaブラウザのWindows版を今年の秋にリリースすることを明らかにしました。 Dia for Windows is coming (this fal...</p>
+                        <p class="related-summary">VAIOは8月10日、PCの内蔵カメラで「血管情報」と「心拍情報」を測定できるアプリ「VAIO ウェルネスケア」の先行プレビュー版を、個人向けノートPC「VAIO SX14-R」（VJS4R2シリーズ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_4275.html">
-                        <h3>EU AI規制法で透明性確保を義務化</h3>
+                    <a href="CNET_Japan_最新情報総合_2289.html">
+                        <h3>「ChatGPTの小説」と「人間の小説」、人はどちらを好むのか？ 研究結果が公開</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
+                        <p class="related-summary">AIが生成した文章よりも、人間が書いた文章の方が好きだと思っている人は多いだろう。しかし、新たな研究によると、実際にはそうではない可能性がある。.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astroで日英ブログを作って分かった5つの実装パターン | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 前段として「個人サイト、結局何で作る？元SEOがAstro + GitHub Pagesに決めるまで」を書いています。趣味の個人サイトを作るにあたって、Astro + GitHub Pagesに決めるまでの思考の記録">
-    <meta name="keywords" content="JavaScript,Java,GitHub">
+    <title>仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ | 日本のテックニュース速報</title>
+    <meta name="description" content="Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました">
+    <meta name="keywords" content="Claude,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Astroで日英ブログを作って分かった5つの実装パターン">
-    <meta property="og:description" content="はじめに 前段として「個人サイト、結局何で作る？元SEOがAstro + GitHub Pagesに決めるまで」を書いています。趣味の個人サイトを作るにあたって、Astro + GitHub Pagesに決めるまでの思考の記録">
+    <meta property="og:title" content="仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ">
+    <meta property="og:description" content="Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1362.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Astroで日英ブログを作って分かった5つの実装パターン">
-    <meta name="twitter:description" content="はじめに 前段として「個人サイト、結局何で作る？元SEOがAstro + GitHub Pagesに決めるまで」を書いています。趣味の個人サイトを作るにあたって、Astro + GitHub Pagesに決めるまでの思考の記録">
+    <meta name="twitter:title" content="仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ">
+    <meta name="twitter:description" content="Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Astroで日英ブログを作って分かった5つの実装パターン",
-        "description": "はじめに 前段として「個人サイト、結局何で作る？元SEOがAstro + GitHub Pagesに決めるまで」を書いています。趣味の個人サイトを作るにあたって、Astro + GitHub Pagesに決めるまでの思考の記録",
+        "headline": "仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ",
+        "description": "Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-23T14:15:58",
-        "dateModified": "2026-07-26T10:01:04.427941",
+        "datePublished": "2026-08-05T07:42:28",
+        "dateModified": "2026-08-11T05:09:51.297797",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1362.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1362.html",
         "articleSection": "プログラミング",
-        "keywords": ["JavaScript","Java","GitHub"]
+        "keywords": ["Claude","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Astroで日英ブログを作って分かった5つの実装パターン",
+                "name": "仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1362.html"
             }
         ]
@@ -114,44 +114,38 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Astroで日英ブログを作って分かった5つの実装パターン</li>
+                <li aria-current="page">仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Astroで日英ブログを作って分かった5つの実装パターン</h1>
+                <h1>仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/akari1106/articles/ea85f0a245bb8b" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/yktsnet/articles/202608-guarantee-driven-development" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-07-23T14:15:58">
-                        公開: 2026-07-23T14:15:58
+                    <time datetime="2026-08-05T07:42:28">
+                        公開: 2026-08-05T07:42:28
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-前段として「個人サイト、結局何で作る？元SEOがAstro + GitHub Pagesに決めるまで」を書いています。趣味の個人サイトを作るにあたって、Astro + GitHub Pagesに決めるまでの思考の記録。Cloudflare Pagesとの比較、PSLとゼロスタートの話も込みで。
-今回はその続き、実装編です。
-
- Astroって何
-Astro はコンテンツ中心のWebサイト向けの静的サイトジェネレータです。
-Markdownで書いた記事をHTMLに変換してくれる、という点ではHugoやJekyllと同じ。
-違うのは、デフォルトでクライアントJavaScript...
+                    Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました。
+守ってくれるのはテストです。ただ、そのテストも Claude Code が書いています。走らせれば緑になり、diff をざっと見て通し、本数だけが増えていきます。そして次に手を入れるとき、いま何が守られているのかを知る方法が tests/ を上から読むことしかありません。
+かといって、変更のたびに「壊していないか全部確認...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/akari1106/articles/ea85f0a245bb8b" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/yktsnet/articles/202608-guarantee-driven-development" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -164,30 +158,30 @@ Markdownで書いた記事をHTMLに変換してくれる、という点ではHu
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=JavaScript&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="JavaScript - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">JavaScript - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでJavaScriptに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Java&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Java - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Java - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでJavaに関連する商品をチェック</div>
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -228,16 +222,16 @@ Markdownで書いた記事をHTMLに変換してくれる、という点ではHu
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_8046.html">
+                    <a href="Zennのトレンド_6188.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple Storeアプリにバーチャルショッピングアシスタント搭載と判明</span>
+                        <span class="nav-title">Claude が書く長いコメントは、Claude 自身の役に立っていなかった</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_2264.html">
+                    <a href="Zennのトレンド_1592.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Apple Music・Apple Oneが値上げ｜今すぐできる節約術</span>
+                        <span class="nav-title">gpt-5.6-sol の high に「ウルトラ」と入力して「ソウル」と話させる技術</span>
                     </a>
                 </div>
             </div>
@@ -250,53 +244,53 @@ Markdownで書いた記事をHTMLに変換してくれる、という点ではHu
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4785.html">
-                        <h3>開発効率が上がったCLIツール・コマンド10選</h3>
+                    <a href="iPhone_Mania_1404.html">
+                        <h3>iPhone発売20周年モデル開発中止情報は誤り？オールガラス案のみ破棄との見方</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">iPhone Mania</span>
+                        </div>
+                        <p class="related-summary">Jefferiesのアナリスト、エディソン・リー氏が、iPhone発売20周年モデルの開発は中止されたと指摘したことについて、各方面から「その指摘は誤りで、開発は継続している」との反論が出ています。 ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_4862.html">
+                        <h3>「後回しにしたら詰んでいた」を防ぐ。待ち時間で決めるタスクの優先順位</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">」と画面を眺めながら、あの時は本当に何度もエラーに悩まされました。Gitのコミットログをたどるたびに「これ、毎回手で打つの大変だよな」と感じていた私が、ついにCLIツールに出会った瞬間、開発のスピード...</p>
+                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3750.html">
-                        <h3>非エンジニアが気楽に始める仕様駆動開発</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">この記事はAIと壁打ちしながら人間が書きました。 流行りの仕様駆動開発、とっつきづらく感じませんか？ サービスデザイナーという肩書きで仕事している非エンジニアの僕には、正直ちょっと難しいと感じてました...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3950.html">
-                        <h3>Claude Code・Codexに動作確認まで自走させる｜ビルド・操作・録画・証跡を残す開発フロー</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">Claude CodeやCodexに実装を依頼すると、コードの変更とビルドまでは比較的安定して進められます。 しかし、画面を持つアプリでは、ビルドに成功しただけでは完成とは言えません。 自分のプロジェ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_8000.html">
-                        <h3>ドメイン駆動設計から、ドメイン駆動開発プロセスの時代へ</h3>
+                    <a href="Zennのトレンド_7012.html">
+                        <h3>型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに 「ドメイン駆動設計から、ドメイン駆動開発プロセスの時代へ」という話をします。 AI駆動開発によって開発作業そのものの自動化がすごい進んで、ボトルネックはどこに移動してるんだ、という話はみんな...</p>
+                        <p class="related-summary">! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_9745.html">
-                        <h3>Terraform / Kubernetes の構築で、初心者がよく指摘されるポイントのまとめ</h3>
+                    <a href="Zennのトレンド_5262.html">
+                        <h3>Next.js + Cloudflareで「サボる」ためのWebツール集を個人開発した</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">弊社では、AWS、Azure、GCP に対応した kubernetes ベースの Scalar製品を展開するインフラのテンプレートを開発しています。この開発をエンジニア歴の浅い二人にお願いしており、二...</p>
+                        <p class="related-summary">個人開発で neglegere（ネグレゲレ） というWebサービスを作っています。 https://neglegere. com/ コンセプトは、 地味に時間を取られる作業を少しだけ任せて、大事なとこ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_5748.html">
+                        <h3>簡易ヘリコプター操縦ゲームを日本語プログラミング言語Mind９で作りました。</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">ヘリコプター操縦ゲームです。 日本語プログラミング言語 Mind9(Windowsのみ対応)で作りました。 使用方法は、ソースコード先頭に書いています。 コンパイル・実行にはMind9 基本セット（無...</p>
                     </a>
                 </article>
             </div>

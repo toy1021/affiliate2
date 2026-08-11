@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIへの依頼をMarkdownで構造化するだけで、出力の事故はかなり減らせる | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 生成AIに質問するとき、長い一文だけで投げていないでしょうか。 EC2が立ち上がらないんだけど原因と対策教えて これでも返答は来ます。 ただ、現場で使うには情報が足りません。AIは足りない前提を補おうとして、もっともらしい推測を始めます。 この記事では、AIへ.">
-    <meta name="keywords" content="AI">
+    <title>今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIへの依頼をMarkdownで構造化するだけで、出力の事故はかなり減らせる">
-    <meta property="og:description" content="はじめに 生成AIに質問するとき、長い一文だけで投げていないでしょうか。 EC2が立ち上がらないんだけど原因と対策教えて これでも返答は来ます。 ただ、現場で使うには情報が足りません。AIは足りない前提を補おうとして、もっともらしい推測を始めます。 この記事では、AIへ.">
+    <meta property="og:title" content="今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた">
+    <meta property="og:description" content="はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8550.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIへの依頼をMarkdownで構造化するだけで、出力の事故はかなり減らせる">
-    <meta name="twitter:description" content="はじめに 生成AIに質問するとき、長い一文だけで投げていないでしょうか。 EC2が立ち上がらないんだけど原因と対策教えて これでも返答は来ます。 ただ、現場で使うには情報が足りません。AIは足りない前提を補おうとして、もっともらしい推測を始めます。 この記事では、AIへ.">
+    <meta name="twitter:title" content="今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた">
+    <meta name="twitter:description" content="はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIへの依頼をMarkdownで構造化するだけで、出力の事故はかなり減らせる",
-        "description": "はじめに 生成AIに質問するとき、長い一文だけで投げていないでしょうか。 EC2が立ち上がらないんだけど原因と対策教えて これでも返答は来ます。 ただ、現場で使うには情報が足りません。AIは足りない前提を補おうとして、もっともらしい推測を始めます。 この記事では、AIへ.",
+        "headline": "今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた",
+        "description": "はじめに こんばんは、mirukyです。 突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-04T00:39:48",
-        "dateModified": "2026-08-05T17:38:08.969404",
+        "datePublished": "2026-08-08T08:58:27",
+        "dateModified": "2026-08-11T03:45:32.652003",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8550.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8550.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "articleSection": "テクノロジー",
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIへの依頼をMarkdownで構造化するだけで、出力の事故はかなり減らせる",
+                "name": "今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8550.html"
             }
         ]
@@ -113,25 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIへの依頼をMarkdownで構造化するだけで、出力の事故はかなり減らせる</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIへの依頼をMarkdownで構造化するだけで、出力の事故はかなり減らせる</h1>
+                <h1>今更だけど、DynamoDBの設計の勘所をサクッとまとめてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/s_horikoshi/items/2242dbfcaf003b714c96?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-08-04T00:39:48">
-                        公開: 2026-08-04T00:39:48
+                    <span class="source">出典: <a href="https://qiita.com/miruky/items/c7beb2fbed6492d195d1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-08-08T08:58:27">
+                        公開: 2026-08-08T08:58:27
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
@@ -139,16 +139,12 @@
                 
                 <div class="article-body">
                     はじめに
-生成AIに質問するとき、長い一文だけで投げていないでしょうか。
-EC2が立ち上がらないんだけど原因と対策教えて
-
-これでも返答は来ます。
-ただ、現場で使うには情報が足りません。AIは足りない前提を補おうとして、もっともらしい推測を始めます。
-この記事では、AIへ...
+こんばんは、mirukyです。
+突然ですが、私の一番好きなAWSサービスは、Amazon DynamoDB（DynamoをよくDyamoと打ち間違える）です。なぜかと言うと、一言で言えば「非常に扱いやすいから」ですね。RDBMSほどデータの厳密性が必要の無い場面...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/s_horikoshi/items/2242dbfcaf003b714c96?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/miruky/items/c7beb2fbed6492d195d1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,20 +157,10 @@ EC2が立ち上がらないんだけど原因と対策教えて
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -184,23 +170,23 @@ EC2が立ち上がらないんだけど原因と対策教えて
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -215,16 +201,16 @@ EC2が立ち上がらないんだけど原因と対策教えて
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5639.html">
+                    <a href="iPhone_Mania_1213.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【RAG】話題の米国AIベンチャーで実践される「社内ナレッジ」管理</span>
+                        <span class="nav-title">iPhone17が8月10日に値上げか〜噂の確度と買い時を検証</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1592.html">
+                    <a href="Zennのトレンド_6337.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Rust のテストを実行するとき、裏側で何が起きているか</span>
+                        <span class="nav-title">C# 15+の新DIパターン: 内部はinterfaceで疎結合、公開APIはunionで型の許容範...</span>
                     </a>
                 </div>
             </div>
@@ -237,52 +223,52 @@ EC2が立ち上がらないんだけど原因と対策教えて
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7987.html">
-                        <h3>ソフトバンクのクラウド・AI売上が31％増--宮川社長「まだまだこんなもんじゃない」</h3>
+                    <a href="CNET_Japan_最新情報総合_8445.html">
+                        <h3>ドコモ・バイクシェア、8月1日以降の利用料金を全額返金へ　正常に使えた人も対象</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ソフトバンクは8月4日、2027年3月期第1四半期の決算を発表した。中期経営計画で新たにサブセグメントとして切り出したクラウド・AI領域の売上高は、前年同期比31. 0％増の771億円だった。AIデー...</p>
+                        <p class="related-summary">ドコモ・バイクシェアは8月7日、一連のサービス不具合を受け、8月1日以降の利用料金を全額返金すると発表した。不具合の影響を受けず正常に利用できた人も含め、期間中のすべての利用者が対象となる。返金にあた...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5716.html">
-                        <h3>OpenAI、Appleの提訴に全面反論「雑で攻撃的で、妙に個人的な訴訟」　メールやiMessageも公開</h3>
+                    <a href="CNET_Japan_最新情報総合_9410.html">
+                        <h3>X、収益プログラムを刷新　インプレゾンビを排除　条件厳しく</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは8月3日（現地時間）、Appleが同社を相手取って起こした訴訟に全面的に反論する声明を発表した。タイトルは「Apple is getting this wrong（Appleは間違ってい...</p>
+                        <p class="related-summary">Xは米国時間8月7日、クリエイター向けの新たな収益プログラム「Original Content Rewards Program」を発表した。自分で作ったオリジナルの投稿だけを報酬の対象とする仕組みで、...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7051.html">
-                        <h3>監視カメラが犯罪関与を警告した車の71％が「ナンバープレートの誤認」と判明</h3>
+                    <a href="ASCII_jp__トップ_5042.html">
+                        <h3>ASRock×インテルイベントが大阪・なんばで開催。競合製品との生対決も実現したイベントが大盛況！</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">防犯技術を手掛けるFlock Safetyの監視システムについて、AIの誤認率が極めて高いとする調査結果が公開された。.</p>
+                        <p class="related-summary">ASRock×インテルイベントが大阪・なんばで開催。競合製品との生対決も実現したイベントが大盛況！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4851.html">
-                        <h3>デザイン業の倒産、14年ぶり高水準　生成AIによる内製化も影響か</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5335.html">
+                        <h3>携帯キャリア悩ませるホッピング</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">東京商工リサーチは8月2日、グラフィックデザインやインテリアデザインなどを手がける「デザイン業」の倒産が急増しているとする調査結果を公表した。2026年上半期（1〜6月）の倒産は40件で、前年同期の1...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_4633.html">
-                        <h3>政府AIを被災自治体に提供 利点は</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_7850.html">
+                        <h3>雨の日も快適！ グリップ力と防水性を兼ね備えたメレルのゴアテックスシューズ</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">「メレル Moab 3 Synthetic Gore-Tex ハイキングシューズ」は、ゴアテックスを採用した雨に強い靴です。それでいてアウトドア、日常使いどちらにも溶け込むファッション性を両立させてい...</p>
                     </a>
                 </article>
             </div>

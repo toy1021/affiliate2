@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Railsアプリのメモリが「無駄に」減る話 〜リーク・断片化〜 | 日本のテックニュース速報</title>
-    <meta name="description" content="お疲れ様です！ 前回はメモリ管理の基本を書きましたが、今回はその続きで メモリリーク と 断片化（フラグメンテーション） についてまとめてみました 前回ふれた「OOM（メモリ枯渇でプロセスが落ちる）」の 原因編 にあたる話です。 興味ある方は読んでいただけると嬉しいです.">
-    <meta name="keywords" content="AI,本">
+    <title>[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="こちらの記事でエンべディング戦略について考えてみました。 前回は１アイテム１チャンクのシンプルなテストデータで検証しました。 しかし実運用上では様々なチャンキング戦略でチャンク分割が行われます。 分割されたチャンクデータをdynamoDBでどう管理していくかを考えてみ.">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Railsアプリのメモリが「無駄に」減る話 〜リーク・断片化〜">
-    <meta property="og:description" content="お疲れ様です！ 前回はメモリ管理の基本を書きましたが、今回はその続きで メモリリーク と 断片化（フラグメンテーション） についてまとめてみました 前回ふれた「OOM（メモリ枯渇でプロセスが落ちる）」の 原因編 にあたる話です。 興味ある方は読んでいただけると嬉しいです.">
+    <meta property="og:title" content="[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた">
+    <meta property="og:description" content="こちらの記事でエンべディング戦略について考えてみました。 前回は１アイテム１チャンクのシンプルなテストデータで検証しました。 しかし実運用上では様々なチャンキング戦略でチャンク分割が行われます。 分割されたチャンクデータをdynamoDBでどう管理していくかを考えてみ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8813.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Railsアプリのメモリが「無駄に」減る話 〜リーク・断片化〜">
-    <meta name="twitter:description" content="お疲れ様です！ 前回はメモリ管理の基本を書きましたが、今回はその続きで メモリリーク と 断片化（フラグメンテーション） についてまとめてみました 前回ふれた「OOM（メモリ枯渇でプロセスが落ちる）」の 原因編 にあたる話です。 興味ある方は読んでいただけると嬉しいです.">
+    <meta name="twitter:title" content="[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた">
+    <meta name="twitter:description" content="こちらの記事でエンべディング戦略について考えてみました。 前回は１アイテム１チャンクのシンプルなテストデータで検証しました。 しかし実運用上では様々なチャンキング戦略でチャンク分割が行われます。 分割されたチャンクデータをdynamoDBでどう管理していくかを考えてみ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Railsアプリのメモリが「無駄に」減る話 〜リーク・断片化〜",
-        "description": "お疲れ様です！ 前回はメモリ管理の基本を書きましたが、今回はその続きで メモリリーク と 断片化（フラグメンテーション） についてまとめてみました 前回ふれた「OOM（メモリ枯渇でプロセスが落ちる）」の 原因編 にあたる話です。 興味ある方は読んでいただけると嬉しいです.",
+        "headline": "[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた",
+        "description": "こちらの記事でエンべディング戦略について考えてみました。 前回は１アイテム１チャンクのシンプルなテストデータで検証しました。 しかし実運用上では様々なチャンキング戦略でチャンク分割が行われます。 分割されたチャンクデータをdynamoDBでどう管理していくかを考えてみ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-22T01:53:38",
-        "dateModified": "2026-06-23T07:51:29.385965",
+        "datePublished": "2026-08-11T12:51:19",
+        "dateModified": "2026-08-12T11:01:19.363387",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8813.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8813.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","本"]
+        "articleSection": "テクノロジー",
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Railsアプリのメモリが「無駄に」減る話 〜リーク・断片化〜",
+                "name": "[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8813.html"
             }
         ]
@@ -113,40 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Railsアプリのメモリが「無駄に」減る話 〜リーク・断片化〜</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Railsアプリのメモリが「無駄に」減る話 〜リーク・断片化〜</h1>
+                <h1>[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/akachiryo/items/c6f24bc95a3c2a46de4d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-22T01:53:38">
-                        公開: 2026-06-22T01:53:38
+                    <span class="source">出典: <a href="https://qiita.com/kikuziro/items/f8f892066235e2d3601e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-08-11T12:51:19">
+                        公開: 2026-08-11T12:51:19
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">本</span>
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    お疲れ様です！
-前回はメモリ管理の基本を書きましたが、今回はその続きで メモリリーク と 断片化（フラグメンテーション） についてまとめてみました 
-前回ふれた「OOM（メモリ枯渇でプロセスが落ちる）」の 原因編 にあたる話です。
-興味ある方は読んでいただけると嬉しいです ...
+                    こちらの記事でエンべディング戦略について考えてみました。
+前回は１アイテム１チャンクのシンプルなテストデータで検証しました。
+しかし実運用上では様々なチャンキング戦略でチャンク分割が行われます。
+分割されたチャンクデータをdynamoDBでどう管理していくかを考えてみ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/akachiryo/items/c6f24bc95a3c2a46de4d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/kikuziro/items/f8f892066235e2d3601e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,30 +158,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -192,23 +171,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +202,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_2870.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_6281.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AI需要の爆発とDePINという解決策</span>
+                        <span class="nav-title">ソニーとTSMC 合弁会社を設立へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_5053.html">
+                    <a href="気になる記になる_6148.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">CIO、10000mAhの大容量・Qi2.2対応・厚さ約14mmの半固体系モバイルバッテリー『SMA...</span>
+                        <span class="nav-title">｢iOS 27 beta 5｣から6つの未発表iPhoneのコードネームが見つかる</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +224,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9639.html">
-                        <h3>OpenAI、一度やって見せるだけで、以降やってくれる新機能「Record＆Replay」--PC作業を自動化</h3>
+                    <a href="CNET_Japan_最新情報総合_5263.html">
+                        <h3>ペルセウス座流星群、NASAがライブ配信へ　視聴方法はこちら</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは6月19日、macOS版のAIエージェント「Codex」アプリに、繰り返しの作業を実演して教えられる新機能「Record＆Replay」を発表した。自動化したい操作を一度やって見せると、...</p>
+                        <p class="related-summary">ペルセウス座流星群を実際に観測できない人のために、米航空宇宙局（NASA）はライブ映像を配信する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1040.html">
-                        <h3>サムスン電子、韓国の全社員と世界のDX部門に「ChatGPT Enterprise」「Codex」を展開へ</h3>
+                    <a href="CNET_Japan_最新情報総合_4283.html">
+                        <h3>親のストレスで「子どものスクリーンタイム」が増加、研究で判明</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは、同社のAIツールである「ChatGPT Enterprise」と「Codex」を韓国のサムスン電子が大規模に導入すると発表した。OpenAIにとって過去最大級の企業向け展開の1つだとい...</p>
+                        <p class="related-summary">強いストレスを抱える親ほど、子どもを退屈させず、落ち着かせるためにデジタル機器へ頼る傾向が強く、スクリーンタイムの制限も徹底しにくい――。新たな研究でこうした傾向が明らかになった。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7538.html">
-                        <h3>Google DeepMindが映画スタジオA24に出資、映画制作AIツールを開発へ</h3>
+                    <a href="ASCII_jp__トップ_9989.html">
+                        <h3>自宅利用時も不便がないモバイルノートが欲しいなら。インターフェース充実の14型「mouse A4」11％オフ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">熱狂的なファンを持つ映画制作会社A24はAI開発企業Google DeepMindと提携し、社内の映画製作者向けのAIツールを開発するという。.</p>
+                        <p class="related-summary">マウスコンピューターの14型ノートPC「mouse A4（A4A5U01SR1SIW1104AZ）」がAmazon割引対象。参考価格126,800円のところ、11％オフの112,689円で販売中。Ry...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_628.html">
-                        <h3>OpenAI、Getty Imagesと提携--その内容とは</h3>
+                    <a href="ASCII_jp__トップ_2277.html">
+                        <h3>24時間ぶっ通しでJAWS-UG漬け！　9月5日、あのJAWS SONIC ＆ MIDNIGHT JAWSが戻ってくる</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ゲッティイメージズ（Getty Images）は6月21日、OpenAIとの提携を発表した。ChatGPTで検索や調べ物をしたときに、同社がライセンスを管理する写真や映像が表示されるようになる。.</p>
+                        <p class="related-summary">24時間ぶっ通しでJAWS-UGの各支部がセッションをやり続ける伝説のオンラインイベント「JAWS SONIC ＆ MIDNIGHT JAWS」が約6年ぶりに開催される。普段聞けない支部の運営やオンラ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2420.html">
-                        <h3>ワールドカップをAIでもっと楽しむ！ChatGPTとグーグルの最新ツール活用法</h3>
+                    <a href="ASCII_jp__トップ_9415.html">
+                        <h3>男心が試される運命の出会いか!? 驚異のメリハリボディーを誇る猫宮みみ、早くも2nd DVDリリース</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">OpenAIとグーグルは、ワールドカップを存分に楽しめるよう、ChatGPTや検索などでファン向けの体験を提供している。.</p>
+                        <p class="related-summary">童顔とグラビア映えするメリハリボディーが魅力。40kgのダイエットに成功したことも話題の猫宮みみさんが、2nd DVD「抱きしめたくなるカラダ」の発売記念イベントをソフマップAKIBA アミューズメン...</p>
                     </a>
                 </article>
             </div>

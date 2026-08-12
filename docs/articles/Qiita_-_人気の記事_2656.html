@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClaudeでSEOチェッカーとQiita自動いいねツールを作ってみた | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 最近、Claudeについて学ぶ機会があり、 前回は、「作ったものをどう届けるか」という視点の重要性について整理しました。 前回：AI時代に実装だけでは足りないと気づいた話 今回はそこから一歩進めて、「実際に作るとどうなるのか？」を検証してみました。 従来の.">
-    <meta name="keywords" content="AI,Claude">
+    <title>API設計 - RESTでは表現しにくい操作を、どう設計するか | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 「リソースに対するCRUD」というREST本来の設計思想は美しい一方、実務のAPIではCRUDだけでは表現しきれない操作が必ず出てきます。無理にCRUDへ押し込めようとすると、バリデーションの置き場が曖昧になったり、どのリソースのエンドポイントか判断できなくなっ.">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ClaudeでSEOチェッカーとQiita自動いいねツールを作ってみた">
-    <meta property="og:description" content="はじめに 最近、Claudeについて学ぶ機会があり、 前回は、「作ったものをどう届けるか」という視点の重要性について整理しました。 前回：AI時代に実装だけでは足りないと気づいた話 今回はそこから一歩進めて、「実際に作るとどうなるのか？」を検証してみました。 従来の.">
+    <meta property="og:title" content="API設計 - RESTでは表現しにくい操作を、どう設計するか">
+    <meta property="og:description" content="はじめに 「リソースに対するCRUD」というREST本来の設計思想は美しい一方、実務のAPIではCRUDだけでは表現しきれない操作が必ず出てきます。無理にCRUDへ押し込めようとすると、バリデーションの置き場が曖昧になったり、どのリソースのエンドポイントか判断できなくなっ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2656.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ClaudeでSEOチェッカーとQiita自動いいねツールを作ってみた">
-    <meta name="twitter:description" content="はじめに 最近、Claudeについて学ぶ機会があり、 前回は、「作ったものをどう届けるか」という視点の重要性について整理しました。 前回：AI時代に実装だけでは足りないと気づいた話 今回はそこから一歩進めて、「実際に作るとどうなるのか？」を検証してみました。 従来の.">
+    <meta name="twitter:title" content="API設計 - RESTでは表現しにくい操作を、どう設計するか">
+    <meta name="twitter:description" content="はじめに 「リソースに対するCRUD」というREST本来の設計思想は美しい一方、実務のAPIではCRUDだけでは表現しきれない操作が必ず出てきます。無理にCRUDへ押し込めようとすると、バリデーションの置き場が曖昧になったり、どのリソースのエンドポイントか判断できなくなっ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ClaudeでSEOチェッカーとQiita自動いいねツールを作ってみた",
-        "description": "はじめに 最近、Claudeについて学ぶ機会があり、 前回は、「作ったものをどう届けるか」という視点の重要性について整理しました。 前回：AI時代に実装だけでは足りないと気づいた話 今回はそこから一歩進めて、「実際に作るとどうなるのか？」を検証してみました。 従来の.",
+        "headline": "API設計 - RESTでは表現しにくい操作を、どう設計するか",
+        "description": "はじめに 「リソースに対するCRUD」というREST本来の設計思想は美しい一方、実務のAPIではCRUDだけでは表現しきれない操作が必ず出てきます。無理にCRUDへ押し込めようとすると、バリデーションの置き場が曖昧になったり、どのリソースのエンドポイントか判断できなくなっ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-15T12:03:08",
-        "dateModified": "2026-04-18T05:43:23.232118",
+        "datePublished": "2026-08-09T08:28:09",
+        "dateModified": "2026-08-12T16:58:11.161568",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2656.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2656.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude"]
+        "articleSection": "その他",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ClaudeでSEOチェッカーとQiita自動いいねツールを作ってみた",
+                "name": "API設計 - RESTでは表現しにくい操作を、どう設計するか",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2656.html"
             }
         ]
@@ -113,26 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">ClaudeでSEOチェッカーとQiita自動いいねツールを作ってみた</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">API設計 - RESTでは表現しにくい操作を、どう設計するか</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ClaudeでSEOチェッカーとQiita自動いいねツールを作ってみた</h1>
+                <h1>API設計 - RESTでは表現しにくい操作を、どう設計するか</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/aito1234/items/3fdc666366cf99fd1116?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-04-15T12:03:08">
-                        公開: 2026-04-15T12:03:08
+                    <span class="source">出典: <a href="https://qiita.com/ham-nao/items/bdcf0f87abb04047da6f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-08-09T08:28:09">
+                        公開: 2026-08-09T08:28:09
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
@@ -140,17 +139,11 @@
                 
                 <div class="article-body">
                     はじめに
-最近、Claudeについて学ぶ機会があり、
-前回は、「作ったものをどう届けるか」という視点の重要性について整理しました。
-
-前回：AI時代に実装だけでは足りないと気づいた話
-
-今回はそこから一歩進めて、「実際に作るとどうなるのか？」を検証してみました。
-従来の...
+「リソースに対するCRUD」というREST本来の設計思想は美しい一方、実務のAPIではCRUDだけでは表現しきれない操作が必ず出てきます。無理にCRUDへ押し込めようとすると、バリデーションの置き場が曖昧になったり、どのリソースのエンドポイントか判断できなくなっ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/aito1234/items/3fdc666366cf99fd1116?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/ham-nao/items/bdcf0f87abb04047da6f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,30 +156,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -196,23 +169,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +200,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5242.html">
+                    <a href="Qiita_-_人気の記事_6986.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">要件定義書の成果物を1枚ずつ解説する記事がなかったので、架空のプロジェクトで自分でつくって解説します</span>
+                        <span class="nav-title">ECSネイティブBlue/Greenで「切替後に旧環境を残して、確認できたら落とす」をやる — PA...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Publickey_2795.html">
+                    <a href="Zennのトレンド_5975.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">CloudflareがAIエージェントへの最適化を目指し、全サービスに対応するCLIの開発を表明</span>
+                        <span class="nav-title">Cloudflare OSをVRAM 8GBのゲーミングPCで動かしたら、三目並べ1個に5ラウンドか...</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +222,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1743.html">
-                        <h3>Anthropic、Claude Opus 4.7公開--「指示に従順かつセンスがあり創造的」なモデル</h3>
+                    <a href="ASCII_jp__トップ_7811.html">
+                        <h3>20世紀を代表するMoMA伝説の写真展「ザ・ファミリー・オブ・マン」が日本橋高島屋で復活</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">Anthropicは現地時間4月16日、新たなAIモデルを公開した。とはいえ、それは「Claude Mythos Preview」ではない。一般提供が始まった「Claude Opus 4. 7」は、開...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1382.html">
-                        <h3>OpenAIの「Codex」が大幅アップデート、PCアプリ操作や自動化が可能に</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">「Codex」は登場から1年足らずだが、OpenAIが描く「スーパーアプリ」実現の鍵を握るかもしれない。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1673.html">
-                        <h3>大規模データセンター「建設停止」の法案、米メイン州が可決　なぜ？</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">全米でAIデータセンター拡張のために膨大な土地が買収されるなか、少なくとも1つの州が、相次ぐ抗議活動や政治家からの要請を受け、この建設ブームの勢いを抑えようとしている。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_2151.html">
-                        <h3>果たしてどうなる？ 恐るべき『コンテンツ制作のゼロ化』の未来は？</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">その他</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">AIエージェントを使って記事作りを自動化した結果……。.</p>
+                        <p class="related-summary">本館8階ホールにて「ザ・ファミリー・オブ・マン写真展 人類愛と平和のビジョンを、いま再び」を開催しています.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_660.html">
-                        <h3>AIセキュリティチェックシート回答支援「QuickCheck」、日本を代表する財閥系グループの老舗IT企業への導入・納品...</h3>
+                    <a href="気になる記になる_429.html">
+                        <h3>Insta360、360度アクションカメラの最新モデル「Insta360 X6」を発売</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">AIセキュリティチェックシート回答支援「QuickCheck」、日本を代表する財閥系グループの老舗IT企業への導入・納品を完了.</p>
+                        <p class="related-summary">本日、Insta360が、360度アクションカメラの最新モデル「Insta360 X6」を正式に発表しました。 「Insta360 X6」は、ソニー製スクエアセンサーによる1インチ相当の撮影面積を実現...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_6463.html">
+                        <h3>GMKtec、手の平サイズの超小型ミニPC「G5S」を発表</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">ミニPCでお馴染みのGMKtecが、手のひらサイズの超小型ミニPC「G5S」を発表しました。 「G5S」最大の特徴は、圧倒的なコンパクトサイズで、本体サイズは72×72×44. 5mm、重量は約206...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_6648.html">
+                        <h3>LINE、送信済みメッセージを編集可能な｢メッセージ編集｣機能をLINEラボにて順次提供開始</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">LINEが、本日より、自分が送信したメッセージを相手に通知せずに編集できる「メッセージ編集機能」をLINEラボにて順次提供すると発表しました。 LINEラボで「メッセージ編集」をオンにしたユーザーのみ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_6689.html">
+                        <h3>Amazon API Gatewayで &#34;+&#34; が消える!? クエリ文字列のデコード挙動を検証してみた</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">🟪はじめに 本記事の構成図や登場する事象は、実際に業務で遭遇した出来事をベースにしていますが、説明用にデフォルメ(簡略化・改変)しています。 また、記事中で使用しているリクエスト文字列も検証用に用意し...</p>
                     </a>
                 </article>
             </div>

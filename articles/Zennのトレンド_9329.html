@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ | 日本のテックニュース速報</title>
-    <meta name="description" content="Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました">
-    <meta name="keywords" content="Claude,本">
+    <title>N+1 問題を、発行される SQL を数えて理解する | 日本のテックニュース速報</title>
+    <meta name="description" content="一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます">
+    <meta name="keywords" content="Python,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ">
-    <meta property="og:description" content="Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました">
+    <meta property="og:title" content="N+1 問題を、発行される SQL を数えて理解する">
+    <meta property="og:description" content="一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9329.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ">
-    <meta name="twitter:description" content="Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました">
+    <meta name="twitter:title" content="N+1 問題を、発行される SQL を数えて理解する">
+    <meta name="twitter:description" content="一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ",
-        "description": "Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました",
+        "headline": "N+1 問題を、発行される SQL を数えて理解する",
+        "description": "一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-05T07:42:28",
-        "dateModified": "2026-08-11T22:42:47.981162",
+        "datePublished": "2026-08-10T16:17:55",
+        "dateModified": "2026-08-12T16:58:11.158191",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9329.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9329.html",
         "articleSection": "プログラミング",
-        "keywords": ["Claude","本"]
+        "keywords": ["Python","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ",
+                "name": "N+1 問題を、発行される SQL を数えて理解する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9329.html"
             }
         ]
@@ -114,24 +114,24 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ</li>
+                <li aria-current="page">N+1 問題を、発行される SQL を数えて理解する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ</h1>
+                <h1>N+1 問題を、発行される SQL を数えて理解する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/yktsnet/articles/202608-guarantee-driven-development" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/mtmtdack/articles/2026-08-11-n-plus-one-counting-queries" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-08-05T07:42:28">
-                        公開: 2026-08-05T07:42:28
+                    <time datetime="2026-08-10T16:17:55">
+                        公開: 2026-08-10T16:17:55
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
+                    <span class="tag">Python</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -139,13 +139,13 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係ないと思っていた場所が壊れる。作れる量が増えたぶん、壊す量も増えました。
-守ってくれるのはテストです。ただ、そのテストも Claude Code が書いています。走らせれば緑になり、diff をざっと見て通し、本数だけが増えていきます。そして次に手を入れるとき、いま何が守られているのかを知る方法が tests/ を上から読むことしかありません。
-かといって、変更のたびに「壊していないか全部確認...
+                    一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。
+この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます。使うのは Python と SQLAlchemy ですが、起きていることは ORM が違っても同じです。
+私は普段、業務で Python のサーバーレスアプリを書いています。RDB を触る処理と外部 API を叩く処理が半々くらいで、ORM は SQLAlchemy を使っています。N+1 は言葉としては早くから知っていましたが、「なぜ遅いのか」を自分で測ったことがなかったので、手元で数え...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/yktsnet/articles/202608-guarantee-driven-development" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/mtmtdack/articles/2026-08-11-n-plus-one-counting-queries" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,30 +158,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
                                     <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +222,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Publickey_8550.html">
+                    <a href="Zennのトレンド_5765.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">1Password、ダッシュボードから組織のAI支出状況を表示する新機能。ClaudeやCursor...</span>
+                        <span class="nav-title">レンタルサーバーを作ってみた話と、これから作りたいもの</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_3434.html">
+                    <a href="iPhone_Mania_8458.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">gpt-5.6-sol の high に「ウルトラ」と入力して「ソウル」と話させる技術</span>
+                        <span class="nav-title">iPhone18 Proの部品原価でメモリ比率34%に〜さらに40%超へ達する予測</span>
                     </a>
                 </div>
             </div>
@@ -244,7 +244,37 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="気になる記になる_6507.html">
+                    <a href="CNET_Japan_最新情報総合_1968.html">
+                        <h3>最新のオープンウェイト世界モデル「LTX-2.5」公開、動画生成やロボット開発に</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">LTXは、オープンウェイトの世界モデルの最新版「LTX-2.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_3036.html">
+                        <h3>Chromium(V8)のArray.prototype.copyWithinを最大約450倍高速化した</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに ! 修正や追加等はコメントまたはGitHubで編集リクエストをお待ちしております。 ダイニーで一番若いエンジニアのriya amemiya(21歳)です。 これまで Array. flat ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_5939.html">
+                        <h3>【WSL2 &amp; GitHub】Windowsで開発用の環境を作る手順書</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">この記事の対象読者 とりあえずバイブコーディングをしてみたいが、右も左もわからないバイブコーダー 手順書を社内に配布しろと言われているが、ゼロから作るのはめんどくさい社員 (コピペするなりリンク貼るな...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_7300.html">
                         <h3>｢iPad Air｣向けOLEDパネル、中国BOEも受注に向け開発中 ｰ 発売時期は2027年前半の見込み</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
@@ -254,43 +284,13 @@
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4255.html">
+                    <a href="Qiita_-_人気の記事_7159.html">
                         <h3>未経験エンジニア 初めてのDBサーバー構築経験</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
                         <p class="related-summary">はじめに こんにちは。元現場作業員のひよこです。 Excel、パワポも触れて来なかったガチのIT初心者ですが、2026年1月から学習を始め、半年弱で6月にIT企業へ転職しました。 保有資格はLPIC1...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_6691.html">
-                        <h3>BM25を使用してCodexのトークンの消費を30%抑える</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">導入 こんにちは、株式会社ナレッジセンスの須藤英寿です。 今回は、コード探索にBM25を組み込むことで、回答品質とトークン消費がどのように変わるのかを、自社のコードベースで検証しました。 きっかけは、...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_2880.html">
-                        <h3>N+1 問題を、発行される SQL を数えて理解する</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7370.html">
-                        <h3>「後回しにしたら詰んでいた」を防ぐ。待ち時間で決めるタスクの優先順位</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
                     </a>
                 </article>
             </div>

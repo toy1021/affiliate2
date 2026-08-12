@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>「関数の型から実装が自動的に決まる」で理解する米田の補題 | 日本のテックニュース速報</title>
-    <meta name="description" content="圏論の米田の補題を Haskell で考えてみるとすごく直感的に理解できる、なんなら当たり前に思える、というアイデアを知って感動したので、興奮しているうちに紹介したいと思います。 型が a -&gt; a な関数は id しかない、という話から2ステップで米田の補題に辿り着きます">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】 | 日本のテックニュース速報</title>
+    <meta name="description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="「関数の型から実装が自動的に決まる」で理解する米田の補題">
-    <meta property="og:description" content="圏論の米田の補題を Haskell で考えてみるとすごく直感的に理解できる、なんなら当たり前に思える、というアイデアを知って感動したので、興奮しているうちに紹介したいと思います。 型が a -&gt; a な関数は id しかない、という話から2ステップで米田の補題に辿り着きます">
+    <meta property="og:title" content="型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】">
+    <meta property="og:description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8821.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="「関数の型から実装が自動的に決まる」で理解する米田の補題">
-    <meta name="twitter:description" content="圏論の米田の補題を Haskell で考えてみるとすごく直感的に理解できる、なんなら当たり前に思える、というアイデアを知って感動したので、興奮しているうちに紹介したいと思います。 型が a -&gt; a な関数は id しかない、という話から2ステップで米田の補題に辿り着きます">
+    <meta name="twitter:title" content="型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】">
+    <meta name="twitter:description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "「関数の型から実装が自動的に決まる」で理解する米田の補題",
-        "description": "圏論の米田の補題を Haskell で考えてみるとすごく直感的に理解できる、なんなら当たり前に思える、というアイデアを知って感動したので、興奮しているうちに紹介したいと思います。 型が a -&gt; a な関数は id しかない、という話から2ステップで米田の補題に辿り着きます",
+        "headline": "型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】",
+        "description": "! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-29T00:22:54",
-        "dateModified": "2026-06-29T21:28:04.540757",
+        "datePublished": "2026-08-10T04:00:05",
+        "dateModified": "2026-08-12T09:12:48.365573",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8821.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8821.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "プログラミング",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "「関数の型から実装が自動的に決まる」で理解する米田の補題",
+                "name": "型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8821.html"
             }
         ]
@@ -113,42 +113,56 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">「関数の型から実装が自動的に決まる」で理解する米田の補題</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>「関数の型から実装が自動的に決まる」で理解する米田の補題</h1>
+                <h1>型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/mitsuchi/articles/ef219e7c606b42" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-06-29T00:22:54">
-                        公開: 2026-06-29T00:22:54
+                    <span class="source">出典: <a href="https://zenn.dev/fast/articles/44f261437d706c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-08-10T04:00:05">
+                        公開: 2026-08-10T04:00:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    圏論の米田の補題を Haskell で考えてみるとすごく直感的に理解できる、なんなら当たり前に思える、というアイデアを知って感動したので、興奮しているうちに紹介したいと思います。
-型が a -&gt; a な関数は id しかない、という話から2ステップで米田の補題に辿り着きます。
+                    !
+この記事はシリーズの第3部です。
 
- f :: a -&gt; a な関数はどれだけあるか
-Haskell で関数を書いていると、型から実装が自動的に決まることがあるのを感じると思います。たとえば次のような型の関数を考えます。
-f :: a -&gt; a
 
-これを実装する人の立場で考えます。まず返り値の型から読むと
+第1部: メモリレイアウトの観察
 
-「指定された型 a の...
+
+第2部: MIR・LLVM IR・ASMを追う
+
+
+第3部: コンパイラ内部を読む（本記事）
+
+第4部: ニッチ最適化の実践パターン
+
+
+
+ はじめに
+こんにちは、moriです。
+ファスト株式会社にてRustを用いてデスクトップアプリケーション・バックエンドの開発を行っています。
+第1部では Option&lt;NonZeroU8&gt; が u8 と同じ1バイトになることをメモリから直接観察しました。
+第2部では MIR・LLVM IR・ASM を段階的に追いかけ、Option&lt;NonZeroU8&amp;g...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/mitsuchi/articles/ef219e7c606b42" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/fast/articles/44f261437d706c" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,25 +171,60 @@ f :: a -&gt; a
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -190,16 +239,16 @@ f :: a -&gt; a
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_8063.html">
+                    <a href="Zennのトレンド_6589.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AIエージェントをUIにすることで、誰でも地理データを扱えるWebGISができた。</span>
+                        <span class="nav-title">Next.js + Cloudflareで「サボる」ためのWebツール集を個人開発した</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1686.html">
+                    <a href="iPhone_Mania_9159.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">超便利なClaude Designの実践的な活用方法</span>
+                        <span class="nav-title">セラミック復活や丸型も！？Apple WatchとiPhone Ultra刷新計画</span>
                     </a>
                 </div>
             </div>
@@ -212,53 +261,53 @@ f :: a -&gt; a
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3624.html">
-                        <h3>JR九州の「SUGOCA」がスマホ対応　定期券も　モバイルICOCAの基盤活用</h3>
+                    <a href="CNET_Japan_最新情報総合_3735.html">
+                        <h3>最新のオープンウェイト世界モデル「LTX-2.5」公開、動画生成やロボット開発に</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JR九州は6月25日、ICカード「SUGOCA」をスマートフォンで使えるサービスを2027年春に始めると発表した。駅に足を運ばなくても、スマホのアプリから定期券を買ったり、残高をチャージしたりできるよ...</p>
+                        <p class="related-summary">LTXは、オープンウェイトの世界モデルの最新版「LTX-2.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2407.html">
-                        <h3>現場の施設情報、360度画像でまとめて管理　山下PMC「b-platform」がkintone連携強化</h3>
+                    <a href="ASCII_jp__トップ_673.html">
+                        <h3>オーディオメーカーの耳栓が着け心地最高！ふさがない、朝まではずれない、かゆくならないfinalのYOKONE</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">山下PMCは6月25日、施設情報を管理するクラウドサービス「b-platform」で、サイボウズの「kintone」との連携機能を強化したと発表した。複数のkintoneアプリにバラバラに入っていた設...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5664.html">
-                        <h3>IBM、爪サイズに1000億個のトランジスタを搭載する0.7nmチップを発表</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">IBMは米国時間6月25日、同社の最新半導体技術を用いた初のチップを発表した。爪ほどの小さなハードウェアに、1000億個近くのトランジスタを搭載している。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_6104.html">
-                        <h3>オズポケ最上位モデル「Osmo Pocket 4P」ついに正式発表でお値段は10万円切り!?＝ 「4」と「4P」を実機で...</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">DJIは期待のジンバルカメラ「Osmo Pocket 4P」を正式発表した。.</p>
+                        <p class="related-summary">finalが販売している耳栓「YOKONE」は、長年の研究開発で培ってきた「耳にどう触れるか」「どうすれば圧迫感を抑えられるか」という考え方を、耳栓に応用しているのが最大の特徴です。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4819.html">
-                        <h3>ゲーミングPCが最大6万8000円オフ　パソコンショップSEVENで6月30日限定セール</h3>
+                    <a href="気になる記になる_3810.html">
+                        <h3>｢iPad Air｣向けOLEDパネル、中国BOEも受注に向け開発中 ｰ 発売時期は2027年前半の見込み</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">パソコンショップSEVENが6月30日限定の24時間セールを開催。RTX 5080・RTX 5070 Ti搭載ゲーミングPCなど対象10機種を最大6万8000円オフで販売。注目モデルや価格、セール内容...</p>
+                        <p class="related-summary">韓国のThe Elecが、業界関係者の話として、中国のBOEが2027年前半に発表されると予想されている次世代「iPad Air」向けのOLEDパネルを開発しているようだと報じています。 開発は、中国...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_139.html">
+                        <h3>未経験エンジニア 初めてのDBサーバー構築経験</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに こんにちは。元現場作業員のひよこです。 Excel、パワポも触れて来なかったガチのIT初心者ですが、2026年1月から学習を始め、半年弱で6月にIT企業へ転職しました。 保有資格はLPIC1...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="iPhone_Mania_1575.html">
+                        <h3>iPhone発売20周年モデル開発中止情報は誤り？オールガラス案のみ破棄との見方</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">iPhone Mania</span>
+                        </div>
+                        <p class="related-summary">Jefferiesのアナリスト、エディソン・リー氏が、iPhone発売20周年モデルの開発は中止されたと指摘したことについて、各方面から「その指摘は誤りで、開発は継続している」との反論が出ています。 ...</p>
                     </a>
                 </article>
             </div>

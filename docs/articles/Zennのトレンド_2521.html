@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feature-Sliced Design 実践ガイド | 日本のテックニュース速報</title>
-    <meta name="description" content="Feature-Sliced Design 実践ガイド - テクノロジーニュースをお届け。">
-    <meta name="keywords" content="本">
+    <title>N+1 問題を、発行される SQL を数えて理解する | 日本のテックニュース速報</title>
+    <meta name="description" content="一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます">
+    <meta name="keywords" content="Python,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Feature-Sliced Design 実践ガイド">
-    <meta property="og:description" content="Feature-Sliced Design 実践ガイド - テクノロジーニュースをお届け。">
+    <meta property="og:title" content="N+1 問題を、発行される SQL を数えて理解する">
+    <meta property="og:description" content="一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2521.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Feature-Sliced Design 実践ガイド">
-    <meta name="twitter:description" content="Feature-Sliced Design 実践ガイド - テクノロジーニュースをお届け。">
+    <meta name="twitter:title" content="N+1 問題を、発行される SQL を数えて理解する">
+    <meta name="twitter:description" content="一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2521.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Feature-Sliced Design 実践ガイド",
-        "description": "Feature-Sliced Design 実践ガイド - テクノロジーニュースをお届け。",
+        "headline": "N+1 問題を、発行される SQL を数えて理解する",
+        "description": "一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-26T11:34:50",
-        "dateModified": "2026-07-29T10:40:15.952230",
+        "datePublished": "2026-08-10T16:17:55",
+        "dateModified": "2026-08-13T11:01:56.895486",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2521.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2521.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "プログラミング",
+        "keywords": ["Python","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Feature-Sliced Design 実践ガイド",
+                "name": "N+1 問題を、発行される SQL を数えて理解する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2521.html"
             }
         ]
@@ -113,24 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">Feature-Sliced Design 実践ガイド</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">N+1 問題を、発行される SQL を数えて理解する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Feature-Sliced Design 実践ガイド</h1>
+                <h1>N+1 問題を、発行される SQL を数えて理解する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/norman6464/books/fsd-migration" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-07-26T11:34:50">
-                        公開: 2026-07-26T11:34:50
+                    <span class="source">出典: <a href="https://zenn.dev/mtmtdack/articles/2026-08-11-n-plus-one-counting-queries" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-08-10T16:17:55">
+                        公開: 2026-08-10T16:17:55
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">Python</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -138,11 +139,13 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    フロントエンドのアーキテクチャ手法 Feature-Sliced Design (FSD) を体系的にまとめた本です。Layers・Slices・Segments の定義から、Public API、依存ルール、cross-import、層の判断基準、lint による強制、既存プロジェクトへの段階導入までを、公式仕様に沿って整理しました。
+                    一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。
+この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます。使うのは Python と SQLAlchemy ですが、起きていることは ORM が違っても同じです。
+私は普段、業務で Python のサーバーレスアプリを書いています。RDB を触る処理と外部 API を叩く処理が半々くらいで、ORM は SQLAlchemy を使っています。N+1 は言葉としては早くから知っていましたが、「なぜ遅いのか」を自分で測ったことがなかったので、手元で数え...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/norman6464/books/fsd-migration" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/mtmtdack/articles/2026-08-11-n-plus-one-counting-queries" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -155,6 +158,16 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">本 - Amazon検索結果</div>
@@ -164,27 +177,37 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -199,16 +222,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5744.html">
+                    <a href="Zennのトレンド_1135.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【速報】Opus 5、React習熟度ベンチマークで余裕のFable 5超え</span>
+                        <span class="nav-title">レンタルサーバーを作ってみた話と、これから作りたいもの</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Publickey_6585.html">
+                    <a href="Qiita_-_人気の記事_7213.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">ゲームエンジン「Unity 7」発表、ランタイム基盤がMonoから.NET CoreCLRへ移行。高...</span>
+                        <span class="nav-title">【後編】AI駆動開発、用語で挫折していませんか？ ——「ハーネス」がわかると、いま業界で何が起きてい...</span>
                     </a>
                 </div>
             </div>
@@ -221,53 +244,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8204.html">
-                        <h3>90年代の音楽体験を今のスタイルで！ ポータブルカセットプレーヤー「Miko cassette player」</h3>
+                    <a href="CNET_Japan_最新情報総合_7751.html">
+                        <h3>最新のオープンウェイト世界モデル「LTX-2.5」公開、動画生成やロボット開発に</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「Miko cassette player」は、タイのブランドが手がけたポータブルカセットプレーヤー。90年代日本のプロダクトを思わせるレトロなデザインながら、外部スピーカーとのBluetooth接続...</p>
+                        <p class="related-summary">LTXは、オープンウェイトの世界モデルの最新版「LTX-2.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1952.html">
-                        <h3>1回0.5秒の超高速ガチャ×数億ダメージの爆速インフレRPG！『メタ転生：ヴァルハラ復興プロジェクト』本日より正式サービ...</h3>
+                    <a href="気になる記になる_5814.html">
+                        <h3>Insta360、2種類のミラーレスカメラの開発を認める ｰ 来年2月に発表か</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">5秒の超高速ガチャ×数億ダメージの爆速インフレRPG！『メタ転生：ヴァルハラ復興プロジェクト』本日より正式サービス開始！.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_1919.html">
-                        <h3>【セール】MinisforumのミニPCが｢Amazon 暮らし応援サマーSale｣で特価に</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">Amazonでは本日より「暮らし応援サマーSale」が開催されていますが、同セールではMinisforumのミニPCが多数特価で販売されています。 セールでは、Core Ultra 7 356H搭載の...</p>
+                        <p class="related-summary">今年初め、Insta360がコンパクトカメラ分野に参入する予定であることが明らかになり、今年4月にはレンズ交換可能なミラーレスカメラの試作機とみられるデバイスの写真も公開されたものの、その後は何も音沙...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_3877.html">
-                        <h3>【セール】SwitchBotのスマートロックやハブ製品などスマートホーム製品が最大50%オフに</h3>
+                    <a href="Qiita_-_人気の記事_3331.html">
+                        <h3>証明付きバイブコーディングで証明支援系を作った</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Amazonでは本日より「暮らし応援サマーSale」が開催されていますが、同セールではSwitchBotのスマートホーム製品が多数特価で販売されています。 対象となっているのは、ハブ製品やスマートロッ...</p>
+                        <p class="related-summary">この記事は株式会社proof ninjaの助成を受けて書いています． TL;DR Codexバイブコーディングで証明支援系を作った． その際，論理のコアの部分はRocq(旧Coq)で実装させ，「この自...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_8122.html">
-                        <h3>【セール】Ankerのモバイルバッテリーや充電器など160製品以上が最大47％オフに</h3>
+                    <a href="Qiita_-_人気の記事_5073.html">
+                        <h3>技術力より先に、信頼を積む人がやっている地味な行動</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Amazonでは本日より「暮らし応援サマーSale」が開催されていますが、同セールではAnkerのモバイルバッテリーなど多数の製品が特価で販売されています。 対象となっているのは、モバイルバッテリー、...</p>
+                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_163.html">
+                        <h3>Chromium(V8)のArray.prototype.copyWithinを最大約450倍高速化した</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに ! 修正や追加等はコメントまたはGitHubで編集リクエストをお待ちしております。 ダイニーで一番若いエンジニアのriya amemiya(21歳)です。 これまで Array. flat ...</p>
                     </a>
                 </article>
             </div>

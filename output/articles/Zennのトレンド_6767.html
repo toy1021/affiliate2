@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャンを仕込んだ話 | 日本のテックニュース速報</title>
-    <meta name="description" content="バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャンを仕込んだ話 - プログラミング関連情報をお届け。">
-    <meta name="keywords" content="AI,Claude,本">
+    <title>Claude Code に「同じ指摘を二度させない」仕組みを hook で作った | 日本のテックニュース速報</title>
+    <meta name="description" content="同じ指摘を、何度も繰り返している Claude Code を使っていて一番消耗するのは、実装の質そのものより 「先週も言ったことを今日も言っている」 ことでした。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="Claude,GitHub">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャンを仕込んだ話">
-    <meta property="og:description" content="バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャンを仕込んだ話 - プログラミング関連情報をお届け。">
+    <meta property="og:title" content="Claude Code に「同じ指摘を二度させない」仕組みを hook で作った">
+    <meta property="og:description" content="同じ指摘を、何度も繰り返している Claude Code を使っていて一番消耗するのは、実装の質そのものより 「先週も言ったことを今日も言っている」 ことでした。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6767.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャンを仕込んだ話">
-    <meta name="twitter:description" content="バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャンを仕込んだ話 - プログラミング関連情報をお届け。">
+    <meta name="twitter:title" content="Claude Code に「同じ指摘を二度させない」仕組みを hook で作った">
+    <meta name="twitter:description" content="同じ指摘を、何度も繰り返している Claude Code を使っていて一番消耗するのは、実装の質そのものより 「先週も言ったことを今日も言っている」 ことでした。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャンを仕込んだ話",
-        "description": "バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャンを仕込んだ話 - プログラミング関連情報をお届け。",
+        "headline": "Claude Code に「同じ指摘を二度させない」仕組みを hook で作った",
+        "description": "同じ指摘を、何度も繰り返している Claude Code を使っていて一番消耗するのは、実装の質そのものより 「先週も言ったことを今日も言っている」 ことでした。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-07T07:28:37",
-        "dateModified": "2026-06-08T21:51:54.144686",
+        "datePublished": "2026-08-10T16:10:41",
+        "dateModified": "2026-08-14T01:56:29.289867",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6767.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6767.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AI","Claude","本"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["Claude","GitHub"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャンを仕込んだ話",
+                "name": "Claude Code に「同じ指摘を二度させない」仕組みを hook で作った",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6767.html"
             }
         ]
@@ -113,47 +113,45 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャン...</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">Claude Code に「同じ指摘を二度させない」仕組みを hook で作った</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>バイブコーディングが怖いので、全PJにSemgrep + gitleaksの自動セキュリティスキャンを仕込んだ話</h1>
+                <h1>Claude Code に「同じ指摘を二度させない」仕組みを hook で作った</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/zittiandbuoni/articles/632ff0709247f6" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-06-07T07:28:37">
-                        公開: 2026-06-07T07:28:37
+                    <span class="source">出典: <a href="https://zenn.dev/nozomi720/articles/claude_code_hooks_feedback" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-08-10T16:10:41">
+                        公開: 2026-08-10T16:10:41
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
                     <span class="tag">Claude</span>
-                    <span class="tag">本</span>
+                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-ITコンサル1年目です。Claude Codeを使って個人開発を進めていますが、最近ずっと引っかかっていたことがあります。
-「AIに書いてもらったコード、本当に安全なんだろうか?」
-code-to-rich.com、shindan-me.com、その他いくつかの個人開発PJをClaude Codeと一緒に作ってきましたが、コードレビューの大部分をAIに任せている以上、
+                    同じ指摘を、何度も繰り返している
+Claude Code を使っていて一番消耗するのは、実装の質そのものより 「先週も言ったことを今日も言っている」 ことでした。
 
-危険なパターン（shell=True、SQLインジェクションになりうる文字列結合など）をうっかり実装してしまう
+「テストを先に書いて」
+「テストは hook が自動実行するから Bash で手動実行しないで」
+「GitHub Actions の uses: は SHA でピン留めして」
 
-.envの中身やAPIキーをそのままコードに埋め込んでしまう
-
-といったミスが紛れ込んでいて...
+CLAUDE.md に書いても、セッションが長くなると効き目が薄れます。そもそも「何回言ったか」がどこにも残らないので、こちらも「これ前に言ったっけ？」と分からなくなる。
+そこで、指摘そのものをファイルとして永続化し、指摘回数（count）に応じ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/zittiandbuoni/articles/632ff0709247f6" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/nozomi720/articles/claude_code_hooks_feedback" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -166,16 +164,6 @@ code-to-rich.com、shindan-me.com、その他いくつかの個人開発PJをCla
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">Claude - Amazon検索結果</div>
@@ -186,10 +174,20 @@ code-to-rich.com、shindan-me.com、その他いくつかの個人開発PJをCla
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -199,23 +197,23 @@ code-to-rich.com、shindan-me.com、その他いくつかの個人開発PJをCla
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -230,16 +228,16 @@ code-to-rich.com、shindan-me.com、その他いくつかの個人開発PJをCla
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2348.html">
+                    <a href="Zennのトレンド_195.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">GitHub Copilot法人利用の移行先検討結果</span>
+                        <span class="nav-title">レンタルサーバーを作ってみた話と、これから作りたいもの</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_1036.html">
+                    <a href="Zennのトレンド_4017.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">エボラ陰謀論も 偽情報対策が課題</span>
+                        <span class="nav-title">N+1 問題を、発行される SQL を数えて理解する</span>
                     </a>
                 </div>
             </div>
@@ -252,53 +250,53 @@ code-to-rich.com、shindan-me.com、その他いくつかの個人開発PJをCla
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_2034.html">
-                        <h3>Ubuntu、サンドボックス化された開発環境をコマンド一発で構築。新機能「Workshop」リリース</h3>
+                    <a href="CNET_Japan_最新情報総合_6824.html">
+                        <h3>楽天市場、検索AIが流通総額を押し上げ--購入意図を判別、年128億円の効果</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Ubuntuの開発元であるCanonicalは、AIエージェントなどに適したサンドボックス化された開発環境をコマンド一発で構築できる新機能「Workshop」をリリースしました。 Today we a...</p>
+                        <p class="related-summary">楽天グループは8月10日、決算説明会で、「楽天市場」の検索へのAI活用の成果を説明した。LLM（大規模言語モデル）でユーザーの検索クエリの文脈を理解し、情報を集めている探索段階か、購入の意思決定段階か...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3439.html">
-                        <h3>見ないふりのコストは誰が払うのか？― &#34;移民ではない移民&#34; と地下経済の構造 : Pythonで学ぶ マクロ経済学入門 ...</h3>
+                    <a href="CNET_Japan_最新情報総合_5834.html">
+                        <h3>Claudeが生成した文章に「電子透かし」、全世界で導入へ</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">user: 「Pythonで学ぶマクロ経済学入門」、第88回を始めましょう。まず前回の復習として、 「利権はなぜ生まれるのか？ ― 競争・統制・財源幻想を超えて考える“供給能力” : Pythonで学...</p>
+                        <p class="related-summary">Anthropicは今週、Claudeが生成するテキストに、AI生成物だと分かるよう電子透かしを入れると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5443.html">
-                        <h3>9割のエンジニア未経験者がつまずく『最初の壁』 。それでもアプリを作りたい #2</h3>
+                    <a href="CNET_Japan_最新情報総合_6970.html">
+                        <h3>Meta、ノートPCで動くAIエージェント向け新モデル「Muse Glimmer」を公開</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや、 仕事で起きやすい“ズレ”について整理して発信しています。 誰かの助けに...</p>
+                        <p class="related-summary">Metaは、AIエージェント向けに特化して開発した最新モデル「Muse Glimmer」を公開した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8532.html">
-                        <h3>Claude Codeと一緒に、MagicPodのWebAPI × TypeScript自動テストを作った話</h3>
+                    <a href="CNET_Japan_最新情報総合_6754.html">
+                        <h3>Spotify、AI生成アーティストをおすすめから除外へ　9月に新ラベル導入</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは！KIYOラーニングでQAエンジニアをしている@ayshiinaです。 私は普段テスト設計・実行を主業務としており、プログラミングコードについての知識はなく、書くことができません。...</p>
+                        <p class="related-summary">SpotifyでAI生成アーティストと人間のアーティストを見分けたい音楽ファンは間もなく、新たな手段を利用できるようになる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3539.html">
-                        <h3>モノレポ時代のディレクトリアーキテクチャ</h3>
+                    <a href="CNET_Japan_最新情報総合_778.html">
+                        <h3>「ジムを予約して」とAIに頼んだら……予約システムをハッキングする想定外の事態に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに みなさん「タコス」食べていますか？ こんにちは、tacosDB 開発責任者です。 タコスが好きすぎてタコスに特化したサイト「tacos DB」を開発しています。 既存のグルメサイトでは探しづ...</p>
+                        <p class="related-summary">オーストラリアのある男性が、ジムのクラスを予約するようAIエージェントに頼んだ。しかし、ジムのシステムをハッキングし、キャンセル待ちで先行していた別の利用者をリストから外せとまでは言っていない。.</p>
                     </a>
                 </article>
             </div>

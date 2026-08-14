@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【DB設計】JOINコストとインデックスの効果を実行計画で理解する | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに こんにちは、クラシルでレシチャレBUのバックエンドエンジニアをしているFumiyaです！ 2026年6月現在、26卒としてクラシルに入社して約3ヶ月が経とうとしています。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="本">
+    <title>N+1 問題を、発行される SQL を数えて理解する | 日本のテックニュース速報</title>
+    <meta name="description" content="一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます">
+    <meta name="keywords" content="Python,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【DB設計】JOINコストとインデックスの効果を実行計画で理解する">
-    <meta property="og:description" content="はじめに こんにちは、クラシルでレシチャレBUのバックエンドエンジニアをしているFumiyaです！ 2026年6月現在、26卒としてクラシルに入社して約3ヶ月が経とうとしています。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="N+1 問題を、発行される SQL を数えて理解する">
+    <meta property="og:description" content="一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6468.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【DB設計】JOINコストとインデックスの効果を実行計画で理解する">
-    <meta name="twitter:description" content="はじめに こんにちは、クラシルでレシチャレBUのバックエンドエンジニアをしているFumiyaです！ 2026年6月現在、26卒としてクラシルに入社して約3ヶ月が経とうとしています。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="N+1 問題を、発行される SQL を数えて理解する">
+    <meta name="twitter:description" content="一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【DB設計】JOINコストとインデックスの効果を実行計画で理解する",
-        "description": "はじめに こんにちは、クラシルでレシチャレBUのバックエンドエンジニアをしているFumiyaです！ 2026年6月現在、26卒としてクラシルに入社して約3ヶ月が経とうとしています。最新のテクノロジー情報をお届けします。",
+        "headline": "N+1 問題を、発行される SQL を数えて理解する",
+        "description": "一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-22T00:13:17",
-        "dateModified": "2026-06-23T23:10:10.849011",
+        "datePublished": "2026-08-10T16:17:55",
+        "dateModified": "2026-08-14T16:53:50.582157",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6468.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6468.html",
         "articleSection": "プログラミング",
-        "keywords": ["本"]
+        "keywords": ["Python","本"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【DB設計】JOINコストとインデックスの効果を実行計画で理解する",
+                "name": "N+1 問題を、発行される SQL を数えて理解する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6468.html"
             }
         ]
@@ -114,23 +114,24 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">【DB設計】JOINコストとインデックスの効果を実行計画で理解する</li>
+                <li aria-current="page">N+1 問題を、発行される SQL を数えて理解する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【DB設計】JOINコストとインデックスの効果を実行計画で理解する</h1>
+                <h1>N+1 問題を、発行される SQL を数えて理解する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/dely_jp/articles/14ee6d362709e1" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/mtmtdack/articles/2026-08-11-n-plus-one-counting-queries" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-06-22T00:13:17">
-                        公開: 2026-06-22T00:13:17
+                    <time datetime="2026-08-10T16:17:55">
+                        公開: 2026-08-10T16:17:55
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">Python</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -138,14 +139,13 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-こんにちは、クラシルでレシチャレBUのバックエンドエンジニアをしているFumiyaです！
-2026年6月現在、26卒としてクラシルに入社して約3ヶ月が経とうとしています。先日業務でデータベース設計を行う機会があったのですが、正規化すると、テーブルをJOINするというコストの高い処理を行う必要があるため、実務ではパフォーマンスを考慮して、あえてテーブルを正規化しない判断をする場面があるということを学びました。しかし、テーブルをJOINする処理のコストの高さを具体的にイメージできていなかったので、今後の設計判断に活かすために調べてみることにしました。
-本記事では、以下を目的とし...
+                    一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。
+この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます。使うのは Python と SQLAlchemy ですが、起きていることは ORM が違っても同じです。
+私は普段、業務で Python のサーバーレスアプリを書いています。RDB を触る処理と外部 API を叩く処理が半々くらいで、ORM は SQLAlchemy を使っています。N+1 は言葉としては早くから知っていましたが、「なぜ遅いのか」を自分で測ったことがなかったので、手元で数え...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/dely_jp/articles/14ee6d362709e1" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/mtmtdack/articles/2026-08-11-n-plus-one-counting-queries" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,6 +157,16 @@
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -172,16 +182,6 @@
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
                                     <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +222,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3889.html">
+                    <a href="Zennのトレンド_8457.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Claude Codeに全部抱え込ませるのをやめた。tmuxのタブを会話させてコンテキストを分割する</span>
+                        <span class="nav-title">Claude Code に「同じ指摘を二度させない」仕組みを hook で作った</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_7451.html">
+                    <a href="Zennのトレンド_1506.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Google Workspace Studioで業務改善に挑戦した</span>
+                        <span class="nav-title">BM25を使用してCodexのトークンの消費を30%抑える</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +244,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2418.html">
-                        <h3>富士登山の「お守り保険」500円で登場、捜索救助費用まで補償　Finatextらが提供</h3>
+                    <a href="CNET_Japan_最新情報総合_8096.html">
+                        <h3>最新のオープンウェイト世界モデル「LTX-2.5」公開、動画生成やロボット開発に</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">共栄火災海上保険は6月22日、富士山の登山者向け保険「富士登山お守り保険」の提供を始めた。フィンテック企業のFinatextと共同開発したもので、保険料は500円から。登山中のケガや事故に加え、遭難し...</p>
+                        <p class="related-summary">LTXは、オープンウェイトの世界モデルの最新版「LTX-2.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7651.html">
-                        <h3>マネーフォワード、GitHub不正アクセスの詳細調査を完了　確定した「流出した可能性のあるデータ」とは</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">マネーフォワードは6月23日、ソースコード管理サービス「GitHub」が不正アクセスを受けた問題で、流出した可能性がある個人情報の精査が完了したと発表した。顧客や取引先、従業員らの情報が対象となったが...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6980.html">
-                        <h3>&#34;外国人がいないと回らない&#34; は本当か ― 補助金が作る経済構造を考える : Pythonで学ぶ マクロ経済学入門 (9...</h3>
+                    <a href="Qiita_-_人気の記事_320.html">
+                        <h3>【コピペOK】CSSで作るモダンなUIアニメーション集</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">user: 「Pythonで学ぶマクロ経済学入門」、第92回を始めましょう。まず前回の復習として、 「なぜ多文化共生は議論しにくいのか ― 空気と経済の視点から : Pythonで学ぶ マクロ経済学入...</p>
+                        <p class="related-summary">はじめに フロントエンド開発をしていると、「押したくなるようなボタンにしたい」「ユーザーが直感的に操作できるようにしたい」と感じることがあります。 そんなときに活用できるのが、CSSによるアニメーショ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7696.html">
-                        <h3>Claude Code の「待ち」がもったいないので、worktree で並列開発してみた</h3>
+                    <a href="Qiita_-_人気の記事_5008.html">
+                        <h3>【JavaScript】HTML5 Canvas API入門！基礎から図形・テキスト描画まで徹底解説</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに Claude Code に作業を投げている間の待ち時間、けっこう長いですよね。その間に別の作業も進めたくなったので、git worktree（作業ディレクトリを分ける機能）を使った並列開発を...</p>
+                        <p class="related-summary">「Webページに動きのあるグラフィックを表示したい」 「JavaScriptを使って、図形やイラストを自由に描いてみたい」 そう思ったときに活躍するのが、HTML5の Canvas API です。 C...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4583.html">
-                        <h3>新人エンジニアが最初に専門分野を決めた話</h3>
+                    <a href="Qiita_-_人気の記事_6094.html">
+                        <h3>複雑なタスクほど、実は知っている基礎の組み合わせだったりする</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに はじめまして。株式会社PRUMのmasaです。 今日は、未経験から現場に入った私が最初の数ヶ月で陥った「最初から全部学ぼうとして、結局中途半端になった」状態の話をします。主にエンジニア未経験...</p>
+                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_7890.html">
+                        <h3>同じRust製のBiomeとOxlintで、なぜ速度差が大きいのか</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに こんにちは、デザインエンジニアのyamarinです。 BiomeとOxlintは、同じRust製でどちらも速い印象がありますね。 estie(エスティ)ではfrontendの静的解析ツールに...</p>
                     </a>
                 </article>
             </div>

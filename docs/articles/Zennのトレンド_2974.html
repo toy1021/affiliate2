@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIに「レビューして」はもう古い？「敵対的検証」のすすめ | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の152週目の記事です！ 3年間連続達成まで残り7週となりました！ こんにちは、ログラスの松岡(@little_hand_s)です。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="AI,Claude">
+    <title>Claude がテキストに電子透かしを入れ始めたので、LLM ウォーターマーキングの仕組みを調べた | 日本のテックニュース速報</title>
+    <meta name="description" content="com/news/claude-text-watermark それに伴い、この記事の内容を一部加筆修正しています。 2026年8月、Anthropic が「Claude の生成テキストに機械可読なマーク（電子透かし）を埋め込む」と発表しました[1]">
+    <meta name="keywords" content="AI,Claude,LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIに「レビューして」はもう古い？「敵対的検証」のすすめ">
-    <meta property="og:description" content="! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の152週目の記事です！ 3年間連続達成まで残り7週となりました！ こんにちは、ログラスの松岡(@little_hand_s)です。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="Claude がテキストに電子透かしを入れ始めたので、LLM ウォーターマーキングの仕組みを調べた">
+    <meta property="og:description" content="com/news/claude-text-watermark それに伴い、この記事の内容を一部加筆修正しています。 2026年8月、Anthropic が「Claude の生成テキストに機械可読なマーク（電子透かし）を埋め込む」と発表しました[1]">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2974.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIに「レビューして」はもう古い？「敵対的検証」のすすめ">
-    <meta name="twitter:description" content="! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の152週目の記事です！ 3年間連続達成まで残り7週となりました！ こんにちは、ログラスの松岡(@little_hand_s)です。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="Claude がテキストに電子透かしを入れ始めたので、LLM ウォーターマーキングの仕組みを調べた">
+    <meta name="twitter:description" content="com/news/claude-text-watermark それに伴い、この記事の内容を一部加筆修正しています。 2026年8月、Anthropic が「Claude の生成テキストに機械可読なマーク（電子透かし）を埋め込む」と発表しました[1]">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIに「レビューして」はもう古い？「敵対的検証」のすすめ",
-        "description": "! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の152週目の記事です！ 3年間連続達成まで残り7週となりました！ こんにちは、ログラスの松岡(@little_hand_s)です。最新のテクノロジー情報をお届けします。",
+        "headline": "Claude がテキストに電子透かしを入れ始めたので、LLM ウォーターマーキングの仕組みを調べた",
+        "description": "com/news/claude-text-watermark それに伴い、この記事の内容を一部加筆修正しています。 2026年8月、Anthropic が「Claude の生成テキストに機械可読なマーク（電子透かし）を埋め込む」と発表しました[1]",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-17T05:56:17",
-        "dateModified": "2026-07-22T21:09:09.761916",
+        "datePublished": "2026-08-12T08:52:20",
+        "dateModified": "2026-08-16T22:21:51.031453",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2974.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2974.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude"]
+        "keywords": ["AI","Claude","LLM"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIに「レビューして」はもう古い？「敵対的検証」のすすめ",
+                "name": "Claude がテキストに電子透かしを入れ始めたので、LLM ウォーターマーキングの仕組みを調べた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2974.html"
             }
         ]
@@ -114,25 +114,26 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIに「レビューして」はもう古い？「敵対的検証」のすすめ</li>
+                <li aria-current="page">Claude がテキストに電子透かしを入れ始めたので、LLM ウォーターマーキングの仕組みを調べた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIに「レビューして」はもう古い？「敵対的検証」のすすめ</h1>
+                <h1>Claude がテキストに電子透かしを入れ始めたので、LLM ウォーターマーキングの仕組みを調べた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/loglass/articles/6aa18c80496ec6" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/hellorusk/articles/3328866ca9e922" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-07-17T05:56:17">
-                        公開: 2026-07-17T05:56:17
+                    <time datetime="2026-08-12T08:52:20">
+                        公開: 2026-08-12T08:52:20
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
                     <span class="tag">Claude</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
@@ -140,21 +141,15 @@
                 
                 <div class="article-body">
                     !
-この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の152週目の記事です！
-3年間連続達成まで残り7週となりました！
+この記事を投稿した後に、Anthropic の公式ブログからも解説記事が投稿されました。
+https://www.anthropic.com/news/claude-text-watermark
+それに伴い、この記事の内容を一部加筆修正しています。
 
-こんにちは、ログラスの松岡(@little_hand_s)です。
-
-
- 3行まとめ
-
-「レビューして」でも指摘は返ってくる。「敵対的検証して」は課題がある前提で反証を試み、判定と根拠まで返してくるのが違い
-敵対的検証はClaude Code公式も推奨するパターン。筆者のClaude Code環境では、一言でサブエージェントによる多視点検証が走った
-指摘は鵜呑みにしない。採否を決めるのは人間。この記事自身も敵対的検証を通して書...
+2026年8月、Anthropic が「Claude の生成テキストに機械可読なマーク（電子透かし）を埋め込む」と発表しました[1]。EU AI Act 第50条の透明性規範（Code of Practice on Transparency of AI-Generated Content）に署名したことに伴うもので、2026年8月2日以...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/loglass/articles/6aa18c80496ec6" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/hellorusk/articles/3328866ca9e922" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -177,20 +172,20 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -231,16 +226,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Publickey_4288.html">
+                    <a href="Zennのトレンド_8591.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">.NET 8と.NET 9は今年の11月でサポート終了、マイクロソフトが警告</span>
+                        <span class="nav-title">共催テックイベント運営入門 as 採用広報</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_3777.html">
+                    <a href="Zennのトレンド_2088.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">ループエンジニアリングの次は本当に「グラフ」なのか考えてみた</span>
+                        <span class="nav-title">なぜAI時代にGoが最適な言語なのか</span>
                     </a>
                 </div>
             </div>
@@ -253,53 +248,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9758.html">
-                        <h3>グーグルやOpenAIなどのAIモデル、言論統制の厳しい国で「代理検閲」か--最新報告書</h3>
+                    <a href="CNET_Japan_最新情報総合_8248.html">
+                        <h3>Spotify、AI生成アーティストをおすすめから除外へ　9月に新ラベル導入</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">大規模言語モデル（LLM）の一部は、政府に批判的な質問への回答に一貫性がなく、言論の自由が保護されている国と制限の厳しい体制下の国では対応が異なるという。Meta監督委員会の報告書で明らかになった。.</p>
+                        <p class="related-summary">SpotifyでAI生成アーティストと人間のアーティストを見分けたい音楽ファンは間もなく、新たな手段を利用できるようになる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4783.html">
-                        <h3>Genspark、AIが仕事の全情報を記憶する「SecondBrain」--初の専用端末も</h3>
+                    <a href="CNET_Japan_最新情報総合_4062.html">
+                        <h3>「ジムを予約して」とAIに頼んだら……予約システムをハッキングする想定外の事態に</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">0」を発表した。仕事にまつわる情報を丸ごと覚えるメモリー機能「SecondBrain」を軸に、カード型のAIボイスレコーダー「SecondBrain Note」、AIと人がチームを組んで働く「GenT...</p>
+                        <p class="related-summary">オーストラリアのある男性が、ジムのクラスを予約するようAIエージェントに頼んだ。しかし、ジムのシステムをハッキングし、キャンセル待ちで先行していた別の利用者をリストから外せとまでは言っていない。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3464.html">
-                        <h3>「Yahoo!ニュース」、きょう（22日）30周年</h3>
+                    <a href="CNET_Japan_最新情報総合_1826.html">
+                        <h3>Linux版「ChatGPT」公式アプリが登場、UbuntuやDebianなどに対応</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">LINEヤフーは7月22日、「Yahoo!ニュース」のサービス開始30周年を記念した特設サイトを公開した。Yahoo!ニュースは1996年7月22日に始まり、きょうで30年を迎えた。特設サイトでは、3...</p>
+                        <p class="related-summary">OpenAIは、Linux向けに「ChatGPT」デスクトップアプリの提供を開始した。現在はプレビュー版で、Linux上でChatGPT、「ChatGPT Work」、「Codex」を利用できる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1307.html">
-                        <h3>OpenAIのモデルが試験中に暴走、隔壁を破り他社システムに侵入</h3>
+                    <a href="CNET_Japan_最新情報総合_8653.html">
+                        <h3>Twitchの配信がアマゾンのAI訓練に使われる--「デフォルトで有効」なので要注意</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">OpenAIは7月21日、社内評価の最中に同社のAIモデルが隔離環境を抜け出し、外部企業Hugging Faceの本番システムに侵入していたことを明らかにした。モデルはテストの答えを不正に入手しようと...</p>
+                        <p class="related-summary">ライブ配信サービス「Twitch」は、コンテンツを親会社アマゾンのAIモデルの学習に利用しているとの報道を認めた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5580.html">
-                        <h3>グーグル、脆弱性を「自分で攻撃して」確かめるAIエージェント「CodeMender」　修正パッチも自動生成</h3>
+                    <a href="CNET_Japan_最新情報総合_7950.html">
+                        <h3>AIチャットボット「ChatTJB」の正体は1人の男性、質問殺到で限界に--目的は？</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Google Cloudは7月22日、ソフトウェアの脆弱性を検出して修正するAIエージェント「CodeMender」のプレビュー提供を開始したと発表した。まずは一部の政府機関と特定の組織・企業向けに提...</p>
+                        <p class="related-summary">一風変わったチャットボットサービス「ChatTJB」が注目を集めている。制作者であるアーティストの男性が、寄せられた質問のすべてに自ら答えていたのだ。.</p>
                     </a>
                 </article>
             </div>

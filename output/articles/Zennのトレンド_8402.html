@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code の Agent Teams による、複数課題を同時並行で処理し自己改善を繰り返すAIチーム（PM＋作業者）の構築 | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事は、筆者の試行錯誤のメモを AI（Claude）を用いて整理・執筆 したものです。 はじめに（この記事の立ち位置） 筆者は開発作業をやるうえで、TAKT などを使って作業順序を決め打ちにすることで品質を上げていました。決まった流れに沿わせれば、抜け漏れが減って結果が安定します">
-    <meta name="keywords" content="AI,Claude,Teams">
+    <title>Qwen3.8 27B に Reasoning Effort を実装してみる | 日本のテックニュース速報</title>
+    <meta name="description" content="Qwen3.8 27B に Reasoning Effort を実装してみる - テクノロジーニュースをお届け。">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Code の Agent Teams による、複数課題を同時並行で処理し自己改善を繰り返すAIチーム（PM＋作業者）の構築">
-    <meta property="og:description" content="! この記事は、筆者の試行錯誤のメモを AI（Claude）を用いて整理・執筆 したものです。 はじめに（この記事の立ち位置） 筆者は開発作業をやるうえで、TAKT などを使って作業順序を決め打ちにすることで品質を上げていました。決まった流れに沿わせれば、抜け漏れが減って結果が安定します">
+    <meta property="og:title" content="Qwen3.8 27B に Reasoning Effort を実装してみる">
+    <meta property="og:description" content="Qwen3.8 27B に Reasoning Effort を実装してみる - テクノロジーニュースをお届け。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8402.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Code の Agent Teams による、複数課題を同時並行で処理し自己改善を繰り返すAIチーム（PM＋作業者）の構築">
-    <meta name="twitter:description" content="! この記事は、筆者の試行錯誤のメモを AI（Claude）を用いて整理・執筆 したものです。 はじめに（この記事の立ち位置） 筆者は開発作業をやるうえで、TAKT などを使って作業順序を決め打ちにすることで品質を上げていました。決まった流れに沿わせれば、抜け漏れが減って結果が安定します">
+    <meta name="twitter:title" content="Qwen3.8 27B に Reasoning Effort を実装してみる">
+    <meta name="twitter:description" content="Qwen3.8 27B に Reasoning Effort を実装してみる - テクノロジーニュースをお届け。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Code の Agent Teams による、複数課題を同時並行で処理し自己改善を繰り返すAIチーム（PM＋作業者）の構築",
-        "description": "! この記事は、筆者の試行錯誤のメモを AI（Claude）を用いて整理・執筆 したものです。 はじめに（この記事の立ち位置） 筆者は開発作業をやるうえで、TAKT などを使って作業順序を決め打ちにすることで品質を上げていました。決まった流れに沿わせれば、抜け漏れが減って結果が安定します",
+        "headline": "Qwen3.8 27B に Reasoning Effort を実装してみる",
+        "description": "Qwen3.8 27B に Reasoning Effort を実装してみる - テクノロジーニュースをお届け。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-29T23:00:10",
-        "dateModified": "2026-06-30T07:55:15.022134",
+        "datePublished": "2026-08-16T14:39:24",
+        "dateModified": "2026-08-18T12:45:45.351566",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8402.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8402.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","Teams"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Code の Agent Teams による、複数課題を同時並行で処理し自己改善を繰り返すAIチーム（PM＋作業者）の構築",
+                "name": "Qwen3.8 27B に Reasoning Effort を実装してみる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8402.html"
             }
         ]
@@ -113,49 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Code の Agent Teams による、複数課題を同時並行で処理し自己改善を繰り...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Qwen3.8 27B に Reasoning Effort を実装してみる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Code の Agent Teams による、複数課題を同時並行で処理し自己改善を繰り返すAIチーム（PM＋作業者）の構築</h1>
+                <h1>Qwen3.8 27B に Reasoning Effort を実装してみる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/acntechjp/articles/6f74e9a6aef835" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-29T23:00:10">
-                        公開: 2026-06-29T23:00:10
+                    <span class="source">出典: <a href="https://zenn.dev/shogo0x2e/articles/qwen38-27b-stop-overthinking" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-08-16T14:39:24">
+                        公開: 2026-08-16T14:39:24
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">Teams</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-この記事は、筆者の試行錯誤のメモを AI（Claude）を用いて整理・執筆 したものです。
+                    TL;DR
 
+Qwen 3.8 27B を動かすと，曖昧なタスクで thinking が長時間続き，tool call や回答に到達する前に生成上限に達して止まってしまうことがあった．
+解決策として，Per-request reasoning budget の設定を llama.cpp で有効にし，長すぎる thinking はメッセージと共に強制的に切るようにした．
+結果，Minecraft クローン作成のような曖昧なタスク指示において，ユーザーの介入なしに設計から検証まで自力で走り切るようになった．
 
- はじめに（この記事の立ち位置）
-筆者は開発作業をやるうえで、TAKT などを使って作業順序を決め打ちにすることで品質を上げていました。決まった流れに沿わせれば、抜け漏れが減って結果が安定します。
-ただ、課題が増えるにつれて困りごとが出てきました。
-
-
-複数の課題を同時並行で進めないと回らない場面が増えた。 TAKT を複数立ち上げると、お互いがぶつかったり、片方で得た知見をもう片方に渡すのが難しかったりしました。
-
-毎回決まりきった流れだと、複雑な課題に融通が利かない。 手順が固定されて...
+https://x.com/shogo0x2e/status/20884967...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/acntechjp/articles/6f74e9a6aef835" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/shogo0x2e/articles/qwen38-27b-stop-overthinking" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -164,60 +154,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -232,16 +187,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_4170.html">
+                    <a href="Zennのトレンド_5165.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple、セキュリティの修正を含んだ｢macOS 26.5.2｣をリリース</span>
+                        <span class="nav-title">AI エージェントの「認可疲れ」に効く処方箋 : 理論から実装まで</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_8269.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_4237.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">OpenTelemetry に reasoning.level 属性を追加しました</span>
+                        <span class="nav-title">オープンAI 経営幹部が相次ぎ退社</span>
                     </a>
                 </div>
             </div>
@@ -254,52 +209,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3177.html">
-                        <h3>Anthropic、「Mythos 5」提供再開　米国の重要インフラ組織限定　Fable 5再開は依然協議中</h3>
+                    <a href="CNET_Japan_最新情報総合_6067.html">
+                        <h3>酒を売るカクヤス、アルコール依存症の支援者向け無料講座</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米Anthropicは6月27日、AIモデル「Mythos 5」を米国の一部組織に向けて提供再開すると、公式X（旧Twitter）アカウントへの投稿で明らかにした。米政府が同日、重要インフラの運用や防...</p>
+                        <p class="related-summary">酒類販売のカクヤスは8月17日、同社が支援する一般社団法人リカバリングマインズ主催の「アルコール問題に関わる援助者のためのトレーニングプログラム」について、2026年の受講受付が始まったと発表した。こ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5092.html">
-                        <h3>睡眠状態に合わせてAIが香りを届ける、最新の快眠支援デバイス「Kimba」とは</h3>
+                    <a href="CNET_Japan_最新情報総合_4338.html">
+                        <h3>LINE、待望の「送信済みメッセージ編集」に対応　ただし今後は有料機能に</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「Kimba」はAIを活用した睡眠支援デバイスだ。個人に合わせた香りを放出し、より良い睡眠をサポートする。その仕組みを紹介する。.</p>
+                        <p class="related-summary">LINEヤフーは8月13日、コミュニケーションアプリ「LINE」で、送ったメッセージを15分以内なら後から編集できる機能「メッセージ編集」を、試験的な機能を試せる「LINEラボ」で順次提供し始めたと発...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5388.html">
-                        <h3>Polimill株式会社、総務省「公共分野における信頼できるAIを用いた開発実証事業」に採択。QommonsAIを検証プ...</h3>
+                    <a href="CNET_Japan_最新情報総合_2916.html">
+                        <h3>「ブラックホール星」の謎に迫る研究結果、天文学者らが公開</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Polimill株式会社、総務省「公共分野における信頼できるAIを用いた開発実証事業」に採択。QommonsAIを検証プラットフォームとして採用――5市町の実環境で国産LLM「PLaMo」を評価検証.</p>
+                        <p class="related-summary">ブラックホールと恒星の特徴を兼ね備えた天体「MoM-BH*-1」を調べてきた天文学者らは先週、その分析結果を学術誌Natureで発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2635.html">
-                        <h3>イグネス、AIエージェント「Blaze」に国内リージョン限定モードを追加</h3>
+                    <a href="CNET_Japan_最新情報総合_7043.html">
+                        <h3>米Amazon、規約で集団訴訟を禁止--利用で「同意」扱いに</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">イグネス、AIエージェント「Blaze」に国内リージョン限定モードを追加.</p>
+                        <p class="related-summary">米Amazonが利用規約を改定し、米国の顧客が同社に対して集団訴訟を起こすことを禁じる条項を盛り込んだ。今後、同社との間で紛争が生じた場合、顧客は裁判ではなく、第三者の仲裁人による個別の仲裁で解決する...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_3205.html">
-                        <h3>マイクロソフト株下落 AI巡り逆風</h3>
+                    <a href="CNET_Japan_最新情報総合_8024.html">
+                        <h3>ライフカード、顧客の信用情報を不適切に利用していたと発表</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
+                        <p class="related-summary">ライフカードは8月17日、グループ会社のアイフルから顧客の信用情報の一部を含む情報の提供を受け、保険商品の案内先の選定に使っていたと発表した。信用情報はアイフルが指定信用情報機関から取得したもので、内...</p>
                     </a>
                 </article>
             </div>

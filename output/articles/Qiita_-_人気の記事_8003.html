@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【AWS】AgentCoreの内部実装から読み解く認証フローと実行環境差 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 本記事は AWS の公式ドキュメントに載っていない部分を個人的に検証して確かめたことをまとめた記事です。そのため、正確な内部実装とは異なる可能性があることをご留意ください。 Amazon Bedrock AgentCore を Mac で開発・動作確認し.">
-    <meta name="keywords" content="Mac,AWS,本">
+    <title>Claude Codeに動画を見せる /watch-video、実は「渡すだけ」じゃなかった — 3つの深さを使い分ける | 日本のテックニュース速報</title>
+    <meta name="description" content="Claude Code に動画を見せて、内容を整理させる Skill が話題になっています。/watch-video というやつです。 紹介ではこう書かれていることが多いです。 動画を渡すだけで、文字起こし・重要フレーム抽出・画像解析・構造化ノート作成まで自動で実行 便.">
+    <meta name="keywords" content="Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【AWS】AgentCoreの内部実装から読み解く認証フローと実行環境差">
-    <meta property="og:description" content="はじめに 本記事は AWS の公式ドキュメントに載っていない部分を個人的に検証して確かめたことをまとめた記事です。そのため、正確な内部実装とは異なる可能性があることをご留意ください。 Amazon Bedrock AgentCore を Mac で開発・動作確認し.">
+    <meta property="og:title" content="Claude Codeに動画を見せる /watch-video、実は「渡すだけ」じゃなかった — 3つの深さを使い分ける">
+    <meta property="og:description" content="Claude Code に動画を見せて、内容を整理させる Skill が話題になっています。/watch-video というやつです。 紹介ではこう書かれていることが多いです。 動画を渡すだけで、文字起こし・重要フレーム抽出・画像解析・構造化ノート作成まで自動で実行 便.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8003.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【AWS】AgentCoreの内部実装から読み解く認証フローと実行環境差">
-    <meta name="twitter:description" content="はじめに 本記事は AWS の公式ドキュメントに載っていない部分を個人的に検証して確かめたことをまとめた記事です。そのため、正確な内部実装とは異なる可能性があることをご留意ください。 Amazon Bedrock AgentCore を Mac で開発・動作確認し.">
+    <meta name="twitter:title" content="Claude Codeに動画を見せる /watch-video、実は「渡すだけ」じゃなかった — 3つの深さを使い分ける">
+    <meta name="twitter:description" content="Claude Code に動画を見せて、内容を整理させる Skill が話題になっています。/watch-video というやつです。 紹介ではこう書かれていることが多いです。 動画を渡すだけで、文字起こし・重要フレーム抽出・画像解析・構造化ノート作成まで自動で実行 便.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【AWS】AgentCoreの内部実装から読み解く認証フローと実行環境差",
-        "description": "はじめに 本記事は AWS の公式ドキュメントに載っていない部分を個人的に検証して確かめたことをまとめた記事です。そのため、正確な内部実装とは異なる可能性があることをご留意ください。 Amazon Bedrock AgentCore を Mac で開発・動作確認し.",
+        "headline": "Claude Codeに動画を見せる /watch-video、実は「渡すだけ」じゃなかった — 3つの深さを使い分ける",
+        "description": "Claude Code に動画を見せて、内容を整理させる Skill が話題になっています。/watch-video というやつです。 紹介ではこう書かれていることが多いです。 動画を渡すだけで、文字起こし・重要フレーム抽出・画像解析・構造化ノート作成まで自動で実行 便.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-28T01:36:22",
-        "dateModified": "2026-03-29T05:44:59.387418",
+        "datePublished": "2026-08-16T23:43:14",
+        "dateModified": "2026-08-18T02:56:39.724573",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8003.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8003.html",
-        "articleSection": "Apple製品",
-        "keywords": ["Mac","AWS","本"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["Claude"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Apple製品",
-                "item": "https://toy1021.github.io/affiliate2/#category=Apple製品"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【AWS】AgentCoreの内部実装から読み解く認証フローと実行環境差",
+                "name": "Claude Codeに動画を見せる /watch-video、実は「渡すだけ」じゃなかった — 3つの深さを使い分ける",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8003.html"
             }
         ]
@@ -113,42 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=Apple製品">Apple製品</a></li>
-                <li aria-current="page">【AWS】AgentCoreの内部実装から読み解く認証フローと実行環境差</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">Claude Codeに動画を見せる /watch-video、実は「渡すだけ」じゃなかった — 3...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【AWS】AgentCoreの内部実装から読み解く認証フローと実行環境差</h1>
+                <h1>Claude Codeに動画を見せる /watch-video、実は「渡すだけ」じゃなかった — 3つの深さを使い分ける</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/yakumo_09/items/ee21d5fac4f99893127c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: Apple製品</span>
-                    <time datetime="2026-03-28T01:36:22">
-                        公開: 2026-03-28T01:36:22
+                    <span class="source">出典: <a href="https://qiita.com/jqit_suwa/items/fe5975104ffefa49f632?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-08-16T23:43:14">
+                        公開: 2026-08-16T23:43:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Mac</span>
-                    <span class="tag">AWS</span>
-                    <span class="tag">本</span>
+                    <span class="tag">Claude</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
+                    Claude Code に動画を見せて、内容を整理させる Skill が話題になっています。/watch-video というやつです。
+紹介ではこう書かれていることが多いです。
 
-本記事は AWS の公式ドキュメントに載っていない部分を個人的に検証して確かめたことをまとめた記事です。そのため、正確な内部実装とは異なる可能性があることをご留意ください。
+動画を渡すだけで、文字起こし・重要フレーム抽出・画像解析・構造化ノート作成まで自動で実行
 
-Amazon Bedrock AgentCore を Mac で開発・動作確認し...
+便...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/yakumo_09/items/ee21d5fac4f99893127c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/jqit_suwa/items/fe5975104ffefa49f632?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,30 +160,30 @@ Amazon Bedrock AgentCore を Mac で開発・動作確認し...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Mac - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -194,23 +193,23 @@ Amazon Bedrock AgentCore を Mac で開発・動作確認し...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>Apple製品関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">iPhone - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">MacBook - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +224,16 @@ Amazon Bedrock AgentCore を Mac で開発・動作確認し...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_3983.html">
+                    <a href="Qiita_-_人気の記事_8711.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">マイナポータルの運転免許に関する全てのサービスが｢iPhoneのマイナンバーカード｣のみで利用可能に</span>
+                        <span class="nav-title">Claude Codeの新機能、&#34;仕事の引き継ぎ&#34;じゃありません — 公式ドキュメントで確認した3つ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_8502.html">
+                    <a href="Zennのトレンド_6937.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">MacBookシリーズ全サイズ対応の保護パッド付きタクティカルトートバッグ「MinZ Tote Bo...</span>
+                        <span class="nav-title">RDS Proxyを導入して、数ヶ月で撤去した話</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +246,52 @@ Amazon Bedrock AgentCore を Mac で開発・動作確認し...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_870.html">
-                        <h3>アップル、「Siri」の大幅刷新で専用アプリ提供か　iOS 27で</h3>
+                    <a href="CNET_Japan_最新情報総合_5509.html">
+                        <h3>Claudeで障害　アクセスできず（復旧）</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アップルは、音声アシスタント「Siri」を10年以上前に提供開始して以来、最大級となる変更を計画しているようだ。.</p>
+                        <p class="related-summary">AnthropicのAIサービス「Claude」で障害が発生している模様だ。公式ステータスページで障害を告知しているほか、SNSでは「アクセスできない」などの投稿が相次いでいる。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4260.html">
-                        <h3>「iPhoneは国家機密も扱えるほど堅牢です」--アップルが宣言　「民生品では異例」とアピール</h3>
+                    <a href="CNET_Japan_最新情報総合_3307.html">
+                        <h3>ChatGPT、Macでのクリックや文字入力を記憶する新機能--「あのファイルはどこ？」にも回答</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Appleは3月26日、iPhoneとiPadがNATOの機密情報を扱うための認可を取得したと発表した。対象は「NATO RESTRICTED」（NATO制限付き）レベルの情報で、同社によると、消費者...</p>
+                        <p class="related-summary">OpenAIは、macOS版「ChatGPT」デスクトップアプリに新機能「Computer History」を追加した。アプリやウェブサイトでのクリックや文字入力といった操作履歴を、画面を撮影せずに記...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_9060.html">
-                        <h3>C SmartのPCバッグやポーチが貰える｢新生活応援キャンペーン｣は3月31日まで ｰ ｢MacBook Neo｣と｢...</h3>
+                    <a href="CNET_Japan_最新情報総合_4823.html">
+                        <h3>ギターアンプにもなる！ ポータブルBluetoothスピーカー「JBL BandBox」</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Apple Premium ResellerのC Smartは3月初めより公式オンラインストア限定で対象の13インチの「MacBook」を購入するとPCバッグなどが貰える「新生活応援キャンペーン」を開...</p>
+                        <p class="related-summary">「JBL BandBox」は、ギターアンプシミュレーターとエフェクター内蔵のBluetoothスピーカー。AIステム分離機能も搭載し、楽曲をアカペラや演奏だけで再生したり、不要パートをミュートして自分...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_2232.html">
-                        <h3>Apple50周年記念イベントのフィナーレは3月31日の夕方以降に｢Apple Park｣で開催へ ｰ ポール・マッカー...</h3>
+                    <a href="CNET_Japan_最新情報総合_895.html">
+                        <h3>「あなたはAIエージェントに買い物を任せたいですか」 Visaが調査--消費者の回答は</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Appleは日本を含む世界各国で創業50周年記念イベントを開催してきましたが、そのフィナーレは同社本社キャンパス「Apple Park」で開催されます。 「Apple Park」内にある「Apple ...</p>
+                        <p class="related-summary">ビザ・ワールドワイド・ジャパンは8月17日、オンラインでの買い物にAIやAIエージェントをどこまで任せられるかを尋ねた消費者調査の結果を発表した。AIを活用した購買体験への関心は高まる一方、購入判断や...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_8502.html">
-                        <h3>MacBookシリーズ全サイズ対応の保護パッド付きタクティカルトートバッグ「MinZ Tote Book for Mac...</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_6386.html">
+                        <h3>AI事業者向け政府知財保護案 判明</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">アシカンが、Appleの「MacBook」シリーズの全サイズに対応した保護パッド付きタクティカルトートバッグ「MinZ Tote Book for MacBook」を発売しました。 「MinZ Tot...</p>
                     </a>
                 </article>
             </div>

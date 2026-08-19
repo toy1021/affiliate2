@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>「ソフトウェアアーキテクチャの基礎」を読んで設計判断の引き出しが増えた | 日本のテックニュース速報</title>
-    <meta name="description" content="! 書籍情報 書名：ソフトウェアアーキテクチャの基礎 第2版 ―エンジニアリングに基づく体系的アプローチ 著者：Mark Richards, Neal Ford 訳者：島田浩二 出版社：オライリー・ジャパン はじめに 「ソフトウェアアーキテクチャの基礎」を読んだ">
-    <meta name="keywords" content="AI,書籍">
+    <title>RDS Proxyを導入して、数ヶ月で撤去した話 | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは。 Dress Code株式会社でプロダクトエンジニアをしているぽこひで（@pokohide）です。 アプリ用のAurora PostgreSQLにRDS Proxyを導入し、数ヶ月運用した末に撤去しました。導入から撤去までの経緯と、判断の根拠にした実測値をまとめます">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="「ソフトウェアアーキテクチャの基礎」を読んで設計判断の引き出しが増えた">
-    <meta property="og:description" content="! 書籍情報 書名：ソフトウェアアーキテクチャの基礎 第2版 ―エンジニアリングに基づく体系的アプローチ 著者：Mark Richards, Neal Ford 訳者：島田浩二 出版社：オライリー・ジャパン はじめに 「ソフトウェアアーキテクチャの基礎」を読んだ">
+    <meta property="og:title" content="RDS Proxyを導入して、数ヶ月で撤去した話">
+    <meta property="og:description" content="こんにちは。 Dress Code株式会社でプロダクトエンジニアをしているぽこひで（@pokohide）です。 アプリ用のAurora PostgreSQLにRDS Proxyを導入し、数ヶ月運用した末に撤去しました。導入から撤去までの経緯と、判断の根拠にした実測値をまとめます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1868.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="「ソフトウェアアーキテクチャの基礎」を読んで設計判断の引き出しが増えた">
-    <meta name="twitter:description" content="! 書籍情報 書名：ソフトウェアアーキテクチャの基礎 第2版 ―エンジニアリングに基づく体系的アプローチ 著者：Mark Richards, Neal Ford 訳者：島田浩二 出版社：オライリー・ジャパン はじめに 「ソフトウェアアーキテクチャの基礎」を読んだ">
+    <meta name="twitter:title" content="RDS Proxyを導入して、数ヶ月で撤去した話">
+    <meta name="twitter:description" content="こんにちは。 Dress Code株式会社でプロダクトエンジニアをしているぽこひで（@pokohide）です。 アプリ用のAurora PostgreSQLにRDS Proxyを導入し、数ヶ月運用した末に撤去しました。導入から撤去までの経緯と、判断の根拠にした実測値をまとめます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "「ソフトウェアアーキテクチャの基礎」を読んで設計判断の引き出しが増えた",
-        "description": "! 書籍情報 書名：ソフトウェアアーキテクチャの基礎 第2版 ―エンジニアリングに基づく体系的アプローチ 著者：Mark Richards, Neal Ford 訳者：島田浩二 出版社：オライリー・ジャパン はじめに 「ソフトウェアアーキテクチャの基礎」を読んだ",
+        "headline": "RDS Proxyを導入して、数ヶ月で撤去した話",
+        "description": "こんにちは。 Dress Code株式会社でプロダクトエンジニアをしているぽこひで（@pokohide）です。 アプリ用のAurora PostgreSQLにRDS Proxyを導入し、数ヶ月運用した末に撤去しました。導入から撤去までの経緯と、判断の根拠にした実測値をまとめます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-26T03:47:06",
-        "dateModified": "2026-07-27T23:03:01.050912",
+        "datePublished": "2026-08-17T00:00:14",
+        "dateModified": "2026-08-19T04:37:44.077305",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1868.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1868.html",
         "articleSection": "プログラミング",
-        "keywords": ["AI","書籍"]
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "「ソフトウェアアーキテクチャの基礎」を読んで設計判断の引き出しが増えた",
+                "name": "RDS Proxyを導入して、数ヶ月で撤去した話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1868.html"
             }
         ]
@@ -114,52 +114,42 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">「ソフトウェアアーキテクチャの基礎」を読んで設計判断の引き出しが増えた</li>
+                <li aria-current="page">RDS Proxyを導入して、数ヶ月で撤去した話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>「ソフトウェアアーキテクチャの基礎」を読んで設計判断の引き出しが増えた</h1>
+                <h1>RDS Proxyを導入して、数ヶ月で撤去した話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/raamenwakamatu/articles/software-architecture-fundamentals-review" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/dress_code/articles/da536c39873876" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-07-26T03:47:06">
-                        公開: 2026-07-26T03:47:06
+                    <time datetime="2026-08-17T00:00:14">
+                        公開: 2026-08-17T00:00:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">書籍</span>
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-書籍情報
+                    こんにちは。
+Dress Code株式会社でプロダクトエンジニアをしているぽこひで（@pokohide）です。
+アプリ用のAurora PostgreSQLにRDS Proxyを導入し、数ヶ月運用した末に撤去しました。導入から撤去までの経緯と、判断の根拠にした実測値をまとめます。
+先に結論です。
 
-
-書名：ソフトウェアアーキテクチャの基礎 第2版 ―エンジニアリングに基づく体系的アプローチ
-
-著者：Mark Richards, Neal Ford
-
-訳者：島田浩二
-
-出版社：オライリー・ジャパン
-
-
-
- はじめに
-「ソフトウェアアーキテクチャの基礎」を読んだ。
-AIエージェントの普及によって、開発者一人がカバーする範囲が広がっている。社内アプリであればフロント・バック・インフラをひとりで担当するケースも珍しくなくなってきた。実装はAIに任せる分、自分たちに求められるのはインフラ構成の判断・コードレビュー・セキュリティの担保など、より上位の視点だと感じている。いわばA...
+Prismaが生成する16KB超のSQLテキストは、RDS Proxyのセッションピン留めを引き起こす。AWS全エンジン共通のハード制限で、設定では回避できない
+弊社では全クライアントセッションの約2割でピン留めが発生し、接続の多重化がほぼ機能していなかった
+月数百ドルのコストとProxy層固...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/raamenwakamatu/articles/software-architecture-fundamentals-review" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/dress_code/articles/da536c39873876" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -172,20 +162,10 @@ AIエージェントの普及によって、開発者一人がカバーする範
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9B%B8%E7%B1%8D&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="書籍 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">書籍 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで書籍に関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -196,6 +176,16 @@ AIエージェントの普及によって、開発者一人がカバーする範
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
                                     <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -236,16 +226,16 @@ AIエージェントの普及によって、開発者一人がカバーする範
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_6959.html">
+                    <a href="iPhone_Mania_3985.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Opus 5では今までのプロンプトが逆効果に。「検証して」を消して「簡潔に」と書くべし。公式プロンプ...</span>
+                        <span class="nav-title">iPhoneのアラームが自動で止まる！ショートカットを使った自動停止のやり方</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_972.html">
+                    <a href="Zennのトレンド_2277.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AI時代のプロジェクトコミュニケーション構造を考える</span>
+                        <span class="nav-title">Google Workspace StudioとGemini Notebookで社内問い合わせサポー...</span>
                     </a>
                 </div>
             </div>
@@ -258,53 +248,53 @@ AIエージェントの普及によって、開発者一人がカバーする範
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9439.html">
-                        <h3>ブラウザ完結のLua開発環境を無料開放、オンプレミス連携機能も追加</h3>
+                    <a href="ASCII_jp__トップ_3421.html">
+                        <h3>3つの球体で自由自在＆精密に移動できる、全方向移動プラットフォームで挑む製造現場の変革</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">株式会社obnizは7月16日、同社のIoT開発プラットフォーム「obnizCloud」の開発者コンソールをリニューアルし、2つの新機能となる「オンラインLuaエディタ」と「セルフホスティング URL...</p>
+                        <p class="related-summary">九州工業大学および産業技術総合研究所発のスタートアップ企業であるTriOrb（トライオーブ）は、製造の現場で資材や仕掛品、さらにはアームロボットなどの設備も移動させられる、新方式の全方向移動ロボットを...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_5646.html">
-                        <h3>SaaSにおけるUI開発のよくある課題とその解決方法、教えます［PR］</h3>
+                    <a href="Qiita_-_人気の記事_8211.html">
+                        <h3>TransformerのKVキャッシュを用いたDecode処理を理解する</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">こんにちは、DeNAでデータサイエンティストをやっているまつけんです。 今回は、TransformerのKVキャッシュを用いたDecode処理について解説していきたいと思います。 Transforme...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_3508.html">
+                        <h3>Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">rs 背景 私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And. こんにちは。itome(@ito...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_9.html">
+                        <h3>Cursor Originを触った。第一印象は「Cursor版GitHub」</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">Cursor Originは、Cursorが出しているGitホスティングです。リポジトリを置いて、レビューして、マージする。GitHubやGitLabと同じ役割です。公式のコピーは &#34;A git fo...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_6603.html">
+                        <h3>事例で学ぶ、SaaSの開発を加速しつつプロダクト品質も引き上げる上手な方法とは？［PR］</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Publickey</span>
                         </div>
                         <p class="related-summary">jetform-wrapper { border: 2px solid #ccc; /* 枠線 / padding: 20px; / 内側の余白 / border-radius: 12p.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_7875.html">
-                        <h3>ステージング環境をセルフサービス化しチームの開発速度を向上させた方法</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに 現在、複数人の開発メンバーで新規のWebアプリケーションを開発しています。 開発メンバーは5人、さらに、仕様駆動開発の考えを導入した上でDevinも実装者に加わっています。 インフラの構築が...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6748.html">
-                        <h3>「経験がないから」を言い訳にしなくていい時代になった</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1414.html">
-                        <h3>[Python]4つのデータ構造の特徴と使用用途 ※初心者向け</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">目次 はじめに リスト（list） タプル（tuple） 辞書（dict） 集合（set） 終わりに はじめに Pythonには「リスト」「タプル」「辞書」「集合」と呼ばれる4つのデータ構造があります...</p>
                     </a>
                 </article>
             </div>

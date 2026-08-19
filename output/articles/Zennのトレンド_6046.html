@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>リファクタリングにドメイン知識が要るなら、その知識はどこに置くのか | 日本のテックニュース速報</title>
-    <meta name="description" content="2026年6月、あるポストが流れてきた。 「正しくリファクタリングしようとするとドメイン知識が必須になり、顧客の文脈や要求まで遡る必要がある」という趣旨だ。 この指摘は正しい。 問題は「ではそのドメイン知識を、開発プロセスのどこに、どんな形式で保管するのか」が語られることが少ない点にある">
-    <meta name="keywords" content="AI,本">
+    <title>ネットワークエンジニアのためのデータ表現詳解 | 日本のテックニュース速報</title>
+    <meta name="description" content="📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます">
+    <meta name="keywords" content="Python,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="リファクタリングにドメイン知識が要るなら、その知識はどこに置くのか">
-    <meta property="og:description" content="2026年6月、あるポストが流れてきた。 「正しくリファクタリングしようとするとドメイン知識が必須になり、顧客の文脈や要求まで遡る必要がある」という趣旨だ。 この指摘は正しい。 問題は「ではそのドメイン知識を、開発プロセスのどこに、どんな形式で保管するのか」が語られることが少ない点にある">
+    <meta property="og:title" content="ネットワークエンジニアのためのデータ表現詳解">
+    <meta property="og:description" content="📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6046.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="リファクタリングにドメイン知識が要るなら、その知識はどこに置くのか">
-    <meta name="twitter:description" content="2026年6月、あるポストが流れてきた。 「正しくリファクタリングしようとするとドメイン知識が必須になり、顧客の文脈や要求まで遡る必要がある」という趣旨だ。 この指摘は正しい。 問題は「ではそのドメイン知識を、開発プロセスのどこに、どんな形式で保管するのか」が語られることが少ない点にある">
+    <meta name="twitter:title" content="ネットワークエンジニアのためのデータ表現詳解">
+    <meta name="twitter:description" content="📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6046.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="4">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "リファクタリングにドメイン知識が要るなら、その知識はどこに置くのか",
-        "description": "2026年6月、あるポストが流れてきた。 「正しくリファクタリングしようとするとドメイン知識が必須になり、顧客の文脈や要求まで遡る必要がある」という趣旨だ。 この指摘は正しい。 問題は「ではそのドメイン知識を、開発プロセスのどこに、どんな形式で保管するのか」が語られることが少ない点にある",
+        "headline": "ネットワークエンジニアのためのデータ表現詳解",
+        "description": "📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-19T04:26:17",
-        "dateModified": "2026-06-21T15:52:58.774139",
+        "datePublished": "2026-08-16T22:37:14",
+        "dateModified": "2026-08-19T04:37:44.077476",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6046.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6046.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","本"]
+        "articleSection": "プログラミング",
+        "keywords": ["Python","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "リファクタリングにドメイン知識が要るなら、その知識はどこに置くのか",
+                "name": "ネットワークエンジニアのためのデータ表現詳解",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6046.html"
             }
         ]
@@ -113,25 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">リファクタリングにドメイン知識が要るなら、その知識はどこに置くのか</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">ネットワークエンジニアのためのデータ表現詳解</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>リファクタリングにドメイン知識が要るなら、その知識はどこに置くのか</h1>
+                <h1>ネットワークエンジニアのためのデータ表現詳解</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/417/articles/ai-era-domain-knowledge-placement" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-19T04:26:17">
-                        公開: 2026-06-19T04:26:17
+                    <span class="source">出典: <a href="https://zenn.dev/moko_nw/books/au_dataex_01" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-08-16T22:37:14">
+                        公開: 2026-08-16T22:37:14
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約4分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">Python</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -139,20 +139,44 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    2026年6月、あるポストが流れてきた。
-「正しくリファクタリングしようとするとドメイン知識が必須になり、顧客の文脈や要求まで遡る必要がある」という趣旨だ。
-この指摘は正しい。
-問題は「ではそのドメイン知識を、開発プロセスのどこに、どんな形式で保管するのか」が語られることが少ない点にある。
-知識の保管場所を間違えると、リファクタリングの前提になる情報そのものが腐敗する。
-AIコーディングエージェントが当たり前になった現在、この問題はさらに深刻になっている。
-本記事では、プロダクト開発で扱う知識を4種類に分類し、それぞれの適切な配置先を整理する。
+                    📢 【連載に関するお知らせ】
+  本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。
+  
+  💡 【前作との関係について】
+  本書は単独でお読みいただけます。前作『ネットワークエンジニアのためのPython基礎』の読了は本書を読むための前提条件ではありません。Pythonの基礎から勉強したい方には前作が参考になりますので、必要に応じてご活用ください。
+  
+  🚀 ネットワークエンジニアのためのデータ表現詳解 — Pythonで操るインフラデータ完全攻略
+  
+  ネットワーク自動化の成否を分ける「データ表現」の扱いを、6つのフォーマット×Pythonで体系的にマスターする実践ロードマップ。
+    
+  📚 【本書で学べること（カリキュラム）】
+  
+  ✔️ 導入（第1回）：なぜ「6つのデータ表現」を極めるべきなのか？  
+  ✔️ Part 1: TXT（第2〜3回） —非構造化テキスト（CLIログ）からの正規表現抽出
+  ✔️ Part 2: CSV（第4〜5回） — CSVパラメータシートからのコンフィグ自動生成
+  ✔️ Part 3: XML（第6〜10回） — 階層構造を持つXMLツリーのパースと構築
+  ✔️ Part 4: JSON（第11〜15回） — NW自動化で必須となるJSONの相互変換・ハンドリング
+  ✔️ Part 5: YAML（第16〜20回） — YAMLの応用操作（アンカー・エイリアス・マージキー）  
+  ✔️ Part 6: TOML（第21〜22回） — モダンなTOML設定ファイルの安全な読み書き  
+  ✔️ Part 7: 各フォーマットの比較と実務での使い分け（第23〜24回）
+  
+  🎯 【こんな人におすすめ】
+  
+  ✔️ Pythonの基本構文（変数・for/if・関数定義）は理解しており、ネットワーク実務の自動化・効率化を目指すインフラエンジニア
+  レガシー機器のCLI操作から、モダンなREST API連携・Ansible運用を見据えた、データ処理の基盤スキルを一気通貫で身につけたい方。
+   
+  ✔️ REST APIやNETCONFとの連携に挑戦したいが、JSONやXMLの扱いに不安がある方
+  データフォーマットの基礎から応用まで段階的に学び、自信を持ってAPIドキュメントを読み解けるようになりたい方。
+  
+  📖 【販売・公開に関するご案内】
+  
+  本書は第1回から第3回まで無料で公開しており、第4回以降が基本的に有料となります。（※各パートの導入など、一部の章は例外的に無料公開とする場合があります）
 
- 知識には4つの種類がある
-t_wada...
+  ご購入前に著者の執筆スタイルやコンテンツの品質を確認されたい方は、完全無料公開している前作『ネットワークエンジニアのためのPython基礎』をご参照いただければ幸いです。
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/417/articles/ai-era-domain-knowledge-placement" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/moko_nw/books/au_dataex_01" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -165,10 +189,10 @@ t_wada...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -185,10 +209,10 @@ t_wada...
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -198,23 +222,23 @@ t_wada...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -229,16 +253,16 @@ t_wada...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5142.html">
+                    <a href="Zennのトレンド_8552.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ChatGPT広告表示 日本国内で開始</span>
+                        <span class="nav-title">Codexを効率よく使う方法（ChatGPT + GitHub）</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2136.html">
+                    <a href="iPhone_Mania_3985.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">LLM はマークダウンファイル全体を読んでいる。その必要はない。</span>
+                        <span class="nav-title">iPhoneのアラームが自動で止まる！ショートカットを使った自動停止のやり方</span>
                     </a>
                 </div>
             </div>
@@ -251,53 +275,53 @@ t_wada...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1976.html">
-                        <h3>「Claude」で障害発生（復旧）</h3>
+                    <a href="ASCII_jp__トップ_3421.html">
+                        <h3>3つの球体で自由自在＆精密に移動できる、全方向移動プラットフォームで挑む製造現場の変革</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">Anthropicの生成AIサービス「Claude」（クロード）で障害が発生している模様だ。SNSで「使えない」などの投稿が多数上がっている他、筆者の環境でも16時15分現在、利用できなくなっている。...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8768.html">
-                        <h3>「この写真を復元して」と入力するだけ、ChatGPTが過激な画像を生成する抜け穴が発覚</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">「ChatGPT」が「この写真を復元して」というプロンプトによって、性的で生々しい暴力表現を含む画像を容易に生成していたことが分かった。AIサイバーセキュリティ・調査会社であるMindgardが報告書...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_235.html">
-                        <h3>画像AIのMidjourney、体内を全身3Dスキャンする「Midjorney Scanner」発表　畑違いの医療参入</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">画像生成AIで知られる米Midjourneyが、医療分野に乗り出す。同社は現地時間6月17日、新事業「Midjourney Medical」を立ち上げ、第1弾となるハードウェア「Midjourney ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_9464.html">
-                        <h3>AWS、AIエージェントがリポジトリを自動スキャンして技術的負債を指摘してくれる「AWS Transform – con...</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">Amazon Web Services（AWS）は、AIエージェントがコードリポジトリを継続的に自動スキャンし、サポートが終了したライブラリやフレームワークなどを始めとする技術的負債を検出し、優先順位...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_4177.html">
-                        <h3>コンクルーAI、「工程表AIエージェント」を提供開始――案件情報や過去の工程表などを参照して、AIが工程表を自動生成</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">コンクルーAI、「工程表AIエージェント」を提供開始――案件情報や過去の工程表などを参照して、AIが工程表を自動生成.</p>
+                        <p class="related-summary">九州工業大学および産業技術総合研究所発のスタートアップ企業であるTriOrb（トライオーブ）は、製造の現場で資材や仕掛品、さらにはアームロボットなどの設備も移動させられる、新方式の全方向移動ロボットを...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_8211.html">
+                        <h3>TransformerのKVキャッシュを用いたDecode処理を理解する</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">こんにちは、DeNAでデータサイエンティストをやっているまつけんです。 今回は、TransformerのKVキャッシュを用いたDecode処理について解説していきたいと思います。 Transforme...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_3508.html">
+                        <h3>Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">rs 背景 私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And. こんにちは。itome(@ito...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_9.html">
+                        <h3>Cursor Originを触った。第一印象は「Cursor版GitHub」</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">Cursor Originは、Cursorが出しているGitホスティングです。リポジトリを置いて、レビューして、マージする。GitHubやGitLabと同じ役割です。公式のコピーは &#34;A git fo...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_6603.html">
+                        <h3>事例で学ぶ、SaaSの開発を加速しつつプロダクト品質も引き上げる上手な方法とは？［PR］</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">jetform-wrapper { border: 2px solid #ccc; /* 枠線 / padding: 20px; / 内側の余白 / border-radius: 12p.</p>
                     </a>
                 </article>
             </div>

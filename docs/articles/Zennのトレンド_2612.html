@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>anyhowとthiserrorの内部実装を覗いてみる | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに anyhowとthiserrorを実務で使っていて、「なぜこの場面でこちらを選ぶのか」を明確に説明できるでしょうか。 よくある説明は「anyhowはアプリケーション用、thiserrorはライブラリ用」というものです">
-    <meta name="keywords" content="本">
+    <title>Claude Codeに見せない技術: AIに入力できないデータを分析する | 日本のテックニュース速報</title>
+    <meta name="description" content="jsonにdenyを書くだけではなく、5層： データ分離 permissions sandbox hooks 運用ルール で、機密情報をAIに「見せられない」状態を作ります。あわせて、その設定漏れ・劣化[1]を自動検知する仕組みも用意します">
+    <meta name="keywords" content="AI,Claude,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="anyhowとthiserrorの内部実装を覗いてみる">
-    <meta property="og:description" content="はじめに anyhowとthiserrorを実務で使っていて、「なぜこの場面でこちらを選ぶのか」を明確に説明できるでしょうか。 よくある説明は「anyhowはアプリケーション用、thiserrorはライブラリ用」というものです">
+    <meta property="og:title" content="Claude Codeに見せない技術: AIに入力できないデータを分析する">
+    <meta property="og:description" content="jsonにdenyを書くだけではなく、5層： データ分離 permissions sandbox hooks 運用ルール で、機密情報をAIに「見せられない」状態を作ります。あわせて、その設定漏れ・劣化[1]を自動検知する仕組みも用意します">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2612.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="anyhowとthiserrorの内部実装を覗いてみる">
-    <meta name="twitter:description" content="はじめに anyhowとthiserrorを実務で使っていて、「なぜこの場面でこちらを選ぶのか」を明確に説明できるでしょうか。 よくある説明は「anyhowはアプリケーション用、thiserrorはライブラリ用」というものです">
+    <meta name="twitter:title" content="Claude Codeに見せない技術: AIに入力できないデータを分析する">
+    <meta name="twitter:description" content="jsonにdenyを書くだけではなく、5層： データ分離 permissions sandbox hooks 運用ルール で、機密情報をAIに「見せられない」状態を作ります。あわせて、その設定漏れ・劣化[1]を自動検知する仕組みも用意します">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "anyhowとthiserrorの内部実装を覗いてみる",
-        "description": "はじめに anyhowとthiserrorを実務で使っていて、「なぜこの場面でこちらを選ぶのか」を明確に説明できるでしょうか。 よくある説明は「anyhowはアプリケーション用、thiserrorはライブラリ用」というものです",
+        "headline": "Claude Codeに見せない技術: AIに入力できないデータを分析する",
+        "description": "jsonにdenyを書くだけではなく、5層： データ分離 permissions sandbox hooks 運用ルール で、機密情報をAIに「見せられない」状態を作ります。あわせて、その設定漏れ・劣化[1]を自動検知する仕組みも用意します",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-24T09:01:57",
-        "dateModified": "2026-04-25T02:31:24.875461",
+        "datePublished": "2026-08-18T02:55:05",
+        "dateModified": "2026-08-19T20:28:23.757178",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2612.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2612.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","Claude","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "anyhowとthiserrorの内部実装を覗いてみる",
+                "name": "Claude Codeに見せない技術: AIに入力できないデータを分析する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2612.html"
             }
         ]
@@ -113,24 +113,26 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">anyhowとthiserrorの内部実装を覗いてみる</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">Claude Codeに見せない技術: AIに入力できないデータを分析する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>anyhowとthiserrorの内部実装を覗いてみる</h1>
+                <h1>Claude Codeに見せない技術: AIに入力できないデータを分析する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/uniquevision/articles/f2b75b4109ea14" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-04-24T09:01:57">
-                        公開: 2026-04-24T09:01:57
+                    <span class="source">出典: <a href="https://zenn.dev/green_tea/articles/a994964786cb4f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-08-18T02:55:05">
+                        公開: 2026-08-18T02:55:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -138,16 +140,28 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-anyhowとthiserrorを実務で使っていて、「なぜこの場面でこちらを選ぶのか」を明確に説明できるでしょうか。
-よくある説明は「anyhowはアプリケーション用、thiserrorはライブラリ用」というものです。しかしこの分類では不十分で、実際にはライブラリ内部でanyhowが適切な場面もあれば、アプリケーションでthiserrorが必要な場面もあります。
-本記事では、両クレートの内部実装に踏み込み、それぞれが何をしていて何が違うのかを見ていきます。内部の仕組みを知ることで、使い分けの解像度が上がるはずです。
+                    !
+本記事では、単にsettings.jsonにdenyを書くだけではなく、5層：
+
+データ分離
+permissions
+sandbox
+hooks
+運用ルール
+
+で、機密情報をAIに「見せられない」状態を作ります。あわせて、その設定漏れ・劣化[1]を自動検知する仕組みも用意します。
+
 !
-本記事の内容は anyhow 1.0.x / this...
+Claude Codeは更新が速く、設定キーやフックの仕様は変わり得ます。導入時は公式ドキュメントで最新仕様を確認し、記事後半の「すり抜けテスト」で動作検証をしてから運用してください。本記事の記述は2026年8月時点のドキュメントに基づいています。
+
+
+ 先に結論: 要点と環境構築
+!
+本記事は私の力...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/uniquevision/articles/f2b75b4109ea14" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/green_tea/articles/a994964786cb4f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,10 +174,30 @@ anyhowとthiserrorを実務で使っていて、「なぜこの場面でこち�
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -173,23 +207,23 @@ anyhowとthiserrorを実務で使っていて、「なぜこの場面でこち�
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -204,16 +238,16 @@ anyhowとthiserrorを実務で使っていて、「なぜこの場面でこち�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_1542.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_7422.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">プッシュ通知の許可フロー設計 ― ブラウザやデバイスごとの違いと実装パターン</span>
+                        <span class="nav-title">電子書籍や動画「購入」巡る課題</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_1288.html">
+                    <a href="Qiita_-_人気の記事_8204.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">SwitchBot、成長型AIパートナーロボット｢KATAフレンズ｣の｢GWお迎え応援キャンペーン｣...</span>
+                        <span class="nav-title">学習メモ：Findyと考える「個人を超えたAIの生産性をどう測定するか」 #oreilly_chom...</span>
                     </a>
                 </div>
             </div>
@@ -226,53 +260,53 @@ anyhowとthiserrorを実務で使っていて、「なぜこの場面でこち�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1995.html">
-                        <h3>旧型テスラ車（HW3）は監視なしFSDを利用できない--マスク氏明言　HW4仕様への改修サービスも</h3>
+                    <a href="CNET_Japan_最新情報総合_8743.html">
+                        <h3>ソフトバンク系、AIイヤホン「GLIDiC AI +u Buds」一般販売　会議や商談も要約</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米テスラが販売してきた「フルセルフドライビング（FSD）」をすでに購入済みのオーナーにとって、アップグレードの道のりは想像以上に面倒なものになりそうだ。一部の購入者は、最大で1万5000ドル（日本では...</p>
+                        <p class="related-summary">SB C&amp;Sは8月18日、AIイヤホン「GLIDiC AI +u Buds」を一般発売した。会議や通話をワンプッシュで録音し、AIが文字起こしと要約を行い、「次の一手」まで助言するのが特徴だ。同日から...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1502.html">
-                        <h3>シャオミ、1万2800円の「タワーファン」発売　モバイルバッテリーで動く扇風機も同時投入</h3>
+                    <a href="CNET_Japan_最新情報総合_8607.html">
+                        <h3>FCNT、メモリ高騰下でも10万円切りハイエンドスマホ「arrows Alpha2」--8月27日発売</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">小米技術日本（シャオミ・ジャパン）は4月23日、広角送風設計のタワー型ファン「Xiaomi スマートタワーファン 2」と、超薄型デザインの「Mijia スマート扇風機 Pro Slim」の2モデルを発...</p>
+                        <p class="related-summary">FCNTは8月27日、arrowsシリーズ最上位スマートフォン「arrows Alpha2」を発売する。AI需要によるメモリ価格高騰が続く中、部材調達と製造の見直しでメモリを除く原価を前モデル比10％...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_935.html">
-                        <h3>あなたの街の財政状況をワンクリックで可視化--デジタル庁らがダッシュボード公開</h3>
+                    <a href="CNET_Japan_最新情報総合_6707.html">
+                        <h3>OpenAI、AIの開発ペースを一時減速　最新モデルの強化学習を2週間停止　暴走リスクの高まりで</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">総務省は4月24日、デジタル庁と連携して整備を進めてきた「地方財政ダッシュボード」の市町村版を、総務省およびデジタル庁のウェブサイト上で公開した。毎年度の地方財政状況調査（決算統計）で把握している全国...</p>
+                        <p class="related-summary">OpenAIは米国時間8月18日、最先端AIモデルの開発ペースを一時的に緩めたと明らかにした。提供を予定している最新モデルの強化学習（RL）訓練を2週間止め、計画していた最大規模のRL訓練は今も保留に...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5306.html">
-                        <h3>6800円のスマートバンド「HUAWEI Band 11」発売</h3>
+                    <a href="CNET_Japan_最新情報総合_5045.html">
+                        <h3>「ティーン向けChatGPT」登場、依存リスクを軽減し学習を支援</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ファーウェイ・ジャパン（華為技術日本）は4月24日、エントリースマートウォッチ「HUAWEI Band 11」シリーズの新モデルとして、高耐久ポリマー製ボディを採用した「HUAWEI Band 11」...</p>
+                        <p class="related-summary">OpenAIは、若年層による生成AIツールの利用をめぐって懸念が高まる中、「ティーン向けChatGPT」の提供を開始したと発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_5054.html">
-                        <h3>DJI、中国で新型ワイヤレスマイク「DJI Mic Mini 2」を発表 ｰ 音声トーンプリセット対応や充電速度の向上、...</h3>
+                    <a href="CNET_Japan_最新情報総合_6243.html">
+                        <h3>自力で修理できる究極のエコスマホ「Fairphone (Gen. 6+)」発売</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">お伝えし忘れておりましたが、DJIが先日に中国で新型ワイヤレスマイク「DJI Mic Mini 2」を発表しました。 「DJI Mic Mini 2」は日本でも4月28日に発表予定ですが、中国で先行し...</p>
+                        <p class="related-summary">モジュール式で修理しやすく、競合製品よりもサステナブルなスマートフォンをうたう「Fairphone (Gen.</p>
                     </a>
                 </article>
             </div>

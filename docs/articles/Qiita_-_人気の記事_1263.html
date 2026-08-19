@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS Organization間のアカウント移行でTransit GatewayのRAM共有はどうなるか、実際に移行して確認した | 日本のテックニュース速報</title>
-    <meta name="description" content="概要 前回、下記記事で、AWS Organizations間のアカウント移行でRAM共有が外れる理由と、共有を維持する設定を確認しました。 こちらのマニュアルに記載の通り、組織の作成から7日、組織内で作成したメンバーアカウントは作成から4日が経過するまで別の組織へ移.">
-    <meta name="keywords" content="AWS">
+    <title>S3時代のファントムファイル | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに ファイル削除機能を実装するとき、DBの行とS3のオブジェクトのどちらを先に消すか、考えた経験は過去にありますか？ この2つは、絶対に同時には消えず、DBのトランザクションはS3まで面倒を見てくれないので、どちらかが先に消え、間で処理が落ちれば必ず不整合が生まれま.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AWS Organization間のアカウント移行でTransit GatewayのRAM共有はどうなるか、実際に移行して確認した">
-    <meta property="og:description" content="概要 前回、下記記事で、AWS Organizations間のアカウント移行でRAM共有が外れる理由と、共有を維持する設定を確認しました。 こちらのマニュアルに記載の通り、組織の作成から7日、組織内で作成したメンバーアカウントは作成から4日が経過するまで別の組織へ移.">
+    <meta property="og:title" content="S3時代のファントムファイル">
+    <meta property="og:description" content="はじめに ファイル削除機能を実装するとき、DBの行とS3のオブジェクトのどちらを先に消すか、考えた経験は過去にありますか？ この2つは、絶対に同時には消えず、DBのトランザクションはS3まで面倒を見てくれないので、どちらかが先に消え、間で処理が落ちれば必ず不整合が生まれま.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1263.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AWS Organization間のアカウント移行でTransit GatewayのRAM共有はどうなるか、実際に移行して確認した">
-    <meta name="twitter:description" content="概要 前回、下記記事で、AWS Organizations間のアカウント移行でRAM共有が外れる理由と、共有を維持する設定を確認しました。 こちらのマニュアルに記載の通り、組織の作成から7日、組織内で作成したメンバーアカウントは作成から4日が経過するまで別の組織へ移.">
+    <meta name="twitter:title" content="S3時代のファントムファイル">
+    <meta name="twitter:description" content="はじめに ファイル削除機能を実装するとき、DBの行とS3のオブジェクトのどちらを先に消すか、考えた経験は過去にありますか？ この2つは、絶対に同時には消えず、DBのトランザクションはS3まで面倒を見てくれないので、どちらかが先に消え、間で処理が落ちれば必ず不整合が生まれま.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AWS Organization間のアカウント移行でTransit GatewayのRAM共有はどうなるか、実際に移行して確認した",
-        "description": "概要 前回、下記記事で、AWS Organizations間のアカウント移行でRAM共有が外れる理由と、共有を維持する設定を確認しました。 こちらのマニュアルに記載の通り、組織の作成から7日、組織内で作成したメンバーアカウントは作成から4日が経過するまで別の組織へ移.",
+        "headline": "S3時代のファントムファイル",
+        "description": "はじめに ファイル削除機能を実装するとき、DBの行とS3のオブジェクトのどちらを先に消すか、考えた経験は過去にありますか？ この2つは、絶対に同時には消えず、DBのトランザクションはS3まで面倒を見てくれないので、どちらかが先に消え、間で処理が落ちれば必ず不整合が生まれま.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-08T05:10:51",
-        "dateModified": "2026-08-08T20:31:00.230962",
+        "datePublished": "2026-08-16T12:13:48",
+        "dateModified": "2026-08-19T02:58:15.651361",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1263.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1263.html",
         "articleSection": "テクノロジー",
-        "keywords": ["AWS"]
+        "keywords": []
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AWS Organization間のアカウント移行でTransit GatewayのRAM共有はどうなるか、実際に移行して確認した",
+                "name": "S3時代のファントムファイル",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1263.html"
             }
         ]
@@ -114,38 +114,34 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">AWS Organization間のアカウント移行でTransit GatewayのRAM共有はどう...</li>
+                <li aria-current="page">S3時代のファントムファイル</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AWS Organization間のアカウント移行でTransit GatewayのRAM共有はどうなるか、実際に移行して確認した</h1>
+                <h1>S3時代のファントムファイル</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/infra365/items/43831628277794df5959?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/kuma_3838/items/aae2c66e38bb9498d82d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-08-08T05:10:51">
-                        公開: 2026-08-08T05:10:51
+                    <time datetime="2026-08-16T12:13:48">
+                        公開: 2026-08-16T12:13:48
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    概要
-前回、下記記事で、AWS Organizations間のアカウント移行でRAM共有が外れる理由と、共有を維持する設定を確認しました。
-
-こちらのマニュアルに記載の通り、組織の作成から7日、組織内で作成したメンバーアカウントは作成から4日が経過するまで別の組織へ移...
+                    はじめに
+ファイル削除機能を実装するとき、DBの行とS3のオブジェクトのどちらを先に消すか、考えた経験は過去にありますか？
+この2つは、絶対に同時には消えず、DBのトランザクションはS3まで面倒を見てくれないので、どちらかが先に消え、間で処理が落ちれば必ず不整合が生まれま...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/infra365/items/43831628277794df5959?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/kuma_3838/items/aae2c66e38bb9498d82d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,21 +150,6 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
                     <h3>テクノロジー関連のおすすめ</h3>
@@ -202,16 +183,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="ASCII_jp__トップ_4435.html">
+                    <a href="Qiita_-_人気の記事_4345.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">沢のある土地だけを集めた専門ポータル「沢バンク」、全国47都道府県452件を公開。</span>
+                        <span class="nav-title">エージェントに AWS の鍵を渡さず AWS を叩かせる方法</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_2214.html">
+                    <a href="iPhone_Mania_1067.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">SES現場で信頼を失わない報告・確認・問題解析の基本</span>
+                        <span class="nav-title">iPhone17 Proを海へ！20m対応ハウジングで撮った水中動画をチェック</span>
                     </a>
                 </div>
             </div>
@@ -224,53 +205,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5302.html">
-                        <h3>豪ジェットスター、「頭上の荷物入れ」を有料に--ジェットスター・ジャパン運航便は対象外</h3>
+                    <a href="CNET_Japan_最新情報総合_1371.html">
+                        <h3>米Amazon、規約で集団訴訟を禁止--利用で「同意」扱いに</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">豪ジェットスター航空は8月5日、機内の頭上荷物入れを有料とする制度を、2027年2月に導入すると発表した。.</p>
+                        <p class="related-summary">米Amazonが利用規約を改定し、米国の顧客が同社に対して集団訴訟を起こすことを禁じる条項を盛り込んだ。今後、同社との間で紛争が生じた場合、顧客は裁判ではなく、第三者の仲裁人による個別の仲裁で解決する...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8422.html">
-                        <h3>「アプリより直接会いたい」Z世代の恋愛観の変化、Tinder運営元CEOが語る</h3>
+                    <a href="CNET_Japan_最新情報総合_2568.html">
+                        <h3>ライフカード、顧客の信用情報を不適切に利用していたと発表</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">マッチングアプリ「Tinder」などを展開するMatch Groupのトップは今週、独身者の間ではスマートフォンでプロフィールをスワイプするより、直接会うことを好む傾向が強まっていると述べた。.</p>
+                        <p class="related-summary">ライフカードは8月17日、グループ会社のアイフルから顧客の信用情報の一部を含む情報の提供を受け、保険商品の案内先の選定に使っていたと発表した。信用情報はアイフルが指定信用情報機関から取得したもので、内...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1946.html">
-                        <h3>ディズニープラス、「無料プラン」を検討中　TikTokとの提携も発表</h3>
+                    <a href="CNET_Japan_最新情報総合_3777.html">
+                        <h3>Duolingoが数学コースを拡充、「つまずき」を防ぐ新機能も</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ディズニーのCEOは、動画配信サービス「Disney+（ディズニープラス）」の利用者を増やすため、無料プランの追加を検討していると明らかにした。.</p>
+                        <p class="related-summary">Duolingoの数学コースでは初等・中等教育向けの学習内容をさらに拡充するとともに、問題や単元でつまずいた学習者を支援するための個別学習機能を強化している。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3913.html">
-                        <h3>ドコモ・バイクシェアの障害、あす7日復旧へ--背景に「NOLL」刷新へのシステム移行</h3>
+                    <a href="CNET_Japan_最新情報総合_2222.html">
+                        <h3>千葉豪雨、浸水被害の半数超は「想定区域外」で発生　その要因とは--ウェザーニューズ調査</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「NOLL（ノル）」へのブランド刷新を9月に控えたドコモ・バイクシェアで、システム移行に伴う大規模障害が発生した。全エリアでの提供停止は4日間以上に及び、NTTドコモの前田社長が決算会見で謝罪する事態...</p>
+                        <p class="related-summary">ウェザーニューズは8月14日、8月13日に千葉県で発生した記録的な大雨「令和8年8月千葉豪雨」について、アプリ利用者から寄せられた約2万件の報告を分析した結果を発表した。浸水・冠水の被害を示す報告のう...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2989.html">
-                        <h3>Metaに約900億円の支払い命令、子どものSNS被害めぐる裁判で</h3>
+                    <a href="CNET_Japan_最新情報総合_5458.html">
+                        <h3>ドコモ・バイクシェア障害、返金の詳細発表　原因は「新システムの処理能力不足」とも公表</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米ニューメキシコ州の裁判所は、MetaのSNSプラットフォームが子どもにもたらす危険性を一般に警告しなかったとして、同社に5億6700万ドル（約900億円）の支払いを命じた。.</p>
+                        <p class="related-summary">ドコモ・バイクシェアは8月18日、8月上旬に発生したバイクシェアサービスのシステム障害について、原因と対応を報告した。8月1日に切り替えた新システムが、利用の集中する時間帯に処理能力不足に陥り、貸出・...</p>
                     </a>
                 </article>
             </div>

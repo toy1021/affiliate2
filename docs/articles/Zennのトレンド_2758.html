@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログラス5daysインターンシップ参加体験記：価値のあるエンジニアとは | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに ログラス5daysインターンシップに参加し、覚えきれないほど学ぶことがあったので体験記を書きました。私はインターン中、顧客の価値についてやチームビルディングに注力していたので技術的なことはここではあまり書いていません">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>RDS Proxyを導入して、数ヶ月で撤去した話 | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは。 Dress Code株式会社でプロダクトエンジニアをしているぽこひで（@pokohide）です。 アプリ用のAurora PostgreSQLにRDS Proxyを導入し、数ヶ月運用した末に撤去しました。導入から撤去までの経緯と、判断の根拠にした実測値をまとめます">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ログラス5daysインターンシップ参加体験記：価値のあるエンジニアとは">
-    <meta property="og:description" content="はじめに ログラス5daysインターンシップに参加し、覚えきれないほど学ぶことがあったので体験記を書きました。私はインターン中、顧客の価値についてやチームビルディングに注力していたので技術的なことはここではあまり書いていません">
+    <meta property="og:title" content="RDS Proxyを導入して、数ヶ月で撤去した話">
+    <meta property="og:description" content="こんにちは。 Dress Code株式会社でプロダクトエンジニアをしているぽこひで（@pokohide）です。 アプリ用のAurora PostgreSQLにRDS Proxyを導入し、数ヶ月運用した末に撤去しました。導入から撤去までの経緯と、判断の根拠にした実測値をまとめます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2758.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ログラス5daysインターンシップ参加体験記：価値のあるエンジニアとは">
-    <meta name="twitter:description" content="はじめに ログラス5daysインターンシップに参加し、覚えきれないほど学ぶことがあったので体験記を書きました。私はインターン中、顧客の価値についてやチームビルディングに注力していたので技術的なことはここではあまり書いていません">
+    <meta name="twitter:title" content="RDS Proxyを導入して、数ヶ月で撤去した話">
+    <meta name="twitter:description" content="こんにちは。 Dress Code株式会社でプロダクトエンジニアをしているぽこひで（@pokohide）です。 アプリ用のAurora PostgreSQLにRDS Proxyを導入し、数ヶ月運用した末に撤去しました。導入から撤去までの経緯と、判断の根拠にした実測値をまとめます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ログラス5daysインターンシップ参加体験記：価値のあるエンジニアとは",
-        "description": "はじめに ログラス5daysインターンシップに参加し、覚えきれないほど学ぶことがあったので体験記を書きました。私はインターン中、顧客の価値についてやチームビルディングに注力していたので技術的なことはここではあまり書いていません",
+        "headline": "RDS Proxyを導入して、数ヶ月で撤去した話",
+        "description": "こんにちは。 Dress Code株式会社でプロダクトエンジニアをしているぽこひで（@pokohide）です。 アプリ用のAurora PostgreSQLにRDS Proxyを導入し、数ヶ月運用した末に撤去しました。導入から撤去までの経緯と、判断の根拠にした実測値をまとめます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-09T12:14:26",
-        "dateModified": "2026-06-10T17:22:09.908476",
+        "datePublished": "2026-08-17T00:00:14",
+        "dateModified": "2026-08-19T02:58:15.646937",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2758.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2758.html",
         "articleSection": "プログラミング",
-        "keywords": []
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ログラス5daysインターンシップ参加体験記：価値のあるエンジニアとは",
+                "name": "RDS Proxyを導入して、数ヶ月で撤去した話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2758.html"
             }
         ]
@@ -114,40 +114,42 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">ログラス5daysインターンシップ参加体験記：価値のあるエンジニアとは</li>
+                <li aria-current="page">RDS Proxyを導入して、数ヶ月で撤去した話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ログラス5daysインターンシップ参加体験記：価値のあるエンジニアとは</h1>
+                <h1>RDS Proxyを導入して、数ヶ月で撤去した話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/maropook/articles/b9697fc676d3be" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/dress_code/articles/da536c39873876" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-06-09T12:14:26">
-                        公開: 2026-06-09T12:14:26
+                    <time datetime="2026-08-17T00:00:14">
+                        公開: 2026-08-17T00:00:14
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-ログラス5daysインターンシップに参加し、覚えきれないほど学ぶことがあったので体験記を書きました。私はインターン中、顧客の価値についてやチームビルディングに注力していたので技術的なことはここではあまり書いていません。
+                    こんにちは。
+Dress Code株式会社でプロダクトエンジニアをしているぽこひで（@pokohide）です。
+アプリ用のAurora PostgreSQLにRDS Proxyを導入し、数ヶ月運用した末に撤去しました。導入から撤去までの経緯と、判断の根拠にした実測値をまとめます。
+先に結論です。
 
- ログラス5Daysインターンシップの開催概要
-https://loglass.notion.site/5days-27-1b2da7df897980249953c90923c37bce
-(見つからなかったので去年のもの)
-
- 参加の動機
-サポーターズの1on1イベントで話したログラスの社員さんの質問への回答の正確さや深さに惹かれてログラスに興味を持ち、...
+Prismaが生成する16KB超のSQLテキストは、RDS Proxyのセッションピン留めを引き起こす。AWS全エンジン共通のハード制限で、設定では回避できない
+弊社では全クライアントセッションの約2割でピン留めが発生し、接続の多重化がほぼ機能していなかった
+月数百ドルのコストとProxy層固...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/maropook/articles/b9697fc676d3be" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/dress_code/articles/da536c39873876" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,6 +161,16 @@ https://loglass.notion.site/5days-27-1b2da7df897980249953c90923c37bce
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -214,16 +226,16 @@ https://loglass.notion.site/5days-27-1b2da7df897980249953c90923c37bce
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7649.html">
+                    <a href="iPhone_Mania_8147.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">プロダクトより先に「自分の環境」を守る ─ 今日からできるセキュリティ対策</span>
+                        <span class="nav-title">iPhoneのアラームが自動で止まる！ショートカットを使った自動停止のやり方</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_5812.html">
+                    <a href="Zennのトレンド_1957.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">文字起こしテキストの個人情報マスキング、Presidio で消せるか試してみた</span>
+                        <span class="nav-title">Google Workspace StudioとGemini Notebookで社内問い合わせサポー...</span>
                     </a>
                 </div>
             </div>
@@ -236,53 +248,53 @@ https://loglass.notion.site/5days-27-1b2da7df897980249953c90923c37bce
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_804.html">
-                        <h3>宇宙飛行士もプラダを着用へ　Axiom Spaceと共同開発の冷却・換気インナーを発表</h3>
+                    <a href="ASCII_jp__トップ_2437.html">
+                        <h3>AVITA、アバター・ロボットが人と調和し、安全に働くためのソフトウェア基盤「AVITA OS」を発表</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">50年ぶりに人類を月面へ送ることを目指す米航空宇宙局（NASA）の「アルテミスIV」ミッションには、多くの要素が関わっている。その1つが、Axiom Spaceとプラダが開発した新しい宇宙服用インナー...</p>
+                        <p class="related-summary">AVITA、アバター・ロボットが人と調和し、安全に働くためのソフトウェア基盤「AVITA OS」を発表.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_8761.html">
-                        <h3>Insta360、同社初のポケットジンバルカメラ｢Insta360 Luna Ultra｣を米国で発表 ｰ デュアルカメ...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">本日、Insta360が、米国にて同社初のポケットジンバルカメラ「Insta360 Luna Ultra」を正式に発表しました。 「Insta360 Luna Ultra」は、Leicaとの共同開発に...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_7724.html">
-                        <h3>新規事業を牽引する技術選定 〜フルスタックTypeScript開発の実践事例〜</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">この記事は2026年6月9日(火) Findy Freelance Eventの登壇資料（Marp）を、ほぼそのままMarkdownに変換した記事となります。 ベースがMarp前提の発表内容なので、一...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5233.html">
-                        <h3>Claude Code と Codex のレート残量を確認するためにブラウザを開くのをやめた話</h3>
+                    <a href="Qiita_-_人気の記事_6378.html">
+                        <h3>TransformerのKVキャッシュを用いたDecode処理を理解する</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに Claude Code と Codex を Pro / Plus プランで併用していると、レートリミット（5時間枠・週枠）にそれなりの頻度で当たります。当たると作業が止まるので、私は枠に当た...</p>
+                        <p class="related-summary">こんにちは、DeNAでデータサイエンティストをやっているまつけんです。 今回は、TransformerのKVキャッシュを用いたDecode処理について解説していきたいと思います。 Transforme...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_1828.html">
-                        <h3>データエンジニアこそ組織のオントロジーに向き合うべき</h3>
+                    <a href="Zennのトレンド_9615.html">
+                        <h3>Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">こんにちは、クラシルでデータエンジニアをしているharry(@gappy50)です。 クラシルでは、これまでAI-Readyなデータ利活用に取り組んできました。Tier設計でデータの信頼性を担保したり...</p>
+                        <p class="related-summary">rs 背景 私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And. こんにちは。itome(@ito...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7441.html">
+                        <h3>Cursor Originを触った。第一印象は「Cursor版GitHub」</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">Cursor Originは、Cursorが出しているGitホスティングです。リポジトリを置いて、レビューして、マージする。GitHubやGitLabと同じ役割です。公式のコピーは &#34;A git fo...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_706.html">
+                        <h3>事例で学ぶ、SaaSの開発を加速しつつプロダクト品質も引き上げる上手な方法とは？［PR］</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">jetform-wrapper { border: 2px solid #ccc; /* 枠線 / padding: 20px; / 内側の余白 / border-radius: 12p.</p>
                     </a>
                 </article>
             </div>

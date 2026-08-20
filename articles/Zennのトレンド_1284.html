@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事 | 日本のテックニュース速報</title>
-    <meta name="description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
-    <meta name="keywords" content="本">
+    <title>ネットワークエンジニアのためのデータ表現詳解 | 日本のテックニュース速報</title>
+    <meta name="description" content="📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます">
+    <meta name="keywords" content="Python,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
-    <meta property="og:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
+    <meta property="og:title" content="ネットワークエンジニアのためのデータ表現詳解">
+    <meta property="og:description" content="📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1284.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事">
-    <meta name="twitter:description" content="本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る">
+    <meta name="twitter:title" content="ネットワークエンジニアのためのデータ表現詳解">
+    <meta name="twitter:description" content="📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1284.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="4">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
-        "description": "本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る",
+        "headline": "ネットワークエンジニアのためのデータ表現詳解",
+        "description": "📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-20T16:20:43",
-        "dateModified": "2026-05-22T19:46:44.450699",
+        "datePublished": "2026-08-16T22:37:14",
+        "dateModified": "2026-08-20T10:31:28.614816",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1284.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1284.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "プログラミング",
+        "keywords": ["Python","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事",
+                "name": "ネットワークエンジニアのためのデータ表現詳解",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1284.html"
             }
         ]
@@ -113,24 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">ネットワークエンジニアのためのデータ表現詳解</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</h1>
+                <h1>ネットワークエンジニアのためのデータ表現詳解</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-05-20T16:20:43">
-                        公開: 2026-05-20T16:20:43
+                    <span class="source">出典: <a href="https://zenn.dev/moko_nw/books/au_dataex_01" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-08-16T22:37:14">
+                        公開: 2026-08-16T22:37:14
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約4分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">Python</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -138,13 +139,44 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    本稿は、DDDの集約モデリング手順や、境界の見つけ方そのものを解説する記事ではない。扱うのは、集約境界と単一DBトランザクション境界を混同したときの波及である。RDBのロックや運用上の負担、読み取り側の公開範囲、プロセスマネージャー設計へ、どのような影響が出るのかを見る。つまり、ドメインモデリングの本質論ではなく、不変条件を実装へ落とす過程で表面化する技術的な論点に焦点を当てる。
-本稿の内容は、既存文献から学んだことと、筆者自身の設計・運用上の解釈に基づいている。設計に「常にこうすべき」という絶対解はない。ここで述べるのは、筆者が現時点で妥当だと考えている判断軸である。
-というか、かなり...
+                    📢 【連載に関するお知らせ】
+  本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。
+  
+  💡 【前作との関係について】
+  本書は単独でお読みいただけます。前作『ネットワークエンジニアのためのPython基礎』の読了は本書を読むための前提条件ではありません。Pythonの基礎から勉強したい方には前作が参考になりますので、必要に応じてご活用ください。
+  
+  🚀 ネットワークエンジニアのためのデータ表現詳解 — Pythonで操るインフラデータ完全攻略
+  
+  ネットワーク自動化の成否を分ける「データ表現」の扱いを、6つのフォーマット×Pythonで体系的にマスターする実践ロードマップ。
+    
+  📚 【本書で学べること（カリキュラム）】
+  
+  ✔️ 導入（第1回）：なぜ「6つのデータ表現」を極めるべきなのか？  
+  ✔️ Part 1: TXT（第2〜3回） —非構造化テキスト（CLIログ）からの正規表現抽出
+  ✔️ Part 2: CSV（第4〜5回） — CSVパラメータシートからのコンフィグ自動生成
+  ✔️ Part 3: XML（第6〜10回） — 階層構造を持つXMLツリーのパースと構築
+  ✔️ Part 4: JSON（第11〜15回） — NW自動化で必須となるJSONの相互変換・ハンドリング
+  ✔️ Part 5: YAML（第16〜20回） — YAMLの応用操作（アンカー・エイリアス・マージキー）  
+  ✔️ Part 6: TOML（第21〜22回） — モダンなTOML設定ファイルの安全な読み書き  
+  ✔️ Part 7: 各フォーマットの比較と実務での使い分け（第23〜24回）
+  
+  🎯 【こんな人におすすめ】
+  
+  ✔️ Pythonの基本構文（変数・for/if・関数定義）は理解しており、ネットワーク実務の自動化・効率化を目指すインフラエンジニア
+  レガシー機器のCLI操作から、モダンなREST API連携・Ansible運用を見据えた、データ処理の基盤スキルを一気通貫で身につけたい方。
+   
+  ✔️ REST APIやNETCONFとの連携に挑戦したいが、JSONやXMLの扱いに不安がある方
+  データフォーマットの基礎から応用まで段階的に学び、自信を持ってAPIドキュメントを読み解けるようになりたい方。
+  
+  📖 【販売・公開に関するご案内】
+  
+  本書は第1回から第3回まで無料で公開しており、第4回以降が基本的に有料となります。（※各パートの導入など、一部の章は例外的に無料公開とする場合があります）
+
+  ご購入前に著者の執筆スタイルやコンテンツの品質を確認されたい方は、完全無料公開している前作『ネットワークエンジニアのためのPython基礎』をご参照いただければ幸いです。
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/j5ik2o/articles/59de072b6728ff" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/moko_nw/books/au_dataex_01" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,6 +189,16 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">本 - Amazon検索結果</div>
@@ -166,27 +208,37 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -201,16 +253,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_7143.html">
+                    <a href="Zennのトレンド_1289.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">S3上の数GBファイルをstreamingでZIP化する【smart-open】</span>
+                        <span class="nav-title">Codexを効率よく使う方法（ChatGPT + GitHub）</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9994.html">
+                    <a href="iPhone_Mania_6359.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【命名規則】名前から「目的」を読み取れるコードを書くために——目的駆動名前設計のすすめ</span>
+                        <span class="nav-title">iPhoneのアラームが自動で止まる！ショートカットを使った自動停止のやり方</span>
                     </a>
                 </div>
             </div>
@@ -223,53 +275,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7246.html">
-                        <h3>SpaceX、本日の「スターシップV3」の打ち上げを直前で中止（更新）理由判明</h3>
+                    <a href="CNET_Japan_最新情報総合_7264.html">
+                        <h3>ヤマハ発動機、保育園の「お散歩カー」を電動化、坂道でも「今までの10%くらいの力」で押せる</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米SpaceXは、日本時間5月22日に予定していた「Starship」の次世代型「V3」の打ち上げを直前で中止した。カウントダウンはマイナス40秒付近から動かず、その後中止が発表された。打ち上げは明日...</p>
+                        <p class="related-summary">ヤマハ発動機は8月18日、保育園で使う「お散歩カー」に電動アシストを組み込んだ新製品「てくてくスワニー」を発表した。グループ会社のヤマハモーターエンジニアリング（YEC）が、ベビーカーの老舗である五十...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6033.html">
-                        <h3>東海道・山陽新幹線に「弱冷房車」　7〜8月導入　16両ひかりの3号車</h3>
+                    <a href="CNET_Japan_最新情報総合_3268.html">
+                        <h3>JAXA、火星衛星探査機「MMX」を10月20日打ち上げ--フォボスの砂を持ち帰る世界初ミッション</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JR東海とJR西日本は5月22日、東海道・山陽新幹線で冷房を弱めに設定した「弱冷房車」を試験的に導入すると発表した。実施期間は2026年7月1日から8月31日まで。.</p>
+                        <p class="related-summary">宇宙航空研究開発機構（JAXA）は8月20日、火星衛星探査機「MMX」をH3ロケット10号機で10月20日に打ち上げると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_108.html">
-                        <h3>あえて苦い。だからうまい。「ザ・ビタリスト」500ml缶×24本がタイムセールで13％オフ</h3>
+                    <a href="Publickey_4220.html">
+                        <h3>Pythonライクな新言語「Mojo」がオープンソースで公開、コンパイラやツールチェーンなど。Windows版の開発も表...</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">「アサヒ ザ・ビタリスト THE BITTER-IST 500ml×24本」が、現在開催中のAmazonタイムセールで13％オフ。.</p>
+                        <p class="related-summary">Pythonライクな新言語「Mojo」の開発元であるModular社は、Mojoをオープンソースとして公開したことを、同社主催のイベント「ModCon 2026」で発表しました。 具体的にはMojoの...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3779.html">
-                        <h3>「空の軌跡 the 2nd」、前作を遊んだなら逃げ場なし！ 神リメイク続編に旧「FC」リマスターまで付いてくる</h3>
+                    <a href="Zennのトレンド_2139.html">
+                        <h3>NGワードリストに「死ね」が入っていなかったので自分で作った</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">「空の軌跡 the 2nd」は、神リメイクと評された前作に続くフルリメイク第2弾。エステルとヨシュアの物語、仲間たちの深掘り、さらに初回特典の旧「FC」リマスター版まで含め、シリーズファンなら予約待っ...</p>
+                        <p class="related-summary">! 記事の性質上、罵倒語や差別語や下ネタがそのまま出てきます。苦手な方はブラウザバック推奨です。 ちなみに書き上がったこの記事を自作のフィルタにかけたら、30語・31箇所が引っかかりました。ambig...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_8381.html">
-                        <h3>1箱約193円！ 定番のバランス栄養食「カロリーメイト チョコレート」が値下げ中</h3>
+                    <a href="Qiita_-_人気の記事_1047.html">
+                        <h3>ずぼらAI駆動開発、別版</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">大塚製薬のバランス栄養食「カロリーメイト ブロック チョコレート 4本×10個」が、現在開催中のAmazonタイムセールで19％オフ。.</p>
+                        <p class="related-summary">同僚の流れに、私も乗る！ 同僚の2記事の流れに乗って、私がやっていた「ずぼらAI駆動開発」を記事にしてみます。 @masa-asa さんの AI を活用した開発に「いちエンジニア」が向き合い、実践して...</p>
                     </a>
                 </article>
             </div>

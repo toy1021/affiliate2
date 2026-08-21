@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oxc Minifierの変数マングル仕組み | 日本のテックニュース速報</title>
-    <meta name="description" content="🌐 Read this post in English この記事ではOxc Minifierの変数マングル処理の仕組みを解説します。 変数マングルとは？ まず、そもそも変数マングル (mangling)が何かを説明しましょう">
+    <title>encoding/json/v2 に至る14年 | 日本のテックニュース速報</title>
+    <meta name="description" content="0 から14年間、大文字小文字を区別しないフィールド一致のような既知の問題を抱えたまま修正されませんでした。Go 1. 27 で正式化された encoding/json/v2 に至るまでの経緯を、issue、提案、Gerritの変更、標準ライブラリのソースを追いながら整理します。.">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Oxc Minifierの変数マングル仕組み">
-    <meta property="og:description" content="🌐 Read this post in English この記事ではOxc Minifierの変数マングル処理の仕組みを解説します。 変数マングルとは？ まず、そもそも変数マングル (mangling)が何かを説明しましょう">
+    <meta property="og:title" content="encoding/json/v2 に至る14年">
+    <meta property="og:description" content="0 から14年間、大文字小文字を区別しないフィールド一致のような既知の問題を抱えたまま修正されませんでした。Go 1. 27 で正式化された encoding/json/v2 に至るまでの経緯を、issue、提案、Gerritの変更、標準ライブラリのソースを追いながら整理します。.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5766.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Oxc Minifierの変数マングル仕組み">
-    <meta name="twitter:description" content="🌐 Read this post in English この記事ではOxc Minifierの変数マングル処理の仕組みを解説します。 変数マングルとは？ まず、そもそも変数マングル (mangling)が何かを説明しましょう">
+    <meta name="twitter:title" content="encoding/json/v2 に至る14年">
+    <meta name="twitter:description" content="0 から14年間、大文字小文字を区別しないフィールド一致のような既知の問題を抱えたまま修正されませんでした。Go 1. 27 で正式化された encoding/json/v2 に至るまでの経緯を、issue、提案、Gerritの変更、標準ライブラリのソースを追いながら整理します。.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5766.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Oxc Minifierの変数マングル仕組み",
-        "description": "🌐 Read this post in English この記事ではOxc Minifierの変数マングル処理の仕組みを解説します。 変数マングルとは？ まず、そもそも変数マングル (mangling)が何かを説明しましょう",
+        "headline": "encoding/json/v2 に至る14年",
+        "description": "0 から14年間、大文字小文字を区別しないフィールド一致のような既知の問題を抱えたまま修正されませんでした。Go 1. 27 で正式化された encoding/json/v2 に至るまでの経緯を、issue、提案、Gerritの変更、標準ライブラリのソースを追いながら整理します。.",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-13T09:19:11",
-        "dateModified": "2026-08-14T22:23:37.494170",
+        "datePublished": "2026-08-20T01:42:04",
+        "dateModified": "2026-08-21T22:25:51.868756",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5766.html"
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Oxc Minifierの変数マングル仕組み",
+                "name": "encoding/json/v2 に至る14年",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5766.html"
             }
         ]
@@ -114,46 +114,32 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">Oxc Minifierの変数マングル仕組み</li>
+                <li aria-current="page">encoding/json/v2 に至る14年</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Oxc Minifierの変数マングル仕組み</h1>
+                <h1>encoding/json/v2 に至る14年</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/sapphi_red/articles/636d34f84494fb" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/ymotongpoo/books/go-json-v2-history" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-08-13T09:19:11">
-                        公開: 2026-08-13T09:19:11
+                    <time datetime="2026-08-20T01:42:04">
+                        公開: 2026-08-20T01:42:04
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    🌐 Read this post in English
-この記事ではOxc Minifierの変数マングル処理の仕組みを解説します。
-
- 変数マングルとは？
-まず、そもそも変数マングル (mangling)が何かを説明しましょう。
-変数マングルは、変数名を短いものに置き換えることでコードサイズを削減する処理で、ミニファイ(minify)の処理の一種です。
-例えば、
-const foo = 1;
-export function bar(baz) {
-  return foo + baz;
-}
-というコードを
-const a = 1;
-export function bar(b) {
-  r...
+                    encoding/json は Go 1.0 から14年間、大文字小文字を区別しないフィールド一致のような既知の問題を抱えたまま修正されませんでした。Go 1.27 で正式化された encoding/json/v2 に至るまでの経緯を、issue、提案、Gerritの変更、標準ライブラリのソースを追いながら整理します。
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/sapphi_red/articles/636d34f84494fb" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ymotongpoo/books/go-json-v2-history" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -195,16 +181,16 @@ export function bar(b) {
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_3961.html">
+                    <a href="iPhone_Mania_4977.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">整えるな。とにかくたくさん吐き出せ。~AIとの「1ターン」を大きく前進させる仮説~</span>
+                        <span class="nav-title">iPhone20周年モデルと折りたたみiPhone追加モデルの怪しいイメージ画像</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_756.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_1231.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">汎用問題ではなく自社規程から出題する—AIによる実務判断型ISMSテストを自動生成する仕組み</span>
+                        <span class="nav-title">国産AIシステムの実証始動 政府</span>
                     </a>
                 </div>
             </div>
@@ -217,53 +203,53 @@ export function bar(b) {
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_887.html">
-                        <h3>ペルセウス座流星群、NASAがライブ配信へ　視聴方法はこちら</h3>
+                    <a href="CNET_Japan_最新情報総合_4807.html">
+                        <h3>サムスン、千葉豪雨で被災のGalaxyユーザーに無償修理サービス提供</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ペルセウス座流星群を実際に観測できない人のために、米航空宇宙局（NASA）はライブ映像を配信する。.</p>
+                        <p class="related-summary">サムスン電子ジャパンは8月14日、8月13日からの大雨で被災した人に向けた特別支援措置を発表した。災害で端末を破損・紛失した人に対し、Galaxy製品（SIMフリーモデル）の無償修理や代替機の貸し出し...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4531.html">
-                        <h3>親のストレスで「子どものスクリーンタイム」が増加、研究で判明</h3>
+                    <a href="CNET_Japan_最新情報総合_5234.html">
+                        <h3>SpaceXのロケット激突、月面クレーターの新画像をNASA公開--新鮮な物質も露出</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">強いストレスを抱える親ほど、子どもを退屈させず、落ち着かせるためにデジタル機器へ頼る傾向が強く、スクリーンタイムの制限も徹底しにくい――。新たな研究でこうした傾向が明らかになった。.</p>
+                        <p class="related-summary">NASAは8月18日、スペースXの「ファルコン9」ロケット上段が月面に衝突してできたクレーターの画像を公開した。月周回探査機「ルナー・リコネッサンス・オービター（LRO）」が撮影したもので、クレーター...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6256.html">
-                        <h3>「Windows 11」のOEMライセンス料が7～10％値上げ？ PC価格高騰に拍車か</h3>
+                    <a href="CNET_Japan_最新情報総合_5598.html">
+                        <h3>「ドコモの銀行」、ドコモショップで口座開設サポート開始</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">メーカー向けの「Windows 11」ライセンス料が最大10％上昇していると報じられている。.</p>
+                        <p class="related-summary">NTTドコモ・フィナンシャルグループ（ドコモFG）とドコモSMTBネット銀行は8月21日、銀行サービス「ドコモの銀行」の案内と口座開設サポートをドコモショップで始めた。ネット銀行の口座開設を、店頭で対...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7058.html">
-                        <h3>Instagram、10年ぶりにワードマーク刷新　賛否の声</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">「Instagram」に新しいロゴ（ワードマーク）が登場した。筆者はまだ、これをどう受け止めるべきか決めかねている。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_7836.html">
-                        <h3>RTX 5080搭載PCも最大81,000円引き！ 24時間限定セールを見逃すな</h3>
+                    <a href="ASCII_jp__トップ_1609.html">
+                        <h3>180Hz＆WQHD対応で2万円台！ アイリスオーヤマの27型ゲーミング液晶モニター</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">パソコンショップSEVENが8月15日限定で24時間セールを開催。最新ゲーミングPCやデスクトップPCが最大81,000円オフ。Ryzen 9・GeForce RTX 5080搭載モデルをはじめ、お買...</p>
+                        <p class="related-summary">jpにて、アイリスオーヤマの「27インチ ゲーミングモニター」が売れています。WQHD解像度と180Hzのリフレッシュレートに対応しています。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_14.html">
+                        <h3>VRChatの自分を現実世界へ　3Dモデルをフィギュアにしてみた</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">VRChatで使っていた自分の3Dモデルを、そのまま現実世界へ連れ出そうとしたら、CGと物体の違いに次々ぶつかった。.</p>
                     </a>
                 </article>
             </div>

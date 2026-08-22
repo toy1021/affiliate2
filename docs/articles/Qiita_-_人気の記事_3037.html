@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【超初心者エンジニアのgit失敗談】`git pull` すれば最新になると思ってた | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに こんにちは。新卒未経験でエンジニアとして配属されて2か月が経ちました。 この記事では、gitに触れて間もない私が研修中にやらかしたgit pullについての小さな失敗を紹介します。 同じような勘違いをしている方の参考になれば幸いです。 また、この記事は初心者エン.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する | 日本のテックニュース速報</title>
+    <meta name="description" content="jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.">
+    <meta name="keywords" content="React">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【超初心者エンジニアのgit失敗談】`git pull` すれば最新になると思ってた">
-    <meta property="og:description" content="はじめに こんにちは。新卒未経験でエンジニアとして配属されて2か月が経ちました。 この記事では、gitに触れて間もない私が研修中にやらかしたgit pullについての小さな失敗を紹介します。 同じような勘違いをしている方の参考になれば幸いです。 また、この記事は初心者エン.">
+    <meta property="og:title" content="備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する">
+    <meta property="og:description" content="jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3037.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【超初心者エンジニアのgit失敗談】`git pull` すれば最新になると思ってた">
-    <meta name="twitter:description" content="はじめに こんにちは。新卒未経験でエンジニアとして配属されて2か月が経ちました。 この記事では、gitに触れて間もない私が研修中にやらかしたgit pullについての小さな失敗を紹介します。 同じような勘違いをしている方の参考になれば幸いです。 また、この記事は初心者エン.">
+    <meta name="twitter:title" content="備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する">
+    <meta name="twitter:description" content="jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【超初心者エンジニアのgit失敗談】`git pull` すれば最新になると思ってた",
-        "description": "はじめに こんにちは。新卒未経験でエンジニアとして配属されて2か月が経ちました。 この記事では、gitに触れて間もない私が研修中にやらかしたgit pullについての小さな失敗を紹介します。 同じような勘違いをしている方の参考になれば幸いです。 また、この記事は初心者エン.",
+        "headline": "備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する",
+        "description": "jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-07T07:36:05",
-        "dateModified": "2026-08-08T06:54:16.562954",
+        "datePublished": "2026-08-22T03:51:50",
+        "dateModified": "2026-08-22T18:31:15.788406",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3037.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3037.html",
-        "articleSection": "プログラミング",
-        "keywords": []
+        "articleSection": "テクノロジー",
+        "keywords": ["React"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【超初心者エンジニアのgit失敗談】`git pull` すれば最新になると思ってた",
+                "name": "備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3037.html"
             }
         ]
@@ -113,22 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">【超初心者エンジニアのgit失敗談】`git pull` すれば最新になると思ってた</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【超初心者エンジニアのgit失敗談】`git pull` すれば最新になると思ってた</h1>
+                <h1>備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/yamasaki_k/items/8bd8dd1c53d1790dfafb?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-08-07T07:36:05">
-                        公開: 2026-08-07T07:36:05
+                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/a6efbc9b2396ef285349?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-08-22T03:51:50">
+                        公開: 2026-08-22T03:51:50
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">React</span>
                 </div>
             </header>
 
@@ -136,14 +139,15 @@
                 
                 <div class="article-body">
                     はじめに
-こんにちは。新卒未経験でエンジニアとして配属されて2か月が経ちました。
-この記事では、gitに触れて間もない私が研修中にやらかしたgit pullについての小さな失敗を紹介します。
-同じような勘違いをしている方の参考になれば幸いです。
-また、この記事は初心者エン...
+Next.jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。
+
+Server Actions方式: ReactコンポーネントからServer Functionを呼び出す
+
+API方式: route.ts にRoute Han...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/yamasaki_k/items/8bd8dd1c53d1790dfafb?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/nogataka/items/a6efbc9b2396ef285349?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -156,20 +160,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -179,23 +173,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -210,16 +204,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9270.html">
+                    <a href="Qiita_-_人気の記事_5862.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">グーグル幹部退社 AI競争に危機感</span>
+                        <span class="nav-title">備忘録：今さらNext.jsの全体像を整理する。App Router・RSC・Server Acti...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_7270.html">
+                    <a href="Qiita_-_人気の記事_6340.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">[Claude Code] AIの説明が「それっぽいだけ」で終わる問題を、Skill設計で解決した話</span>
+                        <span class="nav-title">備忘録：Next.jsのServer ActionsをRSC・React 19から理解する。SSR・...</span>
                     </a>
                 </div>
             </div>
@@ -232,53 +226,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4064.html">
-                        <h3>OS？カーネル開発？聞いたことありませんねその単語🤔【ITパスポート】</h3>
+                    <a href="CNET_Japan_最新情報総合_3565.html">
+                        <h3>SpaceXのロケット激突、月面クレーターの新画像をNASA公開--新鮮な物質も露出</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに iPhoneのアップデート通知で見る「iOS 26」。あの「OS」って結局何なのか、聞かれてもうまく答えられなかったぷらむんが、ITパスポートの勉強中に真正面から向き合ってみた話です。 こん...</p>
+                        <p class="related-summary">NASAは8月18日、スペースXの「ファルコン9」ロケット上段が月面に衝突してできたクレーターの画像を公開した。月周回探査機「ルナー・リコネッサンス・オービター（LRO）」が撮影したもので、クレーター...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_52.html">
-                        <h3>楽観ロックの実装でおさえたいポイントと、よくあるしくじり</h3>
+                    <a href="CNET_Japan_最新情報総合_2887.html">
+                        <h3>「ドコモの銀行」、ドコモショップで口座開設サポート開始</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">これはなに こんにちは、レバテック開発部のもりたです。 今回はアプリケーションを作る上でわりと出会う楽観ロックの実装方法についてまとめます。 コードの例はPHP/Laravelですが、基本的には言語や...</p>
+                        <p class="related-summary">NTTドコモ・フィナンシャルグループ（ドコモFG）とドコモSMTBネット銀行は8月21日、銀行サービス「ドコモの銀行」の案内と口座開設サポートをドコモショップで始めた。ネット銀行の口座開設を、店頭で対...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_7077.html">
-                        <h3>ミッチェル・ハシモト氏が新会社「Superlogical」を設立、あらゆる仕事に使えるマルチプレクサの開発へ</h3>
+                    <a href="ASCII_jp__トップ_9278.html">
+                        <h3>Core Ultra・RTX 5080搭載PCも値下げ！ パソコンショップSEVENが24時間限定セール</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">HashiCorpの共同創業者であり、同社を退社後は個人開発者としてターミナルソフト「Ghostty」の開発を進めていたミッチェル・ハシモト氏が、新会社［Superlogical」の設立を発表しました...</p>
+                        <p class="related-summary">パソコンショップSEVENを運営するセブンアールジャパンが、8月23日限定で最大90,000円オフのゲーミングPC・デスクトップPCセールを実施する。ZEFT G62CO、ZEFT R60HM、ZEF...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4925.html">
-                        <h3>プロンプトの次は何を学べばいい？ AIとの付き合い方を4段階で整理する</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_7906.html">
+                        <h3>高市氏 なぜ国会ではなくXで反論</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">最近「〇〇エンジニアリング」という言葉が増えました。 プロンプトエンジニアリング。コンテキストエンジニアリング。ハーネスエンジニアリング。ループエンジニアリング。 新しい言葉が出るたびに「また覚えるこ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_39.html">
-                        <h3>仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ</h3>
+                    <a href="ASCII_jp__トップ_7762.html">
+                        <h3>1万2999円で新品ゲーミングディスプレーが手に入る！ しかも200Hz/1msの24型フルHD Fast IPSパネル...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係な...</p>
+                        <p class="related-summary">jpにて、Minifireの24型ゲーミングディスプレー「MFG24F4S」が販売中だ。参考価格は1万7999円だが、タイムセールにより28％オフの1万2999円で購入できる（8月21日時点）。.</p>
                     </a>
                 </article>
             </div>

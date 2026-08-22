@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ぷよぷよプログラミング体験談 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに オフィスの雑誌を漁っていたら「ぷよぷよプログラミング」という何とも興味深い雑誌を見つけました。ぷよぷよは小さい頃から家族と遊んでいたので、それをプログラミングで実装可能ならやってみたい！ということで、実際にぷよぷよプログラミングで遊んでみました。 そこ.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>備忘録：今さらNext.jsの全体像を整理する。App Router・RSC・Server Actions・キャッシュがどう噛み合うのか（Next.js 16 / React 19） | 日本のテックニュース速報</title>
+    <meta name="description" content="jsとは何か」を新しく書く余地はほとんどありません。 それでも全体像を書き出そうと思ったのは、機能を個別に使えることと、全体を1. jsは、いまさら紹介するまでもないほど定着したスタックです。 入門記事も公式ドキュメントの和訳も出尽くしていて、「Next.">
+    <meta name="keywords" content="React">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ぷよぷよプログラミング体験談">
-    <meta property="og:description" content="はじめに オフィスの雑誌を漁っていたら「ぷよぷよプログラミング」という何とも興味深い雑誌を見つけました。ぷよぷよは小さい頃から家族と遊んでいたので、それをプログラミングで実装可能ならやってみたい！ということで、実際にぷよぷよプログラミングで遊んでみました。 そこ.">
+    <meta property="og:title" content="備忘録：今さらNext.jsの全体像を整理する。App Router・RSC・Server Actions・キャッシュがどう噛み合うのか（Next.js 16 / React 19）">
+    <meta property="og:description" content="jsとは何か」を新しく書く余地はほとんどありません。 それでも全体像を書き出そうと思ったのは、機能を個別に使えることと、全体を1. jsは、いまさら紹介するまでもないほど定着したスタックです。 入門記事も公式ドキュメントの和訳も出尽くしていて、「Next.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3270.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ぷよぷよプログラミング体験談">
-    <meta name="twitter:description" content="はじめに オフィスの雑誌を漁っていたら「ぷよぷよプログラミング」という何とも興味深い雑誌を見つけました。ぷよぷよは小さい頃から家族と遊んでいたので、それをプログラミングで実装可能ならやってみたい！ということで、実際にぷよぷよプログラミングで遊んでみました。 そこ.">
+    <meta name="twitter:title" content="備忘録：今さらNext.jsの全体像を整理する。App Router・RSC・Server Actions・キャッシュがどう噛み合うのか（Next.js 16 / React 19）">
+    <meta name="twitter:description" content="jsとは何か」を新しく書く余地はほとんどありません。 それでも全体像を書き出そうと思ったのは、機能を個別に使えることと、全体を1. jsは、いまさら紹介するまでもないほど定着したスタックです。 入門記事も公式ドキュメントの和訳も出尽くしていて、「Next.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ぷよぷよプログラミング体験談",
-        "description": "はじめに オフィスの雑誌を漁っていたら「ぷよぷよプログラミング」という何とも興味深い雑誌を見つけました。ぷよぷよは小さい頃から家族と遊んでいたので、それをプログラミングで実装可能ならやってみたい！ということで、実際にぷよぷよプログラミングで遊んでみました。 そこ.",
+        "headline": "備忘録：今さらNext.jsの全体像を整理する。App Router・RSC・Server Actions・キャッシュがどう噛み合うのか（Next.js 16 / React 19）",
+        "description": "jsとは何か」を新しく書く余地はほとんどありません。 それでも全体像を書き出そうと思ったのは、機能を個別に使えることと、全体を1. jsは、いまさら紹介するまでもないほど定着したスタックです。 入門記事も公式ドキュメントの和訳も出尽くしていて、「Next.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-15T03:00:09",
-        "dateModified": "2026-07-17T09:58:40.459688",
+        "datePublished": "2026-08-22T03:51:34",
+        "dateModified": "2026-08-22T08:30:53.828718",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3270.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3270.html",
-        "articleSection": "プログラミング",
-        "keywords": []
+        "articleSection": "テクノロジー",
+        "keywords": ["React"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ぷよぷよプログラミング体験談",
+                "name": "備忘録：今さらNext.jsの全体像を整理する。App Router・RSC・Server Actions・キャッシュがどう噛み合うのか（Next.js 16 / React 19）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3270.html"
             }
         ]
@@ -113,35 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">ぷよぷよプログラミング体験談</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">備忘録：今さらNext.jsの全体像を整理する。App Router・RSC・Server Acti...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ぷよぷよプログラミング体験談</h1>
+                <h1>備忘録：今さらNext.jsの全体像を整理する。App Router・RSC・Server Actions・キャッシュがどう噛み合うのか（Next.js 16 / React 19）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/sakurada110/items/34a4486f6ab1b15211a9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-07-15T03:00:09">
-                        公開: 2026-07-15T03:00:09
+                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/fcd6b5d213f8e647ea24?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-08-22T03:51:34">
+                        公開: 2026-08-22T03:51:34
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">React</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    1. はじめに
-　オフィスの雑誌を漁っていたら「ぷよぷよプログラミング」という何とも興味深い雑誌を見つけました。ぷよぷよは小さい頃から家族と遊んでいたので、それをプログラミングで実装可能ならやってみたい！ということで、実際にぷよぷよプログラミングで遊んでみました。
-　そこ...
+                    はじめに
+Next.jsは、いまさら紹介するまでもないほど定着したスタックです。
+入門記事も公式ドキュメントの和訳も出尽くしていて、「Next.jsとは何か」を新しく書く余地はほとんどありません。
+それでも全体像を書き出そうと思ったのは、機能を個別に使えることと、全体を1...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/sakurada110/items/34a4486f6ab1b15211a9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/nogataka/items/fcd6b5d213f8e647ea24?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,30 +158,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -187,23 +171,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -218,16 +202,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5631.html">
+                    <a href="気になる記になる_8462.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">本を書くハッカソンで大賞をもらってしまい、超ソワソワしながら帰った</span>
+                        <span class="nav-title">これが折りたたみ式iPhoneの最終デザイン?? ｰ カバーディスプレイにはDynamic Isla...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_5756.html">
+                    <a href="Qiita_-_人気の記事_662.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AI人材は２つに分かれる。あなたが目指すべきはどっち？</span>
+                        <span class="nav-title">備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い...</span>
                     </a>
                 </div>
             </div>
@@ -240,53 +224,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2178.html">
-                        <h3>PythonとC言語の違い【コード比較あり】</h3>
+                    <a href="CNET_Japan_最新情報総合_2907.html">
+                        <h3>SpaceXのロケット激突、月面クレーターの新画像をNASA公開--新鮮な物質も露出</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">目次 はじめに Pythonで数字あてゲームを作ってみた C言語で作成した場合のコード PythonとC言語の違い 終わりに はじめに 今までC言語をメインで扱ってきましたが、新たにPythonも学び...</p>
+                        <p class="related-summary">NASAは8月18日、スペースXの「ファルコン9」ロケット上段が月面に衝突してできたクレーターの画像を公開した。月周回探査機「ルナー・リコネッサンス・オービター（LRO）」が撮影したもので、クレーター...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9238.html">
-                        <h3>レーベンシュタイン距離を動的計画法を使用して実装してみた（Python/JavaScript）</h3>
+                    <a href="CNET_Japan_最新情報総合_6317.html">
+                        <h3>「ドコモの銀行」、ドコモショップで口座開設サポート開始</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">目次 この記事の目的 実行環境 用語説明 実装例 コードの解説 なぜ途中の計算結果を利用できるか 最終的な計算結果 動的計画法の使用例 感想 参考文献 この記事の目的 動的計画法は言葉や考え方を知って...</p>
+                        <p class="related-summary">NTTドコモ・フィナンシャルグループ（ドコモFG）とドコモSMTBネット銀行は8月21日、銀行サービス「ドコモの銀行」の案内と口座開設サポートをドコモショップで始めた。ネット銀行の口座開設を、店頭で対...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_7696.html">
-                        <h3>.NET 8と.NET 9は今年の11月でサポート終了、マイクロソフトが警告</h3>
+                    <a href="ASCII_jp__トップ_6374.html">
+                        <h3>無駄に熱い宙を舞う女子高生の子バトル漫画・柴田ヨクサル『エアマスター』が全28巻が99円セール【Kindle漫画セール情...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">NET 9で開発されたアプリケーションはそのまま動作し、使えなくな. NET 9」のサポートが今年（2026年）11月10日に終了します。 サポート終了後も. マイクロソフトの包括的なソフトウェアフレ...</p>
+                        <p class="related-summary">宙を舞う女子高生がストリートファイトの怪人たちを叩きのめす『エアマスター』が全巻99円セール中。この破天荒な格闘漫画、今すぐ読むべし。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9762.html">
-                        <h3>ログイン成功率を上げるためのパスキー設計・実装</h3>
+                    <a href="ASCII_jp__トップ_6062.html">
+                        <h3>ポップでスタイリッシュなガール・ミーツ・エイリアン『雷雷雷』が50%ポイント還元【Amazonマンガ週末祭】</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに メドレーのエンジニアのSongです。ジョブメドレーアカデミーという介護・障がい福祉・看護などヘルスケア領域向けのオンライン動画研修サービスの開発に携わってい. 本記事は「Medley Sum...</p>
+                        <p class="related-summary">月給100万のヤバいバイトに釣られた気弱な少女が宇宙の戦いへ突き進むSF『雷雷雷』。読み始めるとサクサク読めて一気にハマるこの作品、今ならAmazonで6巻まで50%ポイント還元中！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_913.html">
-                        <h3>面接相手に「未来」を想像させる。未経験でも信用される伝え方</h3>
+                    <a href="ASCII_jp__トップ_55.html">
+                        <h3>FMVの11.6型ノート「LIFEBOOK WQ1/K1」が特価、10万4300円で販売中！</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
+                        <p class="related-summary">FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。.</p>
                     </a>
                 </article>
             </div>

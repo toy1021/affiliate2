@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】 | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
-    <meta name="keywords" content="本">
+    <title>Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました | 日本のテックニュース速報</title>
+    <meta name="description" content="rs 背景 私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And. こんにちは。itome(@itometeam)です">
+    <meta name="keywords" content="iOS,Android">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】">
-    <meta property="og:description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
+    <meta property="og:title" content="Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました">
+    <meta property="og:description" content="rs 背景 私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And. こんにちは。itome(@itometeam)です">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5539.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】">
-    <meta name="twitter:description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
+    <meta name="twitter:title" content="Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました">
+    <meta name="twitter:description" content="rs 背景 私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And. こんにちは。itome(@itometeam)です">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】",
-        "description": "! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです",
+        "headline": "Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました",
+        "description": "rs 背景 私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And. こんにちは。itome(@itometeam)です",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-10T04:00:05",
-        "dateModified": "2026-08-11T01:44:50.763675",
+        "datePublished": "2026-08-18T00:00:08",
+        "dateModified": "2026-08-23T16:27:04.989525",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5539.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5539.html",
         "articleSection": "プログラミング",
-        "keywords": ["本"]
+        "keywords": ["iOS","Android"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】",
+                "name": "Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5539.html"
             }
         ]
@@ -114,55 +114,59 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】</li>
+                <li aria-current="page">Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】</h1>
+                <h1>Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/fast/articles/44f261437d706c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/itome/articles/e087c6d11d0bd2" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-08-10T04:00:05">
-                        公開: 2026-08-10T04:00:05
+                    <time datetime="2026-08-18T00:00:08">
+                        公開: 2026-08-18T00:00:08
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">iOS</span>
+                    <span class="tag">Android</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-この記事はシリーズの第3部です。
+                    こんにちは。itome(@itometeam)です。
+Rustでアプリが書けるフレームワークを作ったので、その紹介をします。
 
-
-第1部: メモリレイアウトの観察
-
-
-第2部: MIR・LLVM IR・ASMを追う
-
-
-第3部: コンパイラ内部を読む（本記事）
-
-第4部: ニッチ最適化の実践パターン
+ TL;DR
+RustでひとつのコードベースからiOS/Androidアプリが作れるフレームワークです。
+すでに個人開発では使っており、AppStore/PlayStoreの審査も通ってプロダクションで使えています。
 
 
 
- はじめに
-こんにちは、moriです。
-ファスト株式会社にてRustを用いてデスクトップアプリケーション・バックエンドの開発を行っています。
-第1部では Option&lt;NonZeroU8&gt; が u8 と同じ1バイトになることをメモリから直接観察しました。
-第2部では MIR・LLVM IR・ASM を段階的に追いかけ、Option&lt;NonZeroU8&amp;g...
+iOS
+Android
+
+
+
+
+
+
+
+
+
+https://whisker.rs
+
+ 背景
+私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/fast/articles/44f261437d706c" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/itome/articles/e087c6d11d0bd2" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -175,16 +179,6 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">プログラミング - Amazon検索結果</div>
@@ -195,10 +189,20 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=iOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iOS - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">iOS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでiOSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -239,16 +243,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_4866.html">
+                    <a href="Publickey_4806.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">BedrockのOpenAIモデルでWeb検索が使えるようになったので、Tavilyと⽐べてみた</span>
+                        <span class="nav-title">事例で学ぶ、SaaSの開発を加速しつつプロダクト品質も引き上げる上手な方法とは？［PR］</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_1044.html">
+                    <a href="Zennのトレンド_5950.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">「PayPay」の登録ユーザー数が7,500万人を突破</span>
+                        <span class="nav-title">コーディングエージェントが実装するUIの品質を上げるためにやったこと</span>
                     </a>
                 </div>
             </div>
@@ -261,53 +265,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9442.html">
-                        <h3>「後回しにしたら詰んでいた」を防ぐ。待ち時間で決めるタスクの優先順位</h3>
+                    <a href="CNET_Japan_最新情報総合_619.html">
+                        <h3>JAXA、火星衛星探査機「MMX」を10月20日打ち上げ--フォボスの砂を持ち帰る世界初ミッション</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
+                        <p class="related-summary">宇宙航空研究開発機構（JAXA）は8月20日、火星衛星探査機「MMX」をH3ロケット10号機で10月20日に打ち上げると発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_79.html">
-                        <h3>簡易ヘリコプター操縦ゲームを日本語プログラミング言語Mind９で作りました。</h3>
+                    <a href="CNET_Japan_最新情報総合_6692.html">
+                        <h3>Oura Ring開発元に集団訴訟、睡眠トラッキングの精度は「コイントス」並みと主張</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ヘリコプター操縦ゲームです。 日本語プログラミング言語 Mind9(Windowsのみ対応)で作りました。 使用方法は、ソースコード先頭に書いています。 コンパイル・実行にはMind9 基本セット（無...</p>
+                        <p class="related-summary">スマートリング大手のOuraが、AIを用いた睡眠トラッキングの精度についてユーザーを欺く虚偽広告を行ったとして提訴された。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5409.html">
-                        <h3>新人エンジニアにとって大切なことは技術力だけではない話</h3>
+                    <a href="Publickey_5970.html">
+                        <h3>Rustに移植された「Bun 1.4」正式リリース。Node.jsとの互換性向上でPlaywrightやvitestが動...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">エンジニアにとって大切なことって何だろう？ 新人エンジニアやソフトウェアエンジニアとして成長していく中で、「エンジニアにとって大切なことは何か」と考える場面は多いと思います。この記事では、私が3年目ま...</p>
+                        <p class="related-summary">4」正式版のリリースが発表されました。 Bun 1. サーバサイドJavaScriptランタイムのBunの最新版となる「Bun 1. 4は、これまでZig言語で開発されていたものをClaude Cod...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3780.html">
-                        <h3>可逆プログラミング言語Janusと、量子計算の逆計算</h3>
+                    <a href="Publickey_3636.html">
+                        <h3>Slack上の開発チームの会話をAIエージェントが把握してコーディング。ドキュメント作成もする「Slack Code」登...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">はじめに 先日、OpenAI Build Weekというのが開かれていました。 これは、Codexを使って自由にプロダクトを作り、それを投稿するといった趣旨のものです。 偶然、応募する機会があったので...</p>
+                        <p class="related-summary">Salesforce傘下のSlack社は、同社のチャットサービス「Slack」の新機能として、開発チームの一員としてAIエージェントがチャットに加わり、それまでの開発チームの議論を把握してコーディング...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8430.html">
-                        <h3>SESエンジニアが成長するために捨てたい7つの習慣</h3>
+                    <a href="Qiita_-_人気の記事_1628.html">
+                        <h3>CS専攻じゃない&#34;ニセモノのエンジニア&#34;が、AI時代の生存戦略を5つ考えてみた</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに SESの現場で成長するには、新しい技術を覚えることも大切です。 ただ、それだけでは評価されにくい場面があります。 指示の背景を考えずに作業してしまう 分からないことを分かったふりで進めてしま...</p>
+                        <p class="related-summary">はじめに ── この記事で言う「本物のエンジニア」の定義 エンジニアには2種類いる、と私は勝手に思っています。本物と、ニセモノです。 先に断っておくと、これは私の中だけの区分で、しかも自分をニセモノ側...</p>
                     </a>
                 </article>
             </div>

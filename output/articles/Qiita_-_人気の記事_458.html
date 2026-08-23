@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fable 5の消費が激しすぎたので、設計とレビューだけに使う仕組みをClaude Codeで作ってみた | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 普段は何も考えずにOpusでClaude Codeを回しているのですが、期間限定で使えるFable 5に切り替えたところ、トークンの消費が想像以上に激しかったです。 そこで、設計やレビューなど重要度が高い部分だけFableを使い、それ以外はOpusで回すようにし.">
-    <meta name="keywords" content="Claude">
+    <title>備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する | 日本のテックニュース速報</title>
+    <meta name="description" content="jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.">
+    <meta name="keywords" content="React">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Fable 5の消費が激しすぎたので、設計とレビューだけに使う仕組みをClaude Codeで作ってみた">
-    <meta property="og:description" content="はじめに 普段は何も考えずにOpusでClaude Codeを回しているのですが、期間限定で使えるFable 5に切り替えたところ、トークンの消費が想像以上に激しかったです。 そこで、設計やレビューなど重要度が高い部分だけFableを使い、それ以外はOpusで回すようにし.">
+    <meta property="og:title" content="備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する">
+    <meta property="og:description" content="jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_458.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fable 5の消費が激しすぎたので、設計とレビューだけに使う仕組みをClaude Codeで作ってみた">
-    <meta name="twitter:description" content="はじめに 普段は何も考えずにOpusでClaude Codeを回しているのですが、期間限定で使えるFable 5に切り替えたところ、トークンの消費が想像以上に激しかったです。 そこで、設計やレビューなど重要度が高い部分だけFableを使い、それ以外はOpusで回すようにし.">
+    <meta name="twitter:title" content="備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する">
+    <meta name="twitter:description" content="jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Fable 5の消費が激しすぎたので、設計とレビューだけに使う仕組みをClaude Codeで作ってみた",
-        "description": "はじめに 普段は何も考えずにOpusでClaude Codeを回しているのですが、期間限定で使えるFable 5に切り替えたところ、トークンの消費が想像以上に激しかったです。 そこで、設計やレビューなど重要度が高い部分だけFableを使い、それ以外はOpusで回すようにし.",
+        "headline": "備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する",
+        "description": "jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-02T11:31:50",
-        "dateModified": "2026-07-04T22:59:20.844456",
+        "datePublished": "2026-08-22T03:51:50",
+        "dateModified": "2026-08-23T03:03:50.821276",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_458.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_458.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["Claude"]
+        "articleSection": "テクノロジー",
+        "keywords": ["React"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Fable 5の消費が激しすぎたので、設計とレビューだけに使う仕組みをClaude Codeで作ってみた",
+                "name": "備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_458.html"
             }
         ]
@@ -113,25 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Fable 5の消費が激しすぎたので、設計とレビューだけに使う仕組みをClaude Codeで作って...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Fable 5の消費が激しすぎたので、設計とレビューだけに使う仕組みをClaude Codeで作ってみた</h1>
+                <h1>備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/fwatanab/items/e2c51c2a783915b275a9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-07-02T11:31:50">
-                        公開: 2026-07-02T11:31:50
+                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/a6efbc9b2396ef285349?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-08-22T03:51:50">
+                        公開: 2026-08-22T03:51:50
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
+                    <span class="tag">React</span>
                 </div>
             </header>
 
@@ -139,12 +139,15 @@
                 
                 <div class="article-body">
                     はじめに
-普段は何も考えずにOpusでClaude Codeを回しているのですが、期間限定で使えるFable 5に切り替えたところ、トークンの消費が想像以上に激しかったです。
-そこで、設計やレビューなど重要度が高い部分だけFableを使い、それ以外はOpusで回すようにし...
+Next.jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。
+
+Server Actions方式: ReactコンポーネントからServer Functionを呼び出す
+
+API方式: route.ts にRoute Han...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/fwatanab/items/e2c51c2a783915b275a9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/nogataka/items/a6efbc9b2396ef285349?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,30 +160,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -190,23 +173,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -221,16 +204,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5449.html">
+                    <a href="Qiita_-_人気の記事_1792.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">MoonBit を高速化する</span>
+                        <span class="nav-title">備忘録：今さらNext.jsの全体像を整理する。App Router・RSC・Server Acti...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_1061.html">
+                    <a href="Qiita_-_人気の記事_8301.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AI BPR入門 ~ AIエージェント前提で業務を「組み替える」という発想 ~</span>
+                        <span class="nav-title">備忘録：Next.jsのServer ActionsをRSC・React 19から理解する。SSR・...</span>
                     </a>
                 </div>
             </div>
@@ -243,53 +226,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9779.html">
-                        <h3>「AIがホワイトカラーの半分を代替」と豪語したフォードの誤算　熟練技術者350人をひそかに再雇用した理由</h3>
+                    <a href="CNET_Japan_最新情報総合_2069.html">
+                        <h3>SpaceXのロケット激突、月面クレーターの新画像をNASA公開--新鮮な物質も露出</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">自動車メーカーのフォードは、AIを過信するとどうなるかを示す典型的な例となった。350人のベテランエンジニアを呼び戻し、品質管理システムに「まともな車」を作る方法を教え込ませている。.</p>
+                        <p class="related-summary">NASAは8月18日、スペースXの「ファルコン9」ロケット上段が月面に衝突してできたクレーターの画像を公開した。月周回探査機「ルナー・リコネッサンス・オービター（LRO）」が撮影したもので、クレーター...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5412.html">
-                        <h3>Visa、「AIエージェントが本物のECサイトで買い物開始」と発表</h3>
+                    <a href="CNET_Japan_最新情報総合_4288.html">
+                        <h3>「ドコモの銀行」、ドコモショップで口座開設サポート開始</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Visaは7月2日（現地時間）、AIエージェントが利用者に代わって買い物をする「エージェントコマース」の実取引が欧州で始まったと発表した。AIエージェントがカード保有者の指示にもとづき、参加加盟店のE...</p>
+                        <p class="related-summary">NTTドコモ・フィナンシャルグループ（ドコモFG）とドコモSMTBネット銀行は8月21日、銀行サービス「ドコモの銀行」の案内と口座開設サポートをドコモショップで始めた。ネット銀行の口座開設を、店頭で対...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8588.html">
-                        <h3>OpenAI、米政府に株式5%譲渡を提案か　約6.8兆円の巨額取引の思惑とは</h3>
+                    <a href="ASCII_jp__トップ_810.html">
+                        <h3>メーカーチューンの理想形！ 2L化した特別ロードスター「12R」が魅せる至高の人馬一体</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">「ChatGPT」を手がけるOpenAIが、米国政府に自社株の5％を譲渡することについてトランプ政権と「初期段階の交渉」を行っていると、Financial Timesがこの件に詳しい2人の匿名情報筋の...</p>
+                        <p class="related-summary">マツダの高性能限定車「マツダ・スピリット・レーシング・ロードスター12R」の試乗レポートです。幌車に2Lエンジンを搭載し、ブレンボやレカロ、専用足回りなどで武装。総額約860万円とノーマルの2倍以上で...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5929.html">
-                        <h3>SpaceXが「謎のAIデバイス」を投資家に披露か、イーロン・マスク氏は完全否定</h3>
+                    <a href="ASCII_jp__トップ_2507.html">
+                        <h3>PowerToysの最新版では、今使っているアプリの複数ウィンドウをショートカットで切り替えられる便利機能が追加</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">SpaceXはスマートフォンではないAI搭載デバイスの初期プロトタイプを投資家に披露したと、The Wall Street Journalが報じた。イーロン・マスク氏は真っ向から否定している。.</p>
+                        <p class="related-summary">Windows 11の使い勝手を上げるMicrosoft製ユーティリティ「PowerToys」。その最新版で追加された、カレントアプリケーションの複数ウィンドウをショートカットで切り替えられる「ウィン...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5119.html">
-                        <h3>Yahoo!ニュース上に「記事のような広告」を配信可能に　プレスリリースをAIが再構成　1本3万円</h3>
+                    <a href="ASCII_jp__トップ_1558.html">
+                        <h3>価値観を軸に出会う環境を提供 、ヨイトキ（Yoitoki）が、MBTI分布コンテンツを公開</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">LINEヤフーは7月1日、「Yahoo!ニュース」上に企業や団体のプレスリリースをニュースコンテンツとして掲載できるサービス「ニュースPR by LINEヤフー」の提供を始めた。料金は1掲載につき3万...</p>
+                        <p class="related-summary">価値観を軸に出会う環境を提供 、ヨイトキ（Yoitoki）が、MBTI分布コンテンツを公開.</p>
                     </a>
                 </article>
             </div>

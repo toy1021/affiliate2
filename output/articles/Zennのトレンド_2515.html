@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>「Claude Code」を支える技術 | 日本のテックニュース速報</title>
-    <meta name="description" content="本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
-    <meta name="keywords" content="AI,Claude,PC,スタートアップ,本">
+    <title>gRPC / Connect / HTTP/2 を完全に理解したい | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに ! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の157週目の記事です。 3年間連続達成まで残り2週となりました！ こんにちは、ログラスの小林です。 直近 RESTではなく、protoベースのスキーマ駆動開発を行ってします">
+    <meta name="keywords" content="PC">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="「Claude Code」を支える技術">
-    <meta property="og:description" content="本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
+    <meta property="og:title" content="gRPC / Connect / HTTP/2 を完全に理解したい">
+    <meta property="og:description" content="はじめに ! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の157週目の記事です。 3年間連続達成まで残り2週となりました！ こんにちは、ログラスの小林です。 直近 RESTではなく、protoベースのスキーマ駆動開発を行ってします">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2515.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="「Claude Code」を支える技術">
-    <meta name="twitter:description" content="本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです">
+    <meta name="twitter:title" content="gRPC / Connect / HTTP/2 を完全に理解したい">
+    <meta name="twitter:description" content="はじめに ! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の157週目の記事です。 3年間連続達成まで残り2週となりました！ こんにちは、ログラスの小林です。 直近 RESTではなく、protoベースのスキーマ駆動開発を行ってします">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2515.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "「Claude Code」を支える技術",
-        "description": "本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。 株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです",
+        "headline": "gRPC / Connect / HTTP/2 を完全に理解したい",
+        "description": "はじめに ! この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の157週目の記事です。 3年間連続達成まで残り2週となりました！ こんにちは、ログラスの小林です。 直近 RESTではなく、protoベースのスキーマ駆動開発を行ってします",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-09T00:01:05",
-        "dateModified": "2026-06-11T04:01:45.055227",
+        "datePublished": "2026-08-21T04:02:16",
+        "dateModified": "2026-08-24T03:04:11.928921",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2515.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2515.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","PC","スタートアップ","本"]
+        "articleSection": "通信・ネットワーク",
+        "keywords": ["PC"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "通信・ネットワーク",
+                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "「Claude Code」を支える技術",
+                "name": "gRPC / Connect / HTTP/2 を完全に理解したい",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2515.html"
             }
         ]
@@ -113,51 +113,48 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">「Claude Code」を支える技術</li>
+                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
+                <li aria-current="page">gRPC / Connect / HTTP/2 を完全に理解したい</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>「Claude Code」を支える技術</h1>
+                <h1>gRPC / Connect / HTTP/2 を完全に理解したい</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/knowledgesense/articles/7ce72924c0050f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-09T00:01:05">
-                        公開: 2026-06-09T00:01:05
+                    <span class="source">出典: <a href="https://zenn.dev/loglass/articles/grpc-connect-http2-for-rest-devs" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: 通信・ネットワーク</span>
+                    <time datetime="2026-08-21T04:02:16">
+                        公開: 2026-08-21T04:02:16
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
                     <span class="tag">PC</span>
-                    <span class="tag">スタートアップ</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    本記事では、Claude Code の裏側を支えるアーキテクチャについて、ざっくり理解します。
-株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです。
+                    はじめに
+!
+この記事は毎週必ず記事がでるテックブログ Loglass Tech Blog Sprint の157週目の記事です。
+3年間連続達成まで残り2週となりました！
 
- この記事は何
-この記事は、Claude Code の内部構造を、ソースコードレベルで解析した論文[1]について、日本語で簡単にまとめたものです。
-https://arxiv.org/abs/2604.14228
+こんにちは、ログラスの小林です。
+直近 RESTではなく、protoベースのスキーマ駆動開発を行ってします。
 
- 本題
+proto を書いて buf gen するとクラサバにコードが生成される
+gRPC は HTTP/2 で通信する
+ブラウザからは HTTP/2 が使えないので Connect RPC と HTTP/1.1 で通信を
 
- ざっくりサマリー
-
-Claude Code は、最も有名な「コーディングエージェント」です。PCのコマンドを実行したり、ファイルを編集したりでき...
+というざっくり理解でここまで来てしまったので、今回は歴史や技術的な背景をリサーチし、...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/knowledgesense/articles/7ce72924c0050f" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/loglass/articles/grpc-connect-http2-for-rest-devs" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -169,26 +166,6 @@ Claude Code は、最も有名な「コーディングエージェント」で�
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=PC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="PC - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -203,23 +180,23 @@ Claude Code は、最も有名な「コーディングエージェント」で�
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>通信・ネットワーク関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -234,16 +211,16 @@ Claude Code は、最も有名な「コーディングエージェント」で�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_6380.html">
+                    <a href="Zennのトレンド_8545.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">OpenAIがIPO申請 企業価値136兆円</span>
+                        <span class="nav-title">最近のIntel CPUは複数の連続する即値加減算命令をフュージョンする</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_9187.html">
+                    <a href="Zennのトレンド_9608.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">｢macOS 27 Golden Gate｣の壁紙がダウンロード可能に</span>
+                        <span class="nav-title">claude のメモリを棚卸しする</span>
                     </a>
                 </div>
             </div>
@@ -256,53 +233,52 @@ Claude Code は、最も有名な「コーディングエージェント」で�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_38.html">
-                        <h3>JR東日本、最短1分で「新幹線eチケット」を買える購入機　駅に導入へ</h3>
+                    <a href="CNET_Japan_最新情報総合_5313.html">
+                        <h3>非携帯キャリアのJTOWERが「電波オークション」で周波数を落札--その使い道とは　同社説明</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">JR東日本は6月9日、駅の券売機の体験を刷新するとうたう「新幹線eチケット購入機（仮称）」の検証を、2026年度末ごろから大宮駅と宇都宮駅で開始すると発表した。「Suica Renaissance」シ...</p>
+                        <p class="related-summary">インフラシェアリング大手のJTOWERが周波数オークションに参入し、26GHz帯ミリ波の割当を国内のインフラシェアリング事業者として初めて取得した。1つの無線設備を複数キャリアで共用する仕組みを軸に、...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2964.html">
-                        <h3>Anthropic、ミュトス級AI「Claude Fable 5」一般提供開始　22日まで追加料金なし</h3>
+                    <a href="CNET_Japan_最新情報総合_9783.html">
+                        <h3>タッチリモコンでさらに進化！ スマホ用ジンバル「Osmo Mobile 8P」</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米Anthropicは6月9日（現地時間）、新モデルファミリー「Mythos」から、一般ユーザーが使える初のモデル「Claude Fable 5」を公開した。すでに有料サブスクリプションの契約者は利用...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6945.html">
-                        <h3>JR東日本、「みどりの窓口」に生成AI　客と音声で対話</h3>
+                    <a href="ASCII_jp__トップ_1451.html">
+                        <h3>量子コンピューターもまだなのに、もう中継器？　コピーできない通信を遠くへ運ぶ方法</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">JR東日本は6月9日、駅の「みどりの窓口」に生成AIを導入する「みどりの窓口AI対応サービス（仮称）」の実証実験を、2026年7月に立川駅と大宮駅で実施すると発表した。きっぷ購入の要望整理・確認業務を...</p>
+                        <p class="related-summary">量子コンピューターはまだ先の話に見えるが、その通信を支える部品の開発はすでに動き始めている。横浜国立大学発のLQUOMは、量子中継器に必要な要素技術を開発し、量子もつれ光源の製品化や企業連携を進めてい...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8055.html">
-                        <h3>Instagram乗っ取り、被害は2万件超　手口は「AIサポート悪用」</h3>
+                    <a href="ASCII_jp__トップ_8437.html">
+                        <h3>“今からいきたい”を逃さない。ebica、「Yappli Mobile Order」とAPI連携開始</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">MetaのAIチャットアシスタントが意図せず「Instagram」の数千ものアカウントへのアクセス権をハッカーに与えてしまった。.</p>
+                        <p class="related-summary">“今からいきたい”を逃さない。ebica、「Yappli Mobile Order」とAPI連携開始.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_62.html">
-                        <h3>NTTの「IOWN AIファンド」にKDDIも出資へ　理由は？</h3>
+                    <a href="Qiita_-_人気の記事_7382.html">
+                        <h3>360° 全天球画像を用いた 3D Gaussian Splatting 入門（360° Gaussian Pro 編）</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">NTTは6月10日、AI時代の先端技術に投資する「IOWN AI Fund」を組成すると発表した。ファンド規模は約800億円（約5億ドル）。出資参加に関心を示している企業は世界で20社以上に上り、その...</p>
+                        <p class="related-summary">はじめに 以前、手軽に始める 360° 画像を用いた Gaussian Splatting（基本手順編） という記事で、360° Gaussian を使って 360° 動画から 3D Gaussian...</p>
                     </a>
                 </article>
             </div>

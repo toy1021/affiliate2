@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Codeのために「臭うコード検出器」を開発し、Hooksに設定してみた話 | 日本のテックニュース速報</title>
-    <meta name="description" content="マナリンクCTOの名人です。 コーディングエージェントが書いた大量のコード、レビューしたくないですよね。 もちろん、明確に駄目なものはCIで落とせるようにしたいですが、CIが通っていても、人間のレビュー時点で問題視される実装も大量にあります">
-    <meta name="keywords" content="Claude,本">
+    <title>C#において、例外を使うべきか戻り値にすべきか、迷わなくなる基準 | 日本のテックニュース速報</title>
+    <meta name="description" content="TryParse 例外という仕組みは何をする. はじめに 例外について、言語によって考え方も違うため、C#の例外の使い方に整理しておく。 例外って言ってるのだから、制御できる失敗は、戻り値で処理する 通常の制御フロー(if、戻り値)で管理できる失敗は、例外を使わず戻り値で処理する">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Codeのために「臭うコード検出器」を開発し、Hooksに設定してみた話">
-    <meta property="og:description" content="マナリンクCTOの名人です。 コーディングエージェントが書いた大量のコード、レビューしたくないですよね。 もちろん、明確に駄目なものはCIで落とせるようにしたいですが、CIが通っていても、人間のレビュー時点で問題視される実装も大量にあります">
+    <meta property="og:title" content="C#において、例外を使うべきか戻り値にすべきか、迷わなくなる基準">
+    <meta property="og:description" content="TryParse 例外という仕組みは何をする. はじめに 例外について、言語によって考え方も違うため、C#の例外の使い方に整理しておく。 例外って言ってるのだから、制御できる失敗は、戻り値で処理する 通常の制御フロー(if、戻り値)で管理できる失敗は、例外を使わず戻り値で処理する">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_289.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Codeのために「臭うコード検出器」を開発し、Hooksに設定してみた話">
-    <meta name="twitter:description" content="マナリンクCTOの名人です。 コーディングエージェントが書いた大量のコード、レビューしたくないですよね。 もちろん、明確に駄目なものはCIで落とせるようにしたいですが、CIが通っていても、人間のレビュー時点で問題視される実装も大量にあります">
+    <meta name="twitter:title" content="C#において、例外を使うべきか戻り値にすべきか、迷わなくなる基準">
+    <meta name="twitter:description" content="TryParse 例外という仕組みは何をする. はじめに 例外について、言語によって考え方も違うため、C#の例外の使い方に整理しておく。 例外って言ってるのだから、制御できる失敗は、戻り値で処理する 通常の制御フロー(if、戻り値)で管理できる失敗は、例外を使わず戻り値で処理する">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Codeのために「臭うコード検出器」を開発し、Hooksに設定してみた話",
-        "description": "マナリンクCTOの名人です。 コーディングエージェントが書いた大量のコード、レビューしたくないですよね。 もちろん、明確に駄目なものはCIで落とせるようにしたいですが、CIが通っていても、人間のレビュー時点で問題視される実装も大量にあります",
+        "headline": "C#において、例外を使うべきか戻り値にすべきか、迷わなくなる基準",
+        "description": "TryParse 例外という仕組みは何をする. はじめに 例外について、言語によって考え方も違うため、C#の例外の使い方に整理しておく。 例外って言ってるのだから、制御できる失敗は、戻り値で処理する 通常の制御フロー(if、戻り値)で管理できる失敗は、例外を使わず戻り値で処理する",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-31T23:29:52",
-        "dateModified": "2026-06-02T14:03:55.347644",
+        "datePublished": "2026-08-23T04:02:52",
+        "dateModified": "2026-08-24T03:04:11.927333",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_289.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_289.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Claude","本"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Codeのために「臭うコード検出器」を開発し、Hooksに設定してみた話",
+                "name": "C#において、例外を使うべきか戻り値にすべきか、迷わなくなる基準",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_289.html"
             }
         ]
@@ -113,44 +113,46 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Claude Codeのために「臭うコード検出器」を開発し、Hooksに設定してみた話</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">C#において、例外を使うべきか戻り値にすべきか、迷わなくなる基準</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Codeのために「臭うコード検出器」を開発し、Hooksに設定してみた話</h1>
+                <h1>C#において、例外を使うべきか戻り値にすべきか、迷わなくなる基準</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/manalink_dev/articles/coding-agent-with-syntax-tree-analyze" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-05-31T23:29:52">
-                        公開: 2026-05-31T23:29:52
+                    <span class="source">出典: <a href="https://zenn.dev/biwacoder/articles/fbbf12f755f5d8" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-08-23T04:02:52">
+                        公開: 2026-08-23T04:02:52
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    マナリンクCTOの名人です。
-コーディングエージェントが書いた大量のコード、レビューしたくないですよね。
-もちろん、明確に駄目なものはCIで落とせるようにしたいですが、CIが通っていても、人間のレビュー時点で問題視される実装も大量にあります。
-本記事は、既存のレビュー指摘のうち構文木解析で拾えるものを増やし、CIで落としたり、Claude Code Hooksで 「これは絶対NGではないが、一度見直してほしい」 とClaude Code自身に返すなどして運用していく話です。
-端的に言えば
+                    はじめに
+例外について、言語によって考え方も違うため、C#の例外の使い方に整理しておく。
 
-ESLintやPHPStanが公式でサポートしていないルールを簡単に自作できる時代になった！
-自作...
+ 例外って言ってるのだから、制御できる失敗は、戻り値で処理する
+通常の制御フロー(if、戻り値)で管理できる失敗は、例外を使わず戻り値で処理する。
+これが原則で、例外はその原則から外れた場合にだけ使う道具だ。
+
+入力バリデーションの失敗 → 起こることが分かっていて、その場でユーザーに返せる → 戻り値
+検索してヒットしない → 普通にあり得る → TryGetValue / null / Result型
+パース失敗 → 想定内 → int.TryParse
+
+
+
+ 例外という仕組みは何をする...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/manalink_dev/articles/coding-agent-with-syntax-tree-analyze" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/biwacoder/articles/fbbf12f755f5d8" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,60 +161,25 @@ ESLintやPHPStanが公式でサポートしていないルールを簡単に自�
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +194,16 @@ ESLintやPHPStanが公式でサポートしていないルールを簡単に自�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_6537.html">
+                    <a href="Qiita_-_人気の記事_7382.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">さらばAIスクラムチーム</span>
+                        <span class="nav-title">360° 全天球画像を用いた 3D Gaussian Splatting 入門（360° Gauss...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_689.html">
+                    <a href="Zennのトレンド_3549.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">オントロジー？ナレッジグラフ？AI時代のデータ基盤用語をざっくり理解する</span>
+                        <span class="nav-title">初めてカンファレンス運営をやってみたぞい！ PyCon JP 2026</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +216,53 @@ ESLintやPHPStanが公式でサポートしていないルールを簡単に自�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8351.html">
-                        <h3>【初心者向け】シナリオテストとは？ユーザー視点でバグを減らす考え方</h3>
+                    <a href="CNET_Japan_最新情報総合_1699.html">
+                        <h3>SpaceXのロケット激突、月面クレーターの新画像をNASA公開--新鮮な物質も露出</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは。ソーイ株式会社の工藤です。 本記事では、開発中のプロダクトのソフトウェアテストについて整理し、特に「シナリオテスト」がどのようにバグ発見やリリース品質の向上につながるのかをまとめ...</p>
+                        <p class="related-summary">NASAは8月18日、スペースXの「ファルコン9」ロケット上段が月面に衝突してできたクレーターの画像を公開した。月周回探査機「ルナー・リコネッサンス・オービター（LRO）」が撮影したもので、クレーター...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5025.html">
-                        <h3>「コードを書く人」から「課題を解決するエンジニア」になるためには</h3>
+                    <a href="CNET_Japan_最新情報総合_9341.html">
+                        <h3>「ドコモの銀行」、ドコモショップで口座開設サポート開始</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">株式会社PRUMのmasaです。 エンジニアに転職したあと「技術を覚えたら終わり」じゃないことに気づいたのは現場に出てからでした。 今回は今のエンジニアに求められること、成長を早める思考習慣を一緒に見...</p>
+                        <p class="related-summary">NTTドコモ・フィナンシャルグループ（ドコモFG）とドコモSMTBネット銀行は8月21日、銀行サービス「ドコモの銀行」の案内と口座開設サポートをドコモショップで始めた。ネット銀行の口座開設を、店頭で対...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_3063.html">
-                        <h3>デプロイ速度を約50%高速化した話</h3>
+                    <a href="CNET_Japan_最新情報総合_7987.html">
+                        <h3>マネーフォワードME、JRE IDの「モバイルSuica」自動取得に対応済み　注意点も</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">こんにちは。Dress Code株式会社でプロダクトエンジニアをしているぽこひで（@pokohide）です。 弊社の提供する「DRESS CODE」のBackend APIのデプロイパイプラインを見直...</p>
+                        <p class="related-summary">マネーフォワード MEで一時利用できなくなっていた、モバイルSuicaの利用履歴の自動取得。連携できない状態が続いていると思っているユーザーもいるかもしれないが、実は同社は6月29日時点で、JRE I...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4209.html">
-                        <h3>チーム開発の認識ズレを入口で潰す。OpenSpec に「AI が先に質問する」工程を足して比べてみた</h3>
+                    <a href="ASCII_jp__トップ_5385.html">
+                        <h3>Samsung「SF2P」の全貌！ GAA最大の弱点であるPMOS性能低下を克服し、TSMC追撃へ準備万端</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは鷹野です。 私は4月から仕様駆動開発（SDD）を取り入れるための新チームにジョインしました。 Claude Code もその時から触り始めた初心者です。そんな中、約2ヶ月の仕様駆動...</p>
+                        <p class="related-summary">都合8回ほど2026 VLSIシンポジウムの内容を説明してきたが、最後にSamsungのナノシートを解説したい。これは同社のSF2Pプロセスに関する説明である。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3819.html">
-                        <h3>競争か統制か？ ― “供給能力”から読み解く日本経済の落とし穴 : Pythonで学ぶ マクロ経済学入門 (86)</h3>
+                    <a href="ASCII_jp__トップ_5119.html">
+                        <h3>おもち入り「月見バーガー」今年も！ 肉2枚のボリューム級も</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">user: 「Pythonで学ぶマクロ経済学入門」、第86回を始めましょう。まず前回の復習として、 「減税か給付か？ ― 財源幻想を超えて考える“需要”と“供給力” : Pythonで学ぶ マクロ経済...</p>
+                        <p class="related-summary">ウェンディーズ・ファーストキッチンとファーストキッチンでは8月27日より「月見もっち」シリーズを発売します。.</p>
                     </a>
                 </article>
             </div>

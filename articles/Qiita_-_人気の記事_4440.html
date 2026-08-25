@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する | 日本のテックニュース速報</title>
-    <meta name="description" content="jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.">
-    <meta name="keywords" content="React">
+    <title>「これで進めますね」と自分から言ってしまうと、後で仕様がひっくり返る | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コーポレートサイトもぜひご覧ください。 ▶コーポレートサイト 「これで進.">
+    <meta name="keywords" content="プログラミング学習">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する">
-    <meta property="og:description" content="jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.">
+    <meta property="og:title" content="「これで進めますね」と自分から言ってしまうと、後で仕様がひっくり返る">
+    <meta property="og:description" content="はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コーポレートサイトもぜひご覧ください。 ▶コーポレートサイト 「これで進.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4440.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する">
-    <meta name="twitter:description" content="jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.">
+    <meta name="twitter:title" content="「これで進めますね」と自分から言ってしまうと、後で仕様がひっくり返る">
+    <meta name="twitter:description" content="はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コーポレートサイトもぜひご覧ください。 ▶コーポレートサイト 「これで進.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する",
-        "description": "jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。 Server Actions方式: ReactコンポーネントからServer Functionを呼び出す API方式: route.",
+        "headline": "「これで進めますね」と自分から言ってしまうと、後で仕様がひっくり返る",
+        "description": "はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コーポレートサイトもぜひご覧ください。 ▶コーポレートサイト 「これで進.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-22T03:51:50",
-        "dateModified": "2026-08-22T16:24:40.731857",
+        "datePublished": "2026-08-24T07:16:23",
+        "dateModified": "2026-08-25T12:47:55.165027",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4440.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4440.html",
-        "articleSection": "テクノロジー",
-        "keywords": ["React"]
+        "articleSection": "プログラミング",
+        "keywords": ["プログラミング学習"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する",
+                "name": "「これで進めますね」と自分から言ってしまうと、後で仕様がひっくり返る",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4440.html"
             }
         ]
@@ -113,41 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い...</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">「これで進めますね」と自分から言ってしまうと、後で仕様がひっくり返る</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>備忘録：Next.js App RouterでServer Actions方式とAPI方式をどう使い分けるか。判断基準と選定フローを整理する</h1>
+                <h1>「これで進めますね」と自分から言ってしまうと、後で仕様がひっくり返る</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/a6efbc9b2396ef285349?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-08-22T03:51:50">
-                        公開: 2026-08-22T03:51:50
+                    <span class="source">出典: <a href="https://qiita.com/sumomoo/items/e5065bd0e6daaf38ac62?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-08-24T07:16:23">
+                        公開: 2026-08-24T07:16:23
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">React</span>
+                    <span class="tag">プログラミング学習</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Next.jsのApp Routerでデータ登録や更新を実装するとき、選択肢が主に2つあります。
+                    はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です
+日々、プログラミング学習や実務の中で、つまずきやすいポイントや
+考え方を整理して発信しています。
+PRUMについて気になった方は、コーポレートサイトもぜひご覧ください。
+▶コーポレートサイト
 
-Server Actions方式: ReactコンポーネントからServer Functionを呼び出す
-
-API方式: route.ts にRoute Han...
+「これで進...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/nogataka/items/a6efbc9b2396ef285349?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/sumomoo/items/e5065bd0e6daaf38ac62?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,10 +161,30 @@ API方式: route.ts にRoute Han...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">React - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミング学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -173,23 +194,23 @@ API方式: route.ts にRoute Han...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -204,16 +225,16 @@ API方式: route.ts にRoute Han...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_2074.html">
+                    <a href="Zennのトレンド_5952.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">備忘録：今さらNext.jsの全体像を整理する。App Router・RSC・Server Acti...</span>
+                        <span class="nav-title">あなたのHTML資料には、魂が込められていますか？</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9229.html">
+                    <a href="Zennのトレンド_6036.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">備忘録：Next.jsのServer ActionsをRSC・React 19から理解する。SSR・...</span>
+                        <span class="nav-title">動かして理解するOpenTelemetry</span>
                     </a>
                 </div>
             </div>
@@ -226,52 +247,53 @@ API方式: route.ts にRoute Han...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5525.html">
-                        <h3>SpaceXのロケット激突、月面クレーターの新画像をNASA公開--新鮮な物質も露出</h3>
+                    <a href="CNET_Japan_最新情報総合_2959.html">
+                        <h3>「GTA 6」映像流出で犯人捜し、マイクロソフトとDiscordに情報開示を求める</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NASAは8月18日、スペースXの「ファルコン9」ロケット上段が月面に衝突してできたクレーターの画像を公開した。月周回探査機「ルナー・リコネッサンス・オービター（LRO）」が撮影したもので、クレーター...</p>
+                        <p class="related-summary">新作ゲーム「グランド・セフト・オートVI」（GTA 6）の開発版を入手したとみられる人物が、この1週間にわたって短い映像をオンラインに投稿している。開発元であるRockstar Gamesの親会社Ta...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1482.html">
-                        <h3>「ドコモの銀行」、ドコモショップで口座開設サポート開始</h3>
+                    <a href="CNET_Japan_最新情報総合_3154.html">
+                        <h3>Oura Ring開発元、「コイントス並み」訴訟に反論　睡眠ステージ「十分な査読済みエビデンスある」</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NTTドコモ・フィナンシャルグループ（ドコモFG）とドコモSMTBネット銀行は8月21日、銀行サービス「ドコモの銀行」の案内と口座開設サポートをドコモショップで始めた。ネット銀行の口座開設を、店頭で対...</p>
+                        <p class="related-summary">スマートリング「Oura Ring」の睡眠計測の精度をめぐり米国で集団訴訟を起こされたOuraは、公式ステートメントを公表した。睡眠ステージの判定は複数の研究で検証済みで「査読済みのエビデンスがある」...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6954.html">
-                        <h3>Core Ultra・RTX 5080搭載PCも値下げ！ パソコンショップSEVENが24時間限定セール</h3>
+                    <a href="CNET_Japan_最新情報総合_7326.html">
+                        <h3>国産迎撃ドローン「Terra B1」量産開始--9月ごろ納入、まず海自向け　テラドローン開発</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">パソコンショップSEVENを運営するセブンアールジャパンが、8月23日限定で最大90,000円オフのゲーミングPC・デスクトップPCセールを実施する。ZEFT G62CO、ZEFT R60HM、ZEF...</p>
+                        <p class="related-summary">Terra Drone（テラドローン）は8月25日、国産の迎撃ドローン「Terra B1」が防衛装備庁の「迎撃ドローン早期取得プログラム」の実証試験を通過し、量産段階に進んだと発表した。防衛装備庁が示...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_8464.html">
-                        <h3>高市氏 なぜ国会ではなくXで反論</h3>
+                    <a href="Zennのトレンド_2297.html">
+                        <h3>TanStack Start + Hono + oRPC + Cloudflare Workersで社内ERPを作った設...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
+                        <p class="related-summary">はじめに 建築業向けの社内ERP（プロジェクト管理・CRM・工数管理・ダッシュボード）を、Full-Stack TypeScriptでスクラッチ開発しました。TanStack Start + Hono...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6558.html">
-                        <h3>1万2999円で新品ゲーミングディスプレーが手に入る！ しかも200Hz/1msの24型フルHD Fast IPSパネル...</h3>
+                    <a href="Publickey_7099.html">
+                        <h3>シングルバイナリなOLAP DBの次期版「DuckDB 2.0」プレビュー。クライアント／サーバ機能が安定版に、スキーマ...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">jpにて、Minifireの24型ゲーミングディスプレー「MFG24F4S」が販売中だ。参考価格は1万7999円だが、タイムセールにより28％オフの1万2999円で購入できる（8月21日時点）。.</p>
+                        <p class="related-summary">オープンソースとして開発されているOLAPデータベース「DuckDB」の開発を主導しているDuckDB Foundationは、今年の秋にリリース予定の「DuckDB 2. 0」にどのような新機能が搭...</p>
                     </a>
                 </article>
             </div>

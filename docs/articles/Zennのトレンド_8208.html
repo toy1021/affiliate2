@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自動テストの肥大化とどう向き合うか | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事は社内の勉強会向けに、自動テストのトレードオフについて個人的な意見をまとめたものです。 Q. 「自動テストを書いてきてしばらく経つが、実行時間の増加に伴う問題 (CI 待ち時間) や偽陽性・偽陰性の問題が出てきた">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに ! 2026-08-24時点の情報です。semantic-router 0. 0で試しています。 問い合わせをどの窓口に回すか決めるだけのために、毎回LLMを呼ぶ必要はありません。「返品したい」に近い言い方をいくつか登録しておけば、あとは文の意味の近さだけで振り分けられます">
+    <meta name="keywords" content="LLM,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="自動テストの肥大化とどう向き合うか">
-    <meta property="og:description" content="! この記事は社内の勉強会向けに、自動テストのトレードオフについて個人的な意見をまとめたものです。 Q. 「自動テストを書いてきてしばらく経つが、実行時間の増加に伴う問題 (CI 待ち時間) や偽陽性・偽陰性の問題が出てきた">
+    <meta property="og:title" content="semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた">
+    <meta property="og:description" content="はじめに ! 2026-08-24時点の情報です。semantic-router 0. 0で試しています。 問い合わせをどの窓口に回すか決めるだけのために、毎回LLMを呼ぶ必要はありません。「返品したい」に近い言い方をいくつか登録しておけば、あとは文の意味の近さだけで振り分けられます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8208.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="自動テストの肥大化とどう向き合うか">
-    <meta name="twitter:description" content="! この記事は社内の勉強会向けに、自動テストのトレードオフについて個人的な意見をまとめたものです。 Q. 「自動テストを書いてきてしばらく経つが、実行時間の増加に伴う問題 (CI 待ち時間) や偽陽性・偽陰性の問題が出てきた">
+    <meta name="twitter:title" content="semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた">
+    <meta name="twitter:description" content="はじめに ! 2026-08-24時点の情報です。semantic-router 0. 0で試しています。 問い合わせをどの窓口に回すか決めるだけのために、毎回LLMを呼ぶ必要はありません。「返品したい」に近い言い方をいくつか登録しておけば、あとは文の意味の近さだけで振り分けられます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8208.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "自動テストの肥大化とどう向き合うか",
-        "description": "! この記事は社内の勉強会向けに、自動テストのトレードオフについて個人的な意見をまとめたものです。 Q. 「自動テストを書いてきてしばらく経つが、実行時間の増加に伴う問題 (CI 待ち時間) や偽陽性・偽陰性の問題が出てきた",
+        "headline": "semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた",
+        "description": "はじめに ! 2026-08-24時点の情報です。semantic-router 0. 0で試しています。 問い合わせをどの窓口に回すか決めるだけのために、毎回LLMを呼ぶ必要はありません。「返品したい」に近い言い方をいくつか登録しておけば、あとは文の意味の近さだけで振り分けられます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-06T08:23:53",
-        "dateModified": "2026-07-08T14:08:29.371718",
+        "datePublished": "2026-08-24T11:11:51",
+        "dateModified": "2026-08-25T10:33:56.685553",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8208.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8208.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "AI・機械学習",
+        "keywords": ["LLM","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "自動テストの肥大化とどう向き合うか",
+                "name": "semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8208.html"
             }
         ]
@@ -113,40 +113,43 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">自動テストの肥大化とどう向き合うか</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>自動テストの肥大化とどう向き合うか</h1>
+                <h1>semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/frontendflat/articles/automated-test-size-tradeoff" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-07-06T08:23:53">
-                        公開: 2026-07-06T08:23:53
+                    <span class="source">出典: <a href="https://zenn.dev/shogo_h/articles/qdrant-semantic-router" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-08-24T11:11:51">
+                        公開: 2026-08-24T11:11:51
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">LLM</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-この記事は社内の勉強会向けに、自動テストのトレードオフについて個人的な意見をまとめたものです。
+                    はじめに
+!
+2026-08-24時点の情報です。semantic-router 0.1.16、qdrant-client 1.19.0、Qdrantサーバー 1.19.0で試しています。
 
-Q. 「自動テストを書いてきてしばらく経つが、実行時間の増加に伴う問題 (CI 待ち時間) や偽陽性・偽陰性の問題が出てきた。どう対応していくのがよいか？」
-IMO: コードの変更に対する不安と実行時間をコンパスにして、自動テストの肥大化に立ち向かう。(一ヶ月後には言っていることが変わるかもしれないので、今日のスナップショットとして聞いてもらえればと...)
-
- そもそも「よいテスト」とは
-テストを書くべき理由はいろいろありますが、テストに何を期待するかは明確にしておく必要があります。私...
+問い合わせをどの窓口に回すか決めるだけのために、毎回LLMを呼ぶ必要はありません。「返品したい」に近い言い方をいくつか登録しておけば、あとは文の意味の近さだけで振り分けられます。
+これをやるライブラリがsemantic-routerで、登録した言い方の置き場所としてQdrantを選べます。
+この記事では使い方を一通り追ったあと、日本語の問い合わせ52問を5つの窓口に振り分けさせて、同じ問いをLL...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/frontendflat/articles/automated-test-size-tradeoff" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/shogo_h/articles/qdrant-semantic-router" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -155,25 +158,60 @@ IMO: コードの変更に対する不安と実行時間をコンパスにして
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -188,16 +226,16 @@ IMO: コードの変更に対する不安と実行時間をコンパスにして
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_3568.html">
+                    <a href="Zennのトレンド_4042.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「保守業務って地味…」と思っていた新人の自分へ</span>
+                        <span class="nav-title">AIの「中の人」になってみる</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_752.html">
+                    <a href="Zennのトレンド_9300.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Excel VBAの開発体験をモダン言語並みにアゲる VSCode拡張機能を作りました</span>
+                        <span class="nav-title">GASからGoogle Cloudへ移行してみよう：Slackデータの定期取得を例に学ぶ</span>
                     </a>
                 </div>
             </div>
@@ -210,53 +248,52 @@ IMO: コードの変更に対する不安と実行時間をコンパスにして
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3112.html">
-                        <h3>menu、ローソンのたばこをデリバリー　首都圏4店舗から　受け取りは対面手渡しのみ</h3>
+                    <a href="CNET_Japan_最新情報総合_4551.html">
+                        <h3>AI「Grok」が一時暴走、意味不明な回答を連発</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">menuは7月7日、デリバリーアプリ「menu」でコンビニ店舗のたばこの取り扱いを始めた。「ローソン店舗（たばこ専用）」としてアプリに掲載し、紙巻きたばこと加熱式たばこを注文できる。.</p>
+                        <p class="related-summary">チャットボット「Grok Lite」を先週に利用した人は、まったく意味をなさない長大な回答にさぞ驚いたはずだ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7041.html">
-                        <h3>PayPay残高、三井住友銀行口座への送金が月5回まで無料に</h3>
+                    <a href="CNET_Japan_最新情報総合_2848.html">
+                        <h3>ウェブページの1割がAI生成、「ChatGPT」登場後に増加　Pew調べ</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">三井住友銀行と三井住友カードは7月8日、PayPay残高を三井住友銀行口座へ送金（払い出し）する際の手数料を月5回まで無料にすると発表した。同日から適用しており、たまった残高を手数料を気にせず銀行口座...</p>
+                        <p class="related-summary">AIボットが書いた文章がネット上で増えているのだろうか。Pew Research Centerが先週発表した調査結果によると、その可能性はかなり高いという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5683.html">
-                        <h3>ワイド版「Galaxy Z Fold8」など注目の新製品を予想--サムスンが7月22日にイベント開催</h3>
+                    <a href="CNET_Japan_最新情報総合_6651.html">
+                        <h3>ChatGPTでアップルの「メッセージ」代筆が可能に　でも本当に使いたいと思いますか？</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">サムスンは、製品発表イベント「Galaxy Unpacked」をロンドンで現地時間7月22日に開催すると発表した。.</p>
+                        <p class="related-summary">OpenAIはこのほど、アップルユーザーのプライバシーをめぐる懸念を呼び起こしかねない新機能を「ChatGPT」に導入した。ChatGPTは、ユーザーが許可すればアップルの「メッセージ」アプリと連携し...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8793.html">
-                        <h3>Nothingの新型スマホ「Phone (4b)」発表　上位機より安くバッテリーは5200mAhに</h3>
+                    <a href="CNET_Japan_最新情報総合_8429.html">
+                        <h3>シャープ「ポケとも」第2弾　12月発売</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">英国のテクノロジースタートアップであるNothingは、新型スマートフォン「Phone (4b)」を発表した。.</p>
+                        <p class="related-summary">シャープは8月25日、対話AIキャラクター「ポケとも」の第2弾として、ミーアキャットをモチーフにしたコンパニオンロボットを12月に発売すると発表した。性格は、ぶっきらぼうで素直ではないが、ユーザー想い...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4187.html">
-                        <h3>サブスクではなく買い切り派に、Office Home 2024カード版がセール価格</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3402.html">
+                        <h3>AIメンタルケア 開発者が促す注意</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">Microsoft Office Home 2024（最新 永続版）カード版が、Amazon. jpで参考価格41,360円から14％オフの35,533円です。PC2台まで使える買い切り型Office...</p>
                     </a>
                 </article>
             </div>

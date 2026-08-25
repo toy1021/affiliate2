@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ドメインモデル図がすぐ古くなるので、Storybookっぽくコードと関連付けて見れるようにしてみた | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに ドメインモデリングの手法として、SUDOモデリングを個人的によく使っています。チームで正式に採用しているわけではないですが、手軽にドメインを整理できるので気に入っている、くらいの温度感で5年ほど使ってきました">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに ! 2026-08-24時点の情報です。semantic-router 0. 0で試しています。 問い合わせをどの窓口に回すか決めるだけのために、毎回LLMを呼ぶ必要はありません。「返品したい」に近い言い方をいくつか登録しておけば、あとは文の意味の近さだけで振り分けられます">
+    <meta name="keywords" content="LLM,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ドメインモデル図がすぐ古くなるので、Storybookっぽくコードと関連付けて見れるようにしてみた">
-    <meta property="og:description" content="はじめに ドメインモデリングの手法として、SUDOモデリングを個人的によく使っています。チームで正式に採用しているわけではないですが、手軽にドメインを整理できるので気に入っている、くらいの温度感で5年ほど使ってきました">
+    <meta property="og:title" content="semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた">
+    <meta property="og:description" content="はじめに ! 2026-08-24時点の情報です。semantic-router 0. 0で試しています。 問い合わせをどの窓口に回すか決めるだけのために、毎回LLMを呼ぶ必要はありません。「返品したい」に近い言い方をいくつか登録しておけば、あとは文の意味の近さだけで振り分けられます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8047.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ドメインモデル図がすぐ古くなるので、Storybookっぽくコードと関連付けて見れるようにしてみた">
-    <meta name="twitter:description" content="はじめに ドメインモデリングの手法として、SUDOモデリングを個人的によく使っています。チームで正式に採用しているわけではないですが、手軽にドメインを整理できるので気に入っている、くらいの温度感で5年ほど使ってきました">
+    <meta name="twitter:title" content="semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた">
+    <meta name="twitter:description" content="はじめに ! 2026-08-24時点の情報です。semantic-router 0. 0で試しています。 問い合わせをどの窓口に回すか決めるだけのために、毎回LLMを呼ぶ必要はありません。「返品したい」に近い言い方をいくつか登録しておけば、あとは文の意味の近さだけで振り分けられます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8047.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ドメインモデル図がすぐ古くなるので、Storybookっぽくコードと関連付けて見れるようにしてみた",
-        "description": "はじめに ドメインモデリングの手法として、SUDOモデリングを個人的によく使っています。チームで正式に採用しているわけではないですが、手軽にドメインを整理できるので気に入っている、くらいの温度感で5年ほど使ってきました",
+        "headline": "semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた",
+        "description": "はじめに ! 2026-08-24時点の情報です。semantic-router 0. 0で試しています。 問い合わせをどの窓口に回すか決めるだけのために、毎回LLMを呼ぶ必要はありません。「返品したい」に近い言い方をいくつか登録しておけば、あとは文の意味の近さだけで振り分けられます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-10T14:59:48",
-        "dateModified": "2026-08-15T01:14:24.547134",
+        "datePublished": "2026-08-24T11:11:51",
+        "dateModified": "2026-08-25T14:49:16.155706",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8047.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8047.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "AI・機械学習",
+        "keywords": ["LLM","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ドメインモデル図がすぐ古くなるので、Storybookっぽくコードと関連付けて見れるようにしてみた",
+                "name": "semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8047.html"
             }
         ]
@@ -113,22 +113,26 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">ドメインモデル図がすぐ古くなるので、Storybookっぽくコードと関連付けて見れるようにしてみた</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ドメインモデル図がすぐ古くなるので、Storybookっぽくコードと関連付けて見れるようにしてみた</h1>
+                <h1>semantic-routerとQdrantで、LLMを呼ばずに問い合わせを振り分けてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/dress_code/articles/34f18afe1464e8" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-08-10T14:59:48">
-                        公開: 2026-08-10T14:59:48
+                    <span class="source">出典: <a href="https://zenn.dev/shogo_h/articles/qdrant-semantic-router" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-08-24T11:11:51">
+                        公開: 2026-08-24T11:11:51
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">LLM</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
@@ -136,14 +140,16 @@
                 
                 <div class="article-body">
                     はじめに
-ドメインモデリングの手法として、SUDOモデリングを個人的によく使っています。チームで正式に採用しているわけではないですが、手軽にドメインを整理できるので気に入っている、くらいの温度感で5年ほど使ってきました。ただ、その中の「ドメインモデル図」と「オブジェクト図」の運用にはずっとモヤモヤしていました。この記事では、その課題と「モデリング図をTypescriptの型を使って、Storybookのように作成した定義ファイルを元にWebUIで見れるようにしてみた」という試みについて書きます。
+!
+2026-08-24時点の情報です。semantic-router 0.1.16、qdrant-client 1.19.0、Qdrantサーバー 1.19.0で試しています。
 
- SUDOモデリングとは
-SUDOモデリングは、ログラスの松岡さん（@little_h...
+問い合わせをどの窓口に回すか決めるだけのために、毎回LLMを呼ぶ必要はありません。「返品したい」に近い言い方をいくつか登録しておけば、あとは文の意味の近さだけで振り分けられます。
+これをやるライブラリがsemantic-routerで、登録した言い方の置き場所としてQdrantを選べます。
+この記事では使い方を一通り追ったあと、日本語の問い合わせ52問を5つの窓口に振り分けさせて、同じ問いをLL...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/dress_code/articles/34f18afe1464e8" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/shogo_h/articles/qdrant-semantic-router" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -152,25 +158,60 @@ SUDOモデリングは、ログラスの松岡さん（@little_h...
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -185,16 +226,16 @@ SUDOモデリングは、ログラスの松岡さん（@little_h...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Publickey_9038.html">
+                    <a href="iPhone_Mania_4934.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「Agent Plugins 1.0.0」発表、異なるAIエージェント間でもスキルやMCPサーバ設定...</span>
+                        <span class="nav-title">Apple Storeが売り場替えを準備〜ホーム新製品の発売が近いか</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_7314.html">
+                    <a href="Zennのトレンド_8292.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">曖昧に使っていたAI周りの言葉を理解する</span>
+                        <span class="nav-title">GASからGoogle Cloudへ移行してみよう：Slackデータの定期取得を例に学ぶ</span>
                     </a>
                 </div>
             </div>
@@ -207,53 +248,52 @@ SUDOモデリングは、ログラスの松岡さん（@little_h...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4862.html">
-                        <h3>ペルセウス座流星群、NASAがライブ配信へ　視聴方法はこちら</h3>
+                    <a href="CNET_Japan_最新情報総合_7456.html">
+                        <h3>AI「Grok」が一時暴走、意味不明な回答を連発</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ペルセウス座流星群を実際に観測できない人のために、米航空宇宙局（NASA）はライブ映像を配信する。.</p>
+                        <p class="related-summary">チャットボット「Grok Lite」を先週に利用した人は、まったく意味をなさない長大な回答にさぞ驚いたはずだ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_101.html">
-                        <h3>親のストレスで「子どものスクリーンタイム」が増加、研究で判明</h3>
+                    <a href="CNET_Japan_最新情報総合_7024.html">
+                        <h3>ウェブページの1割がAI生成、「ChatGPT」登場後に増加　Pew調べ</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">強いストレスを抱える親ほど、子どもを退屈させず、落ち着かせるためにデジタル機器へ頼る傾向が強く、スクリーンタイムの制限も徹底しにくい――。新たな研究でこうした傾向が明らかになった。.</p>
+                        <p class="related-summary">AIボットが書いた文章がネット上で増えているのだろうか。Pew Research Centerが先週発表した調査結果によると、その可能性はかなり高いという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2311.html">
-                        <h3>「Windows 11」のOEMライセンス料が7～10％値上げ？ PC価格高騰に拍車か</h3>
+                    <a href="CNET_Japan_最新情報総合_1209.html">
+                        <h3>ChatGPTでアップルの「メッセージ」代筆が可能に　でも本当に使いたいと思いますか？</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">メーカー向けの「Windows 11」ライセンス料が最大10％上昇していると報じられている。.</p>
+                        <p class="related-summary">OpenAIはこのほど、アップルユーザーのプライバシーをめぐる懸念を呼び起こしかねない新機能を「ChatGPT」に導入した。ChatGPTは、ユーザーが許可すればアップルの「メッセージ」アプリと連携し...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7258.html">
-                        <h3>Instagram、10年ぶりにワードマーク刷新　賛否の声</h3>
+                    <a href="CNET_Japan_最新情報総合_2319.html">
+                        <h3>シャープ「ポケとも」第2弾　12月発売</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">「Instagram」に新しいロゴ（ワードマーク）が登場した。筆者はまだ、これをどう受け止めるべきか決めかねている。.</p>
+                        <p class="related-summary">シャープは8月25日、対話AIキャラクター「ポケとも」の第2弾として、ミーアキャットをモチーフにしたコンパニオンロボットを12月に発売すると発表した。性格は、ぶっきらぼうで素直ではないが、ユーザー想い...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9492.html">
-                        <h3>データセンターの見えるまちで</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_8567.html">
+                        <h3>AI事業者へ知財保護指針 政府決定</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">私が住んでいるのは、データセンターのあるまちだ。ベランダから外を眺めると、戸建てやマンションの合間から巨大なデータセンターが見え隠れする。.</p>
                     </a>
                 </article>
             </div>

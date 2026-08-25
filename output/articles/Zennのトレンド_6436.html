@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Codeに見せない技術: AIに入力できないデータを分析する | 日本のテックニュース速報</title>
-    <meta name="description" content="jsonにdenyを書くだけではなく、5層： データ分離 permissions sandbox hooks 運用ルール で、機密情報をAIに「見せられない」状態を作ります。あわせて、その設定漏れ・劣化[1]を自動検知する仕組みも用意します">
-    <meta name="keywords" content="AI,Claude,本">
+    <title>マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた - プログラミング関連情報をお届け。">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Codeに見せない技術: AIに入力できないデータを分析する">
-    <meta property="og:description" content="jsonにdenyを書くだけではなく、5層： データ分離 permissions sandbox hooks 運用ルール で、機密情報をAIに「見せられない」状態を作ります。あわせて、その設定漏れ・劣化[1]を自動検知する仕組みも用意します">
+    <meta property="og:title" content="マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた">
+    <meta property="og:description" content="マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた - プログラミング関連情報をお届け。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6436.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Codeに見せない技術: AIに入力できないデータを分析する">
-    <meta name="twitter:description" content="jsonにdenyを書くだけではなく、5層： データ分離 permissions sandbox hooks 運用ルール で、機密情報をAIに「見せられない」状態を作ります。あわせて、その設定漏れ・劣化[1]を自動検知する仕組みも用意します">
+    <meta name="twitter:title" content="マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた">
+    <meta name="twitter:description" content="マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた - プログラミング関連情報をお届け。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Codeに見せない技術: AIに入力できないデータを分析する",
-        "description": "jsonにdenyを書くだけではなく、5層： データ分離 permissions sandbox hooks 運用ルール で、機密情報をAIに「見せられない」状態を作ります。あわせて、その設定漏れ・劣化[1]を自動検知する仕組みも用意します",
+        "headline": "マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた",
+        "description": "マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた - プログラミング関連情報をお届け。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-18T02:55:05",
-        "dateModified": "2026-08-21T01:17:44.428397",
+        "datePublished": "2026-08-25T05:00:05",
+        "dateModified": "2026-08-25T20:29:53.178726",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6436.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6436.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude","本"]
+        "articleSection": "プログラミング",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Codeに見せない技術: AIに入力できないデータを分析する",
+                "name": "マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6436.html"
             }
         ]
@@ -113,55 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Codeに見せない技術: AIに入力できないデータを分析する</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Codeに見せない技術: AIに入力できないデータを分析する</h1>
+                <h1>マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/green_tea/articles/a994964786cb4f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-08-18T02:55:05">
-                        公開: 2026-08-18T02:55:05
+                    <span class="source">出典: <a href="https://zenn.dev/layerx/articles/e01465a15e79c2" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-08-25T05:00:05">
+                        公開: 2026-08-25T05:00:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-本記事では、単にsettings.jsonにdenyを書くだけではなく、5層：
+                    こんにちは。アカウント基盤開発部でエンジニアをしている tkmt (たくまつ) です。
+今回は、IETF で標準化が進んでいる Transaction Tokens について調査してまとめてみました。というのも、この Transaction Tokens が解こうとしている課題が、バクラクが抱えていた課題とほとんど同じだったためです。
+実はバクラクでは、同じ課題を解くための仕組みを自作しています。バクラクで実装された仕組みは、ドラフトで検討されている内容とどこが同じで、どこが違うのか読み比べてみたく調査しました。
 
-データ分離
-permissions
-sandbox
-hooks
-運用ルール
-
-で、機密情報をAIに「見せられない」状態を作ります。あわせて、その設定漏れ・劣化[1]を自動検知する仕組みも用意します。
-
-!
-Claude Codeは更新が速く、設定キーやフックの仕様は変わり得ます。導入時は公式ドキュメントで最新仕様を確認し、記事後半の「すり抜けテスト」で動作検証をしてから運用してください。本記事の記述は2026年8月時点のドキュメントに基づいています。
-
-
- 先に結論: 要点と環境構築
-!
-本記事は私の力...
+ 解きたかった課題
+バクラクには、プロダクトを跨いで認可を行いたいケース...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/green_tea/articles/a994964786cb4f" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/layerx/articles/e01465a15e79c2" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -174,30 +157,20 @@ Claude Codeは更新が速く、設定キーやフックの仕様は変わり得
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -207,23 +180,23 @@ Claude Codeは更新が速く、設定キーやフックの仕様は変わり得
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -238,16 +211,16 @@ Claude Codeは更新が速く、設定キーやフックの仕様は変わり得
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9113.html">
+                    <a href="Qiita_-_人気の記事_4783.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">電子書籍や動画「購入」巡る課題</span>
+                        <span class="nav-title">「テスト自動化したいけど、何から始める？」を手探りで進めた記録</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_3892.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9889.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AWS の新ポリシー言語 Dogwood を試す</span>
+                        <span class="nav-title">調整さん 20年で日程調整4119万件</span>
                     </a>
                 </div>
             </div>
@@ -260,53 +233,53 @@ Claude Codeは更新が速く、設定キーやフックの仕様は変わり得
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7501.html">
-                        <h3>FirefoxのAI機能「Smart Window」が進化、AIウェブ検索やタブの自動グループ化など</h3>
+                    <a href="CNET_Japan_最新情報総合_6337.html">
+                        <h3>「GTA 6」映像流出で犯人捜し、マイクロソフトとDiscordに情報開示を求める</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Mozillaは「Firefox」のAI機能「Smart Window」に、作業を中断したところから再開しやすくする複数の新機能を追加すると発表した。.</p>
+                        <p class="related-summary">新作ゲーム「グランド・セフト・オートVI」（GTA 6）の開発版を入手したとみられる人物が、この1週間にわたって短い映像をオンラインに投稿している。開発元であるRockstar Gamesの親会社Ta...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4969.html">
-                        <h3>Google、AIで「飛行機雲」を減らす実証実験　一体なぜやる？その意義とは</h3>
+                    <a href="CNET_Japan_最新情報総合_3722.html">
+                        <h3>Oura Ring開発元、「コイントス並み」訴訟に反論　睡眠ステージ「十分な査読済みエビデンスある」</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">Googleは8月18日（現地時間）、英国政府と共同で、AIを使って航空機の飛行機雲の発生を抑える実証プログラム「Operation Blue Skies」を始めると発表した。舞台は北大西洋の洋上空域...</p>
+                        <p class="related-summary">スマートリング「Oura Ring」の睡眠計測の精度をめぐり米国で集団訴訟を起こされたOuraは、公式ステートメントを公表した。睡眠ステージの判定は複数の研究で検証済みで「査読済みのエビデンスがある」...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2804.html">
-                        <h3>HOVERAir、羽根を付けると空を飛ぶジンバルカメラ「VERSA」--日本で9月中旬に先行発売</h3>
+                    <a href="CNET_Japan_最新情報総合_297.html">
+                        <h3>国産迎撃ドローン「Terra B1」量産開始--9月ごろ納入、まず海自向け　テラドローン開発</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ドローンやAI飛行カメラを手がける中国ZERO ZERO ROBOTICSは8月19日、手持ちのジンバルカメラから自律飛行カメラに切り替えて使える「HOVERAir VERSA（バーサ）」を発表した。...</p>
+                        <p class="related-summary">Terra Drone（テラドローン）は8月25日、国産の迎撃ドローン「Terra B1」が防衛装備庁の「迎撃ドローン早期取得プログラム」の実証試験を通過し、量産段階に進んだと発表した。防衛装備庁が示...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8832.html">
-                        <h3>OpenAI、「2027年に上場」方針をCFOが示す　成長加速なら前倒しも</h3>
+                    <a href="Qiita_-_人気の記事_6003.html">
+                        <h3>Google Antigravity for Visual Studio Code in GitHub Codespac...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">OpenAIのCFOは全社集会で、同社が「2027年に上場企業になる」と語ったという。CNBCが報じた。.</p>
+                        <p class="related-summary">TL;DR 2026年8月、Google Antigravityが公式のVS Code拡張機能として登場した。もう「Antigravityという別IDE」に引っ越す必要がない これをGitHub Co...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6401.html">
-                        <h3>アマゾンのドローン配送、年内に米国約500都市へ拡大　現在の6倍に</h3>
+                    <a href="Publickey_657.html">
+                        <h3>Next.js 16.3正式版リリース。Turbopackのメモリ使用量が最大90％減、SSRが最大22％高速化、Typ...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">アマゾンは、ドローン配送サービス「Prime Air」の提供地域を2026年末までに米国の約500都市へ拡大すると発表した。.</p>
+                        <p class="related-summary">Vercelは同社が開発するWebアプリケーションフレームワークの最新版となる「Next. jsは、ReactをベースとしたオープンソースのWebアプリケーションフレームワークです。ルーティング.</p>
                     </a>
                 </article>
             </div>

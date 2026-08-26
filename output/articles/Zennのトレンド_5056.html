@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillをGitHub Copilotで&#34;育てる&#34; — 実証的プロンプト改善の実践レポート | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに プロンプトの細かな差異（空白の有無、指示の構造など）は、LLM の回答の質を大きく左右します。「なんとなく書いたら動いた／動かなかった」を卒業するには、勘ではなくテスト駆動で Skill を育てていく発想が有効です">
-    <meta name="keywords" content="LLM,GitHub">
+    <title>敵対的検証をLLMコードレビューで試すと何が起きるのか | 日本のテックニュース速報</title>
+    <meta name="description" content="導入 こんにちは、株式会社ナレッジセンスの須藤英寿です。 AIでコードのレビューをする際に敵対的検証をすることで性能が上がるとされています。そこにさらに、その検証を監視する役を付けることでレビューの精度を上げる手法「Adversarial Review」について紹介します">
+    <meta name="keywords" content="AI,Claude,LLM,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="SkillをGitHub Copilotで&#34;育てる&#34; — 実証的プロンプト改善の実践レポート">
-    <meta property="og:description" content="はじめに プロンプトの細かな差異（空白の有無、指示の構造など）は、LLM の回答の質を大きく左右します。「なんとなく書いたら動いた／動かなかった」を卒業するには、勘ではなくテスト駆動で Skill を育てていく発想が有効です">
+    <meta property="og:title" content="敵対的検証をLLMコードレビューで試すと何が起きるのか">
+    <meta property="og:description" content="導入 こんにちは、株式会社ナレッジセンスの須藤英寿です。 AIでコードのレビューをする際に敵対的検証をすることで性能が上がるとされています。そこにさらに、その検証を監視する役を付けることでレビューの精度を上げる手法「Adversarial Review」について紹介します">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5056.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SkillをGitHub Copilotで&#34;育てる&#34; — 実証的プロンプト改善の実践レポート">
-    <meta name="twitter:description" content="はじめに プロンプトの細かな差異（空白の有無、指示の構造など）は、LLM の回答の質を大きく左右します。「なんとなく書いたら動いた／動かなかった」を卒業するには、勘ではなくテスト駆動で Skill を育てていく発想が有効です">
+    <meta name="twitter:title" content="敵対的検証をLLMコードレビューで試すと何が起きるのか">
+    <meta name="twitter:description" content="導入 こんにちは、株式会社ナレッジセンスの須藤英寿です。 AIでコードのレビューをする際に敵対的検証をすることで性能が上がるとされています。そこにさらに、その検証を監視する役を付けることでレビューの精度を上げる手法「Adversarial Review」について紹介します">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "SkillをGitHub Copilotで&#34;育てる&#34; — 実証的プロンプト改善の実践レポート",
-        "description": "はじめに プロンプトの細かな差異（空白の有無、指示の構造など）は、LLM の回答の質を大きく左右します。「なんとなく書いたら動いた／動かなかった」を卒業するには、勘ではなくテスト駆動で Skill を育てていく発想が有効です",
+        "headline": "敵対的検証をLLMコードレビューで試すと何が起きるのか",
+        "description": "導入 こんにちは、株式会社ナレッジセンスの須藤英寿です。 AIでコードのレビューをする際に敵対的検証をすることで性能が上がるとされています。そこにさらに、その検証を監視する役を付けることでレビューの精度を上げる手法「Adversarial Review」について紹介します",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-05T08:23:13",
-        "dateModified": "2026-08-07T10:53:35.867855",
+        "datePublished": "2026-08-25T01:13:08",
+        "dateModified": "2026-08-26T06:50:36.825350",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5056.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5056.html",
-        "articleSection": "プログラミング",
-        "keywords": ["LLM","GitHub"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","Claude","LLM","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "SkillをGitHub Copilotで&#34;育てる&#34; — 実証的プロンプト改善の実践レポート",
+                "name": "敵対的検証をLLMコードレビューで試すと何が起きるのか",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5056.html"
             }
         ]
@@ -113,54 +113,46 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">SkillをGitHub Copilotで&#34;育てる&#34; — 実証的プロンプト改善の実践レポート</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">敵対的検証をLLMコードレビューで試すと何が起きるのか</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>SkillをGitHub Copilotで&#34;育てる&#34; — 実証的プロンプト改善の実践レポート</h1>
+                <h1>敵対的検証をLLMコードレビューで試すと何が起きるのか</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/aiforall/articles/cb36b724e20a43" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-08-05T08:23:13">
-                        公開: 2026-08-05T08:23:13
+                    <span class="source">出典: <a href="https://zenn.dev/knowledgesense/articles/0cb441713c9fee" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-08-25T01:13:08">
+                        公開: 2026-08-25T01:13:08
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
                     <span class="tag">LLM</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-プロンプトの細かな差異（空白の有無、指示の構造など）は、LLM の回答の質を大きく左右します。「なんとなく書いたら動いた／動かなかった」を卒業するには、勘ではなくテスト駆動で Skill を育てていく発想が有効です。
-この記事では、mizchi 氏が提唱する「empirical-prompt-tuning」の手法を GitHub Copilot 環境で試し、意図的に品質を落とした regex-builder(正規表現生成) Skill を反復的に改善していった記録を紹介します。
-
- 検証環境
-
+                    導入
+こんにちは、株式会社ナレッジセンスの須藤英寿です。
+AIでコードのレビューをする際に敵対的検証をすることで性能が上がるとされています。そこにさらに、その検証を監視する役を付けることでレビューの精度を上げる手法「Adversarial Review」について紹介します。
+https://arxiv.org/pdf/2608.18167
 
 
-項目
-詳細内容
-
-
-
-
-実行環境
-GitHub Copilot Chat
-
-...
+ サマリー
+最近、敵対的検証という言葉を耳にすることが増えました。AnthropicもClaude Codeのワークフローの一つとして紹介しており、エージェントの出力を、別のエージェントに基準を与えて敵対的に検証させる方法を紹介しています。(エ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/aiforall/articles/cb36b724e20a43" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/knowledgesense/articles/0cb441713c9fee" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -173,6 +165,26 @@ GitHub Copilot Chat
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">LLM - Amazon検索結果</div>
@@ -182,47 +194,27 @@ GitHub Copilot Chat
                                 </div>
                             </a>
                         </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -237,16 +229,16 @@ GitHub Copilot Chat
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7875.html">
+                    <a href="Zennのトレンド_7066.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ</span>
+                        <span class="nav-title">TanStack Start + Hono + oRPC + Cloudflare Workersで...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_5511.html">
+                    <a href="Zennのトレンド_9878.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">脆弱性を作り込まないために、Claude公式「Security Guidance Plugin」を導...</span>
+                        <span class="nav-title">オンコール手当の相場を50社分調べて、1社も見つからなかった話</span>
                     </a>
                 </div>
             </div>
@@ -259,53 +251,51 @@ GitHub Copilot Chat
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_2582.html">
-                        <h3>ミッチェル・ハシモト氏が新会社「Superlogical」を設立、あらゆる仕事に使えるマルチプレクサの開発へ</h3>
+                    <a href="CNET_Japan_最新情報総合_922.html">
+                        <h3>シャープ「ポケとも」第2弾　12月発売</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">HashiCorpの共同創業者であり、同社を退社後は個人開発者としてターミナルソフト「Ghostty」の開発を進めていたミッチェル・ハシモト氏が、新会社［Superlogical」の設立を発表しました...</p>
+                        <p class="related-summary">シャープは8月25日、対話AIキャラクター「ポケとも」の第2弾として、ミーアキャットをモチーフにしたコンパニオンロボットを12月に発売すると発表した。性格は、ぶっきらぼうで素直ではないが、ユーザー想い...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1179.html">
-                        <h3>グラフエンジニアリング を知ろう-これからも増えてくOOエンジニアリングに我々はどう付き合うべきか</h3>
+                    <a href="CNET_Japan_最新情報総合_5098.html">
+                        <h3>ClaudeとCoworkのメモリが統合、過去の会話で蓄積した情報を引き継ぎ</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">前書き 生成AI界隈の移り変わりの速さには、毎回驚かされます 先月あたりはSNS上で「ループエンジニアリング」という言葉が盛り上がっていたと思ったら、もう次の言葉に注目が移っていました。 それが「グラ...</p>
+                        <p class="related-summary">AnthropicのAIアシスタント「Claude」のメモリ機能が大幅に強化され、「Cowork」に切り替えてもClaudeとの過去の会話で蓄積されたメモリが引き継がれるようになった。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_354.html">
-                        <h3>プロンプトの次は何を学べばいい？ AIとの付き合い方を4段階で整理する</h3>
+                    <a href="気になる記になる_884.html">
+                        <h3>Meta、AIグラス「Meta Glasses」を日本でも発売 ｰ 全26種類のスタイルで価格は50,600円から</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">最近「〇〇エンジニアリング」という言葉が増えました。 プロンプトエンジニアリング。コンテキストエンジニアリング。ハーネスエンジニアリング。ループエンジニアリング。 新しい言葉が出るたびに「また覚えるこ...</p>
+                        <p class="related-summary">本日、Metaが、AIグラス「Meta Glasses」を日本でも発売しました。 「Meta Glasses」は、AIアシスタントの「Meta AI」を搭載し、アクションボタンから呼び出すことで、ハン...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_7875.html">
-                        <h3>仕様書から保証台帳へ、GDD（保証駆動開発）のすすめ</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3048.html">
+                        <h3>AI事業者へ知財保護指針 政府決定</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">Claude Code に実装を投げるようになって、バグ修正も機能追加も、以前なら手を出さずに置いていた量までこなせるようになりました。同時に増えたのが手戻りです。直したところが次の変更で戻る、関係な...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3517.html">
-                        <h3>新人エンジニア、定年まで続く勉強量に震えてやばいと思った話</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3983.html">
+                        <h3>AIメンタルケア 開発者が促す注意</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">はじめに 「勉強はこれで終わり」だと思っていたら、本当のスタートラインに立っただけだった。しかもよく見ると、同期の中には&#34;好きで永遠にPCを触ってる&#34;人までいて、その人たちと自分の違いは何なのか気にな...</p>
                     </a>
                 </article>
             </div>

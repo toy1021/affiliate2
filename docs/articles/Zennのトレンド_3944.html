@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ゆっくりと学ぶ TanStack Start | 日本のテックニュース速報</title>
-    <meta name="description" content="霊夢と魔理沙が、データフェッチ、レンダリング、Hono、Better Auth、Cloudflare Workersまで二歩手前から考える、初学者向けの実装・設計ガイド。最新のテクノロジー情報をお届けします。">
+    <title>マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた - プログラミング関連情報をお届け。">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ゆっくりと学ぶ TanStack Start">
-    <meta property="og:description" content="霊夢と魔理沙が、データフェッチ、レンダリング、Hono、Better Auth、Cloudflare Workersまで二歩手前から考える、初学者向けの実装・設計ガイド。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた">
+    <meta property="og:description" content="マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた - プログラミング関連情報をお届け。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3944.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ゆっくりと学ぶ TanStack Start">
-    <meta name="twitter:description" content="霊夢と魔理沙が、データフェッチ、レンダリング、Hono、Better Auth、Cloudflare Workersまで二歩手前から考える、初学者向けの実装・設計ガイド。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた">
+    <meta name="twitter:description" content="マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた - プログラミング関連情報をお届け。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3944.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ゆっくりと学ぶ TanStack Start",
-        "description": "霊夢と魔理沙が、データフェッチ、レンダリング、Hono、Better Auth、Cloudflare Workersまで二歩手前から考える、初学者向けの実装・設計ガイド。最新のテクノロジー情報をお届けします。",
+        "headline": "マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた",
+        "description": "マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた - プログラミング関連情報をお届け。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-19T05:18:13",
-        "dateModified": "2026-08-22T06:40:33.748226",
+        "datePublished": "2026-08-25T05:00:05",
+        "dateModified": "2026-08-29T16:18:56.323145",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3944.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3944.html",
-        "articleSection": "通信・ネットワーク",
+        "articleSection": "プログラミング",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "通信・ネットワーク",
-                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ゆっくりと学ぶ TanStack Start",
+                "name": "マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3944.html"
             }
         ]
@@ -113,33 +113,38 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
-                <li aria-current="page">ゆっくりと学ぶ TanStack Start</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ゆっくりと学ぶ TanStack Start</h1>
+                <h1>マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/417/books/tanstack-start-principles" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: 通信・ネットワーク</span>
-                    <time datetime="2026-08-19T05:18:13">
-                        公開: 2026-08-19T05:18:13
+                    <span class="source">出典: <a href="https://zenn.dev/layerx/articles/e01465a15e79c2" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-08-25T05:00:05">
+                        公開: 2026-08-25T05:00:05
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    霊夢と魔理沙が、データフェッチ、レンダリング、Hono、Better Auth、Cloudflare Workersまで二歩手前から考える、初学者向けの実装・設計ガイド。
+                    こんにちは。アカウント基盤開発部でエンジニアをしている tkmt (たくまつ) です。
+今回は、IETF で標準化が進んでいる Transaction Tokens について調査してまとめてみました。というのも、この Transaction Tokens が解こうとしている課題が、バクラクが抱えていた課題とほとんど同じだったためです。
+実はバクラクでは、同じ課題を解くための仕組みを自作しています。バクラクで実装された仕組みは、ドラフトで検討されている内容とどこが同じで、どこが違うのか読み比べてみたく調査しました。
+
+ 解きたかった課題
+バクラクには、プロダクトを跨いで認可を行いたいケース...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/417/books/tanstack-start-principles" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/layerx/articles/e01465a15e79c2" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -148,25 +153,50 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>通信・ネットワーク関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -181,16 +211,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7170.html">
+                    <a href="Zennのトレンド_8191.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">世界最大？Google Fonts 全部入りフォントを作ってみた</span>
+                        <span class="nav-title">TanStack Start + Hono + oRPC + Cloudflare Workersで...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_7472.html">
+                    <a href="iPhone_Mania_8873.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">NGワードリストに「死ね」が入っていなかったので自分で作った</span>
+                        <span class="nav-title">【速報】Macの最高峰！M5 UltraとM5 Max搭載の新型Mac Studio発表</span>
                     </a>
                 </div>
             </div>
@@ -203,33 +233,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6670.html">
-                        <h3>サムスン、新型Galaxyスマホを8月27日に発表へ　「Galaxy S26 FE」の可能性大</h3>
+                    <a href="Qiita_-_人気の記事_3635.html">
+                        <h3>「もう1年の半分終わった」と思ったら要注意 — ジャネーの法則で知る、時間の残酷な真実</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">サムスンは、オンラインイベント「Galaxy Event August 2026」を8月27日に開催すると発表した。スマートフォン「Galaxy S26」シリーズの新モデルを披露するという。.</p>
+                        <p class="related-summary">この記事は約6分で読めます。 筆者プロフィール: ソフトウェアエンジニア。「知った気にならない。いつまでも学び続ける」を信条に、業務と個人開発の両輪で技術を磨いています。AI 駆動開発で複数の個人開発...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7677.html">
-                        <h3>非携帯キャリアのJTOWERが「電波オークション」で周波数を落札--その使い道とは　同社説明</h3>
+                    <a href="Zennのトレンド_6183.html">
+                        <h3>GitHub Enterprise導入とTeams再設計で最小権限と俊敏性を両立。30人規模スタートアップの実践</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">インフラシェアリング大手のJTOWERが周波数オークションに参入し、26GHz帯ミリ波の割当を国内のインフラシェアリング事業者として初めて取得した。1つの無線設備を複数キャリアで共用する仕組みを軸に、...</p>
+                        <p class="related-summary">はじめに 仕事でITセキュリティを担当しており、今回、社内のGitHub Organizationの権限設計を見直す機会がありました。GitHub Enterpriseを新規契約し、Base perm...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1861.html">
-                        <h3>観光客で常に一杯の京都・清水寺にソフトバンクが5G基地局！ 厳しい景観条例を乗り越えた「目立たないための工夫」</h3>
+                    <a href="Qiita_-_人気の記事_952.html">
+                        <h3>PyCon JP 2026 in 広島に初参加してきました（0日目〜3日目レポート）</h3>
                         <div class="related-meta">
-                            <span class="category">通信・ネットワーク</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">京都・清水寺周辺の通信混雑を解消すべく、ソフトバンクが5G基地局を開設しました。厳しい景観条例をクリアするため、設備を焦げ茶色に塗装し事前テストで高さを調整しています。重機が入れないための深夜の手掘り...</p>
+                        <p class="related-summary">はじめに こんにちは、エンジニアを目指している27卒の大学4年生です！ PyConに初めて参加してきたので、その様子や学んだことをまとめます！ PyConに参加した理由 いつも家でアプリを作って勉強し...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_8003.html">
+                        <h3>DuckDBの開発元であるDuckLabsがAWS子会社になると発表。DuckDBはオープンソースのMITライセンスを維...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">DuckDBの開発元であるDuckLabsは、来月（2026年9月）初旬にAWSの子会社となる予定であることを発表しました（DuckLabsの発表。AWSの発表） Today, @ducklabs_c...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_5464.html">
+                        <h3>並行開発に Orca がめちゃ便利</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">dev/ 元々1年ほど前は VSCode や Cursor を使ってその中でたくさんターミナルを生やし、その後は cmux や Superset などを活用しておりました。 しかし最近 Orca に乗...</p>
                     </a>
                 </article>
             </div>

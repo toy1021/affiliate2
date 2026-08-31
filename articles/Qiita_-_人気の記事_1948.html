@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに GMOコネクトの永田です。 「数年前に組まれた既存 DEV 環境を、別の AWS アカウントに丸ごと再現してほしい。CFn template はあるがメンテされておらず当時のメンバーは離任＋手動構築も多々ある、ビルド・構築手順書は無い。動作している環境を r.">
-    <meta name="keywords" content="Claude,AWS,EV">
+    <title>「ハーネス」ってなんぞ？ Claudeに“性格”と“記憶”を持たせる仕組みを、おじさんでも分かるように調べてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 最近、AIにコーディングを手伝ってもらう文脈で「ハーネス」という言葉を見かけるようになりました。専門用語っぽくて身構えてしまいますが、中身はとてもシンプルらしいです。 難しい記事を漁りましたが、頭の中で整理しきれなかったので、Claudeに教えてもらいつつまとめ.">
+    <meta name="keywords" content="AI,Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力">
-    <meta property="og:description" content="はじめに GMOコネクトの永田です。 「数年前に組まれた既存 DEV 環境を、別の AWS アカウントに丸ごと再現してほしい。CFn template はあるがメンテされておらず当時のメンバーは離任＋手動構築も多々ある、ビルド・構築手順書は無い。動作している環境を r.">
+    <meta property="og:title" content="「ハーネス」ってなんぞ？ Claudeに“性格”と“記憶”を持たせる仕組みを、おじさんでも分かるように調べてみた">
+    <meta property="og:description" content="はじめに 最近、AIにコーディングを手伝ってもらう文脈で「ハーネス」という言葉を見かけるようになりました。専門用語っぽくて身構えてしまいますが、中身はとてもシンプルらしいです。 難しい記事を漁りましたが、頭の中で整理しきれなかったので、Claudeに教えてもらいつつまとめ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1948.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力">
-    <meta name="twitter:description" content="はじめに GMOコネクトの永田です。 「数年前に組まれた既存 DEV 環境を、別の AWS アカウントに丸ごと再現してほしい。CFn template はあるがメンテされておらず当時のメンバーは離任＋手動構築も多々ある、ビルド・構築手順書は無い。動作している環境を r.">
+    <meta name="twitter:title" content="「ハーネス」ってなんぞ？ Claudeに“性格”と“記憶”を持たせる仕組みを、おじさんでも分かるように調べてみた">
+    <meta name="twitter:description" content="はじめに 最近、AIにコーディングを手伝ってもらう文脈で「ハーネス」という言葉を見かけるようになりました。専門用語っぽくて身構えてしまいますが、中身はとてもシンプルらしいです。 難しい記事を漁りましたが、頭の中で整理しきれなかったので、Claudeに教えてもらいつつまとめ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力",
-        "description": "はじめに GMOコネクトの永田です。 「数年前に組まれた既存 DEV 環境を、別の AWS アカウントに丸ごと再現してほしい。CFn template はあるがメンテされておらず当時のメンバーは離任＋手動構築も多々ある、ビルド・構築手順書は無い。動作している環境を r.",
+        "headline": "「ハーネス」ってなんぞ？ Claudeに“性格”と“記憶”を持たせる仕組みを、おじさんでも分かるように調べてみた",
+        "description": "はじめに 最近、AIにコーディングを手伝ってもらう文脈で「ハーネス」という言葉を見かけるようになりました。専門用語っぽくて身構えてしまいますが、中身はとてもシンプルらしいです。 難しい記事を漁りましたが、頭の中で整理しきれなかったので、Claudeに教えてもらいつつまとめ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-21T03:16:17",
-        "dateModified": "2026-05-22T07:46:35.035105",
+        "datePublished": "2026-08-28T11:16:19",
+        "dateModified": "2026-08-31T10:48:16.661106",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1948.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1948.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["Claude","AWS","EV"]
+        "keywords": ["AI","Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力",
+                "name": "「ハーネス」ってなんぞ？ Claudeに“性格”と“記憶”を持たせる仕組みを、おじさんでも分かるように調べてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1948.html"
             }
         ]
@@ -114,26 +114,25 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude O...</li>
+                <li aria-current="page">「ハーネス」ってなんぞ？ Claudeに“性格”と“記憶”を持たせる仕組みを、おじさんでも分かるよう...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ドキュメントが失われた AWS 環境を 1 日で再現 + 再構築手順書まで生成 ─ Claude Opus 4.7「infra delegate to」の威力</h1>
+                <h1>「ハーネス」ってなんぞ？ Claudeに“性格”と“記憶”を持たせる仕組みを、おじさんでも分かるように調べてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/ntaka329/items/b1d961ce5fab8541101f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/OnuuuumaX/items/8b7ac7751411f79a41d7?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-21T03:16:17">
-                        公開: 2026-05-21T03:16:17
+                    <time datetime="2026-08-28T11:16:19">
+                        公開: 2026-08-28T11:16:19
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
+                    <span class="tag">AI</span>
                     <span class="tag">Claude</span>
-                    <span class="tag">AWS</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
@@ -141,13 +140,12 @@
                 
                 <div class="article-body">
                     はじめに
-GMOコネクトの永田です。
-
-「数年前に組まれた既存 DEV 環境を、別の AWS アカウントに丸ごと再現してほしい。CFn template はあるがメンテされておらず当時のメンバーは離任＋手動構築も多々ある、ビルド・構築手順書は無い。動作している環境を r...
+最近、AIにコーディングを手伝ってもらう文脈で「ハーネス」という言葉を見かけるようになりました。専門用語っぽくて身構えてしまいますが、中身はとてもシンプルらしいです。
+難しい記事を漁りましたが、頭の中で整理しきれなかったので、Claudeに教えてもらいつつまとめ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/ntaka329/items/b1d961ce5fab8541101f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/OnuuuumaX/items/8b7ac7751411f79a41d7?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,6 +158,16 @@ GMOコネクトの永田です。
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">Claude - Amazon検索結果</div>
@@ -170,20 +178,10 @@ GMOコネクトの永田です。
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +222,16 @@ GMOコネクトの永田です。
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_2832.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_8039.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AnkerのQi2 25W対応 &amp; 冷却ファン内蔵の3-in-1ワイヤレス充電器にホワイトモデルが登...</span>
+                        <span class="nav-title">イエローハット180万人分漏えいか</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_5288.html">
+                    <a href="iPhone_Mania_5737.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">New Relic アップデート(2026年4月)</span>
+                        <span class="nav-title">iOS27正式版は9月15日リリースか〜macOS 27など次期OSも同日の可能性</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +244,53 @@ GMOコネクトの永田です。
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1838.html">
-                        <h3>AIが生成した「偽の引用」が14万件超、科学論文の信頼性を揺るがす事態に</h3>
+                    <a href="CNET_Japan_最新情報総合_9908.html">
+                        <h3>サムスン「Galaxy S26 FE」発表、AIカメラ機能充実もコスパに陰り</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">新たな研究で、主要な4つの研究データベースで公開されている科学論文から、AIが生成した偽の引用が14万6900件見つかった。.</p>
+                        <p class="related-summary">サムスンは、新型スマートフォン「Galaxy S26 FE」を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9886.html">
-                        <h3>グーグルの超リアルなAIエージェントと会話してみた　次世代技術「Beam」が示す驚きの可能性</h3>
+                    <a href="CNET_Japan_最新情報総合_6293.html">
+                        <h3>よちよち歩いて物も運ぶアヒル型ロボット「Microduck」、Hugging Faceが発表</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">グーグルがテレプレゼンス用システム「Google Beam」の一環として披露したエージェントは実験的なものだが、そのリアルさは衝撃的だ。これは人間の助けとなる存在なのか、それとも人間の代わりとなるもの...</p>
+                        <p class="related-summary">AIツールのハブを提供するHugging Faceと傘下のPollen Roboticsが、愛らしいアヒル型ロボット「Microduck」を共同開発した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7852.html">
-                        <h3>AIにラジオ局を運営させたらどうなる？ Claude、GPT、Gemini、Grokそれぞれの苦闘</h3>
+                    <a href="CNET_Japan_最新情報総合_9529.html">
+                        <h3>AIイヤホン「Plaud One」登場　会話を自動で文字起こし、要約やAIとの対話も</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">これはシンプルな実験だ。ある企業が4つのAIモデルにそれぞれ20ドルと簡潔な指示を与え、あとは自由に任せた。半年を経た状況はどのようなものだろうか。.</p>
+                        <p class="related-summary">AIボイスレコーダー大手のPlaudは、業界最高水準のエージェント型AIを組み込んだイヤホン「Plaud One」を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7254.html">
-                        <h3>SpaceX、Anthropicから毎月約2000億円を受領--もはや宇宙よりAIを「自社の価値」の根拠に</h3>
+                    <a href="CNET_Japan_最新情報総合_4068.html">
+                        <h3>謎の高性能AI、正体は中国の「GLM-5.3-Flash」と判明　AnthropicやOpenAIの対抗馬に</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">SpaceXが米証券取引委員会（SEC）に提出したIPO目論見書（S-1）で、AI企業Anthropicとの大型契約が明らかになった。.</p>
+                        <p class="related-summary">aiはこのほど、同社が開発元だと明らかにした。. 先週、匿名のAIモデルが「Ox Alpha」として登場した。中国企業Z.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_528.html">
-                        <h3>生成AIに個人情報を入力、「肯定」35% 「否定」38%で割れる--ドコモ調査</h3>
+                    <a href="CNET_Japan_最新情報総合_1966.html">
+                        <h3>AIによる大規模サイバー攻撃に備えよ--OpenAIら155組織が防衛強化を呼びかけ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NTTドコモ モバイル社会研究所は5月21日、生成AIへの個人情報の入力に対する意識調査の結果を公表した。「有効なアドバイスを得るためなら、ある程度の個人情報の記入はしかたない」という考え方について、...</p>
+                        <p class="related-summary">AIによる広範なサイバー攻撃への防御を強化できる「時間は限られている」として、OpenAIら150以上の組織が、企業や政府、その他の機関に対し、サイバーセキュリティー強化へ迅速に行動するよう呼びかけた...</p>
                     </a>
                 </article>
             </div>

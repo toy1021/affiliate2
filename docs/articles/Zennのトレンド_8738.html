@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか | 日本のテックニュース速報</title>
-    <meta name="description" content="エンジニアの認知戦略はなぜすれ違うのか ソフトウェアエンジニアとして業界に長くいると、現場や SNS 上でのエンジニアどうしの「すれ違い」を何度も目にします。技術力の優劣ではない、性格や趣味嗜好の問題とも少し違う、なのにこの「すれ違い」は、驚くほど普遍的に業界内に存在しています">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>ローカル AWS エミュレータで Terraform を検証する | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Zenn 読者のみなさん、こんにちは。e-dash VPoE の伊藤です。 e-dash ではアプリケーションインフラとして多くのプロダクトで AWS を採用しており、IaC として Terraform でインフラリソースを全面的に管理しています">
+    <meta name="keywords" content="AI,AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか">
-    <meta property="og:description" content="エンジニアの認知戦略はなぜすれ違うのか ソフトウェアエンジニアとして業界に長くいると、現場や SNS 上でのエンジニアどうしの「すれ違い」を何度も目にします。技術力の優劣ではない、性格や趣味嗜好の問題とも少し違う、なのにこの「すれ違い」は、驚くほど普遍的に業界内に存在しています">
+    <meta property="og:title" content="ローカル AWS エミュレータで Terraform を検証する">
+    <meta property="og:description" content="はじめに Zenn 読者のみなさん、こんにちは。e-dash VPoE の伊藤です。 e-dash ではアプリケーションインフラとして多くのプロダクトで AWS を採用しており、IaC として Terraform でインフラリソースを全面的に管理しています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8738.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか">
-    <meta name="twitter:description" content="エンジニアの認知戦略はなぜすれ違うのか ソフトウェアエンジニアとして業界に長くいると、現場や SNS 上でのエンジニアどうしの「すれ違い」を何度も目にします。技術力の優劣ではない、性格や趣味嗜好の問題とも少し違う、なのにこの「すれ違い」は、驚くほど普遍的に業界内に存在しています">
+    <meta name="twitter:title" content="ローカル AWS エミュレータで Terraform を検証する">
+    <meta name="twitter:description" content="はじめに Zenn 読者のみなさん、こんにちは。e-dash VPoE の伊藤です。 e-dash ではアプリケーションインフラとして多くのプロダクトで AWS を採用しており、IaC として Terraform でインフラリソースを全面的に管理しています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか",
-        "description": "エンジニアの認知戦略はなぜすれ違うのか ソフトウェアエンジニアとして業界に長くいると、現場や SNS 上でのエンジニアどうしの「すれ違い」を何度も目にします。技術力の優劣ではない、性格や趣味嗜好の問題とも少し違う、なのにこの「すれ違い」は、驚くほど普遍的に業界内に存在しています",
+        "headline": "ローカル AWS エミュレータで Terraform を検証する",
+        "description": "はじめに Zenn 読者のみなさん、こんにちは。e-dash VPoE の伊藤です。 e-dash ではアプリケーションインフラとして多くのプロダクトで AWS を採用しており、IaC として Terraform でインフラリソースを全面的に管理しています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-10T22:00:06",
-        "dateModified": "2026-05-13T23:07:20.922596",
+        "datePublished": "2026-08-27T00:03:42",
+        "dateModified": "2026-08-31T04:01:39.206143",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8738.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8738.html",
-        "articleSection": "プログラミング",
-        "keywords": []
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか",
+                "name": "ローカル AWS エミュレータで Terraform を検証する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8738.html"
             }
         ]
@@ -113,38 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">ローカル AWS エミュレータで Terraform を検証する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ソフトウェアの「設計原則」を、なぜ一部のエンジニアは生理的に嫌うのか</h1>
+                <h1>ローカル AWS エミュレータで Terraform を検証する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/torao/articles/20260502-differences-in-engrs-cognitive-strategies" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-05-10T22:00:06">
-                        公開: 2026-05-10T22:00:06
+                    <span class="source">出典: <a href="https://zenn.dev/edash_tech_blog/articles/0ea5ab1ef9a751" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-08-27T00:03:42">
+                        公開: 2026-08-27T00:03:42
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    エンジニアの認知戦略はなぜすれ違うのか
-ソフトウェアエンジニアとして業界に長くいると、現場や SNS 上でのエンジニアどうしの「すれ違い」を何度も目にします。技術力の優劣ではない、性格や趣味嗜好の問題とも少し違う、なのにこの「すれ違い」は、驚くほど普遍的に業界内に存在しています。
-この記事では、わたしがそのような「すれ違い」を何十年も観測し続けた末にたどり着いた一つの認知モデルに基づく見解です。科学的に証明された理論ではありません。しかし、この視点を持つだけで、日常の摩擦の見え方がかなり変わるはずです。
-
- チーム内での症状
-チェックリスト: あなたのチームで以下の状況を見たことはあ...
+                    はじめに
+Zenn 読者のみなさん、こんにちは。e-dash VPoE の伊藤です。
+e-dash ではアプリケーションインフラとして多くのプロダクトで AWS を採用しており、IaC として Terraform でインフラリソースを全面的に管理しています。
+最近はインフラ構築・運用も全面的に AI にお任せするようになってきました。AI 登場前はあまり気にならなかったのですが、インフラも AI に任せるようになったことで、ローカルで迅速にフィードバックループが回せる環境がほしくなってきました。
+今回は、Terraform から使えるローカル AWS エミュレータを取り上げ、何が評価...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/torao/articles/20260502-differences-in-engrs-cognitive-strategies" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/edash_tech_blog/articles/0ea5ab1ef9a751" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,20 +160,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -180,23 +193,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -211,16 +224,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Publickey_6144.html">
+                    <a href="Zennのトレンド_9982.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">NutanixとAWSが語る。既存システムを圧倒的なスピードと低コストでAWSに移行する方法［PR］</span>
+                        <span class="nav-title">並行開発に Orca がめちゃ便利</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_8614.html">
+                    <a href="Zennのトレンド_1981.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">コードを書かなくなった我々は何者か —— Product / Platform / Evaluate...</span>
+                        <span class="nav-title">Claude Code の承認待ちを見逃さないために、光る Clawd を机に置いた</span>
                     </a>
                 </div>
             </div>
@@ -233,53 +246,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_8465.html">
-                        <h3>【本日】牛たん食べ放題がスタート！昨年約671万皿売れた人気企画</h3>
+                    <a href="CNET_Japan_最新情報総合_4151.html">
+                        <h3>楽天証券、AIエージェント型のチャットサービス9月2日開始</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">しゃぶ葉は本日5月14日より、「初夏の牛たんフェア」を期間限定で開催します。「牛たん食べ放題」を中心に、レモンをテーマにしただしやたれ、新開発のだしも登場します。.</p>
+                        <p class="related-summary">楽天証券は8月27日、生成AIを使ったチャットサポート「楽天証券のAIチャットサポート」を9月2日に始めると発表した。現在提供しているチャットボット「AIチャット」を強化するもので、楽天証券ウェブサイ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1158.html">
-                        <h3>トヨタ「ノア／ヴォクシー」に“泊まれる”5人乗り仕様！ モデリスタのMULTI UTILITY登場</h3>
+                    <a href="CNET_Japan_最新情報総合_3546.html">
+                        <h3>サムスン「Galaxy S26 FE」発表、AIカメラ機能充実もコスパに陰り</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">トヨタはノア／ヴォクシーのウェルキャブシリーズを一部改良し、あわせてMODELLISTA開発のコンプリートカー“MULTI UTILITY”を発売した。カーゴモードやベッドモードに対応する5人乗り仕様...</p>
+                        <p class="related-summary">サムスンは、新型スマートフォン「Galaxy S26 FE」を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_454.html">
-                        <h3>1割の &#34;信頼される&#34; エンジニアが実行している 『止めないコミュニケーション』</h3>
+                    <a href="CNET_Japan_最新情報総合_2671.html">
+                        <h3>よちよち歩いて物も運ぶアヒル型ロボット「Microduck」、Hugging Faceが発表</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや考え方を整理して発信しています。 PRUMについて気になった方は、コーポレ...</p>
+                        <p class="related-summary">AIツールのハブを提供するHugging Faceと傘下のPollen Roboticsが、愛らしいアヒル型ロボット「Microduck」を共同開発した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3506.html">
-                        <h3>React開発者注意：TanStack Router攻撃事件まとめ</h3>
+                    <a href="CNET_Japan_最新情報総合_6786.html">
+                        <h3>AIイヤホン「Plaud One」登場　会話を自動で文字起こし、要約やAIとの対話も</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">📝 注意 本記事はAIの補助を受けて編集しています。 インシデント概要（TanStack 公式ポストモーテムより確認） 2026年5月11日 19:20～19:26 UTC（日本時間 5月12日 4:...</p>
+                        <p class="related-summary">AIボイスレコーダー大手のPlaudは、業界最高水準のエージェント型AIを組み込んだイヤホン「Plaud One」を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_8339.html">
-                        <h3>AIにQAエンジニアとして思考させるエージェントQA設計の思想</h3>
+                    <a href="CNET_Japan_最新情報総合_8276.html">
+                        <h3>謎の高性能AI、正体は中国の「GLM-5.3-Flash」と判明　AnthropicやOpenAIの対抗馬に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">こんにちは！e-dashでQAエンジニアをしている10mo8です。 AIによってソフトウェア開発ライフサイクルが速くなったことで、E2Eテスト（本記事では、自動と手動を含めたLargeサイズのテストと...</p>
+                        <p class="related-summary">aiはこのほど、同社が開発元だと明らかにした。. 先週、匿名のAIモデルが「Ox Alpha」として登場した。中国企業Z.</p>
                     </a>
                 </article>
             </div>

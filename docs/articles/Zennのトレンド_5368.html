@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIが書いたコードはAIが見る ── レビューが詰まらず、品質はむしろ上がる（連載Part 3） | 日本のテックニュース速報</title>
-    <meta name="description" content="! English Version is here みなさまこんにちは！エアークローゼットでCTOをしている辻です。 ! 注記: 本記事で言及する「cortex」は、airCloset社内で独自開発したAIプラットフォームの内部コードネームです">
-    <meta name="keywords" content="AI,本">
+    <title>Tauriのアプリケーションでダークモードを実装する | 日本のテックニュース速報</title>
+    <meta name="description" content="UI層とロジック層の状態の扱いについて Tauri を扱う場合、大抵は React &amp; Rust で実装することになります。 その際、ダークモードを実装するにあたって、状態値をどう扱うべきかについて書きます。 ダークモード対応では、ライト・ダーク・OS追従の3状態を扱う設計が多いです">
+    <meta name="keywords" content="React,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIが書いたコードはAIが見る ── レビューが詰まらず、品質はむしろ上がる（連載Part 3）">
-    <meta property="og:description" content="! English Version is here みなさまこんにちは！エアークローゼットでCTOをしている辻です。 ! 注記: 本記事で言及する「cortex」は、airCloset社内で独自開発したAIプラットフォームの内部コードネームです">
+    <meta property="og:title" content="Tauriのアプリケーションでダークモードを実装する">
+    <meta property="og:description" content="UI層とロジック層の状態の扱いについて Tauri を扱う場合、大抵は React &amp; Rust で実装することになります。 その際、ダークモードを実装するにあたって、状態値をどう扱うべきかについて書きます。 ダークモード対応では、ライト・ダーク・OS追従の3状態を扱う設計が多いです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5368.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIが書いたコードはAIが見る ── レビューが詰まらず、品質はむしろ上がる（連載Part 3）">
-    <meta name="twitter:description" content="! English Version is here みなさまこんにちは！エアークローゼットでCTOをしている辻です。 ! 注記: 本記事で言及する「cortex」は、airCloset社内で独自開発したAIプラットフォームの内部コードネームです">
+    <meta name="twitter:title" content="Tauriのアプリケーションでダークモードを実装する">
+    <meta name="twitter:description" content="UI層とロジック層の状態の扱いについて Tauri を扱う場合、大抵は React &amp; Rust で実装することになります。 その際、ダークモードを実装するにあたって、状態値をどう扱うべきかについて書きます。 ダークモード対応では、ライト・ダーク・OS追従の3状態を扱う設計が多いです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIが書いたコードはAIが見る ── レビューが詰まらず、品質はむしろ上がる（連載Part 3）",
-        "description": "! English Version is here みなさまこんにちは！エアークローゼットでCTOをしている辻です。 ! 注記: 本記事で言及する「cortex」は、airCloset社内で独自開発したAIプラットフォームの内部コードネームです",
+        "headline": "Tauriのアプリケーションでダークモードを実装する",
+        "description": "UI層とロジック層の状態の扱いについて Tauri を扱う場合、大抵は React &amp; Rust で実装することになります。 その際、ダークモードを実装するにあたって、状態値をどう扱うべきかについて書きます。 ダークモード対応では、ライト・ダーク・OS追従の3状態を扱う設計が多いです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-25T23:37:52",
-        "dateModified": "2026-05-26T21:47:18.979452",
+        "datePublished": "2026-09-01T17:33:07",
+        "dateModified": "2026-09-02T14:09:14.906859",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5368.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5368.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","本"]
+        "articleSection": "通信・ネットワーク",
+        "keywords": ["React","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "通信・ネットワーク",
+                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIが書いたコードはAIが見る ── レビューが詰まらず、品質はむしろ上がる（連載Part 3）",
+                "name": "Tauriのアプリケーションでダークモードを実装する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5368.html"
             }
         ]
@@ -113,25 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIが書いたコードはAIが見る ── レビューが詰まらず、品質はむしろ上がる（連載Part 3）</li>
+                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
+                <li aria-current="page">Tauriのアプリケーションでダークモードを実装する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIが書いたコードはAIが見る ── レビューが詰まらず、品質はむしろ上がる（連載Part 3）</h1>
+                <h1>Tauriのアプリケーションでダークモードを実装する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/aircloset/articles/91824e55b7fc9c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-25T23:37:52">
-                        公開: 2026-05-25T23:37:52
+                    <span class="source">出典: <a href="https://zenn.dev/ayaextech_fill/articles/tauri-application-dark-mode" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: 通信・ネットワーク</span>
+                    <time datetime="2026-09-01T17:33:07">
+                        公開: 2026-09-01T17:33:07
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">React</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -139,19 +139,19 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-English Version is here
-
-みなさまこんにちは！エアークローゼットでCTOをしている辻です。
+                    UI層とロジック層の状態の扱いについて
+Tauri を扱う場合、大抵は React &amp; Rust で実装することになります。
+その際、ダークモードを実装するにあたって、状態値をどう扱うべきかについて書きます。
+ダークモード対応では、ライト・ダーク・OS追従の3状態を扱う設計が多いです。
+この記事では、テーマの状態をRust側で持ち、
+Reactで作成したUIから invoke で数値を渡して Rust 側の状態を変えるだけの設計を扱います。
 !
-注記: 本記事で言及する「cortex」は、airCloset社内で独自開発したAIプラットフォームの内部コードネームです。Snowflake CortexやPalo Alto Networks Cortex等の既存商用サービスとは一切関係ありません。
-
-Part 1（総論）で AIがPRレビューや障害対応を回している話を、Part 2（Product Graph）でコード・docs・DB・インフラを1つのナレッジグラフに統合したcpgの話を書きました。
-今回は自動...
+本文のコード例は説明のために簡略化しており、エラー処理を unwrap で省いています。
+実際のアプリケーションでは Result ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/aircloset/articles/91824e55b7fc9c" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ayaextech_fill/articles/tauri-application-dark-mode" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -164,20 +164,10 @@ Part 1（総論）で AIがPRレビューや障害対応を回している話を
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -197,23 +187,23 @@ Part 1（総論）で AIがPRレビューや障害対応を回している話を
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>通信・ネットワーク関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -228,16 +218,16 @@ Part 1（総論）で AIがPRレビューや障害対応を回している話を
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_3697.html">
+                    <a href="Qiita_-_人気の記事_1758.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Oracle AI Database@Google Cloud で Exadata を作成してみてみ...</span>
+                        <span class="nav-title">耳で聞く！Python で学ぶ マクロ経済学 入門 7</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_3690.html">
+                    <a href="Qiita_-_人気の記事_5328.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">文系未経験エンジニアが研修で学んだLinuxコマンド備忘録</span>
+                        <span class="nav-title">API連携、つながればOK？ 回数の壁・仕様変更・障害情報を業務システム56件で調べてみた</span>
                     </a>
                 </div>
             </div>
@@ -250,53 +240,43 @@ Part 1（総論）で AIがPRレビューや障害対応を回している話を
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5937.html">
-                        <h3>データセンターを渇望するAI企業、反発する住民　米調査で浮き彫りに</h3>
+                    <a href="CNET_Japan_最新情報総合_6923.html">
+                        <h3>これが日本上空を飛ぶ「HAPS」、ソフトバンクが写真公開　スマホ通信試験に成功</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">人工知能（AI）を支えるため、演算用の大量の電力と冷却用の水を消費するデータセンターの建設に対し、地元の反発が強まっている。.</p>
+                        <p class="related-summary">ソフトバンクと米Sceye（スカイ）は9月2日、成層圏を飛ぶ「空飛ぶ基地局」HAPSから地上のスマートフォンに電波を届け、音声通話や動画視聴ができることを日本上空で確認したと発表した。日本上空を飛ぶH...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5926.html">
-                        <h3>ローマ教皇レオ14世、AIめぐる初の回勅　巨大テックに「武装解除」を迫る</h3>
+                    <a href="CNET_Japan_最新情報総合_2488.html">
+                        <h3>楽天モバイル、楽天ID未連携のユーザーを自動解約　電話番号も失効　11月30日までに対応必要</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">ローマ教皇レオ14世が5月25日、人工知能（AI）をテーマにした初の回勅を発表した。タイトルは「マグニフィカ・フマニタス（『輝かしき人間性』の意）」。4万2300語に及ぶこの文書は、AIの規制と、人類...</p>
+                        <p class="related-summary">楽天モバイルは8月31日、楽天IDとひも付けずに回線を利用できる「ゲスト」での利用を11月30日23時59分で終了すると発表した。対象は「my 楽天モバイル」（Web）に「ゲストでログイン中」と表示さ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4967.html">
-                        <h3>「ChatGPT for PowerPoint」ベータ版公開　白紙からパワポのスライド作成も</h3>
+                    <a href="気になる記になる_4505.html">
+                        <h3>ソフトバンクとLINEヤフー、スマホ買取サービス｢Yahoo!スマホ買取｣を提供開始</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">OpenAIは米国時間5月21日、Microsoft PowerPoint上でChatGPTを利用できる「ChatGPT for PowerPoint」のベータ版を公開した。スライドの新規作成や既存ス...</p>
+                        <p class="related-summary">本日、ソフトバンクとLINEヤフーが提携し、通信キャリアを問わずに利用できるスマートフォンの買取サービス「Yahoo!スマホ買取」の提供を開始しました。 「Yahoo!スマホ買取」は、スマホの査定から...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4623.html">
-                        <h3>ChatGPTに相談したら意図せぬ結果に　巨人・阿部監督辞任、娘の手紙全文</h3>
+                    <a href="iPhone_Mania_3907.html">
+                        <h3>au7月ランキング、iPhone 17が4機種トップ10入り</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">プロ野球・読売ジャイアンツの阿部慎之助監督（47）が長女への暴行容疑で逮捕・釈放され、5月26日に辞任した。同日の記者会見で、代理人を通じて長女本人による手紙が読み上げられた。手紙のなかで長女は、児童...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2320.html">
-                        <h3>ドコモ、AIで「詐欺をチェック」する新サービスを月額999円から提供</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">NTTドコモは5月25日、スマートフォンの詐欺対策機能を強化した新プラン「あんしんセキュリティ スタンダードプラン 詐欺対策プラス」（月額999円）と「あんしんセキュリティ トータルプラン 詐欺対策プ...</p>
+                        <p class="related-summary">auオンラインショップの「スマートフォン・ケータイ売れ筋ランキング」2026年7月版で、iPhone 17シリーズの4機種がトップ10に入ったとITmedia Mobileが報じました。発売から10カ...</p>
                     </a>
                 </article>
             </div>

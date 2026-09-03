@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TanStack Start + Hono + oRPC + Cloudflare Workersで社内ERPを作った設計と学び | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 建築業向けの社内ERP（プロジェクト管理・CRM・工数管理・ダッシュボード）を、Full-Stack TypeScriptでスクラッチ開発しました。TanStack Start + Hono + oRPCを、Cloudflare Workersの上で動かしています">
-    <meta name="keywords" content="PC">
+    <title>Tauriのアプリケーションでダークモードを実装する | 日本のテックニュース速報</title>
+    <meta name="description" content="UI層とロジック層の状態の扱いについて Tauri を扱う場合、大抵は React &amp; Rust で実装することになります。 その際、ダークモードを実装するにあたって、状態値をどう扱うべきかについて書きます。 ダークモード対応では、ライト・ダーク・OS追従の3状態を扱う設計が多いです">
+    <meta name="keywords" content="React,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="TanStack Start + Hono + oRPC + Cloudflare Workersで社内ERPを作った設計と学び">
-    <meta property="og:description" content="はじめに 建築業向けの社内ERP（プロジェクト管理・CRM・工数管理・ダッシュボード）を、Full-Stack TypeScriptでスクラッチ開発しました。TanStack Start + Hono + oRPCを、Cloudflare Workersの上で動かしています">
+    <meta property="og:title" content="Tauriのアプリケーションでダークモードを実装する">
+    <meta property="og:description" content="UI層とロジック層の状態の扱いについて Tauri を扱う場合、大抵は React &amp; Rust で実装することになります。 その際、ダークモードを実装するにあたって、状態値をどう扱うべきかについて書きます。 ダークモード対応では、ライト・ダーク・OS追従の3状態を扱う設計が多いです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7457.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TanStack Start + Hono + oRPC + Cloudflare Workersで社内ERPを作った設計と学び">
-    <meta name="twitter:description" content="はじめに 建築業向けの社内ERP（プロジェクト管理・CRM・工数管理・ダッシュボード）を、Full-Stack TypeScriptでスクラッチ開発しました。TanStack Start + Hono + oRPCを、Cloudflare Workersの上で動かしています">
+    <meta name="twitter:title" content="Tauriのアプリケーションでダークモードを実装する">
+    <meta name="twitter:description" content="UI層とロジック層の状態の扱いについて Tauri を扱う場合、大抵は React &amp; Rust で実装することになります。 その際、ダークモードを実装するにあたって、状態値をどう扱うべきかについて書きます。 ダークモード対応では、ライト・ダーク・OS追従の3状態を扱う設計が多いです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "TanStack Start + Hono + oRPC + Cloudflare Workersで社内ERPを作った設計と学び",
-        "description": "はじめに 建築業向けの社内ERP（プロジェクト管理・CRM・工数管理・ダッシュボード）を、Full-Stack TypeScriptでスクラッチ開発しました。TanStack Start + Hono + oRPCを、Cloudflare Workersの上で動かしています",
+        "headline": "Tauriのアプリケーションでダークモードを実装する",
+        "description": "UI層とロジック層の状態の扱いについて Tauri を扱う場合、大抵は React &amp; Rust で実装することになります。 その際、ダークモードを実装するにあたって、状態値をどう扱うべきかについて書きます。 ダークモード対応では、ライト・ダーク・OS追従の3状態を扱う設計が多いです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-25T00:00:05",
-        "dateModified": "2026-08-25T14:49:16.154713",
+        "datePublished": "2026-09-01T17:33:07",
+        "dateModified": "2026-09-03T03:14:09.628615",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7457.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7457.html",
-        "articleSection": "プログラミング",
-        "keywords": ["PC"]
+        "articleSection": "通信・ネットワーク",
+        "keywords": ["React","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "通信・ネットワーク",
+                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "TanStack Start + Hono + oRPC + Cloudflare Workersで社内ERPを作った設計と学び",
+                "name": "Tauriのアプリケーションでダークモードを実装する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7457.html"
             }
         ]
@@ -113,51 +113,45 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">TanStack Start + Hono + oRPC + Cloudflare Workersで...</li>
+                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
+                <li aria-current="page">Tauriのアプリケーションでダークモードを実装する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>TanStack Start + Hono + oRPC + Cloudflare Workersで社内ERPを作った設計と学び</h1>
+                <h1>Tauriのアプリケーションでダークモードを実装する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/yosashusaku/articles/enterprise-erp-tanstack-hono-orpc" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-08-25T00:00:05">
-                        公開: 2026-08-25T00:00:05
+                    <span class="source">出典: <a href="https://zenn.dev/ayaextech_fill/articles/tauri-application-dark-mode" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: 通信・ネットワーク</span>
+                    <time datetime="2026-09-01T17:33:07">
+                        公開: 2026-09-01T17:33:07
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">PC</span>
+                    <span class="tag">React</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-建築業向けの社内ERP（プロジェクト管理・CRM・工数管理・ダッシュボード）を、Full-Stack TypeScriptでスクラッチ開発しました。TanStack Start + Hono + oRPCを、Cloudflare Workersの上で動かしています。
-この構成はまだ事例が少なく、「動くところまでは書けるが、業務システムのサイズに育ったときにどうなるのか」が想像しづらい領域だと思います。この記事はスタックの紹介ではなく、どこに境界を引いたのか／引き直したのかの話です。
-結論を先に並べると、主な判断はこの4つです。
-
-
-
-判断
-採用
-主な理由
-
-
-
-
-実行基盤
-...
+                    UI層とロジック層の状態の扱いについて
+Tauri を扱う場合、大抵は React &amp; Rust で実装することになります。
+その際、ダークモードを実装するにあたって、状態値をどう扱うべきかについて書きます。
+ダークモード対応では、ライト・ダーク・OS追従の3状態を扱う設計が多いです。
+この記事では、テーマの状態をRust側で持ち、
+Reactで作成したUIから invoke で数値を渡して Rust 側の状態を変えるだけの設計を扱います。
+!
+本文のコード例は説明のために簡略化しており、エラー処理を unwrap で省いています。
+実際のアプリケーションでは Result ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/yosashusaku/articles/enterprise-erp-tanstack-hono-orpc" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ayaextech_fill/articles/tauri-application-dark-mode" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -170,30 +164,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=PC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="PC - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">PC - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでPCに関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -203,23 +187,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>通信・ネットワーク関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -234,16 +218,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_4878.html">
+                    <a href="気になる記になる_7888.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">/model を1度でも押すと ANTHROPIC_DEFAULT_MODEL は効きません</span>
+                        <span class="nav-title">CIO、6.83mmの薄さに5,000mAhの半固体系セル搭載の新型モバイルバッテリー「SMARTC...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_6645.html">
+                    <a href="気になる記になる_4037.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">モンハンNOW、電車での移動中もプレイ可能に</span>
+                        <span class="nav-title">Apple新CEOのジョン・ターナス氏がXで初投稿</span>
                     </a>
                 </div>
             </div>
@@ -256,53 +240,33 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_3038.html">
-                        <h3>Next.js 16.3正式版リリース。Turbopackのメモリ使用量が最大90％減、SSRが最大22％高速化、Typ...</h3>
+                    <a href="CNET_Japan_最新情報総合_6371.html">
+                        <h3>これが日本上空を飛ぶ「HAPS」、ソフトバンクが写真公開　スマホ通信試験に成功</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">Vercelは同社が開発するWebアプリケーションフレームワークの最新版となる「Next. jsは、ReactをベースとしたオープンソースのWebアプリケーションフレームワークです。ルーティング.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8668.html">
-                        <h3>「GTA 6」映像流出で犯人捜し、マイクロソフトとDiscordに情報開示を求める</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">新作ゲーム「グランド・セフト・オートVI」（GTA 6）の開発版を入手したとみられる人物が、この1週間にわたって短い映像をオンラインに投稿している。開発元であるRockstar Gamesの親会社Ta...</p>
+                        <p class="related-summary">ソフトバンクと米Sceye（スカイ）は9月2日、成層圏を飛ぶ「空飛ぶ基地局」HAPSから地上のスマートフォンに電波を届け、音声通話や動画視聴ができることを日本上空で確認したと発表した。日本上空を飛ぶH...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4757.html">
-                        <h3>Oura Ring開発元、「コイントス並み」訴訟に反論　睡眠ステージ「十分な査読済みエビデンスある」</h3>
+                    <a href="CNET_Japan_最新情報総合_8697.html">
+                        <h3>楽天モバイル、楽天ID未連携のユーザーを自動解約　電話番号も失効　11月30日までに対応必要</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">スマートリング「Oura Ring」の睡眠計測の精度をめぐり米国で集団訴訟を起こされたOuraは、公式ステートメントを公表した。睡眠ステージの判定は複数の研究で検証済みで「査読済みのエビデンスがある」...</p>
+                        <p class="related-summary">楽天モバイルは8月31日、楽天IDとひも付けずに回線を利用できる「ゲスト」での利用を11月30日23時59分で終了すると発表した。対象は「my 楽天モバイル」（Web）に「ゲストでログイン中」と表示さ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4454.html">
-                        <h3>国産迎撃ドローン「Terra B1」量産開始--9月ごろ納入、まず海自向け　テラドローン開発</h3>
+                    <a href="気になる記になる_9689.html">
+                        <h3>ソフトバンクとLINEヤフー、スマホ買取サービス｢Yahoo!スマホ買取｣を提供開始</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">Terra Drone（テラドローン）は8月25日、国産の迎撃ドローン「Terra B1」が防衛装備庁の「迎撃ドローン早期取得プログラム」の実証試験を通過し、量産段階に進んだと発表した。防衛装備庁が示...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_7086.html">
-                        <h3>マイクロサービス間の認可伝搬をどう解くか？独自実装と IETF Transaction Tokens を見比べてみた</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">こんにちは。アカウント基盤開発部でエンジニアをしている tkmt (たくまつ) です。 今回は、IETF で標準化が進んでいる Transaction Tokens について調査してまとめてみました。...</p>
+                        <p class="related-summary">本日、ソフトバンクとLINEヤフーが提携し、通信キャリアを問わずに利用できるスマートフォンの買取サービス「Yahoo!スマホ買取」の提供を開始しました。 「Yahoo!スマホ買取」は、スマホの査定から...</p>
                     </a>
                 </article>
             </div>

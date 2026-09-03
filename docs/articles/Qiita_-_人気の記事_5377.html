@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS初心者がSSL証明書の共通鍵、公開鍵、秘密鍵について深堀った話 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに こんにちは。Tsukasaです！ 皆さん、データ暗号化はご存知でしょうか？ ITパスポートや基本情報技術者試験を受けたことのある方なら勉強をしたことがあるかもしれません。 私も軽く勉強をしたことがありますが、よくわかっていません。 以前HTTP/HTTPS、SS.">
-    <meta name="keywords" content="AWS,本">
+    <title>ネットワークフロー理論における「最小カット問題」の考え方を総整理！ 〜 カットの理論から現実への応用例まで 〜 | 日本のテックニュース速報</title>
+    <meta name="description" content="お久しぶりです！ NTT データ数理システムで顧問をしている大槻（けんちょん）です。好きなアルゴリズムは最小カットです。 今回は、最小カット問題について書いていきます。最小カット問題は、情報系の大学では「アルゴリズムとデータ構造」の講義の終盤で少しだけ登場するマニアックな話.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AWS初心者がSSL証明書の共通鍵、公開鍵、秘密鍵について深堀った話">
-    <meta property="og:description" content="はじめに こんにちは。Tsukasaです！ 皆さん、データ暗号化はご存知でしょうか？ ITパスポートや基本情報技術者試験を受けたことのある方なら勉強をしたことがあるかもしれません。 私も軽く勉強をしたことがありますが、よくわかっていません。 以前HTTP/HTTPS、SS.">
+    <meta property="og:title" content="ネットワークフロー理論における「最小カット問題」の考え方を総整理！ 〜 カットの理論から現実への応用例まで 〜">
+    <meta property="og:description" content="お久しぶりです！ NTT データ数理システムで顧問をしている大槻（けんちょん）です。好きなアルゴリズムは最小カットです。 今回は、最小カット問題について書いていきます。最小カット問題は、情報系の大学では「アルゴリズムとデータ構造」の講義の終盤で少しだけ登場するマニアックな話.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5377.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AWS初心者がSSL証明書の共通鍵、公開鍵、秘密鍵について深堀った話">
-    <meta name="twitter:description" content="はじめに こんにちは。Tsukasaです！ 皆さん、データ暗号化はご存知でしょうか？ ITパスポートや基本情報技術者試験を受けたことのある方なら勉強をしたことがあるかもしれません。 私も軽く勉強をしたことがありますが、よくわかっていません。 以前HTTP/HTTPS、SS.">
+    <meta name="twitter:title" content="ネットワークフロー理論における「最小カット問題」の考え方を総整理！ 〜 カットの理論から現実への応用例まで 〜">
+    <meta name="twitter:description" content="お久しぶりです！ NTT データ数理システムで顧問をしている大槻（けんちょん）です。好きなアルゴリズムは最小カットです。 今回は、最小カット問題について書いていきます。最小カット問題は、情報系の大学では「アルゴリズムとデータ構造」の講義の終盤で少しだけ登場するマニアックな話.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AWS初心者がSSL証明書の共通鍵、公開鍵、秘密鍵について深堀った話",
-        "description": "はじめに こんにちは。Tsukasaです！ 皆さん、データ暗号化はご存知でしょうか？ ITパスポートや基本情報技術者試験を受けたことのある方なら勉強をしたことがあるかもしれません。 私も軽く勉強をしたことがありますが、よくわかっていません。 以前HTTP/HTTPS、SS.",
+        "headline": "ネットワークフロー理論における「最小カット問題」の考え方を総整理！ 〜 カットの理論から現実への応用例まで 〜",
+        "description": "お久しぶりです！ NTT データ数理システムで顧問をしている大槻（けんちょん）です。好きなアルゴリズムは最小カットです。 今回は、最小カット問題について書いていきます。最小カット問題は、情報系の大学では「アルゴリズムとデータ構造」の講義の終盤で少しだけ登場するマニアックな話.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-20T08:22:32",
-        "dateModified": "2026-07-22T15:44:17.884316",
+        "datePublished": "2026-09-02T11:26:46",
+        "dateModified": "2026-09-03T22:22:09.348495",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5377.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5377.html",
-        "articleSection": "セキュリティ",
-        "keywords": ["AWS","本"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "セキュリティ",
-                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AWS初心者がSSL証明書の共通鍵、公開鍵、秘密鍵について深堀った話",
+                "name": "ネットワークフロー理論における「最小カット問題」の考え方を総整理！ 〜 カットの理論から現実への応用例まで 〜",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5377.html"
             }
         ]
@@ -113,42 +113,35 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
-                <li aria-current="page">AWS初心者がSSL証明書の共通鍵、公開鍵、秘密鍵について深堀った話</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">ネットワークフロー理論における「最小カット問題」の考え方を総整理！ 〜 カットの理論から現実への応用...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AWS初心者がSSL証明書の共通鍵、公開鍵、秘密鍵について深堀った話</h1>
+                <h1>ネットワークフロー理論における「最小カット問題」の考え方を総整理！ 〜 カットの理論から現実への応用例まで 〜</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/tks_1128/items/31897213450d6f273f51?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: セキュリティ</span>
-                    <time datetime="2026-07-20T08:22:32">
-                        公開: 2026-07-20T08:22:32
+                    <span class="source">出典: <a href="https://qiita.com/drken/items/52aafd8c073b37749539?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-09-02T11:26:46">
+                        公開: 2026-09-02T11:26:46
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AWS</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-こんにちは。Tsukasaです！
-皆さん、データ暗号化はご存知でしょうか？
-ITパスポートや基本情報技術者試験を受けたことのある方なら勉強をしたことがあるかもしれません。
-私も軽く勉強をしたことがありますが、よくわかっていません。
-以前HTTP/HTTPS、SS...
+                    お久しぶりです！
+NTT データ数理システムで顧問をしている大槻（けんちょん）です。好きなアルゴリズムは最小カットです。
+今回は、最小カット問題について書いていきます。最小カット問題は、情報系の大学では「アルゴリズムとデータ構造」の講義の終盤で少しだけ登場するマニアックな話...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/tks_1128/items/31897213450d6f273f51?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/drken/items/52aafd8c073b37749539?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,34 +150,9 @@ ITパスポートや基本情報技術者試験を受けたことのある方な
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>セキュリティ関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -215,16 +183,16 @@ ITパスポートや基本情報技術者試験を受けたことのある方な
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_4343.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_4569.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Async React時代の宣言的UI 3: useActionStateでユーザーの操作を妨げない...</span>
+                        <span class="nav-title">LINEとPayPay 今夏の連携を延期</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_7487.html">
+                    <a href="Zennのトレンド_755.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AIの推進がうまくいかない組織アンチパターン</span>
+                        <span class="nav-title">Kaggle Pokémon TCG AI Battle Challenge ポケカコンペ振り返りー...</span>
                     </a>
                 </div>
             </div>
@@ -237,13 +205,53 @@ ITパスポートや基本情報技術者試験を受けたことのある方な
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4149.html">
-                        <h3>FaliCaチップの脆弱性が公表--「Suicaは引き続き安心」とJR東日本</h3>
+                    <a href="CNET_Japan_最新情報総合_1076.html">
+                        <h3>東京メトロ、駅の床に「空いている号車」への矢印を投影　プロジェクション技術活用</h3>
                         <div class="related-meta">
-                            <span class="category">セキュリティ</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">脆弱性対策情報ポータルサイト「JVN」は7月21日、ソニーの非接触ICカード技術「FeliCa」の一部ICチップに関する脆弱性情報を公表した。対象は2017年以前に出荷された一部のチップ。暗号処理の過...</p>
+                        <p class="related-summary">東京メトロとシャープ、レスターの3社は9月3日、千代田線北千住駅で、乗客を空いている号車へ誘導して混雑の偏りを減らす実証を9月9日に始めると発表した。到着する列車の混雑状況に合わせ、比較的空いている号...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="CNET_Japan_最新情報総合_2402.html">
+                        <h3>過半数の人が「スマホ使いすぎ」を自覚、若いほど顕著に　米調査</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
+                        </div>
+                        <p class="related-summary">米国の成人の半数以上がスマートフォンを使いすぎていると感じているとの調査結果が公開された。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_2912.html">
+                        <h3>雨の日の靴はコレでOK！ GORE-TEX搭載のミズノ「ウエーブヌー GTX」が30％オフ</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">GORE-TEXを採用し、雨の日でも履きやすいミズノ「ウエーブヌー GTX」。濡れた路面に強いWgripやクッション性の高いMIZUNO ENERZY、3E相当の幅広設計を備え、通勤や旅行にも活躍しま...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_3237.html">
+                        <h3>LenovoがIFA2026で画面が横に伸びる＆厚み10mmのファンレス・モバイルノートを公開</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">レノボは、ドイツ・ベルリンで開催された「Lenovo Innovation World at IFA 2026」において、試作モデルも公開しました.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_7599.html">
+                        <h3>LenovoがIFA2026でRTX Spark搭載のクリエイター向けペン入力PCなど新Yogaシリーズを発表</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">レノボは、ドイツ・ベルリンで開催された「Lenovo Innovation World at IFA 2026」において、Yogaシリーズの最新ラインアップを発表しました.</p>
                     </a>
                 </article>
             </div>

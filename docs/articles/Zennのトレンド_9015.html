@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>リポジトリにロジックは書くな！ | 日本のテックニュース速報</title>
-    <meta name="description" content="こんにちは！ 株式会社モアでエンジニアをしているmoriです！ 今回は曖昧になりがちなリポジトリの責務についての記事を書きたいと思います。 はじめに レイヤードアーキテクチャを採用していても、責務がうまく分かれていないことはよくあると思います">
+    <title>CとGoの生成コードを読む ― アセンブリから見る言語設計の違い | 日本のテックニュース速報</title>
+    <meta name="description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="リポジトリにロジックは書くな！">
-    <meta property="og:description" content="こんにちは！ 株式会社モアでエンジニアをしているmoriです！ 今回は曖昧になりがちなリポジトリの責務についての記事を書きたいと思います。 はじめに レイヤードアーキテクチャを採用していても、責務がうまく分かれていないことはよくあると思います">
+    <meta property="og:title" content="CとGoの生成コードを読む ― アセンブリから見る言語設計の違い">
+    <meta property="og:description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9015.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="リポジトリにロジックは書くな！">
-    <meta name="twitter:description" content="こんにちは！ 株式会社モアでエンジニアをしているmoriです！ 今回は曖昧になりがちなリポジトリの責務についての記事を書きたいと思います。 はじめに レイヤードアーキテクチャを採用していても、責務がうまく分かれていないことはよくあると思います">
+    <meta name="twitter:title" content="CとGoの生成コードを読む ― アセンブリから見る言語設計の違い">
+    <meta name="twitter:description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9015.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "リポジトリにロジックは書くな！",
-        "description": "こんにちは！ 株式会社モアでエンジニアをしているmoriです！ 今回は曖昧になりがちなリポジトリの責務についての記事を書きたいと思います。 はじめに レイヤードアーキテクチャを採用していても、責務がうまく分かれていないことはよくあると思います",
+        "headline": "CとGoの生成コードを読む ― アセンブリから見る言語設計の違い",
+        "description": "同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-21T09:30:55",
-        "dateModified": "2026-08-24T12:52:03.839623",
+        "datePublished": "2026-09-05T01:33:15",
+        "dateModified": "2026-09-06T08:26:03.630775",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9015.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9015.html",
-        "articleSection": "プログラミング",
+        "articleSection": "テクノロジー",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "リポジトリにロジックは書くな！",
+                "name": "CとGoの生成コードを読む ― アセンブリから見る言語設計の違い",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9015.html"
             }
         ]
@@ -113,39 +113,33 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">リポジトリにロジックは書くな！</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">CとGoの生成コードを読む ― アセンブリから見る言語設計の違い</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>リポジトリにロジックは書くな！</h1>
+                <h1>CとGoの生成コードを読む ― アセンブリから見る言語設計の違い</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/more_tech_blog/articles/76af481ab3816d" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-08-21T09:30:55">
-                        公開: 2026-08-21T09:30:55
+                    <span class="source">出典: <a href="https://zenn.dev/saku0512/books/3735de8d0aa09f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-09-05T01:33:15">
+                        公開: 2026-09-05T01:33:15
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    こんにちは！ 株式会社モアでエンジニアをしているmoriです！
-今回は曖昧になりがちなリポジトリの責務についての記事を書きたいと思います。
-
- はじめに
-レイヤードアーキテクチャを採用していても、責務がうまく分かれていないことはよくあると思います。
-その中でも、アプリケーション層（ユースケース）とインフラストラクチャ層（リポジトリ）の境界が曖昧になりがちだと感じます。
-例えば、ビジネスロジックはユースケースのみに書くべきところ、リポジトリに漏れがちです。そうなると、処理の流れを追いたい時にリポジトリの実装まで見にいかなくてはならなかったり、リポジトリは複数のユースケースから使われる想定の...
+                    同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/more_tech_blog/articles/76af481ab3816d" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/saku0512/books/3735de8d0aa09f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,50 +148,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -212,16 +181,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_9250.html">
+                    <a href="Qiita_-_人気の記事_1578.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">SQL初心者向け~参画までに覚えたいSQL構文10選~</span>
+                        <span class="nav-title">すでに存在する連想配列に配列のキーだけを追加して値は空の配列を追加する方法</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_5688.html">
+                    <a href="気になる記になる_2792.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Microsoft Entra ID アプリケーション開発入門</span>
+                        <span class="nav-title">ソニーの新型ワイヤレスヘッドホン｢WH-CH730N｣の実機写真が登場 ｰ ｢WH-CH530｣のパ...</span>
                     </a>
                 </div>
             </div>
@@ -234,53 +203,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3568.html">
-                        <h3>Oura Ring開発元に集団訴訟、睡眠トラッキングの精度は「コイントス」並みと主張</h3>
+                    <a href="CNET_Japan_最新情報総合_5876.html">
+                        <h3>東京メトロ、駅の床に「空いている号車」への矢印を投影　プロジェクション技術活用</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">スマートリング大手のOuraが、AIを用いた睡眠トラッキングの精度についてユーザーを欺く虚偽広告を行ったとして提訴された。.</p>
+                        <p class="related-summary">東京メトロとシャープ、レスターの3社は9月3日、千代田線北千住駅で、乗客を空いている号車へ誘導して混雑の偏りを減らす実証を9月9日に始めると発表した。到着する列車の混雑状況に合わせ、比較的空いている号...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6852.html">
-                        <h3>「GTA 6」映像流出で犯人捜し、マイクロソフトとDiscordに情報開示を求める</h3>
+                    <a href="CNET_Japan_最新情報総合_1591.html">
+                        <h3>過半数の人が「スマホ使いすぎ」を自覚、若いほど顕著に　米調査</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">新作ゲーム「グランド・セフト・オートVI」（GTA 6）の開発版を入手したとみられる人物が、この1週間にわたって短い映像をオンラインに投稿している。開発元であるRockstar Gamesの親会社Ta...</p>
+                        <p class="related-summary">米国の成人の半数以上がスマートフォンを使いすぎていると感じているとの調査結果が公開された。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8084.html">
-                        <h3>新人エンジニア、「言いたいことがある」がいつも遅すぎる</h3>
+                    <a href="CNET_Japan_最新情報総合_2028.html">
+                        <h3>DJI、新型360度カメラ「Osmo 360 II」発売　1インチセンサーで8K/60fps　レンズは交換式に</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">はじめに 会議で発言しようと考えをまとめている間に、いつも話が次の議題に進んでしまい、結局黙って終わっていたぷらむんが気づいたのは、話す準備の仕方そのものが間違っていたということでした。 会社で自称マ...</p>
+                        <p class="related-summary">DJI JAPANは9月2日、360度カメラ「Osmo 360 II」を発売した。価格はスタンダードコンボが9万3610円（税込、以下同）、アドベンチャーコンボが11万990円。DJI初の360度カメ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3955.html">
-                        <h3>「これで進めますね」と自分から言ってしまうと、後で仕様がひっくり返る</h3>
+                    <a href="ASCII_jp__トップ_7321.html">
+                        <h3>『世界の終わりに柴犬と』世界が滅んでも柴犬がいれば割と大丈夫かも。と思わせてくれる漫画【Amazonマンガ週末祭】</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
+                        <p class="related-summary">全巻半額のAmazonマンガ週末祭で、終末世界を柴犬と歩こう。世界が滅びても散歩は続く。累計三十万リツイートを叩き出した話題作の裏側をちょっと覗き見。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_9053.html">
-                        <h3>Rustに移植された「Bun 1.4」正式リリース。Node.jsとの互換性向上でPlaywrightやvitestが動...</h3>
+                    <a href="ASCII_jp__トップ_2599.html">
+                        <h3>軽音部がどんなところか分かる『ふつうの軽音部』は、異業種漫画ならぬ異部活漫画【Amazonマンガ週末祭】</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">4」正式版のリリースが発表されました。 Bun 1. サーバサイドJavaScriptランタイムのBunの最新版となる「Bun 1. 4は、これまでZig言語で開発されていたものをClaude Cod...</p>
+                        <p class="related-summary">イラストはあきらめたけど漫画で天下を取った！ 妙にリアルで泥臭い青春が胸を刺す『ふつうの軽音部』、今すぐ50%還元で読んでみて！ ふつうなのに面白いから！.</p>
                     </a>
                 </article>
             </div>

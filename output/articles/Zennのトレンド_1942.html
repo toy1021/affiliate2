@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kqueueを使ったwebサーバーを作ってみる | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Webサーバーの裏では、epollのような仕組みが動いているという話を聞きました。 Linux系だとepollですが、macOSはkqueueです。 そこで、kqueueを使ったWebサーバーを作ってみることにしました。 準備 今回はRustで作ります">
-    <meta name="keywords" content="Mac,macOS">
+    <title>CとGoの生成コードを読む ― アセンブリから見る言語設計の違い | 日本のテックニュース速報</title>
+    <meta name="description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="kqueueを使ったwebサーバーを作ってみる">
-    <meta property="og:description" content="はじめに Webサーバーの裏では、epollのような仕組みが動いているという話を聞きました。 Linux系だとepollですが、macOSはkqueueです。 そこで、kqueueを使ったWebサーバーを作ってみることにしました。 準備 今回はRustで作ります">
+    <meta property="og:title" content="CとGoの生成コードを読む ― アセンブリから見る言語設計の違い">
+    <meta property="og:description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1942.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="kqueueを使ったwebサーバーを作ってみる">
-    <meta name="twitter:description" content="はじめに Webサーバーの裏では、epollのような仕組みが動いているという話を聞きました。 Linux系だとepollですが、macOSはkqueueです。 そこで、kqueueを使ったWebサーバーを作ってみることにしました。 準備 今回はRustで作ります">
+    <meta name="twitter:title" content="CとGoの生成コードを読む ― アセンブリから見る言語設計の違い">
+    <meta name="twitter:description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1942.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "kqueueを使ったwebサーバーを作ってみる",
-        "description": "はじめに Webサーバーの裏では、epollのような仕組みが動いているという話を聞きました。 Linux系だとepollですが、macOSはkqueueです。 そこで、kqueueを使ったWebサーバーを作ってみることにしました。 準備 今回はRustで作ります",
+        "headline": "CとGoの生成コードを読む ― アセンブリから見る言語設計の違い",
+        "description": "同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-24T22:37:37",
-        "dateModified": "2026-08-26T06:50:36.825873",
+        "datePublished": "2026-09-05T01:33:15",
+        "dateModified": "2026-09-08T08:40:38.360671",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1942.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1942.html",
-        "articleSection": "Apple製品",
-        "keywords": ["Mac","macOS"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Apple製品",
-                "item": "https://toy1021.github.io/affiliate2/#category=Apple製品"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "kqueueを使ったwebサーバーを作ってみる",
+                "name": "CとGoの生成コードを読む ― アセンブリから見る言語設計の違い",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1942.html"
             }
         ]
@@ -113,47 +113,33 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=Apple製品">Apple製品</a></li>
-                <li aria-current="page">kqueueを使ったwebサーバーを作ってみる</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">CとGoの生成コードを読む ― アセンブリから見る言語設計の違い</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>kqueueを使ったwebサーバーを作ってみる</h1>
+                <h1>CとGoの生成コードを読む ― アセンブリから見る言語設計の違い</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/chikina/articles/cad667e78ad5d7" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: Apple製品</span>
-                    <time datetime="2026-08-24T22:37:37">
-                        公開: 2026-08-24T22:37:37
+                    <span class="source">出典: <a href="https://zenn.dev/saku0512/books/3735de8d0aa09f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-09-05T01:33:15">
+                        公開: 2026-09-05T01:33:15
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">Mac</span>
-                    <span class="tag">macOS</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Webサーバーの裏では、epollのような仕組みが動いているという話を聞きました。
-Linux系だとepollですが、macOSはkqueueです。
-そこで、kqueueを使ったWebサーバーを作ってみることにしました。
-
- 準備
-今回はRustで作ります。
-Tokioやmioは使わず、外部クレートはシステムコールを呼ぶためのlibcだけ使います。
-Rustのコードを最低限書いたことがある人を想定し、fdやFutureなどについては必要な分だけ説明します。
-fdとI/O
-OSが開いたファイルやソケットをプロセスから参照するときは、fd（file descriptor） とい...
+                    同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/chikina/articles/cad667e78ad5d7" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/saku0512/books/3735de8d0aa09f" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,60 +148,25 @@ OSが開いたファイルやソケットをプロセスから参照するとき
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Mac - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=macOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="macOS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">macOS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでmacOSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">iPhone - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>Apple製品関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">iPhone - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">MacBook - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -230,16 +181,16 @@ OSが開いたファイルやソケットをプロセスから参照するとき
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_986.html">
+                    <a href="気になる記になる_9267.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iOS27などのベータ7が一斉公開〜目玉のSiri AIのテストが進む</span>
+                        <span class="nav-title">MicrosoftとTCLが提携 ｰ TCL製スマートテレビに｢Xbox｣アプリを提供へ</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_4998.html">
+                    <a href="気になる記になる_4298.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Bitgetの異常価格で1800万損したが、fableと共闘して取り戻せた話</span>
+                        <span class="nav-title">ソニーの新型ワイヤレスヘッドホン｢WH-CH730N｣の実機写真が登場 ｰ ｢WH-CH530｣のパ...</span>
                     </a>
                 </div>
             </div>
@@ -252,53 +203,51 @@ OSが開いたファイルやソケットをプロセスから参照するとき
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4502.html">
-                        <h3>今秋発表の「iPhone 18 Pro」は100ドル値上げか　影響は？</h3>
+                    <a href="CNET_Japan_最新情報総合_850.html">
+                        <h3>X、「Twitter」商標を当面維持へ　鳥のロゴと「Tweet」は失う可能性</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">アップルが9月に発表するであろう「iPhone 18 Pro」などの新製品は、100ドル以上の価格上昇が予想されるという。Bloombergのマーク・ガーマン氏が報じた。.</p>
+                        <p class="related-summary">ソーシャルメディア「X」（旧Twitter）は、Operation Bluebird（以下、Bluebird）の「Twitter. now」をめぐる訴訟で仮差し止め命令が一部暫定的に認められたことから...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1705.html">
-                        <h3>新「マイナアプリ」公開　アイコンは期間限定で「マイナちゃん」入り</h3>
+                    <a href="CNET_Japan_最新情報総合_6108.html">
+                        <h3>傘袋がいらない！ 電動折りたたみ傘「アンブレラZERO」</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">デジタル庁は8月25日、マイナンバーカードを使った本人確認などができる新アプリ「マイナアプリ」の提供を開始した。「マイナポータルアプリ」と「デジタル認証アプリ」を1つに統合したもので、iOS/Andr...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5577.html">
-                        <h3>盗撮を防ぐための「スマートグラス検知アプリ」、iPhone向けに登場</h3>
+                    <a href="CNET_Japan_最新情報総合_1765.html">
+                        <h3>おさんぽ案内人が行く帯広散歩　十勝開拓の名残を街中にたどる</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">プライバシーをめぐる懸念が高まる中、近くにあるスマートグラスを検知する「Zuckoff」などのアプリが登場している。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4853.html">
-                        <h3>マイナポータルのパスポート申請画面が刷新--子どもの事前準備不要に</h3>
+                    <a href="CNET_Japan_最新情報総合_9639.html">
+                        <h3>プロペラの推力で倒れない「長い棒」、レーザーで鳥獣を追い払う--NTT系が99万円で発売</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">テクノロジー</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">デジタル庁は8月25日、マイナポータルのパスポート申請画面を刷新した。iPhoneに搭載したマイナンバーカードで本人確認ができるようになったほか、子どものパスポートを親が申請する際に必要だった事前準備...</p>
+                        <p class="related-summary">NTT e-Drone Technologyとミラテクドローンは9月8日、鳥を追い払うレーザーを伸縮棒の先端に取り付けた「たおれん棒（鳥獣害対策タイプ）」を9月30日に発売すると発表した。棒を最大約8...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2151.html">
-                        <h3>アップル、M6／M5 Pro搭載の新「Mac mini」発表--AI性能4倍　14万9800円〜で9月22日発売</h3>
+                    <a href="ASCII_jp__トップ_2029.html">
+                        <h3>約1.3kgで60Whバッテリー搭載！ 14型「THIRDWAVE MA4」が13万9980円から</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Appleは8月25日、新チップ「M6」と「M5 Pro」を搭載した新しい「Mac mini」を発表した。同日から予約注文を受け付け、9月22日に発売する。価格はM6モデルが14万9800円（税込）か...</p>
+                        <p class="related-summary">ドスパラでは、14型モバイルノートPC「THIRDWAVE Notebook MA4シリーズ」を販売中。約1. 3kgのボディーに14型WUXGA液晶を備え、16GB DDR5メモリと500GB SS...</p>
                     </a>
                 </article>
             </div>

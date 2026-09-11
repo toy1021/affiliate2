@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>「両方にAPIがあれば繋がる」は本当か調べてみた｜純正連携・iPaaS とデータ変換の話 | 日本のテックニュース速報</title>
-    <meta name="description" content="「うちのシステムにもAPIがあります。相手にもAPIがあります。だから繋がりますよね？」 繋がりません、とまでは言いませんが、その2つが揃っただけでは足りません。 理由は2つあります。1つは間に変換が要ること。もう1つは、そもそも変換もAPIも要らない道が用意されていること.">
+    <title>terraform plan -minimal-refreshでplanを爆速にする | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに terraformで管理しているリソースが増えてきて、tfstateが肥大化してくると、terraform planがどんどん遅くなり、待ってる間にインターネッツを眺めがちです。 根本解決は、適度な粒度にtfstate分割ですが、もっとお手軽な小手先のテクニック.">
     <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="「両方にAPIがあれば繋がる」は本当か調べてみた｜純正連携・iPaaS とデータ変換の話">
-    <meta property="og:description" content="「うちのシステムにもAPIがあります。相手にもAPIがあります。だから繋がりますよね？」 繋がりません、とまでは言いませんが、その2つが揃っただけでは足りません。 理由は2つあります。1つは間に変換が要ること。もう1つは、そもそも変換もAPIも要らない道が用意されていること.">
+    <meta property="og:title" content="terraform plan -minimal-refreshでplanを爆速にする">
+    <meta property="og:description" content="はじめに terraformで管理しているリソースが増えてきて、tfstateが肥大化してくると、terraform planがどんどん遅くなり、待ってる間にインターネッツを眺めがちです。 根本解決は、適度な粒度にtfstate分割ですが、もっとお手軽な小手先のテクニック.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4119.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="「両方にAPIがあれば繋がる」は本当か調べてみた｜純正連携・iPaaS とデータ変換の話">
-    <meta name="twitter:description" content="「うちのシステムにもAPIがあります。相手にもAPIがあります。だから繋がりますよね？」 繋がりません、とまでは言いませんが、その2つが揃っただけでは足りません。 理由は2つあります。1つは間に変換が要ること。もう1つは、そもそも変換もAPIも要らない道が用意されていること.">
+    <meta name="twitter:title" content="terraform plan -minimal-refreshでplanを爆速にする">
+    <meta name="twitter:description" content="はじめに terraformで管理しているリソースが増えてきて、tfstateが肥大化してくると、terraform planがどんどん遅くなり、待ってる間にインターネッツを眺めがちです。 根本解決は、適度な粒度にtfstate分割ですが、もっとお手軽な小手先のテクニック.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "「両方にAPIがあれば繋がる」は本当か調べてみた｜純正連携・iPaaS とデータ変換の話",
-        "description": "「うちのシステムにもAPIがあります。相手にもAPIがあります。だから繋がりますよね？」 繋がりません、とまでは言いませんが、その2つが揃っただけでは足りません。 理由は2つあります。1つは間に変換が要ること。もう1つは、そもそも変換もAPIも要らない道が用意されていること.",
+        "headline": "terraform plan -minimal-refreshでplanを爆速にする",
+        "description": "はじめに terraformで管理しているリソースが増えてきて、tfstateが肥大化してくると、terraform planがどんどん遅くなり、待ってる間にインターネッツを眺めがちです。 根本解決は、適度な粒度にtfstate分割ですが、もっとお手軽な小手先のテクニック.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-25T15:02:21",
-        "dateModified": "2026-08-27T07:50:23.058443",
+        "datePublished": "2026-09-11T01:46:51",
+        "dateModified": "2026-09-11T22:18:58.860721",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4119.html"
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "「両方にAPIがあれば繋がる」は本当か調べてみた｜純正連携・iPaaS とデータ変換の話",
+                "name": "terraform plan -minimal-refreshでplanを爆速にする",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_4119.html"
             }
         ]
@@ -114,19 +114,19 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">「両方にAPIがあれば繋がる」は本当か調べてみた｜純正連携・iPaaS とデータ変換の話</li>
+                <li aria-current="page">terraform plan -minimal-refreshでplanを爆速にする</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>「両方にAPIがあれば繋がる」は本当か調べてみた｜純正連携・iPaaS とデータ変換の話</h1>
+                <h1>terraform plan -minimal-refreshでplanを爆速にする</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/songchong/items/0788ebd25ea6400df81e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/minamijoyo/items/92c094b554d090b54a17?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-08-25T15:02:21">
-                        公開: 2026-08-25T15:02:21
+                    <time datetime="2026-09-11T01:46:51">
+                        公開: 2026-09-11T01:46:51
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
@@ -138,13 +138,13 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    「うちのシステムにもAPIがあります。相手にもAPIがあります。だから繋がりますよね？」
-繋がりません、とまでは言いませんが、その2つが揃っただけでは足りません。
-理由は2つあります。1つは間に変換が要ること。もう1つは、そもそも変換もAPIも要らない道が用意されていること...
+                    はじめに
+terraformで管理しているリソースが増えてきて、tfstateが肥大化してくると、terraform planがどんどん遅くなり、待ってる間にインターネッツを眺めがちです。
+根本解決は、適度な粒度にtfstate分割ですが、もっとお手軽な小手先のテクニック...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/songchong/items/0788ebd25ea6400df81e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/minamijoyo/items/92c094b554d090b54a17?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -201,16 +201,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_5068.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_6736.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple、｢Magic Keyboard｣のUS配列モデルを刷新 ｰ 一部キーが記号アイコン表記に</span>
+                        <span class="nav-title">ChatGPT 一部プラン新規受付停止</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_6365.html">
+                    <a href="Zennのトレンド_218.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">SwitchBot、｢IFAベルリン 2026｣で新型スマートロックの発表を予告</span>
+                        <span class="nav-title">OpenTelemetry eBPF Instrumentationの舞台裏</span>
                     </a>
                 </div>
             </div>
@@ -223,53 +223,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4975.html">
-                        <h3>FCNT、SIMフリー版arrows向けの端末保証サービスを開始。最大3ヵ月無料のキャンペーンも</h3>
+                    <a href="CNET_Japan_最新情報総合_1185.html">
+                        <h3>郵便の消印から「時間帯」がなくなる--日本郵便、10月から全国26局で試行</h3>
                         <div class="related-meta">
                             <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">FCNTがSIMフリー版「arrows Alpha2」「We3」向けの公式保証サービスを開始しました。月額440円～で、破損や水没、盗難時に同一機種と交換できます（年1回）。バッテリー交換対応の月額7...</p>
+                        <p class="related-summary">日本郵便は9月10日、切手の消印にある「時間帯」の表示をなくす試行を、全国26の郵便局で実施すると発表した。期間は10月1日から2027年3月31日まで。今後の時間帯表示の廃止に向け、業務運営や利用者...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_2730.html">
-                        <h3>Anker、防犯カメラとセンサーライトが1つになったウォールライトカメラ「Eufy Wall Light Cam S4」...</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">本日、Ankerが、防犯カメラとセンサーライトが一体となったウォールライトカメラ「Eufy Wall Light Cam S4」を発売しました。 本製品は、2024年6⽉の発売以来⼈気の防犯カメラとセ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_4074.html">
-                        <h3>ソニー、｢ULT POWER SOUND｣の新型スピーカーを9月2日に発表へ</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">本日、ソニーが、重低音に特化したブランド「ULT POWER SOUND」の新製品を示唆するティザー画像を公開しています。 日本のX公式アカウントでは「近日登場」の文字と「ULT POWER SOUN...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2886.html">
-                        <h3>スクール卒業＝即戦力じゃない。でも「自走力」があれば、うちは全然いける。</h3>
+                    <a href="Qiita_-_人気の記事_1908.html">
+                        <h3>外国人労働者をどう受け入れる？ ― 国際仲介インフラを設計する : システム設計視点の行動経済学 (28)</h3>
                         <div class="related-meta">
                             <span class="category">その他</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">自己紹介 こんにちは。株式会社PRUMで採用広報を担当している池田です。 未経験からIT業界を目指している方と話していると、かなりよく聞く共通した悩みがあります。そういった内容を皆さんにシェアしていく...</p>
+                        <p class="related-summary">user: 「システム設計視点の行動経済学」、第28回を始めましょう。今回は国際仲介インフラについて深掘りしたいと思います。その前に、まず前回の復習として、 「人手不足対策」の先にあるもの ― 日本の...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_7122.html">
-                        <h3>Bluesky、最長10分の動画ファイルを投稿可能に</h3>
+                    <a href="ASCII_jp__トップ_3711.html">
+                        <h3>たった＋50円でRyzen 7 9850X3Dに！ ドスパラで9月25日までCPUアップグレードがお得</h3>
                         <div class="related-meta">
                             <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">本日、Blueskyが、投稿可能な動画の長さの制限を緩和し、最長10分の動画を投稿可能になりました。 これまでは最長3分の動画を投稿可能でした。Blueskyでは今年6月に投稿可能な動画のファイルサイ...</p>
+                        <p class="related-summary">ドスパラでは現在、対象のGALLERIAデスクトップPCで「CPUカスタマイズキャンペーン」を実施中。Ryzen 7 9800X3DからRyzen 7 9850X3Dへの変更を＋50円で利用できる。キ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_8112.html">
+                        <h3>1本あたり激安152円！ 「レッドブル」24本セットが1,487円引き</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">レッドブル エナジードリンク」がAmazonで29％オフのセール価格になっています。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_6607.html">
+                        <h3>バラエティー進出も話題の原 つむぎ、南国デートで魅せる18th DVDリリース！</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">ここ数年、バラエティーに本格的な進出を果たしている原 つむぎさんが、 18th DVD「Iの未来予想図」の発売記念イベントを8月23日、ソフマップAKIBA アミューズメント館で開催した。.</p>
                     </a>
                 </article>
             </div>

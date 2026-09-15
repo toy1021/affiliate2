@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>既存サービスにMCPサーバーを組み込む際の設計ポイント | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに FinatextのInsurtech事業でインターンをしている保坂です！ 昨年6月からインターンをしており、生成AI活用機能やバックエンド開発に携わっています。 今回、保険ビジネスプラットフォーム『Inspire』にMCPを統合する機能開発を担当しました">
-    <meta name="keywords" content="AI,ChatGPT,GPT,LLM">
+    <title>ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした） | 日本のテックニュース速報</title>
+    <meta name="description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="既存サービスにMCPサーバーを組み込む際の設計ポイント">
-    <meta property="og:description" content="はじめに FinatextのInsurtech事業でインターンをしている保坂です！ 昨年6月からインターンをしており、生成AI活用機能やバックエンド開発に携わっています。 今回、保険ビジネスプラットフォーム『Inspire』にMCPを統合する機能開発を担当しました">
+    <meta property="og:title" content="ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）">
+    <meta property="og:description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_929.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="既存サービスにMCPサーバーを組み込む際の設計ポイント">
-    <meta name="twitter:description" content="はじめに FinatextのInsurtech事業でインターンをしている保坂です！ 昨年6月からインターンをしており、生成AI活用機能やバックエンド開発に携わっています。 今回、保険ビジネスプラットフォーム『Inspire』にMCPを統合する機能開発を担当しました">
+    <meta name="twitter:title" content="ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）">
+    <meta name="twitter:description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "既存サービスにMCPサーバーを組み込む際の設計ポイント",
-        "description": "はじめに FinatextのInsurtech事業でインターンをしている保坂です！ 昨年6月からインターンをしており、生成AI活用機能やバックエンド開発に携わっています。 今回、保険ビジネスプラットフォーム『Inspire』にMCPを統合する機能開発を担当しました",
+        "headline": "ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）",
+        "description": "前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-21T06:32:42",
-        "dateModified": "2026-05-24T09:56:12.049142",
+        "datePublished": "2026-09-14T05:16:45",
+        "dateModified": "2026-09-15T13:12:10.044509",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_929.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_929.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","ChatGPT","GPT","LLM"]
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "既存サービスにMCPサーバーを組み込む際の設計ポイント",
+                "name": "ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_929.html"
             }
         ]
@@ -114,26 +114,23 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">既存サービスにMCPサーバーを組み込む際の設計ポイント</li>
+                <li aria-current="page">ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>既存サービスにMCPサーバーを組み込む際の設計ポイント</h1>
+                <h1>ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/finatext/articles/b404032aec58c4" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/k_motoki/articles/ef60bbbc0ad7ec" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-21T06:32:42">
-                        公開: 2026-05-21T06:32:42
+                    <time datetime="2026-09-14T05:16:45">
+                        公開: 2026-09-14T05:16:45
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">ChatGPT</span>
-                    <span class="tag">GPT</span>
                     <span class="tag">LLM</span>
                 </div>
             </header>
@@ -141,19 +138,17 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-FinatextのInsurtech事業でインターンをしている保坂です！
-昨年6月からインターンをしており、生成AI活用機能やバックエンド開発に携わっています。
-今回、保険ビジネスプラットフォーム『Inspire』にMCPを統合する機能開発を担当しました。これといったスタンダードのない新しい領域であるため、今回の実装を紹介し、MCP実装の設計をする上で考えるべき点をまとめていきます。
+                    前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。
+そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした。
+前回の記事を読んで同じ構成を組んだ方がいたら、同じ穴を踏みます。まず訂正から書きます。
 
- MCPの概要
-そもそもMCPとは、ChatGPTなどのLLMがシステムの機能を呼び出せるようにする、専用窓口のようなものです。よくUSB-Cと例えられることもあります。
-
-https://...
+ 訂正1: 公開したModelfileは、私の環境では動いていなかった
+前回の記事の主役は、qwen2.5-coder:14b に焼いたModelfileでした。
+しかし Ollama の /api/chat は、messages に system...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/finatext/articles/b404032aec58c4" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/k_motoki/articles/ef60bbbc0ad7ec" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -166,6 +161,16 @@ https://...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">AI - Amazon検索結果</div>
@@ -176,20 +181,10 @@ https://...
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=ChatGPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ChatGPT - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ChatGPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでChatGPTに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GPT - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGPTに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -230,16 +225,16 @@ https://...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_1817.html">
+                    <a href="Zennのトレンド_6514.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【PDF圧縮】約40年続く業界標準Ghostscriptを、Rust 自前実装で抜いた話</span>
+                        <span class="nav-title">SendGridからAmazon SESに移行してコストを削減する</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_6493.html">
+                    <a href="Qiita_-_人気の記事_6542.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">GoogleのModern Web Guidanceに学ぶ、モダンCSSのDos / Don&#39;ts大...</span>
+                        <span class="nav-title">【未経験】勉強する時間がない。それでも今の仕事の中で、ITにつながる経験はつくれる</span>
                     </a>
                 </div>
             </div>
@@ -252,53 +247,52 @@ https://...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4963.html">
-                        <h3>グーグルの超リアルなAIエージェントと会話してみた　次世代技術「Beam」が示す驚きの可能性</h3>
+                    <a href="CNET_Japan_最新情報総合_2937.html">
+                        <h3>「この子は誰？」「どこに住んでいる？」Meta AIの質問提案に母親が猛抗議</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">グーグルがテレプレゼンス用システム「Google Beam」の一環として披露したエージェントは実験的なものだが、そのリアルさは衝撃的だ。これは人間の助けとなる存在なのか、それとも人間の代わりとなるもの...</p>
+                        <p class="related-summary">MetaのAIソフトウェア「Meta AI」が、子どもの情報を含む個人情報の収集や開示につながる質問をユーザーに提案するという問題が指摘された。同社はこの問題を修正済みだという。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6471.html">
-                        <h3>AIにラジオ局を運営させたらどうなる？ Claude、GPT、Gemini、Grokそれぞれの苦闘</h3>
+                    <a href="CNET_Japan_最新情報総合_9132.html">
+                        <h3>ANA、貨物ブランドを「ANA Nippon Cargo」に　SNSでは「Nipponが重複」と話題に</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">これはシンプルな実験だ。ある企業が4つのAIモデルにそれぞれ20ドルと簡潔な指示を与え、あとは自由に任せた。半年を経た状況はどのようなものだろうか。.</p>
+                        <p class="related-summary">ANAホールディングスは9月14日、グループ内の貨物事業会社3社を統合した後の社名とブランド名を発表した。新社名は「ANA Nippon Cargo Airlines株式会社」、新ブランド名は「ANA...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7406.html">
-                        <h3>SpaceX、Anthropicから毎月約2000億円を受領--もはや宇宙よりAIを「自社の価値」の根拠に</h3>
+                    <a href="CNET_Japan_最新情報総合_7958.html">
+                        <h3>マリンスポーツがはかどる！ 水上ドローン「HOVERAir AQUA」</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">SpaceXが米証券取引委員会（SEC）に提出したIPO目論見書（S-1）で、AI企業Anthropicとの大型契約が明らかになった。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4790.html">
-                        <h3>生成AIに個人情報を入力、「肯定」35% 「否定」38%で割れる--ドコモ調査</h3>
+                    <a href="CNET_Japan_最新情報総合_4946.html">
+                        <h3>「朝日地球会議2026」10月23日開幕--AI時代の幸福、民主主義、世論など議論</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">NTTドコモ モバイル社会研究所は5月21日、生成AIへの個人情報の入力に対する意識調査の結果を公表した。「有効なアドバイスを得るためなら、ある程度の個人情報の記入はしかたない」という考え方について、...</p>
+                        <p class="related-summary">朝日新聞社は、国際シンポジウム「朝日地球会議2026」を10月23日に開幕する。全体テーマは「話そう AI時代の世界と持続可能な幸せ」。AIと幸福、民主主義、世論、認知症などをテーマに、各界の有識者や...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8287.html">
-                        <h3>Yahoo!ショッピング、ChatGPTで商品を探せるように　「Apps in ChatGPT」対応で実現</h3>
+                    <a href="CNET_Japan_最新情報総合_1287.html">
+                        <h3>アップル、「Siri AI」をClaudeやGPTに置き換え可能に？ 「iOS 27」のコードが示す新機能</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">LINEヤフーは5月21日、運営する「Yahoo!ショッピング」がChatGPTの新機能「Apps in ChatGPT」に対応し、アプリ連携を開始したと発表した。同社によると、総合ECモールがApp...</p>
+                        <p class="related-summary">アップルの「Siri AI」には、OpenAIの「ChatGPT」やAnthropicの「Claude」など、サードパーティーのモデルと深く連携する機能が組み込まれる可能性がある。.</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ループエンジニアリングをGitHub Copilotで組めるか調べてみた | 日本のテックニュース速報</title>
-    <meta name="description" content="ループエンジニアリングをGitHub Copilotで組めるか調べてみた - プログラミング関連情報をお届け。">
-    <meta name="keywords" content="AI,Claude,GitHub">
+    <title>ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした） | 日本のテックニュース速報</title>
+    <meta name="description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ループエンジニアリングをGitHub Copilotで組めるか調べてみた">
-    <meta property="og:description" content="ループエンジニアリングをGitHub Copilotで組めるか調べてみた - プログラミング関連情報をお届け。">
+    <meta property="og:title" content="ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）">
+    <meta property="og:description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3658.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ループエンジニアリングをGitHub Copilotで組めるか調べてみた">
-    <meta name="twitter:description" content="ループエンジニアリングをGitHub Copilotで組めるか調べてみた - プログラミング関連情報をお届け。">
+    <meta name="twitter:title" content="ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）">
+    <meta name="twitter:description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ループエンジニアリングをGitHub Copilotで組めるか調べてみた",
-        "description": "ループエンジニアリングをGitHub Copilotで組めるか調べてみた - プログラミング関連情報をお届け。",
+        "headline": "ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）",
+        "description": "前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-11T05:08:43",
-        "dateModified": "2026-07-13T06:54:33.851518",
+        "datePublished": "2026-09-14T05:16:45",
+        "dateModified": "2026-09-16T20:58:10.465054",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3658.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3658.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AI","Claude","GitHub"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ループエンジニアリングをGitHub Copilotで組めるか調べてみた",
+                "name": "ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3658.html"
             }
         ]
@@ -113,50 +113,42 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">ループエンジニアリングをGitHub Copilotで組めるか調べてみた</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ループエンジニアリングをGitHub Copilotで組めるか調べてみた</h1>
+                <h1>ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/jodycraft/articles/3f7548173dcb55" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-07-11T05:08:43">
-                        公開: 2026-07-11T05:08:43
+                    <span class="source">出典: <a href="https://zenn.dev/k_motoki/articles/ef60bbbc0ad7ec" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-09-14T05:16:45">
+                        公開: 2026-09-14T05:16:45
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">GitHub</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-📋 この記事の前提
+                    前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。
+そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした。
+前回の記事を読んで同じ構成を組んだ方がいたら、同じ穴を踏みます。まず訂正から書きます。
 
-
-Superpowers導入記事、ponytail調査記事、共存記事のいずれかを読んだ
-GitHub Copilot CLIやClaude Codeなど、コーディングエージェントを日常的に使っている
-「ループエンジニアリング」という言葉を見聞きしたが、ハーネスエンジニアリングとの違いがはっきりしない
-この記事は2026年6月〜7月上旬時点の情報を元にしている。生まれたばかりの概念なので、ベストプラクティスやツールの対応状況は今後大きく動く可能性がある
-
-
-
- 結論: ループエンジニアリングは「ハーネスをいつ・どれだけ動かすか」を設計すること
-先に結論を書く。ルー...
+ 訂正1: 公開したModelfileは、私の環境では動いていなかった
+前回の記事の主役は、qwen2.5-coder:14b に焼いたModelfileでした。
+しかし Ollama の /api/chat は、messages に system...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/jodycraft/articles/3f7548173dcb55" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/k_motoki/articles/ef60bbbc0ad7ec" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -169,6 +161,16 @@ GitHub Copilot CLIやClaude Codeなど、コーディングエージェントを
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">AI - Amazon検索結果</div>
@@ -179,20 +181,10 @@ GitHub Copilot CLIやClaude Codeなど、コーディングエージェントを
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -202,23 +194,23 @@ GitHub Copilot CLIやClaude Codeなど、コーディングエージェントを
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -233,16 +225,16 @@ GitHub Copilot CLIやClaude Codeなど、コーディングエージェントを
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_1908.html">
+                    <a href="Qiita_-_人気の記事_5451.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【セール】Twelve Southのワイヤレス充電器やBluetoothトランスミッターが最大40％...</span>
+                        <span class="nav-title">生成AIが書いたドキュメントを読みたくない</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_4436.html">
+                    <a href="Qiita_-_人気の記事_6035.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AIと一緒にCAD設計できるソフト「cad-coworker」</span>
+                        <span class="nav-title">【未経験】勉強する時間がない。それでも今の仕事の中で、ITにつながる経験はつくれる</span>
                     </a>
                 </div>
             </div>
@@ -255,53 +247,52 @@ GitHub Copilot CLIやClaude Codeなど、コーディングエージェントを
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4941.html">
-                        <h3>携帯「060」番号、なぜ延期？　総務大臣が語った2つの要因</h3>
+                    <a href="Zennのトレンド_1439.html">
+                        <h3>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">林芳正総務大臣は閣議後記者会見で、携帯電話向け「060」番号の提供開始が延期された要因を説明した。一部の携帯電話端末が060番号を表示できず、ソフトウェアの更新が必要になっていること。加えて、通信事業...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4751.html">
-                        <h3>ジブリやポケモンに着想、「宙をふわふわ飛ぶ柔らかいロボット」を慶大らが開発【動画】</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">ティンカー・ベルやミュウ、スタジオジブリのススワタリなど、アニメに登場する飛ぶキャラクターにヒントを得て、ある研究チームが浮遊するコンパニオンロボットのプロジェクトを立ち上げた。慶應義塾大学やMITメ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1037.html">
-                        <h3>冷水で5分の「冷やしカップヌードル」7月20日発売　開発に丸5年</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">日清食品は7月13日、冷水専用の「冷しカップヌードル」2品を発表した。お湯の代わりに、冷蔵庫で冷やした水を注いで5分待つと食べられる。発売55年目のブランド史上、初めて「熱湯禁止」をうたう商品だ。7月...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_5160.html">
-                        <h3>開発現場のAIセキュリティを見直す</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに 開発現場でAIを使うことは、当たり前になりました。 直近のチームでは、GitHubのIssue駆動開発を主軸にしました。 設計書や機能概要、受け入れ条件、テストプランをIssueに明示し、開...</p>
+                        <p class="related-summary">AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8691.html">
-                        <h3>AtCoderで入緑しました！</h3>
+                    <a href="ASCII_jp__トップ_7086.html">
+                        <h3>AI動画生成プラットフォーム「AZ8」、日本のクリエイター支援を強化　CPP参加者募集と広告コンテストを開催</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">AI動画生成プラットフォーム「AZ8」、日本のクリエイター支援を強化 CPP参加者募集と広告コンテストを開催.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_4525.html">
+                        <h3>メタが新サブスク発表 AI機能拡大</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_1820.html">
+                        <h3>AI駆動開発におけるPlatform Engineering ── AIが迷わず、安全に、検証可能な形で開発できる環境を...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに ABC466で緑色コーダーになることができたので、これまでに取り組んできたことについて書こうと思います。 自己紹介 中学1年生の2月に競技プログラミングを始め、現在は中学2年生です。 以前、...</p>
+                        <p class="related-summary">要点 Platform の中心課題は Platform を大きくすることではなく、AIの探索空間を小さくし、安全に、検証可能にすることです。 AI Coding Agent はコードだけでなく az、...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_6636.html">
+                        <h3>GMKtec、最大300BのLLMをローカル環境で実行可能なミニPC「EVO-X5 Pro」を9月28日に発売へ</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">GMKtecが、先日に発表していたフラッグシップデスクトップAIコンピューティングプラットフォーム「EVO-X5 Pro」を9月28日に発売することを発表しました。 「EVO-X5 Pro」は、完全ロ...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ | 日本のテックニュース速報</title>
-    <meta name="description" content="📝 注意 本記事はAIの補助を受けて編集しています。 内容は大規模Webアプリケーションの実務経験に基づいています。 📚 目次 1. 問題提起：なぜコードはきれいなのにUIが遅いのか？ 2. 「State Boundaries」 – stateの影響範囲を意識.">
-    <meta name="keywords" content="AI,本">
+    <title>拒否ルールを全部消しても、Claude Code は eval を止めた。守っていたのは別の仕組みだった | 日本のテックニュース速報</title>
+    <meta name="description" content="273（2026-09-15）の changelog に、こう書かれています。 Reverted a 2. 268 change that checked Read and Edit deny rules on Bash lines th.">
+    <meta name="keywords" content="Claude,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ">
-    <meta property="og:description" content="📝 注意 本記事はAIの補助を受けて編集しています。 内容は大規模Webアプリケーションの実務経験に基づいています。 📚 目次 1. 問題提起：なぜコードはきれいなのにUIが遅いのか？ 2. 「State Boundaries」 – stateの影響範囲を意識.">
+    <meta property="og:title" content="拒否ルールを全部消しても、Claude Code は eval を止めた。守っていたのは別の仕組みだった">
+    <meta property="og:description" content="273（2026-09-15）の changelog に、こう書かれています。 Reverted a 2. 268 change that checked Read and Edit deny rules on Bash lines th.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2039.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ">
-    <meta name="twitter:description" content="📝 注意 本記事はAIの補助を受けて編集しています。 内容は大規模Webアプリケーションの実務経験に基づいています。 📚 目次 1. 問題提起：なぜコードはきれいなのにUIが遅いのか？ 2. 「State Boundaries」 – stateの影響範囲を意識.">
+    <meta name="twitter:title" content="拒否ルールを全部消しても、Claude Code は eval を止めた。守っていたのは別の仕組みだった">
+    <meta name="twitter:description" content="273（2026-09-15）の changelog に、こう書かれています。 Reverted a 2. 268 change that checked Read and Edit deny rules on Bash lines th.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ",
-        "description": "📝 注意 本記事はAIの補助を受けて編集しています。 内容は大規模Webアプリケーションの実務経験に基づいています。 📚 目次 1. 問題提起：なぜコードはきれいなのにUIが遅いのか？ 2. 「State Boundaries」 – stateの影響範囲を意識.",
+        "headline": "拒否ルールを全部消しても、Claude Code は eval を止めた。守っていたのは別の仕組みだった",
+        "description": "273（2026-09-15）の changelog に、こう書かれています。 Reverted a 2. 268 change that checked Read and Edit deny rules on Bash lines th.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-05T09:00:39",
-        "dateModified": "2026-05-06T17:42:59.388345",
+        "datePublished": "2026-09-16T00:22:25",
+        "dateModified": "2026-09-16T10:57:57.503720",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2039.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2039.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","本"]
+        "keywords": ["Claude","EV"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ",
+                "name": "拒否ルールを全部消しても、Claude Code は eval を止めた。守っていたのは別の仕組みだった",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_2039.html"
             }
         ]
@@ -114,43 +114,38 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">[Frontend Performance - Part 11] State設計最適化：無駄な再レン...</li>
+                <li aria-current="page">拒否ルールを全部消しても、Claude Code は eval を止めた。守っていたのは別の仕組みだ...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>[Frontend Performance - Part 11] State設計最適化：無駄な再レンダリングを防ぐアーキテクチャ</h1>
+                <h1>拒否ルールを全部消しても、Claude Code は eval を止めた。守っていたのは別の仕組みだった</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/tuanphan/items/5a8343dba7aa604f0a5b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/suwa_nobu/items/5145961004e38e2fe316?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-05T09:00:39">
-                        公開: 2026-05-05T09:00:39
+                    <time datetime="2026-09-16T00:22:25">
+                        公開: 2026-09-16T00:22:25
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">本</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    📝 注意
-本記事はAIの補助を受けて編集しています。
-内容は大規模Webアプリケーションの実務経験に基づいています。
+                    Claude Code 2.1.273（2026-09-15）の changelog に、こう書かれています。
 
-📚 目次
-
-1. 問題提起：なぜコードはきれいなのにUIが遅いのか？
-2. 「State Boundaries」 – stateの影響範囲を意識...
+Reverted a 2.1.268 change that checked Read and Edit deny rules on Bash lines th...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/tuanphan/items/5a8343dba7aa604f0a5b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/suwa_nobu/items/5145961004e38e2fe316?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,30 +158,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">AI - Amazon検索結果</div>
                                     <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +222,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_6895.html">
+                    <a href="気になる記になる_1105.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">C#でJavaScriptEngine+ブラウザ自作した</span>
+                        <span class="nav-title">【セール】スマホ版「レイトン教授」シリーズが最大50％オフに ｰ 「TGS2026 出展記念セール」...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5959.html">
+                    <a href="Qiita_-_人気の記事_1673.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">「読書通帳」図書館が導入する訳</span>
+                        <span class="nav-title">ClaudeでAPI連携を自動化するときの認証情報管理について調べてみた</span>
                     </a>
                 </div>
             </div>
@@ -249,38 +244,18 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6615.html">
-                        <h3>楽天トラベルがAIエージェント強化　チャットで宿探し→予約まで完結</h3>
+                    <a href="ASCII_jp__トップ_8915.html">
+                        <h3>AI動画生成プラットフォーム「AZ8」、日本のクリエイター支援を強化　CPP参加者募集と広告コンテストを開催</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">楽天グループは4月30日、旅行予約サービス「楽天トラベル」のAIエージェント「Rakuten AI」に予約機能を追加したと発表した。これにより、宿泊施設の提案から予約完了までを、AIがチャット内で一貫...</p>
+                        <p class="related-summary">AI動画生成プラットフォーム「AZ8」、日本のクリエイター支援を強化 CPP参加者募集と広告コンテストを開催.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4976.html">
-                        <h3>ChatGPTはなぜ「ゴブリン」に執着したのか　OpenAIが明かした不具合の正体</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">「ChatGPT」は、妙なほどゴブリンに執着していた。開発元のOpenAIが原因を調べて修正に乗り出すほどだった。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7341.html">
-                        <h3>HDRディスプレイグラス「RayNeo Air 4 Pro」レビュー：XREALやVITUREと比べて見えた差</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">TCLの最新ディスプレイグラス「RayNeo Air 4 Pro」のレビューをお届けする。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_7979.html">
-                        <h3>金融向けAI アンソロピック発表</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_723.html">
+                        <h3>メタが新サブスク発表 AI機能拡大</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">Yahoo!ニュース・トピックス - IT</span>
@@ -288,13 +263,33 @@
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_3494.html">
-                        <h3>Claude Codeサブエージェント完全マスター、設計4原則から公式プラグイン解読までぜんぶ教えたるで</h3>
+                    <a href="Qiita_-_人気の記事_7469.html">
+                        <h3>AI駆動開発におけるPlatform Engineering ── AIが迷わず、安全に、検証可能な形で開発できる環境を...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">サブエージェントの定義、フロントマター15項目、description設計、4設計原則、Skills vs Agentsの判断軸、公式プラグイン3種解読、4ワークフローまで、Claude Codeサブ...</p>
+                        <p class="related-summary">要点 Platform の中心課題は Platform を大きくすることではなく、AIの探索空間を小さくし、安全に、検証可能にすることです。 AI Coding Agent はコードだけでなく az、...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_3653.html">
+                        <h3>GMKtec、最大300BのLLMをローカル環境で実行可能なミニPC「EVO-X5 Pro」を9月28日に発売へ</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">GMKtecが、先日に発表していたフラッグシップデスクトップAIコンピューティングプラットフォーム「EVO-X5 Pro」を9月28日に発売することを発表しました。 「EVO-X5 Pro」は、完全ロ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7952.html">
+                        <h3>Claudeに920万件規模のニュース記事を解析させた事例が話題に【大規模データ分析】</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">Redditで話題になった「Claudeを使った大規模データ分析」の事例 本記事はCLSTRプロジェクト開発者様から許可を得て投稿しています。 海外掲示板Redditに投稿された、920万件規模のニュ...</p>
                     </a>
                 </article>
             </div>

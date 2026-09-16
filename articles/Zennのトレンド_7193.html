@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chainguardに学ぶセキュアなコンテナイメージの作り方 | 日本のテックニュース速報</title>
-    <meta name="description" content="Chainguard社はDockerfileを使わず、melangeとapkoという2つのOSSツールを組み合わせてセキュアなコンテナイメージを作っています。本書はこの2ツールとWolfi OSがどう連携しているかを、概念の説明とハンズオンを交互に積み重ねながら手元で確かめる本です">
-    <meta name="keywords" content="AI,Docker,本">
+    <title>ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした） | 日本のテックニュース速報</title>
+    <meta name="description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Chainguardに学ぶセキュアなコンテナイメージの作り方">
-    <meta property="og:description" content="Chainguard社はDockerfileを使わず、melangeとapkoという2つのOSSツールを組み合わせてセキュアなコンテナイメージを作っています。本書はこの2ツールとWolfi OSがどう連携しているかを、概念の説明とハンズオンを交互に積み重ねながら手元で確かめる本です">
+    <meta property="og:title" content="ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）">
+    <meta property="og:description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7193.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Chainguardに学ぶセキュアなコンテナイメージの作り方">
-    <meta name="twitter:description" content="Chainguard社はDockerfileを使わず、melangeとapkoという2つのOSSツールを組み合わせてセキュアなコンテナイメージを作っています。本書はこの2ツールとWolfi OSがどう連携しているかを、概念の説明とハンズオンを交互に積み重ねながら手元で確かめる本です">
+    <meta name="twitter:title" content="ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）">
+    <meta name="twitter:description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7193.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Chainguardに学ぶセキュアなコンテナイメージの作り方",
-        "description": "Chainguard社はDockerfileを使わず、melangeとapkoという2つのOSSツールを組み合わせてセキュアなコンテナイメージを作っています。本書はこの2ツールとWolfi OSがどう連携しているかを、概念の説明とハンズオンを交互に積み重ねながら手元で確かめる本です",
+        "headline": "ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）",
+        "description": "前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-02T05:25:32",
-        "dateModified": "2026-09-03T19:09:42.139921",
+        "datePublished": "2026-09-14T05:16:45",
+        "dateModified": "2026-09-16T10:57:57.501712",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7193.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7193.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Docker","本"]
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Chainguardに学ぶセキュアなコンテナイメージの作り方",
+                "name": "ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7193.html"
             }
         ]
@@ -114,37 +114,41 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Chainguardに学ぶセキュアなコンテナイメージの作り方</li>
+                <li aria-current="page">ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Chainguardに学ぶセキュアなコンテナイメージの作り方</h1>
+                <h1>ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/ymotongpoo/books/chainguard-image-toolchain" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/k_motoki/articles/ef60bbbc0ad7ec" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-09-02T05:25:32">
-                        公開: 2026-09-02T05:25:32
+                    <time datetime="2026-09-14T05:16:45">
+                        公開: 2026-09-14T05:16:45
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">本</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Chainguard社はDockerfileを使わず、melangeとapkoという2つのOSSツールを組み合わせてセキュアなコンテナイメージを作っています。本書はこの2ツールとWolfi OSがどう連携しているかを、概念の説明とハンズオンを交互に積み重ねながら手元で確かめる本です。ソースコードからAPKパッケージを作り、それをコンテナイメージに組み立て、実際にレジストリへ配布するところまで扱います。
+                    前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。
+そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした。
+前回の記事を読んで同じ構成を組んだ方がいたら、同じ穴を踏みます。まず訂正から書きます。
+
+ 訂正1: 公開したModelfileは、私の環境では動いていなかった
+前回の記事の主役は、qwen2.5-coder:14b に焼いたModelfileでした。
+しかし Ollama の /api/chat は、messages に system...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/ymotongpoo/books/chainguard-image-toolchain" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/k_motoki/articles/ef60bbbc0ad7ec" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -156,6 +160,16 @@
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -171,16 +185,6 @@
                                 <div class="product-info">
                                     <div class="product-title">機械学習 - Amazon検索結果</div>
                                     <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Docker&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Docker - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Docker - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでDockerに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -221,16 +225,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_7394.html">
+                    <a href="Zennのトレンド_8862.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">論文査読にAI活用 誤情報リスクも</span>
+                        <span class="nav-title">SendGridからAmazon SESに移行してコストを削減する</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_2792.html">
+                    <a href="Qiita_-_人気の記事_2822.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AI Readyなデータ基盤って、要はデータが整理できてるってこと</span>
+                        <span class="nav-title">【未経験】勉強する時間がない。それでも今の仕事の中で、ITにつながる経験はつくれる</span>
                     </a>
                 </div>
             </div>
@@ -243,53 +247,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9036.html">
-                        <h3>Runway、コード不要でデジタル世界を構築するAIモデル「Solaris」発表</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">AI開発企業Runwayは、「インターフェースワールドモデル」と呼ぶ新しいタイプのAIモデル「Solaris」を発表した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4681.html">
-                        <h3>Anthropic、Claudeの「AI透かし」を判別するツール公開--現時点でテキストは未対応</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">com/check-content」を公開した。Claudeが生成するテキストに電子透かしを導入すると発表してから、約2週間での公開となる。ただし現時点で判定できるのは画像・音声・動画ファイルのみで、...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7201.html">
-                        <h3>トランプ政権、OpenAIを支持　メディアとの著作権訴訟でAI学習は「フェアユース」</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">米トランプ政権は、報道機関とOpenAIの間で争われている一連の著作権訴訟に意見を表明し、パブリッシャーのコンテンツを使ったAIモデルの学習はフェアユースに当たるとするOpenAIの主張を支持した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_5567.html">
-                        <h3>ACEMAGIC、Ryzen AI Max+ PRO 495と最大192GBメモリ搭載の新型ミニワークステーションを発表</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">当ブログでも何度か紹介したことのあるACEMAGICが、ドイツで開催中の「IFA 2026」に合わせ、AMD Ryzen AI Max+ PRO 495を搭載した新型ミニワークステーション「F9A」を...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_4310.html">
-                        <h3>AI時代、「アート思考」はどこまで検証されているのか ― 国内外の定義・実践・効果研究を整理した図解26ページを無料提供</h3>
+                    <a href="ASCII_jp__トップ_8915.html">
+                        <h3>AI動画生成プラットフォーム「AZ8」、日本のクリエイター支援を強化　CPP参加者募集と広告コンテストを開催</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">AI時代、「アート思考」はどこまで検証されているのか ― 国内外の定義・実践・効果研究を整理した図解26ページを無料提供.</p>
+                        <p class="related-summary">AI動画生成プラットフォーム「AZ8」、日本のクリエイター支援を強化 CPP参加者募集と広告コンテストを開催.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_723.html">
+                        <h3>メタが新サブスク発表 AI機能拡大</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7469.html">
+                        <h3>AI駆動開発におけるPlatform Engineering ── AIが迷わず、安全に、検証可能な形で開発できる環境を...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">要点 Platform の中心課題は Platform を大きくすることではなく、AIの探索空間を小さくし、安全に、検証可能にすることです。 AI Coding Agent はコードだけでなく az、...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_3653.html">
+                        <h3>GMKtec、最大300BのLLMをローカル環境で実行可能なミニPC「EVO-X5 Pro」を9月28日に発売へ</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">GMKtecが、先日に発表していたフラッグシップデスクトップAIコンピューティングプラットフォーム「EVO-X5 Pro」を9月28日に発売することを発表しました。 「EVO-X5 Pro」は、完全ロ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7952.html">
+                        <h3>Claudeに920万件規模のニュース記事を解析させた事例が話題に【大規模データ分析】</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">Redditで話題になった「Claudeを使った大規模データ分析」の事例 本記事はCLSTRプロジェクト開発者様から許可を得て投稿しています。 海外掲示板Redditに投稿された、920万件規模のニュ...</p>
                     </a>
                 </article>
             </div>

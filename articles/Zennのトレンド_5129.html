@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raspberry Pi 5でClaude Codeを動かす | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 本記事ではRaspberry Pi 5 で Claude Code を常時起動し、外部から常時アクセス可能にします。低消費電力で 24 時間つけっぱなしにできる Pi 5 は、Agent の常駐場所として手頃です">
-    <meta name="keywords" content="Claude,MacBook,Mac,本">
+    <title>AWS SSM Agent の脆弱性(CVE-2026-89049) の被害があったかどうかを CloudTrail で確認する方法 | 日本のテックニュース速報</title>
+    <meta name="description" content="9(Critical) の脆弱性について実際に脆弱性が悪用された場合にどういうログが CloudTrail に出るのかを検証し、皆様の環境で被害が発生していないか確認していただくためにブログを執筆いたしました。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="AI,AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Raspberry Pi 5でClaude Codeを動かす">
-    <meta property="og:description" content="はじめに 本記事ではRaspberry Pi 5 で Claude Code を常時起動し、外部から常時アクセス可能にします。低消費電力で 24 時間つけっぱなしにできる Pi 5 は、Agent の常駐場所として手頃です">
+    <meta property="og:title" content="AWS SSM Agent の脆弱性(CVE-2026-89049) の被害があったかどうかを CloudTrail で確認する方法">
+    <meta property="og:description" content="9(Critical) の脆弱性について実際に脆弱性が悪用された場合にどういうログが CloudTrail に出るのかを検証し、皆様の環境で被害が発生していないか確認していただくためにブログを執筆いたしました。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5129.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Raspberry Pi 5でClaude Codeを動かす">
-    <meta name="twitter:description" content="はじめに 本記事ではRaspberry Pi 5 で Claude Code を常時起動し、外部から常時アクセス可能にします。低消費電力で 24 時間つけっぱなしにできる Pi 5 は、Agent の常駐場所として手頃です">
+    <meta name="twitter:title" content="AWS SSM Agent の脆弱性(CVE-2026-89049) の被害があったかどうかを CloudTrail で確認する方法">
+    <meta name="twitter:description" content="9(Critical) の脆弱性について実際に脆弱性が悪用された場合にどういうログが CloudTrail に出るのかを検証し、皆様の環境で被害が発生していないか確認していただくためにブログを執筆いたしました。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Raspberry Pi 5でClaude Codeを動かす",
-        "description": "はじめに 本記事ではRaspberry Pi 5 で Claude Code を常時起動し、外部から常時アクセス可能にします。低消費電力で 24 時間つけっぱなしにできる Pi 5 は、Agent の常駐場所として手頃です",
+        "headline": "AWS SSM Agent の脆弱性(CVE-2026-89049) の被害があったかどうかを CloudTrail で確認する方法",
+        "description": "9(Critical) の脆弱性について実際に脆弱性が悪用された場合にどういうログが CloudTrail に出るのかを検証し、皆様の環境で被害が発生していないか確認していただくためにブログを執筆いたしました。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-08T13:14:38",
-        "dateModified": "2026-08-11T14:58:07.999054",
+        "datePublished": "2026-09-14T01:30:42",
+        "dateModified": "2026-09-16T00:00:48.075662",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5129.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5129.html",
-        "articleSection": "Apple製品",
-        "keywords": ["Claude","MacBook","Mac","本"]
+        "articleSection": "セキュリティ",
+        "keywords": ["AI","AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Apple製品",
-                "item": "https://toy1021.github.io/affiliate2/#category=Apple製品"
+                "name": "セキュリティ",
+                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Raspberry Pi 5でClaude Codeを動かす",
+                "name": "AWS SSM Agent の脆弱性(CVE-2026-89049) の被害があったかどうかを CloudTrail で確認する方法",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5129.html"
             }
         ]
@@ -113,41 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=Apple製品">Apple製品</a></li>
-                <li aria-current="page">Raspberry Pi 5でClaude Codeを動かす</li>
+                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
+                <li aria-current="page">AWS SSM Agent の脆弱性(CVE-2026-89049) の被害があったかどうかを Cl...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Raspberry Pi 5でClaude Codeを動かす</h1>
+                <h1>AWS SSM Agent の脆弱性(CVE-2026-89049) の被害があったかどうかを CloudTrail で確認する方法</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/gsy0911/articles/a4dc76f0639576" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: Apple製品</span>
-                    <time datetime="2026-08-08T13:14:38">
-                        公開: 2026-08-08T13:14:38
+                    <span class="source">出典: <a href="https://zenn.dev/cscloud_blog/articles/4d6e13b853109e" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: セキュリティ</span>
+                    <time datetime="2026-09-14T01:30:42">
+                        公開: 2026-09-14T01:30:42
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">MacBook</span>
-                    <span class="tag">Mac</span>
-                    <span class="tag">本</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-本記事ではRaspberry Pi 5 で Claude Code を常時起動し、外部から常時アクセス可能にします。低消費電力で 24 時間つけっぱなしにできる Pi 5 は、Agent の常駐場所として手頃です。母艦の Mac とは切り離された専用機なので、多少強い権限を与えても隔離された中で完結します。
-Claude Code を常駐させて外部からアクセスするだけなら、Mac でも問題なくできます。ただ、私の手元には MacBook Pro しかなく、MacBook Pro を閉じたりスリープに入ったりすると動作が不安定になってしまいます。常時起動させておける専用機が欲...
+                    どうもサイバーセキュリティクラウドで脅威インテリジェンスをしている西川です。
+今日は表題の CVSS v3.1 における CVSS 9.9(Critical) の脆弱性について実際に脆弱性が悪用された場合にどういうログが CloudTrail に出るのかを検証し、皆様の環境で被害が発生していないか確認していただくためにブログを執筆いたしました。ただこのスコアほど影響度は高くないというのが個人的な印象です。それらについてもまとめているので最後までご覧ください。
+
+ CVE-2026-89049 とは
+2026年9月10日に AWS は AWS Systems Manager Agent（以...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/gsy0911/articles/a4dc76f0639576" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/cscloud_blog/articles/4d6e13b853109e" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,30 +160,30 @@ Claude Code を常駐させて外部からアクセスするだけなら、Mac �
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">MacBook - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Mac - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -193,23 +193,23 @@ Claude Code を常駐させて外部からアクセスするだけなら、Mac �
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>Apple製品関連のおすすめ</h3>
+                    <h3>セキュリティ関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">iPhone - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">MacBook - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +224,16 @@ Claude Code を常駐させて外部からアクセスするだけなら、Mac �
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3317.html">
+                    <a href="Zennのトレンド_2112.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">C# 15+の新DIパターン: 内部はinterfaceで疎結合、公開APIはunionで型の許容範...</span>
+                        <span class="nav-title">React Compiler を Babel なしで入れて、useMemo を書くか迷うのをやめた</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6519.html">
+                    <a href="Qiita_-_人気の記事_7836.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">SESエンジニアが成長するために捨てたい7つの習慣</span>
+                        <span class="nav-title">2026年9月時点 Microsoft の AI 戦略について</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +246,23 @@ Claude Code を常駐させて外部からアクセスするだけなら、Mac �
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7483.html">
-                        <h3>「全面ガラスのiPhone」開発頓挫か　歩留まりの低さが原因との報道</h3>
+                    <a href="CNET_Japan_最新情報総合_7091.html">
+                        <h3>「Nintendo Switch」に脆弱性、早急な更新を　QRコード経由で情報流出のおそれ</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
+                            <span class="category">セキュリティ</span>
                             <span class="source">CNET Japan 最新情報　総合</span>
                         </div>
-                        <p class="related-summary">米Appleは、全面ガラスのiPhoneを開発しているとうわさされてきた。米証券会社Jefferiesのアナリスト、エディソン・リー氏は、その開発が中止されたとの見方を示した。米金融メディアBarro...</p>
+                        <p class="related-summary">初代「Nintendo Switch」のユーザーは、セキュリティ上の脆弱性に対処するため、速やかに本体を更新すべきだ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_9392.html">
-                        <h3>｢iOS 27 beta 5｣から6つの未発表iPhoneのコードネームが見つかる</h3>
+                    <a href="Publickey_6410.html">
+                        <h3>オラクル、Javaのセキュリティパッチを毎月提供開始、AIが脆弱性の発見を加速しているとして</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">Macworldが、今日未明に開発者向けにリリースされた「iOS 27 beta 5」のコード内から6つの未発表の「iPhone」に関する記述が見つかったと報じています。 見つかったのは未発表iPho...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_7566.html">
-                        <h3>Thunderbolt 5の爆速に驚いた！ 「ASCII×Belkin」ファンミーティング参加者に聞くベルキンのドック＆...</h3>
-                        <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">ASCII×Belkinファンミーティングのレポートです。Thunderbolt 5対応で最大120Gbps転送を誇る「INC031」、MacやWindows対応でトリプル出力可能な「INC026」、...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_3604.html">
-                        <h3>全面ガラスデザイン採用の20周年記念iPhoneは2027年の投入に向け計画通り ｰ 著名記者が開発中止報道を否定</h3>
-                        <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">昨晩、ジェフリーズ証券のアナリストが全面ガラスデザインを採用したiPhoneの20周年記念モデルの開発が中止されたと報告していることをお伝えしましたが、Apple関連の情報では定評のあるBloombe...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_9995.html">
-                        <h3>｢iPhone 18 Pro｣の256GBモデルの部品コスト、メモリ高騰が要因で前年比約38％上昇か</h3>
-                        <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">市場調査会社であるTrendForceの最新のスマートフォン業界調査によると、メモリを中心とした部品コストの上昇により、Appleの「iPhone 18」シリーズの製造コストは大幅に上昇すると予想され...</p>
+                        <p class="related-summary">オラクルは、これまで3カ月ごとに提供してきたJavaのアップデートパッチのサイクルを速め、1カ月ごとにセキュリティパッチを提供することを発表。先月（2026年8月）から実際にセキュリティパッチの提供が...</p>
                     </a>
                 </article>
             </div>

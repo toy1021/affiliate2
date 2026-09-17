@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI フレンドリーな CLI を開発するテクニック | 日本のテックニュース速報</title>
-    <meta name="description" content="AI フレンドリーな CLI を開発するテクニック - AI・機械学習技術のニュースをお届け。">
-    <meta name="keywords" content="AI">
+    <title>ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした） | 日本のテックニュース速報</title>
+    <meta name="description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AI フレンドリーな CLI を開発するテクニック">
-    <meta property="og:description" content="AI フレンドリーな CLI を開発するテクニック - AI・機械学習技術のニュースをお届け。">
+    <meta property="og:title" content="ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）">
+    <meta property="og:description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2525.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI フレンドリーな CLI を開発するテクニック">
-    <meta name="twitter:description" content="AI フレンドリーな CLI を開発するテクニック - AI・機械学習技術のニュースをお届け。">
+    <meta name="twitter:title" content="ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）">
+    <meta name="twitter:description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AI フレンドリーな CLI を開発するテクニック",
-        "description": "AI フレンドリーな CLI を開発するテクニック - AI・機械学習技術のニュースをお届け。",
+        "headline": "ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）",
+        "description": "前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-01T01:35:46",
-        "dateModified": "2026-08-01T20:54:11.908059",
+        "datePublished": "2026-09-14T05:16:45",
+        "dateModified": "2026-09-17T00:10:38.695997",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2525.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2525.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AI フレンドリーな CLI を開発するテクニック",
+                "name": "ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2525.html"
             }
         ]
@@ -114,38 +114,41 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AI フレンドリーな CLI を開発するテクニック</li>
+                <li aria-current="page">ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AI フレンドリーな CLI を開発するテクニック</h1>
+                <h1>ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/shunsuke_suzuki/articles/make-cli-ai-friendly" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/k_motoki/articles/ef60bbbc0ad7ec" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-08-01T01:35:46">
-                        公開: 2026-08-01T01:35:46
+                    <time datetime="2026-09-14T05:16:45">
+                        公開: 2026-09-14T05:16:45
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    自分は趣味で様々な CLI を OSS として公開しています (aqua, pinact, tfcmt, ghalint, ghir, etc)。
-昨今では AI がこれらを扱うことも増えてきていますが、それなりに知られた OSS でないかぎり AI はその OSS に関する質問に答えたりトラブルシューティングしたりするための知識を持ち合わせていません。
-そのため Coding Agent は Web Fetch したりしますが、闇雲に Web Fetch するのは効率がよくありませんし、 Web Fetch だとコンテンツが要約されてしまうという問題もあります。
-https://zen...
+                    前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。
+そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした。
+前回の記事を読んで同じ構成を組んだ方がいたら、同じ穴を踏みます。まず訂正から書きます。
+
+ 訂正1: 公開したModelfileは、私の環境では動いていなかった
+前回の記事の主役は、qwen2.5-coder:14b に焼いたModelfileでした。
+しかし Ollama の /api/chat は、messages に system...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/shunsuke_suzuki/articles/make-cli-ai-friendly" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/k_motoki/articles/ef60bbbc0ad7ec" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,6 +160,16 @@ https://zen...
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -212,16 +225,16 @@ https://zen...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_4392.html">
+                    <a href="Qiita_-_人気の記事_3006.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AWS Organizations間のアカウント移行でRAM共有が外れる理由と共有を維持する設定</span>
+                        <span class="nav-title">生成AIが書いたドキュメントを読みたくない</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_1933.html">
+                    <a href="Qiita_-_人気の記事_2758.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AppleのUIをSkill化して「AI臭いUI」を脱しようとチャレンジした</span>
+                        <span class="nav-title">【未経験】勉強する時間がない。それでも今の仕事の中で、ITにつながる経験はつくれる</span>
                     </a>
                 </div>
             </div>
@@ -234,53 +247,51 @@ https://zen...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6186.html">
-                        <h3>AIは「核兵器級の脅威」にも--OpenAIやAnthropicなどの1000人超、開発減速の仕組みづくりを提言</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">OpenAI、Anthropic、Google DeepMind、Meta AIなど主要AI企業の従業員有志は米国時間7月29日、共同声明「Pacing the Frontier」を公開した。AI開発...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_658.html">
-                        <h3>OpenAI、「GPT-5.6」のAPI料金を最大80%値下げ　最安Lunaは100万トークン0.2ドルに</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">米OpenAIは7月30日（現地時間）、大規模言語モデル「GPT-5. 6」ファミリーのAPI料金を引き下げた。最速・最安をうたう「GPT-5. 6 Luna」は80%、日常業務向けの標準モデル「GP...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_451.html">
-                        <h3>米高校が「人型ロボット」導入で物議、契約先とアダルト人形の関係もやり玉に</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">ロボット関連スタートアップのRealbotixがある高校に対し、ヒューマノイドロボットと家庭向けAI宿題支援ツールを提供する。教員組合は、生徒はモルモットではないと反発している。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_9902.html">
-                        <h3>ホテルスタッフがどんどん数字に強くなる。ホテル特化AIエージェント「JOINTPOOL AI」正式ローンチ</h3>
+                    <a href="ASCII_jp__トップ_4101.html">
+                        <h3>AI駆動型開発で生産性倍増を狙うIBM　セキュリティ、トークンコスト、品質の課題をどう解決する？</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ホテルスタッフがどんどん数字に強くなる。ホテル特化AIエージェント「JOINTPOOL AI」正式ローンチ.</p>
+                        <p class="related-summary">日本IBMの年次イベント「Think Japan」が、2026年9月8日、オークラ東京で開催され、基調講演に登壇した日本IBMの村田将輝社長が、フロンティアAIを活用した製品およびサービスにおけるセキ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="iPhone_Mania_3902.html">
-                        <h3>iPhone Air 2の予想仕様が判明〜5つの改良点に新情報はあるのか</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9347.html">
+                        <h3>「AI著作物」巡り裁判 識者が警鐘</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">iPhone Mania</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">2027年第1四半期（1月〜3月）に発売されると噂のiPhone Air 2について、アナリストが予想される仕様を投資家向けレポートで取り上げたことが明らかになりました。iPhone Air 2には5...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_8285.html">
+                        <h3>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_2846.html">
+                        <h3>AI動画生成プラットフォーム「AZ8」、日本のクリエイター支援を強化　CPP参加者募集と広告コンテストを開催</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">AI動画生成プラットフォーム「AZ8」、日本のクリエイター支援を強化 CPP参加者募集と広告コンテストを開催.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_274.html">
+                        <h3>メタが新サブスク発表 AI機能拡大</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
                     </a>
                 </article>
             </div>

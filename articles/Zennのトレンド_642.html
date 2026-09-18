@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】 | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
-    <meta name="keywords" content="本">
+    <title>TypeSafeのJevを正しく驚く、それってLLMでできませんか？ | 日本のテックニュース速報</title>
+    <meta name="description" content="Jevとは？ TypeSafe AIの「Jev」は、文章を生成する代わりに、ソフトウェアがそのまま使える判断と確率を高速に返すモデルです。 詳しい説明に関しては公式サイトに譲ります これをみて正直なところ「それは既存のLLMでもできるのでは？」と思ってしまいました">
+    <meta name="keywords" content="AI,LLM,EV">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】">
-    <meta property="og:description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
+    <meta property="og:title" content="TypeSafeのJevを正しく驚く、それってLLMでできませんか？">
+    <meta property="og:description" content="Jevとは？ TypeSafe AIの「Jev」は、文章を生成する代わりに、ソフトウェアがそのまま使える判断と確率を高速に返すモデルです。 詳しい説明に関しては公式サイトに譲ります これをみて正直なところ「それは既存のLLMでもできるのでは？」と思ってしまいました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_642.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】">
-    <meta name="twitter:description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
+    <meta name="twitter:title" content="TypeSafeのJevを正しく驚く、それってLLMでできませんか？">
+    <meta name="twitter:description" content="Jevとは？ TypeSafe AIの「Jev」は、文章を生成する代わりに、ソフトウェアがそのまま使える判断と確率を高速に返すモデルです。 詳しい説明に関しては公式サイトに譲ります これをみて正直なところ「それは既存のLLMでもできるのでは？」と思ってしまいました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】",
-        "description": "! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです",
+        "headline": "TypeSafeのJevを正しく驚く、それってLLMでできませんか？",
+        "description": "Jevとは？ TypeSafe AIの「Jev」は、文章を生成する代わりに、ソフトウェアがそのまま使える判断と確率を高速に返すモデルです。 詳しい説明に関しては公式サイトに譲ります これをみて正直なところ「それは既存のLLMでもできるのでは？」と思ってしまいました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-10T04:00:05",
-        "dateModified": "2026-08-12T04:09:52.038090",
+        "datePublished": "2026-09-17T06:56:15",
+        "dateModified": "2026-09-18T22:22:15.142042",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_642.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_642.html",
-        "articleSection": "プログラミング",
-        "keywords": ["本"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","LLM","EV"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】",
+                "name": "TypeSafeのJevを正しく驚く、それってLLMでできませんか？",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_642.html"
             }
         ]
@@ -113,56 +113,49 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">TypeSafeのJevを正しく驚く、それってLLMでできませんか？</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】</h1>
+                <h1>TypeSafeのJevを正しく驚く、それってLLMでできませんか？</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/fast/articles/44f261437d706c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-08-10T04:00:05">
-                        公開: 2026-08-10T04:00:05
+                    <span class="source">出典: <a href="https://zenn.dev/nwn/articles/824026c76116e0" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-09-17T06:56:15">
+                        公開: 2026-09-17T06:56:15
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-この記事はシリーズの第3部です。
+                    Jevとは？
+TypeSafe AIの「Jev」は、文章を生成する代わりに、ソフトウェアがそのまま使える判断と確率を高速に返すモデルです。
+詳しい説明に関しては公式サイトに譲ります
+これをみて正直なところ「それは既存のLLMでもできるのでは？」と思ってしまいました。
 
+ JSON出力
+まず注目したのはこのデモです。
+LLMでJSON出力するのに比べてJevを使って並列に推論することで大幅に高速化したとのことです。
+https://x.com/CompleteSkeptic/status/2099925684256899543
 
-第1部: メモリレイアウトの観察
-
-
-第2部: MIR・LLVM IR・ASMを追う
-
-
-第3部: コンパイラ内部を読む（本記事）
-
-第4部: ニッチ最適化の実践パターン
-
-
-
- はじめに
-こんにちは、moriです。
-ファスト株式会社にてRustを用いてデスクトップアプリケーション・バックエンドの開発を行っています。
-第1部では Option&lt;NonZeroU8&gt; が u8 と同じ1バイトになることをメモリから直接観察しました。
-第2部では MIR・LLVM IR・ASM を段階的に追いかけ、Option&lt;NonZeroU8&amp;g...
+ LLMで再現するには？
+LLMでJSONを出力させる場...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/fast/articles/44f261437d706c" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/nwn/articles/824026c76116e0" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -175,30 +168,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">EV - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -208,23 +201,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -239,16 +232,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_9563.html">
+                    <a href="Zennのトレンド_8420.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Data Catalog 第3回：Object Storage上のOracle Databaseマニ...</span>
+                        <span class="nav-title">dbt Charts触ってみた</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6948.html">
+                    <a href="Zennのトレンド_5998.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【2026年版】Linux学習ロードマップ｜未経験からインフラエンジニアを目指す6ステップ</span>
+                        <span class="nav-title">AI ネイティブなデータ分析基盤を作った話</span>
                     </a>
                 </div>
             </div>
@@ -261,53 +254,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_851.html">
-                        <h3>最新のオープンウェイト世界モデル「LTX-2.5」公開、動画生成やロボット開発に</h3>
+                    <a href="ASCII_jp__トップ_6234.html">
+                        <h3>2in1でペン入力できる10型UMPC「Note Pro AI」が13万円台で発売開始</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">LTXは、オープンウェイトの世界モデルの最新版「LTX-2.</p>
+                        <p class="related-summary">天空がCore Ultra 5 125Uを搭載した10型の2in1 UMPC「TENKU Note Pro AI」をダイレクトストアで先行販売を開始しました.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_4367.html">
-                        <h3>｢iPad Air｣向けOLEDパネル、中国BOEも受注に向け開発中 ｰ 発売時期は2027年前半の見込み</h3>
+                    <a href="気になる記になる_1655.html">
+                        <h3>｢Insta360 X5｣が｢AIディレクター｣と｢空間キャプチャー｣に対応</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">韓国のThe Elecが、業界関係者の話として、中国のBOEが2027年前半に発表されると予想されている次世代「iPad Air」向けのOLEDパネルを開発しているようだと報じています。 開発は、中国...</p>
+                        <p class="related-summary">本日、Insta360が、360度カメラ「X5」向けの最新アップデートの配信を開始し、「X5」も「AIディレクター」と「空間キャプチャー」機能に対応しました。 「AIディレクター」は、「X5」を充電し...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1002.html">
-                        <h3>未経験エンジニア 初めてのDBサーバー構築経験</h3>
+                    <a href="ASCII_jp__トップ_8452.html">
+                        <h3>23.8型ディスプレーの一体型デスクトップPCが、Ryzen AI 5 340搭載で24万円台！</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは。元現場作業員のひよこです。 Excel、パワポも触れて来なかったガチのIT初心者ですが、2026年1月から学習を始め、半年弱で6月にIT企業へ転職しました。 保有資格はLPIC1...</p>
+                        <p class="related-summary">FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_8270.html">
-                        <h3>BM25を使用してCodexのトークンの消費を30%抑える</h3>
+                    <a href="ASCII_jp__トップ_8631.html">
+                        <h3>LobbyAI、ABABA 久保駿貴氏・フツパー 黒瀬康太氏と「SWISH! Startup Camp 2026」に登壇</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">LobbyAI、ABABA 久保駿貴氏・フツパー 黒瀬康太氏と「SWISH! Startup Camp 2026」に登壇.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_3610.html">
+                        <h3>既存の LLM が CPU なら、 Jev はその GPU 版みたいなやつ</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">導入 こんにちは、株式会社ナレッジセンスの須藤英寿です。 今回は、コード探索にBM25を組み込むことで、回答品質とトークン消費がどのように変わるのかを、自社のコードベースで検証しました。 きっかけは、...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_4680.html">
-                        <h3>N+1 問題を、発行される SQL を数えて理解する</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">一覧ページが遅い。SQL のログを見ると、同じ形のクエリが 100 本並んでいる。これが N+1 問題の典型的な現場です。 この記事では、実際にコードを動かして、出た SQL とクエリ数を全部数えます...</p>
+                        <p class="related-summary">ai/cookbooks/skill_suggestion チェス対戦 5戦やって、Claude 5 Sonnet には全勝 LoL をミニマルにしたような MOBA ゲームをリアルタイム操作 スプリ...</p>
                     </a>
                 </article>
             </div>

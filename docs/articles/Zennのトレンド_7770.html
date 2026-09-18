@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CとGoの生成コードを読む ― アセンブリから見る言語設計の違い | 日本のテックニュース速報</title>
-    <meta name="description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>自動テストが0件の現場で、人の確認を減らす側に倒した話 | 日本のテックニュース速報</title>
+    <meta name="description" content="壊したことを自動検知できない環境で、AIにどこまで任せるか。 10年以上動いているWebサービスの開発フローを、今期まるごと作り直しました。目標は開発速度を前期比2倍。担当しているプロダクトに自動テストは1件もありません。 その状態で、人の確認を増やす側ではなく、減らす側に倒しました">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="CとGoの生成コードを読む ― アセンブリから見る言語設計の違い">
-    <meta property="og:description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
+    <meta property="og:title" content="自動テストが0件の現場で、人の確認を減らす側に倒した話">
+    <meta property="og:description" content="壊したことを自動検知できない環境で、AIにどこまで任せるか。 10年以上動いているWebサービスの開発フローを、今期まるごと作り直しました。目標は開発速度を前期比2倍。担当しているプロダクトに自動テストは1件もありません。 その状態で、人の確認を増やす側ではなく、減らす側に倒しました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7770.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CとGoの生成コードを読む ― アセンブリから見る言語設計の違い">
-    <meta name="twitter:description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
+    <meta name="twitter:title" content="自動テストが0件の現場で、人の確認を減らす側に倒した話">
+    <meta name="twitter:description" content="壊したことを自動検知できない環境で、AIにどこまで任せるか。 10年以上動いているWebサービスの開発フローを、今期まるごと作り直しました。目標は開発速度を前期比2倍。担当しているプロダクトに自動テストは1件もありません。 その状態で、人の確認を増やす側ではなく、減らす側に倒しました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7770.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "CとGoの生成コードを読む ― アセンブリから見る言語設計の違い",
-        "description": "同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.",
+        "headline": "自動テストが0件の現場で、人の確認を減らす側に倒した話",
+        "description": "壊したことを自動検知できない環境で、AIにどこまで任せるか。 10年以上動いているWebサービスの開発フローを、今期まるごと作り直しました。目標は開発速度を前期比2倍。担当しているプロダクトに自動テストは1件もありません。 その状態で、人の確認を増やす側ではなく、減らす側に倒しました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-05T01:33:15",
-        "dateModified": "2026-09-06T23:33:25.480530",
+        "datePublished": "2026-09-15T06:02:40",
+        "dateModified": "2026-09-18T08:50:35.894419",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7770.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7770.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "プログラミング",
+        "keywords": ["AI"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "CとGoの生成コードを読む ― アセンブリから見る言語設計の違い",
+                "name": "自動テストが0件の現場で、人の確認を減らす側に倒した話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7770.html"
             }
         ]
@@ -113,33 +113,48 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">CとGoの生成コードを読む ― アセンブリから見る言語設計の違い</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">自動テストが0件の現場で、人の確認を減らす側に倒した話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>CとGoの生成コードを読む ― アセンブリから見る言語設計の違い</h1>
+                <h1>自動テストが0件の現場で、人の確認を減らす側に倒した話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/saku0512/books/3735de8d0aa09f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-09-05T01:33:15">
-                        公開: 2026-09-05T01:33:15
+                    <span class="source">出典: <a href="https://zenn.dev/ceres_tech_blog/articles/09aa8e17762d7e" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-09-15T06:02:40">
+                        公開: 2026-09-15T06:02:40
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。
+                    壊したことを自動検知できない環境で、AIにどこまで任せるか。
+10年以上動いているWebサービスの開発フローを、今期まるごと作り直しました。目標は開発速度を前期比2倍。担当しているプロダクトに自動テストは1件もありません。
+その状態で、人の確認を増やす側ではなく、減らす側に倒しました。
+!
+成功体験ではありません。結果はまだ出ていません。何をやって、その時点で何が分かっていなかったかの記録になります。
+
+
+ 課題と打った手
+先に切り分けます。
+
+目標：開発速度を前期比2倍。速度の定義はチケット消化数
+環境：自動テストが0件。コードを壊しても検知されない
+方針：人の確認を置く場所を絞った。...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/saku0512/books/3735de8d0aa09f" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/ceres_tech_blog/articles/09aa8e17762d7e" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -148,25 +163,60 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -181,16 +231,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_4270.html">
+                    <a href="Zennのトレンド_4558.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">MicrosoftとTCLが提携 ｰ TCL製スマートテレビに｢Xbox｣アプリを提供へ</span>
+                        <span class="nav-title">かつて数学を学んでいたエンジニアがAIと数学について思うこと</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_9919.html">
+                    <a href="Zennのトレンド_4723.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">ソニーの新型ワイヤレスヘッドホン｢WH-CH730N｣の実機写真が登場 ｰ ｢WH-CH530｣のパ...</span>
+                        <span class="nav-title">gherkin と skills でエージェントがブラウザを操作してテストする</span>
                     </a>
                 </div>
             </div>
@@ -203,53 +253,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3350.html">
-                        <h3>東京メトロ、駅の床に「空いている号車」への矢印を投影　プロジェクション技術活用</h3>
+                    <a href="Qiita_-_人気の記事_6273.html">
+                        <h3>Figmaの同時編集、なぜこんなになめらか？CRDTに着想を得た同期設計を公式ブログから読み解く</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">東京メトロとシャープ、レスターの3社は9月3日、千代田線北千住駅で、乗客を空いている号車へ誘導して混雑の偏りを減らす実証を9月9日に始めると発表した。到着する列車の混雑状況に合わせ、比較的空いている号...</p>
+                        <p class="related-summary">はじめに ソーイ株式会社の西浦です。 普段は受託のWebアプリケーション開発に携わっており、Figmaを日常的に使っています。共同開発者と同時に同じファイルを触りながら実装のすり合わせをする、という場...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7252.html">
-                        <h3>過半数の人が「スマホ使いすぎ」を自覚、若いほど顕著に　米調査</h3>
+                    <a href="気になる記になる_2078.html">
+                        <h3>CIO、3つのコードリール式USB-Cケーブルをデスク下などに収納出来る『CIO ケルベロス』の一般販売を開始</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">米国の成人の半数以上がスマートフォンを使いすぎていると感じているとの調査結果が公開された。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1027.html">
-                        <h3>DJI、新型360度カメラ「Osmo 360 II」発売　1インチセンサーで8K/60fps　レンズは交換式に</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">DJI JAPANは9月2日、360度カメラ「Osmo 360 II」を発売した。価格はスタンダードコンボが9万3610円（税込、以下同）、アドベンチャーコンボが11万990円。DJI初の360度カメ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_5353.html">
-                        <h3>サイコム「G-Master Velox Mini 2」発売、縦置きできる21.3Lの小型ゲーミングPC</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">サイコムが、縦置き・横置きに対応した小型ゲーミングPC「G-Master Velox Mini 2」3機種を発売。RTX 5060を標準搭載し、21. 3Lのコンパクト設計ながら優れた冷却性能と拡張性...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_6467.html">
-                        <h3>【セール】Kindleストアで開催中の｢集英社創業100周年記念セール｣で｢Luck Stealer｣が全巻100円均一...</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">AmazonのKindleストアにおいて開催中の「集英社創業100周年記念セール」のセール内容が更新され、「Luck Stealer」が全巻100円で販売されています。 「Luck Stealer」は...</p>
+                        <p class="related-summary">CIOが、暮らしのモノを発信するメディア「monograph」堀口英剛氏の着想をもとに開発したケーブル収納システム『CIO ケルベロス』の一般販売を開始しました。 『CIO ケルベロス』は、3つのコー...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_3549.html">
+                        <h3>Jevでハーネスエンジニアリング</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">jp/magazine/SD/archive/2026/202610 Jevって？ Jevは、状態と質問を受け取り、型付きの回答を確率とともに返すモデルである。チャッピー！それってLLMと何が違うの？...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_6770.html">
+                        <h3>C# と Luaで何かやってみる (LMStudio&amp;Python)</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">Lua とは？ Lua は軽量で高速な組み込み型スクリプト言語です。 実行環境が小さく、学習曲線も緩やかなので、C#、Java、Python などのホスト言語に簡単に組み込めます。 C# から Lua...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7627.html">
+                        <h3>常駐コンテキストを削りClaude Codeのコストを抑えてみた</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに こんにちは。KDDIアジャイル開発センターの溝渕です。 ここ 2 か月ほど、Claude Code での個人開発を進めながら、精度を極力下げずにトークンの消費を抑える仕組みづくりと効果の計測...</p>
                     </a>
                 </article>
             </div>

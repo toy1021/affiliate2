@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESP32 シリーズを使ってイチから電子工作まとめ　 (回路設計/基板設計編) | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 最近、ESP32を使った電子工作にハマったので、いくつかガラクタを作ってみた経験をもとに、ESP32を使ったおおまかな電子工作のやり方を紹介しようと思う。 ESP32とは ESP32シリーズとはEspressif Systemsという中国の会社が開発している.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>常駐コンテキストを削りClaude Codeのコストを抑えてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに こんにちは。KDDIアジャイル開発センターの溝渕です。 ここ 2 か月ほど、Claude Code での個人開発を進めながら、精度を極力下げずにトークンの消費を抑える仕組みづくりと効果の計測に挑戦してました。 8月の約 1 か月の計測で、かなりトークン消費を抑え.">
+    <meta name="keywords" content="Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ESP32 シリーズを使ってイチから電子工作まとめ　 (回路設計/基板設計編)">
-    <meta property="og:description" content="はじめに 最近、ESP32を使った電子工作にハマったので、いくつかガラクタを作ってみた経験をもとに、ESP32を使ったおおまかな電子工作のやり方を紹介しようと思う。 ESP32とは ESP32シリーズとはEspressif Systemsという中国の会社が開発している.">
+    <meta property="og:title" content="常駐コンテキストを削りClaude Codeのコストを抑えてみた">
+    <meta property="og:description" content="はじめに こんにちは。KDDIアジャイル開発センターの溝渕です。 ここ 2 か月ほど、Claude Code での個人開発を進めながら、精度を極力下げずにトークンの消費を抑える仕組みづくりと効果の計測に挑戦してました。 8月の約 1 か月の計測で、かなりトークン消費を抑え.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7627.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ESP32 シリーズを使ってイチから電子工作まとめ　 (回路設計/基板設計編)">
-    <meta name="twitter:description" content="はじめに 最近、ESP32を使った電子工作にハマったので、いくつかガラクタを作ってみた経験をもとに、ESP32を使ったおおまかな電子工作のやり方を紹介しようと思う。 ESP32とは ESP32シリーズとはEspressif Systemsという中国の会社が開発している.">
+    <meta name="twitter:title" content="常駐コンテキストを削りClaude Codeのコストを抑えてみた">
+    <meta name="twitter:description" content="はじめに こんにちは。KDDIアジャイル開発センターの溝渕です。 ここ 2 か月ほど、Claude Code での個人開発を進めながら、精度を極力下げずにトークンの消費を抑える仕組みづくりと効果の計測に挑戦してました。 8月の約 1 か月の計測で、かなりトークン消費を抑え.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ESP32 シリーズを使ってイチから電子工作まとめ　 (回路設計/基板設計編)",
-        "description": "はじめに 最近、ESP32を使った電子工作にハマったので、いくつかガラクタを作ってみた経験をもとに、ESP32を使ったおおまかな電子工作のやり方を紹介しようと思う。 ESP32とは ESP32シリーズとはEspressif Systemsという中国の会社が開発している.",
+        "headline": "常駐コンテキストを削りClaude Codeのコストを抑えてみた",
+        "description": "はじめに こんにちは。KDDIアジャイル開発センターの溝渕です。 ここ 2 か月ほど、Claude Code での個人開発を進めながら、精度を極力下げずにトークンの消費を抑える仕組みづくりと効果の計測に挑戦してました。 8月の約 1 か月の計測で、かなりトークン消費を抑え.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-29T13:22:25",
-        "dateModified": "2026-08-31T10:48:16.659985",
+        "datePublished": "2026-09-17T02:06:07",
+        "dateModified": "2026-09-18T08:50:35.895354",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7627.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7627.html",
         "articleSection": "プログラミング",
-        "keywords": []
+        "keywords": ["Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ESP32 シリーズを使ってイチから電子工作まとめ　 (回路設計/基板設計編)",
+                "name": "常駐コンテキストを削りClaude Codeのコストを抑えてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7627.html"
             }
         ]
@@ -114,21 +114,24 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">ESP32 シリーズを使ってイチから電子工作まとめ　 (回路設計/基板設計編)</li>
+                <li aria-current="page">常駐コンテキストを削りClaude Codeのコストを抑えてみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ESP32 シリーズを使ってイチから電子工作まとめ　 (回路設計/基板設計編)</h1>
+                <h1>常駐コンテキストを削りClaude Codeのコストを抑えてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/_shin_/items/47bc69006f6467d79e91?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/ya-mizobuchi/items/6ae906dd28bf61b32329?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-08-29T13:22:25">
-                        公開: 2026-08-29T13:22:25
+                    <time datetime="2026-09-17T02:06:07">
+                        公開: 2026-09-17T02:06:07
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">Claude</span>
                 </div>
             </header>
 
@@ -136,14 +139,13 @@
                 
                 <div class="article-body">
                     はじめに
-最近、ESP32を使った電子工作にハマったので、いくつかガラクタを作ってみた経験をもとに、ESP32を使ったおおまかな電子工作のやり方を紹介しようと思う。
-
-ESP32とは
-　ESP32シリーズとはEspressif Systemsという中国の会社が開発している...
+こんにちは。KDDIアジャイル開発センターの溝渕です。
+ここ 2 か月ほど、Claude Code での個人開発を進めながら、精度を極力下げずにトークンの消費を抑える仕組みづくりと効果の計測に挑戦してました。
+8月の約 1 か月の計測で、かなりトークン消費を抑え...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/_shin_/items/47bc69006f6467d79e91?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/ya-mizobuchi/items/6ae906dd28bf61b32329?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -155,6 +157,16 @@ ESP32とは
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -210,16 +222,16 @@ ESP32とは
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_8160.html">
+                    <a href="Zennのトレンド_1284.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iPhone18 Proの予約開始は9月12日（土）午後4時か〜折りたたみは月末？</span>
+                        <span class="nav-title">作るものが決まらないのは、発想力のせいなのか？：AIハッカソンで優勝したときのアイデアの出し方</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_7620.html">
+                    <a href="Qiita_-_人気の記事_2250.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">「スタートアップだから」が通用しない、大手製造業向けSaaSのAWSセキュリティ設計</span>
+                        <span class="nav-title">24時間動き続けるAIエージェント：途中で「死なない」ようにする設計</span>
                     </a>
                 </div>
             </div>
@@ -232,53 +244,53 @@ ESP32とは
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3862.html">
-                        <h3>元ヤフーエンジニア社長が考える、20代のうちにやっておくべき3つのこと</h3>
+                    <a href="Qiita_-_人気の記事_6273.html">
+                        <h3>Figmaの同時編集、なぜこんなになめらか？CRDTに着想を得た同期設計を公式ブログから読み解く</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">20代の頑張りは、30代以降ずっと効いてくる こんにちは、元Yahooエンジニアで、株式会社PRUMの代表をしている岩本です。 https://prum. jp/ 「今の仕事、このままでいいのかな」「...</p>
+                        <p class="related-summary">はじめに ソーイ株式会社の西浦です。 普段は受託のWebアプリケーション開発に携わっており、Figmaを日常的に使っています。共同開発者と同時に同じファイルを触りながら実装のすり合わせをする、という場...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_540.html">
-                        <h3>新人エンジニア、「ラズベリーパイ」を美味しいパイだと思ってた話</h3>
+                    <a href="気になる記になる_2078.html">
+                        <h3>CIO、3つのコードリール式USB-Cケーブルをデスク下などに収納出来る『CIO ケルベロス』の一般販売を開始</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">はじめに 会社の昔の写真フォルダで見つけた「ラズベリーパイ部」の文字に、てっきりパイやタルトを食べ歩く同好会だと思い込んでいたぷらむんが、プラ美先輩に聞いてみたら、全然違うジャンルの話だった、という話...</p>
+                        <p class="related-summary">CIOが、暮らしのモノを発信するメディア「monograph」堀口英剛氏の着想をもとに開発したケーブル収納システム『CIO ケルベロス』の一般販売を開始しました。 『CIO ケルベロス』は、3つのコー...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2514.html">
-                        <h3>耳で聞く！Python で学ぶ マクロ経済学 入門 6</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">user: ソース動画のタイトル、そしてこの動画の内容について教えてください。 Gemini: ご視聴いただいたソース動画のタイトルは、「日本の借金を増やす冷酷な数式: Pythonで学ぶマクロ経済学...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_5760.html">
-                        <h3>「精選過去問10問をHaskellで」n+k番煎じ</h3>
+                    <a href="Zennのトレンド_3549.html">
+                        <h3>Jevでハーネスエンジニアリング</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに AtCoderといふものをしてみんとて。。。 AtCoder に登録したら次にやること ～ これだけ解けば十分闘える！過去問精選 10 問 ～ @drken さんの記事：元祖「〜過去問精選1...</p>
+                        <p class="related-summary">jp/magazine/SD/archive/2026/202610 Jevって？ Jevは、状態と質問を受け取り、型付きの回答を確率とともに返すモデルである。チャッピー！それってLLMと何が違うの？...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2229.html">
-                        <h3>頑張ったのに結果が出ない、は当然のこと — 努力を「縦軸」だけで測るのをやめた話</h3>
+                    <a href="Zennのトレンド_6770.html">
+                        <h3>C# と Luaで何かやってみる (LMStudio&amp;Python)</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">Lua とは？ Lua は軽量で高速な組み込み型スクリプト言語です。 実行環境が小さく、学習曲線も緩やかなので、C#、Java、Python などのホスト言語に簡単に組み込めます。 C# から Lua...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_4122.html">
+                        <h3>元ヤフーエンジニア社長が考える、AI時代の採用基準</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">この記事は約8分で読めます。 筆者プロフィール: ソフトウェアエンジニア。「知った気にならない。いつまでも学び続ける」を信条に、業務と個人開発の両輪で技術を磨いています。AI 駆動開発で複数の個人開発...</p>
+                        <p class="related-summary">スキルより先に見ているものがある こんにちは、元Yahooエンジニアで、株式会社PRUMの代表をしている岩本です。 https://prum. jp/ 面接だと、つい「スキルをどうアピールしよう」と考...</p>
                     </a>
                 </article>
             </div>

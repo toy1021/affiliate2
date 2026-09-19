@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Skillは振る舞いとナレッジを分けて設計する | 日本のテックニュース速報</title>
-    <meta name="description" content="どうもこんにちは、たくびーです。 弊社ではClaudeのチームプランに契約しており、開発者全員がClaude Codeを使うことができます。 希望者はChatGPTのチームプランも使えてCodexを併用することも可能です">
-    <meta name="keywords" content="AI,ChatGPT,Claude,GPT">
+    <title>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用 | 日本のテックニュース速報</title>
+    <meta name="description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
+    <meta name="keywords" content="AI,Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Agent Skillは振る舞いとナレッジを分けて設計する">
-    <meta property="og:description" content="どうもこんにちは、たくびーです。 弊社ではClaudeのチームプランに契約しており、開発者全員がClaude Codeを使うことができます。 希望者はChatGPTのチームプランも使えてCodexを併用することも可能です">
+    <meta property="og:title" content="AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用">
+    <meta property="og:description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6127.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Agent Skillは振る舞いとナレッジを分けて設計する">
-    <meta name="twitter:description" content="どうもこんにちは、たくびーです。 弊社ではClaudeのチームプランに契約しており、開発者全員がClaude Codeを使うことができます。 希望者はChatGPTのチームプランも使えてCodexを併用することも可能です">
+    <meta name="twitter:title" content="AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用">
+    <meta name="twitter:description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6127.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Agent Skillは振る舞いとナレッジを分けて設計する",
-        "description": "どうもこんにちは、たくびーです。 弊社ではClaudeのチームプランに契約しており、開発者全員がClaude Codeを使うことができます。 希望者はChatGPTのチームプランも使えてCodexを併用することも可能です",
+        "headline": "AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用",
+        "description": "AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-09T10:00:05",
-        "dateModified": "2026-09-10T14:07:24.550329",
+        "datePublished": "2026-09-16T09:54:07",
+        "dateModified": "2026-09-19T20:09:35.278814",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6127.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6127.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","ChatGPT","Claude","GPT"]
+        "keywords": ["AI","Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Agent Skillは振る舞いとナレッジを分けて設計する",
+                "name": "AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6127.html"
             }
         ]
@@ -114,49 +114,36 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Agent Skillは振る舞いとナレッジを分けて設計する</li>
+                <li aria-current="page">AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Agent Skillは振る舞いとナレッジを分けて設計する</h1>
+                <h1>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/socialplus/articles/f5d9e28470eb99" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/hampen2929/books/ai-dev-team-guide" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-09-09T10:00:05">
-                        公開: 2026-09-09T10:00:05
+                    <time datetime="2026-09-16T09:54:07">
+                        公開: 2026-09-16T09:54:07
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">ChatGPT</span>
                     <span class="tag">Claude</span>
-                    <span class="tag">GPT</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    どうもこんにちは、たくびーです。
-弊社ではClaudeのチームプランに契約しており、開発者全員がClaude Codeを使うことができます。
-希望者はChatGPTのチームプランも使えてCodexを併用することも可能です。
-私はAI開発環境整備の一環でルールやスキルの作成やメンテナンスをすることが多いです。
-そこで最近はエージェントスキルの設計方針について考えることが多く、現時点でどういう観点でスキルを作成しているかということをご紹介したいと思います。
-!
-記事の内容は人間が書いていますが、調査などにAIを使用しています。
-
-
- TL;DR
-
-スキルを書くときは振る舞いとナレッジを分ける...
+                    AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます。実走はCodexの実装と既設のClaudeレビューCIを用いた最小構成で、並列構成の提案や未計測の効果とは区別しています。単体のエージェントを使いこなし、次に複数体で開発を回したい人のための一冊です。全章無料で読めます。
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/socialplus/articles/f5d9e28470eb99" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/hampen2929/books/ai-dev-team-guide" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -179,10 +166,10 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=ChatGPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ChatGPT - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ChatGPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでChatGPTに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -233,16 +220,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_8513.html">
+                    <a href="Publickey_2532.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Oracle Autonomous AI Database の Select AI Supervis...</span>
+                        <span class="nav-title">「Java 27」正式リリース。全環境でG1 GCがデフォルトに、TLS 1.3用に耐量子暗号のハイ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1279.html">
+                    <a href="Qiita_-_人気の記事_7892.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">GPT-6 Astra x Unityでゲームを作る</span>
+                        <span class="nav-title">「AI があればプログラマーはいらない」という風潮が危険な理由</span>
                     </a>
                 </div>
             </div>
@@ -255,53 +242,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2768.html">
-                        <h3>「2020年代末までにAIで人類滅亡の恐れ」--Anthropic研究者が退社、開発競争に警鐘</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">AI企業Anthropicの研究者Jacob Coxon氏は米国時間9月8日、同社を辞めたとXで明らかにした。「どちらの会社も責任ある行動をとっていない。自己改善する超知能へまっしぐらに突き進み、私た...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_875.html">
-                        <h3>OpenAI、ミレニアム懸賞問題「ナビエ・ストークス方程式」の難問を解決したと発表</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">OpenAIは米国時間9月8日、数学の7大難問「ミレニアム懸賞問題」の1つ、ナビエ・ストークス方程式の存在と滑らかさの問題を、社内のAIシステムで解決したと発表した。流体の運動を記述するこの方程式につ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1050.html">
-                        <h3>iPhone 18 Pro、写真が「AI未加工」と証明できる新機能を搭載</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">「iPhone 18 Pro」には、撮影した画像がAIで加工されていないことをデジタル技術で証明する、新たなカメラモード「リファレンス」が加わる。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5946.html">
-                        <h3>VAIO、画面を裏返してタブレットに変わる13.3型「VAIO T」発表--フリップ機構が10年ぶりに復活</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">一般的な2in1ノートPCと異なり、本体を持ち上げることなく机の上でそのままタブレットに変形できるVAIO Tが登場した。ハイエンドモデルSX14-Rと同等の品質基準を持ちながら、個人向けと法人向けの...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_7575.html">
-                        <h3>生成AI時代のパワポ活用術を学ぶ！AIとの役割分担とは？　 10/2（金）・10/9（金）無料セミナー「AI時代のPow...</h3>
+                    <a href="ASCII_jp__トップ_1337.html">
+                        <h3>Ryzen AI 5 340搭載で24万円台！  23.8型ディスプレーの一体型デスクトップPCがFMV直販「目玉品」で...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">生成AI時代のパワポ活用術を学ぶ！AIとの役割分担とは？ 10/2（金）・10/9（金）無料セミナー「AI時代のPowerPoint活用術 Vol.</p>
+                        <p class="related-summary">FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_2328.html">
+                        <h3>ゲーム開発に「ローカルLLM」を取り込む必然性とは？ メインメモリーの96GBをVRAM化するAI特化「DAIV」が示す...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">ゲーム開発現場でどこまでローカルLLMや生成AIの実運用が可能なのか。新清士氏が実際に開発で活用している知見を披露。ローカルLLM運用の実践的意義と、そこから見えてきたPCハードウェアのパラダイムシフ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9525.html">
+                        <h3>OpenAI 安保理でAI安全策説明へ</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_825.html">
+                        <h3>文字起こし字幕編集ソフト「Zimaku」を公開。話者ごとの自動分離とAIチャット修正で、文字起こしから字幕修正を簡単に。...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">文字起こし字幕編集ソフト「Zimaku」を公開。話者ごとの自動分離とAIチャット修正で、文字起こしから字幕修正を簡単に。ローカルでの文字起こしは無料。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_2736.html">
+                        <h3>Claude Code が AGENTS.md を読むようになった。ただし1回目のセッションでは読まれない</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">277（2026-09-18）の changelog に、こう書かれています。 Added AGENTS. md support: in a project with no CLAUDE. md, C...</p>
                     </a>
                 </article>
             </div>

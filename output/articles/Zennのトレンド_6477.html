@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E2Eテストをユニットテスト並みの実行時間に — Playwright並列化とGitHub Actionsチューニングの実践 | 日本のテックニュース速報</title>
-    <meta name="description" content="私たちのチームでは、品質管理システム（QMS）SaaS「QMSmart」の開発で、約 100 spec / 140 テストケースの E2E テストを、PR ごとに CI で自動実行し、wall-clock 6〜8 分で完走させる運用が回っています。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="GitHub,本">
+    <title>PRのCI稼働時間を7割削減した話 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに イノベーション開発チームのkuniです！ 現在はITトレンドのリプレイスPJに従事しています。 最近の開発ではAIエージェントに実装を任せることが多く、PRやテストコードが増えるようになりました。 アウトプットが多くなった反面、CIの稼働時間が増えるという問題が発生しました">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="E2Eテストをユニットテスト並みの実行時間に — Playwright並列化とGitHub Actionsチューニングの実践">
-    <meta property="og:description" content="私たちのチームでは、品質管理システム（QMS）SaaS「QMSmart」の開発で、約 100 spec / 140 テストケースの E2E テストを、PR ごとに CI で自動実行し、wall-clock 6〜8 分で完走させる運用が回っています。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="PRのCI稼働時間を7割削減した話">
+    <meta property="og:description" content="はじめに イノベーション開発チームのkuniです！ 現在はITトレンドのリプレイスPJに従事しています。 最近の開発ではAIエージェントに実装を任せることが多く、PRやテストコードが増えるようになりました。 アウトプットが多くなった反面、CIの稼働時間が増えるという問題が発生しました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6477.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="E2Eテストをユニットテスト並みの実行時間に — Playwright並列化とGitHub Actionsチューニングの実践">
-    <meta name="twitter:description" content="私たちのチームでは、品質管理システム（QMS）SaaS「QMSmart」の開発で、約 100 spec / 140 テストケースの E2E テストを、PR ごとに CI で自動実行し、wall-clock 6〜8 分で完走させる運用が回っています。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="PRのCI稼働時間を7割削減した話">
+    <meta name="twitter:description" content="はじめに イノベーション開発チームのkuniです！ 現在はITトレンドのリプレイスPJに従事しています。 最近の開発ではAIエージェントに実装を任せることが多く、PRやテストコードが増えるようになりました。 アウトプットが多くなった反面、CIの稼働時間が増えるという問題が発生しました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "E2Eテストをユニットテスト並みの実行時間に — Playwright並列化とGitHub Actionsチューニングの実践",
-        "description": "私たちのチームでは、品質管理システム（QMS）SaaS「QMSmart」の開発で、約 100 spec / 140 テストケースの E2E テストを、PR ごとに CI で自動実行し、wall-clock 6〜8 分で完走させる運用が回っています。最新のテクノロジー情報をお届けします。",
+        "headline": "PRのCI稼働時間を7割削減した話",
+        "description": "はじめに イノベーション開発チームのkuniです！ 現在はITトレンドのリプレイスPJに従事しています。 最近の開発ではAIエージェントに実装を任せることが多く、PRやテストコードが増えるようになりました。 アウトプットが多くなった反面、CIの稼働時間が増えるという問題が発生しました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-17T04:54:22",
-        "dateModified": "2026-07-20T02:59:15.253385",
+        "datePublished": "2026-09-18T00:00:07",
+        "dateModified": "2026-09-19T23:56:55.353723",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6477.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6477.html",
-        "articleSection": "プログラミング",
-        "keywords": ["GitHub","本"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "E2Eテストをユニットテスト並みの実行時間に — Playwright並列化とGitHub Actionsチューニングの実践",
+                "name": "PRのCI稼働時間を7割削減した話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6477.html"
             }
         ]
@@ -113,44 +113,46 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">E2Eテストをユニットテスト並みの実行時間に — Playwright並列化とGitHub Acti...</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">PRのCI稼働時間を7割削減した話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>E2Eテストをユニットテスト並みの実行時間に — Playwright並列化とGitHub Actionsチューニングの実践</h1>
+                <h1>PRのCI稼働時間を7割削減した話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/berry_blog/articles/39392e1da7ca71" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-07-17T04:54:22">
-                        公開: 2026-07-17T04:54:22
+                    <span class="source">出典: <a href="https://zenn.dev/innovation/articles/e84f8ccca8e6da" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-09-18T00:00:07">
+                        公開: 2026-09-18T00:00:07
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">GitHub</span>
-                    <span class="tag">本</span>
+                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    私たちのチームでは、品質管理システム（QMS）SaaS「QMSmart」の開発で、約 100 spec / 140 テストケースの E2E テストを、PR ごとに CI で自動実行し、wall-clock 6〜8 分で完走させる運用が回っています。これはユニットテスト（Vitest）の CI とほぼ同じ所要時間です。
-本記事では、これを実現するために行った
-
-並列実行を前提にした E2E テストの構造設計
-Playwright workers による並列化
-
-GitHub Actions Runner の設定とチューニング（Kong 502 の根治まで）
-flaky テストを作らないため...
+                    はじめに
+イノベーション開発チームのkuniです！
+現在はITトレンドのリプレイスPJに従事しています。
+最近の開発ではAIエージェントに実装を任せることが多く、PRやテストコードが増えるようになりました。
+アウトプットが多くなった反面、CIの稼働時間が増えるという問題が発生しました。
+今回はCIの稼働時間を、CIの目的を維持したまま削減した話をしたいと思います。
+最終的にはCIの1runあたりの稼働時間を144分から39分（73%削減）にすることができました。
+この記事では、実際に行った3つの対応を紹介します。
+!
+記事に載せているコードは、要点だけを抜き出したものです。
+実際のコ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/berry_blog/articles/39392e1da7ca71" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/innovation/articles/e84f8ccca8e6da" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,30 +165,20 @@ flaky テストを作らないため...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -196,23 +188,23 @@ flaky テストを作らないため...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +219,16 @@ flaky テストを作らないため...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_3012.html">
+                    <a href="Qiita_-_人気の記事_7025.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iPhone18 Proの可変絞りとは〜写真がどう変わるのか</span>
+                        <span class="nav-title">【Jev】文章を返さない判断モデル Jev とは？〜システム運用での活用方法についても想像してみる〜</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_5653.html">
+                    <a href="Zennのトレンド_4096.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">GitHub Release 作成をパッケージリリースのトリガーにするな！</span>
+                        <span class="nav-title">全社に OpenCode + LiteLLM を導入してコストを抑えつつ AI 活用を進めている話</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +241,52 @@ flaky テストを作らないため...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3125.html">
-                        <h3>WEB開発経験の少ない人が「徳丸本」を情報処理安全確保支援士試験に活用する方法</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_2471.html">
+                        <h3>トランプ氏「AIフォース創設」</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_3193.html">
+                        <h3>Ryzen AI 5 340搭載で24万円台！  23.8型ディスプレーの一体型デスクトップPCがFMV直販「目玉品」で...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_8066.html">
+                        <h3>ゲーム開発に「ローカルLLM」を取り込む必然性とは？ メインメモリーの96GBをVRAM化するAI特化「DAIV」が示す...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">ゲーム開発現場でどこまでローカルLLMや生成AIの実運用が可能なのか。新清士氏が実際に開発で活用している知見を披露。ローカルLLM運用の実践的意義と、そこから見えてきたPCハードウェアのパラダイムシフ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_8144.html">
+                        <h3>ｽﾀｯｸﾁｬﾝの会話の判断を Jev に任せてみた</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">WEB開発経験の少ない人が「徳丸本」を情報処理安全確保支援士試験に活用する方法 はじめに 情報処理安全確保支援士試験では、Webアプリケーションの脆弱性に関する問題が繰り返し出題されます。 対策として...</p>
+                        <p class="related-summary">はじめに 最近ｽﾀｯｸﾁｬﾝと Fitbit Air を買いました。Databricks も合わせて、自分の健康データをいろいろ収集・集計して遊んでいます。 いま実装しているのは、以下の機能です。 朝...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7467.html">
-                        <h3>【個人開発】セルフネイルのネイルレシピアプリを開発しました！（React/Supabase/PWA）</h3>
+                    <a href="Qiita_-_人気の記事_304.html">
+                        <h3>生成AIセキュリティを学んで変わった「AIを安全に使う」という考え方</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに 最近セルフネイルを始めたのですが、ショート動画を見て「このデザインを真似したい！」と思っても、使用しているネイル用品が動画内に散らばっていたり、そもそも何のアイテムを使っているのか紹介されて...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_4701.html">
-                        <h3>ゴールまで自走するだけではない？——ループエンジニアリングの本質はどこにあるのか</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">ループエンジニアリングという言葉が流行っています。エージェントが人の手を離れて、コーディングから何から最後まで自走する。そういう話として語られることが多い気がします。 ただ、少し引っかかってもいました...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_5571.html">
-                        <h3>codexの独自用語乱立･曖昧問題への対策</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">この記事はXの元記事をZenn向けに再掲載したものです。 codexで起きやすい問題 codexでよく起きる問題として､言葉の定義を適当にして設計や実装をしてしまう問題があります｡経験上､claude...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_8444.html">
-                        <h3>ImportLintの紹介: import専門の高速なリンター</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">皆さんこんにちは。今回は、筆者が最近Claude Fable 5さんと一緒に開発したImportLintを紹介します。 https://github. com/uhyo/import-lint esl...</p>
+                        <p class="related-summary">はじめに 現在、Webエンジニアを目指して学習を進める中で、AI駆動開発についても学んでいます。今回は、Happiness Chainのカリキュラムで生成AIセキュリティについて学ぶ機会があり、Pro...</p>
                     </a>
                 </article>
             </div>

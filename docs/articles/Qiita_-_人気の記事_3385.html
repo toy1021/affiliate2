@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LambdaでAmazon Bedrockに任意のトークン上限を設定してみた【80%で通知・上限到達でリクエスト拒否】 | 日本のテックニュース速報</title>
-    <meta name="description" content="こんにちは。 ソーイ株式会社、Webエンジニア2年目の村上です。 AWS上のアプリケーションから基盤モデルを利用する場合、簡単に生成AIモデルを呼び出せるAmazon Bedrockを使う機会も多いと思います。 使いやすくて便利なのはそうなのですが、Bedrockは従量課金.">
-    <meta name="keywords" content="AI,AWS">
+    <title>Amazon Bedrock AgentCore Runtime V2 が登場、V1 との違いを整理してみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 2026年9月19日、Amazon Bedrock AgentCore に新しい Runtime が登場しました。 What&#39;s New では、Amazon Bedrock AgentCore のサーバーレス microVM コンピュートの新しい世代として案内さ.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="LambdaでAmazon Bedrockに任意のトークン上限を設定してみた【80%で通知・上限到達でリクエスト拒否】">
-    <meta property="og:description" content="こんにちは。 ソーイ株式会社、Webエンジニア2年目の村上です。 AWS上のアプリケーションから基盤モデルを利用する場合、簡単に生成AIモデルを呼び出せるAmazon Bedrockを使う機会も多いと思います。 使いやすくて便利なのはそうなのですが、Bedrockは従量課金.">
+    <meta property="og:title" content="Amazon Bedrock AgentCore Runtime V2 が登場、V1 との違いを整理してみた">
+    <meta property="og:description" content="はじめに 2026年9月19日、Amazon Bedrock AgentCore に新しい Runtime が登場しました。 What&#39;s New では、Amazon Bedrock AgentCore のサーバーレス microVM コンピュートの新しい世代として案内さ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3385.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LambdaでAmazon Bedrockに任意のトークン上限を設定してみた【80%で通知・上限到達でリクエスト拒否】">
-    <meta name="twitter:description" content="こんにちは。 ソーイ株式会社、Webエンジニア2年目の村上です。 AWS上のアプリケーションから基盤モデルを利用する場合、簡単に生成AIモデルを呼び出せるAmazon Bedrockを使う機会も多いと思います。 使いやすくて便利なのはそうなのですが、Bedrockは従量課金.">
+    <meta name="twitter:title" content="Amazon Bedrock AgentCore Runtime V2 が登場、V1 との違いを整理してみた">
+    <meta name="twitter:description" content="はじめに 2026年9月19日、Amazon Bedrock AgentCore に新しい Runtime が登場しました。 What&#39;s New では、Amazon Bedrock AgentCore のサーバーレス microVM コンピュートの新しい世代として案内さ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "LambdaでAmazon Bedrockに任意のトークン上限を設定してみた【80%で通知・上限到達でリクエスト拒否】",
-        "description": "こんにちは。 ソーイ株式会社、Webエンジニア2年目の村上です。 AWS上のアプリケーションから基盤モデルを利用する場合、簡単に生成AIモデルを呼び出せるAmazon Bedrockを使う機会も多いと思います。 使いやすくて便利なのはそうなのですが、Bedrockは従量課金.",
+        "headline": "Amazon Bedrock AgentCore Runtime V2 が登場、V1 との違いを整理してみた",
+        "description": "はじめに 2026年9月19日、Amazon Bedrock AgentCore に新しい Runtime が登場しました。 What&#39;s New では、Amazon Bedrock AgentCore のサーバーレス microVM コンピュートの新しい世代として案内さ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-21T03:17:47",
-        "dateModified": "2026-08-21T16:35:23.508784",
+        "datePublished": "2026-09-18T16:47:03",
+        "dateModified": "2026-09-19T08:36:39.174792",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3385.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3385.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","AWS"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "LambdaでAmazon Bedrockに任意のトークン上限を設定してみた【80%で通知・上限到達でリクエスト拒否】",
+                "name": "Amazon Bedrock AgentCore Runtime V2 が登場、V1 との違いを整理してみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3385.html"
             }
         ]
@@ -113,40 +113,35 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">LambdaでAmazon Bedrockに任意のトークン上限を設定してみた【80%で通知・上限到達...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Amazon Bedrock AgentCore Runtime V2 が登場、V1 との違いを整理...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>LambdaでAmazon Bedrockに任意のトークン上限を設定してみた【80%で通知・上限到達でリクエスト拒否】</h1>
+                <h1>Amazon Bedrock AgentCore Runtime V2 が登場、V1 との違いを整理してみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/chaochire/items/80000bf7cf8bbe5b36ee?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-08-21T03:17:47">
-                        公開: 2026-08-21T03:17:47
+                    <span class="source">出典: <a href="https://qiita.com/yama3133/items/c7b437006f89fc49e4d9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-09-18T16:47:03">
+                        公開: 2026-09-18T16:47:03
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    こんにちは。
-ソーイ株式会社、Webエンジニア2年目の村上です。
-AWS上のアプリケーションから基盤モデルを利用する場合、簡単に生成AIモデルを呼び出せるAmazon Bedrockを使う機会も多いと思います。
-使いやすくて便利なのはそうなのですが、Bedrockは従量課金...
+                    はじめに
+2026年9月19日、Amazon Bedrock AgentCore に新しい Runtime が登場しました。
+What's New では、Amazon Bedrock AgentCore のサーバーレス microVM コンピュートの新しい世代として案内さ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/chaochire/items/80000bf7cf8bbe5b36ee?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/yama3133/items/c7b437006f89fc49e4d9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -155,60 +150,25 @@ AWS上のアプリケーションから基盤モデルを利用する場合、�
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +183,16 @@ AWS上のアプリケーションから基盤モデルを利用する場合、�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9008.html">
+                    <a href="Qiita_-_人気の記事_3070.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">botで大量クリック 広告費を詐取</span>
+                        <span class="nav-title">耳で聞く！Python で学ぶ マクロ経済学 入門 15</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_4603.html">
+                    <a href="気になる記になる_1654.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【3日間限定セール】今週末は｢注目の次世代作家作品｣が対象!! ｰ ｢Amazonマンガ毎週末セール...</span>
+                        <span class="nav-title">【セール】CIOのモバイルバッテリーやシリコンケーブルが最大50％オフに ｰ Amazonで｢旅の充...</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +205,52 @@ AWS上のアプリケーションから基盤モデルを利用する場合、�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2403.html">
-                        <h3>Google、AIで「飛行機雲」を減らす実証実験　一体なぜやる？その意義とは</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_1143.html">
+                        <h3>Anthropic アクセンチュアと提携</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">Googleは8月18日（現地時間）、英国政府と共同で、AIを使って航空機の飛行機雲の発生を抑える実証プログラム「Operation Blue Skies」を始めると発表した。舞台は北大西洋の洋上空域...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2689.html">
-                        <h3>HOVERAir、羽根を付けると空を飛ぶジンバルカメラ「VERSA」--日本で9月中旬に先行発売</h3>
+                    <a href="ASCII_jp__トップ_2321.html">
+                        <h3>セブンに「もちもち食感どーなつ」138円～が降臨！ シュガー・きなこ・チョコ＆クランブルの3種類</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ドローンやAI飛行カメラを手がける中国ZERO ZERO ROBOTICSは8月19日、手持ちのジンバルカメラから自律飛行カメラに切り替えて使える「HOVERAir VERSA（バーサ）」を発表した。...</p>
+                        <p class="related-summary">セブン‐イレブンは9月21日より、「もちもち食感どーなつ」3商品を順次発売します。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3113.html">
-                        <h3>OpenAI、「2027年に上場」方針をCFOが示す　成長加速なら前倒しも</h3>
+                    <a href="ASCII_jp__トップ_5633.html">
+                        <h3>第1巻は返品の山。でも、その序盤巻が面白い『サザエさん』原作漫画の読み方【Amazonマンガ週末祭】</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">OpenAIのCFOは全社集会で、同社が「2027年に上場企業になる」と語ったという。CNBCが報じた。.</p>
+                        <p class="related-summary">アニメと全然違う。独身のサザエや戦後の生々しい雰囲気が詰まった原作『サザエさん』の序盤が、実はかなり面白い。あなたも歴史を覗く気分でページを開いてほしい。今なら全巻50％還元中。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1132.html">
-                        <h3>アマゾンのドローン配送、年内に米国約500都市へ拡大　現在の6倍に</h3>
+                    <a href="ASCII_jp__トップ_4789.html">
+                        <h3>ラム酒×ラム酒×ラム酒！ コージーコーナー「濃香ラムレーズンタルト」</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">アマゾンは、ドローン配送サービス「Prime Air」の提供地域を2026年末までに米国の約500都市へ拡大すると発表した。.</p>
+                        <p class="related-summary">銀座コージーコーナーは9月18日から全国の生ケーキ取扱店で「濃香ラムレーズンタルト」（594円）を販売します。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9328.html">
-                        <h3>KDDI、日本発スタートアップの米国進出を支援する新プログラム　第1期はAI新興5社</h3>
+                    <a href="ASCII_jp__トップ_1243.html">
+                        <h3>【開業まで1ヶ月】万博閉幕から1年、その翌日。落合陽一プロデュース「null²」が横浜で転生する「null²n」10月1...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">KDDIは8月20日、日本発スタートアップの米国進出を支援するアクセラレータープログラム「KDDI Beyond Borders Accelerator」を始めると発表した。第1期にはAIスタートアッ...</p>
+                        <p class="related-summary">【開業まで1ヶ月】万博閉幕から1年、その翌日。落合陽一プロデュース「null²」が横浜で転生する「null²n」10月14日開業――デザイン非公開のまま好評の3連ピンバッジ、ついに初公開.</p>
                     </a>
                 </article>
             </div>

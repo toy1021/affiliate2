@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon S3 Files vs Amazon FSx for Lustre：性能比較をしてみた | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに X で大活躍中の @___nix___ です。 今回、GAされたばかりの Amazon S3 Files について早速 Amazon FSx for Lustre との性能比較をしてみました。 難しい内容は余り嬉しく無い人向けにザックリ結果だけを先に記載しておきます">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用 | 日本のテックニュース速報</title>
+    <meta name="description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
+    <meta name="keywords" content="AI,Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Amazon S3 Files vs Amazon FSx for Lustre：性能比較をしてみた">
-    <meta property="og:description" content="はじめに X で大活躍中の @___nix___ です。 今回、GAされたばかりの Amazon S3 Files について早速 Amazon FSx for Lustre との性能比較をしてみました。 難しい内容は余り嬉しく無い人向けにザックリ結果だけを先に記載しておきます">
+    <meta property="og:title" content="AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用">
+    <meta property="og:description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3182.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Amazon S3 Files vs Amazon FSx for Lustre：性能比較をしてみた">
-    <meta name="twitter:description" content="はじめに X で大活躍中の @___nix___ です。 今回、GAされたばかりの Amazon S3 Files について早速 Amazon FSx for Lustre との性能比較をしてみました。 難しい内容は余り嬉しく無い人向けにザックリ結果だけを先に記載しておきます">
+    <meta name="twitter:title" content="AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用">
+    <meta name="twitter:description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3182.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Amazon S3 Files vs Amazon FSx for Lustre：性能比較をしてみた",
-        "description": "はじめに X で大活躍中の @___nix___ です。 今回、GAされたばかりの Amazon S3 Files について早速 Amazon FSx for Lustre との性能比較をしてみました。 難しい内容は余り嬉しく無い人向けにザックリ結果だけを先に記載しておきます",
+        "headline": "AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用",
+        "description": "AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-08T09:48:11",
-        "dateModified": "2026-04-09T15:23:54.439689",
+        "datePublished": "2026-09-16T09:54:07",
+        "dateModified": "2026-09-20T09:08:12.897132",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3182.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3182.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","Claude"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Amazon S3 Files vs Amazon FSx for Lustre：性能比較をしてみた",
+                "name": "AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3182.html"
             }
         ]
@@ -113,57 +113,37 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">Amazon S3 Files vs Amazon FSx for Lustre：性能比較をしてみた</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Amazon S3 Files vs Amazon FSx for Lustre：性能比較をしてみた</h1>
+                <h1>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/nix/articles/74ccf846643edb" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-04-08T09:48:11">
-                        公開: 2026-04-08T09:48:11
+                    <span class="source">出典: <a href="https://zenn.dev/hampen2929/books/ai-dev-team-guide" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-09-16T09:54:07">
+                        公開: 2026-09-16T09:54:07
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    1. はじめに
-X で大活躍中の @___nix___ です。
-今回、GAされたばかりの Amazon S3 Files について早速 Amazon FSx for Lustre との性能比較をしてみました。
-難しい内容は余り嬉しく無い人向けにザックリ結果だけを先に記載しておきます。
-
-
-
-何したい？
-おすすめ
-理由
-
-
-
-
-S3 のデータを普通にファイルとして読み書きしたい
-S3 Files
-設定が簡単。容量の事前確保も不要
-
-
-大きいファイルを高速に読み書きしたい (1つずつ順番に)
-Lustre
-1つの処理が速い。S3 Files は1つずつだと遅い
-
-
-大きいファイルを高速に...
+                    AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます。実走はCodexの実装と既設のClaudeレビューCIを用いた最小構成で、並列構成の提案や未計測の効果とは区別しています。単体のエージェントを使いこなし、次に複数体で開発を回したい人のための一冊です。全章無料で読めます。
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/nix/articles/74ccf846643edb" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/hampen2929/books/ai-dev-team-guide" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -172,25 +152,60 @@ Lustre
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -205,16 +220,16 @@ Lustre
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_3547.html">
+                    <a href="Publickey_3904.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">React で ref をどう扱うかを整理する</span>
+                        <span class="nav-title">「Java 27」正式リリース。全環境でG1 GCがデフォルトに、TLS 1.3用に耐量子暗号のハイ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_1878.html">
+                    <a href="Publickey_5556.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">障害調査中にviewコマンドで巨大ログを開いてアプリを全停止させたお話</span>
+                        <span class="nav-title">Android、パスキーをパスワードマネージャ間で転送可能に。Googleパスワードマネージャ、1P...</span>
                     </a>
                 </div>
             </div>
@@ -227,53 +242,52 @@ Lustre
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8013.html">
-                        <h3>イランのハッカー、米インフラへの攻撃を激化　水道やエネルギーを標的に</h3>
+                    <a href="Qiita_-_人気の記事_9894.html">
+                        <h3>Jevで水平思考クイズのWebアプリを作ったよ【ウミガメのスープ】</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">中東で緊張が高まる中、イランのハッカーが米国の主要インフラ部門へのサイバー攻撃を激化させているという。諜報機関や法執行機関が共同勧告で明らかにした。.</p>
+                        <p class="related-summary">Jevを使ったWebアプリを作ったよ ここ最近自分のTLでは、新しいAIモデルである Jev が盛り上がっている。 このJevを使って、「ウミガメのスープ」でお馴染み、水平思考クイズができるWebアプ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4746.html">
-                        <h3>アマゾン、古い「Kindle」のサポートを5月に終了へ　対象機種は？</h3>
+                    <a href="ASCII_jp__トップ_2018.html">
+                        <h3>沖縄県知事選、当選者の得票率を誤差0.1ポイントで再現。AIペルソナによる投票行動シミュレーション</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">アマゾンは、2012年以前に発売された「Kindle」モデルのサポートを5月20日に終了する。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7334.html">
-                        <h3>「SNSの利用頻度」と「スポーツをする頻度」に相関はある？--ドコモ調査</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">スポーツ・運動の頻度別に見ると、「SNSを1日に複数回利用する」と答えた割合は、「ほぼ毎日」が69％、「週に1、2日程度」が64％、「月に1、2日程度以下」が61％、「まったくない」が65％だった。毎...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_1061.html">
-                        <h3>RTX 5090×Core Ultra搭載PCが値下げ！ BTOゲーミングPC24時間限定セール</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">セブンアールジャパンが運営するパソコンショップSEVENが、4月10日に24時間限定セールを開催。最新のゲーミングPCが最大112,000円オフでお得に購入できる。送料無料の特典もあり、見逃せないセー...</p>
+                        <p class="related-summary">1ポイントで再現。AIペルソナによる投票行動シミュレーション.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_4356.html">
-                        <h3>ソニー、ゲーミングギア｢INZONE｣ブランドの新製品を4月15日に発表へ ｰ 噂の新型ヘッドホンか</h3>
+                    <a href="ASCII_jp__トップ_7558.html">
+                        <h3>Claude・ChatGPTのサブスクで使えるデスクトップAIエージェントアプリ「Kari」をGotoAIが無償公開</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ソニーが、現地時間4月15日にゲーミングギア「INZONE」ブランドから何らかの新製品を発表することを予告しています。 公開されたティザー画像には製品のシルエットが描かれていますが、その詳細は不明。 ...</p>
+                        <p class="related-summary">Claude・ChatGPTのサブスクで使えるデスクトップAIエージェントアプリ「Kari」をGotoAIが無償公開.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9633.html">
+                        <h3>トランプ氏「AIフォース創設」</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_7322.html">
+                        <h3>新しい Amazon Bedrock AgentCore Runtime が利用可能に!!</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに こんにちは、AWS Japan AI Specialist Solutions Architect の Narimoto です。 AI エージェント基盤上で動くワークロードとしては、数秒で終...</p>
                     </a>
                 </article>
             </div>

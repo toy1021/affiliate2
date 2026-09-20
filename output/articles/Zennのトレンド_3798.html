@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unity CLI でAIエージェントにゲームを作らせてみた | 日本のテックニュース速報</title>
-    <meta name="description" content="com/ja/blog/meet-the-unity-cli 今回はUnity CLIのインストール方法、AIエージェントの連携について解説し、最終的にはゲーム制作まで行います。 TL;DR Unity公式のスタンドアロンCLI「Unity CLI」（ベータ版）が公開されています">
-    <meta name="keywords" content="AI,ゲーム">
+    <title>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用 | 日本のテックニュース速報</title>
+    <meta name="description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
+    <meta name="keywords" content="AI,Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Unity CLI でAIエージェントにゲームを作らせてみた">
-    <meta property="og:description" content="com/ja/blog/meet-the-unity-cli 今回はUnity CLIのインストール方法、AIエージェントの連携について解説し、最終的にはゲーム制作まで行います。 TL;DR Unity公式のスタンドアロンCLI「Unity CLI」（ベータ版）が公開されています">
+    <meta property="og:title" content="AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用">
+    <meta property="og:description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3798.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Unity CLI でAIエージェントにゲームを作らせてみた">
-    <meta name="twitter:description" content="com/ja/blog/meet-the-unity-cli 今回はUnity CLIのインストール方法、AIエージェントの連携について解説し、最終的にはゲーム制作まで行います。 TL;DR Unity公式のスタンドアロンCLI「Unity CLI」（ベータ版）が公開されています">
+    <meta name="twitter:title" content="AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用">
+    <meta name="twitter:description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3798.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Unity CLI でAIエージェントにゲームを作らせてみた",
-        "description": "com/ja/blog/meet-the-unity-cli 今回はUnity CLIのインストール方法、AIエージェントの連携について解説し、最終的にはゲーム制作まで行います。 TL;DR Unity公式のスタンドアロンCLI「Unity CLI」（ベータ版）が公開されています",
+        "headline": "AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用",
+        "description": "AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-21T02:47:18",
-        "dateModified": "2026-07-21T22:58:37.079534",
+        "datePublished": "2026-09-16T09:54:07",
+        "dateModified": "2026-09-20T14:00:11.322690",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3798.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3798.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","ゲーム"]
+        "keywords": ["AI","Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Unity CLI でAIエージェントにゲームを作らせてみた",
+                "name": "AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_3798.html"
             }
         ]
@@ -114,45 +114,36 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Unity CLI でAIエージェントにゲームを作らせてみた</li>
+                <li aria-current="page">AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Unity CLI でAIエージェントにゲームを作らせてみた</h1>
+                <h1>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/tkada/articles/1ba97707dee14a" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/hampen2929/books/ai-dev-team-guide" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-07-21T02:47:18">
-                        公開: 2026-07-21T02:47:18
+                    <time datetime="2026-09-16T09:54:07">
+                        公開: 2026-09-16T09:54:07
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">ゲーム</span>
+                    <span class="tag">Claude</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-
-Unity公式のCLIであるUnity CLIがリリースされました。
-https://unity.com/ja/blog/meet-the-unity-cli
-今回はUnity CLIのインストール方法、AIエージェントの連携について解説し、最終的にはゲーム制作まで行います。
-
- TL;DR
-
-Unity公式のスタンドアロンCLI「Unity CLI」（ベータ版）が公開されています。エディタのインストールからプロジェクト操作までできます
-真価は com.unity.pipeline パッケージとの連携です。起動中のUnityエディタをHTTP経由でフル遠隔操作できます（r...
+                    AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます。実走はCodexの実装と既設のClaudeレビューCIを用いた最小構成で、並列構成の提案や未計測の効果とは区別しています。単体のエージェントを使いこなし、次に複数体で開発を回したい人のための一冊です。全章無料で読めます。
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/tkada/articles/1ba97707dee14a" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/hampen2929/books/ai-dev-team-guide" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -185,10 +176,10 @@ Unity公式のスタンドアロンCLI「Unity CLI」（ベータ版）が公開
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%B2%E3%83%BC%E3%83%A0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ゲーム - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ゲーム - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでゲームに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -229,16 +220,16 @@ Unity公式のスタンドアロンCLI「Unity CLI」（ベータ版）が公開
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5649.html">
+                    <a href="Publickey_7872.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">GMO代表 在宅勤務巡る投稿謝罪</span>
+                        <span class="nav-title">「Java 27」正式リリース。全環境でG1 GCがデフォルトに、TLS 1.3用に耐量子暗号のハイ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_7052.html">
+                    <a href="Publickey_6041.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Claude Codeを2時間おきに回してVS Code拡張mdエディタを育てるLoop Engin...</span>
+                        <span class="nav-title">Android、パスキーをパスワードマネージャ間で転送可能に。Googleパスワードマネージャ、1P...</span>
                     </a>
                 </div>
             </div>
@@ -251,53 +242,51 @@ Unity公式のスタンドアロンCLI「Unity CLI」（ベータ版）が公開
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1441.html">
-                        <h3>Claudeの「Fable 5」、結局標準搭載へ　ただし1万6000円以上の月額課金が必要</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_600.html">
+                        <h3>米大統領 なぜAIの名称変更を提案</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">米Anthropicは7月18日、AIモデル「Claude Fable 5」の提供体制について、7月20日からMax（日本円で月額1万6000円以上）とTeam Premiumの全プランで利用上限の5...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5956.html">
-                        <h3>GMO熊谷氏、在宅勤務の「完全廃止」投稿を謝罪　真意も説明</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_1568.html">
+                        <h3>道徳的問い AI反論で3割判断覆す</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">GMOインターネットグループの熊谷正寿代表は7月21日、在宅勤務の「完全廃止」を公表した一連の投稿について、「『表現の過剰性』で誤解を生み、お騒がせした」とXで謝罪した。在宅勤務という働き方そのものを...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4808.html">
-                        <h3>テスラ車、日本でも「Grok」配信開始　音声AIと会話しながら運転可能に</h3>
+                    <a href="Qiita_-_人気の記事_2363.html">
+                        <h3>Jevで水平思考クイズのWebアプリを作ったよ【ウミガメのスープ】</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">テスラは7月21日、国内の対応車両に向けて対話型AIアシスタント「Grok（グロック）」の配信を開始したと発表した。OTA（無線ソフトウェアアップデート）で届くため、サービスセンターへの持ち込みや部品...</p>
+                        <p class="related-summary">Jevを使ったWebアプリを作ったよ ここ最近自分のTLでは、新しいAIモデルである Jev が盛り上がっている。 このJevを使って、「ウミガメのスープ」でお馴染み、水平思考クイズができるWebアプ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_618.html">
-                        <h3>Netflixの300作品で生成AI活用、制作現場で高まる効率化と反発</h3>
+                    <a href="ASCII_jp__トップ_310.html">
+                        <h3>沖縄県知事選、当選者の得票率を誤差0.1ポイントで再現。AIペルソナによる投票行動シミュレーション</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Netflixは2026年に約300作品で、主に制作、特にポストプロダクションで生成AIを使用したと報告している。.</p>
+                        <p class="related-summary">1ポイントで再現。AIペルソナによる投票行動シミュレーション.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7615.html">
-                        <h3>政府、マイナカードをAIエージェントと連携へ　重点計画に明記</h3>
+                    <a href="ASCII_jp__トップ_5025.html">
+                        <h3>Claude・ChatGPTのサブスクで使えるデスクトップAIエージェントアプリ「Kari」をGotoAIが無償公開</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">政府は7月21日、令和8年の「デジタル社会の実現に向けた重点計画」の概要を公表した。マイナンバーカードと外部のAIエージェントを安全につなぐ基盤「MCP」の構築を盛り込んだ。本人に代わってAIが行政手...</p>
+                        <p class="related-summary">Claude・ChatGPTのサブスクで使えるデスクトップAIエージェントアプリ「Kari」をGotoAIが無償公開.</p>
                     </a>
                 </article>
             </div>

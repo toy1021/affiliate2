@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた | 日本のテックニュース速報</title>
-    <meta name="description" content="こちらの記事でエンべディング戦略について考えてみました。 前回は１アイテム１チャンクのシンプルなテストデータで検証しました。 しかし実運用上では様々なチャンキング戦略でチャンク分割が行われます。 分割されたチャンクデータをdynamoDBでどう管理していくかを考えてみ.">
-    <meta name="keywords" content="AWS">
+    <title>エンジニアとしては、タスクマネージャーくらい見れるようになりたい | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 俺だってエンジニアとして、タスクマネージャーくらい見られるようになりたいです。 この記事は、俺が「タスクマネージャー確認しようや」といつか言える日が来ることを願ってまとめたブログです。 今の状態 タスクマネージャーの見方は分かるけど、活用の仕方が分からない.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた">
-    <meta property="og:description" content="こちらの記事でエンべディング戦略について考えてみました。 前回は１アイテム１チャンクのシンプルなテストデータで検証しました。 しかし実運用上では様々なチャンキング戦略でチャンク分割が行われます。 分割されたチャンクデータをdynamoDBでどう管理していくかを考えてみ.">
+    <meta property="og:title" content="エンジニアとしては、タスクマネージャーくらい見れるようになりたい">
+    <meta property="og:description" content="はじめに 俺だってエンジニアとして、タスクマネージャーくらい見られるようになりたいです。 この記事は、俺が「タスクマネージャー確認しようや」といつか言える日が来ることを願ってまとめたブログです。 今の状態 タスクマネージャーの見方は分かるけど、活用の仕方が分からない.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8171.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた">
-    <meta name="twitter:description" content="こちらの記事でエンべディング戦略について考えてみました。 前回は１アイテム１チャンクのシンプルなテストデータで検証しました。 しかし実運用上では様々なチャンキング戦略でチャンク分割が行われます。 分割されたチャンクデータをdynamoDBでどう管理していくかを考えてみ.">
+    <meta name="twitter:title" content="エンジニアとしては、タスクマネージャーくらい見れるようになりたい">
+    <meta name="twitter:description" content="はじめに 俺だってエンジニアとして、タスクマネージャーくらい見られるようになりたいです。 この記事は、俺が「タスクマネージャー確認しようや」といつか言える日が来ることを願ってまとめたブログです。 今の状態 タスクマネージャーの見方は分かるけど、活用の仕方が分からない.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた",
-        "description": "こちらの記事でエンべディング戦略について考えてみました。 前回は１アイテム１チャンクのシンプルなテストデータで検証しました。 しかし実運用上では様々なチャンキング戦略でチャンク分割が行われます。 分割されたチャンクデータをdynamoDBでどう管理していくかを考えてみ.",
+        "headline": "エンジニアとしては、タスクマネージャーくらい見れるようになりたい",
+        "description": "はじめに 俺だってエンジニアとして、タスクマネージャーくらい見られるようになりたいです。 この記事は、俺が「タスクマネージャー確認しようや」といつか言える日が来ることを願ってまとめたブログです。 今の状態 タスクマネージャーの見方は分かるけど、活用の仕方が分からない.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-11T12:51:19",
-        "dateModified": "2026-08-12T13:09:51.588554",
+        "datePublished": "2026-09-18T10:01:46",
+        "dateModified": "2026-09-20T14:00:11.324643",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8171.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8171.html",
-        "articleSection": "テクノロジー",
-        "keywords": ["AWS"]
+        "articleSection": "プログラミング",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた",
+                "name": "エンジニアとしては、タスクマネージャーくらい見れるようになりたい",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8171.html"
             }
         ]
@@ -113,39 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">エンジニアとしては、タスクマネージャーくらい見れるようになりたい</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>[AWS] DynamoDBでチャンク分割時のデータ保持構造を考えてみた</h1>
+                <h1>エンジニアとしては、タスクマネージャーくらい見れるようになりたい</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/kikuziro/items/f8f892066235e2d3601e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-08-11T12:51:19">
-                        公開: 2026-08-11T12:51:19
+                    <span class="source">出典: <a href="https://qiita.com/11eleven/items/29d641197b9320d0e2fa?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-09-18T10:01:46">
+                        公開: 2026-09-18T10:01:46
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AWS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    こちらの記事でエンべディング戦略について考えてみました。
-前回は１アイテム１チャンクのシンプルなテストデータで検証しました。
-しかし実運用上では様々なチャンキング戦略でチャンク分割が行われます。
-分割されたチャンクデータをdynamoDBでどう管理していくかを考えてみ...
+                    はじめに
+俺だってエンジニアとして、タスクマネージャーくらい見られるようになりたいです。
+この記事は、俺が「タスクマネージャー確認しようや」といつか言える日が来ることを願ってまとめたブログです。
+
+今の状態
+
+タスクマネージャーの見方は分かるけど、活用の仕方が分からない...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/kikuziro/items/f8f892066235e2d3601e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/11eleven/items/29d641197b9320d0e2fa?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,10 +158,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -171,23 +181,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -202,16 +212,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_4419.html">
+                    <a href="気になる記になる_2120.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">ソニーとTSMC 合弁会社を設立へ</span>
+                        <span class="nav-title">【Kindle本セール】1万冊以上が199円均一となる大規模セールが開催中</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_6728.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5566.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">｢iOS 27 beta 5｣から6つの未発表iPhoneのコードネームが見つかる</span>
+                        <span class="nav-title">iPhone18Pro 修理代に最大15万円</span>
                     </a>
                 </div>
             </div>
@@ -224,53 +234,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_519.html">
-                        <h3>ペルセウス座流星群、NASAがライブ配信へ　視聴方法はこちら</h3>
+                    <a href="ASCII_jp__トップ_6156.html">
+                        <h3>最大720Hz駆動の衝撃！ ASUSフラグシップOLEDディスプレー「ROG Swift OLED PG259QWS A...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">ペルセウス座流星群を実際に観測できない人のために、米航空宇宙局（NASA）はライブ映像を配信する。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_157.html">
-                        <h3>親のストレスで「子どものスクリーンタイム」が増加、研究で判明</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">強いストレスを抱える親ほど、子どもを退屈させず、落ち着かせるためにデジタル機器へ頼る傾向が強く、スクリーンタイムの制限も徹底しにくい――。新たな研究でこうした傾向が明らかになった。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_7444.html">
-                        <h3>服の中を冷水が巡る！ ペルチェ＋水循環の「水冷ベスト」が3万7810円</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">プログラミング</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">明誠の「水冷ベスト」がAmazonタイムセール対象。過去価格39,800円のところ、5％オフの37,810円で販売中。ペルチェ素子冷却プレートと水循環システムを組み合わせ、約2600cm²の冷却エリア...</p>
+                        <p class="related-summary">ASUSが最大720Hz駆動のゲーミングディスプレー「ROG Swift OLED PG259QWS Ace」を東京ゲームショウ2026で展示。eスポーツの定番ディスプレーを目指すべく、ASUSでディ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9412.html">
-                        <h3>自宅利用時も不便がないモバイルノートが欲しいなら。インターフェース充実の14型「mouse A4」11％オフ</h3>
+                    <a href="気になる記になる_8128.html">
+                        <h3>ユニコードコンソーシアム、｢Unicode 18.0｣を正式に発表 ｰ 9つの絵文字が追加</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">マウスコンピューターの14型ノートPC「mouse A4（A4A5U01SR1SIW1104AZ）」がAmazon割引対象。参考価格126,800円のところ、11％オフの112,689円で販売中。Ry...</p>
+                        <p class="related-summary">0」を正式にリリースしました。 「Unicode 18. ユニコードコンソーシアムが、現地時間9月16日に「Unicode 18. 0」では、新たに13,007文字が追加され、収録文字数の総計は172...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3808.html">
-                        <h3>24時間ぶっ通しでJAWS-UG漬け！　9月5日、あのJAWS SONIC ＆ MIDNIGHT JAWSが戻ってくる</h3>
+                    <a href="Zennのトレンド_2047.html">
+                        <h3>Jevでハーネスエンジニアリング</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">24時間ぶっ通しでJAWS-UGの各支部がセッションをやり続ける伝説のオンラインイベント「JAWS SONIC ＆ MIDNIGHT JAWS」が約6年ぶりに開催される。普段聞けない支部の運営やオンラ...</p>
+                        <p class="related-summary">jp/magazine/SD/archive/2026/202610 Jevって？ Jevは、状態と質問を受け取り、型付きの回答を確率とともに返すモデルである。チャッピー！それってLLMと何が違うの？...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_7090.html">
+                        <h3>1年半かけて育ててきたAI開発フロー</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">dev/sprix_it/articles/9d7519eb249681 前提として、私の考えとしては、 AI駆動開発の手法に良し悪しや正解はな. はじめに ! この記事で紹介する開発フローは、会社全...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_7103.html">
+                        <h3>GitHub Copilot app を使いこなす</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">GitHub Copilot app を、設定・セッション・自動化・スラッシュコマンドの観点から整理する入門書です。.</p>
                     </a>
                 </article>
             </div>

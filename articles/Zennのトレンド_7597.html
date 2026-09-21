@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1年半かけて育ててきたAI開発フロー | 日本のテックニュース速報</title>
-    <meta name="description" content="dev/sprix_it/articles/9d7519eb249681 前提として、私の考えとしては、 AI駆動開発の手法に良し悪しや正解はな. はじめに ! この記事で紹介する開発フローは、会社全体で採用しているものではなく、私個人が普段の開発で使っているものです">
-    <meta name="keywords" content="AI,Claude,EV">
+    <title>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用 | 日本のテックニュース速報</title>
+    <meta name="description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
+    <meta name="keywords" content="AI,Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="1年半かけて育ててきたAI開発フロー">
-    <meta property="og:description" content="dev/sprix_it/articles/9d7519eb249681 前提として、私の考えとしては、 AI駆動開発の手法に良し悪しや正解はな. はじめに ! この記事で紹介する開発フローは、会社全体で採用しているものではなく、私個人が普段の開発で使っているものです">
+    <meta property="og:title" content="AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用">
+    <meta property="og:description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7597.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="1年半かけて育ててきたAI開発フロー">
-    <meta name="twitter:description" content="dev/sprix_it/articles/9d7519eb249681 前提として、私の考えとしては、 AI駆動開発の手法に良し悪しや正解はな. はじめに ! この記事で紹介する開発フローは、会社全体で採用しているものではなく、私個人が普段の開発で使っているものです">
+    <meta name="twitter:title" content="AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用">
+    <meta name="twitter:description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7597.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "1年半かけて育ててきたAI開発フロー",
-        "description": "dev/sprix_it/articles/9d7519eb249681 前提として、私の考えとしては、 AI駆動開発の手法に良し悪しや正解はな. はじめに ! この記事で紹介する開発フローは、会社全体で採用しているものではなく、私個人が普段の開発で使っているものです",
+        "headline": "AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用",
+        "description": "AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-17T03:42:55",
-        "dateModified": "2026-09-20T17:24:52.693660",
+        "datePublished": "2026-09-16T09:54:07",
+        "dateModified": "2026-09-21T03:38:20.253666",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7597.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7597.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AI","Claude","EV"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","Claude"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "1年半かけて育ててきたAI開発フロー",
+                "name": "AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7597.html"
             }
         ]
@@ -113,47 +113,37 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">1年半かけて育ててきたAI開発フロー</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>1年半かけて育ててきたAI開発フロー</h1>
+                <h1>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/sprix_it/articles/db685b8fd6bffe" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-09-17T03:42:55">
-                        公開: 2026-09-17T03:42:55
+                    <span class="source">出典: <a href="https://zenn.dev/hampen2929/books/ai-dev-team-guide" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-09-16T09:54:07">
+                        公開: 2026-09-16T09:54:07
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
                     <span class="tag">Claude</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-!
-この記事で紹介する開発フローは、会社全体で採用しているものではなく、私個人が普段の開発で使っているものです。
-私自身の開発スタイルや業務に合わせて育てているものとして読んでいただければと思います。
-
-去年からClaude Codeを実務に取り入れて、いろいろと試してきました。
-以前、サブエージェントで「思考をレビューする」開発フローを組んだ話を書きましたが、あれから数か月経ち、形がかなり変わりました。
-https://zenn.dev/sprix_it/articles/9d7519eb249681
-前提として、私の考えとしては、
-AI駆動開発の手法に良し悪しや正解はな...
+                    AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます。実走はCodexの実装と既設のClaudeレビューCIを用いた最小構成で、並列構成の提案や未計測の効果とは区別しています。単体のエージェントを使いこなし、次に複数体で開発を回したい人のための一冊です。全章無料で読めます。
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/sprix_it/articles/db685b8fd6bffe" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/hampen2929/books/ai-dev-team-guide" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -199,23 +189,23 @@ AI駆動開発の手法に良し悪しや正解はな...
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -230,16 +220,16 @@ AI駆動開発の手法に良し悪しや正解はな...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_370.html">
+                    <a href="Publickey_7157.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">作るものが決まらないのは、発想力のせいなのか？：AIハッカソンで優勝したときのアイデアの出し方</span>
+                        <span class="nav-title">「Java 27」正式リリース。全環境でG1 GCがデフォルトに、TLS 1.3用に耐量子暗号のハイ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_4539.html">
+                    <a href="Publickey_1969.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">WebMCPを試してみた感想。フロントエンドの必須技術になりそうな予感。</span>
+                        <span class="nav-title">Android、パスキーをパスワードマネージャ間で転送可能に。Googleパスワードマネージャ、1P...</span>
                     </a>
                 </div>
             </div>
@@ -252,53 +242,52 @@ AI駆動開発の手法に良し悪しや正解はな...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7539.html">
-                        <h3>最大720Hz駆動の衝撃！ ASUSフラグシップOLEDディスプレー「ROG Swift OLED PG259QWS A...</h3>
+                    <a href="ASCII_jp__トップ_8192.html">
+                        <h3>待ってたぞ！ VAIO10年ぶりの変形ノートPCは、3in1でバツグンの使いやすさ。</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ASUSが最大720Hz駆動のゲーミングディスプレー「ROG Swift OLED PG259QWS Ace」を東京ゲームショウ2026で展示。eスポーツの定番ディスプレーを目指すべく、ASUSでディ...</p>
+                        <p class="related-summary">3型WQXGAの高精細なタッチディスプレイを搭載した、新発想のマルチスタイルノートPCです。画面中央を軸に反転させる独自のマルチフリップ機構を備えており、利用シーンに合わせて形状を自在に変形可能。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_8998.html">
-                        <h3>ユニコードコンソーシアム、｢Unicode 18.0｣を正式に発表 ｰ 9つの絵文字が追加</h3>
+                    <a href="ASCII_jp__トップ_6076.html">
+                        <h3>AMD「Ryzen AI Embedded X100」のリアルタイムAI制御が、Jetsonの弱点であるCPU性能を突く</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">0」を正式にリリースしました。 「Unicode 18. ユニコードコンソーシアムが、現地時間9月16日に「Unicode 18. 0」では、新たに13,007文字が追加され、収録文字数の総計は172...</p>
+                        <p class="related-summary">AMDがECS 2026を開催して、フィジカルAI戦略の説明や展示などを行なった。そこで現在のAMDのフィジカルAIに向けた取り組みを説明しよう。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8485.html">
-                        <h3>エンジニアとしては、タスクマネージャーくらい見れるようになりたい</h3>
+                    <a href="ASCII_jp__トップ_4270.html">
+                        <h3>AIがマイクラのラスボスを8分43秒で討伐　「考えるAstra」と「即断するJev」の分業が面白い</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに 俺だってエンジニアとして、タスクマネージャーくらい見られるようになりたいです。 この記事は、俺が「タスクマネージャー確認しようや」といつか言える日が来ることを願ってまとめたブログです。 今の...</p>
+                        <p class="related-summary">GPT-6 Astraと高速判断AI「Jev」を組み合わせ、マインクラフトのエンダードラゴンを8分43秒で討伐したという報告があった。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_7484.html">
-                        <h3>Jevでハーネスエンジニアリング</h3>
+                    <a href="ASCII_jp__トップ_1151.html">
+                        <h3>AIでMVを作るのは想像以上に大変だった　制作34時間、繰り返した“ダメ出し”でわかったこと</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">jp/magazine/SD/archive/2026/202610 Jevって？ Jevは、状態と質問を受け取り、型付きの回答を確率とともに返すモデルである。チャッピー！それってLLMと何が違うの？...</p>
+                        <p class="related-summary">GPT-6 AstraとMiniMax H3を使い、MVを制作。計画の読み違いや演出の失敗を重ねながら34時間で完成させ、AI制作では人間の判断と段階的な確認が欠かせないと実感した過程を紹介する。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_8340.html">
-                        <h3>1日の開発の流れをスキル化してみたら、想像以上に快適だった</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5115.html">
+                        <h3>米大統領 なぜAIの名称変更を提案</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">概要 ここ最近、すっかり同じような流れで開発をしている。 ざっくり書くと、以下のようになる。 GithubのIssueを取る → AIに設計と実装を任せる → 別のAIにレビューしてもらう → 動作確...</p>
                     </a>
                 </article>
             </div>

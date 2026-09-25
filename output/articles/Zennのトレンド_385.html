@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTMLを社内共有するサービスを、コードを読まずに作る - 1人で25万行を回す自動運用の記録 | 日本のテックニュース速報</title>
-    <meta name="description" content="これはなに？ この記事は、「コードを読まなくても大丈夫」という話ではありません。コードを読まないと決めたぼくが、何につまずき、どんな仕組みを足し、何を作りすぎて捨てたのか。その試行錯誤から残った、仕様と実装のレビューループの話です">
-    <meta name="keywords" content="本">
+    <title>Angular: プライベートフィールドの意味論再考 | 日本のテックニュース速報</title>
+    <meta name="description" content="0アップデートから、コンポーネントクラスのプライベートフィールドについてテンプレートコンパイラの振る舞いが変更された。この記事では更新内容と、それにより再考しなければならないフィールド宣言の意味論について現在の考えをまとめる">
+    <meta name="keywords" content="GitHub">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="HTMLを社内共有するサービスを、コードを読まずに作る - 1人で25万行を回す自動運用の記録">
-    <meta property="og:description" content="これはなに？ この記事は、「コードを読まなくても大丈夫」という話ではありません。コードを読まないと決めたぼくが、何につまずき、どんな仕組みを足し、何を作りすぎて捨てたのか。その試行錯誤から残った、仕様と実装のレビューループの話です">
+    <meta property="og:title" content="Angular: プライベートフィールドの意味論再考">
+    <meta property="og:description" content="0アップデートから、コンポーネントクラスのプライベートフィールドについてテンプレートコンパイラの振る舞いが変更された。この記事では更新内容と、それにより再考しなければならないフィールド宣言の意味論について現在の考えをまとめる">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_385.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HTMLを社内共有するサービスを、コードを読まずに作る - 1人で25万行を回す自動運用の記録">
-    <meta name="twitter:description" content="これはなに？ この記事は、「コードを読まなくても大丈夫」という話ではありません。コードを読まないと決めたぼくが、何につまずき、どんな仕組みを足し、何を作りすぎて捨てたのか。その試行錯誤から残った、仕様と実装のレビューループの話です">
+    <meta name="twitter:title" content="Angular: プライベートフィールドの意味論再考">
+    <meta name="twitter:description" content="0アップデートから、コンポーネントクラスのプライベートフィールドについてテンプレートコンパイラの振る舞いが変更された。この記事では更新内容と、それにより再考しなければならないフィールド宣言の意味論について現在の考えをまとめる">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "HTMLを社内共有するサービスを、コードを読まずに作る - 1人で25万行を回す自動運用の記録",
-        "description": "これはなに？ この記事は、「コードを読まなくても大丈夫」という話ではありません。コードを読まないと決めたぼくが、何につまずき、どんな仕組みを足し、何を作りすぎて捨てたのか。その試行錯誤から残った、仕様と実装のレビューループの話です",
+        "headline": "Angular: プライベートフィールドの意味論再考",
+        "description": "0アップデートから、コンポーネントクラスのプライベートフィールドについてテンプレートコンパイラの振る舞いが変更された。この記事では更新内容と、それにより再考しなければならないフィールド宣言の意味論について現在の考えをまとめる",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-07T00:05:00",
-        "dateModified": "2026-09-07T15:34:13.927065",
+        "datePublished": "2026-09-24T22:30:00",
+        "dateModified": "2026-09-25T19:53:10.120161",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_385.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_385.html",
         "articleSection": "プログラミング",
-        "keywords": ["本"]
+        "keywords": ["GitHub"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "HTMLを社内共有するサービスを、コードを読まずに作る - 1人で25万行を回す自動運用の記録",
+                "name": "Angular: プライベートフィールドの意味論再考",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_385.html"
             }
         ]
@@ -114,39 +114,40 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">HTMLを社内共有するサービスを、コードを読まずに作る - 1人で25万行を回す自動運用の記録</li>
+                <li aria-current="page">Angular: プライベートフィールドの意味論再考</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>HTMLを社内共有するサービスを、コードを読まずに作る - 1人で25万行を回す自動運用の記録</h1>
+                <h1>Angular: プライベートフィールドの意味論再考</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/coji/articles/solo-software-factory-without-reading-code" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/lacolaco/articles/angular-private-fields" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-09-07T00:05:00">
-                        公開: 2026-09-07T00:05:00
+                    <time datetime="2026-09-24T22:30:00">
+                        公開: 2026-09-24T22:30:00
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    これはなに？
-この記事は、「コードを読まなくても大丈夫」という話ではありません。コードを読まないと決めたぼくが、何につまずき、どんな仕組みを足し、何を作りすぎて捨てたのか。その試行錯誤から残った、仕様と実装のレビューループの話です。
-HTMLを社内だけで安全に共有するWebサービス「Artifact Share」を、ひとりで開発しています。TypeScriptで書かれたWebアプリケーションです。
-開発を始めて4ヶ月が経ちました。リポジトリのTypeScriptコードは25万行を超え、マージしたPRは1,144本、Issueは777件に達しています。関わっている人間は、ぼく1人。
-2...
+                    Angular v22.2.0アップデートから、コンポーネントクラスのプライベートフィールドについてテンプレートコンパイラの振る舞いが変更された。この記事では更新内容と、それにより再考しなければならないフィールド宣言の意味論について現在の考えをまとめる。
+
+ 更新内容
+Angular v22.2.0アップデートでは、コンポーネントのテンプレート内からprivate修飾子により宣言されたクラスフィールド（メンバ変数）が参照可能になった。
+https://github.com/angular/angular/pull/70188
+具体的には次のようなコードが実行可能になった。コンポーネントが...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/coji/articles/solo-software-factory-without-reading-code" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/lacolaco/articles/angular-private-fields" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,10 +160,10 @@ HTMLを社内だけで安全に共有するWebサービス「Artifact Share」�
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +224,16 @@ HTMLを社内だけで安全に共有するWebサービス「Artifact Share」�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_4235.html">
+                    <a href="気になる記になる_5537.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Microsoft、｢Windows 11｣の起動高速化に向け取り組み中 ｰ 8GB RAM搭載PC...</span>
+                        <span class="nav-title">Nothingの新型ヘッドホン「Headphone (1) Pro」の製品デザインが明らかに</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1906.html">
+                    <a href="気になる記になる_8059.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input...</span>
+                        <span class="nav-title">人気マンガ「スノウボールアース」の全巻100円セールが9月29日まで開催中 ｰ 累計100万部突破と...</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +246,53 @@ HTMLを社内だけで安全に共有するWebサービス「Artifact Share」�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_3404.html">
-                        <h3>巨大オンラインゲーム「EVE Online」。ゲームを支える240万行のPython 2.7のコードをPython 3へ...</h3>
+                    <a href="ASCII_jp__トップ_1225.html">
+                        <h3>休眠中の「A9」ファンに再起動の時が来たっ!!＝大型改良版「A列車で行こう9 PRIME LINE」発表＝線路・道路の刷...</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">宇宙を舞台にした世界最大級の大規模オンラインゲーム「EVE Online」が、ゲームを支える240万行のPythonコードをPython 3に移行すると発表しました。 We have official...</p>
+                        <p class="related-summary">アートディンクは都市開発鉄道シミュレーション「A列車で行こう9」シリーズの大幅改良版を発表しました.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_1290.html">
-                        <h3>HTMX 4.0正式リリース。内部実装がXHRからfetchに移行しStreaming HTMLが可能に、属性はデフォル...</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">0」正式版のリリースが発表されました。 very happ. HTMLに属性を追加するだけで、Webページにサーバと連動した動的なアプリケーションの機能を追加できるJavaScriptライブラリ「HT...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_4128.html">
-                        <h3>【XP祭り2026】エンジニアにコミュ力を求めるな、と言われて頷いた</h3>
+                    <a href="Zennのトレンド_8096.html">
+                        <h3>無料の技術イベントは、無料でつくられていない</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">こんにちは！QAエンジニアのAyakaです。 2026年9月5日の XP祭り2026 にプロポーザル採択いただいたので、参加してきました。私はオンラインDの13:00枠で「社内ナレッジをAIに読ませて...</p>
+                        <p class="related-summary">執筆背景 今回の執筆のきっかけは、技術イベントにおいて無料の飲食だけを目的に参加する人がいるとSNS上で話題になっていたことに始まります。 （調べてみると昔からこの話題は繰り返し出ているようですが） ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_9223.html">
-                        <h3>WebエンジニアのためのReact Native + NativeWind v5事始め — Webの常識が通用しない18...</h3>
+                    <a href="Zennのトレンド_4548.html">
+                        <h3>11年生本番データ飛ばす</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに 弊社では Web エンジニアがモバイルアプリを開発しており、Web の React + Tailwind CSS の知見をそのまま応用できるよう React Native + NativeW...</p>
+                        <p class="related-summary">はじめに 早いもので、エンジニア歴 11 年目になりました。これまでの人生で、本番データを飛ばしたことは一度もありませんでした。 それが、シルバーウィーク明けの初日に起きました。 連休明けの記憶なんて...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9259.html">
-                        <h3>Git リモートで削除されたローカルブランチの自動クリーンアップ</h3>
+                    <a href="Publickey_2423.html">
+                        <h3>Go言語で書かれた高速なIDE「Rune」、オープンソースで公開。ターミナルとコマンドプロンプト中心の開発環境、複数リモ...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">開発ツールベンダのUnstablebuildは、Go言語製のIDE「Rune」をオープンソースで公開したことを発表しました。 Runeの画面 RuneはGo言語によるネイティブアプリケーションとして提...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_4872.html">
+                        <h3>耳で聞く！Python で学ぶ マクロ経済学 入門 18</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">GitHubでPRをマージしてリモートブランチを消しても、手元のローカルブランチって地味に残り続けますよね。 git fetch -p を実行すればリモート追跡ブランチは更新されますが、手元のローカル...</p>
+                        <p class="related-summary">user: ソース動画のタイトル、そしてこの動画の内容について教えてください。 Gemini: ソース動画のタイトルおよびその詳細な内容は以下の通りです。 動画タイトル 「Pythonが暴く国の借金の...</p>
                     </a>
                 </article>
             </div>

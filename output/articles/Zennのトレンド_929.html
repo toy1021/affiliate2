@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした） | 日本のテックニュース速報</title>
-    <meta name="description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
-    <meta name="keywords" content="LLM">
+    <title>３分で読めるトランザクション設計のコツ | 日本のテックニュース速報</title>
+    <meta name="description" content="これはなに こんにちは、もりたです。 最近Software Designで連載をしています[1]。連載をしているとアホほど資料を読んでめちゃくちゃ学びがあるんですが原稿の進捗がやばすぎてZennに投稿できません[2]">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）">
-    <meta property="og:description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
+    <meta property="og:title" content="３分で読めるトランザクション設計のコツ">
+    <meta property="og:description" content="これはなに こんにちは、もりたです。 最近Software Designで連載をしています[1]。連載をしているとアホほど資料を読んでめちゃくちゃ学びがあるんですが原稿の進捗がやばすぎてZennに投稿できません[2]">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_929.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）">
-    <meta name="twitter:description" content="前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした">
+    <meta name="twitter:title" content="３分で読めるトランザクション設計のコツ">
+    <meta name="twitter:description" content="これはなに こんにちは、もりたです。 最近Software Designで連載をしています[1]。連載をしているとアホほど資料を読んでめちゃくちゃ学びがあるんですが原稿の進捗がやばすぎてZennに投稿できません[2]">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）",
-        "description": "前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。 そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした",
+        "headline": "３分で読めるトランザクション設計のコツ",
+        "description": "これはなに こんにちは、もりたです。 最近Software Designで連載をしています[1]。連載をしているとアホほど資料を読んでめちゃくちゃ学びがあるんですが原稿の進捗がやばすぎてZennに投稿できません[2]",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-14T05:16:45",
-        "dateModified": "2026-09-15T13:12:10.044509",
+        "datePublished": "2026-09-29T02:45:05",
+        "dateModified": "2026-10-01T16:55:53.398033",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_929.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_929.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["LLM"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）",
+                "name": "３分で読めるトランザクション設計のコツ",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_929.html"
             }
         ]
@@ -113,42 +113,43 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">３分で読めるトランザクション設計のコツ</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ローカルLLMにレビューさせていた話の続報（前回の構成、実は動いていませんでした）</h1>
+                <h1>３分で読めるトランザクション設計のコツ</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/k_motoki/articles/ef60bbbc0ad7ec" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-09-14T05:16:45">
-                        公開: 2026-09-14T05:16:45
+                    <span class="source">出典: <a href="https://zenn.dev/mconfjp/articles/transaction-action-order" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-09-29T02:45:05">
+                        公開: 2026-09-29T02:45:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    前回、トークンをケチってレビューをローカルLLMにやらせた話 という記事を書いたところ、思いのほか読まれました。
-そしてコメントで2人の方から設計の穴を指摘されました。確認したところ、指摘は両方とも当たっていて、しかも自分が思っていたより悪い状態でした。
-前回の記事を読んで同じ構成を組んだ方がいたら、同じ穴を踏みます。まず訂正から書きます。
+                    これはなに
+こんにちは、もりたです。
+最近Software Designで連載をしています[1]。連載をしているとアホほど資料を読んでめちゃくちゃ学びがあるんですが原稿の進捗がやばすぎてZennに投稿できません[2]。この記事はせめてもの償いとして最近知った便利情報を簡単に皆さんにお伝えします。
+テーマは「トランザクションの中に処理を書く順番」です。
+これについて、簡単な指針があるという話をします。
 
- 訂正1: 公開したModelfileは、私の環境では動いていなかった
-前回の記事の主役は、qwen2.5-coder:14b に焼いたModelfileでした。
-しかし Ollama の /api/chat は、messages に system...
+ 課題：トランザクション処理の順番がわからん
+
+トランザクション処理を書いていると、こういう場面に出会います。
+
+外部サービスとの連携があって、どこで失敗したらどうなるかを考えないとい...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/k_motoki/articles/ef60bbbc0ad7ec" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/mconfjp/articles/transaction-action-order" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,60 +158,25 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +191,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_6514.html">
+                    <a href="Zennのトレンド_4335.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">SendGridからAmazon SESに移行してコストを削減する</span>
+                        <span class="nav-title">テスト要求仕様（TRS）を書いてみたら、テスト設計が楽になった話</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6542.html">
+                    <a href="iPhone_Mania_4688.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【未経験】勉強する時間がない。それでも今の仕事の中で、ITにつながる経験はつくれる</span>
+                        <span class="nav-title">iPhone Duoのスタンバイに未発表の5画面〜カメラ映像を最大9台表示か</span>
                     </a>
                 </div>
             </div>
@@ -247,52 +213,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2937.html">
-                        <h3>「この子は誰？」「どこに住んでいる？」Meta AIの質問提案に母親が猛抗議</h3>
+                    <a href="ASCII_jp__トップ_5238.html">
+                        <h3>ゲーミングPC選び、迷ったら“売れてるやつ”を見てみよう！ Ryzen 7＋RTX 5070の白ゲーミングPC</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">MetaのAIソフトウェア「Meta AI」が、子どもの情報を含む個人情報の収集や開示につながる質問をユーザーに提案するという問題が指摘された。同社はこの問題を修正済みだという。.</p>
+                        <p class="related-summary">STORM公式サイトで売れ筋ランキング2位の「S2P-97X857」。Ryzen 7 9700XとRTX 5070、32GBメモリーを搭載し、白で統一した外観や背面配線にもこだわった、人気も納得のゲー...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9132.html">
-                        <h3>ANA、貨物ブランドを「ANA Nippon Cargo」に　SNSでは「Nipponが重複」と話題に</h3>
+                    <a href="ASCII_jp__トップ_9606.html">
+                        <h3>約1kgで、この画面！ 2.5Kタッチ＋最大120HzのDell「XPS 13」が2万円引きの18万9980円</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ANAホールディングスは9月14日、グループ内の貨物事業会社3社を統合した後の社名とブランド名を発表した。新社名は「ANA Nippon Cargo Airlines株式会社」、新ブランド名は「ANA...</p>
+                        <p class="related-summary">DellのノートPC「XPS 13 DX13260（MAX53T-GWM3SA）」がAmazonで割引対象。参考価格209,980円から10％オフの189,980円で販売中。約1kgの軽量ボディーに、...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7958.html">
-                        <h3>マリンスポーツがはかどる！ 水上ドローン「HOVERAir AQUA」</h3>
+                    <a href="ASCII_jp__トップ_6201.html">
+                        <h3>夜食の一杯から非常食まで！ 「カップヌードル」20個がAmazonで37％オフ</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
+                        <p class="related-summary">日清食品の定番カップ麺「カップヌードル レギュラー 78g×20個」が、Amazonで37％オフで販売中。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4946.html">
-                        <h3>「朝日地球会議2026」10月23日開幕--AI時代の幸福、民主主義、世論など議論</h3>
+                    <a href="ASCII_jp__トップ_6823.html">
+                        <h3>「自分じゃないくらいきれいだと思う」徳江かながクラファンで4年半ぶりの4th写真集発売！</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">朝日新聞社は、国際シンポジウム「朝日地球会議2026」を10月23日に開幕する。全体テーマは「話そう AI時代の世界と持続可能な幸せ」。AIと幸福、民主主義、世論、認知症などをテーマに、各界の有識者や...</p>
+                        <p class="related-summary">SNSの総フォロワーは約35万人。クールな顔立ちと極上のスタイルが魅力の徳江かなさんが、4th写真集「I AM“美しい幻影”」の掲載記念イベントを9月19日、神保町の書泉グランデで開催した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1287.html">
-                        <h3>アップル、「Siri AI」をClaudeやGPTに置き換え可能に？ 「iOS 27」のコードが示す新機能</h3>
+                    <a href="ASCII_jp__トップ_6311.html">
+                        <h3>[新製品]安価に簡単に、バランス不全を見える化。京都府認定製品・高齢者のフレイル評価「バランスマット」</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">アップルの「Siri AI」には、OpenAIの「ChatGPT」やAnthropicの「Claude」など、サードパーティーのモデルと深く連携する機能が組み込まれる可能性がある。.</p>
+                        <p class="related-summary">[新製品]安価に簡単に、バランス不全を見える化。京都府認定製品・高齢者のフレイル評価「バランスマット」.</p>
                     </a>
                 </article>
             </div>

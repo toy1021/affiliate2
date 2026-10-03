@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>「Googleでログイン」を押したあと、Googleはサービスにパスワードを渡していない。じゃあ何を渡しているのか？ | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 「Googleでログイン」は毎日押しているのに、押したあとに何が飛んでいるかを説明できる人は意外と少ない。この記事では、あの1クリックの裏側を、Googleのパスワードがサービスに渡らない理由から、サービスが受け取る「2種類の券」の違いまで順に整理します。.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>OIDCとSAMLを初心者向けに整理 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに AWSやWebシステムを勉強していると、 OIDC SAML SSO OAuth IdP SP といった言葉をよく目にします。 特に「OIDCとSAMLは何が違うのか」「SSOとはどう関係するのか」が分かりにくかったため、この記事ではそれぞれの役割を整理しま.">
+    <meta name="keywords" content="AWS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="「Googleでログイン」を押したあと、Googleはサービスにパスワードを渡していない。じゃあ何を渡しているのか？">
-    <meta property="og:description" content="はじめに 「Googleでログイン」は毎日押しているのに、押したあとに何が飛んでいるかを説明できる人は意外と少ない。この記事では、あの1クリックの裏側を、Googleのパスワードがサービスに渡らない理由から、サービスが受け取る「2種類の券」の違いまで順に整理します。.">
+    <meta property="og:title" content="OIDCとSAMLを初心者向けに整理">
+    <meta property="og:description" content="はじめに AWSやWebシステムを勉強していると、 OIDC SAML SSO OAuth IdP SP といった言葉をよく目にします。 特に「OIDCとSAMLは何が違うのか」「SSOとはどう関係するのか」が分かりにくかったため、この記事ではそれぞれの役割を整理しま.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7176.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="「Googleでログイン」を押したあと、Googleはサービスにパスワードを渡していない。じゃあ何を渡しているのか？">
-    <meta name="twitter:description" content="はじめに 「Googleでログイン」は毎日押しているのに、押したあとに何が飛んでいるかを説明できる人は意外と少ない。この記事では、あの1クリックの裏側を、Googleのパスワードがサービスに渡らない理由から、サービスが受け取る「2種類の券」の違いまで順に整理します。.">
+    <meta name="twitter:title" content="OIDCとSAMLを初心者向けに整理">
+    <meta name="twitter:description" content="はじめに AWSやWebシステムを勉強していると、 OIDC SAML SSO OAuth IdP SP といった言葉をよく目にします。 特に「OIDCとSAMLは何が違うのか」「SSOとはどう関係するのか」が分かりにくかったため、この記事ではそれぞれの役割を整理しま.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "「Googleでログイン」を押したあと、Googleはサービスにパスワードを渡していない。じゃあ何を渡しているのか？",
-        "description": "はじめに 「Googleでログイン」は毎日押しているのに、押したあとに何が飛んでいるかを説明できる人は意外と少ない。この記事では、あの1クリックの裏側を、Googleのパスワードがサービスに渡らない理由から、サービスが受け取る「2種類の券」の違いまで順に整理します。.",
+        "headline": "OIDCとSAMLを初心者向けに整理",
+        "description": "はじめに AWSやWebシステムを勉強していると、 OIDC SAML SSO OAuth IdP SP といった言葉をよく目にします。 特に「OIDCとSAMLは何が違うのか」「SSOとはどう関係するのか」が分かりにくかったため、この記事ではそれぞれの役割を整理しま.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-19T03:20:18",
-        "dateModified": "2026-09-20T03:43:21.488512",
+        "datePublished": "2026-10-01T23:17:11",
+        "dateModified": "2026-10-03T17:50:51.783733",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7176.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7176.html",
-        "articleSection": "Google・Android",
-        "keywords": []
+        "articleSection": "通信・ネットワーク",
+        "keywords": ["AWS"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Google・Android",
-                "item": "https://toy1021.github.io/affiliate2/#category=Google・Android"
+                "name": "通信・ネットワーク",
+                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "「Googleでログイン」を押したあと、Googleはサービスにパスワードを渡していない。じゃあ何を渡しているのか？",
+                "name": "OIDCとSAMLを初心者向けに整理",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7176.html"
             }
         ]
@@ -113,22 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=Google・Android">Google・Android</a></li>
-                <li aria-current="page">「Googleでログイン」を押したあと、Googleはサービスにパスワードを渡していない。じゃあ何を...</li>
+                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
+                <li aria-current="page">OIDCとSAMLを初心者向けに整理</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>「Googleでログイン」を押したあと、Googleはサービスにパスワードを渡していない。じゃあ何を渡しているのか？</h1>
+                <h1>OIDCとSAMLを初心者向けに整理</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/ktdatascience/items/6aec726eac024e83651b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: Google・Android</span>
-                    <time datetime="2026-09-19T03:20:18">
-                        公開: 2026-09-19T03:20:18
+                    <span class="source">出典: <a href="https://qiita.com/mshr_n17/items/bc46ca73775cd9b1c98e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: 通信・ネットワーク</span>
+                    <time datetime="2026-10-01T23:17:11">
+                        公開: 2026-10-01T23:17:11
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AWS</span>
                 </div>
             </header>
 
@@ -136,13 +139,21 @@
                 
                 <div class="article-body">
                     はじめに
-「Googleでログイン」は毎日押しているのに、押したあとに何が飛んでいるかを説明できる人は意外と少ない。この記事では、あの1クリックの裏側を、Googleのパスワードがサービスに渡らない理由から、サービスが受け取る「2種類の券」の違いまで順に整理します。
+AWSやWebシステムを勉強していると、
 
-...
+OIDC
+SAML
+SSO
+OAuth
+IdP
+SP
+
+といった言葉をよく目にします。
+特に「OIDCとSAMLは何が違うのか」「SSOとはどう関係するのか」が分かりにくかったため、この記事ではそれぞれの役割を整理しま...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/ktdatascience/items/6aec726eac024e83651b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/mshr_n17/items/bc46ca73775cd9b1c98e?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -151,9 +162,24 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AWS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>Google・Android関連のおすすめ</h3>
+                    <h3>通信・ネットワーク関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -184,16 +210,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_1003.html">
+                    <a href="気になる記になる_8875.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Claude Code が AGENTS.md を読むようになった。ただし1回目のセッションでは読ま...</span>
+                        <span class="nav-title">【Amazonマンガ毎週末セール】今週末は「青春の恋愛マンガ」がテーマ ｰ 6,000冊以上が50％...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_1426.html">
+                    <a href="気になる記になる_5007.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">なぜSMS認証は弱いと言われるのか</span>
+                        <span class="nav-title">【3日間限定セール】集英社の人気マンガ3万冊以上が半額に ｰ Kindleストアで｢集英社 秋マン!...</span>
                     </a>
                 </div>
             </div>
@@ -206,33 +232,23 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9344.html">
-                        <h3>グリー、Google Cloudの「AMD EPYC」搭載C4Dインスタンスを導入 既存開発フローを活用しコスパ25％以...</h3>
+                    <a href="ASCII_jp__トップ_9121.html">
+                        <h3>10000mAhで電池問題を豪腕解決！ 絶大バッテリー内蔵だけど9ミリを切るシャオミのスマホはどんなもんだ？</h3>
                         <div class="related-meta">
-                            <span class="category">Google・Android</span>
+                            <span class="category">通信・ネットワーク</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">AMDは、株式会社グリーが運営するスマートフォン向けゲームアプリにおける「AMD EPYC™ プロセッサ」の導入事例を公表した。.</p>
+                        <p class="related-summary">シャオミの「REDMI Note 17 Pro Max 5G」は、10000mAhという桁外れの巨大バッテリーを厚さ9mm未満のボディに凝縮した、新感覚のミドルクラス5Gスマートフォンです。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_468.html">
-                        <h3>【Amazon限定・7日間】Android 16搭載「P12」12インチ2.4K大画面タブレットが5％OFF！通常24,...</h3>
+                    <a href="iPhone_Mania_3113.html">
+                        <h3>auでiPhone Duoを予約する方法｜10月16日午後9時開始・準備しておくことと手順</h3>
                         <div class="related-meta">
-                            <span class="category">Google・Android</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">通信・ネットワーク</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">【Amazon限定・7日間】Android 16搭載「P12」12インチ2. 4K大画面タブレットが5％OFF！通常24,900円→23,655円、キーボード付き豪華セットを数量限定販売.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_6480.html">
-                        <h3>Android、パスキーをパスワードマネージャ間で転送可能に。Googleパスワードマネージャ、1Password、Bi...</h3>
-                        <div class="related-meta">
-                            <span class="category">Google・Android</span>
-                            <span class="source">Publickey</span>
-                        </div>
-                        <p class="related-summary">Googleは、Android上で利用可能なパスワードマネージャの間で、パスキーの転送を可能にしたと発表しました。 これにより、例えばGoogleパスワードマネージャに登録したパスキーを1Passwo...</p>
+                        <p class="related-summary">auのiPhone Duoは10月16日（金）午後9時に予約開始、10月23日（金）発売。au Online Shopでの予約手順、開始前に準備しておくこと、価格発表の見通しをまとめました。.</p>
                     </a>
                 </article>
             </div>

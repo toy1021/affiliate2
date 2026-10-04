@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLID 原則と型の持つ責務 | 日本のテックニュース速報</title>
-    <meta name="description" content="AI がどうにもまともなコードを生成しないので詰めていると、「SOLID 原則とか曖昧でちょっと・・・」と言われました。 その辺り諸々あるんですが、ココではその前段として型システムと責務について纏めます">
-    <meta name="keywords" content="AI,C++,本">
+    <title>実務において敵対的レビューはどの程度有効なのか | 日本のテックニュース速報</title>
+    <meta name="description" content="目次 背景 やったこと 検証結果 考察 付記：レビューと自動修正のループで指摘が収束しない問題 感想 1. 背景 AI エージェントにコードレビューをさせる手法のひとつとして、敵対的レビューが広まっています。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="SOLID 原則と型の持つ責務">
-    <meta property="og:description" content="AI がどうにもまともなコードを生成しないので詰めていると、「SOLID 原則とか曖昧でちょっと・・・」と言われました。 その辺り諸々あるんですが、ココではその前段として型システムと責務について纏めます">
+    <meta property="og:title" content="実務において敵対的レビューはどの程度有効なのか">
+    <meta property="og:description" content="目次 背景 やったこと 検証結果 考察 付記：レビューと自動修正のループで指摘が収束しない問題 感想 1. 背景 AI エージェントにコードレビューをさせる手法のひとつとして、敵対的レビューが広まっています。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4920.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SOLID 原則と型の持つ責務">
-    <meta name="twitter:description" content="AI がどうにもまともなコードを生成しないので詰めていると、「SOLID 原則とか曖昧でちょっと・・・」と言われました。 その辺り諸々あるんですが、ココではその前段として型システムと責務について纏めます">
+    <meta name="twitter:title" content="実務において敵対的レビューはどの程度有効なのか">
+    <meta name="twitter:description" content="目次 背景 やったこと 検証結果 考察 付記：レビューと自動修正のループで指摘が収束しない問題 感想 1. 背景 AI エージェントにコードレビューをさせる手法のひとつとして、敵対的レビューが広まっています。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "SOLID 原則と型の持つ責務",
-        "description": "AI がどうにもまともなコードを生成しないので詰めていると、「SOLID 原則とか曖昧でちょっと・・・」と言われました。 その辺り諸々あるんですが、ココではその前段として型システムと責務について纏めます",
+        "headline": "実務において敵対的レビューはどの程度有効なのか",
+        "description": "目次 背景 やったこと 検証結果 考察 付記：レビューと自動修正のループで指摘が収束しない問題 感想 1. 背景 AI エージェントにコードレビューをさせる手法のひとつとして、敵対的レビューが広まっています。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-27T11:55:18",
-        "dateModified": "2026-09-28T10:49:19.862512",
+        "datePublished": "2026-10-01T10:48:47",
+        "dateModified": "2026-10-04T18:01:22.513102",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4920.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4920.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","C++","本"]
+        "keywords": ["AI"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "SOLID 原則と型の持つ責務",
+                "name": "実務において敵対的レビューはどの程度有効なのか",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_4920.html"
             }
         ]
@@ -114,45 +114,47 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">SOLID 原則と型の持つ責務</li>
+                <li aria-current="page">実務において敵対的レビューはどの程度有効なのか</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>SOLID 原則と型の持つ責務</h1>
+                <h1>実務において敵対的レビューはどの程度有効なのか</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/sator_imaging/articles/834240491191ec" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/edash_tech_blog/articles/4577f7d4780bef" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-09-27T11:55:18">
-                        公開: 2026-09-27T11:55:18
+                    <time datetime="2026-10-01T10:48:47">
+                        公開: 2026-10-01T10:48:47
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">C++</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    AI がどうにもまともなコードを生成しないので詰めていると、「SOLID 原則とか曖昧でちょっと・・・」と言われました。
-その辺り諸々あるんですが、ココではその前段として型システムと責務について纏めます。
+                    目次
 
-以下断定的に書いていますが、そうとは言い切れない例外や解釈を丸め過ぎている部分については本投稿では触れません。
+背景
+やったこと
+検証結果
+考察
+付記：レビューと自動修正のループで指摘が収束しない問題
+感想
 
 
- C/C++
-C にはそもそもクラスの概念がない。構造体だけで継承できない。（ポインタを介したアップキャストが出来ます @ AI 談）
-C++ にはクラスと構造体があるが、違いはアクセス／継承のデフォルトが private か public かだけ。どちらもローカル変数...
+ 1. 背景
+AI エージェントにコードレビューをさせる手法のひとつとして、敵対的レビューが広まっています。差分を通常どおりレビューして問題を探すだけでなく、「この変更で誤った結果やエラーを起こす入力や状況は何か」を探す役割のエージェントを別に立て、両者の指摘を実コードで確かめてから確定させる方式です。筆者のチームでも導入しています。
+一方で、実務で回すと負担が目立ちます。まず時間と token のコストが高いです。複数のエージェントを並列に実行し、各エージェントの指摘をさらに...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/sator_imaging/articles/834240491191ec" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/edash_tech_blog/articles/4577f7d4780bef" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -175,20 +177,10 @@ C++ にはクラスと構造体があるが、違いはアクセス／継承の�
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=C%2B%2B&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="C++ - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">C++ - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでC++に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -229,16 +221,16 @@ C++ にはクラスと構造体があるが、違いはアクセス／継承の�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_2754.html">
+                    <a href="Zennのトレンド_8162.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【登壇レポート】「JAWS-UG 栃木 オフライン # 10 -秋の登壇祭り-」 で1人アドミンして...</span>
+                        <span class="nav-title">オブザーバビリティのAIエージェントをどう評価するか</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_6150.html">
+                    <a href="Qiita_-_人気の記事_9627.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iOS27.2ベータの内部コードからiPhoneの盗難防止機能が開発中であることが判明</span>
+                        <span class="nav-title">新しい日本語推敲スキル「yomiyasu」がバズっていたので、Claudeで日本語推敲スキル3つを比...</span>
                     </a>
                 </div>
             </div>
@@ -251,51 +243,53 @@ C++ にはクラスと構造体があるが、違いはアクセス／継承の�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_1644.html">
-                        <h3>AIキャラチャット 依存どう防ぐ</h3>
+                    <a href="Publickey_3640.html">
+                        <h3>Supabase、1サーバあたり数百万ものSQLiteをホストする「Turso」買収を発表。AIエージェントで加速するD...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                            <span class="source">Publickey</span>
                         </div>
+                        <p class="related-summary">PostgreSQLをベースにしたデータベースサービス「Supabase」などを提供しているSupabaseは、SQLiteをベースとしたデータベースサービスを提供する「Turso」を買収したことを発...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_6371.html">
-                        <h3>コンビニ スイーツ開発にAI活用</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
-                        </div>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_1450.html">
-                        <h3>「VAIO T」に勝色特別仕様！ 最上位Core Ultra X7が選べて発売記念3万3000円引き</h3>
+                    <a href="ASCII_jp__トップ_2321.html">
+                        <h3>【2026秋アニメ】『目覚めたら最強装備と宇宙船持ちだったので、一戸建て目指して傭兵として自由に生きたい』に『どうも、好...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">VAIOストアでは、新型「VAIO T」の発売を記念した期間限定キャンペーンを実施中。通常モデルに加え、「勝色特別仕様」も対象となり、本体価格から33,000円引きで購入できる。キャンペーン期間は12...</p>
+                        <p class="related-summary">秋アニメ特集第5回も話題作が続々。『目覚めたら最強装備と宇宙船持ちだったので、一戸建て目指して傭兵として自由に生きたい』『どうも、好きな人に惚れ薬を依頼された魔女です。』『TANK CHAIR-戦車椅...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2981.html">
-                        <h3>約47gの軽さに驚く人が多数！ ASUSの有線ゲーミングマウス「TUF Gaming M4 Air」が28％オフ！</h3>
+                    <a href="iPhone_Mania_7384.html">
+                        <h3>なぜiOS27のSiriは「人間のフリ」をしないのか？AIの擬人化競争に潜む罠とAppleの勝機</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">jpにて、ASUSのゲーミングマウス「TUF Gaming M4 Air」が販売中だ。参考価格は7051円だが、執筆時点では28％オフの5096円で購入できる（9月28日時点）。.</p>
+                        <p class="related-summary">2では、待望の日本語対応（ベータ版）が予定されています。 OpenAIのChatGPTやGoogle […]. iOS27で大きく進化を遂げた「Siri AI」。米国英語でのリリースにつづき、10月に...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8308.html">
-                        <h3>AI を使った攻撃は、結局 AI でしか守れないのか？ Google・Anthropic などから読み取る 5 つの変化...</h3>
+                    <a href="Qiita_-_人気の記事_8100.html">
+                        <h3>ゴールシークプロンプトとは ― AIに質問させて成果物を作る方法を、テンプレートと実例で解説</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">「AI を使ったサイバー攻撃が急増」という見出しや、「攻撃の速さは人の能力を超えた」というセキュリティ製品の発表を見ると、守る側も AI を入れなければ間に合わないのでは、と考えるのは自然です。 ただ...</p>
+                        <p class="related-summary">はじめに AIに仕事を頼むとき、指示を全部書こうとして手が止まることはないでしょうか。書き漏らした条件は、AIが推測で埋めます。その推測が、出力のズレとして返ってきます。 ゴールシークプロンプトは、こ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="iPhone_Mania_3635.html">
+                        <h3>高市首相、Appleに「生成AIの自殺防止・安全対策」を要請〜クック前CEOらも連携に前向き</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">iPhone Mania</span>
+                        </div>
+                        <p class="related-summary">高市早苗首相は2026年10月2日、自身のX（旧Twitter）を通じて、米Appleに対してSiri AIやApple Intelligenceのようなデバイス搭載の生成AIにおける「自殺防止機能」...</p>
                     </a>
                 </article>
             </div>

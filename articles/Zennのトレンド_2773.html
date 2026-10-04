@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kqueueを使ったwebサーバーを作ってみる | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Webサーバーの裏では、epollのような仕組みが動いているという話を聞きました。 Linux系だとepollですが、macOSはkqueueです。 そこで、kqueueを使ったWebサーバーを作ってみることにしました。 準備 今回はRustで作ります">
-    <meta name="keywords" content="Mac,macOS">
+    <title>テスト要求仕様（TRS）を書いてみたら、テスト設計が楽になった話 | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは。e-dashでQAエンジニアをしているuedaです。 みなさんはテストをするにあたって、どんなドキュメントを用意していますか。 e-dash の QA チームでは、テストケースの前に テスト設計書（Test Design） を用意します">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="kqueueを使ったwebサーバーを作ってみる">
-    <meta property="og:description" content="はじめに Webサーバーの裏では、epollのような仕組みが動いているという話を聞きました。 Linux系だとepollですが、macOSはkqueueです。 そこで、kqueueを使ったWebサーバーを作ってみることにしました。 準備 今回はRustで作ります">
+    <meta property="og:title" content="テスト要求仕様（TRS）を書いてみたら、テスト設計が楽になった話">
+    <meta property="og:description" content="こんにちは。e-dashでQAエンジニアをしているuedaです。 みなさんはテストをするにあたって、どんなドキュメントを用意していますか。 e-dash の QA チームでは、テストケースの前に テスト設計書（Test Design） を用意します">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2773.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="kqueueを使ったwebサーバーを作ってみる">
-    <meta name="twitter:description" content="はじめに Webサーバーの裏では、epollのような仕組みが動いているという話を聞きました。 Linux系だとepollですが、macOSはkqueueです。 そこで、kqueueを使ったWebサーバーを作ってみることにしました。 準備 今回はRustで作ります">
+    <meta name="twitter:title" content="テスト要求仕様（TRS）を書いてみたら、テスト設計が楽になった話">
+    <meta name="twitter:description" content="こんにちは。e-dashでQAエンジニアをしているuedaです。 みなさんはテストをするにあたって、どんなドキュメントを用意していますか。 e-dash の QA チームでは、テストケースの前に テスト設計書（Test Design） を用意します">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "kqueueを使ったwebサーバーを作ってみる",
-        "description": "はじめに Webサーバーの裏では、epollのような仕組みが動いているという話を聞きました。 Linux系だとepollですが、macOSはkqueueです。 そこで、kqueueを使ったWebサーバーを作ってみることにしました。 準備 今回はRustで作ります",
+        "headline": "テスト要求仕様（TRS）を書いてみたら、テスト設計が楽になった話",
+        "description": "こんにちは。e-dashでQAエンジニアをしているuedaです。 みなさんはテストをするにあたって、どんなドキュメントを用意していますか。 e-dash の QA チームでは、テストケースの前に テスト設計書（Test Design） を用意します",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-24T22:37:37",
-        "dateModified": "2026-08-26T19:49:19.045841",
+        "datePublished": "2026-09-29T02:40:05",
+        "dateModified": "2026-10-04T00:24:14.799215",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2773.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2773.html",
-        "articleSection": "Apple製品",
-        "keywords": ["Mac","macOS"]
+        "articleSection": "プログラミング",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Apple製品",
-                "item": "https://toy1021.github.io/affiliate2/#category=Apple製品"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "kqueueを使ったwebサーバーを作ってみる",
+                "name": "テスト要求仕様（TRS）を書いてみたら、テスト設計が楽になった話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2773.html"
             }
         ]
@@ -113,47 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=Apple製品">Apple製品</a></li>
-                <li aria-current="page">kqueueを使ったwebサーバーを作ってみる</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">テスト要求仕様（TRS）を書いてみたら、テスト設計が楽になった話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>kqueueを使ったwebサーバーを作ってみる</h1>
+                <h1>テスト要求仕様（TRS）を書いてみたら、テスト設計が楽になった話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/chikina/articles/cad667e78ad5d7" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: Apple製品</span>
-                    <time datetime="2026-08-24T22:37:37">
-                        公開: 2026-08-24T22:37:37
+                    <span class="source">出典: <a href="https://zenn.dev/edash_tech_blog/articles/0d49bd338b64f0" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-09-29T02:40:05">
+                        公開: 2026-09-29T02:40:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">Mac</span>
-                    <span class="tag">macOS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Webサーバーの裏では、epollのような仕組みが動いているという話を聞きました。
-Linux系だとepollですが、macOSはkqueueです。
-そこで、kqueueを使ったWebサーバーを作ってみることにしました。
+                    こんにちは。e-dashでQAエンジニアをしているuedaです。
+みなさんはテストをするにあたって、どんなドキュメントを用意していますか。
+e-dash の QA チームでは、テストケースの前に テスト設計書（Test Design） を用意します。
+直近では、そのさらに前に テスト要求仕様（Test Requirement Spec、以下 TRS） を挟んでいます。テスト対象がどう動くべきかを確定させ、その確認に使う因子と水準まで決めておく文書です。
+これでテスト設計が、想像していたよりずっと楽になりました。何がどう楽になったのかを書きます。
 
- 準備
-今回はRustで作ります。
-Tokioやmioは使わず、外部クレートはシステムコールを呼ぶためのlibcだけ使います。
-Rustのコードを最低限書いたことがある人を想定し、fdやFutureなどについては必要な分だけ説明します。
-fdとI/O
-OSが開いたファイルやソケットをプロセスから参照するときは、fd（file descriptor） とい...
+ 1. これまでどうやってテスト設計をし...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/chikina/articles/cad667e78ad5d7" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/edash_tech_blog/articles/0d49bd338b64f0" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -166,30 +158,20 @@ OSが開いたファイルやソケットをプロセスから参照するとき
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Mac - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=macOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="macOS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">macOS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでmacOSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">iPhone - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -199,23 +181,23 @@ OSが開いたファイルやソケットをプロセスから参照するとき
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>Apple製品関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=iPhone&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iPhone - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">iPhone - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiPhoneに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=MacBook&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="MacBook - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">MacBook - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでMacBookに関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -230,16 +212,16 @@ OSが開いたファイルやソケットをプロセスから参照するとき
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5340.html">
+                    <a href="Zennのトレンド_4109.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AIは回せば回すほど凄いのか ―「常時稼働」という設計の敗北</span>
+                        <span class="nav-title">AI開発時代だからこそ、テストの役割を見つめ直す</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_8888.html">
+                    <a href="Zennのトレンド_92.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Bitgetの異常価格で1800万損したが、fableと共闘して取り戻せた話</span>
+                        <span class="nav-title">３分で読めるトランザクション設計のコツ</span>
                     </a>
                 </div>
             </div>
@@ -252,53 +234,53 @@ OSが開いたファイルやソケットをプロセスから参照するとき
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3843.html">
-                        <h3>盗撮を防ぐための「スマートグラス検知アプリ」、iPhone向けに登場</h3>
+                    <a href="Qiita_-_人気の記事_5436.html">
+                        <h3>技術だけでは足りない。フリーランスエンジニアがプロジェクト進行で大切にしている「お客様とのコミュニケーション」</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">プライバシーをめぐる懸念が高まる中、近くにあるスマートグラスを検知する「Zuckoff」などのアプリが登場している。.</p>
+                        <p class="related-summary">技術だけでは足りない。フリーランスエンジニアがプロジェクト進行で大切にしている「お客様とのコミュニケーション」 はじめまして。 普段はWebシステム、業務システム、AI関連の開発などを中心に活動してい...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4363.html">
-                        <h3>マイナポータルのパスポート申請画面が刷新--子どもの事前準備不要に</h3>
+                    <a href="Qiita_-_人気の記事_7494.html">
+                        <h3>個人開発で意識していること　ペルソナ設定</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">デジタル庁は8月25日、マイナポータルのパスポート申請画面を刷新した。iPhoneに搭載したマイナンバーカードで本人確認ができるようになったほか、子どものパスポートを親が申請する際に必要だった事前準備...</p>
+                        <p class="related-summary">はじめに 個人開発を数件行い、意識していることを記載します。 意識していること ペルソナは超具体的にする みなさんは、個人開発するさい、どのようにペルソナを設定していますか。 たとえば、 20代、女性...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_781.html">
-                        <h3>アップル、M6／M5 Pro搭載の新「Mac mini」発表--AI性能4倍　14万9800円〜で9月22日発売</h3>
+                    <a href="Qiita_-_人気の記事_6656.html">
+                        <h3>非エンジニアの私が、社内エンジニアと業務効率化ツールを作ってみた件</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Appleは8月25日、新チップ「M6」と「M5 Pro」を搭載した新しい「Mac mini」を発表した。同日から予約注文を受け付け、9月22日に発売する。価格はM6モデルが14万9800円（税込）か...</p>
+                        <p class="related-summary">【はじめに】 初めまして！ 株式会社ネクスウェイの医薬情報事業部で企画職をしている、@ayanonnです。 今回技術広報プロジェクトに入り、エンジニアの方々に囲まれて私の業務の効率化ツールを作成するこ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3873.html">
-                        <h3>アップル、M5 Ultra搭載「Mac Studio」発表--RAMは最大512GB　上位構成はクルマ並み価格に</h3>
+                    <a href="Qiita_-_人気の記事_7818.html">
+                        <h3>GitHub Copilot SDK のランタイムとエージェントループについて</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Appleは8月25日、M5 MaxとM5 Ultraを搭載した新しい「Mac Studio」を発表した。同日から予約注文を受け付け、9月22日に発売する。価格はM5 Max搭載モデルが41万9800...</p>
+                        <p class="related-summary">これは、『Let&#39;s Learn GitHub Copilot SDK (English)』(2026/09/25) の配信アーカイブを見ながら、 GitHub Copilot SDK (自分のアプリ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4690.html">
-                        <h3>アップル、初の2nmプロセス「M6」チップ発表　4ダイ構成の「M5 Ultra」も登場</h3>
+                    <a href="気になる記になる_3813.html">
+                        <h3>X、有料プランを再編か ｰ X・Grok・Cursor・Grok Botを全てカバーした｢ワンサブスクリプション｣を準備...</h3>
                         <div class="related-meta">
-                            <span class="category">Apple製品</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">Appleは8月25日、新しいMacに向けたチップ「M6」と「M5 Ultra」を発表した。M6は同日発表の新しい「Mac mini」に、M5 Ultraは新しい「Mac Studio」に搭載する。.</p>
+                        <p class="related-summary">現在、Xの有料プランは「ベーシック」「プレミアム」「プレミアムプラス」の3種類ですが、4種類へと再編される可能性が浮上しました。 これはリバースエンジニアのNima Owji氏が明らかにしたもので、X...</p>
                     </a>
                 </article>
             </div>

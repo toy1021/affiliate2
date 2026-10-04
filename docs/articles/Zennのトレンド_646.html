@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ネットワークエンジニアのためのデータ表現詳解 | 日本のテックニュース速報</title>
-    <meta name="description" content="📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます">
-    <meta name="keywords" content="Python,本">
+    <title>Cloudflare の CLI を wrangler から cf に移行する | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Cloudflare から次世代の統合 CLI ツール cf（現在 v1. 0-beta）が登場しました。 従来の wrangler（wrangler. toml）から、TypeScript ベースの型安全な設定ファイル cloudflare. ts への移行が推奨されています">
+    <meta name="keywords" content="React,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ネットワークエンジニアのためのデータ表現詳解">
-    <meta property="og:description" content="📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます">
+    <meta property="og:title" content="Cloudflare の CLI を wrangler から cf に移行する">
+    <meta property="og:description" content="はじめに Cloudflare から次世代の統合 CLI ツール cf（現在 v1. 0-beta）が登場しました。 従来の wrangler（wrangler. toml）から、TypeScript ベースの型安全な設定ファイル cloudflare. ts への移行が推奨されています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_646.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ネットワークエンジニアのためのデータ表現詳解">
-    <meta name="twitter:description" content="📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます">
+    <meta name="twitter:title" content="Cloudflare の CLI を wrangler から cf に移行する">
+    <meta name="twitter:description" content="はじめに Cloudflare から次世代の統合 CLI ツール cf（現在 v1. 0-beta）が登場しました。 従来の wrangler（wrangler. toml）から、TypeScript ベースの型安全な設定ファイル cloudflare. ts への移行が推奨されています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_646.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="4">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ネットワークエンジニアのためのデータ表現詳解",
-        "description": "📢 【連載に関するお知らせ】 本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。 💡 【前作との関係について】 本書は単独でお読みいただけます",
+        "headline": "Cloudflare の CLI を wrangler から cf に移行する",
+        "description": "はじめに Cloudflare から次世代の統合 CLI ツール cf（現在 v1. 0-beta）が登場しました。 従来の wrangler（wrangler. toml）から、TypeScript ベースの型安全な設定ファイル cloudflare. ts への移行が推奨されています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-16T22:37:14",
-        "dateModified": "2026-08-20T20:29:17.638114",
+        "datePublished": "2026-09-29T04:43:50",
+        "dateModified": "2026-10-04T00:24:14.798906",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_646.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_646.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Python","本"]
+        "articleSection": "その他",
+        "keywords": ["React","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "その他",
+                "item": "https://toy1021.github.io/affiliate2/#category=その他"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ネットワークエンジニアのためのデータ表現詳解",
+                "name": "Cloudflare の CLI を wrangler から cf に移行する",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_646.html"
             }
         ]
@@ -113,25 +113,25 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">ネットワークエンジニアのためのデータ表現詳解</li>
+                <li><a href="../#category=その他">その他</a></li>
+                <li aria-current="page">Cloudflare の CLI を wrangler から cf に移行する</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ネットワークエンジニアのためのデータ表現詳解</h1>
+                <h1>Cloudflare の CLI を wrangler から cf に移行する</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/moko_nw/books/au_dataex_01" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-08-16T22:37:14">
-                        公開: 2026-08-16T22:37:14
+                    <span class="source">出典: <a href="https://zenn.dev/sora_kumo/articles/cloudflare-to-cf" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: その他</span>
+                    <time datetime="2026-09-29T04:43:50">
+                        公開: 2026-09-29T04:43:50
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約4分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Python</span>
+                    <span class="tag">React</span>
                     <span class="tag">本</span>
                 </div>
             </header>
@@ -139,44 +139,15 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    📢 【連載に関するお知らせ】
-  本書は全24記事の連載作品です。目安として毎週月曜の朝および金曜の夕方に1記事ずつ更新・追加公開していく予定です（※著者の本業の都合により、スケジュールは前後する場合があります）。
-  
-  💡 【前作との関係について】
-  本書は単独でお読みいただけます。前作『ネットワークエンジニアのためのPython基礎』の読了は本書を読むための前提条件ではありません。Pythonの基礎から勉強したい方には前作が参考になりますので、必要に応じてご活用ください。
-  
-  🚀 ネットワークエンジニアのためのデータ表現詳解 — Pythonで操るインフラデータ完全攻略
-  
-  ネットワーク自動化の成否を分ける「データ表現」の扱いを、6つのフォーマット×Pythonで体系的にマスターする実践ロードマップ。
-    
-  📚 【本書で学べること（カリキュラム）】
-  
-  ✔️ 導入（第1回）：なぜ「6つのデータ表現」を極めるべきなのか？  
-  ✔️ Part 1: TXT（第2〜3回） —非構造化テキスト（CLIログ）からの正規表現抽出
-  ✔️ Part 2: CSV（第4〜5回） — CSVパラメータシートからのコンフィグ自動生成
-  ✔️ Part 3: XML（第6〜10回） — 階層構造を持つXMLツリーのパースと構築
-  ✔️ Part 4: JSON（第11〜15回） — NW自動化で必須となるJSONの相互変換・ハンドリング
-  ✔️ Part 5: YAML（第16〜20回） — YAMLの応用操作（アンカー・エイリアス・マージキー）  
-  ✔️ Part 6: TOML（第21〜22回） — モダンなTOML設定ファイルの安全な読み書き  
-  ✔️ Part 7: 各フォーマットの比較と実務での使い分け（第23〜24回）
-  
-  🎯 【こんな人におすすめ】
-  
-  ✔️ Pythonの基本構文（変数・for/if・関数定義）は理解しており、ネットワーク実務の自動化・効率化を目指すインフラエンジニア
-  レガシー機器のCLI操作から、モダンなREST API連携・Ansible運用を見据えた、データ処理の基盤スキルを一気通貫で身につけたい方。
-   
-  ✔️ REST APIやNETCONFとの連携に挑戦したいが、JSONやXMLの扱いに不安がある方
-  データフォーマットの基礎から応用まで段階的に学び、自信を持ってAPIドキュメントを読み解けるようになりたい方。
-  
-  📖 【販売・公開に関するご案内】
-  
-  本書は第1回から第3回まで無料で公開しており、第4回以降が基本的に有料となります。（※各パートの導入など、一部の章は例外的に無料公開とする場合があります）
-
-  ご購入前に著者の執筆スタイルやコンテンツの品質を確認されたい方は、完全無料公開している前作『ネットワークエンジニアのためのPython基礎』をご参照いただければ幸いです。
+                    はじめに
+Cloudflare から次世代の統合 CLI ツール cf（現在 v1.0.0-beta）が登場しました。
+従来の wrangler（wrangler.json / wrangler.jsonc / wrangler.toml）から、TypeScript ベースの型安全な設定ファイル cloudflare.config.ts への移行が推奨されています。
+公式には cf migrate という移行コマンドが用意されていますが、実行するだけでそのまま本番稼働できるわけではなく、いくつかの設定調整や実運用上のハマりどころが存在します。
+この記事では、React Router（...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/moko_nw/books/au_dataex_01" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/sora_kumo/articles/cloudflare-to-cf" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -189,10 +160,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Python - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
+                                    <div class="product-title">React - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -208,37 +179,27 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>その他関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -253,16 +214,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_7840.html">
+                    <a href="Zennのトレンド_8699.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Codexを効率よく使う方法（ChatGPT + GitHub）</span>
+                        <span class="nav-title">Claude Code / Codexで「私のlimit、減りすぎ…？」と思ったときに見る記事</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_5624.html">
+                    <a href="Zennのトレンド_9689.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhoneのアラームが自動で止まる！ショートカットを使った自動停止のやり方</span>
+                        <span class="nav-title">AI 駆動開発で「設計」はどこに書くのか ― 振る舞いをテストで検証できる「仕様」にしてみる</span>
                     </a>
                 </div>
             </div>
@@ -275,53 +236,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8043.html">
-                        <h3>ヤマハ発動機、保育園の「お散歩カー」を電動化、坂道でも「今までの10%くらいの力」で押せる</h3>
+                    <a href="ASCII_jp__トップ_6644.html">
+                        <h3>【2026秋アニメまとめ】この秋も話題作多すぎ！ 90作品以上の秋アニメを全チェック！</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ヤマハ発動機は8月18日、保育園で使う「お散歩カー」に電動アシストを組み込んだ新製品「てくてくスワニー」を発表した。グループ会社のヤマハモーターエンジニアリング（YEC）が、ベビーカーの老舗である五十...</p>
+                        <p class="related-summary">この秋も話題作多すぎでどれも見逃せない！ 今クールはなんと90本以上の作品を紹介予定です！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_2780.html">
-                        <h3>JAXA、火星衛星探査機「MMX」を10月20日打ち上げ--フォボスの砂を持ち帰る世界初ミッション</h3>
+                    <a href="ASCII_jp__トップ_5000.html">
+                        <h3>【決定版・大和統治の軌跡ベスト5】豊臣秀長が大和に残した国づくり施策！ 「秀長の国」「和を以て、大和をなす」の感動を聖地...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">宇宙航空研究開発機構（JAXA）は8月20日、火星衛星探査機「MMX」をH3ロケット10号機で10月20日に打ち上げると発表した。.</p>
+                        <p class="related-summary">政治、経済、インフラ、そして現代のSNS映えが交差する「メタ観光」の視点で、秀長の行政的施策が生んだ大和のスポットベスト5をお届けする。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3551.html">
-                        <h3>最近話題の「AI時代の開発者5つのアーキタイプ」について考える</h3>
+                    <a href="ASCII_jp__トップ_4640.html">
+                        <h3>最新モジュール搭載の高コスパゲーミングマウス、カーボンファイバー複合材の模様がカッコイイんすよ！：PCワンズ</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">大阪・日本橋のPCパーツショップ「PCワンズ」を取材しました。今回、店舗スタッフの松山和也さんがオススメする製品は、Akkoのワイヤレスゲーミングマウス「Echo TAN8 Master Blue」で...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7923.html">
+                        <h3>Rust 1.99が来たので、実務で使えそうな変更と気をつけたいところを拾ってみる</h3>
+                        <div class="related-meta">
+                            <span class="category">その他</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">AI時代の5つの開発者アーキタイプとは？ 最近、このような話を聞きました。 エンジニアの分類は、これまでのバックエンド、フロントエンドといった区分ではなく、プロトタイパーを含む5つのアーキタイプで捉え...</p>
+                        <p class="related-summary">0 が2026年10月1日にリリースされました。 今回は新文法ドーン！みたいな派手なアップデートではありません。 ただ、中身を見ると、 FFI raw pointer メモリ所有権 unsafe ファ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Publickey_8817.html">
-                        <h3>Pythonライクな新言語「Mojo」がオープンソースで公開、コンパイラやツールチェーンなど。Windows版の開発も表...</h3>
+                    <a href="ASCII_jp__トップ_6848.html">
+                        <h3>『猫とドラゴン』7.5周年記念キャンペーンを10月3日(土)より実施！</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Publickey</span>
+                            <span class="category">その他</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Pythonライクな新言語「Mojo」の開発元であるModular社は、Mojoをオープンソースとして公開したことを、同社主催のイベント「ModCon 2026」で発表しました。 具体的にはMojoの...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_2715.html">
-                        <h3>NGワードリストに「死ね」が入っていなかったので自分で作った</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">! 記事の性質上、罵倒語や差別語や下ネタがそのまま出てきます。苦手な方はブラウザバック推奨です。 ちなみに書き上がったこの記事を自作のフィルタにかけたら、30語・31箇所が引っかかりました。ambig...</p>
+                        <p class="related-summary">5周年記念キャンペーンを10月3日(土)より実施！.</p>
                     </a>
                 </article>
             </div>

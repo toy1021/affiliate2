@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>メモリ管理の基本と、Railsで省メモリに書くための実装Tips | 日本のテックニュース速報</title>
-    <meta name="description" content="お疲れ様です！ 皆さんは普段パフォーマンスを意識してコードを書いていますか？ エンジニアなりたての頃は意識していなかったのですが、いろいろな経験を通して学ぶことができました！ 今まで言語化してこなかったので自分の中で整理しつつ、メモリ管理について簡潔にまとめてみました！.">
-    <meta name="keywords" content="AI,本">
+    <title>AI時代の手抜きは「アウトプット出しすぎ」らしいので考えてみた件 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに どうも。鳩胸になりたい文鳥です。 AI時代の手抜きは「アウトプット出しすぎ」らしい 先日のポストで流れてきた動画が気になりました。 ShopifyのTobi Lütke氏が、ポッドキャストでこんな感じのことを言っています。 昔の手抜き → アウトプット.">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="メモリ管理の基本と、Railsで省メモリに書くための実装Tips">
-    <meta property="og:description" content="お疲れ様です！ 皆さんは普段パフォーマンスを意識してコードを書いていますか？ エンジニアなりたての頃は意識していなかったのですが、いろいろな経験を通して学ぶことができました！ 今まで言語化してこなかったので自分の中で整理しつつ、メモリ管理について簡潔にまとめてみました！.">
+    <meta property="og:title" content="AI時代の手抜きは「アウトプット出しすぎ」らしいので考えてみた件">
+    <meta property="og:description" content="はじめに どうも。鳩胸になりたい文鳥です。 AI時代の手抜きは「アウトプット出しすぎ」らしい 先日のポストで流れてきた動画が気になりました。 ShopifyのTobi Lütke氏が、ポッドキャストでこんな感じのことを言っています。 昔の手抜き → アウトプット.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_73.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="メモリ管理の基本と、Railsで省メモリに書くための実装Tips">
-    <meta name="twitter:description" content="お疲れ様です！ 皆さんは普段パフォーマンスを意識してコードを書いていますか？ エンジニアなりたての頃は意識していなかったのですが、いろいろな経験を通して学ぶことができました！ 今まで言語化してこなかったので自分の中で整理しつつ、メモリ管理について簡潔にまとめてみました！.">
+    <meta name="twitter:title" content="AI時代の手抜きは「アウトプット出しすぎ」らしいので考えてみた件">
+    <meta name="twitter:description" content="はじめに どうも。鳩胸になりたい文鳥です。 AI時代の手抜きは「アウトプット出しすぎ」らしい 先日のポストで流れてきた動画が気になりました。 ShopifyのTobi Lütke氏が、ポッドキャストでこんな感じのことを言っています。 昔の手抜き → アウトプット.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "メモリ管理の基本と、Railsで省メモリに書くための実装Tips",
-        "description": "お疲れ様です！ 皆さんは普段パフォーマンスを意識してコードを書いていますか？ エンジニアなりたての頃は意識していなかったのですが、いろいろな経験を通して学ぶことができました！ 今まで言語化してこなかったので自分の中で整理しつつ、メモリ管理について簡潔にまとめてみました！.",
+        "headline": "AI時代の手抜きは「アウトプット出しすぎ」らしいので考えてみた件",
+        "description": "はじめに どうも。鳩胸になりたい文鳥です。 AI時代の手抜きは「アウトプット出しすぎ」らしい 先日のポストで流れてきた動画が気になりました。 ShopifyのTobi Lütke氏が、ポッドキャストでこんな感じのことを言っています。 昔の手抜き → アウトプット.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-18T06:30:18",
-        "dateModified": "2026-06-19T21:13:40.067374",
+        "datePublished": "2026-10-05T14:10:29",
+        "dateModified": "2026-10-06T22:25:32.250719",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_73.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_73.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","本"]
+        "keywords": ["AI"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "メモリ管理の基本と、Railsで省メモリに書くための実装Tips",
+                "name": "AI時代の手抜きは「アウトプット出しすぎ」らしいので考えてみた件",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_73.html"
             }
         ]
@@ -114,40 +114,43 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">メモリ管理の基本と、Railsで省メモリに書くための実装Tips</li>
+                <li aria-current="page">AI時代の手抜きは「アウトプット出しすぎ」らしいので考えてみた件</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>メモリ管理の基本と、Railsで省メモリに書くための実装Tips</h1>
+                <h1>AI時代の手抜きは「アウトプット出しすぎ」らしいので考えてみた件</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/akachiryo/items/30c076850c90e50da118?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/morry_48/items/c5c388153c7506109c69?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-18T06:30:18">
-                        公開: 2026-06-18T06:30:18
+                    <time datetime="2026-10-05T14:10:29">
+                        公開: 2026-10-05T14:10:29
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    お疲れ様です！
-皆さんは普段パフォーマンスを意識してコードを書いていますか？ 
-エンジニアなりたての頃は意識していなかったのですが、いろいろな経験を通して学ぶことができました！
-今まで言語化してこなかったので自分の中で整理しつつ、メモリ管理について簡潔にまとめてみました！
-...
+                    はじめに
+
+どうも。鳩胸になりたい文鳥です。
+
+AI時代の手抜きは「アウトプット出しすぎ」らしい
+先日のポストで流れてきた動画が気になりました。
+
+ShopifyのTobi Lütke氏が、ポッドキャストでこんな感じのことを言っています。
+昔の手抜き → アウトプット...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/akachiryo/items/30c076850c90e50da118?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/morry_48/items/c5c388153c7506109c69?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -174,16 +177,6 @@
                                 <div class="product-info">
                                     <div class="product-title">機械学習 - Amazon検索結果</div>
                                     <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -224,16 +217,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3710.html">
+                    <a href="気になる記になる_4500.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AWSに繋げなくてもテストできる？新サービス「AWS Blocks」を触ってみた</span>
+                        <span class="nav-title">｢iPhone Duo｣ではロック画面からの｢集中モード｣の切り替えが容易に</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_6023.html">
+                    <a href="Zennのトレンド_5941.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">デザインシステムのskillの精度が上がった8つの方法</span>
+                        <span class="nav-title">ユーザー検索した作品名の人気キーワード機能</span>
                     </a>
                 </div>
             </div>
@@ -246,53 +239,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3844.html">
-                        <h3>「Claude」で障害発生（復旧）</h3>
+                    <a href="ASCII_jp__トップ_1210.html">
+                        <h3>風車ブレードの補修作業を自動化するロボット技術、AIによる自律制御と欧米展開へ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Anthropicの生成AIサービス「Claude」（クロード）で障害が発生している模様だ。SNSで「使えない」などの投稿が多数上がっている他、筆者の環境でも16時15分現在、利用できなくなっている。...</p>
+                        <p class="related-summary">風力発電設備向けロボットの開発を手がけるLEBO ROBOTICS株式会社は9月30日、風車ブレード（羽根）の補修工程を自動化する新技術の開発と、欧米市場への本格展開を発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7354.html">
-                        <h3>「この写真を復元して」と入力するだけ、ChatGPTが過激な画像を生成する抜け穴が発覚</h3>
+                    <a href="ASCII_jp__トップ_3763.html">
+                        <h3>AmazonとAppleかたるフィッシングが4割超　AIへの指示文がメールに残る事例も</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">「ChatGPT」が「この写真を復元して」というプロンプトによって、性的で生々しい暴力表現を含む画像を容易に生成していたことが分かった。AIサイバーセキュリティ・調査会社であるMindgardが報告書...</p>
+                        <p class="related-summary">フィッシング対策協議会が発表した、2026年8月分の「フィッシング報告状況」によれば、「報告件数」は前月から1万6219件増加して、8万2338件でした（約24.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4465.html">
-                        <h3>画像AIのMidjourney、体内を全身3Dスキャンする「Midjorney Scanner」発表　畑違いの医療参入</h3>
+                    <a href="ASCII_jp__トップ_19.html">
+                        <h3>3Dマップ上でルートを自動作成・対話案内するデジタルツイン基盤</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">画像生成AIで知られる米Midjourneyが、医療分野に乗り出す。同社は現地時間6月17日、新事業「Midjourney Medical」を立ち上げ、第1弾となるハードウェア「Midjourney ...</p>
+                        <p class="related-summary">ボールドライト株式会社は9月30日、実空間の3D表現とAIを組み合わせたデジタルツインプラットフォーム「メタマップ」のリニューアルを発表し、同日より提供を開始した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_585.html">
-                        <h3>AIが先か、人間が先か — AI時代のJr.エンジニアの成長とは</h3>
+                    <a href="Publickey_5520.html">
+                        <h3>マイクロソフト、VS CodeにAIモデルのオーケストレーションで高品質低コストなAIを実現する「HydraFusion...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">📝 はじめに こんにちは、シュートです。 最近、開発中にふと手が止まる瞬間があります。 「これ、自分が考えたコードなのか、AIが提案したコードを採用しただけなのか。」 アルバイトと個人開発で Reac...</p>
+                        <p class="related-summary">マイクロソフトは9月30日付けでリリースされたVisual Studio Code 1. 140（以下、VS Code）で、複数のAIベンダから提供されているAIモデルをオーケストレーションすることで...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1841.html">
-                        <h3>AIコーディングをシニアエンジニアに変える「Agent Skills」 – SDLCへの実践的適用</h3>
+                    <a href="iPhone_Mania_607.html">
+                        <h3>MacからAI機能を削除し12GB節約できるオープンソースツールが話題に</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">※ この記事の日本語には、少し不自然な部分があるかもしれません。AIの言語サポートを利用しながら作成しています。 目次 はじめに 1. 実プロジェクトでの適用方法（私のワークフロー） フェー.</p>
+                        <p class="related-summary">macOS27から人工知能（AI）関連の機能を取り除くことができるツール「RemoveMacAI」が注目を集めています。“無用”なAI機能を除去することで節約できるストレージ容量は12GBとのことで、...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>オブザーバビリティのAIエージェントをどう評価するか | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに AIエージェントにオブザーバビリティの仕事をさせたとき、その最終応答の品質が上がったのか下がったのかを、どうやって知るのでしょうか。 エージェントの最終応答を読んで判断する方法は、早い段階で行き詰まります。正しい応答と、正しく見えるだけの応答が同じ見た目をしているからです">
-    <meta name="keywords" content="AI,EV">
+    <title>AIの文章を読みやすくするskillを作る（文の難しさの点数化＋構造化） | 日本のテックニュース速報</title>
+    <meta name="description" content="AIの文章を読むことが、とても増えました。調べものの答え、コードレビューの指摘、作業の完了報告、設計の相談。人の書いた文章より、AIの文章を読んでいる時間のほうが長い日もあります。 しかも時代はどんどん速くなっていて、情報が入ってくる速さも上がっています">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="オブザーバビリティのAIエージェントをどう評価するか">
-    <meta property="og:description" content="はじめに AIエージェントにオブザーバビリティの仕事をさせたとき、その最終応答の品質が上がったのか下がったのかを、どうやって知るのでしょうか。 エージェントの最終応答を読んで判断する方法は、早い段階で行き詰まります。正しい応答と、正しく見えるだけの応答が同じ見た目をしているからです">
+    <meta property="og:title" content="AIの文章を読みやすくするskillを作る（文の難しさの点数化＋構造化）">
+    <meta property="og:description" content="AIの文章を読むことが、とても増えました。調べものの答え、コードレビューの指摘、作業の完了報告、設計の相談。人の書いた文章より、AIの文章を読んでいる時間のほうが長い日もあります。 しかも時代はどんどん速くなっていて、情報が入ってくる速さも上がっています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8108.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="オブザーバビリティのAIエージェントをどう評価するか">
-    <meta name="twitter:description" content="はじめに AIエージェントにオブザーバビリティの仕事をさせたとき、その最終応答の品質が上がったのか下がったのかを、どうやって知るのでしょうか。 エージェントの最終応答を読んで判断する方法は、早い段階で行き詰まります。正しい応答と、正しく見えるだけの応答が同じ見た目をしているからです">
+    <meta name="twitter:title" content="AIの文章を読みやすくするskillを作る（文の難しさの点数化＋構造化）">
+    <meta name="twitter:description" content="AIの文章を読むことが、とても増えました。調べものの答え、コードレビューの指摘、作業の完了報告、設計の相談。人の書いた文章より、AIの文章を読んでいる時間のほうが長い日もあります。 しかも時代はどんどん速くなっていて、情報が入ってくる速さも上がっています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "オブザーバビリティのAIエージェントをどう評価するか",
-        "description": "はじめに AIエージェントにオブザーバビリティの仕事をさせたとき、その最終応答の品質が上がったのか下がったのかを、どうやって知るのでしょうか。 エージェントの最終応答を読んで判断する方法は、早い段階で行き詰まります。正しい応答と、正しく見えるだけの応答が同じ見た目をしているからです",
+        "headline": "AIの文章を読みやすくするskillを作る（文の難しさの点数化＋構造化）",
+        "description": "AIの文章を読むことが、とても増えました。調べものの答え、コードレビューの指摘、作業の完了報告、設計の相談。人の書いた文章より、AIの文章を読んでいる時間のほうが長い日もあります。 しかも時代はどんどん速くなっていて、情報が入ってくる速さも上がっています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-10-01T00:00:00",
-        "dateModified": "2026-10-04T21:16:16.795586",
+        "datePublished": "2026-10-11T00:56:36",
+        "dateModified": "2026-10-11T21:35:46.779937",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8108.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8108.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","EV"]
+        "keywords": ["AI"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "オブザーバビリティのAIエージェントをどう評価するか",
+                "name": "AIの文章を読みやすくするskillを作る（文の難しさの点数化＋構造化）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8108.html"
             }
         ]
@@ -114,39 +114,42 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">オブザーバビリティのAIエージェントをどう評価するか</li>
+                <li aria-current="page">AIの文章を読みやすくするskillを作る（文の難しさの点数化＋構造化）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>オブザーバビリティのAIエージェントをどう評価するか</h1>
+                <h1>AIの文章を読みやすくするskillを作る（文の難しさの点数化＋構造化）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/ymotongpoo/articles/20261001-agent-eval-loop" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/netetahito/articles/a3539e541b179c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-10-01T00:00:00">
-                        公開: 2026-10-01T00:00:00
+                    <time datetime="2026-10-11T00:56:36">
+                        公開: 2026-10-11T00:56:36
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-AIエージェントにオブザーバビリティの仕事をさせたとき、その最終応答の品質が上がったのか下がったのかを、どうやって知るのでしょうか。
-エージェントの最終応答を読んで判断する方法は、早い段階で行き詰まります。正しい応答と、正しく見えるだけの応答が同じ見た目をしているからです。しかも同じ質問に毎回同じ応答が返るわけでもなく、期待する文字列を固定したテストは書けません。
-この記事では、Grafana Assistantを開発しているチームが公式のエンジニアリングブログに公開した Building an evaluation loop for Grafana Assistant（Y...
+                    AIの文章を読むことが、とても増えました。調べものの答え、コードレビューの指摘、作業の完了報告、設計の相談。人の書いた文章より、AIの文章を読んでいる時間のほうが長い日もあります。
+しかも時代はどんどん速くなっていて、情報が入ってくる速さも上がっています。読む量は増えているのに、読む時間は減っています。
+
+ AIの言うことが難しい
+できれば、分かりやすく短く、スムーズにやり取りしたい。ところがAIの言うことは、ときどきとても長くて難しいです。間違ってはいないけれど、頭に入ってこない。「つまり何？」と聞き返すと、また長い答えが返ってきます。
+
+ 今回の動機
+これをなんとかしたい、というのが...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/ymotongpoo/articles/20261001-agent-eval-loop" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/netetahito/articles/a3539e541b179c" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -173,16 +176,6 @@ AIエージェントにオブザーバビリティの仕事をさせたとき、
                                 <div class="product-info">
                                     <div class="product-title">機械学習 - Amazon検索結果</div>
                                     <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +216,16 @@ AIエージェントにオブザーバビリティの仕事をさせたとき、
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_4180.html">
+                    <a href="Qiita_-_人気の記事_2517.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">terraform applyしたら、1ヶ月半前のコードが本番に出ていた</span>
+                        <span class="nav-title">Claude Codeに任せる範囲と止める仕組みの設計 〜計画モード・SessionStartフック...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2098.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_6985.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">実務において敵対的レビューはどの程度有効なのか</span>
+                        <span class="nav-title">免許画像流出 再交付の申請相次ぐ</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +238,53 @@ AIエージェントにオブザーバビリティの仕事をさせたとき、
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Publickey_6658.html">
-                        <h3>Supabase、1サーバあたり数百万ものSQLiteをホストする「Turso」買収を発表。AIエージェントで加速するD...</h3>
+                    <a href="気になる記になる_4504.html">
+                        <h3>｢HomePod mini 2｣はS10チップ搭載 ｰ Siri AI対応や｢HomeView｣との連携が特徴に</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Publickey</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">PostgreSQLをベースにしたデータベースサービス「Supabase」などを提供しているSupabaseは、SQLiteをベースとしたデータベースサービスを提供する「Turso」を買収したことを発...</p>
+                        <p class="related-summary">Appleは現地時間10月13日に新しいスマートホームハブ製品や新型Apple TV 4K、新型HomePod miniを発表する見込みですが、BloombergのMark Gurman氏が毎週日曜恒...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3101.html">
-                        <h3>【2026秋アニメ】『目覚めたら最強装備と宇宙船持ちだったので、一戸建て目指して傭兵として自由に生きたい』に『どうも、好...</h3>
+                    <a href="ASCII_jp__トップ_5617.html">
+                        <h3>ゴムマリの業務AIエージェント、『給与計算チェック』を提供開始</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">秋アニメ特集第5回も話題作が続々。『目覚めたら最強装備と宇宙船持ちだったので、一戸建て目指して傭兵として自由に生きたい』『どうも、好きな人に惚れ薬を依頼された魔女です。』『TANK CHAIR-戦車椅...</p>
+                        <p class="related-summary">ゴムマリの業務AIエージェント、『給与計算チェック』を提供開始.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_930.html">
-                        <h3>LLMのJSON Schemaを厳しくしても業務検証を消せない理由</h3>
+                    <a href="iPhone_Mania_7740.html">
+                        <h3>HomePod mini2、10月13日発表か！6年ぶり刷新でSiri AI対応へ</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">iPhone Mania</span>
+                        </div>
+                        <p class="related-summary">」イベントにおいて、6年ぶりとなる新型HomePod miniが発表される見通しです。米メディアMacRumorsによると、新型ではSiri AIへの対応や音 […]. Appleが10月13日に開催...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_4438.html">
+                        <h3>Claude Codeの全セッションを1画面で管理するローカルダッシュボードをNext.jsで実装する</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Structured OutputsでJSON Schemaに一致する出力を得られるなら、アプリ側のvalidationも消せそうに見えます。消せるのは、主に「JSONとして壊れている」「必須キーがな...</p>
+                        <p class="related-summary">この記事でやること Claude Code を複数のプロジェクトで並行して使っていると、「どのフォルダで何が動いていて、どれが確認待ちで止まっているか」が分からなくなります。 そこで、次の3つができる...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7465.html">
-                        <h3>ゴールシークプロンプトとは ― AIに質問させて成果物を作る方法を、テンプレートと実例で解説</h3>
+                    <a href="Qiita_-_人気の記事_2517.html">
+                        <h3>Claude Codeに任せる範囲と止める仕組みの設計 〜計画モード・SessionStartフック・/loop・課金前...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに AIに仕事を頼むとき、指示を全部書こうとして手が止まることはないでしょうか。書き漏らした条件は、AIが推測で埋めます。その推測が、出力のズレとして返ってきます。 ゴールシークプロンプトは、こ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3734.html">
-                        <h3>最近プロジェクトマネジメントで感じたこと</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">最近のプロジェクトマネジメント業務を振り返って、学びの言語化をします。3つ大事だと思ったことを書きます。 この記事は、AI を使っていません（AI 使ってたら、もっとそれっぽいタイトルになる）。 1....</p>
+                        <p class="related-summary">AIに「全部任せる」と怖い。「全部確認する」と遅い。どっちも3日で疲れます😇 しかも張り切って作った「ハーネスの仕様書」は、たった3時間で古くなってゴミ箱行きになりました。 日本株のAI銘柄スクリーニ...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CとGoの生成コードを読む ― アセンブリから見る言語設計の違い | 日本のテックニュース速報</title>
-    <meta name="description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>WSL Containerのsettings.yaml他、基本的な挙動をみていく | 日本のテックニュース速報</title>
+    <meta name="description" content="WSL Containerへ移行する価値はあるのか 「composeが実装されるまで待機」と判断される意見が散見するWSLc。 筆者はDockerやcomposeを扱ったことのないPodmanユーザーであり、だいぶ素人です">
+    <meta name="keywords" content="AI,Docker,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="CとGoの生成コードを読む ― アセンブリから見る言語設計の違い">
-    <meta property="og:description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
+    <meta property="og:title" content="WSL Containerのsettings.yaml他、基本的な挙動をみていく">
+    <meta property="og:description" content="WSL Containerへ移行する価値はあるのか 「composeが実装されるまで待機」と判断される意見が散見するWSLc。 筆者はDockerやcomposeを扱ったことのないPodmanユーザーであり、だいぶ素人です">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_119.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CとGoの生成コードを読む ― アセンブリから見る言語設計の違い">
-    <meta name="twitter:description" content="同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.">
+    <meta name="twitter:title" content="WSL Containerのsettings.yaml他、基本的な挙動をみていく">
+    <meta name="twitter:description" content="WSL Containerへ移行する価値はあるのか 「composeが実装されるまで待機」と判断される意見が散見するWSLc。 筆者はDockerやcomposeを扱ったことのないPodmanユーザーであり、だいぶ素人です">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_119.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "CとGoの生成コードを読む ― アセンブリから見る言語設計の違い",
-        "description": "同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。.",
+        "headline": "WSL Containerのsettings.yaml他、基本的な挙動をみていく",
+        "description": "WSL Containerへ移行する価値はあるのか 「composeが実装されるまで待機」と判断される意見が散見するWSLc。 筆者はDockerやcomposeを扱ったことのないPodmanユーザーであり、だいぶ素人です",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-05T01:33:15",
-        "dateModified": "2026-09-08T03:21:18.697334",
+        "datePublished": "2026-10-12T11:19:34",
+        "dateModified": "2026-10-13T01:52:27.780375",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_119.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_119.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","Docker","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "CとGoの生成コードを読む ― アセンブリから見る言語設計の違い",
+                "name": "WSL Containerのsettings.yaml他、基本的な挙動をみていく",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_119.html"
             }
         ]
@@ -113,33 +113,48 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">CとGoの生成コードを読む ― アセンブリから見る言語設計の違い</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">WSL Containerのsettings.yaml他、基本的な挙動をみていく</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>CとGoの生成コードを読む ― アセンブリから見る言語設計の違い</h1>
+                <h1>WSL Containerのsettings.yaml他、基本的な挙動をみていく</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/saku0512/books/3735de8d0aa09f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-09-05T01:33:15">
-                        公開: 2026-09-05T01:33:15
+                    <span class="source">出典: <a href="https://zenn.dev/eien_syogakusya/articles/a34040c33e63d2" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-10-12T11:19:34">
+                        公開: 2026-10-12T11:19:34
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    同じ処理をCとGoで実装し、生成されるアセンブリを比較する。ABI、境界チェック、スタック、GC、Escape Analysis、インライン化などを実際の生成コードから追い、CとGoの言語設計・コンパイラ・ランタイムの違いを読み解く。
+                    WSL Containerへ移行する価値はあるのか
+「composeが実装されるまで待機」と判断される意見が散見するWSLc。
+筆者はDockerやcomposeを扱ったことのないPodmanユーザーであり、だいぶ素人です。
+その素人が、AIツールを触る上で、PodmanからWSLcに移行する価値があるのか興味を抱いており、判明した情報をまとめ、共有していきたいと思います。
+本記事の対象者は、
+・DockerないしPodmanの経験がある方
+理由は、初心者向けの説明を省くからです。
+本記事で触れないことは、
+・daemonless
+についてです。
+ざっと調べた範囲の情報は下記に共有します...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/saku0512/books/3735de8d0aa09f" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/eien_syogakusya/articles/a34040c33e63d2" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -148,25 +163,60 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Docker&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Docker - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Docker - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでDockerに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -181,16 +231,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_214.html">
+                    <a href="iPhone_Mania_6836.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">AI時代に求められるFDEというエンジニア像</span>
+                        <span class="nav-title">新型iPad miniは約3.5万円値上げ？税込134,800円〜と試算</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_7684.html">
+                    <a href="気になる記になる_3136.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">ソニーの新型ワイヤレスヘッドホン｢WH-CH730N｣の実機写真が登場 ｰ ｢WH-CH530｣のパ...</span>
+                        <span class="nav-title">Nothing、｢Phone (3)｣向けに｢Nothing OS 5.0｣を正式リリース</span>
                     </a>
                 </div>
             </div>
@@ -203,51 +253,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7377.html">
-                        <h3>テスラのハンドル無し車両「サイバーキャブ」が運行開始　直後に米当局が調査</h3>
+                    <a href="ASCII_jp__トップ_8342.html">
+                        <h3>Acer、約1.18kgの薄型軽量ノートPC「Swift Air 14」を発売</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">テスラは、ロボタクシー「Cybercab（サイバーキャブ）」の一般客向けサービスをテキサス州オースティンで開始した。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3418.html">
-                        <h3>X、「Twitter」商標を当面維持へ　鳥のロゴと「Tweet」は失う可能性</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">ソーシャルメディア「X」（旧Twitter）は、Operation Bluebird（以下、Bluebird）の「Twitter. now」をめぐる訴訟で仮差し止め命令が一部暫定的に認められたことから...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8049.html">
-                        <h3>傘袋がいらない！ 電動折りたたみ傘「アンブレラZERO」</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3061.html">
-                        <h3>おさんぽ案内人が行く帯広散歩　十勝開拓の名残を街中にたどる</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_70.html">
-                        <h3>過去1ヶ月で500点以上購入されたPS5用縦置きスタンドがタイムセール中！ 「安定感抜群」と好評</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">jpにて、DUXICEPINの「PS5用縦置きスタンド ブラック」が販売中だ。過去価格は1698円だが、タイムセールにより16％オフの1426円で購入できる（9月7日時点）。.</p>
+                        <p class="related-summary">18kgのアルミボディ、120Hz対応14インチWUXGAディスプレイ、Core 3/Core 5とメモリー容量を選べる4構成、70Whバッテリーなどの特徴を紹介する。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_4567.html">
+                        <h3>減量薬に「若返り」効果か／LLMは推論していない？ AlphaGo開発者の提言</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">世界最先端のテクノロジー情報をお届けするグローバルメディア「MITテクノロジーレビュー」から、ビジネスに役立つ注目のテック企業の最新動向、イノベーションにつながる最新の研究内容をピックアップして紹介し...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_778.html">
+                        <h3>AI利用が多い技術者ほど「自分でコードを書ける能力」も重視／世界の6割近くが「技術進歩が生活を破壊」と回答、ほか</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">今回（2026年10月3日～10月9日）は、AI時代特有のサイバーセキュリティトレンドを示すハイプ・サイクル、エンジニアのAI利用頻度で大きく異なる「コードを書く能力」への評価、世界の6割が「技術進歩...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_2938.html">
+                        <h3>MSI、AmazonでノートPCの先行セール開始！ ゲーミングからAI対応モデルまで特価に</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">MSIがAmazonでノートPCの先行セールを開始。ゲーミング、ビジネス、AI対応まで幅広いモデルが対象だ。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_9049.html">
+                        <h3>アドホック分析も定型分析も　AIデータプラットフォーム「COMETA」がBI機能を追加</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">prinmeNumberが、AIデータプラットフォームサービス「COMETA（コメタ）」において、新たにBI機能を搭載した。これまで提供してきた対話型AI（AIチャット）によるアドホックな分析に加えて...</p>
                     </a>
                 </article>
             </div>

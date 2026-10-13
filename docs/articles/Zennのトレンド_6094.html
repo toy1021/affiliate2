@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>最近の開発の流れ | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに ここ数ヶ月で開発の流れがかなり変わった。 リファインメントで grill して認識を合わせ、実装は LLM に任せられる範囲が増え、多層モデルのレビュー と 厚い CI を通し、babysit-pr で green になるまで面倒を見させる">
-    <meta name="keywords" content="AI,Claude,LLM">
+    <title>LLM-jp-4 の公開CPT・SFTデータを読んでみた | 日本のテックニュース速報</title>
+    <meta name="description" content="1 モデルが公開され話題になりましたが、個人的にはモデルそのものよりも「日本語を、どんなデータセットで学習したのか」が気になりました。LLM-jp-4 / 4. 1 は事前学習コーパスから SFT・DPO のデータまでかなりの部分が公開されているので、中身を読んでみました">
+    <meta name="keywords" content="LLM,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="最近の開発の流れ">
-    <meta property="og:description" content="はじめに ここ数ヶ月で開発の流れがかなり変わった。 リファインメントで grill して認識を合わせ、実装は LLM に任せられる範囲が増え、多層モデルのレビュー と 厚い CI を通し、babysit-pr で green になるまで面倒を見させる">
+    <meta property="og:title" content="LLM-jp-4 の公開CPT・SFTデータを読んでみた">
+    <meta property="og:description" content="1 モデルが公開され話題になりましたが、個人的にはモデルそのものよりも「日本語を、どんなデータセットで学習したのか」が気になりました。LLM-jp-4 / 4. 1 は事前学習コーパスから SFT・DPO のデータまでかなりの部分が公開されているので、中身を読んでみました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6094.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="最近の開発の流れ">
-    <meta name="twitter:description" content="はじめに ここ数ヶ月で開発の流れがかなり変わった。 リファインメントで grill して認識を合わせ、実装は LLM に任せられる範囲が増え、多層モデルのレビュー と 厚い CI を通し、babysit-pr で green になるまで面倒を見させる">
+    <meta name="twitter:title" content="LLM-jp-4 の公開CPT・SFTデータを読んでみた">
+    <meta name="twitter:description" content="1 モデルが公開され話題になりましたが、個人的にはモデルそのものよりも「日本語を、どんなデータセットで学習したのか」が気になりました。LLM-jp-4 / 4. 1 は事前学習コーパスから SFT・DPO のデータまでかなりの部分が公開されているので、中身を読んでみました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6094.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "最近の開発の流れ",
-        "description": "はじめに ここ数ヶ月で開発の流れがかなり変わった。 リファインメントで grill して認識を合わせ、実装は LLM に任せられる範囲が増え、多層モデルのレビュー と 厚い CI を通し、babysit-pr で green になるまで面倒を見させる",
+        "headline": "LLM-jp-4 の公開CPT・SFTデータを読んでみた",
+        "description": "1 モデルが公開され話題になりましたが、個人的にはモデルそのものよりも「日本語を、どんなデータセットで学習したのか」が気になりました。LLM-jp-4 / 4. 1 は事前学習コーパスから SFT・DPO のデータまでかなりの部分が公開されているので、中身を読んでみました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-27T00:31:05",
-        "dateModified": "2026-07-31T21:05:08.160812",
+        "datePublished": "2026-10-12T23:34:05",
+        "dateModified": "2026-10-13T17:24:56.083987",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6094.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6094.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AI","Claude","LLM"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["LLM","本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "最近の開発の流れ",
+                "name": "LLM-jp-4 の公開CPT・SFTデータを読んでみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6094.html"
             }
         ]
@@ -113,46 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">最近の開発の流れ</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">LLM-jp-4 の公開CPT・SFTデータを読んでみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>最近の開発の流れ</h1>
+                <h1>LLM-jp-4 の公開CPT・SFTデータを読んでみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/kimuchan/articles/bc8e98682f8594" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-07-27T00:31:05">
-                        公開: 2026-07-27T00:31:05
+                    <span class="source">出典: <a href="https://zenn.dev/yukito_lmlab/articles/llmjp4-public-data" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-10-12T23:34:05">
+                        公開: 2026-10-12T23:34:05
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Claude</span>
                     <span class="tag">LLM</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-ここ数ヶ月で開発の流れがかなり変わった。
-リファインメントで grill して認識を合わせ、実装は LLM に任せられる範囲が増え、多層モデルのレビュー と 厚い CI を通し、babysit-pr で green になるまで面倒を見させる。この流れが回り始めてから、かなりの信頼度の change list が安定して生産できるようになった。
-
- 全体の流れ
-リファインメント（grill）
-  → プランニング（順番とキャパシティを詰めるだけ）
-    → 実装（Claude Code が書く）
-      → 多層 AI レビュー（Copilot / Codex）+ 厚い...
+                    私はオープンウェイトモデルの日本語ファインチューニングや、日本語の継続事前学習（CPT）LoRA を作りたいと思っています。
+最近、LLM-jp-4.1 モデルが公開され話題になりましたが、個人的にはモデルそのものよりも「日本語を、どんなデータセットで学習したのか」が気になりました。LLM-jp-4 / 4.1 は事前学習コーパスから SFT・DPO のデータまでかなりの部分が公開されているので、中身を読んでみました。
+2026年10月4日時点の公開データを取得し、事前学習コーパスの日本語13サブセットから各30件、SFT と DPO は日本語を中心に選んだ構成から数件〜20件ずつを読み...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/kimuchan/articles/bc8e98682f8594" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/yukito_lmlab/articles/llmjp4-public-data" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -165,20 +158,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -198,23 +191,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -229,16 +222,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_759.html">
+                    <a href="気になる記になる_7360.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">1日500コミットは、もう読めない ── だからコードレビューをやめた</span>
+                        <span class="nav-title">【Amazonプライム感謝祭】Shokzの各種ワイヤレスイヤホンが最大30％OFFに</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_749.html">
+                    <a href="気になる記になる_2516.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【2026年版】MIXI 新卒向け技術研修を公開しました。</span>
+                        <span class="nav-title">EarFun、独自開発DCAA同軸デュアルドライバー採用のANC対応ヘッドホン「EarFun Wav...</span>
                     </a>
                 </div>
             </div>
@@ -251,53 +244,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8488.html">
-                        <h3>はやぶさ2、「地球防衛」の技術獲得へ成果　至近接近＆レーザ測距も成功</h3>
+                    <a href="ASCII_jp__トップ_3800.html">
+                        <h3>本体3万円引きで16万8000円！ 16型大画面の「VAIO F16」は顔・指紋認証に3年延長サポートも付帯</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">宇宙航空研究開発機構（JAXA）は7月30日、小惑星探査機「はやぶさ2」が7月5日に実施した小惑星「トリフネ」のフライバイ（接近通過）について、詳細な解析結果を発表した。探査機はトリフネの表面から約4...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1087.html">
-                        <h3>汗から血糖値などを測るスマートリング、カリフォルニア大学が開発</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">カリフォルニア大学サンディエゴ校（UCSD）のエンジニアらは、指の汗を使って化学的なバイオマーカーを追跡する初のスマートリングを開発したと考えている。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_5895.html">
-                        <h3>インテルの新CPU「Arc G3 Extreme」搭載の8.8型3in1ポータブルPC「OneXPlayer 3」発表</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">天空はOne-Netbook Technology社が開発した、最新の「インテル Arc G3 Extreme」プロセッサを搭載するポータブルゲーミングPC「OneXPlayer 3 国内正規版」を発...</p>
+                        <p class="related-summary">VAIOストアでは現在、「オータムキャンペーン2026」を開催中。対象のVAIO PCカスタマイズモデルを本体最大35,000円引きで販売している。さらに、Core 7を選択すると10,000円引き、...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_9204.html">
-                        <h3>メテオフォール開発</h3>
+                    <a href="Qiita_-_人気の記事_2027.html">
+                        <h3>AIで作ったらオリジナルじゃないらしい。んなわけあるか。</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">AIエージェントで粗い初期実装をまず落とし、人間が観測・分解・修正していく開発手法「メテオフォール開発」の考え方と実践をまとめた本。依頼設計・レビュー・タスク分解・ジュニア参加・品質ゲート・ケーススタ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9542.html">
-                        <h3>Vue.js 入門編</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">js（ビュージェイエス）とは、Webサイトのユーザーインターフェース（UI）を構築するためのJavaScriptフレームワークです。 オープンソースとして提供されており、Webアプリケーションの「見た...</p>
+                        <p class="related-summary">AIをあまり使ってない友人と話した 最近AIで音楽とかゲームとか作ってるんだよね、と友人に話した。 そしたら「でもそれってオリジナルなの？」「学習元があるんだから、コピーとか模倣を作ってるだけなんじゃ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_2295.html">
+                        <h3>【お、君（kimi）いいぞ！】サイドバーの項目がやけに多いAI「Kimi」。Claude使いの新人エンジニアが全機能を整...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">普段はClaudeばっかり使ってる新人エンジニアです。 昨今、フロンティアモデルの動向が激しいですね。meta社も新しく水準の高いモデルを出したりしていますね（2026/10/13時点）。そんな中で、...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_8202.html">
+                        <h3>偽サイトを2分で作成 AIの脅威</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_607.html">
+                        <h3>Shift-JIS のファイルを Claude Code で1か所直したら、日本語が全部壊れて戻せなくなった</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">296（2026-10-09）の changelog に、こう書かれています。 Fixed Edit and NotebookEdit replacing every non-ASCII charac...</p>
                     </a>
                 </article>
             </div>

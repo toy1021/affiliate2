@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIエージェントの Skill は書くだけでは足りない ⇒ Waza で評価して APM で配ろう!【ハーネスエンジニアリング】 | 日本のテックニュース速報</title>
-    <meta name="description" content="md で繰り返しの作業手順やレビュー観点をスキルとして渡せるのが便利だなと思います。 一方で、 SKill は書くだけでは足りません。本当に意図どおりに発火するのか、書き換えたあとにデグレしていないのか、別モデルでも同じ品質で動くのかは、確認・評価しないと分かりません">
-    <meta name="keywords" content="AI,GitHub,本">
+    <title>WAF でブロックする前に確かめていること | 日本のテックニュース速報</title>
+    <meta name="description" content="🧱 はじめに WAF の運用で、既知の攻撃を止めるルールをすり抜けてくる迷惑なアクセスや、攻撃ばかりを送ってくるアクセスを調べ、その送信元をブロックしています。 この記事では、そのときに気をつけていることと、前提になる基礎知識をまとめます。ポイントは次の 3 つです">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AIエージェントの Skill は書くだけでは足りない ⇒ Waza で評価して APM で配ろう!【ハーネスエンジニアリング】">
-    <meta property="og:description" content="md で繰り返しの作業手順やレビュー観点をスキルとして渡せるのが便利だなと思います。 一方で、 SKill は書くだけでは足りません。本当に意図どおりに発火するのか、書き換えたあとにデグレしていないのか、別モデルでも同じ品質で動くのかは、確認・評価しないと分かりません">
+    <meta property="og:title" content="WAF でブロックする前に確かめていること">
+    <meta property="og:description" content="🧱 はじめに WAF の運用で、既知の攻撃を止めるルールをすり抜けてくる迷惑なアクセスや、攻撃ばかりを送ってくるアクセスを調べ、その送信元をブロックしています。 この記事では、そのときに気をつけていることと、前提になる基礎知識をまとめます。ポイントは次の 3 つです">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5294.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIエージェントの Skill は書くだけでは足りない ⇒ Waza で評価して APM で配ろう!【ハーネスエンジニアリング】">
-    <meta name="twitter:description" content="md で繰り返しの作業手順やレビュー観点をスキルとして渡せるのが便利だなと思います。 一方で、 SKill は書くだけでは足りません。本当に意図どおりに発火するのか、書き換えたあとにデグレしていないのか、別モデルでも同じ品質で動くのかは、確認・評価しないと分かりません">
+    <meta name="twitter:title" content="WAF でブロックする前に確かめていること">
+    <meta name="twitter:description" content="🧱 はじめに WAF の運用で、既知の攻撃を止めるルールをすり抜けてくる迷惑なアクセスや、攻撃ばかりを送ってくるアクセスを調べ、その送信元をブロックしています。 この記事では、そのときに気をつけていることと、前提になる基礎知識をまとめます。ポイントは次の 3 つです">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AIエージェントの Skill は書くだけでは足りない ⇒ Waza で評価して APM で配ろう!【ハーネスエンジニアリング】",
-        "description": "md で繰り返しの作業手順やレビュー観点をスキルとして渡せるのが便利だなと思います。 一方で、 SKill は書くだけでは足りません。本当に意図どおりに発火するのか、書き換えたあとにデグレしていないのか、別モデルでも同じ品質で動くのかは、確認・評価しないと分かりません",
+        "headline": "WAF でブロックする前に確かめていること",
+        "description": "🧱 はじめに WAF の運用で、既知の攻撃を止めるルールをすり抜けてくる迷惑なアクセスや、攻撃ばかりを送ってくるアクセスを調べ、その送信元をブロックしています。 この記事では、そのときに気をつけていることと、前提になる基礎知識をまとめます。ポイントは次の 3 つです",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-05T18:41:11",
-        "dateModified": "2026-05-08T11:17:41.232181",
+        "datePublished": "2026-10-10T03:17:20",
+        "dateModified": "2026-10-15T22:56:28.458879",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5294.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5294.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","GitHub","本"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AIエージェントの Skill は書くだけでは足りない ⇒ Waza で評価して APM で配ろう!【ハーネスエンジニアリング】",
+                "name": "WAF でブロックする前に確かめていること",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5294.html"
             }
         ]
@@ -113,45 +113,44 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AIエージェントの Skill は書くだけでは足りない ⇒ Waza で評価して APM で配ろう!...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">WAF でブロックする前に確かめていること</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AIエージェントの Skill は書くだけでは足りない ⇒ Waza で評価して APM で配ろう!【ハーネスエンジニアリング】</h1>
+                <h1>WAF でブロックする前に確かめていること</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/microsoft/articles/b081f3ddb93040" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-05T18:41:11">
-                        公開: 2026-05-05T18:41:11
+                    <span class="source">出典: <a href="https://zenn.dev/azunyan/articles/7a105969d7d16c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-10-10T03:17:20">
+                        公開: 2026-10-10T03:17:20
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">GitHub</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-こんにちは、Matsumoto です。
-GitHub Copilot などの Agentic なCoding ツールを日常で使っていると、SKILL.md で繰り返しの作業手順やレビュー観点をスキルとして渡せるのが便利だなと思います。
-一方で、 SKill は書くだけでは足りません。本当に意図どおりに発火するのか、書き換えたあとにデグレしていないのか、別モデルでも同じ品質で動くのかは、確認・評価しないと分かりません。
-そこで Microsoft の GitHub org で公開されている 2 つの OSS を触ってみました。
+                    🧱 はじめに
+WAF の運用で、既知の攻撃を止めるルールをすり抜けてくる迷惑なアクセスや、攻撃ばかりを送ってくるアクセスを調べ、その送信元をブロックしています。
+この記事では、そのときに気をつけていることと、前提になる基礎知識をまとめます。ポイントは次の 3 つです。
+
+止める前に、巻き添えになる正規の利用者がいないかを確かめる
+国や一般的なブラウザの JA4 のように広く当たる条件は、自動化や攻撃を示す条件と組み合わせる
+決め手がなければ止めずに保留し、その判断も記録に残す
 
 
-microsoft/apm：AI エージェン...
+ 🐣 前提
+
+WAF には Cloudflare を使っていて、Enterprise プランで Bot ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/microsoft/articles/b081f3ddb93040" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/azunyan/articles/7a105969d7d16c" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,60 +159,25 @@ microsoft/apm：AI エージェン...
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -228,16 +192,16 @@ microsoft/apm：AI エージェン...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_610.html">
+                    <a href="Publickey_1511.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">外部からアクセス可能なhttpsサイトはドメイン設定後「即」攻撃にさらされる件</span>
+                        <span class="nav-title">さくらインターネット、GPU専有によりトークン消費量を気にせず定額で利用できる「さくらのAI Eng...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_4287.html">
+                    <a href="Zennのトレンド_3250.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">配色に悩む時間をゼロに。自然界モチーフのデザインシステム集「Morphos」を作りました</span>
+                        <span class="nav-title">SQLite 本体にベクトル検索拡張 vec1 がやってきた</span>
                     </a>
                 </div>
             </div>
@@ -250,53 +214,52 @@ microsoft/apm：AI エージェン...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5358.html">
-                        <h3>AIエージェント搭載スマホ「Natural AI Phone」実機レビュー　将来性はあるのだろうが現状は…</h3>
+                    <a href="ASCII_jp__トップ_6035.html">
+                        <h3>Dell「XPS 13」が14万9980円！ XPSシリーズ史上最薄・最軽量の約1kgアルミボディーに2.5Kタッチ画面...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ソフトバンクが米Brain Technologiesと組んで4月17日に発表した「Natural AI Phone」は、AIボタン一つで画面の内容を読み取って次の行動を提案するAIエージェント搭載スマ...</p>
+                        <p class="related-summary">4型ノートPC「XPS 13 DX13260（MAX53T-GWSA）」がAmazonのプライム感謝祭先行セール対象。プライム会員限定で、参考価格187,980円から20％オフの149,980円で販売...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1450.html">
-                        <h3>グーグルDeepMind、宇宙MMO「EVE Online」でAIを訓練へ</h3>
+                    <a href="ASCII_jp__トップ_6169.html">
+                        <h3>市役所の当たり前が市民の負担　その罪深さを痛感した職員が推進する自治体DX</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Google DeepMindは5月6日、人気のロールプレイングゲーム「EVE Online」をAIの訓練に使用する計画を発表した。.</p>
+                        <p class="related-summary">サイボウズは、kintoneユーザーの事例イベントである「kintone hive 2026 tokyo」を開催。4番手として登壇した茅ヶ崎市役所の松原大さんが披露したのは、市民サービスのデジタル化を...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5822.html">
-                        <h3>「AIが医師を名乗るのは違法」と開発企業を提訴　米ペンシルベニア州</h3>
+                    <a href="ASCII_jp__トップ_8921.html">
+                        <h3>パソコンショップSEVEN、10月16日限定で最新ゲーミングPCなど最大86,000円オフのセールを実施</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">AI」を運営するAI企業Character Technologiesを提訴した。. ペンシルベニア州政府は、「Character.</p>
+                        <p class="related-summary">パソコンショップSEVENを運営するセブンアールジャパンが、10月16日限定で最新ゲーミングPCなど全10商品を最大86,000円オフで販売する「2026/10/16 24時間限定セール」を実施する。...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6770.html">
-                        <h3>ネットの求人詐欺が急増中　AIで「安く速く簡単に」</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5466.html">
+                        <h3>コミックシーモア 一時停止を発表</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">求人情報が本物かどうかを確認し、詐欺に注意することがますます重要になっている。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7480.html">
-                        <h3>ソニーCEO「AIはクリエイターを代替しない」　ヒトの創造性が中心と強調</h3>
+                    <a href="ASCII_jp__トップ_9177.html">
+                        <h3>24万円切りでRTX 5070＋Ryzen 7！ ドスパラ34周年記念PCが数量限定の周年感謝価格</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ソニーグループで社長CEOを務める十時裕樹氏は2026年度の経営方針説明会で、AIについて「ソニーグループの各事業にとって最重要テーマ」と位置付けた。一方で、「人のクリエイティビティが常に中心にあるべ...</p>
+                        <p class="related-summary">ドスパラでは現在、「ドスパラ周年祭」の一環として、34周年記念モデルを周年感謝価格で販売中。GALLERIAとTHIRDWAVEのデスクトップPCをラインアップし、数量限定で販売している。販売期間は1...</p>
                     </a>
                 </article>
             </div>

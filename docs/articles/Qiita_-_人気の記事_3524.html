@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OCI Data Catalog 第3回：Object Storage上のOracle DatabaseマニュアルPDFでSelect AI with RAGを構築してみてみた | 日本のテックニュース速報</title>
-    <meta name="description" content="■ はじめに こんにちは。今日は、OCI Data Catalog 第3回です。 OCI Data Catalogシリーズでは、これまでObject Storage上のデータや文書を、どのように見つけ、管理し、AIから利用できるようにするかを段階的に検証してきました。.">
-    <meta name="keywords" content="AI">
+    <title>スキーマを変えるとプロンプトキャッシュが共有されなかったので、Bedrock の構造化出力をやめた話（2026年版） | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに GMOコネクトの永田です。 同じ長い資料を渡して、出力する JSON の形だけを変えながら Claude を何回か呼ぶ、というようなアプリを開発していました。プロンプトの前半（資料の部分）はどの呼び出しでも同じなので、プロンプトキャッシュが効いて、費用も待ち時間.">
+    <meta name="keywords" content="Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="OCI Data Catalog 第3回：Object Storage上のOracle DatabaseマニュアルPDFでSelect AI with RAGを構築してみてみた">
-    <meta property="og:description" content="■ はじめに こんにちは。今日は、OCI Data Catalog 第3回です。 OCI Data Catalogシリーズでは、これまでObject Storage上のデータや文書を、どのように見つけ、管理し、AIから利用できるようにするかを段階的に検証してきました。.">
+    <meta property="og:title" content="スキーマを変えるとプロンプトキャッシュが共有されなかったので、Bedrock の構造化出力をやめた話（2026年版）">
+    <meta property="og:description" content="はじめに GMOコネクトの永田です。 同じ長い資料を渡して、出力する JSON の形だけを変えながら Claude を何回か呼ぶ、というようなアプリを開発していました。プロンプトの前半（資料の部分）はどの呼び出しでも同じなので、プロンプトキャッシュが効いて、費用も待ち時間.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3524.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="OCI Data Catalog 第3回：Object Storage上のOracle DatabaseマニュアルPDFでSelect AI with RAGを構築してみてみた">
-    <meta name="twitter:description" content="■ はじめに こんにちは。今日は、OCI Data Catalog 第3回です。 OCI Data Catalogシリーズでは、これまでObject Storage上のデータや文書を、どのように見つけ、管理し、AIから利用できるようにするかを段階的に検証してきました。.">
+    <meta name="twitter:title" content="スキーマを変えるとプロンプトキャッシュが共有されなかったので、Bedrock の構造化出力をやめた話（2026年版）">
+    <meta name="twitter:description" content="はじめに GMOコネクトの永田です。 同じ長い資料を渡して、出力する JSON の形だけを変えながら Claude を何回か呼ぶ、というようなアプリを開発していました。プロンプトの前半（資料の部分）はどの呼び出しでも同じなので、プロンプトキャッシュが効いて、費用も待ち時間.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "OCI Data Catalog 第3回：Object Storage上のOracle DatabaseマニュアルPDFでSelect AI with RAGを構築してみてみた",
-        "description": "■ はじめに こんにちは。今日は、OCI Data Catalog 第3回です。 OCI Data Catalogシリーズでは、これまでObject Storage上のデータや文書を、どのように見つけ、管理し、AIから利用できるようにするかを段階的に検証してきました。.",
+        "headline": "スキーマを変えるとプロンプトキャッシュが共有されなかったので、Bedrock の構造化出力をやめた話（2026年版）",
+        "description": "はじめに GMOコネクトの永田です。 同じ長い資料を渡して、出力する JSON の形だけを変えながら Claude を何回か呼ぶ、というようなアプリを開発していました。プロンプトの前半（資料の部分）はどの呼び出しでも同じなので、プロンプトキャッシュが効いて、費用も待ち時間.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-10T03:40:31",
-        "dateModified": "2026-08-11T05:09:51.299379",
+        "datePublished": "2026-10-16T15:20:48",
+        "dateModified": "2026-10-17T20:14:07.494269",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3524.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3524.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "keywords": ["Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "OCI Data Catalog 第3回：Object Storage上のOracle DatabaseマニュアルPDFでSelect AI with RAGを構築してみてみた",
+                "name": "スキーマを変えるとプロンプトキャッシュが共有されなかったので、Bedrock の構造化出力をやめた話（2026年版）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3524.html"
             }
         ]
@@ -114,38 +114,37 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">OCI Data Catalog 第3回：Object Storage上のOracle Databa...</li>
+                <li aria-current="page">スキーマを変えるとプロンプトキャッシュが共有されなかったので、Bedrock の構造化出力をやめた話...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>OCI Data Catalog 第3回：Object Storage上のOracle DatabaseマニュアルPDFでSelect AI with RAGを構築してみてみた</h1>
+                <h1>スキーマを変えるとプロンプトキャッシュが共有されなかったので、Bedrock の構造化出力をやめた話（2026年版）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/shirok/items/704f8f380fee205e06d1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/ntaka329/items/9ddba124de03b15166c4?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-08-10T03:40:31">
-                        公開: 2026-08-10T03:40:31
+                    <time datetime="2026-10-16T15:20:48">
+                        公開: 2026-10-16T15:20:48
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    ■ はじめに
-こんにちは。今日は、OCI Data Catalog 第3回です。
-OCI Data Catalogシリーズでは、これまでObject Storage上のデータや文書を、どのように見つけ、管理し、AIから利用できるようにするかを段階的に検証してきました。
-...
+                    はじめに
+GMOコネクトの永田です。
+同じ長い資料を渡して、出力する JSON の形だけを変えながら Claude を何回か呼ぶ、というようなアプリを開発していました。プロンプトの前半（資料の部分）はどの呼び出しでも同じなので、プロンプトキャッシュが効いて、費用も待ち時間...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/shirok/items/704f8f380fee205e06d1?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/ntaka329/items/9ddba124de03b15166c4?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,6 +156,16 @@ OCI Data Catalogシリーズでは、これまでObject Storage上のデータ�
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -212,16 +221,16 @@ OCI Data Catalogシリーズでは、これまでObject Storage上のデータ�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_3479.html">
+                    <a href="iPhone_Mania_8305.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">北朝鮮ハッカー AIツール開発か</span>
+                        <span class="nav-title">タッチ対応MacBook Proは11月6日発売か～Apple Storeの売り場刷新が根拠</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_627.html">
+                    <a href="iPhone_Mania_3640.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">BedrockのOpenAIモデルでWeb検索が使えるようになったので、Tavilyと⽐べてみた</span>
+                        <span class="nav-title">MacBook Pro（OLED）の本命はM7 Pro/Max搭載モデル？いつ発売？</span>
                     </a>
                 </div>
             </div>
@@ -234,53 +243,53 @@ OCI Data Catalogシリーズでは、これまでObject Storage上のデータ�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6453.html">
-                        <h3>音楽生成AIのSuno、著作権問題を受け楽曲に「電子透かし」導入へ</h3>
+                    <a href="iPhone_Mania_1557.html">
+                        <h3>AppleがAI生成の性的画像悪用対策を強化〜App Store規約改定</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">AI楽曲生成プラットフォーム「Suno」は、楽曲が同社のツールで作られたものかどうかを、より簡単に判別できるようにする計画だ。.</p>
+                        <p class="related-summary">Appleは2026年10月16日、App Store審査ガイドラインを改定し、AI生成を含む本人の同意のない性的画像への対策と、審査後に未申告の機能を追加するアプリへの規制を強化することを公表しまし...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_681.html">
-                        <h3>「かなりイケてる」KDDI社長が推すAI　auショップ全店の業務負荷を大幅低減</h3>
+                    <a href="Qiita_-_人気の記事_8209.html">
+                        <h3>指示書を「からくりポケット」に放り込んだら、AIが勝手にマクロを研ぎ澄まして完成させていた話 ── 151本から削ぎ落と...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">auショップのスタッフはもう分厚いマニュアルと格闘しなくていい。KDDIが導入したAIエージェントが複雑な問い合わせに30秒で回答し、人材定着の妨げとなってきた「情報習得の重荷」を軽減しつつある。.</p>
+                        <p class="related-summary">はじめに 朝、前作の記事を公開した直後のことでした。 これまで開発の舵取りを一手に担ってきた頼れる番頭役、Claude Opus が利用量の上限に達し、静かにお休みに入ってしまいました。 残されたのは...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8892.html">
-                        <h3>OpenAIの「ドーナツ型」AIスピーカー、詳細がリークか　約5万円で2027年発売</h3>
+                    <a href="Zennのトレンド_4417.html">
+                        <h3>[DataRobot] アプリに依存しているデプロイを探す</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">米OpenAIが2027年にAIスマートスピーカーを発売する計画だ。米Bloombergが8月6日（現地時間）に報じた。手のひらに収まるドーナツ型で、ワイヤレスで持ち運べる設計になるという。.</p>
+                        <p class="related-summary">はじめに DataRobotでAIアプリを作成する場合には、対応したデプロイが作られる。 一つのアプリを削除したいと思った場合に他のDataRobot内のアプリやデプロイに依存している可能性がある。 ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5605.html">
-                        <h3>VAIO、内蔵カメラに写る「顔」から心拍数や血管情報を推定する新機能　個人向けPCに搭載</h3>
+                    <a href="Zennのトレンド_6821.html">
+                        <h3>JenkinsからGitHub Actionsに移行して、CI/CDをAIにも人にも触れる形にした</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">VAIOは8月10日、PCの内蔵カメラで「血管情報」と「心拍情報」を測定できるアプリ「VAIO ウェルネスケア」の先行プレビュー版を、個人向けノートPC「VAIO SX14-R」（VJS4R2シリーズ...</p>
+                        <p class="related-summary">はじめに Claude Codeで開発していると、コードの多くはAIに任せられます。 ところがCI/CDまわりは、コードも設定も、AIに渡せる形になっていませんでした。 Jenkinsのジョブ設定はサ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7970.html">
-                        <h3>「ChatGPTの小説」と「人間の小説」、人はどちらを好むのか？ 研究結果が公開</h3>
+                    <a href="Qiita_-_人気の記事_3558.html">
+                        <h3>伸びる動画の特徴をAIに言語化させたら、リール作りが回り始めた話</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">AIが生成した文章よりも、人間が書いた文章の方が好きだと思っている人は多いだろう。しかし、新たな研究によると、実際にはそうではない可能性がある。.</p>
+                        <p class="related-summary">はじめに 建設業界向けのInstagram「建設AIラボ（@kensetsu_ai_lab）」の運用などなどを担当しておりますEitaroです！縦型のリールなど様々なクリエイティブを作っています。 撮...</p>
                     </a>
                 </article>
             </div>

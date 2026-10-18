@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jevってなんだ？ — 文章を書かないAIに、LLMのif文判定を任せられるか | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに ── なぜこの記事を書くのか LLMに「このチケットはどの部署宛てか」を答えさせるコードを、筆者は何度も書いてきました。JSONで返させ、パースし、検証し、落ちたら再試行する。判断は1行なのに、防御コードのほうが長くなるのが常でした。 2026年9月15日、米T.">
-    <meta name="keywords" content="AI,LLM,EV">
+    <title>画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る | 日本のテックニュース速報</title>
+    <meta name="description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Jevってなんだ？ — 文章を書かないAIに、LLMのif文判定を任せられるか">
-    <meta property="og:description" content="はじめに ── なぜこの記事を書くのか LLMに「このチケットはどの部署宛てか」を答えさせるコードを、筆者は何度も書いてきました。JSONで返させ、パースし、検証し、落ちたら再試行する。判断は1行なのに、防御コードのほうが長くなるのが常でした。 2026年9月15日、米T.">
+    <meta property="og:title" content="画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る">
+    <meta property="og:description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5195.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jevってなんだ？ — 文章を書かないAIに、LLMのif文判定を任せられるか">
-    <meta name="twitter:description" content="はじめに ── なぜこの記事を書くのか LLMに「このチケットはどの部署宛てか」を答えさせるコードを、筆者は何度も書いてきました。JSONで返させ、パースし、検証し、落ちたら再試行する。判断は1行なのに、防御コードのほうが長くなるのが常でした。 2026年9月15日、米T.">
+    <meta name="twitter:title" content="画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る">
+    <meta name="twitter:description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Jevってなんだ？ — 文章を書かないAIに、LLMのif文判定を任せられるか",
-        "description": "はじめに ── なぜこの記事を書くのか LLMに「このチケットはどの部署宛てか」を答えさせるコードを、筆者は何度も書いてきました。JSONで返させ、パースし、検証し、落ちたら再試行する。判断は1行なのに、防御コードのほうが長くなるのが常でした。 2026年9月15日、米T.",
+        "headline": "画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る",
+        "description": "アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-16T15:11:29",
-        "dateModified": "2026-09-19T20:09:35.280049",
+        "datePublished": "2026-10-17T03:50:32",
+        "dateModified": "2026-10-18T20:11:42.961410",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5195.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5195.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","LLM","EV"]
+        "articleSection": "セキュリティ",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "セキュリティ",
+                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Jevってなんだ？ — 文章を書かないAIに、LLMのif文判定を任せられるか",
+                "name": "画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5195.html"
             }
         ]
@@ -113,40 +113,33 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Jevってなんだ？ — 文章を書かないAIに、LLMのif文判定を任せられるか</li>
+                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
+                <li aria-current="page">画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Jevってなんだ？ — 文章を書かないAIに、LLMのif文判定を任せられるか</h1>
+                <h1>画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/GeneLab_999/items/116aa006fbf93b68d791?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-09-16T15:11:29">
-                        公開: 2026-09-16T15:11:29
+                    <span class="source">出典: <a href="https://qiita.com/vaon-luandv/items/a4719b247a0ec489e4c3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: セキュリティ</span>
+                    <time datetime="2026-10-17T03:50:32">
+                        公開: 2026-10-17T03:50:32
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">LLM</span>
-                    <span class="tag">EV</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに ── なぜこの記事を書くのか
-LLMに「このチケットはどの部署宛てか」を答えさせるコードを、筆者は何度も書いてきました。JSONで返させ、パースし、検証し、落ちたら再試行する。判断は1行なのに、防御コードのほうが長くなるのが常でした。
-2026年9月15日、米T...
+                    アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/GeneLab_999/items/116aa006fbf93b68d791?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/vaon-luandv/items/a4719b247a0ec489e4c3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -155,60 +148,25 @@ LLMに「このチケットはどの部署宛てか」を答えさせるコー�
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>セキュリティ関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +181,16 @@ LLMに「このチケットはどの部署宛てか」を答えさせるコー�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_7892.html">
+                    <a href="Qiita_-_人気の記事_7611.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「AI があればプログラマーはいらない」という風潮が危険な理由</span>
+                        <span class="nav-title">【Hack The Box】Writeup: MonitorsFour</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Publickey_7621.html">
+                    <a href="iPhone_Mania_4104.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Android、パスキーをパスワードマネージャ間で転送可能に。Googleパスワードマネージャ、1P...</span>
+                        <span class="nav-title">AppleがAI生成の性的画像悪用対策を強化〜App Store規約改定</span>
                     </a>
                 </div>
             </div>
@@ -245,52 +203,53 @@ LLMに「このチケットはどの部署宛てか」を答えさせるコー�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1337.html">
-                        <h3>Ryzen AI 5 340搭載で24万円台！  23.8型ディスプレーの一体型デスクトップPCがFMV直販「目玉品」で...</h3>
+                    <a href="Qiita_-_人気の記事_8906.html">
+                        <h3>注文管理システムから学ぶセキュリティ対策「アクセス制御編」</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_2328.html">
-                        <h3>ゲーム開発に「ローカルLLM」を取り込む必然性とは？ メインメモリーの96GBをVRAM化するAI特化「DAIV」が示す...</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">ゲーム開発現場でどこまでローカルLLMや生成AIの実運用が可能なのか。新清士氏が実際に開発で活用している知見を披露。ローカルLLM運用の実践的意義と、そこから見えてきたPCハードウェアのパラダイムシフ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9525.html">
-                        <h3>OpenAI 安保理でAI安全策説明へ</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
-                        </div>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_825.html">
-                        <h3>文字起こし字幕編集ソフト「Zimaku」を公開。話者ごとの自動分離とAIチャット修正で、文字起こしから字幕修正を簡単に。...</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">文字起こし字幕編集ソフト「Zimaku」を公開。話者ごとの自動分離とAIチャット修正で、文字起こしから字幕修正を簡単に。ローカルでの文字起こしは無料。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2736.html">
-                        <h3>Claude Code が AGENTS.md を読むようになった。ただし1回目のセッションでは読まれない</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
+                            <span class="category">セキュリティ</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">277（2026-09-18）の changelog に、こう書かれています。 Added AGENTS. md support: in a project with no CLAUDE. md, C...</p>
+                        <p class="related-summary">はじめに 先日セキュリティの勉強会に参加しました。個人でもセキュリティに関する書籍を読んでいたものの、そこから学んだ知識を実務に活かすことの難しさを感じていました。システムの脆弱性に関する知識は増えた...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_6052.html">
+                        <h3>Linuxカーネルの深刻な脆弱性「PwnEscape」（CVE-2026-99999）、ゲストの仮想マシンからホスト側L...</h3>
+                        <div class="related-meta">
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">悪意のある攻撃者がLinuxの仮想マシンを不正に操作することで、仮想マシンの境界を抜けてホスト側のLinux OSで不正なコードを実行できる可能性がある脆弱性「PwnEscape」（CVE-2026-...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7611.html">
+                        <h3>【Hack The Box】Writeup: MonitorsFour</h3>
+                        <div class="related-meta">
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに この記事は、Hack The Box の MonitorsFour を攻略した際の手順を、再現しやすい形で整理したものです。 大まかな流れは以下です。 ポートスキャンとWeb列挙 APIの情...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_369.html">
+                        <h3>CVE-2026-99999（PwnEscape）を読み解く──「KVMの脆弱性」ではなく、Linuxネットワークスタッ...</h3>
+                        <div class="related-meta">
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">工程 担当 課題提示・取捨選択・内容チェック 筆者 原案作成・編成 Claude Fable 5. 1 事実検証（検証メモ） GPT-6 Astra 一次資料照合・最終稿 Claude Fable 5...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_2966.html">
+                        <h3>【セキュリティ】お客さんからの「うちは大丈夫？」に答えるため、IPAの点検項目をレガシーPHPのECサイトで上から順にや...</h3>
+                        <div class="related-meta">
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">連日の情報漏洩により、世間は何かと騒がしいですね。 やっぱりみなさん心配なようで、お仕事をしていると「うちは大丈夫なのか」とお問い合わせがやみません。 「これ、どういうつくりになってるんだっけ？ 外部...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docker環境をガチで軽量化するための鉄板設定まとめ | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに Docker環境が重すぎて頭を抱えている人は多いのではないでしょうか。 私自身も激重なDocker環境を触っていて、原因を一つずつ潰していった経験が何度かあります。 今回は、ローカルのDocker環境（Windows）を軽量化するための方法について、実際に.">
-    <meta name="keywords" content="Windows,Docker">
+    <title>画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る | 日本のテックニュース速報</title>
+    <meta name="description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Docker環境をガチで軽量化するための鉄板設定まとめ">
-    <meta property="og:description" content="はじめに Docker環境が重すぎて頭を抱えている人は多いのではないでしょうか。 私自身も激重なDocker環境を触っていて、原因を一つずつ潰していった経験が何度かあります。 今回は、ローカルのDocker環境（Windows）を軽量化するための方法について、実際に.">
+    <meta property="og:title" content="画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る">
+    <meta property="og:description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8551.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Docker環境をガチで軽量化するための鉄板設定まとめ">
-    <meta name="twitter:description" content="はじめに Docker環境が重すぎて頭を抱えている人は多いのではないでしょうか。 私自身も激重なDocker環境を触っていて、原因を一つずつ潰していった経験が何度かあります。 今回は、ローカルのDocker環境（Windows）を軽量化するための方法について、実際に.">
+    <meta name="twitter:title" content="画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る">
+    <meta name="twitter:description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Docker環境をガチで軽量化するための鉄板設定まとめ",
-        "description": "はじめに Docker環境が重すぎて頭を抱えている人は多いのではないでしょうか。 私自身も激重なDocker環境を触っていて、原因を一つずつ潰していった経験が何度かあります。 今回は、ローカルのDocker環境（Windows）を軽量化するための方法について、実際に.",
+        "headline": "画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る",
+        "description": "アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-06T23:56:41",
-        "dateModified": "2026-09-09T19:08:21.239257",
+        "datePublished": "2026-10-17T03:50:32",
+        "dateModified": "2026-10-18T13:49:12.984820",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8551.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8551.html",
-        "articleSection": "テクノロジー",
-        "keywords": ["Windows","Docker"]
+        "articleSection": "セキュリティ",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "セキュリティ",
+                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Docker環境をガチで軽量化するための鉄板設定まとめ",
+                "name": "画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8551.html"
             }
         ]
@@ -113,40 +113,33 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">Docker環境をガチで軽量化するための鉄板設定まとめ</li>
+                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
+                <li aria-current="page">画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Docker環境をガチで軽量化するための鉄板設定まとめ</h1>
+                <h1>画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/nolanlover0527/items/24ee07122dd4d0523069?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-09-06T23:56:41">
-                        公開: 2026-09-06T23:56:41
+                    <span class="source">出典: <a href="https://qiita.com/vaon-luandv/items/a4719b247a0ec489e4c3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: セキュリティ</span>
+                    <time datetime="2026-10-17T03:50:32">
+                        公開: 2026-10-17T03:50:32
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">Windows</span>
-                    <span class="tag">Docker</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-Docker環境が重すぎて頭を抱えている人は多いのではないでしょうか。
-私自身も激重なDocker環境を触っていて、原因を一つずつ潰していった経験が何度かあります。
-今回は、ローカルのDocker環境（Windows）を軽量化するための方法について、実際に...
+                    アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/nolanlover0527/items/24ee07122dd4d0523069?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/vaon-luandv/items/a4719b247a0ec489e4c3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -155,34 +148,9 @@ Docker環境が重すぎて頭を抱えている人は多いのではないで�
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Windows&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Windows - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Windows - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでWindowsに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Docker&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Docker - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Docker - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでDockerに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>セキュリティ関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -213,16 +181,16 @@ Docker環境が重すぎて頭を抱えている人は多いのではないで�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_4332.html">
+                    <a href="Qiita_-_人気の記事_5204.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【AWS初心者向け】インフラ構成を図解で理解しよう！ALB・ECS・RDS・Lambda・NAT G...</span>
+                        <span class="nav-title">【Hack The Box】Writeup: MonitorsFour</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_3886.html">
+                    <a href="気になる記になる_7214.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">GPT-5.6 Lunaを2ヶ月使い倒した結果、ガチでコスパ最強だった</span>
+                        <span class="nav-title">【Amazon プライム感謝祭】MINISFORUMのミニPCや外付けGPUドックなどが特価に</span>
                     </a>
                 </div>
             </div>
@@ -235,52 +203,53 @@ Docker環境が重すぎて頭を抱えている人は多いのではないで�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5448.html">
-                        <h3>プロペラの推力で倒れない「長い棒」、レーザーで鳥獣を追い払う--NTT系が99万円で発売</h3>
+                    <a href="Qiita_-_人気の記事_4593.html">
+                        <h3>注文管理システムから学ぶセキュリティ対策「アクセス制御編」</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">NTT e-Drone Technologyとミラテクドローンは9月8日、鳥を追い払うレーザーを伸縮棒の先端に取り付けた「たおれん棒（鳥獣害対策タイプ）」を9月30日に発売すると発表した。棒を最大約8...</p>
+                        <p class="related-summary">はじめに 先日セキュリティの勉強会に参加しました。個人でもセキュリティに関する書籍を読んでいたものの、そこから学んだ知識を実務に活かすことの難しさを感じていました。システムの脆弱性に関する知識は増えた...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6735.html">
-                        <h3>三井住友銀行とVpassアプリでPayPay残高を確認可能に　PayPay残高払いも予定</h3>
+                    <a href="Publickey_1473.html">
+                        <h3>Linuxカーネルの深刻な脆弱性「PwnEscape」（CVE-2026-99999）、ゲストの仮想マシンからホスト側L...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">三井住友銀行と三井住友カードは9月8日、「SMBC ID」と「PayPay」のアカウントを連携できるようにした。連携すると、「三井住友銀行アプリ」と「Vpassアプリ」の画面でPayPay残高を確認で...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1387.html">
-                        <h3>どこに行ってもクリーンな空気を！ 首かけ空気清浄機「MyComfyTech」</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7564.html">
-                        <h3>なぜ食洗機に「カメラ」が必要なのか？ ミーレ最新モデルの仕組みと狙い</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">ドイツの家電メーカーMiele（ミーレ）の最新型食器洗い機は、ドアの裏側に搭載されたカメラのほか、さまざまなスマート機能を備えている。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_6918.html">
-                        <h3>AWS、自然言語でデータ分析アプリを構築可能に、「Amazon Quick」に新機能</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">セキュリティ</span>
                             <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">Amazon Web Services（AWS）は、データ分析プラットフォーム「Amazon Quick」の新機能として、データ分析と表示を行うカスタムアプリケーションを自然言語の指示だけで構築できる...</p>
+                        <p class="related-summary">悪意のある攻撃者がLinuxの仮想マシンを不正に操作することで、仮想マシンの境界を抜けてホスト側のLinux OSで不正なコードを実行できる可能性がある脆弱性「PwnEscape」（CVE-2026-...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_5204.html">
+                        <h3>【Hack The Box】Writeup: MonitorsFour</h3>
+                        <div class="related-meta">
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに この記事は、Hack The Box の MonitorsFour を攻略した際の手順を、再現しやすい形で整理したものです。 大まかな流れは以下です。 ポートスキャンとWeb列挙 APIの情...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_4168.html">
+                        <h3>CVE-2026-99999（PwnEscape）を読み解く──「KVMの脆弱性」ではなく、Linuxネットワークスタッ...</h3>
+                        <div class="related-meta">
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">工程 担当 課題提示・取捨選択・内容チェック 筆者 原案作成・編成 Claude Fable 5. 1 事実検証（検証メモ） GPT-6 Astra 一次資料照合・最終稿 Claude Fable 5...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_5750.html">
+                        <h3>【セキュリティ】お客さんからの「うちは大丈夫？」に答えるため、IPAの点検項目をレガシーPHPのECサイトで上から順にや...</h3>
+                        <div class="related-meta">
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">連日の情報漏洩により、世間は何かと騒がしいですね。 やっぱりみなさん心配なようで、お仕事をしていると「うちは大丈夫なのか」とお問い合わせがやみません。 「これ、どういうつくりになってるんだっけ？ 外部...</p>
                     </a>
                 </article>
             </div>

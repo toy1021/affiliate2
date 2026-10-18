@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>コードレビューで「正しいけど刺さる」コメントをして後輩に距離を置かれた話 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 新人リーダーになったばかりの頃、後輩のPRに「このロジックだと将来バグります。設計から見直したほうがいいです」ってコメントしたことがあるんですよね。 技術的には間違ってなかったと思うんです。実際そのロジックには穴があって、指摘自体は妥当でした。でも次の日から、そ.">
-    <meta name="keywords" content="テクノロジー,ニュース,IT">
+    <title>async/await と Promise(then) の違いを、出力順で比べてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 筆者は、プログラミングスクールで JavaScript の非同期処理を学んでおり、その中である疑問にぶつかりました。 Promise のあとに async/await を学んで、「Promise をシンプルに書ける構文」という説明は理解できたのですが、await.">
+    <meta name="keywords" content="AI,JavaScript,Java">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="コードレビューで「正しいけど刺さる」コメントをして後輩に距離を置かれた話">
-    <meta property="og:description" content="はじめに 新人リーダーになったばかりの頃、後輩のPRに「このロジックだと将来バグります。設計から見直したほうがいいです」ってコメントしたことがあるんですよね。 技術的には間違ってなかったと思うんです。実際そのロジックには穴があって、指摘自体は妥当でした。でも次の日から、そ.">
+    <meta property="og:title" content="async/await と Promise(then) の違いを、出力順で比べてみた">
+    <meta property="og:description" content="はじめに 筆者は、プログラミングスクールで JavaScript の非同期処理を学んでおり、その中である疑問にぶつかりました。 Promise のあとに async/await を学んで、「Promise をシンプルに書ける構文」という説明は理解できたのですが、await.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3918.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="コードレビューで「正しいけど刺さる」コメントをして後輩に距離を置かれた話">
-    <meta name="twitter:description" content="はじめに 新人リーダーになったばかりの頃、後輩のPRに「このロジックだと将来バグります。設計から見直したほうがいいです」ってコメントしたことがあるんですよね。 技術的には間違ってなかったと思うんです。実際そのロジックには穴があって、指摘自体は妥当でした。でも次の日から、そ.">
+    <meta name="twitter:title" content="async/await と Promise(then) の違いを、出力順で比べてみた">
+    <meta name="twitter:description" content="はじめに 筆者は、プログラミングスクールで JavaScript の非同期処理を学んでおり、その中である疑問にぶつかりました。 Promise のあとに async/await を学んで、「Promise をシンプルに書ける構文」という説明は理解できたのですが、await.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "コードレビューで「正しいけど刺さる」コメントをして後輩に距離を置かれた話",
-        "description": "はじめに 新人リーダーになったばかりの頃、後輩のPRに「このロジックだと将来バグります。設計から見直したほうがいいです」ってコメントしたことがあるんですよね。 技術的には間違ってなかったと思うんです。実際そのロジックには穴があって、指摘自体は妥当でした。でも次の日から、そ.",
+        "headline": "async/await と Promise(then) の違いを、出力順で比べてみた",
+        "description": "はじめに 筆者は、プログラミングスクールで JavaScript の非同期処理を学んでおり、その中である疑問にぶつかりました。 Promise のあとに async/await を学んで、「Promise をシンプルに書ける構文」という説明は理解できたのですが、await.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-14T00:54:13",
-        "dateModified": "2026-09-17T00:10:38.697720",
+        "datePublished": "2026-10-18T08:36:06",
+        "dateModified": "2026-10-18T23:58:03.836673",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3918.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3918.html",
-        "articleSection": "テクノロジー",
-        "keywords": []
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","JavaScript","Java"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "コードレビューで「正しいけど刺さる」コメントをして後輩に距離を置かれた話",
+                "name": "async/await と Promise(then) の違いを、出力順で比べてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_3918.html"
             }
         ]
@@ -113,22 +113,27 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">コードレビューで「正しいけど刺さる」コメントをして後輩に距離を置かれた話</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">async/await と Promise(then) の違いを、出力順で比べてみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>コードレビューで「正しいけど刺さる」コメントをして後輩に距離を置かれた話</h1>
+                <h1>async/await と Promise(then) の違いを、出力順で比べてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/fe1ix/items/6d78460c9be9cacc1fce?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-09-14T00:54:13">
-                        公開: 2026-09-14T00:54:13
+                    <span class="source">出典: <a href="https://qiita.com/mmsbox/items/e1a201822b51b753e2ca?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-10-18T08:36:06">
+                        公開: 2026-10-18T08:36:06
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Java</span>
                 </div>
             </header>
 
@@ -136,12 +141,12 @@
                 
                 <div class="article-body">
                     はじめに
-新人リーダーになったばかりの頃、後輩のPRに「このロジックだと将来バグります。設計から見直したほうがいいです」ってコメントしたことがあるんですよね。
-技術的には間違ってなかったと思うんです。実際そのロジックには穴があって、指摘自体は妥当でした。でも次の日から、そ...
+筆者は、プログラミングスクールで JavaScript の非同期処理を学んでおり、その中である疑問にぶつかりました。
+Promise のあとに async/await を学んで、「Promise をシンプルに書ける構文」という説明は理解できたのですが、await...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/fe1ix/items/6d78460c9be9cacc1fce?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/mmsbox/items/e1a201822b51b753e2ca?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -150,25 +155,60 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
+                <div class="affiliate-section">
+                    <h3>記事内容に関連する商品</h3>
+                    <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=JavaScript&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="JavaScript - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">JavaScript - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでJavaScriptに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -183,16 +223,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_8889.html">
+                    <a href="ASCII_jp__トップ_732.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">private な GitHub Pages に独自ドメインを当てるときに気をつけること</span>
+                        <span class="nav-title">1万円前後でもノイキャン！ Amazonプライム感謝祭で狙いたい高コスパイヤホン5選</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_829.html">
+                    <a href="ASCII_jp__トップ_752.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">React Compiler を Babel なしで入れて、useMemo を書くか迷うのをやめた</span>
+                        <span class="nav-title">エンジン音を「超高級車」に変えるマシンが楽しい。“約9000円”で叶うV12サウンド</span>
                     </a>
                 </div>
             </div>
@@ -205,52 +245,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9105.html">
-                        <h3>荷物の「ポイ活」で再配達を減らす、生活者主導の新たな物流インフラ</h3>
+                    <a href="ASCII_jp__トップ_9981.html">
+                        <h3>Webサイトのデータベースを狙う攻撃が顕著に増加／情シス担当の半数が転職意向、背後にある変化／AI業務活用、実態は“AI...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">株式会社Every WiLLは9月4日、宅配伝票の撮影とアンケート回答により電子ポイントが付与される新サービス「自宅deトリイク」をローンチした。.</p>
+                        <p class="related-summary">今回（2026年10月10日～10月16日）は、ランサムウェア攻撃や国家支援型APT攻撃の最新動向、Webサイトに対する攻撃の急増やそこに見られる変化、情報システム担当者の転職意向とその背景、企画／マ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_2015.html">
-                        <h3>子どものSNS制限 EUが新法提案へ</h3>
+                    <a href="ASCII_jp__トップ_5682.html">
+                        <h3>GPT-4o級モデルが自宅のPCで動いた！　ローカルAIの常識を変える「Strata」</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
+                        <p class="related-summary">ローカルLLMの推論エンジン「Strata」を実機で検証。GPU・RAM・SSDを活用して巨大モデルを動かし、検索や画像生成へ拡張できる一方、社内運用ではRAM容量と複数人利用時の待ち時間が課題となっ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_7340.html">
-                        <h3>SaaS格付けで「Slack」が“S”評価なのは、妥当なんですか？</h3>
+                    <a href="ASCII_jp__トップ_4963.html">
+                        <h3>日本企業の「AI業務実装の壁」を打ち破る ― RPAのパイオニアが「AI×RPA×人」の統合基盤を国内展開</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">jpが実施している「SaaS最強Tierアンケート」にご協力ください！ あなたの回答、待ってます！.</p>
+                        <p class="related-summary">SS&amp;C Blue Prismは、2026年10月7日、業務自動化プラットフォーム「WorkHQ」の日本語版を提供開始した。これは、AIエージェントやRPA、人を適材適所でつなぎ、部分最適な自動化を全...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5806.html">
-                        <h3>キヤノンが懐かしい直線デザインの小型軽量フルサイズカメラ「EOS R8 Mark II」を発表</h3>
+                    <a href="ASCII_jp__トップ_4705.html">
+                        <h3>自然言語で業務手順をコード化、チーム運用と制御を備えたAIエージェント実行基盤</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">キヤノンは新デザインを採用した小型・軽量のフルサイズミラーレスカメラ「EOS R8 Mark II」を発表しました.</p>
+                        <p class="related-summary">株式会社デライトは10月13日、AIエージェント実行基盤「Agentino（エージェンティーノ）」のPublic β版の提供を開始したと発表した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1327.html">
-                        <h3>RTX 5080・Ryzen 7 9800X3D搭載PCも対象！ 9月17日限定セール</h3>
+                    <a href="ASCII_jp__トップ_8192.html">
+                        <h3>米国で相次ぐ原発の「出力増強」、AIの電力需要を賄えるか？</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">パソコンショップSEVENを運営するセブンアールジャパンが9月17日限定で実施する24時間限定セール。最新ゲーミングPCやデスクトップPCを対象に最大76,000円オフとなり、ZEFT R60IH、Z...</p>
+                        <p class="related-summary">.</p>
                     </a>
                 </article>
             </div>

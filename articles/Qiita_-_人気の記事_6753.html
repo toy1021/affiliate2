@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code Action と Copilot レビューで GitHub Actions の失敗を自己修復するパイプラインを作った話 | 日本のテックニュース速報</title>
-    <meta name="description" content="Claude Code Action と Copilot レビューで GitHub Actions の失敗を自己修復するパイプラインを作った話 OSS の上流を追いかけながら日本語化したフォークを、できれば人手をかけずに継続リリースしたいですよね。最新のテクノロジー情報をお届けします。">
-    <meta name="keywords" content="Claude,GitHub,本">
+    <title>画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る | 日本のテックニュース速報</title>
+    <meta name="description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Code Action と Copilot レビューで GitHub Actions の失敗を自己修復するパイプラインを作った話">
-    <meta property="og:description" content="Claude Code Action と Copilot レビューで GitHub Actions の失敗を自己修復するパイプラインを作った話 OSS の上流を追いかけながら日本語化したフォークを、できれば人手をかけずに継続リリースしたいですよね。最新のテクノロジー情報をお届けします。">
+    <meta property="og:title" content="画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る">
+    <meta property="og:description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6753.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Code Action と Copilot レビューで GitHub Actions の失敗を自己修復するパイプラインを作った話">
-    <meta name="twitter:description" content="Claude Code Action と Copilot レビューで GitHub Actions の失敗を自己修復するパイプラインを作った話 OSS の上流を追いかけながら日本語化したフォークを、できれば人手をかけずに継続リリースしたいですよね。最新のテクノロジー情報をお届けします。">
+    <meta name="twitter:title" content="画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る">
+    <meta name="twitter:description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Code Action と Copilot レビューで GitHub Actions の失敗を自己修復するパイプラインを作った話",
-        "description": "Claude Code Action と Copilot レビューで GitHub Actions の失敗を自己修復するパイプラインを作った話 OSS の上流を追いかけながら日本語化したフォークを、できれば人手をかけずに継続リリースしたいですよね。最新のテクノロジー情報をお届けします。",
+        "headline": "画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る",
+        "description": "アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-01T02:36:12",
-        "dateModified": "2026-06-02T08:44:45.020656",
+        "datePublished": "2026-10-17T03:50:32",
+        "dateModified": "2026-10-19T09:39:43.321401",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6753.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6753.html",
-        "articleSection": "プログラミング",
-        "keywords": ["Claude","GitHub","本"]
+        "articleSection": "セキュリティ",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "セキュリティ",
+                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Code Action と Copilot レビューで GitHub Actions の失敗を自己修復するパイプラインを作った話",
+                "name": "画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6753.html"
             }
         ]
@@ -113,39 +113,33 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Claude Code Action と Copilot レビューで GitHub Actions ...</li>
+                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
+                <li aria-current="page">画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Code Action と Copilot レビューで GitHub Actions の失敗を自己修復するパイプラインを作った話</h1>
+                <h1>画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/jqit-yukiono/items/04b86ec7601e055c6fe8?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-06-01T02:36:12">
-                        公開: 2026-06-01T02:36:12
+                    <span class="source">出典: <a href="https://qiita.com/vaon-luandv/items/a4719b247a0ec489e4c3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: セキュリティ</span>
+                    <time datetime="2026-10-17T03:50:32">
+                        公開: 2026-10-17T03:50:32
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">Claude</span>
-                    <span class="tag">GitHub</span>
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Claude Code Action と Copilot レビューで GitHub Actions の失敗を自己修復するパイプラインを作った話
-OSS の上流を追いかけながら日本語化したフォークを、できれば人手をかけずに継続リリースしたいですよね。とはいえメンテに張り付く...
+                    アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/jqit-yukiono/items/04b86ec7601e055c6fe8?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/vaon-luandv/items/a4719b247a0ec489e4c3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -154,60 +148,25 @@ OSS の上流を追いかけながら日本語化したフォークを、でき�
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">GitHub - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>セキュリティ関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +181,16 @@ OSS の上流を追いかけながら日本語化したフォークを、でき�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_7886.html">
+                    <a href="iPhone_Mania_7429.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「お願いします」だけじゃ仕事は進まない？依頼力について</span>
+                        <span class="nav-title">【第9回アンケート】iPhone Duo 予約できましたか？ いつ届くか教えてください</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_1515.html">
+                    <a href="Qiita_-_人気の記事_5828.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【入社エントリ】長年勤めたメーカーを辞めて松尾研究所に入社した話</span>
+                        <span class="nav-title">2026年10月17日 今日のQiitaトレンド記事をポッドキャストで聴こう！</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +203,23 @@ OSS の上流を追いかけながら日本語化したフォークを、でき�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1462.html">
-                        <h3>【法政大学名誉教授・陣内秀信氏】スクラップ＆ビルドから「空間人類学」へ。江戸の地形と水網が再起動する、水都東京の未来OS</h3>
+                    <a href="Publickey_8777.html">
+                        <h3>Linuxカーネルの深刻な脆弱性「PwnEscape」（CVE-2026-99999）、ゲストの仮想マシンからホスト側L...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">第11回は、法政大学名誉教授であり、イタリア建築史・都市史、空間人類学、水辺の都市再生の第一人者である陣内秀信氏。「これからの理科は、生物と地学なんです」。陣内さんがさらりと言い放ったこの一言は、現代...</p>
+                        <p class="related-summary">悪意のある攻撃者がLinuxの仮想マシンを不正に操作することで、仮想マシンの境界を抜けてホスト側のLinux OSで不正なコードを実行できる可能性がある脆弱性「PwnEscape」（CVE-2026-...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4912.html">
-                        <h3>【初心者向け】シナリオテストとは？ユーザー視点でバグを減らす考え方</h3>
+                    <a href="Qiita_-_人気の記事_1783.html">
+                        <h3>CVE-2026-99999（PwnEscape）を読み解く──「KVMの脆弱性」ではなく、Linuxネットワークスタッ...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">セキュリティ</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは。ソーイ株式会社の工藤です。 本記事では、開発中のプロダクトのソフトウェアテストについて整理し、特に「シナリオテスト」がどのようにバグ発見やリリース品質の向上につながるのかをまとめ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8307.html">
-                        <h3>「コードを書く人」から「課題を解決するエンジニア」になるためには</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">株式会社PRUMのmasaです。 エンジニアに転職したあと「技術を覚えたら終わり」じゃないことに気づいたのは現場に出てからでした。 今回は今のエンジニアに求められること、成長を早める思考習慣を一緒に見...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4860.html">
-                        <h3>チーム開発の認識ズレを入口で潰す。OpenSpec に「AI が先に質問する」工程を足して比べてみた</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに こんにちは鷹野です。 私は4月から仕様駆動開発（SDD）を取り入れるための新チームにジョインしました。 Claude Code もその時から触り始めた初心者です。そんな中、約2ヶ月の仕様駆動...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6422.html">
-                        <h3>競争か統制か？ ― “供給能力”から読み解く日本経済の落とし穴 : Pythonで学ぶ マクロ経済学入門 (86)</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">user: 「Pythonで学ぶマクロ経済学入門」、第86回を始めましょう。まず前回の復習として、 「減税か給付か？ ― 財源幻想を超えて考える“需要”と“供給力” : Pythonで学ぶ マクロ経済...</p>
+                        <p class="related-summary">工程 担当 課題提示・取捨選択・内容チェック 筆者 原案作成・編成 Claude Fable 5. 1 事実検証（検証メモ） GPT-6 Astra 一次資料照合・最終稿 Claude Fable 5...</p>
                     </a>
                 </article>
             </div>

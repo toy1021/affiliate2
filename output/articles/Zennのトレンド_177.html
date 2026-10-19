@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>「Claude Codeに全部やらせる時代が来た」のか検証してみた | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに こんにちは。セキュリティエンジニアの@okazu_dmです。 この記事は、最近リリースされたLLMベースのセキュリティスキャンツールとしてclaude-security-scan を使ってみた所感の記事です。 先週、以下の記事を見つけました">
-    <meta name="keywords" content="Claude,LLM,本">
+    <title>コネクタも API も無いサービスを、Claude Code に操作させる | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは、e-dash の中島です。 SRE として認証基盤やインフラを見ています。 Claude Code から外部サービスを操作するときは、MCP のコネクタを使います。 Notion や GitHub のように広く使われているサービスなら、だいたい用意されています">
+    <meta name="keywords" content="Claude,Chrome,GitHub">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="「Claude Codeに全部やらせる時代が来た」のか検証してみた">
-    <meta property="og:description" content="はじめに こんにちは。セキュリティエンジニアの@okazu_dmです。 この記事は、最近リリースされたLLMベースのセキュリティスキャンツールとしてclaude-security-scan を使ってみた所感の記事です。 先週、以下の記事を見つけました">
+    <meta property="og:title" content="コネクタも API も無いサービスを、Claude Code に操作させる">
+    <meta property="og:description" content="こんにちは、e-dash の中島です。 SRE として認証基盤やインフラを見ています。 Claude Code から外部サービスを操作するときは、MCP のコネクタを使います。 Notion や GitHub のように広く使われているサービスなら、だいたい用意されています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_177.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="「Claude Codeに全部やらせる時代が来た」のか検証してみた">
-    <meta name="twitter:description" content="はじめに こんにちは。セキュリティエンジニアの@okazu_dmです。 この記事は、最近リリースされたLLMベースのセキュリティスキャンツールとしてclaude-security-scan を使ってみた所感の記事です。 先週、以下の記事を見つけました">
+    <meta name="twitter:title" content="コネクタも API も無いサービスを、Claude Code に操作させる">
+    <meta name="twitter:description" content="こんにちは、e-dash の中島です。 SRE として認証基盤やインフラを見ています。 Claude Code から外部サービスを操作するときは、MCP のコネクタを使います。 Notion や GitHub のように広く使われているサービスなら、だいたい用意されています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "「Claude Codeに全部やらせる時代が来た」のか検証してみた",
-        "description": "はじめに こんにちは。セキュリティエンジニアの@okazu_dmです。 この記事は、最近リリースされたLLMベースのセキュリティスキャンツールとしてclaude-security-scan を使ってみた所感の記事です。 先週、以下の記事を見つけました",
+        "headline": "コネクタも API も無いサービスを、Claude Code に操作させる",
+        "description": "こんにちは、e-dash の中島です。 SRE として認証基盤やインフラを見ています。 Claude Code から外部サービスを操作するときは、MCP のコネクタを使います。 Notion や GitHub のように広く使われているサービスなら、だいたい用意されています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-05T23:00:06",
-        "dateModified": "2026-05-09T16:57:27.626125",
+        "datePublished": "2026-10-16T09:19:08",
+        "dateModified": "2026-10-19T09:39:43.317547",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_177.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_177.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["Claude","LLM","本"]
+        "articleSection": "プログラミング",
+        "keywords": ["Claude","Chrome","GitHub"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "プログラミング",
+                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "「Claude Codeに全部やらせる時代が来た」のか検証してみた",
+                "name": "コネクタも API も無いサービスを、Claude Code に操作させる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_177.html"
             }
         ]
@@ -113,44 +113,46 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">「Claude Codeに全部やらせる時代が来た」のか検証してみた</li>
+                <li><a href="../#category=プログラミング">プログラミング</a></li>
+                <li aria-current="page">コネクタも API も無いサービスを、Claude Code に操作させる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>「Claude Codeに全部やらせる時代が来た」のか検証してみた</h1>
+                <h1>コネクタも API も無いサービスを、Claude Code に操作させる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/okazu_dm/articles/83957f1623ec4d" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-05-05T23:00:06">
-                        公開: 2026-05-05T23:00:06
+                    <span class="source">出典: <a href="https://zenn.dev/edash_tech_blog/articles/6250fc61ccf009" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: プログラミング</span>
+                    <time datetime="2026-10-16T09:19:08">
+                        公開: 2026-10-16T09:19:08
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">Claude</span>
-                    <span class="tag">LLM</span>
-                    <span class="tag">本</span>
+                    <span class="tag">Chrome</span>
+                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-こんにちは。セキュリティエンジニアの@okazu_dmです。
-この記事は、最近リリースされたLLMベースのセキュリティスキャンツールとしてclaude-security-scan を使ってみた所感の記事です。
-
-先週、以下の記事を見つけました。
-
-検出率100%という結果が紹介されており、Claude Codeに全部やらせる時代が来た、というタイトルから「楽な時代が来たな」と思ったのですが、実際のところどの程度やらせることができるのかを検証するため、より網羅的に脆弱性が仕込まれている OWASP Juice Shop で再評価してみました。本記事ではその結果と、LLMベース...
+                    こんにちは、e-dash の中島です。
+SRE として認証基盤やインフラを見ています。
+Claude Code から外部サービスを操作するときは、MCP のコネクタを使います。
+Notion や GitHub のように広く使われているサービスなら、だいたい用意されています。
+自動化を進めていくと、コネクタも API も無いサービスがどうしても残ります。
+業務に合わせて選んだ小さな SaaS や、社内向けの管理コンソールです。
+設定を変えるにも状態を見るにも、人が画面を開くしかありません。
+Claude Code に Chrome 拡張をつなぐと、ここに入口ができます。
+画面をそのまま読ま...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/okazu_dm/articles/83957f1623ec4d" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/edash_tech_blog/articles/6250fc61ccf009" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -173,20 +175,20 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Chrome&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Chrome - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-title">Chrome - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでChromeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -196,23 +198,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>プログラミング関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">技術書 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +229,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_273.html">
+                    <a href="気になる記になる_4688.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">iOS26.5の主な3つの改良点は？watchOS26.5はバッテリー消費改善報告も</span>
+                        <span class="nav-title">楽天モバイルが｢iPhone Duo｣の機種代金を発表 ｰ 一括43.3万円〜、実質負担額は約17....</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2668.html">
+                    <a href="気になる記になる_3386.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AI駆動開発時代に、おさえておきたいQA技法</span>
+                        <span class="nav-title">【Amazon プライム感謝祭】ESRのiPhone・iPad・AirPods・Apple Watc...</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +251,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4636.html">
-                        <h3>AIエージェント搭載スマホ「Natural AI Phone」実機レビュー　将来性はあるのだろうが現状は…</h3>
+                    <a href="Zennのトレンド_6466.html">
+                        <h3>AI時代、配布するPythonコードをどう守るか: 難読化の実験と判断軸</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">ソフトバンクが米Brain Technologiesと組んで4月17日に発表した「Natural AI Phone」は、AIボタン一つで画面の内容を読み取って次の行動を提案するAIエージェント搭載スマ...</p>
+                        <p class="related-summary">はじめに こんにちは。PKSHA Technology でソフトウェアエンジニアをしている山本です。 2026 年 8 月 22 日に広島で開催された PyCon JP 2026 にて、「AI 時代、...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7507.html">
-                        <h3>グーグルDeepMind、宇宙MMO「EVE Online」でAIを訓練へ</h3>
+                    <a href="Qiita_-_人気の記事_7072.html">
+                        <h3>耳で聞く！Python で学ぶ マクロ経済学 入門 全20回総復習</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">Google DeepMindは5月6日、人気のロールプレイングゲーム「EVE Online」をAIの訓練に使用する計画を発表した。.</p>
+                        <p class="related-summary">user: ソース動画のタイトル、そしてこの動画の内容について教えてください。 Gemini: ご提示いただいたソース動画のタイトル、およびその詳しい内容について解説します。 動画のタイトル 「日本の...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1603.html">
-                        <h3>「AIが医師を名乗るのは違法」と開発企業を提訴　米ペンシルベニア州</h3>
+                    <a href="Zennのトレンド_7326.html">
+                        <h3>Claude Codeのステップごとのレビューを既定から外した理由</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">AI」を運営するAI企業Character Technologiesを提訴した。. ペンシルベニア州政府は、「Character.</p>
+                        <p class="related-summary">Claude Code で開発を回す自分のハーネス（設定やスキルを組み合わせた、自分用の開発の回し方）から、実装の1ステップごとにレビュー担当のサブエージェントを立てていた層を外しました。今はセキュリ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4973.html">
-                        <h3>ネットの求人詐欺が急増中　AIで「安く速く簡単に」</h3>
+                    <a href="Qiita_-_人気の記事_8085.html">
+                        <h3>ログ調査のたびに検索→前後確認→コピーを繰り返すのがつらくて、VS Code拡張機能を作ってみた</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">求人情報が本物かどうかを確認し、詐欺に注意することがますます重要になっている。.</p>
+                        <p class="related-summary">はじめに ログを見やすくするVS Code拡張機能を作成しました。 動作イメージ 開発中にアプリケーションのログを確認するとき、ちょっと面倒だなと思うことがありませんか？ ログファイルを開いて、キーワ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8271.html">
-                        <h3>ソニーCEO「AIはクリエイターを代替しない」　ヒトの創造性が中心と強調</h3>
+                    <a href="Zennのトレンド_6586.html">
+                        <h3>アプリケーションの自動テストとデプロイをCircleCIからGitHub Actionsに移行した</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">ソニーグループで社長CEOを務める十時裕樹氏は2026年度の経営方針説明会で、AIについて「ソニーグループの各事業にとって最重要テーマ」と位置付けた。一方で、「人のクリエイティビティが常に中心にあるべ...</p>
+                        <p class="related-summary">こんにちは！ツクリンクでエンジニアをしている oieioi です。 ツクリンクは開発用の CI を CircleCI から GitHub Actions に移行しました。移行してから半年間障害なく運用...</p>
                     </a>
                 </article>
             </div>

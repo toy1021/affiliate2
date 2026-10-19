@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新規事業を牽引する技術選定 〜フルスタックTypeScript開発の実践事例〜 | 日本のテックニュース速報</title>
-    <meta name="description" content="この記事は2026年6月9日(火) Findy Freelance Eventの登壇資料（Marp）を、ほぼそのままMarkdownに変換した記事となります。 ベースがMarp前提の発表内容なので、一部見づらい点があるかもしれません">
-    <meta name="keywords" content="AI,EV">
+    <title>ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた | 日本のテックニュース速報</title>
+    <meta name="description" content="階層ナビゲーション型RAGとは 「階層ナビゲーション型RAG」は、ベクトルDBを使わずに文書を探すRAGです。準備段階で文書の山から階層的な目次を自動で作っておき、質問が来たらLLMがその目次を上から順に辿って、答えが書かれていそうな文書を選びます">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="新規事業を牽引する技術選定 〜フルスタックTypeScript開発の実践事例〜">
-    <meta property="og:description" content="この記事は2026年6月9日(火) Findy Freelance Eventの登壇資料（Marp）を、ほぼそのままMarkdownに変換した記事となります。 ベースがMarp前提の発表内容なので、一部見づらい点があるかもしれません">
+    <meta property="og:title" content="ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた">
+    <meta property="og:description" content="階層ナビゲーション型RAGとは 「階層ナビゲーション型RAG」は、ベクトルDBを使わずに文書を探すRAGです。準備段階で文書の山から階層的な目次を自動で作っておき、質問が来たらLLMがその目次を上から順に辿って、答えが書かれていそうな文書を選びます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6419.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="新規事業を牽引する技術選定 〜フルスタックTypeScript開発の実践事例〜">
-    <meta name="twitter:description" content="この記事は2026年6月9日(火) Findy Freelance Eventの登壇資料（Marp）を、ほぼそのままMarkdownに変換した記事となります。 ベースがMarp前提の発表内容なので、一部見づらい点があるかもしれません">
+    <meta name="twitter:title" content="ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた">
+    <meta name="twitter:description" content="階層ナビゲーション型RAGとは 「階層ナビゲーション型RAG」は、ベクトルDBを使わずに文書を探すRAGです。準備段階で文書の山から階層的な目次を自動で作っておき、質問が来たらLLMがその目次を上から順に辿って、答えが書かれていそうな文書を選びます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "新規事業を牽引する技術選定 〜フルスタックTypeScript開発の実践事例〜",
-        "description": "この記事は2026年6月9日(火) Findy Freelance Eventの登壇資料（Marp）を、ほぼそのままMarkdownに変換した記事となります。 ベースがMarp前提の発表内容なので、一部見づらい点があるかもしれません",
+        "headline": "ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた",
+        "description": "階層ナビゲーション型RAGとは 「階層ナビゲーション型RAG」は、ベクトルDBを使わずに文書を探すRAGです。準備段階で文書の山から階層的な目次を自動で作っておき、質問が来たらLLMがその目次を上から順に辿って、答えが書かれていそうな文書を選びます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-10T01:46:27",
-        "dateModified": "2026-06-11T04:01:45.053414",
+        "datePublished": "2026-10-16T02:30:05",
+        "dateModified": "2026-10-19T09:39:43.317930",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6419.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6419.html",
-        "articleSection": "プログラミング",
-        "keywords": ["AI","EV"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "新規事業を牽引する技術選定 〜フルスタックTypeScript開発の実践事例〜",
+                "name": "ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6419.html"
             }
         ]
@@ -113,40 +113,43 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">新規事業を牽引する技術選定 〜フルスタックTypeScript開発の実践事例〜</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>新規事業を牽引する技術選定 〜フルスタックTypeScript開発の実践事例〜</h1>
+                <h1>ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/katsumanarisawa/articles/c3dd3e8371d4d7" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-06-10T01:46:27">
-                        公開: 2026-06-10T01:46:27
+                    <span class="source">出典: <a href="https://zenn.dev/aiforall/articles/8e1803396534de" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-10-16T02:30:05">
+                        公開: 2026-10-16T02:30:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">EV</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事は2026年6月9日(火) Findy Freelance Eventの登壇資料（Marp）を、ほぼそのままMarkdownに変換した記事となります。
-ベースがMarp前提の発表内容なので、一部見づらい点があるかもしれません。以下で同内容のスライドも公開しているので、そちらもご覧ください。
-https://speakerdeck.com/nullnull/xin-gui-shi-ye-woqian-yin-suruji-shu-xuan-ding-hurusutatukutypescriptkai-fa-noshi-jian-shi-li
-※せっかくMarpで作ったので、Zenn...
+                    階層ナビゲーション型RAGとは
+「階層ナビゲーション型RAG」は、ベクトルDBを使わずに文書を探すRAGです。準備段階で文書の山から階層的な目次を自動で作っておき、質問が来たらLLMがその目次を上から順に辿って、答えが書かれていそうな文書を選びます。質問のたびにベクトル検索をしない点が、一般的なベクトルDB版RAGとの違いです。
+この記事では、この仕組みを論文の手法(Corpus2Skill)を参考に自作し、ベクトルDB版RAGと同じデータ・同じ質問で比較しました。
+
+ 結論
+
+28文書・20問の小規模な比較では、正答数は同等でした(どちらも20問中16問)。
+階層ナビゲーション型は...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/katsumanarisawa/articles/c3dd3e8371d4d7" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/aiforall/articles/8e1803396534de" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,20 +162,10 @@ https://speakerdeck.com/nullnull/xin-gui-shi-ye-woqian-yin-suruji-shu-xuan-ding-
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -188,27 +181,37 @@ https://speakerdeck.com/nullnull/xin-gui-shi-ye-woqian-yin-suruji-shu-xuan-ding-
                                 </div>
                             </a>
                         </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +226,16 @@ https://speakerdeck.com/nullnull/xin-gui-shi-ye-woqian-yin-suruji-shu-xuan-ding-
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2777.html">
+                    <a href="Zennのトレンド_670.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">LLM時代に非構造化データを構造化して扱う設計を考える</span>
+                        <span class="nav-title">有名 OSS が PR を閉じはじめた。何が起きていて、どう向き合うか</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_8741.html">
+                    <a href="Zennのトレンド_8312.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Nuxt で Pinia と Nuxt Plugin を活用してナビゲーション履歴管理を実現する</span>
+                        <span class="nav-title">技術書を年に数冊しか買わない自分に、O&#39;Reillyのサブスク年$150は割に合うか（ACM経由で契...</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +248,53 @@ https://speakerdeck.com/nullnull/xin-gui-shi-ye-woqian-yin-suruji-shu-xuan-ding-
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2516.html">
-                        <h3>生きた哺乳類の生体組織を透明化する試薬を開発</h3>
+                    <a href="ASCII_jp__トップ_4946.html">
+                        <h3>全自動お手入れ対応！ Ankerのロボット掃除機「Eufy E25」が爆安</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">九州大学大学院医学研究院の稲垣成矩助教、今井猛主幹教授らの研究チームは、生きた培養細胞をさまざまな屈折率の液体に浸して光の透過しやすさを観察。その結果、細胞外液の屈折率を1. 37にすると生きた細胞が...</p>
+                        <p class="related-summary">jpでAnkerのロボット掃除機「Eufy (ユーフィ) Robot Vacuum Omni E25」がプライム感謝祭セール中です。AIカメラ搭載で障害物を回避し、掃除からモップの洗浄まで全自動で対応...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_7993.html">
-                        <h3>Insta360、同社初のポケットジンバルカメラ｢Insta360 Luna Ultra｣を米国で発表 ｰ デュアルカメ...</h3>
+                    <a href="ASCII_jp__トップ_3843.html">
+                        <h3>ゼロボード、AI機能「Dr.Zero」の大幅刷新と「Zeroboard Headless」構想を発表</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">本日、Insta360が、米国にて同社初のポケットジンバルカメラ「Insta360 Luna Ultra」を正式に発表しました。 「Insta360 Luna Ultra」は、Leicaとの共同開発に...</p>
+                        <p class="related-summary">Zero」の大幅刷新と「Zeroboard Headless」構想を発表.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_4861.html">
-                        <h3>ログラス5daysインターンシップ参加体験記：価値のあるエンジニアとは</h3>
+                    <a href="ASCII_jp__トップ_5771.html">
+                        <h3>「Dify」を開発するLangGenius、AIカンファレンス「IF Con Tokyo 2026」を開催。企業のAIは...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに ログラス5daysインターンシップに参加し、覚えきれないほど学ぶことがあったので体験記を書きました。私はインターン中、顧客の価値についてやチームビルディングに注力していたので技術的なことはこ...</p>
+                        <p class="related-summary">「Dify」を開発するLangGenius、AIカンファレンス「IF Con Tokyo 2026」を開催。企業のAIは“導入”から“業務プロセスの再設計”へ.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_2774.html">
-                        <h3>データエンジニアこそ組織のオントロジーに向き合うべき</h3>
+                    <a href="ASCII_jp__トップ_6359.html">
+                        <h3>生成AIが選ぶ「wifiレンタル」、1位はWiFiレンタルどっとこむ（言及率96.3%）【2026年9月調査】</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">こんにちは、クラシルでデータエンジニアをしているharry(@gappy50)です。 クラシルでは、これまでAI-Readyなデータ利活用に取り組んできました。Tier設計でデータの信頼性を担保したり...</p>
+                        <p class="related-summary">生成AIが選ぶ「wifiレンタル」、1位はWiFiレンタルどっとこむ（言及率96.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_5789.html">
-                        <h3>マルチテナント化のために本番稼働中のMySQLをPostgreSQLに移行した話（マルチテナント化連載 第2回・Post...</h3>
+                    <a href="iPhone_Mania_9572.html">
+                        <h3>ドコモiPhone Air残価変更〜512GB・1TBは早期利用特典0円</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">iPhone Mania</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは。株式会社カウンターワークスにて、テックリードとして、リーシングのDXを実現するクラウド管理システム 「ショップカウンター エンタープライズ」（以下 SCE）を開発しております s...</p>
+                        <p class="related-summary">NTTドコモは2026年10月14日、「いつでもカエドキプログラム」におけるiPhone Airの残価設定などを10月16日以降に変更すると発表しました。対象は512GBと1TBの2容量で、機種変更・...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Agentに自由な開発環境を渡す、Proxmox+LXCで。 | 日本のテックニュース速報</title>
-    <meta name="description" content="こんにちは uzullaです。もはやAIエージェントに作業をさせることがお仕事みたいな時代になりましたね。 Agentに作業をさせるのだから「Enterをおすだけのかんたんなおしごと」は減らして、できるだけロングランしてほしい">
-    <meta name="keywords" content="AI,Docker">
+    <title>個人で使うClaude Codeの権限設定についてざっくり見直してみた | 日本のテックニュース速報</title>
+    <meta name="description" content="Claude Codeの権限設定を適当に済ませたままだったので見直してみた内容を記録する。理想はコンテナ化するなどホスト環境を隔離することになると思うが、個人端末でライトに運用することを前提とした際にClaude Codeの設定だけでどこまで防御できるか確認したかったイメージである">
+    <meta name="keywords" content="Claude,Mac,macOS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AI Agentに自由な開発環境を渡す、Proxmox+LXCで。">
-    <meta property="og:description" content="こんにちは uzullaです。もはやAIエージェントに作業をさせることがお仕事みたいな時代になりましたね。 Agentに作業をさせるのだから「Enterをおすだけのかんたんなおしごと」は減らして、できるだけロングランしてほしい">
+    <meta property="og:title" content="個人で使うClaude Codeの権限設定についてざっくり見直してみた">
+    <meta property="og:description" content="Claude Codeの権限設定を適当に済ませたままだったので見直してみた内容を記録する。理想はコンテナ化するなどホスト環境を隔離することになると思うが、個人端末でライトに運用することを前提とした際にClaude Codeの設定だけでどこまで防御できるか確認したかったイメージである">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1381.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Agentに自由な開発環境を渡す、Proxmox+LXCで。">
-    <meta name="twitter:description" content="こんにちは uzullaです。もはやAIエージェントに作業をさせることがお仕事みたいな時代になりましたね。 Agentに作業をさせるのだから「Enterをおすだけのかんたんなおしごと」は減らして、できるだけロングランしてほしい">
+    <meta name="twitter:title" content="個人で使うClaude Codeの権限設定についてざっくり見直してみた">
+    <meta name="twitter:description" content="Claude Codeの権限設定を適当に済ませたままだったので見直してみた内容を記録する。理想はコンテナ化するなどホスト環境を隔離することになると思うが、個人端末でライトに運用することを前提とした際にClaude Codeの設定だけでどこまで防御できるか確認したかったイメージである">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AI Agentに自由な開発環境を渡す、Proxmox+LXCで。",
-        "description": "こんにちは uzullaです。もはやAIエージェントに作業をさせることがお仕事みたいな時代になりましたね。 Agentに作業をさせるのだから「Enterをおすだけのかんたんなおしごと」は減らして、できるだけロングランしてほしい",
+        "headline": "個人で使うClaude Codeの権限設定についてざっくり見直してみた",
+        "description": "Claude Codeの権限設定を適当に済ませたままだったので見直してみた内容を記録する。理想はコンテナ化するなどホスト環境を隔離することになると思うが、個人端末でライトに運用することを前提とした際にClaude Codeの設定だけでどこまで防御できるか確認したかったイメージである",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-06T11:12:08",
-        "dateModified": "2026-07-09T21:24:48.980958",
+        "datePublished": "2026-10-18T23:00:08",
+        "dateModified": "2026-10-19T22:04:25.843417",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1381.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1381.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Docker"]
+        "keywords": ["Claude","Mac","macOS"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AI Agentに自由な開発環境を渡す、Proxmox+LXCで。",
+                "name": "個人で使うClaude Codeの権限設定についてざっくり見直してみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_1381.html"
             }
         ]
@@ -114,39 +114,48 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AI Agentに自由な開発環境を渡す、Proxmox+LXCで。</li>
+                <li aria-current="page">個人で使うClaude Codeの権限設定についてざっくり見直してみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AI Agentに自由な開発環境を渡す、Proxmox+LXCで。</h1>
+                <h1>個人で使うClaude Codeの権限設定についてざっくり見直してみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/uzulla/articles/91272997a7c668" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/takyshu98/articles/915702cf8c84f3" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-07-06T11:12:08">
-                        公開: 2026-07-06T11:12:08
+                    <time datetime="2026-10-18T23:00:08">
+                        公開: 2026-10-18T23:00:08
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Docker</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">Mac</span>
+                    <span class="tag">macOS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    こんにちは uzullaです。もはやAIエージェントに作業をさせることがお仕事みたいな時代になりましたね。
-Agentに作業をさせるのだから「Enterをおすだけのかんたんなおしごと」は減らして、できるだけロングランしてほしい。
-そうなると「エージェントが好き勝手できる」かどうかは重要なポイントです。しかし、自分の作業マシンでそのまま動かすのは怖いですよね、Agentによかれと変なコマンド実行されたり、なんかツールをいれられたら環境が汚れるし（いれていいとしてもそれの精査の手間がかかるし）、ホスト名やポートはかぶるし、DockerのImageとかの名前衝突したり…。
-そこで私は、Prox...
+                    Claude Codeの権限設定を適当に済ませたままだったので見直してみた内容を記録する。理想はコンテナ化するなどホスト環境を隔離することになると思うが、個人端末でライトに運用することを前提とした際にClaude Codeの設定だけでどこまで防御できるか確認したかったイメージである。
+
+設定環境
+
+macOS - Golden Gate 27.0.1
+Claude Code - 2.1.296
+
+
+ リスクの整理と要件
+最初に防ぐべきリスクを整理する。一般的にはClaudeからの期待していない要求やプロンプトインジェクションによって起こり得る以下の事象であると考えられる。
+
+① 秘匿情報...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/uzulla/articles/91272997a7c668" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/takyshu98/articles/915702cf8c84f3" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -159,30 +168,30 @@ Agentに作業をさせるのだから「Enterをおすだけのかんたんな�
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">Mac - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Docker&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Docker - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=macOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="macOS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">Docker - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでDockerに関連する商品をチェック</div>
+                                    <div class="product-title">macOS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでmacOSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -223,16 +232,16 @@ Agentに作業をさせるのだから「Enterをおすだけのかんたんな�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_1802.html">
+                    <a href="Zennのトレンド_7224.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Excel VBAの開発体験をモダン言語並みにアゲる VSCode拡張機能を作りました</span>
+                        <span class="nav-title">「止まっている案件はどれ?」にSQLで答える。Snowflake Cortex AIで議事録を自動分...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Publickey_5581.html">
+                    <a href="Qiita_-_人気の記事_8078.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">MCPにエンタープライズ向け新機能、アクセスを一括管理できる「Enterprise-Managed ...</span>
+                        <span class="nav-title">ログ調査のたびに検索→前後確認→コピーを繰り返すのがつらくて、VS Code拡張機能を作ってみた</span>
                     </a>
                 </div>
             </div>
@@ -245,53 +254,53 @@ Agentに作業をさせるのだから「Enterをおすだけのかんたんな�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8232.html">
-                        <h3>OpenAI、次世代モデル「GPT-5.6」を7月9日に一般公開</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">米OpenAIは7月8日、次世代モデル「GPT-5. 6」を現地時間の今週木曜日（7月9日）に一般公開すると、公式X（旧Twitter）で明らかにした。最上位の「Sol」、日常業務向けの「Terra」...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7597.html">
-                        <h3>ChatGPTの音声モードが進化、聞きながら話せるように--同時通訳も可能 「GPT-Live-1」公開</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">米OpenAIは7月8日（現地時間）、ChatGPTの音声AIを刷新する新モデル「GPT-Live-1」と小型版「GPT-Live-1 mini」の提供を開始した。無料ユーザーを含む全ChatGPTユ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4912.html">
-                        <h3>アップルの「AirTag」がAmazonで23%オフ--期間限定</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">アップルの忘れ物防止タグ「AirTag」がAmazonで18％オフのセール中だ。4個入りは通常1万6980円のところ、およそ3000円引きの1万3846円。1個は通常4980円のところ、4059円とな...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4470.html">
-                        <h3>清水建設、「日本一高いビル」施工現場にフィジカルAI　2足歩行ロボが巡回　LLMで解析も</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">清水建設は7月8日、建設現場へのAIロボット（フィジカルAI）の実装に向けた取り組みを始めたと発表した。ヒューマノイドロボットによる現場巡回と、ロボットアームによる塗装作業の実用化を目標に、本格的な実...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_6760.html">
-                        <h3>ピクサー好きのオトナのためのノートPC＝VAIO 『トイ・ストーリー』レーザー刻印モデル受注開始</h3>
+                    <a href="ASCII_jp__トップ_6598.html">
+                        <h3>3D都市モデルを見て・変換して・重ねる！データ活用やAI連携を学ぶ国交省の無料ハンズオン開催</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">VAIO、トイ・ストーリー5公開記念モデルを発表。レーザー刻印の天板デザインが魅力です。.</p>
+                        <p class="related-summary">国土交通省が主催するイベント「PLATEAU Hands-on 26」が、11月6日17時より開催される。「はじめてのPLATEAU、3D都市モデルを見て・変換して・重ねてみよう」というテーマで、参加...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_592.html">
+                        <h3>やることがないAIは何をする？ 無人島に30時間置き去りにした結果</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">目標を与えずにバーチャルの無人島に置かれたAIエージェントは、ジャグリングの記録に挑み、条件が甘いと自ら記録を取り消してやり直した。研究者らは、こうした「遊び」が後の課題解決に役立つことを示した。ただ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_8361.html">
+                        <h3>M5Stamp P4（ESP32-P4）でMMUなしのLinux 7.2を動かし、Wi-FiとSSHまで通した話【AIと...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">M5Stamp P4（ESP32-P4）向けに、MMUのないRISC-V上で動くLinuxディストリビューションを作っています。v0. 11 に上げ、Wi-Fi・SSH・vi・MicroPython ...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="iPhone_Mania_1735.html">
+                        <h3>ドコモiPhone Air残価変更〜512GB・1TBは早期利用特典0円</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">iPhone Mania</span>
+                        </div>
+                        <p class="related-summary">NTTドコモは2026年10月14日、「いつでもカエドキプログラム」におけるiPhone Airの残価設定などを10月16日以降に変更すると発表しました。対象は512GBと1TBの2容量で、機種変更・...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_4828.html">
+                        <h3>PostgreSQLで遅いSQLの実行計画を自動で取得しNew Relicで確認する - auto_explainの活用...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">PostgreSQLで遅いSQLの実測情報付き実行計画をauto_explainを用いて自動で取得し、New Relicで確認する方法について紹介します。 はじめに データベースのパフォーマンストラブ...</p>
                     </a>
                 </article>
             </div>

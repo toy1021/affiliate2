@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新卒、焦らなくていいよ。不出来と思われたくなくて空回りした私より。 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに：新卒、焦らなくてもいいかも。 過去の投稿を読んでくださった方は「何回言うねん」と思うかもしれませんが、 私はコーディング未経験の新卒としてこの会社に入社しました。 周りは優秀な人たちばかりで、同じくコーディング未経験でも、「明らかに自分よりできる」人がごろごろ.">
+    <title>画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る | 日本のテックニュース速報</title>
+    <meta name="description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="新卒、焦らなくていいよ。不出来と思われたくなくて空回りした私より。">
-    <meta property="og:description" content="はじめに：新卒、焦らなくてもいいかも。 過去の投稿を読んでくださった方は「何回言うねん」と思うかもしれませんが、 私はコーディング未経験の新卒としてこの会社に入社しました。 周りは優秀な人たちばかりで、同じくコーディング未経験でも、「明らかに自分よりできる」人がごろごろ.">
+    <meta property="og:title" content="画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る">
+    <meta property="og:description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6401.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="新卒、焦らなくていいよ。不出来と思われたくなくて空回りした私より。">
-    <meta name="twitter:description" content="はじめに：新卒、焦らなくてもいいかも。 過去の投稿を読んでくださった方は「何回言うねん」と思うかもしれませんが、 私はコーディング未経験の新卒としてこの会社に入社しました。 周りは優秀な人たちばかりで、同じくコーディング未経験でも、「明らかに自分よりできる」人がごろごろ.">
+    <meta name="twitter:title" content="画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る">
+    <meta name="twitter:description" content="アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "新卒、焦らなくていいよ。不出来と思われたくなくて空回りした私より。",
-        "description": "はじめに：新卒、焦らなくてもいいかも。 過去の投稿を読んでくださった方は「何回言うねん」と思うかもしれませんが、 私はコーディング未経験の新卒としてこの会社に入社しました。 周りは優秀な人たちばかりで、同じくコーディング未経験でも、「明らかに自分よりできる」人がごろごろ.",
+        "headline": "画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る",
+        "description": "アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-03-30T10:16:12",
-        "dateModified": "2026-03-31T05:45:38.270040",
+        "datePublished": "2026-10-17T03:50:32",
+        "dateModified": "2026-10-19T03:46:25.785619",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6401.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6401.html",
-        "articleSection": "テクノロジー",
+        "articleSection": "セキュリティ",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "テクノロジー",
-                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
+                "name": "セキュリティ",
+                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "新卒、焦らなくていいよ。不出来と思われたくなくて空回りした私より。",
+                "name": "画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6401.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">新卒、焦らなくていいよ。不出来と思われたくなくて空回りした私より。</li>
+                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
+                <li aria-current="page">画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>新卒、焦らなくていいよ。不出来と思われたくなくて空回りした私より。</h1>
+                <h1>画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/kimuchi_a/items/2e018c98e35752dae179?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-03-30T10:16:12">
-                        公開: 2026-03-30T10:16:12
+                    <span class="source">出典: <a href="https://qiita.com/vaon-luandv/items/a4719b247a0ec489e4c3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: セキュリティ</span>
+                    <time datetime="2026-10-17T03:50:32">
+                        公開: 2026-10-17T03:50:32
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
@@ -135,13 +135,11 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに：新卒、焦らなくてもいいかも。
-過去の投稿を読んでくださった方は「何回言うねん」と思うかもしれませんが、  私はコーディング未経験の新卒としてこの会社に入社しました。
-周りは優秀な人たちばかりで、同じくコーディング未経験でも、「明らかに自分よりできる」人がごろごろ...
+                    アップロードされた画像を受け取るAPIで、最低限入れておきたい入口の対策をチェックリストにしました。各項目は「何を確かめるか、どの攻撃を想定するか、コード、失敗時に返すステータス」の順で書いています。全部を入れる必要はないと思うので、気になる項目だけ拾ってもらえれば十分です...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/kimuchi_a/items/2e018c98e35752dae179?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/vaon-luandv/items/a4719b247a0ec489e4c3?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -152,7 +150,7 @@
                 
                 
                 <div class="affiliate-section category-recs">
-                    <h3>テクノロジー関連のおすすめ</h3>
+                    <h3>セキュリティ関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -183,16 +181,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_5146.html">
+                    <a href="Qiita_-_人気の記事_4363.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Pythonで実装して理解する RDBパフォーマンスチューニング入門 ─ フルスキャンとインデックス...</span>
+                        <span class="nav-title">Claude Code でメモアプリを作って Microsoft Store に公開するまでにやった...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_6942.html">
+                    <a href="Qiita_-_人気の記事_1456.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">ソニー、新型ゲーミングヘッドセット｢INZONE H6 Air｣を4月14日に発表・発売か</span>
+                        <span class="nav-title">Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、Sess...</span>
                     </a>
                 </div>
             </div>
@@ -205,53 +203,43 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9292.html">
-                        <h3>ファミリーマートに「セブン銀行ATM」設置が正式決定</h3>
+                    <a href="Qiita_-_人気の記事_6381.html">
+                        <h3>👀 ひとつで、セキュリティ調査が走り出す——Sysdig Secure のリアルタイム脅威検知におけるインシデントレスポ...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ファミリーマートは3月27日、セブン銀行とATM設置契約を正式に締結したと発表した。全国のファミリーマート店舗（AFCを除く）で、ファミリーマート独自デザインのATMを展開する。2026年春ごろから順...</p>
+                        <p class="related-summary">セキュリティ監視サービスの Sysdig が脅威を見つけて Slack に通知したとき、その通知に 👀 を付けるだけで、Factory の AI エージェント「Droid」が自動で調べて報告する。その...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1466.html">
-                        <h3>「トランプスマホ」は価格が高く、見た目も異なり、米国製ではないと報じられる</h3>
+                    <a href="Qiita_-_人気の記事_8255.html">
+                        <h3>注文管理システムから学ぶセキュリティ対策「アクセス制御編」</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">米The Vergeが確認した「T1」の実機モデルは、トランプモバイル公式サイトで現在も案内されている仕様や価格と食い違っていた──。.</p>
+                        <p class="related-summary">はじめに 先日セキュリティの勉強会に参加しました。個人でもセキュリティに関する書籍を読んでいたものの、そこから学んだ知識を実務に活かすことの難しさを感じていました。システムの脆弱性に関する知識は増えた...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7475.html">
-                        <h3>Facebookの「コミュニティノート」拡大に監督委員会が苦言、実効性に疑問</h3>
+                    <a href="Publickey_4614.html">
+                        <h3>Linuxカーネルの深刻な脆弱性「PwnEscape」（CVE-2026-99999）、ゲストの仮想マシンからホスト側L...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">Metaの監督委員会は、「Facebook」や「Instagram」、「WhatsApp」などで外部のファクトチェックをせず、米国外でも「コミュニティノート」で代替するという同社の計画の問題点を指摘し...</p>
+                        <p class="related-summary">悪意のある攻撃者がLinuxの仮想マシンを不正に操作することで、仮想マシンの境界を抜けてホスト側のLinux OSで不正なコードを実行できる可能性がある脆弱性「PwnEscape」（CVE-2026-...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6196.html">
-                        <h3>人型ロボットがホワイトハウスを「訪問」、教育者になる未来像に反発の声も</h3>
+                    <a href="Qiita_-_人気の記事_4915.html">
+                        <h3>CVE-2026-99999（PwnEscape）を読み解く──「KVMの脆弱性」ではなく、Linuxネットワークスタッ...</h3>
                         <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">先週ホワイトハウスで開催されたイベントで、ファーストレディのメラニア・トランプ氏をエスコートする意外なゲストが登場した。歩き、話す人型ロボット「Figure 03」だ。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6201.html">
-                        <h3>ドコモの「iモード」「FOMA」、きょう（31日）終了</h3>
-                        <div class="related-meta">
-                            <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">NTTドコモの携帯電話向けインターネット接続サービス「iモード」が3月31日をもって終了する。1999年2月の開始以来、スマートフォン登場より前のモバイルインターネット普及を牽引してきたサービスが、約...</p>
+                        <p class="related-summary">工程 担当 課題提示・取捨選択・内容チェック 筆者 原案作成・編成 Claude Fable 5. 1 事実検証（検証メモ） GPT-6 Astra 一次資料照合・最終稿 Claude Fable 5...</p>
                     </a>
                 </article>
             </div>

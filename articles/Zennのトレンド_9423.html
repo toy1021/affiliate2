@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った | 日本のテックニュース速報</title>
-    <meta name="description" content="みなさまこんにちは！エアークローゼットでCTOをしている辻です。 これまでに DB Graph MCP、社内MCP群の全体像、Biz Graph MCP と、社内向けに作っている MCP サーバーを順に紹介してきました。 今回はその中でもちょっと毛色が違うものを取り上げます">
-    <meta name="keywords" content="AI,Claude">
+    <title>コネクタも API も無いサービスを、Claude Code に操作させる | 日本のテックニュース速報</title>
+    <meta name="description" content="こんにちは、e-dash の中島です。 SRE として認証基盤やインフラを見ています。 Claude Code から外部サービスを操作するときは、MCP のコネクタを使います。 Notion や GitHub のように広く使われているサービスなら、だいたい用意されています">
+    <meta name="keywords" content="Claude,Chrome,GitHub">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った">
-    <meta property="og:description" content="みなさまこんにちは！エアークローゼットでCTOをしている辻です。 これまでに DB Graph MCP、社内MCP群の全体像、Biz Graph MCP と、社内向けに作っている MCP サーバーを順に紹介してきました。 今回はその中でもちょっと毛色が違うものを取り上げます">
+    <meta property="og:title" content="コネクタも API も無いサービスを、Claude Code に操作させる">
+    <meta property="og:description" content="こんにちは、e-dash の中島です。 SRE として認証基盤やインフラを見ています。 Claude Code から外部サービスを操作するときは、MCP のコネクタを使います。 Notion や GitHub のように広く使われているサービスなら、だいたい用意されています">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9423.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った">
-    <meta name="twitter:description" content="みなさまこんにちは！エアークローゼットでCTOをしている辻です。 これまでに DB Graph MCP、社内MCP群の全体像、Biz Graph MCP と、社内向けに作っている MCP サーバーを順に紹介してきました。 今回はその中でもちょっと毛色が違うものを取り上げます">
+    <meta name="twitter:title" content="コネクタも API も無いサービスを、Claude Code に操作させる">
+    <meta name="twitter:description" content="こんにちは、e-dash の中島です。 SRE として認証基盤やインフラを見ています。 Claude Code から外部サービスを操作するときは、MCP のコネクタを使います。 Notion や GitHub のように広く使われているサービスなら、だいたい用意されています">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った",
-        "description": "みなさまこんにちは！エアークローゼットでCTOをしている辻です。 これまでに DB Graph MCP、社内MCP群の全体像、Biz Graph MCP と、社内向けに作っている MCP サーバーを順に紹介してきました。 今回はその中でもちょっと毛色が違うものを取り上げます",
+        "headline": "コネクタも API も無いサービスを、Claude Code に操作させる",
+        "description": "こんにちは、e-dash の中島です。 SRE として認証基盤やインフラを見ています。 Claude Code から外部サービスを操作するときは、MCP のコネクタを使います。 Notion や GitHub のように広く使われているサービスなら、だいたい用意されています",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-04-27T23:02:32",
-        "dateModified": "2026-04-28T17:48:41.956958",
+        "datePublished": "2026-10-16T09:19:08",
+        "dateModified": "2026-10-19T03:46:25.783577",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9423.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9423.html",
         "articleSection": "プログラミング",
-        "keywords": ["AI","Claude"]
+        "keywords": ["Claude","Chrome","GitHub"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った",
+                "name": "コネクタも API も無いサービスを、Claude Code に操作させる",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9423.html"
             }
         ]
@@ -114,41 +114,45 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った</li>
+                <li aria-current="page">コネクタも API も無いサービスを、Claude Code に操作させる</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>非エンジニアの「作りたい」と「安全に公開したい」を両立する Sandbox MCP を作った</h1>
+                <h1>コネクタも API も無いサービスを、Claude Code に操作させる</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/aircloset/articles/65efe9614f8e73" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/edash_tech_blog/articles/6250fc61ccf009" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-04-27T23:02:32">
-                        公開: 2026-04-27T23:02:32
+                    <time datetime="2026-10-16T09:19:08">
+                        公開: 2026-10-16T09:19:08
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
                     <span class="tag">Claude</span>
+                    <span class="tag">Chrome</span>
+                    <span class="tag">GitHub</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    みなさまこんにちは！エアークローゼットでCTOをしている辻です。
-これまでに DB Graph MCP、社内MCP群の全体像、Biz Graph MCP と、社内向けに作っている MCP サーバーを順に紹介してきました。
-今回はその中でもちょっと毛色が違うものを取り上げます。Sandbox MCP ── 非エンジニアの社員が AI と一緒に作ったアプリを、ワンコマンドで社内に安全に公開できるプラットフォームです。
-「Claude Code でアプリを作れるなら、それをそのまま社内に出せばいいじゃん」という話を、安全に実現する仕組みです。
-
- 背景：作るのは簡単になったが、公開は難しいまま...
+                    こんにちは、e-dash の中島です。
+SRE として認証基盤やインフラを見ています。
+Claude Code から外部サービスを操作するときは、MCP のコネクタを使います。
+Notion や GitHub のように広く使われているサービスなら、だいたい用意されています。
+自動化を進めていくと、コネクタも API も無いサービスがどうしても残ります。
+業務に合わせて選んだ小さな SaaS や、社内向けの管理コンソールです。
+設定を変えるにも状態を見るにも、人が画面を開くしかありません。
+Claude Code に Chrome 拡張をつなぐと、ここに入口ができます。
+画面をそのまま読ま...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/aircloset/articles/65efe9614f8e73" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/edash_tech_blog/articles/6250fc61ccf009" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,16 +165,6 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
                                     <div class="product-title">Claude - Amazon検索結果</div>
@@ -181,10 +175,20 @@
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Chrome&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Chrome - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">Chrome - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでChromeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=GitHub&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GitHub - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">GitHub - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでGitHubに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +229,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_2760.html">
+                    <a href="気になる記になる_2020.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple、｢iOS 26.5｣や｢macOS 26.5｣などの開発者向けベータ4を提供開始</span>
+                        <span class="nav-title">楽天モバイルが｢iPhone Duo｣の機種代金を発表 ｰ 一括43.3万円〜、実質負担額は約17....</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="気になる記になる_3780.html">
+                    <a href="気になる記になる_9418.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">OpenAIが独自スマホを開発中 ｰ 2028年の量産開始が目標</span>
+                        <span class="nav-title">【Amazon プライム感謝祭】ESRのiPhone・iPad・AirPods・Apple Watc...</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +251,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_6790.html">
-                        <h3>FacebookやTikTok出身者が開発、リアルな交流を促す新SNS「Bond」が登場</h3>
+                    <a href="ASCII_jp__トップ_7088.html">
+                        <h3>飛んでるドローンを追尾して電気を送る。レーザー給電がSFすぎる</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">新たなソーシャルメディアアプリ「Bond」の開発元は、ユーザーに「ドゥームスクローリング（悲観的なニュースなどを際限なく読み続けること）」をやめ、人との絆（bond）を築いてほしいと考えている。.</p>
+                        <p class="related-summary">飛行中のドローンをレーザーで追尾しながら電力を送る。東京科学大学発のSolaNikaが開発するレーザー無線給電は、送電効率20％以上を達成したと発表している。実用化のカギとなるのは、動く受光部を正確か...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7316.html">
-                        <h3>トヨタ「クラウン」ベースのデスクチェア登場　ベンチレーション付き（更新）</h3>
+                    <a href="ASCII_jp__トップ_1341.html">
+                        <h3>電気を使わず、水の流れで情報を記憶するチップが開発される　ロボットの“脳”になる可能性も</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">トヨタ紡織は4月17日、トヨタ自動車の「クラウン」に採用されているフロントシートをベースとしたデスクチェアを開発したと発表した。国内のクラウン専門店「THE CROWN」が展開するオリジナルコレクショ...</p>
+                        <p class="related-summary">水の流れを利用して、コンピューターのように情報を記憶する──。そんな不思議なチップを、米イェール大学の研究チームが開発した。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_9735.html">
-                        <h3>【後編】9割の新人エンジニアがやっている 「承知しました」の落とし穴</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている人見です。 日々、プログラミング学習や実務の中で、つまずきやすいポイントや考え方を整理して発信しています。 PRUMについて気になった方は、コーポレ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8349.html">
-                        <h3>新人エンジニアこそ「個人開発」をやろう。完全無料で始めるCloudflareスタック入門</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">新生活が始まり、限られた時間の中でどう成長していくかは多くの新人エンジニアにとって共通のテーマではないでしょうか。 数ある学習法の中でも、インプットした知識を「実力」に変えるためのステップとして、今回...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_9985.html">
-                        <h3>ベクトルを使わないRAG。全てのナレッジを階層化する手法</h3>
+                    <a href="Zennのトレンド_6234.html">
+                        <h3>アプリケーションの自動テストとデプロイをCircleCIからGitHub Actionsに移行した</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">本記事では、RAGの性能を高めるための「Corpus2Skill」という手法について、ざっくり理解します。 株式会社ナレッジセンスは、「エンタープライズ企業の膨大なデータを掘り起こし、活用可能にする」...</p>
+                        <p class="related-summary">こんにちは！ツクリンクでエンジニアをしている oieioi です。 ツクリンクは開発用の CI を CircleCI から GitHub Actions に移行しました。移行してから半年間障害なく運用...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_778.html">
+                        <h3>読書メモ『入門 継続的デリバリー』</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">jp/dp/4814400691?ref=cm_sw_r_ffobk_cp_ud_dp_4RN97N4D1PRM9WFJGFR4&amp;ref_=cm_sw_r_ffobk_cp_ud_dp_4RN97N4...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_7866.html">
+                        <h3>リトルの法則で考える障害時のキャパシティプランニング</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに サーバーサイドの開発や運用をしていると、こんな場面に出会うことがあります。 呼び出し元のメトリクスで、このサービスへのリクエストのタイムアウトが、ほとんどのエンドポイントで増えている サーバ...</p>
                     </a>
                 </article>
             </div>

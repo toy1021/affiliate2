@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する | 日本のテックニュース速報</title>
-    <meta name="description" content="前書き 2026年8月5日、Amazon DynamoDBがリアルタイムベクトル検索に対応しました。 これまでAWSでベクトル検索をやりたい場合、AWS Marketplace利用しない場合、選択肢はだいたい次の5つでした。 Amazon OpenSearch S.">
-    <meta name="keywords" content="AWS">
+    <title>ngrok のような HTTP トンネルを docker compose 1つで自前運用できる OSS「gridbase」を試す | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに gridbase は、手元の Web アプリを公開 URL で見せるための HTTP トンネルを、自分のサーバーで動かす OSS です。 ngrok のようなサービスを、自前で持てる感覚です。 docker compose up 1回で、トンネルのサーバーと管理.">
+    <meta name="keywords" content="Docker">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する">
-    <meta property="og:description" content="前書き 2026年8月5日、Amazon DynamoDBがリアルタイムベクトル検索に対応しました。 これまでAWSでベクトル検索をやりたい場合、AWS Marketplace利用しない場合、選択肢はだいたい次の5つでした。 Amazon OpenSearch S.">
+    <meta property="og:title" content="ngrok のような HTTP トンネルを docker compose 1つで自前運用できる OSS「gridbase」を試す">
+    <meta property="og:description" content="はじめに gridbase は、手元の Web アプリを公開 URL で見せるための HTTP トンネルを、自分のサーバーで動かす OSS です。 ngrok のようなサービスを、自前で持てる感覚です。 docker compose up 1回で、トンネルのサーバーと管理.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8775.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する">
-    <meta name="twitter:description" content="前書き 2026年8月5日、Amazon DynamoDBがリアルタイムベクトル検索に対応しました。 これまでAWSでベクトル検索をやりたい場合、AWS Marketplace利用しない場合、選択肢はだいたい次の5つでした。 Amazon OpenSearch S.">
+    <meta name="twitter:title" content="ngrok のような HTTP トンネルを docker compose 1つで自前運用できる OSS「gridbase」を試す">
+    <meta name="twitter:description" content="はじめに gridbase は、手元の Web アプリを公開 URL で見せるための HTTP トンネルを、自分のサーバーで動かす OSS です。 ngrok のようなサービスを、自前で持てる感覚です。 docker compose up 1回で、トンネルのサーバーと管理.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する",
-        "description": "前書き 2026年8月5日、Amazon DynamoDBがリアルタイムベクトル検索に対応しました。 これまでAWSでベクトル検索をやりたい場合、AWS Marketplace利用しない場合、選択肢はだいたい次の5つでした。 Amazon OpenSearch S.",
+        "headline": "ngrok のような HTTP トンネルを docker compose 1つで自前運用できる OSS「gridbase」を試す",
+        "description": "はじめに gridbase は、手元の Web アプリを公開 URL で見せるための HTTP トンネルを、自分のサーバーで動かす OSS です。 ngrok のようなサービスを、自前で持てる感覚です。 docker compose up 1回で、トンネルのサーバーと管理.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-08T06:15:11",
-        "dateModified": "2026-08-09T05:06:27.562367",
+        "datePublished": "2026-10-20T23:32:55",
+        "dateModified": "2026-10-21T14:54:46.812416",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8775.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8775.html",
         "articleSection": "テクノロジー",
-        "keywords": ["AWS"]
+        "keywords": ["Docker"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する",
+                "name": "ngrok のような HTTP トンネルを docker compose 1つで自前運用できる OSS「gridbase」を試す",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_8775.html"
             }
         ]
@@ -114,40 +114,38 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=テクノロジー">テクノロジー</a></li>
-                <li aria-current="page">Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する</li>
+                <li aria-current="page">ngrok のような HTTP トンネルを docker compose 1つで自前運用できる OS...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Amazon DynamoDBのリアルタイムベクトル検索機能をちょっと整理する</h1>
+                <h1>ngrok のような HTTP トンネルを docker compose 1つで自前運用できる OSS「gridbase」を試す</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/Syoitu/items/068db63a8bf3bb961b2b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/nogataka/items/170f99bb52ecd720d3ff?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: テクノロジー</span>
-                    <time datetime="2026-08-08T06:15:11">
-                        公開: 2026-08-08T06:15:11
+                    <time datetime="2026-10-20T23:32:55">
+                        公開: 2026-10-20T23:32:55
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AWS</span>
+                    <span class="tag">Docker</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    前書き
-2026年8月5日、Amazon DynamoDBがリアルタイムベクトル検索に対応しました。
-
-これまでAWSでベクトル検索をやりたい場合、AWS Marketplace利用しない場合、選択肢はだいたい次の5つでした。
-
-Amazon OpenSearch S...
+                    はじめに
+gridbase は、手元の Web アプリを公開 URL で見せるための HTTP トンネルを、自分のサーバーで動かす OSS です。
+ngrok のようなサービスを、自前で持てる感覚です。
+docker compose up 1回で、トンネルのサーバーと管理...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/Syoitu/items/068db63a8bf3bb961b2b?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/nogataka/items/170f99bb52ecd720d3ff?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -160,10 +158,10 @@ Amazon OpenSearch S...
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AWS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AWS - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Docker&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Docker - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AWS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAWSに関連する商品をチェック</div>
+                                    <div class="product-title">Docker - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでDockerに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -204,16 +202,16 @@ Amazon OpenSearch S...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_1549.html">
+                    <a href="気になる記になる_5635.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">SES現場で信頼を失わない報告・確認・問題解析の基本</span>
+                        <span class="nav-title">YouTube、通常の動画で「低評価」ボタンを隠すテストを実施中</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_3472.html">
+                    <a href="Zennのトレンド_76.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhone17が8月10日に値上げか〜噂の確度と買い時を検証</span>
+                        <span class="nav-title">安くて速い Jev を6回チューニングしたら、最後に Claude の grep に2倍差で負けた話</span>
                     </a>
                 </div>
             </div>
@@ -226,53 +224,50 @@ Amazon OpenSearch S...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3687.html">
-                        <h3>「アプリより直接会いたい」Z世代の恋愛観の変化、Tinder運営元CEOが語る</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_7426.html">
+                        <h3>PHPに重大欠陥 Webの7割で使用</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">マッチングアプリ「Tinder」などを展開するMatch Groupのトップは今週、独身者の間ではスマートフォンでプロフィールをスワイプするより、直接会うことを好む傾向が強まっていると述べた。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3513.html">
-                        <h3>ディズニープラス、「無料プラン」を検討中　TikTokとの提携も発表</h3>
+                    <a href="気になる記になる_4652.html">
+                        <h3>Boseのイヤホンやヘッドホンが最大25％オフに ｰ Amazonで｢Bose秋のスペシャルセール｣が開催中</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">ディズニーのCEOは、動画配信サービス「Disney+（ディズニープラス）」の利用者を増やすため、無料プランの追加を検討していると明らかにした。.</p>
+                        <p class="related-summary">現在、Boseが、Amazonにおいて「Bose秋のスペシャルセール」を開催しています。 「Bose秋のスペシャルセール」では、対象のワイヤレスイヤホンとワイヤレスヘッドホンが最大25％オフで販売中。...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3320.html">
-                        <h3>ドコモ・バイクシェアの障害、あす7日復旧へ--背景に「NOLL」刷新へのシステム移行</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_9379.html">
+                        <h3>「カーセンサーnet」情報漏えいか</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">「NOLL（ノル）」へのブランド刷新を9月に控えたドコモ・バイクシェアで、システム移行に伴う大規模障害が発生した。全エリアでの提供停止は4日間以上に及び、NTTドコモの前田社長が決算会見で謝罪する事態...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_74.html">
-                        <h3>Metaに約900億円の支払い命令、子どものSNS被害めぐる裁判で</h3>
+                    <a href="気になる記になる_1945.html">
+                        <h3>【レビュー】8K/360度ドローン｢Antigravity A1 Follow Meキット｣ ｰ 腕時計型と指輪型リモコ...</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">米ニューメキシコ州の裁判所は、MetaのSNSプラットフォームが子どもにもたらす危険性を一般に警告しなかったとして、同社に5億6700万ドル（約900億円）の支払いを命じた。.</p>
+                        <p class="related-summary">Insta360から誕生したドローンブランドのAntigravityが発売した8K 360度ドローン「Antigravity A1」をゴーグルを装着せずに使用できる「Follow Meキット」のサンプ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_802.html">
-                        <h3>太陽表面を過去最高の解像度で観測　理論予測の渦「ケルビン・ヘルムホルツ不安定性」を初確認</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_2808.html">
+                        <h3>フジ 番宣システムに不正アクセス</h3>
                         <div class="related-meta">
                             <span class="category">テクノロジー</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">米国立科学財団（NSF）の国立太陽天文台（NSO）は8月5日（現地時間）、太陽の表面で「ケルビン・ヘルムホルツ不安定性」と呼ばれる渦巻き現象を初めて観測したと発表した。世界最大の太陽望遠鏡「ダニエル・...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>『構文解析のしくみ』が出版されました（出版にあたって宣伝と裏話） | 日本のテックニュース速報</title>
-    <meta name="description" content="jp/press/books/b_0019 通販ページ： Amazon：https://amzn. はじめに こんにちは！水島です。 2026年9月28日に、ZEN大学出版会から『構文解析のしくみ 電卓から言語処理系まで自分で書く』という本を出しました">
-    <meta name="keywords" content="本">
+    <title>Go 1.27 で追加された strings.CutLast を試す | 日本のテックニュース速報</title>
+    <meta name="description" content="LastIndex とスライスで手書きしていた処理を、1行で書けるようになります。業務で触っているコードにも LastIndex を使っている部分があり、置き換えられそうだったので、CutLast の使い方と注意点をまとめました">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="『構文解析のしくみ』が出版されました（出版にあたって宣伝と裏話）">
-    <meta property="og:description" content="jp/press/books/b_0019 通販ページ： Amazon：https://amzn. はじめに こんにちは！水島です。 2026年9月28日に、ZEN大学出版会から『構文解析のしくみ 電卓から言語処理系まで自分で書く』という本を出しました">
+    <meta property="og:title" content="Go 1.27 で追加された strings.CutLast を試す">
+    <meta property="og:description" content="LastIndex とスライスで手書きしていた処理を、1行で書けるようになります。業務で触っているコードにも LastIndex を使っている部分があり、置き換えられそうだったので、CutLast の使い方と注意点をまとめました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8154.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="『構文解析のしくみ』が出版されました（出版にあたって宣伝と裏話）">
-    <meta name="twitter:description" content="jp/press/books/b_0019 通販ページ： Amazon：https://amzn. はじめに こんにちは！水島です。 2026年9月28日に、ZEN大学出版会から『構文解析のしくみ 電卓から言語処理系まで自分で書く』という本を出しました">
+    <meta name="twitter:title" content="Go 1.27 で追加された strings.CutLast を試す">
+    <meta name="twitter:description" content="LastIndex とスライスで手書きしていた処理を、1行で書けるようになります。業務で触っているコードにも LastIndex を使っている部分があり、置き換えられそうだったので、CutLast の使い方と注意点をまとめました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8154.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="2">
+    <meta name="reading-time" content="1">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "『構文解析のしくみ』が出版されました（出版にあたって宣伝と裏話）",
-        "description": "jp/press/books/b_0019 通販ページ： Amazon：https://amzn. はじめに こんにちは！水島です。 2026年9月28日に、ZEN大学出版会から『構文解析のしくみ 電卓から言語処理系まで自分で書く』という本を出しました",
+        "headline": "Go 1.27 で追加された strings.CutLast を試す",
+        "description": "LastIndex とスライスで手書きしていた処理を、1行で書けるようになります。業務で触っているコードにも LastIndex を使っている部分があり、置き換えられそうだったので、CutLast の使い方と注意点をまとめました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-30T12:12:41",
-        "dateModified": "2026-10-01T22:25:35.991572",
+        "datePublished": "2026-10-20T02:32:23",
+        "dateModified": "2026-10-21T03:34:03.235682",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8154.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8154.html",
-        "articleSection": "通信・ネットワーク",
-        "keywords": ["本"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "通信・ネットワーク",
-                "item": "https://toy1021.github.io/affiliate2/#category=通信・ネットワーク"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "『構文解析のしくみ』が出版されました（出版にあたって宣伝と裏話）",
+                "name": "Go 1.27 で追加された strings.CutLast を試す",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8154.html"
             }
         ]
@@ -113,25 +113,22 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=通信・ネットワーク">通信・ネットワーク</a></li>
-                <li aria-current="page">『構文解析のしくみ』が出版されました（出版にあたって宣伝と裏話）</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Go 1.27 で追加された strings.CutLast を試す</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>『構文解析のしくみ』が出版されました（出版にあたって宣伝と裏話）</h1>
+                <h1>Go 1.27 で追加された strings.CutLast を試す</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/kmizu/articles/2026-09-parser-book" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: 通信・ネットワーク</span>
-                    <time datetime="2026-09-30T12:12:41">
-                        公開: 2026-09-30T12:12:41
+                    <span class="source">出典: <a href="https://zenn.dev/gemcook/articles/f408cc6b1f75ec" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-10-20T02:32:23">
+                        公開: 2026-10-20T02:32:23
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
             </header>
 
@@ -139,28 +136,19 @@
                 
                 <div class="article-body">
                     はじめに
-こんにちは！水島です。
-2026年9月28日に、ZEN大学出版会から『構文解析のしくみ 電卓から言語処理系まで自分で書く』という本を出しました。
+Go 1.27 で strings.CutLast と bytes.CutLast が追加されました。文字列を「最後に出てくる区切り文字」で前後に分ける関数です。
+これまで「最後に出てくる区切り文字」で分割したいときに strings.LastIndex とスライスで手書きしていた処理を、1行で書けるようになります。業務で触っているコードにも LastIndex を使っている部分があり、置き換えられそうだったので、CutLast の使い方と注意点をまとめました。
 
-出版社のページ：https://zen.ac.jp/press/books/b_0019
+ 結論
+LastIndex で自作
+s := "a-b-c"
 
-通販ページ：
-
-Amazon：https://amzn.asia/d/030QeHhu
-
-最短で10月7日配達（2026/09/30現在）
-
-
-楽天ブックス：https://books.rakuten.co.jp/rb/18780074/
-
-在庫が20冊以上。なるはやで手に入れたいならオススメ
-
-
-e-hon：https://www.e-...
+before, after := s, ""
+...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/kmizu/articles/2026-09-parser-book" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/gemcook/articles/f408cc6b1f75ec" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -169,24 +157,9 @@ e-hon：https://www.e-...
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>通信・ネットワーク関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -217,16 +190,16 @@ e-hon：https://www.e-...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_9767.html">
+                    <a href="気になる記になる_5857.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple、10月13日に3種類の新型スマートホームデバイスを発表か</span>
+                        <span class="nav-title">Nothingの新型スマホ｢Phone (4b)｣が日本でもようやく発売へ ｰ 59,800円で本日...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_895.html">
+                    <a href="Zennのトレンド_4828.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">学生が無料枠だけでRAGシステムを作った話</span>
+                        <span class="nav-title">AI にリバースエンジニアリングさせる REA を触って、持ち帰ったのは「証拠付きで進める」考え方で...</span>
                     </a>
                 </div>
             </div>
@@ -234,6 +207,62 @@ e-hon：https://www.e-...
         </main>
 
         <!-- 関連記事 -->
+        <aside class="related-articles" role="complementary" aria-label="関連記事">
+        <section>
+            <h2>関連記事</h2>
+            <div class="related-grid">
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_9425.html">
+                        <h3>すき家の「麻辣湯鍋」が帰ってくる！ 昨年好評のシビ辛メニューが復活</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">すき家は、10月27日9時より「牛・胡麻麻辣湯（マーラータン）鍋定食」「牛すき鍋定食」を販売します。昨年好評だった「麻辣湯鍋」が復活！.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_9531.html">
+                        <h3>スマホにピタッと固定、転送しながら充電も！ エレコム「MAGKEEP」カードリーダーが3,780円</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">エレコムが10月中旬に発売する、MagSafe対応のMAGKEEP USB Type-C接続メモリーカードリーダーを紹介する。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_2117.html">
+                        <h3>USB機器10台をまとめて接続！ エレコム、個別スイッチ付き10ポートUSBハブを9,980円で発売</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">エレコムが、USB-A×7とUSB Type-C×3を備えたセルフパワー専用10ポートUSBハブ「U3HC-S100SBK」を10月下旬に発売する。個別スイッチ、アクセスランプ、底面マグネットを搭載し...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_1456.html">
+                        <h3>「カーセンサーnet」情報漏えいか</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_9177.html">
+                        <h3>高精細4Kも480Hzの高速表示も！ ASUS「ROG Swift OLED」新型モニター2機種が登場</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">ASUS JAPANが、4K/240HzとFHD/480Hzを切り替えられるデュアルモード対応の有機ELゲーミングモニター「ROG Swift OLED PG32UCWM」「ROG Swift OLE...</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+        </aside>
 
         <div class="back-navigation">
             <a href="../" class="back-to-home">一覧に戻る</a>

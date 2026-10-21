@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input」も使って体験良くチューニングしよう | 日本のテックニュース速報</title>
-    <meta name="description" content="Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input」も使って体験良くチューニングしよう - AI・機械学習技術のニュースをお届け。">
-    <meta name="keywords" content="AI,GPT">
+    <title>個人で使うClaude Codeの権限設定についてざっくり見直してみた | 日本のテックニュース速報</title>
+    <meta name="description" content="Claude Codeの権限設定を適当に済ませたままだったので見直してみた内容を記録する。理想はコンテナ化するなどホスト環境を隔離することになると思うが、個人端末でライトに運用することを前提とした際にClaude Codeの設定だけでどこまで防御できるか確認したかったイメージである">
+    <meta name="keywords" content="Claude,Mac,macOS">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input」も使って体験良くチューニングしよう">
-    <meta property="og:description" content="Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input」も使って体験良くチューニングしよう - AI・機械学習技術のニュースをお届け。">
+    <meta property="og:title" content="個人で使うClaude Codeの権限設定についてざっくり見直してみた">
+    <meta property="og:description" content="Claude Codeの権限設定を適当に済ませたままだったので見直してみた内容を記録する。理想はコンテナ化するなどホスト環境を隔離することになると思うが、個人端末でライトに運用することを前提とした際にClaude Codeの設定だけでどこまで防御できるか確認したかったイメージである">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8580.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input」も使って体験良くチューニングしよう">
-    <meta name="twitter:description" content="Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input」も使って体験良くチューニングしよう - AI・機械学習技術のニュースをお届け。">
+    <meta name="twitter:title" content="個人で使うClaude Codeの権限設定についてざっくり見直してみた">
+    <meta name="twitter:description" content="Claude Codeの権限設定を適当に済ませたままだったので見直してみた内容を記録する。理想はコンテナ化するなどホスト環境を隔離することになると思うが、個人端末でライトに運用することを前提とした際にClaude Codeの設定だけでどこまで防御できるか確認したかったイメージである">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input」も使って体験良くチューニングしよう",
-        "description": "Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input」も使って体験良くチューニングしよう - AI・機械学習技術のニュースをお届け。",
+        "headline": "個人で使うClaude Codeの権限設定についてざっくり見直してみた",
+        "description": "Claude Codeの権限設定を適当に済ませたままだったので見直してみた内容を記録する。理想はコンテナ化するなどホスト環境を隔離することになると思うが、個人端末でライトに運用することを前提とした際にClaude Codeの設定だけでどこまで防御できるか確認したかったイメージである",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-07T00:10:42",
-        "dateModified": "2026-09-08T08:40:38.359440",
+        "datePublished": "2026-10-18T23:00:08",
+        "dateModified": "2026-10-21T03:34:03.237183",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8580.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8580.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","GPT"]
+        "keywords": ["Claude","Mac","macOS"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input」も使って体験良くチューニングしよう",
+                "name": "個人で使うClaude Codeの権限設定についてざっくり見直してみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8580.html"
             }
         ]
@@ -114,43 +114,48 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input...</li>
+                <li aria-current="page">個人で使うClaude Codeの権限設定についてざっくり見直してみた</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Astraのリリースに合わせてAGENTS.mdを修正するなら「request_user_input」も使って体験良くチューニングしよう</h1>
+                <h1>個人で使うClaude Codeの権限設定についてざっくり見直してみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/cureapp/articles/9dd3298ce84b47" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/takyshu98/articles/915702cf8c84f3" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-09-07T00:10:42">
-                        公開: 2026-09-07T00:10:42
+                    <time datetime="2026-10-18T23:00:08">
+                        公開: 2026-10-18T23:00:08
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">GPT</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">Mac</span>
+                    <span class="tag">macOS</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    GPT-6 Astra がリリースされましたね。
-新しいモデルがリリースされたらAGENTS.mdを新しいモデルの特性に合うように調整する作業をする人も多いのではないでしょうか？
-よくやる手法が公式のベストプラクティスやガイダンスのページをAIに渡して、「これ読んで修正して」みたいな方法です。
-これでも十分に思えるんですが、修正後の内容をちゃんと読むと、自分の理想と若干ズレてるかもなーと思うことがあったりします。
-でもちゃんと確認して調整するのなかなか手間ですよね。
-「多分いい感じになってるはずだから確認せずにヨシ」
-とする人もいるかもしれません。（私もたまにそう）
-そこで「reques...
+                    Claude Codeの権限設定を適当に済ませたままだったので見直してみた内容を記録する。理想はコンテナ化するなどホスト環境を隔離することになると思うが、個人端末でライトに運用することを前提とした際にClaude Codeの設定だけでどこまで防御できるか確認したかったイメージである。
+
+設定環境
+
+macOS - Golden Gate 27.0.1
+Claude Code - 2.1.296
+
+
+ リスクの整理と要件
+最初に防ぐべきリスクを整理する。一般的にはClaudeからの期待していない要求やプロンプトインジェクションによって起こり得る以下の事象であると考えられる。
+
+① 秘匿情報...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/cureapp/articles/9dd3298ce84b47" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/takyshu98/articles/915702cf8c84f3" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -163,30 +168,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=GPT&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="GPT - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Mac&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Mac - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">GPT - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでGPTに関連する商品をチェック</div>
+                                    <div class="product-title">Mac - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでMacに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=macOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="macOS - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">macOS - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでmacOSに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -227,16 +232,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_9699.html">
+                    <a href="Qiita_-_人気の記事_4623.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">HTMLを社内共有するサービスを、コードを読まずに作る - 1人で25万行を回す自動運用の記録</span>
+                        <span class="nav-title">今日から使える AI との会話術 — Claude・Gemini・Codex に指示を守らせる 6 ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_9136.html">
+                    <a href="Qiita_-_人気の記事_4217.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Git リモートで削除されたローカルブランチの自動クリーンアップ</span>
+                        <span class="nav-title">Power Apps（ローコード開発）でログイン画面を作るのがダメな理由</span>
                     </a>
                 </div>
             </div>
@@ -249,53 +254,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5877.html">
-                        <h3>米自動車業界、中国車の全面禁止を求める</h3>
+                    <a href="ASCII_jp__トップ_4250.html">
+                        <h3>セキュリティ研修の実施と記録保管をワンストップで 中小企業向け教育クラウド「BitoB Training」をリリース</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">米自動車業界のロビー団体Alliance for Automotive Innovation（AAI）は、中国製の自動車、部品、ソフトウェアの全面禁止を求めている。.</p>
+                        <p class="related-summary">セキュリティ研修の実施と記録保管をワンストップで 中小企業向け教育クラウド「BitoB Training」をリリース.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4752.html">
-                        <h3>キーボード不要の未来へ　Nothing出身者が開発したAIマイク「Relay Q」とは</h3>
+                    <a href="ASCII_jp__トップ_7677.html">
+                        <h3>台湾さんぽeSIM、本人確認なしの使い放題プランでトラベルAIレスキューの料金を10月21日から11月30日まで無料に。...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">デザインを重視する英国のスタートアップNothingを離れたメンバーたちが、音声操作の未来へ少なくとも1歩近づくAIマイク「Relay Q」を生み出した。.</p>
+                        <p class="related-summary">台湾さんぽeSIM、本人確認なしの使い放題プランでトラベルAIレスキューの料金を10月21日から11月30日まで無料に。3日間1,500円。台湾のお寺と神様のメディア「台湾さんぽ」のリニューアル記念.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8310.html">
-                        <h3>ジンバルカメラがそのまま空を飛ぶ「HOVERAir VERSA」、日本上陸　12万7900円から</h3>
+                    <a href="ASCII_jp__トップ_1677.html">
+                        <h3>AIから契約書の検索・署名依頼が可能に。「GMOサイン」が「AI Flowオプション」を提供開始。</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">中国のスタートアップZero Zero Roboticsは9月7日、3軸ジンバルカメラに飛行ユニットを装着して空撮できる「HOVERAir VERSA」の日本展開を発表した。応援購入サービス「Maku...</p>
+                        <p class="related-summary">AIから契約書の検索・署名依頼が可能に。「GMOサイン」が「AI Flowオプション」を提供開始。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3367.html">
-                        <h3>ロボットにもペンダントにもなる、日常を記憶するAIデバイス「iKairos」とは</h3>
+                    <a href="Publickey_8439.html">
+                        <h3>「Cloudflare OS」のマネージドサービス提供へ。GitHubとの接続やGmailとの連携強化など</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">ウェアラブルで卓上ロボットにもなる「iKairos」は、ベルリンのIFAで筆者が見た中でとりわけユニークなAIデバイスの1つだ。.</p>
+                        <p class="related-summary">Cloudflareは、AIを活用した業務のためのプラットフォームとなる「Cloudflare OS」のマネージドサービスを発表しました。現在ウェイティングリストへの登録を募集しています。 AIを活用...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_771.html">
-                        <h3>パナソニック、高速道路照明に自動運転用センサー　T2と実証、全国1000km構想</h3>
+                    <a href="Zennのトレンド_8566.html">
+                        <h3>LINEに送った写真と音声メモを、自宅のPCが文字にしてくれるようにした</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">パナソニック エレクトリックワークス（パナソニックEW）は、自動運転トラックで輸送事業を手がけるT2と、高速道路の照明を自動運転の支援に活用する実証を始めた。道路脇の低い位置に設置する照明にAIカメラ...</p>
+                        <p class="related-summary">会議のホワイトボードを写真に撮る。帰り道に「来週までに見積り」と声で残す。ここまでは誰でもやっています。問題はそのあとで、撮った写真も録った声も、二度と開かない。私のスマホには、読み返されたことのない...</p>
                     </a>
                 </article>
             </div>

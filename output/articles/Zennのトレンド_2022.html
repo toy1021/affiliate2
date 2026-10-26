@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました | 日本のテックニュース速報</title>
-    <meta name="description" content="rs 背景 私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And. こんにちは。itome(@itometeam)です">
-    <meta name="keywords" content="iOS,Android">
+    <title>Oxlint + Oxfmt で規約をコード化するモノレポ運用 | 日本のテックニュース速報</title>
+    <meta name="description" content="長らく ESLint + Prettier を使ってきました。大きな不満はなかったものの、実行時間が少し気になっていました。そこで、Biome と Oxc を実際のモノレポで検証して、最終的に Oxlint + Oxfmt に移行しました">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました">
-    <meta property="og:description" content="rs 背景 私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And. こんにちは。itome(@itometeam)です">
+    <meta property="og:title" content="Oxlint + Oxfmt で規約をコード化するモノレポ運用">
+    <meta property="og:description" content="長らく ESLint + Prettier を使ってきました。大きな不満はなかったものの、実行時間が少し気になっていました。そこで、Biome と Oxc を実際のモノレポで検証して、最終的に Oxlint + Oxfmt に移行しました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2022.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました">
-    <meta name="twitter:description" content="rs 背景 私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And. こんにちは。itome(@itometeam)です">
+    <meta name="twitter:title" content="Oxlint + Oxfmt で規約をコード化するモノレポ運用">
+    <meta name="twitter:description" content="長らく ESLint + Prettier を使ってきました。大きな不満はなかったものの、実行時間が少し気になっていました。そこで、Biome と Oxc を実際のモノレポで検証して、最終的に Oxlint + Oxfmt に移行しました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました",
-        "description": "rs 背景 私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And. こんにちは。itome(@itometeam)です",
+        "headline": "Oxlint + Oxfmt で規約をコード化するモノレポ運用",
+        "description": "長らく ESLint + Prettier を使ってきました。大きな不満はなかったものの、実行時間が少し気になっていました。そこで、Biome と Oxc を実際のモノレポで検証して、最終的に Oxlint + Oxfmt に移行しました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-18T00:00:08",
-        "dateModified": "2026-08-23T04:37:47.850210",
+        "datePublished": "2026-10-20T02:00:05",
+        "dateModified": "2026-10-26T16:34:23.388873",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2022.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2022.html",
-        "articleSection": "プログラミング",
-        "keywords": ["iOS","Android"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました",
+                "name": "Oxlint + Oxfmt で規約をコード化するモノレポ運用",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_2022.html"
             }
         ]
@@ -113,60 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">Oxlint + Oxfmt で規約をコード化するモノレポ運用</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました</h1>
+                <h1>Oxlint + Oxfmt で規約をコード化するモノレポ運用</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/itome/articles/e087c6d11d0bd2" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-08-18T00:00:08">
-                        公開: 2026-08-18T00:00:08
+                    <span class="source">出典: <a href="https://zenn.dev/reality_tech/articles/oxc-monorepo-20261006" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-10-20T02:00:05">
+                        公開: 2026-10-20T02:00:05
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">iOS</span>
-                    <span class="tag">Android</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    こんにちは。itome(@itometeam)です。
-Rustでアプリが書けるフレームワークを作ったので、その紹介をします。
+                    長らく ESLint + Prettier を使ってきました。大きな不満はなかったものの、実行時間が少し気になっていました。そこで、Biome と Oxc を実際のモノレポで検証して、最終的に Oxlint + Oxfmt に移行しました。
+この記事では、Biome と Oxc を比較・検証した過程と、Oxlint + Oxfmt を使ってコーディング規約をコードとして強制する運用を紹介します。
 
- TL;DR
-RustでひとつのコードベースからiOS/Androidアプリが作れるフレームワークです。
-すでに個人開発では使っており、AppStore/PlayStoreの審査も通ってプロダクションで使えています。
+ 導入の経緯とモチベーション
 
-
-
-iOS
-Android
-
-
-
-
-
-
-
-
-
-https://whisker.rs
-
- 背景
-私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And...
+ lint / format の待ち時間が気になるようになった
+TypeScript の静的解析ツールが TSLint から ESLint に移りつつあった 2...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/itome/articles/e087c6d11d0bd2" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/reality_tech/articles/oxc-monorepo-20261006" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -175,60 +154,25 @@ https://whisker.rs
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">開発 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=iOS&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="iOS - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">iOS - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでiOSに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -243,16 +187,16 @@ https://whisker.rs
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2587.html">
+                    <a href="Publickey_2397.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Markdownノートを日本語で全文検索できるCLI「mikke」を作った</span>
+                        <span class="nav-title">AWS LambdaでNext.jsやHonoなどNode.jsフレームワークとアプリをそのままデプ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_2930.html">
+                    <a href="Zennのトレンド_6568.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">コーディングエージェントが実装するUIの品質を上げるためにやったこと</span>
+                        <span class="nav-title">バイブコーディングを6週間続けたら、Mac の起動が20分かかるようになった</span>
                     </a>
                 </div>
             </div>
@@ -265,53 +209,52 @@ https://whisker.rs
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5096.html">
-                        <h3>JAXA、火星衛星探査機「MMX」を10月20日打ち上げ--フォボスの砂を持ち帰る世界初ミッション</h3>
+                    <a href="ASCII_jp__トップ_5174.html">
+                        <h3>売り切れ必至＝SmallRigが「Sigma FP2」専用アクセサリーを2モデル発表</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">宇宙航空研究開発機構（JAXA）は8月20日、火星衛星探査機「MMX」をH3ロケット10号機で10月20日に打ち上げると発表した。.</p>
+                        <p class="related-summary">「Sigma FP2用ケージ」と「Sigma FP2用L型プレート」を発表しました.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_8517.html">
-                        <h3>Oura Ring開発元に集団訴訟、睡眠トラッキングの精度は「コイントス」並みと主張</h3>
+                    <a href="ASCII_jp__トップ_3738.html">
+                        <h3>ゲーミングPCの買い替えに注目、最大16万円オフのパソコンショップSEVEN限定セール【10月27日】</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">スマートリング大手のOuraが、AIを用いた睡眠トラッキングの精度についてユーザーを欺く虚偽広告を行ったとして提訴された。.</p>
+                        <p class="related-summary">パソコンショップSEVENが10月27日限定セールを開催。最新ゲーミングPCが最大16万円オフに。対象モデルやセール価格など、お得に購入するための注目情報を紹介します。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_7988.html">
-                        <h3>固定IPが必要な環境でもRegional NAT Gatewayを使うメリット</h3>
+                    <a href="ASCII_jp__トップ_1122.html">
+                        <h3>週刊アスキー No.1619(2026年10月27日発行)</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はじめに こんにちは、Finatextでエンジニアをしているtoumakidoです。 本記事は2026 Japan AWS Jr. Champions 真夏のQiitaリレーの22日目の記事になります...</p>
+                        <p class="related-summary">特集1はおすすめPC自作パーツ。年末年始の自作に向けて鉄板のパーツ、パーツ選びの基準などを整理する。特集2はRTX Spark搭載パソコン。国内でも新製品が登場し、そのパフォーマンスなども明らかになっ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_2074.html">
-                        <h3>React 19.3 browser() APIの使いみち～FUNSTACK Routerの場合～</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_2435.html">
+                        <h3>新幹線予約の個人情報17万件流出</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
-                        <p class="related-summary">皆さんこんにちは。最近、React公式ドキュメントにbrowser() APIの記事が追加されました。この記事公開時点ではまだ正式版のReactでは使用できませんが、次バージョンのReact 19. ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_5890.html">
-                        <h3>或るログ研究者</h3>
+                    <a href="ASCII_jp__トップ_1869.html">
+                        <h3>安いゲーミングデスクを探してる?　なら1万800円で買えるサンワダイレクトのモニターアーム対応机はどう？</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Embulk というオープンソース・ソフトウェアのメンテナーをやっていました。 「やっていました」と過去形なのは、いちおうまだメンテナー権限を持ってはいるものの、プロジェクトは「メンテナンス・モード」...</p>
+                        <p class="related-summary">jpにて、サンワダイレクトのワークデスク「100-DESKF004（幅120cm）」が販売中だ。価格は1万800円。耐荷重50kgの頑丈設計やモニターアームへの対応、簡単な組み立てなどが特徴。.</p>
                     </a>
                 </article>
             </div>

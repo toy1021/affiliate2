@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる | 日本のテックニュース速報</title>
-    <meta name="description" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。">
-    <meta name="keywords" content="React">
+    <title>図で理解する Dagster on ECS の構成と、失敗に気づく仕組み | 日本のテックニュース速報</title>
+    <meta name="description" content="セーフィー株式会社のデータ分析基盤グループでエンジニアをしている渡部です。 セーフィーのデータ分析基盤では、データソースごとにばらばらだったデータ取り込み処理のやり方を揃えるため、Python ライブラリの dlt(data load tool)を採用することとなりました">
+    <meta name="keywords" content="Python">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる">
-    <meta property="og:description" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。">
+    <meta property="og:title" content="図で理解する Dagster on ECS の構成と、失敗に気づく仕組み">
+    <meta property="og:description" content="セーフィー株式会社のデータ分析基盤グループでエンジニアをしている渡部です。 セーフィーのデータ分析基盤では、データソースごとにばらばらだったデータ取り込み処理のやり方を揃えるため、Python ライブラリの dlt(data load tool)を採用することとなりました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5328.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる">
-    <meta name="twitter:description" content="純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。">
+    <meta name="twitter:title" content="図で理解する Dagster on ECS の構成と、失敗に気づく仕組み">
+    <meta name="twitter:description" content="セーフィー株式会社のデータ分析基盤グループでエンジニアをしている渡部です。 セーフィーのデータ分析基盤では、データソースごとにばらばらだったデータ取り込み処理のやり方を揃えるため、Python ライブラリの dlt(data load tool)を採用することとなりました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる",
-        "description": "純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる - プログラミング関連情報をお届け。",
+        "headline": "図で理解する Dagster on ECS の構成と、失敗に気づく仕組み",
+        "description": "セーフィー株式会社のデータ分析基盤グループでエンジニアをしている渡部です。 セーフィーのデータ分析基盤では、データソースごとにばらばらだったデータ取り込み処理のやり方を揃えるため、Python ライブラリの dlt(data load tool)を採用することとなりました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-08T06:41:32",
-        "dateModified": "2026-07-13T19:24:53.270818",
+        "datePublished": "2026-10-28T03:00:17",
+        "dateModified": "2026-10-28T20:49:47.382447",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5328.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5328.html",
         "articleSection": "プログラミング",
-        "keywords": ["React"]
+        "keywords": ["Python"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる",
+                "name": "図で理解する Dagster on ECS の構成と、失敗に気づく仕組み",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5328.html"
             }
         ]
@@ -114,41 +114,39 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる</li>
+                <li aria-current="page">図で理解する Dagster on ECS の構成と、失敗に気づく仕組み</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>純関数・参照透過性・冪等性の違いが分からなくなったのでまとめる</h1>
+                <h1>図で理解する Dagster on ECS の構成と、失敗に気づく仕組み</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/kkeeth/articles/pure-function-referential-transparency-idempotency" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/safie_inc/articles/dagster_on_ecs" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-07-08T06:41:32">
-                        公開: 2026-07-08T06:41:32
+                    <time datetime="2026-10-28T03:00:17">
+                        公開: 2026-10-28T03:00:17
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">React</span>
+                    <span class="tag">Python</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    こんにちは．最近関数型プログラミングの概念をちゃんと理解したい欲が出てきました．Keeth こと桑原です．
-以前 「なぜ React 哲学を守らないといけないのか？」 という記事を書いたのですが，執筆中に純関数の定義に触れたとき，「これって冪等性のこと？いや，参照透過性？というか，そもそも自分はこの 2 つの概念の定義が曖昧かも…」という疑問がふっと浮かびました．良い機会なので，違いを整理してみます．コード例は今回も独断と偏見で TypeScript で書いています．
-※もし間違っている記述があればバンバンコメントいただけると嬉しいです 🙇‍♂️
-
- TL;DR
-
-純関数・参照透過性・冪...
+                    セーフィー株式会社のデータ分析基盤グループでエンジニアをしている渡部です。
+セーフィーのデータ分析基盤では、データソースごとにばらばらだったデータ取り込み処理のやり方を揃えるため、Python ライブラリの dlt(data load tool)を採用することとなりました。
+dlt は取り込みを実行するだけなので「いつ実行するか？」「失敗にどう気づくか？」の仕組みは別で用意する必要があります。
+そこで、オーケストレーションツールとして、Dagster も合わせて導入することとなりました。
+現在は、プロダクトの DB から Snowflake へデータを取り込む処理の一部を ECS 上の ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/kkeeth/articles/pure-function-referential-transparency-idempotency" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/safie_inc/articles/dagster_on_ecs" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,10 +159,10 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=React&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="React - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Python&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Python - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">React - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでReactに関連する商品をチェック</div>
+                                    <div class="product-title">Python - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでPythonに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -225,16 +223,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Publickey_5836.html">
+                    <a href="Qiita_-_人気の記事_7201.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Visual Studio Code、従量課金制になったGitHub Copilotの使用料を表示可...</span>
+                        <span class="nav-title">【脱VSCode】大学鯖が悲鳴を上げているので、Zedへ完全移行する手順をまとめた</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_418.html">
+                    <a href="Qiita_-_人気の記事_6447.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Agent Skills自動最適化の研究、中身はほぼ深層学習の訓練ループだった</span>
+                        <span class="nav-title">New Relic アップデート(2026年9月)</span>
                     </a>
                 </div>
             </div>
@@ -247,53 +245,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7880.html">
-                        <h3>携帯「060」番号、なぜ延期？　総務大臣が語った2つの要因</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">林芳正総務大臣は閣議後記者会見で、携帯電話向け「060」番号の提供開始が延期された要因を説明した。一部の携帯電話端末が060番号を表示できず、ソフトウェアの更新が必要になっていること。加えて、通信事業...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7982.html">
-                        <h3>ジブリやポケモンに着想、「宙をふわふわ飛ぶ柔らかいロボット」を慶大らが開発【動画】</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">ティンカー・ベルやミュウ、スタジオジブリのススワタリなど、アニメに登場する飛ぶキャラクターにヒントを得て、ある研究チームが浮遊するコンパニオンロボットのプロジェクトを立ち上げた。慶應義塾大学やMITメ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1197.html">
-                        <h3>冷水で5分の「冷やしカップヌードル」7月20日発売　開発に丸5年</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">日清食品は7月13日、冷水専用の「冷しカップヌードル」2品を発表した。お湯の代わりに、冷蔵庫で冷やした水を注いで5分待つと食べられる。発売55年目のブランド史上、初めて「熱湯禁止」をうたう商品だ。7月...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_3887.html">
-                        <h3>きのこカンファレンス2026に参加したら40歳以上でも学びがあった</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">こちらの記事は「Medley Summer Tech Blog Relay」の1日目の記事です。 きのこカンファレンス 初参加 「きのこカンファレンス」と聞くと、世界中のキノコの植生について語り合う生...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_797.html">
-                        <h3>開発現場のAIセキュリティを見直す</h3>
+                    <a href="Zennのトレンド_1591.html">
+                        <h3>業務マスタの新規登録をSeleniumで連続化したら、「新規」の判定を2回直すことになった【Python】</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">はじめに 開発現場でAIを使うことは、当たり前になりました。 直近のチームでは、GitHubのIssue駆動開発を主軸にしました。 設計書や機能概要、受け入れ条件、テストプランをIssueに明示し、開...</p>
+                        <p class="related-summary">同じキーの行が 1 件あります。新規の対象は、その行が無いものだけです。 登録し終わったデータを、わざともう一度流したときに出た行（語は少し伏せた）。「登録」は押さずに止まっている。 この 1 行が出...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7201.html">
+                        <h3>【脱VSCode】大学鯖が悲鳴を上げているので、Zedへ完全移行する手順をまとめた</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに こんにちはトラマトです。 突然ですが電通大生の皆さん、最近大学のサーバーにVSCodeでSSH接続しようとして、無限ロードやエラーで弾かれていませんか？ 特にCED、最近かなり不調ですよね。...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_1112.html">
+                        <h3>Claude Codeで半年分のレビュー指摘を分類してみた</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">はじめに 新卒でエンジニアとして入社し、実務に入ってからレビューの指摘で手戻りが多く発生することに悩んでいました。 一度受けた指摘は、今後のタスクで踏まないように気をつけることができます。しかし、実務...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7045.html">
+                        <h3>耳で聞く！Python で学ぶ マクロ経済学 入門 37</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">user: ソース動画のタイトル、そしてこの動画の内容について教えてください。 Gemini: ソース動画のタイトルおよびその詳細な内容について解説します。 1. ソース動画のタイトル 本動画のタイト...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_3711.html">
+                        <h3>JavaScriptランタイムの「Bun」がPrettier互換で300倍以上高速なフォーマッタに。Prettier設定...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">Anthropicが開発しているJavaScriptランタイムの「Bun」の新機能として、Prettier互換のフォーマッタ搭載が発表されました。 2026年10月22日付けでリリースされたBun v...</p>
                     </a>
                 </article>
             </div>

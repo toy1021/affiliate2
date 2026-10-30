@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Railsで学ぶ 暗号化とハッシュ 〜master.keyやDeviseは内部で何をしている？〜 | 日本のテックニュース速報</title>
-    <meta name="description" content="お疲れ様です！ 前回までで「index」「レースコンディション（ユニーク制約）」あたりを扱ってきましたが、今回は 暗号化とハッシュ の話です。 Railsを使っていると当たり前に出てくる master.">
-    <meta name="keywords" content="AI,EV">
+    <title>0から学ぶセキュリティの基礎　~XSS編~ | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 前回はCSRFについて学んだが、その特徴として攻撃者は「ユーザーの認証情報を知らない」「ブラウザとサーバーの通信の中身も読めない」という点があった。 攻撃者にできるのは、ログイン済みのブラウザに、本人の意図しないリクエストを送らせることまでだった。 もちろんOW.">
+    <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Railsで学ぶ 暗号化とハッシュ 〜master.keyやDeviseは内部で何をしている？〜">
-    <meta property="og:description" content="お疲れ様です！ 前回までで「index」「レースコンディション（ユニーク制約）」あたりを扱ってきましたが、今回は 暗号化とハッシュ の話です。 Railsを使っていると当たり前に出てくる master.">
+    <meta property="og:title" content="0から学ぶセキュリティの基礎　~XSS編~">
+    <meta property="og:description" content="はじめに 前回はCSRFについて学んだが、その特徴として攻撃者は「ユーザーの認証情報を知らない」「ブラウザとサーバーの通信の中身も読めない」という点があった。 攻撃者にできるのは、ログイン済みのブラウザに、本人の意図しないリクエストを送らせることまでだった。 もちろんOW.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9859.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Railsで学ぶ 暗号化とハッシュ 〜master.keyやDeviseは内部で何をしている？〜">
-    <meta name="twitter:description" content="お疲れ様です！ 前回までで「index」「レースコンディション（ユニーク制約）」あたりを扱ってきましたが、今回は 暗号化とハッシュ の話です。 Railsを使っていると当たり前に出てくる master.">
+    <meta name="twitter:title" content="0から学ぶセキュリティの基礎　~XSS編~">
+    <meta name="twitter:description" content="はじめに 前回はCSRFについて学んだが、その特徴として攻撃者は「ユーザーの認証情報を知らない」「ブラウザとサーバーの通信の中身も読めない」という点があった。 攻撃者にできるのは、ログイン済みのブラウザに、本人の意図しないリクエストを送らせることまでだった。 もちろんOW.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Railsで学ぶ 暗号化とハッシュ 〜master.keyやDeviseは内部で何をしている？〜",
-        "description": "お疲れ様です！ 前回までで「index」「レースコンディション（ユニーク制約）」あたりを扱ってきましたが、今回は 暗号化とハッシュ の話です。 Railsを使っていると当たり前に出てくる master.",
+        "headline": "0から学ぶセキュリティの基礎　~XSS編~",
+        "description": "はじめに 前回はCSRFについて学んだが、その特徴として攻撃者は「ユーザーの認証情報を知らない」「ブラウザとサーバーの通信の中身も読めない」という点があった。 攻撃者にできるのは、ログイン済みのブラウザに、本人の意図しないリクエストを送らせることまでだった。 もちろんOW.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-07-14T06:07:22",
-        "dateModified": "2026-07-15T17:19:05.306483",
+        "datePublished": "2026-10-30T02:24:34",
+        "dateModified": "2026-10-30T12:15:56.739994",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9859.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9859.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI","EV"]
+        "articleSection": "セキュリティ",
+        "keywords": ["本"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "セキュリティ",
+                "item": "https://toy1021.github.io/affiliate2/#category=セキュリティ"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Railsで学ぶ 暗号化とハッシュ 〜master.keyやDeviseは内部で何をしている？〜",
+                "name": "0から学ぶセキュリティの基礎　~XSS編~",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_9859.html"
             }
         ]
@@ -113,39 +113,39 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Railsで学ぶ 暗号化とハッシュ 〜master.keyやDeviseは内部で何をしている？〜</li>
+                <li><a href="../#category=セキュリティ">セキュリティ</a></li>
+                <li aria-current="page">0から学ぶセキュリティの基礎　~XSS編~</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Railsで学ぶ 暗号化とハッシュ 〜master.keyやDeviseは内部で何をしている？〜</h1>
+                <h1>0から学ぶセキュリティの基礎　~XSS編~</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/akachiryo/items/5a1deaa541d70e11d85f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-07-14T06:07:22">
-                        公開: 2026-07-14T06:07:22
+                    <span class="source">出典: <a href="https://qiita.com/Pigeon_gate/items/3ce4e1c1a39db64c5c32?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: セキュリティ</span>
+                    <time datetime="2026-10-30T02:24:34">
+                        公開: 2026-10-30T02:24:34
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">EV</span>
+                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    お疲れ様です！ 
-前回までで「index」「レースコンディション（ユニーク制約）」あたりを扱ってきましたが、今回は 暗号化とハッシュ の話です。
-Railsを使っていると当たり前に出てくる master.key・credentials.yml.enc・Deviseのパスワー...
+                    はじめに
+前回はCSRFについて学んだが、その特徴として攻撃者は「ユーザーの認証情報を知らない」「ブラウザとサーバーの通信の中身も読めない」という点があった。
+攻撃者にできるのは、ログイン済みのブラウザに、本人の意図しないリクエストを送らせることまでだった。
+もちろんOW...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/akachiryo/items/5a1deaa541d70e11d85f?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/Pigeon_gate/items/3ce4e1c1a39db64c5c32?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -158,30 +158,10 @@ Railsを使っていると当たり前に出てくる master.key・credentials.y
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=EV&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="EV - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">EV - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでEVに関連する商品をチェック</div>
+                                    <div class="product-title">本 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -191,23 +171,23 @@ Railsを使っていると当たり前に出てくる master.key・credentials.y
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>セキュリティ関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -222,16 +202,16 @@ Railsを使っていると当たり前に出てくる master.key・credentials.y
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_9126.html">
+                    <a href="Zennのトレンド_7793.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">渡部・鬼越騒動 中傷の法的リスク</span>
+                        <span class="nav-title">yoroによろしくぅ！Ai Workforce 事業部のリモートコーディングエージェント環境 yor...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_5092.html">
+                    <a href="気になる記になる_7016.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AppleからOpenAIへ元従業員400人が移籍！裁判資料で判明</span>
+                        <span class="nav-title">｢iPad mini (A20 Pro)｣と｢Apple TV 4K (第4世代)｣のRAMの搭載容...</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +224,43 @@ Railsを使っていると当たり前に出てくる master.key・credentials.y
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_3189.html">
-                        <h3>AIデータセンター新設を凍結、NY州が全米初</h3>
+                    <a href="Qiita_-_人気の記事_3838.html">
+                        <h3>パスキーはなぜ偽サイトに強い？登録とログインの流れを図で追う</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">ニューヨーク州知事は、州内におけるハイパースケールデータセンターの新規建築許可の交付を一時停止する行政命令に署名した。.</p>
+                        <p class="related-summary">はじめに 弊社の代表から、セキュリティの高いログイン方式であるパスキーについて学んでほしい、と声がかかりました。セキュリティへの意識が高い会社として、取り組みを外にも伝えていきたいという話もありました...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9452.html">
-                        <h3>ChatGPTで障害か--一時アクセスできず（復旧）</h3>
+                    <a href="Qiita_-_人気の記事_4029.html">
+                        <h3>【Oracle】OAW2026 アプリケーションのセキュリティは、アプリケーションコードを書かずAPEXlangで守る</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">7月15日午前9時現在、OpenAIの「ChatGPT」で障害が起きている模様だ。.</p>
+                        <p class="related-summary">「AI時代、信頼は後付けできない。アーキテクチャに組み込む」 Oracle AI World 2026にて発表 2026年10月に開催されたDB Product Spotlightにて、Oracle ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4097.html">
-                        <h3>OpenAI初のデバイスは「ChatGPT機能も使えるスマートスピーカー」か</h3>
+                    <a href="Zennのトレンド_670.html">
+                        <h3>いいから休め - Black October が終わる今、セキュリティエンジニアがやるべきこと</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">OpenAIがコンシューマー向けデバイスの分野に参入するにあたり、まずは画面のないポータブルスマートスピーカーを発売する見込みだと、Bloombergが報じた。.</p>
+                        <p class="related-summary">Clinton は「だいたい18ヶ月の間はこの状況に耐える必要がある」という趣旨の発. 2026年10月、Black October、情報セキュリティの世界は変わってしまった。 2026年10月、情報...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5723.html">
-                        <h3>Spotify、音楽やポッドキャストについて「AIに質問できる」新機能を追加</h3>
+                    <a href="Publickey_3605.html">
+                        <h3>Linuxカーネルの深刻な脆弱性「PwnEscape」（CVE-2026-99999）、ゲストの仮想マシンからホスト側L...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">セキュリティ</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">音楽ストリーミングサービスのSpotifyは、新たなAIアシスタント機能を追加する。視聴中のコンテンツなどについて質問できるもので、ベータ版として提供が始まっている。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_471.html">
-                        <h3>ゆうちゃみさんが登壇した台湾エクセレンス展にGIGABYTEが出展、最新のAIソリューションやPCを展示</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">台湾の先端技術とイノベーション製品を展示するイベント「2026 TAIWAN EXCELLENCE in TOKYO（台湾エクセレンス展）」にGIGABYTEが出展。ゲーミングモニターやクリエイター向...</p>
+                        <p class="related-summary">悪意のある攻撃者がLinuxの仮想マシンを不正に操作することで、仮想マシンの境界を抜けてホスト側のLinux OSで不正なコードを実行できる可能性がある脆弱性「PwnEscape」（CVE-2026-...</p>
                     </a>
                 </article>
             </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Sonnet 5.5 の「最大30%安い」は、手順のある仕事でだけ再現した | 日本のテックニュース速報</title>
-    <meta name="description" content="5 が 2026-09-28 に出ました。単価は Sonnet 5 と同じ $2 / $10 です。 公式はこう書いています。 In our testing, it costs up to 30% less per task than it.">
-    <meta name="keywords" content="Claude">
+    <title>ADRを書いて、AIに &#34;Why&#34; を理解させよう【Architecture Decision Record】 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに AIエージェントにコードを書かせるのが当たり前になった。 AIはリポジトリのコードを読めば、「何がどう実装されているか」を正確に把握してくれる。 ただ、コードをいくら読んでもわからないことがある。 なぜその実装になっているのか、つまり「Why」の部分だ。 この記.">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Sonnet 5.5 の「最大30%安い」は、手順のある仕事でだけ再現した">
-    <meta property="og:description" content="5 が 2026-09-28 に出ました。単価は Sonnet 5 と同じ $2 / $10 です。 公式はこう書いています。 In our testing, it costs up to 30% less per task than it.">
+    <meta property="og:title" content="ADRを書いて、AIに &#34;Why&#34; を理解させよう【Architecture Decision Record】">
+    <meta property="og:description" content="はじめに AIエージェントにコードを書かせるのが当たり前になった。 AIはリポジトリのコードを読めば、「何がどう実装されているか」を正確に把握してくれる。 ただ、コードをいくら読んでもわからないことがある。 なぜその実装になっているのか、つまり「Why」の部分だ。 この記.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6493.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Sonnet 5.5 の「最大30%安い」は、手順のある仕事でだけ再現した">
-    <meta name="twitter:description" content="5 が 2026-09-28 に出ました。単価は Sonnet 5 と同じ $2 / $10 です。 公式はこう書いています。 In our testing, it costs up to 30% less per task than it.">
+    <meta name="twitter:title" content="ADRを書いて、AIに &#34;Why&#34; を理解させよう【Architecture Decision Record】">
+    <meta name="twitter:description" content="はじめに AIエージェントにコードを書かせるのが当たり前になった。 AIはリポジトリのコードを読めば、「何がどう実装されているか」を正確に把握してくれる。 ただ、コードをいくら読んでもわからないことがある。 なぜその実装になっているのか、つまり「Why」の部分だ。 この記.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Sonnet 5.5 の「最大30%安い」は、手順のある仕事でだけ再現した",
-        "description": "5 が 2026-09-28 に出ました。単価は Sonnet 5 と同じ $2 / $10 です。 公式はこう書いています。 In our testing, it costs up to 30% less per task than it.",
+        "headline": "ADRを書いて、AIに &#34;Why&#34; を理解させよう【Architecture Decision Record】",
+        "description": "はじめに AIエージェントにコードを書かせるのが当たり前になった。 AIはリポジトリのコードを読めば、「何がどう実装されているか」を正確に把握してくれる。 ただ、コードをいくら読んでもわからないことがある。 なぜその実装になっているのか、つまり「Why」の部分だ。 この記.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-30T07:54:22",
-        "dateModified": "2026-10-01T08:24:19.606105",
+        "datePublished": "2026-10-31T05:31:15",
+        "dateModified": "2026-11-01T08:48:52.685557",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6493.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6493.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["Claude"]
+        "keywords": ["AI"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Sonnet 5.5 の「最大30%安い」は、手順のある仕事でだけ再現した",
+                "name": "ADRを書いて、AIに &#34;Why&#34; を理解させよう【Architecture Decision Record】",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6493.html"
             }
         ]
@@ -114,38 +114,40 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Sonnet 5.5 の「最大30%安い」は、手順のある仕事でだけ再現した</li>
+                <li aria-current="page">ADRを書いて、AIに &#34;Why&#34; を理解させよう【Architecture Decision Re...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Sonnet 5.5 の「最大30%安い」は、手順のある仕事でだけ再現した</h1>
+                <h1>ADRを書いて、AIに &#34;Why&#34; を理解させよう【Architecture Decision Record】</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/suwa_nobu/items/7067a7a0868676d350e9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/tetsuro731/items/65590daa94499e705850?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-09-30T07:54:22">
-                        公開: 2026-09-30T07:54:22
+                    <time datetime="2026-10-31T05:31:15">
+                        公開: 2026-10-31T05:31:15
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">Claude</span>
+                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    Claude Sonnet 5.5 が 2026-09-28 に出ました。単価は Sonnet 5 と同じ $2 / $10 です。
-公式はこう書いています。
-
-In our testing, it costs up to 30% less per task than it...
+                    はじめに
+AIエージェントにコードを書かせるのが当たり前になった。
+AIはリポジトリのコードを読めば、「何がどう実装されているか」を正確に把握してくれる。
+ただ、コードをいくら読んでもわからないことがある。
+なぜその実装になっているのか、つまり「Why」の部分だ。
+この記...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/suwa_nobu/items/7067a7a0868676d350e9?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/tetsuro731/items/65590daa94499e705850?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,16 +159,6 @@ In our testing, it costs up to 30% less per task than it...
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">Claude - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -222,16 +214,16 @@ In our testing, it costs up to 30% less per task than it...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="iPhone_Mania_93.html">
+                    <a href="気になる記になる_6893.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple Watchのアップデートが遅い理由と高速化テクニック！通信規格別の転送速度を比較</span>
+                        <span class="nav-title">軽くて頑丈な MacBook専用トートバッグの進化版となる「MinZ tote Air 2 for ...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_2026.html">
+                    <a href="Qiita_-_人気の記事_6519.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">iPhone18 Proのスピーカーに異音報告〜iOS27.0.1で直らないとの声</span>
+                        <span class="nav-title">【テスト入門】Vitestの導入とテストを行う</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +236,53 @@ In our testing, it costs up to 30% less per task than it...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6711.html">
-                        <h3>AMD、組み込み開発向けエージェンティックAIアシスタント「AMD Ross」を発表</h3>
+                    <a href="ASCII_jp__トップ_6221.html">
+                        <h3>強力な冷却性能は店舗スタッフのお墨付き！ 大型ディスプレーとVRMファンを備えたCORSAIRの水冷CPUクーラーが登場...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">AMDは2026年9月30日（米国太平洋時間）、組込みシステム開発の全ライフサイクルを支援するエージェンティック（自律型）AIアシスタント「AMD Ross」を発表した。.</p>
+                        <p class="related-summary">大阪・日本橋のPCパーツショップ「ドスパラ大阪・なんば店」を取材しました。店舗スタッフ・金山魁利さんオススメの製品は、水冷ヘッドに大型ディスプレーとVRMファンを備えたCORSAIRの簡易水冷CPUク...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_1566.html">
-                        <h3>はてな匿名ダイアリー、“AI増田”増えるかも　ChatGPTから直接投稿、早くも賛否</h3>
+                    <a href="ASCII_jp__トップ_4003.html">
+                        <h3>【犬の日】愛犬の表情をAIが写真から読み取る「AIカメラ」を中心に、犬のための音楽アプリ「One by One Musi...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">はてなは9月30日、「はてな匿名ダイアリー」をChatGPTから利用できるプラグインを実験的に公開した。.</p>
+                        <p class="related-summary">【犬の日】愛犬の表情をAIが写真から読み取る「AIカメラ」を中心に、犬のための音楽アプリ「One by One Music」が大型アップデート.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2860.html">
-                        <h3>人間のように深掘りするAI面接「オクティAI面接」を提供開始。無料デモのお申し込みで、AI面接3回分を無料提供</h3>
+                    <a href="ASCII_jp__トップ_5031.html">
+                        <h3>ゴムマリの業務AIエージェント、『口コミ返信』を提供開始</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">人間のように深掘りするAI面接「オクティAI面接」を提供開始。無料デモのお申し込みで、AI面接3回分を無料提供.</p>
+                        <p class="related-summary">ゴムマリの業務AIエージェント、『口コミ返信』を提供開始.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_4259.html">
-                        <h3>乗合型AIオンデマンド交通システム「利府町版mobi」10月1日より本格運行開始</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">乗合型AIオンデマンド交通システム「利府町版mobi」10月1日より本格運行開始.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1069.html">
-                        <h3>Jev のような判定モデルを SQL から呼べる ai_decide を日本語で試した</h3>
+                    <a href="Qiita_-_人気の記事_4023.html">
+                        <h3>【ServiceNow】これから始めるAI Control Tower実践：実画面で見る「何ができるのか」</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">はじめに 2026年9月30日のDatabricksブログで、AI Functionsに ai_decide が追加されたことが発表されました。現在はベータです。 Introducing ai_dec...</p>
+                        <p class="related-summary">はじめに 名称について：2026年10月下旬から、ServiceNowの製品サイトでは本製品の名称が「Super Intelligence Control Tower」になっています（製品ページ）。今...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Zennのトレンド_183.html">
+                        <h3>3 人それぞれの Claude Code を Slack でつないで ISUCON2026 に参加した（207,039 ...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Zennのトレンド</span>
+                        </div>
+                        <p class="related-summary">この記事の下書きは、メンバーの 1 人が使っていた Claude Code が、当日の Slack、リポジトリ、Google Meet の自動メモをもとに作りました。そのメンバーが加筆と修正をしていま...</p>
                     </a>
                 </article>
             </div>

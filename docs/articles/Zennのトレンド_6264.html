@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>型の表現力はタダ: Rustのニッチ最適化を追う【第2部: MIR・LLVM IR・ASMを追う】 | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事はシリーズの第2部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う（本記事） 第3部: コンパイラ内部を読む 第4部: 多重ネスト・パフォーマンス・保証と注意点 はじめに こんにちは、moriです">
+    <title>プロダクトの情報を「浴びるように」見られる場所を作った話 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに プロダクト本部の寺田です。複数のプロダクトを担当する開発部門で、部長をしています。 この数ヶ月、プロダクトの状況を一画面に集める仕組みを作って、部のメンバーに共有し始めました。社内では「コックピット」と呼んでいます">
     <meta name="keywords" content="本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="型の表現力はタダ: Rustのニッチ最適化を追う【第2部: MIR・LLVM IR・ASMを追う】">
-    <meta property="og:description" content="! この記事はシリーズの第2部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う（本記事） 第3部: コンパイラ内部を読む 第4部: 多重ネスト・パフォーマンス・保証と注意点 はじめに こんにちは、moriです">
+    <meta property="og:title" content="プロダクトの情報を「浴びるように」見られる場所を作った話">
+    <meta property="og:description" content="はじめに プロダクト本部の寺田です。複数のプロダクトを担当する開発部門で、部長をしています。 この数ヶ月、プロダクトの状況を一画面に集める仕組みを作って、部のメンバーに共有し始めました。社内では「コックピット」と呼んでいます">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6264.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="型の表現力はタダ: Rustのニッチ最適化を追う【第2部: MIR・LLVM IR・ASMを追う】">
-    <meta name="twitter:description" content="! この記事はシリーズの第2部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う（本記事） 第3部: コンパイラ内部を読む 第4部: 多重ネスト・パフォーマンス・保証と注意点 はじめに こんにちは、moriです">
+    <meta name="twitter:title" content="プロダクトの情報を「浴びるように」見られる場所を作った話">
+    <meta name="twitter:description" content="はじめに プロダクト本部の寺田です。複数のプロダクトを担当する開発部門で、部長をしています。 この数ヶ月、プロダクトの状況を一画面に集める仕組みを作って、部のメンバーに共有し始めました。社内では「コックピット」と呼んでいます">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "型の表現力はタダ: Rustのニッチ最適化を追う【第2部: MIR・LLVM IR・ASMを追う】",
-        "description": "! この記事はシリーズの第2部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う（本記事） 第3部: コンパイラ内部を読む 第4部: 多重ネスト・パフォーマンス・保証と注意点 はじめに こんにちは、moriです",
+        "headline": "プロダクトの情報を「浴びるように」見られる場所を作った話",
+        "description": "はじめに プロダクト本部の寺田です。複数のプロダクトを担当する開発部門で、部長をしています。 この数ヶ月、プロダクトの状況を一画面に集める仕組みを作って、部のメンバーに共有し始めました。社内では「コックピット」と呼んでいます",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-03T08:20:00",
-        "dateModified": "2026-06-05T08:08:38.560162",
+        "datePublished": "2026-10-30T08:18:26",
+        "dateModified": "2026-11-02T20:01:06.028150",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6264.html"
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "型の表現力はタダ: Rustのニッチ最適化を追う【第2部: MIR・LLVM IR・ASMを追う】",
+                "name": "プロダクトの情報を「浴びるように」見られる場所を作った話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_6264.html"
             }
         ]
@@ -114,19 +114,19 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">型の表現力はタダ: Rustのニッチ最適化を追う【第2部: MIR・LLVM IR・ASMを追う】</li>
+                <li aria-current="page">プロダクトの情報を「浴びるように」見られる場所を作った話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>型の表現力はタダ: Rustのニッチ最適化を追う【第2部: MIR・LLVM IR・ASMを追う】</h1>
+                <h1>プロダクトの情報を「浴びるように」見られる場所を作った話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/fast/articles/28c49ba5f38dae" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/tokium_dev/articles/product-cockpit-for-product-teams" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-06-03T08:20:00">
-                        公開: 2026-06-03T08:20:00
+                    <time datetime="2026-10-30T08:18:26">
+                        公開: 2026-10-30T08:18:26
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
@@ -138,30 +138,17 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-この記事はシリーズの第2部です。
+                    はじめに
+プロダクト本部の寺田です。複数のプロダクトを担当する開発部門で、部長をしています。
+この数ヶ月、プロダクトの状況を一画面に集める仕組みを作って、部のメンバーに共有し始めました。社内では「コックピット」と呼んでいます。
+情報を集めたダッシュボードの話は、世の中にもうたくさんあります。なのでこの記事では、つくりの話は少しにして、部長として何を思ってこれを作ったのか、一緒に働くPdMたちとこれを使ってどう話したいのかを中心に書きます。
 
-
-第1部: メモリレイアウトの観察
-
-
-第2部: MIR・LLVM IR・ASMを追う（本記事）
-
-第3部: コンパイラ内部を読む
-
-第4部: 多重ネスト・パフォーマンス・保証と注意点
-
-
-
- はじめに
-こんにちは、moriです。
-ファスト株式会社にてRustを用いてデスクトップアプリケーション・バックエンドの開発を行なっています。
-第1部では、Option&lt;NonZeroU8&gt; が u8 と同じ1バイトになることをメモリの中身から直接観察しました。
-「サイズが同じ」ことはわかりましたが、「なぜそうなるのか」——コンパイラが型安全...
+ PdMの視界は、開発に寄りやすい
+TOKIUMのPdMは、スクラム開発におけるプロダクトオーナーの役割も兼ねていることが多く、その分だけ視界は...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/fast/articles/28c49ba5f38dae" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/tokium_dev/articles/product-cockpit-for-product-teams" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -238,16 +225,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_8155.html">
+                    <a href="Zennのトレンド_1205.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">IPAの資料で学ぶ「生成AIの情報漏洩リスク」入門</span>
+                        <span class="nav-title">yoroによろしくぅ！Ai Workforce 事業部のリモートコーディングエージェント環境 yor...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_1385.html">
+                    <a href="Qiita_-_人気の記事_575.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">藤田医科大病院 患者情報漏えいか</span>
+                        <span class="nav-title">誤ってマルウェアを実行してしまった私が、AIとREA（Reverse Engineer Anythi...</span>
                     </a>
                 </div>
             </div>
@@ -260,53 +247,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4941.html">
-                        <h3>利権はなぜ生まれるのか？ ― 競争・統制・財源幻想を超えて考える“供給能力” : Pythonで学ぶ マクロ経済学入門 ...</h3>
+                    <a href="iPhone_Mania_6675.html">
+                        <h3>HomeView Ultraを開発中と報道〜9インチ搭載し税込175,800円？</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">iPhone Mania</span>
+                        </div>
+                        <p class="related-summary">AppleがHomeViewの上位モデルとして、9インチディスプレイと360度回転するロボットアームを備えたデバイスを開発していると、The Informationが報じています。 このデバイスは「H...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Publickey_6938.html">
+                        <h3>GitHub、「Copilot Fusion」正式リリース。タスクに応じて最適なAIモデル選択で高性能かつ低コストに。G...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">GitHubは、米サンフランシスコで10月28日と29日の2日間開催した年次イベント「GitHub Universe 2026」で、新機能「GitHub Copilot Fusion」の正式リリースを...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_4469.html">
+                        <h3>CAMPFIRE「ゲーム・サービス開発」カテゴリ歴代1位！『歌マクロス』復活プロジェクト、支援総額2億5,407万円・支...</h3>
+                        <div class="related-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">CAMPFIRE「ゲーム・サービス開発」カテゴリ歴代1位！『歌マクロス』復活プロジェクト、支援総額2億5,407万円・支援者8,356名でクラウドファンディング終了！！.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_5912.html">
+                        <h3>耳で聞く！Python で学ぶ マクロ経済学 入門 39</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">user: 「Pythonで学ぶマクロ経済学入門」、第87回を始めましょう。まず前回の復習として、 「競争か統制か？ ― “供給能力”から読み解く日本経済の落とし穴 : Pythonで学ぶ マクロ経済...</p>
+                        <p class="related-summary">user: ソース動画のタイトル、そしてこの動画の内容について教えてください。 Gemini: ソース動画のタイトルは 「給料が上がらない理由は財源幻想 : Pythonで学ぶマクロ経済学入門 P...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_5158.html">
-                        <h3>CUDA Programming Guide Part 1</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに 東京科学大学 博士課程の藤井です。 本記事では、GPU Programmingを行うにあたり欠かすことのできないCUDA C++ について網羅的に解説を行うシリーズ記事の第1号記事です。最終...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_1324.html">
-                        <h3>【失敗談】大規模開発をして残ったのは技術負債だけだった話 〜作らないことの重要性〜</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに 「この機能、本当に今作る必要がありますか？」 エンジニアとして、この問いをビジネスサイドに投げかけることができているでしょうか。私はかつて、この問いを投げかけながらも、技術的なリスクを十分に...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Zennのトレンド_7746.html">
-                        <h3>Claude Managed Agentsで「まずエンジニアに聞こう」を「まずbotに聞こう」に変えた</h3>
-                        <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
-                        </div>
-                        <p class="related-summary">はじめに ダイニーでは、開発チーム宛ての質問（社内では dev-help と呼んでいます）が日に8件ほど来ます。1件 10 分でも、積み上がれば月に数十時間が消えていきます。前回の記事では、過去の d...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4117.html">
-                        <h3>GitHub DesktopのUIと共に履歴に関するコマンドを理解しようの会</h3>
+                    <a href="Qiita_-_人気の記事_8339.html">
+                        <h3>10か月間レートが停滞した自分が突如黄パフォを出し青コーダーになれた理由</h3>
                         <div class="related-meta">
                             <span class="category">プログラミング</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">こんにちは。 ソーイ株式会社、入社2年目の村上です。 以前、GitHub Desktopで使用される基本的なGitコマンドについて紹介しました。 前回の記事はこちらです。 前回は、 clone com...</p>
+                        <p class="related-summary">こんにちは。 競技プログラマーのriver0525です。 執筆時点（2026/11/1）ではAtCoderのアルゴリズム部門で青レートに到達しています。 本記事では、10か月間レートが停滞し続けて才能...</p>
                     </a>
                 </article>
             </div>

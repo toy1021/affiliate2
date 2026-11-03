@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dbt Chartsで作れるグラフを試してみた【dbt v2】【DuckDB】 | 日本のテックニュース速報</title>
-    <meta name="description" content="1 本記事の目的 2026年9月、dbt Labsからdbt Charts[1]がパブリックベータとして公開されました[2]。本記事では、実際にどんなグラフをどこまで描けるのかを確かめるため、NBA（アメリカのプロバスケットボールリーグ）のデータを使って、いろいろなグラフを作ってみました">
-    <meta name="keywords" content="本">
+    <title>ADRをregoでlintする | 日本のテックニュース速報</title>
+    <meta name="description" content="AIが書くADRのフォーマットをどう揃えるか 自分のリポジトリでは、設計の決定を ADR（Architecture Decision Records）として docs/adr/ に残している。最近は、その ADR の多くを Claude Code に書いてもらっている">
+    <meta name="keywords" content="AI,Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="dbt Chartsで作れるグラフを試してみた【dbt v2】【DuckDB】">
-    <meta property="og:description" content="1 本記事の目的 2026年9月、dbt Labsからdbt Charts[1]がパブリックベータとして公開されました[2]。本記事では、実際にどんなグラフをどこまで描けるのかを確かめるため、NBA（アメリカのプロバスケットボールリーグ）のデータを使って、いろいろなグラフを作ってみました">
+    <meta property="og:title" content="ADRをregoでlintする">
+    <meta property="og:description" content="AIが書くADRのフォーマットをどう揃えるか 自分のリポジトリでは、設計の決定を ADR（Architecture Decision Records）として docs/adr/ に残している。最近は、その ADR の多くを Claude Code に書いてもらっている">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8874.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="dbt Chartsで作れるグラフを試してみた【dbt v2】【DuckDB】">
-    <meta name="twitter:description" content="1 本記事の目的 2026年9月、dbt Labsからdbt Charts[1]がパブリックベータとして公開されました[2]。本記事では、実際にどんなグラフをどこまで描けるのかを確かめるため、NBA（アメリカのプロバスケットボールリーグ）のデータを使って、いろいろなグラフを作ってみました">
+    <meta name="twitter:title" content="ADRをregoでlintする">
+    <meta name="twitter:description" content="AIが書くADRのフォーマットをどう揃えるか 自分のリポジトリでは、設計の決定を ADR（Architecture Decision Records）として docs/adr/ に残している。最近は、その ADR の多くを Claude Code に書いてもらっている">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "dbt Chartsで作れるグラフを試してみた【dbt v2】【DuckDB】",
-        "description": "1 本記事の目的 2026年9月、dbt Labsからdbt Charts[1]がパブリックベータとして公開されました[2]。本記事では、実際にどんなグラフをどこまで描けるのかを確かめるため、NBA（アメリカのプロバスケットボールリーグ）のデータを使って、いろいろなグラフを作ってみました",
+        "headline": "ADRをregoでlintする",
+        "description": "AIが書くADRのフォーマットをどう揃えるか 自分のリポジトリでは、設計の決定を ADR（Architecture Decision Records）として docs/adr/ に残している。最近は、その ADR の多くを Claude Code に書いてもらっている",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-10-05T00:47:36",
-        "dateModified": "2026-10-06T01:11:03.985417",
+        "datePublished": "2026-11-03T07:59:33",
+        "dateModified": "2026-11-03T19:09:41.221338",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8874.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8874.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["AI","Claude"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "dbt Chartsで作れるグラフを試してみた【dbt v2】【DuckDB】",
+                "name": "ADRをregoでlintする",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_8874.html"
             }
         ]
@@ -113,43 +113,41 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">dbt Chartsで作れるグラフを試してみた【dbt v2】【DuckDB】</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">ADRをregoでlintする</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>dbt Chartsで作れるグラフを試してみた【dbt v2】【DuckDB】</h1>
+                <h1>ADRをregoでlintする</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/ryatora/articles/dbt-charts-chart-catalog" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-10-05T00:47:36">
-                        公開: 2026-10-05T00:47:36
+                    <span class="source">出典: <a href="https://zenn.dev/babarot/articles/regomark-adr-checker" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-11-03T07:59:33">
+                        公開: 2026-11-03T07:59:33
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">Claude</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    1. 概要
+                    AIが書くADRのフォーマットをどう揃えるか
+自分のリポジトリでは、設計の決定を ADR（Architecture Decision Records）として docs/adr/ に残している。最近は、その ADR の多くを Claude Code に書いてもらっている。決定を相談して、「これを ADR にしておいて」と頼むと書いてくれる。
+ただ、AI に書かせた ADR は、少しずつ自由になっていく。テンプレートを置いて書き方を指示していても、ずれるときはずれる。たとえば、
 
- 1.1 本記事の目的
-2026年9月、dbt Labsからdbt Charts[1]がパブリックベータとして公開されました[2]。本記事では、実際にどんなグラフをどこまで描けるのかを確かめるため、NBA（アメリカのプロバスケットボールリーグ）のデータを使って、いろいろなグラフを作ってみました。
-2章で準備をして、3章でグラフを種類ごとに作ります。4章では、dbt Chartsでは描けないグラフをまとめます。
-
- 1.2 dbt Chartsとは
-dbt Chartsは、ダッシュボードをYAMLで定義するツールです。ダッシュボード1枚をボード（board）と呼び、1つの...
+Decision に、画面のメニュー項目の一覧や定数、構造体の定義まで書いてある。仕様書に近づいて、コードを...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/ryatora/articles/dbt-charts-chart-catalog" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/babarot/articles/regomark-adr-checker" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,10 +160,30 @@ dbt Chartsは、ダッシュボードをYAMLで定義するツールです。ダ
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -175,23 +193,23 @@ dbt Chartsは、ダッシュボードをYAMLで定義するツールです。ダ
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">ガジェット - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -206,16 +224,16 @@ dbt Chartsは、ダッシュボードをYAMLで定義するツールです。ダ
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="気になる記になる_7190.html">
+                    <a href="ASCII_jp__トップ_1386.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Apple、現地時間10月13日に発表イベントを開催との情報</span>
+                        <span class="nav-title">入園入学準備は早めがおすすめ！クラフトハートトーカイ「Early BirdミシンSALE」開催</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_3132.html">
+                    <a href="ASCII_jp__トップ_2021.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【速報】Gemini 4 Argon 登場！公式データで見る“長時間働くAI”の現在地</span>
+                        <span class="nav-title">燃費28km/L超えは当たり前!? トヨタの新型アクアがセンチュリー譲りの「スムーズストップ」を手に...</span>
                     </a>
                 </div>
             </div>
@@ -228,53 +246,53 @@ dbt Chartsは、ダッシュボードをYAMLで定義するツールです。ダ
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_609.html">
-                        <h3>クラファン7億円超えのキーボードに長蛇の列！群雄割拠がめちゃ楽しい「TOKYO KEYBOARD EXPO 2026」レ...</h3>
+                    <a href="Publickey_5374.html">
+                        <h3>GitHubが従来比180倍のスループット性能向上を実現へ、来年初頭に。AIエージェント時代に対応。GitHub Uni...</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">GitHubは、米サンフランシスコで10月28日と29日の2日間開催した年次イベント「GitHub Universe 2026」で、AIエージェント時代に対応した大幅な性能向上を実現することを明らかに...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_5368.html">
+                        <h3>社会人向け英語学習サービス「EiDrill」、Claude・ChatGPT との連携（MCP）を開始　いつもの AI に...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">今年で2回目の開催となる日本最大級のキーボード展示・販売イベント「TOKYO KEYBOARD EXPO 」を取材。個性派モデルが目白押しで、キーボード好きにはたまらない1日になった。.</p>
+                        <p class="related-summary">社会人向け英語学習サービス「EiDrill」、Claude・ChatGPT との連携（MCP）を開始 いつもの AI に話しかけるだけで TOEIC(R) 形式のドリルと復習、学習記録はアプリと共通.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_5647.html">
-                        <h3>ロジクールの人気マウス｢MX MASTER 4｣などがAmazonでタイムセールに ｰ 最大41％オフで販売中</h3>
+                    <a href="ASCII_jp__トップ_7610.html">
+                        <h3>世界のAIデータセンター向けシリコンフォトニクス市場、2034年に146億米ドルへ拡大予測 ― 年平均18.0％成長、生...</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">ロジクールが、本日よりAmazonで人気ワイヤレスマウス「MX MASTER 4」などを特価で販売する「ロジクール限定セール」をスタートしました。 本セールでは、人気ワイヤレスマウスの最新モデルである...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_1403.html">
-                        <h3>電動自転車からコンロまで、小型バッテリーは都市の送電網を支えるか</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ニューヨーク市では規制の壁に阻まれ、大型バッテリーを送電網に組み込むのが難しい。そこで一部のスタートアップは、配達用電動自転車の交換式バッテリーやバッテリー内蔵のIHコンロなど、意外な場所で小型バッテ...</p>
+                        <p class="related-summary">世界のAIデータセンター向けシリコンフォトニクス市場、2034年に146億米ドルへ拡大予測 ― 年平均18. 0％成長、生成AIと高速光通信需要が市場を牽引.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_6304.html">
-                        <h3>UGREEN、イヤーカフ型のワイヤレスイヤホン「UGREEN ClipBuds Pro2」を発売</h3>
+                    <a href="Qiita_-_人気の記事_8444.html">
+                        <h3>ナレッジグラフを自動生成!?Oracle AI Database 26aiの23.26.4で追加されたGraphRAG機...</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">本日、UGREENが、耳穴に挿入しないオープン設計を採用したイヤーカフ型のワイヤレスイヤホン「UGREEN ClipBuds Pro2」を発表しました。 「UGREEN ClipBuds Pro2」は...</p>
+                        <p class="related-summary">GraphRAGは文書の意味的な類似性だけでなく、文書に含まれるエンティティ（人物・組織・製品など）とその関係性を活用して情報を検索する技術です。 通常のベクトル検索では捉えにくい、複数の情報間のつな...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="気になる記になる_4492.html">
-                        <h3>【本日まで】集英社の人気マンガ3万冊以上が半額の｢集英社 秋マン!! 2026｣は本日が最終日</h3>
+                    <a href="Zennのトレンド_2353.html">
+                        <h3>バイブコーディングで機能を継ぎ足していて見えてきたClaudeCodeの実装のクセ</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">AmazonがKindleストアにおいて開催中の集英社のマンガを対象とした大規模セール「集英社 秋マン!! 2026」は本日までとなります。 本セールは、商品詳細ページにKindle価格の50%分のク...</p>
+                        <p class="related-summary">「業務フローがよくわからないんだよね」という状態でも、チャラくバイブコーディングで自力でシステムが作れる時代が来ました。特にエンジニアは、アイディアをすぐに形にできます。普段からClaude Code...</p>
                     </a>
                 </article>
             </div>

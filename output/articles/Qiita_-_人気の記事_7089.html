@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【命名規則】名前から「目的」を読み取れるコードを書くために——目的駆動名前設計のすすめ | 日本のテックニュース速報</title>
-    <meta name="description" content="■ この記事はこんな人におすすめ クラス名・変数名・メソッド名の命名に迷いがちな人 「とりあえず User や Item でいいか」と思いがちな人 命名規則を意識はしているが、チームでの共通認識づくりに課題を感じている人 ドメイン知識を活かした設計に興味がある人 ■.">
+    <title>LaravelのログをCloudWatch Logsへ送信する — CloudWatch Logs連携の後編 | 日本のテックニュース速報</title>
+    <meta name="description" content="目次 はじめに 想定読者 今回行うこと CloudWatch Logsについて ロググループ・ログストリーム・ログイベント CloudWatch Logsを準備する ロググループを作成する ログストリームを作成する IAMを設定する Laravelから.">
     <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【命名規則】名前から「目的」を読み取れるコードを書くために——目的駆動名前設計のすすめ">
-    <meta property="og:description" content="■ この記事はこんな人におすすめ クラス名・変数名・メソッド名の命名に迷いがちな人 「とりあえず User や Item でいいか」と思いがちな人 命名規則を意識はしているが、チームでの共通認識づくりに課題を感じている人 ドメイン知識を活かした設計に興味がある人 ■.">
+    <meta property="og:title" content="LaravelのログをCloudWatch Logsへ送信する — CloudWatch Logs連携の後編">
+    <meta property="og:description" content="目次 はじめに 想定読者 今回行うこと CloudWatch Logsについて ロググループ・ログストリーム・ログイベント CloudWatch Logsを準備する ロググループを作成する ログストリームを作成する IAMを設定する Laravelから.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7089.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【命名規則】名前から「目的」を読み取れるコードを書くために——目的駆動名前設計のすすめ">
-    <meta name="twitter:description" content="■ この記事はこんな人におすすめ クラス名・変数名・メソッド名の命名に迷いがちな人 「とりあえず User や Item でいいか」と思いがちな人 命名規則を意識はしているが、チームでの共通認識づくりに課題を感じている人 ドメイン知識を活かした設計に興味がある人 ■.">
+    <meta name="twitter:title" content="LaravelのログをCloudWatch Logsへ送信する — CloudWatch Logs連携の後編">
+    <meta name="twitter:description" content="目次 はじめに 想定読者 今回行うこと CloudWatch Logsについて ロググループ・ログストリーム・ログイベント CloudWatch Logsを準備する ロググループを作成する ログストリームを作成する IAMを設定する Laravelから.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【命名規則】名前から「目的」を読み取れるコードを書くために——目的駆動名前設計のすすめ",
-        "description": "■ この記事はこんな人におすすめ クラス名・変数名・メソッド名の命名に迷いがちな人 「とりあえず User や Item でいいか」と思いがちな人 命名規則を意識はしているが、チームでの共通認識づくりに課題を感じている人 ドメイン知識を活かした設計に興味がある人 ■.",
+        "headline": "LaravelのログをCloudWatch Logsへ送信する — CloudWatch Logs連携の後編",
+        "description": "目次 はじめに 想定読者 今回行うこと CloudWatch Logsについて ロググループ・ログストリーム・ログイベント CloudWatch Logsを準備する ロググループを作成する ログストリームを作成する IAMを設定する Laravelから.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,15 +48,15 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-05-20T21:48:59",
-        "dateModified": "2026-05-23T06:34:54.826608",
+        "datePublished": "2026-11-05T02:54:29",
+        "dateModified": "2026-11-06T02:02:06.455439",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7089.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7089.html",
-        "articleSection": "その他",
+        "articleSection": "ガジェット",
         "keywords": []
     }
     </script>
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "ガジェット",
+                "item": "https://toy1021.github.io/affiliate2/#category=ガジェット"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【命名規則】名前から「目的」を読み取れるコードを書くために——目的駆動名前設計のすすめ",
+                "name": "LaravelのログをCloudWatch Logsへ送信する — CloudWatch Logs連携の後編",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_7089.html"
             }
         ]
@@ -113,20 +113,20 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">【命名規則】名前から「目的」を読み取れるコードを書くために——目的駆動名前設計のすすめ</li>
+                <li><a href="../#category=ガジェット">ガジェット</a></li>
+                <li aria-current="page">LaravelのログをCloudWatch Logsへ送信する — CloudWatch Logs連...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【命名規則】名前から「目的」を読み取れるコードを書くために——目的駆動名前設計のすすめ</h1>
+                <h1>LaravelのログをCloudWatch Logsへ送信する — CloudWatch Logs連携の後編</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/Nao52/items/c47bc4176cb03e4f0d5a?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-05-20T21:48:59">
-                        公開: 2026-05-20T21:48:59
+                    <span class="source">出典: <a href="https://qiita.com/usui0623/items/731067009dd5f80a9753?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: ガジェット</span>
+                    <time datetime="2026-11-05T02:54:29">
+                        公開: 2026-11-05T02:54:29
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
@@ -135,18 +135,28 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    ■ この記事はこんな人におすすめ
+                    目次
 
-クラス名・変数名・メソッド名の命名に迷いがちな人
-「とりあえず User や Item でいいか」と思いがちな人
-命名規則を意識はしているが、チームでの共通認識づくりに課題を感じている人
-ドメイン知識を活かした設計に興味がある人
+はじめに
+想定読者
+今回行うこと
 
-■...
+CloudWatch Logsについて
+
+ロググループ・ログストリーム・ログイベント
+
+CloudWatch Logsを準備する
+
+ロググループを作成する
+ログストリームを作成する
+
+IAMを設定する
+
+Laravelから...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/Nao52/items/c47bc4176cb03e4f0d5a?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/usui0623/items/731067009dd5f80a9753?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -157,7 +167,7 @@
                 
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>ガジェット関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -188,16 +198,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_5111.html">
+                    <a href="Qiita_-_人気の記事_6638.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">複数集約を跨ぐ処理を1つのDBトランザクションで括る前に読む記事</span>
+                        <span class="nav-title">SLMを作ってみる</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_4229.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_7443.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Googleの新しいTUI Antigravity CLIを試してみた</span>
+                        <span class="nav-title">AI効果「期待超えた」日本企業9%</span>
                     </a>
                 </div>
             </div>
@@ -205,63 +215,6 @@
         </main>
 
         <!-- 関連記事 -->
-        <aside class="related-articles" role="complementary" aria-label="関連記事">
-        <section>
-            <h2>関連記事</h2>
-            <div class="related-grid">
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_5503.html">
-                        <h3>SpaceX、本日の「スターシップV3」の打ち上げを直前で中止（更新）理由判明</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">米SpaceXは、日本時間5月22日に予定していた「Starship」の次世代型「V3」の打ち上げを直前で中止した。カウントダウンはマイナス40秒付近から動かず、その後中止が発表された。打ち上げは明日...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4665.html">
-                        <h3>東海道・山陽新幹線に「弱冷房車」　7〜8月導入　16両ひかりの3号車</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">JR東海とJR西日本は5月22日、東海道・山陽新幹線で冷房を弱めに設定した「弱冷房車」を試験的に導入すると発表した。実施期間は2026年7月1日から8月31日まで。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_9571.html">
-                        <h3>安心の国内企画「240W」対応USBケーブル　やわらか極太USBケーブル4本セットを衝動買い</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">製造をほぼ海外に依存している現代のUSBケーブル市場は、真面目に探し始めるととめどもない沼にハマる運命にある。しかし、懲りずにUSB PD最高峰である「240W（48V/5A）」の超高出力急速充電に対...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_1288.html">
-                        <h3>【本日開催】雷光炎舞かぐづち、強風の海上リハーサルを完全クリア！ STAR ISLAND 2026 水上特設ステージにて...</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">【本日開催】雷光炎舞かぐづち、強風の海上リハーサルを完全クリア！ STAR ISLAND 2026 水上特設ステージにて、今夜いよいよ前代未聞のファイヤー演出が幕を開ける.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="気になる記になる_5074.html">
-                        <h3>【セール】Kindleストアで｢KADOKAWAのKindle本フェア｣が開催中 ｰ 対象のタイトルが最大半額に</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">気になる、記になる…</span>
-                        </div>
-                        <p class="related-summary">Amazonが、Kindleストアで「KADOKAWAのKindle本フェア」のセールを開催しています。 「KADOKAWAのKindle本フェア」では、KADOKAWAの対象のKindle本が最大5...</p>
-                    </a>
-                </article>
-            </div>
-        </section>
-        </aside>
 
         <div class="back-navigation">
             <a href="../" class="back-to-home">一覧に戻る</a>

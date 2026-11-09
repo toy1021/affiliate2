@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用 | 日本のテックニュース速報</title>
-    <meta name="description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
+    <title>AIエージェントに自分の開発環境を作らせ続けた2か月 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに Claude CodeとCodexを両方使っていると、ルールや設定がリポジトリごと・ツールごとに散らばる。合うツールを探して乗り換え続けるより、自分の開発環境を自分で作り、改善し続けたいと思った。 以前なら、個人の細かい要求に合わせて開発環境を作り込むのはコストが高すぎた">
     <meta name="keywords" content="AI,Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用">
-    <meta property="og:description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
+    <meta property="og:title" content="AIエージェントに自分の開発環境を作らせ続けた2か月">
+    <meta property="og:description" content="はじめに Claude CodeとCodexを両方使っていると、ルールや設定がリポジトリごと・ツールごとに散らばる。合うツールを探して乗り換え続けるより、自分の開発環境を自分で作り、改善し続けたいと思った。 以前なら、個人の細かい要求に合わせて開発環境を作り込むのはコストが高すぎた">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7597.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,15 +17,15 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用">
-    <meta name="twitter:description" content="AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます">
+    <meta name="twitter:title" content="AIエージェントに自分の開発環境を作らせ続けた2か月">
+    <meta name="twitter:description" content="はじめに Claude CodeとCodexを両方使っていると、ルールや設定がリポジトリごと・ツールごとに散らばる。合うツールを探して乗り換え続けるより、自分の開発環境を自分で作り、改善し続けたいと思った。 以前なら、個人の細かい要求に合わせて開発環境を作り込むのはコストが高すぎた">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7597.html">
     
     <!-- アクセシビリティ改善 -->
-    <meta name="reading-time" content="1">
+    <meta name="reading-time" content="2">
     <meta name="content-language" content="ja">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" as="style">
     
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用",
-        "description": "AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます",
+        "headline": "AIエージェントに自分の開発環境を作らせ続けた2か月",
+        "description": "はじめに Claude CodeとCodexを両方使っていると、ルールや設定がリポジトリごと・ツールごとに散らばる。合うツールを探して乗り換え続けるより、自分の開発環境を自分で作り、改善し続けたいと思った。 以前なら、個人の細かい要求に合わせて開発環境を作り込むのはコストが高すぎた",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-09-16T09:54:07",
-        "dateModified": "2026-09-21T03:38:20.253666",
+        "datePublished": "2026-11-08T21:41:08",
+        "dateModified": "2026-11-09T15:23:16.253467",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7597.html"
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用",
+                "name": "AIエージェントに自分の開発環境を作らせ続けた2か月",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7597.html"
             }
         ]
@@ -114,21 +114,21 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</li>
+                <li aria-current="page">AIエージェントに自分の開発環境を作らせ続けた2か月</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AI開発チームの作り方と育て方 — マルチエージェント開発組織の設計と運用</h1>
+                <h1>AIエージェントに自分の開発環境を作らせ続けた2か月</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/hampen2929/books/ai-dev-team-guide" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/otar/articles/switchboard-own-dev-environment" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-09-16T09:54:07">
-                        公開: 2026-09-16T09:54:07
+                    <time datetime="2026-11-08T21:41:08">
+                        公開: 2026-11-08T21:41:08
                     </time>
-                    <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
+                    <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
                     <span class="tag">AI</span>
@@ -139,11 +139,14 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    AI開発チームを作り、運用しながら育てるための設計書です。業務と完了条件、役割、受け渡し、並列化、検収、自律度、学びの蓄積を一続きで扱います。各章の図解と、TypeScript製タスク管理アプリへの機能追加の実走を通して、仕様・差分・テスト・AIレビューをつなぐ方法を学べます。実走はCodexの実装と既設のClaudeレビューCIを用いた最小構成で、並列構成の提案や未計測の効果とは区別しています。単体のエージェントを使いこなし、次に複数体で開発を回したい人のための一冊です。全章無料で読めます。
+                    はじめに
+Claude CodeとCodexを両方使っていると、ルールや設定がリポジトリごと・ツールごとに散らばる。合うツールを探して乗り換え続けるより、自分の開発環境を自分で作り、改善し続けたいと思った。
+以前なら、個人の細かい要求に合わせて開発環境を作り込むのはコストが高すぎた。AIエージェントで、作るコストだけでなく、使いながら直すコストも下がってきたので、今ならできそうだと思った。旅行のアプリ[1]と同じで、自分に必要なものを自分のために作る、という考え方。
+それで、2026年9月からSwitchboardというツールを作っている。コードを書いているのはほぼエージェントで、S...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/hampen2929/books/ai-dev-team-guide" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/otar/articles/switchboard-own-dev-environment" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -220,16 +223,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Publickey_7157.html">
+                    <a href="Qiita_-_人気の記事_150.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">「Java 27」正式リリース。全環境でG1 GCがデフォルトに、TLS 1.3用に耐量子暗号のハイ...</span>
+                        <span class="nav-title">部品の脆弱性は、どこまで広がるのか？ 主要 64 製品と 8 部品の依存関係をたどったら、OpenS...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Publickey_1969.html">
+                    <a href="Qiita_-_人気の記事_5974.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">Android、パスキーをパスワードマネージャ間で転送可能に。Googleパスワードマネージャ、1P...</span>
+                        <span class="nav-title">【魔法少女マンガ】データのそばに、AIを！ ～ベクトル検索からエージェントまで～</span>
                     </a>
                 </div>
             </div>
@@ -242,52 +245,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_8192.html">
-                        <h3>待ってたぞ！ VAIO10年ぶりの変形ノートPCは、3in1でバツグンの使いやすさ。</h3>
+                    <a href="Publickey_9638.html">
+                        <h3>Google、Kubernetesで10倍高密度にAIエージェントを実行可能にする「Agent Sustrate」と「g...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">3型WQXGAの高精細なタッチディスプレイを搭載した、新発想のマルチスタイルノートPCです。画面中央を軸に反転させる独自のマルチフリップ機構を備えており、利用シーンに合わせて形状を自在に変形可能。.</p>
+                        <p class="related-summary">Googleは、Kubernetes上にAIエージェントのための高効率な基盤を構築するためのオープンソースソフトウェア「Agent Substrate」と「gVisor」を、Linux Foundat...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6076.html">
-                        <h3>AMD「Ryzen AI Embedded X100」のリアルタイムAI制御が、Jetsonの弱点であるCPU性能を突く</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">AMDがECS 2026を開催して、フィジカルAI戦略の説明や展示などを行なった。そこで現在のAMDのフィジカルAIに向けた取り組みを説明しよう。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_4270.html">
-                        <h3>AIがマイクラのラスボスを8分43秒で討伐　「考えるAstra」と「即断するJev」の分業が面白い</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">GPT-6 Astraと高速判断AI「Jev」を組み合わせ、マインクラフトのエンダードラゴンを8分43秒で討伐したという報告があった。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_1151.html">
-                        <h3>AIでMVを作るのは想像以上に大変だった　制作34時間、繰り返した“ダメ出し”でわかったこと</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">GPT-6 AstraとMiniMax H3を使い、MVを制作。計画の読み違いや演出の失敗を重ねながら34時間で完成させ、AI制作では人間の判断と段階的な確認が欠かせないと実感した過程を紹介する。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Yahoo_ニュース・トピックス_-_IT_5115.html">
-                        <h3>米大統領 なぜAIの名称変更を提案</h3>
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3841.html">
+                        <h3>IPOに向けた準備に着手 サカナAI</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">Yahoo!ニュース・トピックス - IT</span>
                         </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_676.html">
+                        <h3>アップル新製品「HomeView」、ChatGPTなどのAIアプリに対応か</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">アップルが今後投入する予定のスマートホームハブ「HomeView」は、AIチャットボットアプリを使えるようにする下準備が進んでいる可能性がある。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_4614.html">
+                        <h3>どこでもつながって欲しいならワイヤレスWAN搭載「VAIO S13」が本体3万5000円引き中！</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">VAIOは、キャンペーン対象のPC本体が最大3万5000円オフになる「VAIOストア オータムキャンペーン2026」を開催中。期間は2026年11月17日(火)9時59分まで。オススメは「VAIO S...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7155.html">
+                        <h3>AI「テスト通りました」← これ､本当？  Stryker でテストの穴を塞いだ話</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">AI にテストを書いてもらって、「すべてのテストが通りました」と返ってくる。最近はこれが日常になりました。ただ、そのテストが 本当に何かを確かめているのか と聞かれると、正直、自信を持って答えられない...</p>
                     </a>
                 </article>
             </div>

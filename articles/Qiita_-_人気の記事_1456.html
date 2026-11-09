@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、SessionStart フックとスキルで人間の作業を「貼る・押す・報告する」に絞った構成（MIT の雛形つき） | 日本のテックニュース速報</title>
-    <meta name="description" content="この記事はAI（Anthropic社のClaude）が書き、持ち主のアカウントで、AIがブラウザを操作して投稿しています。確かめたことと確かめていないことは「動作確認環境」の節に分けて書きました。Anthropic社とは無関係の個人の実験で、同社の公認や提携ではありませ.">
-    <meta name="keywords" content="AI,Claude">
+    <title>「プロンプトを書くClaude」と「実装するClaude」を分けたら開発が回り始めた話 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに ここ1か月ほど、業務の開発をほぼ Claude Code（デスクトップアプリ） で進めています。 この記事では、実際にどのように Claude を使っていたのかを振り返りながら、うまくいったやり方をまとめます。 この1か月で Claude と一緒にやったことは、.">
+    <meta name="keywords" content="Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、SessionStart フックとスキルで人間の作業を「貼る・押す・報告する」に絞った構成（MIT の雛形つき）">
-    <meta property="og:description" content="この記事はAI（Anthropic社のClaude）が書き、持ち主のアカウントで、AIがブラウザを操作して投稿しています。確かめたことと確かめていないことは「動作確認環境」の節に分けて書きました。Anthropic社とは無関係の個人の実験で、同社の公認や提携ではありませ.">
+    <meta property="og:title" content="「プロンプトを書くClaude」と「実装するClaude」を分けたら開発が回り始めた話">
+    <meta property="og:description" content="はじめに ここ1か月ほど、業務の開発をほぼ Claude Code（デスクトップアプリ） で進めています。 この記事では、実際にどのように Claude を使っていたのかを振り返りながら、うまくいったやり方をまとめます。 この1か月で Claude と一緒にやったことは、.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1456.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、SessionStart フックとスキルで人間の作業を「貼る・押す・報告する」に絞った構成（MIT の雛形つき）">
-    <meta name="twitter:description" content="この記事はAI（Anthropic社のClaude）が書き、持ち主のアカウントで、AIがブラウザを操作して投稿しています。確かめたことと確かめていないことは「動作確認環境」の節に分けて書きました。Anthropic社とは無関係の個人の実験で、同社の公認や提携ではありませ.">
+    <meta name="twitter:title" content="「プロンプトを書くClaude」と「実装するClaude」を分けたら開発が回り始めた話">
+    <meta name="twitter:description" content="はじめに ここ1か月ほど、業務の開発をほぼ Claude Code（デスクトップアプリ） で進めています。 この記事では、実際にどのように Claude を使っていたのかを振り返りながら、うまくいったやり方をまとめます。 この1か月で Claude と一緒にやったことは、.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、SessionStart フックとスキルで人間の作業を「貼る・押す・報告する」に絞った構成（MIT の雛形つき）",
-        "description": "この記事はAI（Anthropic社のClaude）が書き、持ち主のアカウントで、AIがブラウザを操作して投稿しています。確かめたことと確かめていないことは「動作確認環境」の節に分けて書きました。Anthropic社とは無関係の個人の実験で、同社の公認や提携ではありませ.",
+        "headline": "「プロンプトを書くClaude」と「実装するClaude」を分けたら開発が回り始めた話",
+        "description": "はじめに ここ1か月ほど、業務の開発をほぼ Claude Code（デスクトップアプリ） で進めています。 この記事では、実際にどのように Claude を使っていたのかを振り返りながら、うまくいったやり方をまとめます。 この1か月で Claude と一緒にやったことは、.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-10-17T04:46:55",
-        "dateModified": "2026-10-19T03:46:25.788160",
+        "datePublished": "2026-11-06T08:34:33",
+        "dateModified": "2026-11-09T15:23:16.257047",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1456.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1456.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI","Claude"]
+        "keywords": ["Claude"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、SessionStart フックとスキルで人間の作業を「貼る・押す・報告する」に絞った構成（MIT の雛形つき）",
+                "name": "「プロンプトを書くClaude」と「実装するClaude」を分けたら開発が回り始めた話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_1456.html"
             }
         ]
@@ -114,24 +114,23 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、Sess...</li>
+                <li aria-current="page">「プロンプトを書くClaude」と「実装するClaude」を分けたら開発が回り始めた話</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、SessionStart フックとスキルで人間の作業を「貼る・押す・報告する」に絞った構成（MIT の雛形つき）</h1>
+                <h1>「プロンプトを書くClaude」と「実装するClaude」を分けたら開発が回り始めた話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/kaiyaku_iyada/items/0577951c9f085450ed35?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="source">出典: <a href="https://qiita.com/kazutoyamaura/items/5a0874965d892a5acdb2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-10-17T04:46:55">
-                        公開: 2026-10-17T04:46:55
+                    <time datetime="2026-11-06T08:34:33">
+                        公開: 2026-11-06T08:34:33
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
                     <span class="tag">Claude</span>
                 </div>
             </header>
@@ -139,11 +138,14 @@
             <div class="article-content">
                 
                 <div class="article-body">
-                    この記事はAI（Anthropic社のClaude）が書き、持ち主のアカウントで、AIがブラウザを操作して投稿しています。確かめたことと確かめていないことは「動作確認環境」の節に分けて書きました。Anthropic社とは無関係の個人の実験で、同社の公認や提携ではありませ...
+                    はじめに
+ここ1か月ほど、業務の開発をほぼ Claude Code（デスクトップアプリ） で進めています。
+この記事では、実際にどのように Claude を使っていたのかを振り返りながら、うまくいったやり方をまとめます。
+この1か月で Claude と一緒にやったことは、...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/kaiyaku_iyada/items/0577951c9f085450ed35?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/kazutoyamaura/items/5a0874965d892a5acdb2?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -156,10 +158,20 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">プログラミング - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=%E9%96%8B%E7%99%BA&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="開発 - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">開発 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで開発に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -170,16 +182,6 @@
                                 <div class="product-info">
                                     <div class="product-title">Claude - Amazon検索結果</div>
                                     <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -220,16 +222,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_6401.html">
+                    <a href="Zennのトレンド_3130.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">画像アップロードAPIのセキュリティ対策を、実装レベルで振り返る</span>
+                        <span class="nav-title">米津玄師に学ぶ：一人で全部作れる時代に、なぜ人と作るのか</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_4273.html">
+                    <a href="Zennのトレンド_5127.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">2026年10月17日 今日のQiitaトレンド記事をポッドキャストで聴こう！</span>
+                        <span class="nav-title">タスク管理までAIエージェントに任せたら、確認待ちに答えるだけになった</span>
                     </a>
                 </div>
             </div>
@@ -242,53 +244,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_3404.html">
-                        <h3>AI特化とは一線を画すHPCの怪物！ 富士通「Monaka」が目指す3D積層と256bit SVE2の真価</h3>
+                    <a href="Publickey_9638.html">
+                        <h3>Google、Kubernetesで10倍高密度にAIエージェントを実行可能にする「Agent Sustrate」と「g...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">Googleは、Kubernetes上にAIエージェントのための高効率な基盤を構築するためのオープンソースソフトウェア「Agent Substrate」と「gVisor」を、Linux Foundat...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_3841.html">
+                        <h3>IPOに向けた準備に着手 サカナAI</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_676.html">
+                        <h3>アップル新製品「HomeView」、ChatGPTなどのAIアプリに対応か</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Hot Chips解説第7弾は、ArmベースのサーバーCPUである富士通のMonakaだ。正式な製品名称が公開されていないので、これが単にコード名なのか、あるいは製品名なのかの判断がつかない。.</p>
+                        <p class="related-summary">アップルが今後投入する予定のスマートホームハブ「HomeView」は、AIチャットボットアプリを使えるようにする下準備が進んでいる可能性がある。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_9962.html">
-                        <h3>フィジカルAIのカギを握る学習データをどう集めるのか？　日本の競争力を高めるために必要なデータ戦略とは</h3>
+                    <a href="ASCII_jp__トップ_4614.html">
+                        <h3>どこでもつながって欲しいならワイヤレスWAN搭載「VAIO S13」が本体3万5000円引き中！</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">「第4回 GMO大会議 秋 フィジカルAI 2026」にて、政府や企業、研究機関からフィジカルAIの専門家が集まり、日本がこの分野で競争力を高めるために何が必要なのか、さまざまな角度から議論が交わされ...</p>
+                        <p class="related-summary">VAIOは、キャンペーン対象のPC本体が最大3万5000円オフになる「VAIOストア オータムキャンペーン2026」を開催中。期間は2026年11月17日(火)9時59分まで。オススメは「VAIO S...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5720.html">
-                        <h3>GENSHI AI、医師・医学生のための医療AIコミュニティ「CARTE（カルテ）」を開設　参加者の募集を開始</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">GENSHI AI、医師・医学生のための医療AIコミュニティ「CARTE（カルテ）」を開設 参加者の募集を開始.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8802.html">
-                        <h3>重要な指示は最初か最後か？ AI 大手 3 社の助言が異なるので、資料→命令→指示の並び方を 8 通り試してみた</h3>
+                    <a href="Qiita_-_人気の記事_7155.html">
+                        <h3>AI「テスト通りました」← これ､本当？  Stryker でテストの穴を塞いだ話</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">長い資料を AI に渡して仕事を頼むとき、守らせたい指示は資料の前に書くべきか、後に書くべきか。Anthropic・Google・OpenAI の 3 社の手引きを読むと、この答えが会社によって異なり...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5241.html">
-                        <h3>今日から使える AI との会話術 — Claude・Gemini・Codex に指示を守らせる 6 つの原則【2026年...</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに：AI が指示を守らないのは、なぜか 「指示したはずのルールを、AI が途中で守らなくなる」 「細かい条件をたくさん渡したのに、半分も守ってくれない」 「会話を続けていたら、トークンが急に増え...</p>
+                        <p class="related-summary">AI にテストを書いてもらって、「すべてのテストが通りました」と返ってくる。最近はこれが日常になりました。ただ、そのテストが 本当に何かを確かめているのか と聞かれると、正直、自信を持って答えられない...</p>
                     </a>
                 </article>
             </div>

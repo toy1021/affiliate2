@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学生2人で日本語音声LLMを作り、FT-LLM 2026 自由形タスクで1位を獲得した話 | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 東京都立大学のあゆ（@aya172957）です。2025年11月〜2026年2月に開催された LLM-jp 主催のコンペ「FT-LLM 2026」の自由形タスクに参加し、LLM-jp-4 8B をベースにした日本語音声 LLM を開発しました">
+    <title>LiteLLM Adaptive Routerを検証する（後編）：学習シグナルと運用上の注意 | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに この記事は前後編の後編です。前編では、Adaptive Routerによる分類、Beta分布からの品質サンプル、モデルスコア、重み、min_quality_tier を扱いました。 後編では、会話からモデルごとの品質を学習する条件と、運用時に注意が必要な動作を検証します">
     <meta name="keywords" content="LLM,本">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="学生2人で日本語音声LLMを作り、FT-LLM 2026 自由形タスクで1位を獲得した話">
-    <meta property="og:description" content="はじめに 東京都立大学のあゆ（@aya172957）です。2025年11月〜2026年2月に開催された LLM-jp 主催のコンペ「FT-LLM 2026」の自由形タスクに参加し、LLM-jp-4 8B をベースにした日本語音声 LLM を開発しました">
+    <meta property="og:title" content="LiteLLM Adaptive Routerを検証する（後編）：学習シグナルと運用上の注意">
+    <meta property="og:description" content="はじめに この記事は前後編の後編です。前編では、Adaptive Routerによる分類、Beta分布からの品質サンプル、モデルスコア、重み、min_quality_tier を扱いました。 後編では、会話からモデルごとの品質を学習する条件と、運用時に注意が必要な動作を検証します">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9469.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="学生2人で日本語音声LLMを作り、FT-LLM 2026 自由形タスクで1位を獲得した話">
-    <meta name="twitter:description" content="はじめに 東京都立大学のあゆ（@aya172957）です。2025年11月〜2026年2月に開催された LLM-jp 主催のコンペ「FT-LLM 2026」の自由形タスクに参加し、LLM-jp-4 8B をベースにした日本語音声 LLM を開発しました">
+    <meta name="twitter:title" content="LiteLLM Adaptive Routerを検証する（後編）：学習シグナルと運用上の注意">
+    <meta name="twitter:description" content="はじめに この記事は前後編の後編です。前編では、Adaptive Routerによる分類、Beta分布からの品質サンプル、モデルスコア、重み、min_quality_tier を扱いました。 後編では、会話からモデルごとの品質を学習する条件と、運用時に注意が必要な動作を検証します">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "学生2人で日本語音声LLMを作り、FT-LLM 2026 自由形タスクで1位を獲得した話",
-        "description": "はじめに 東京都立大学のあゆ（@aya172957）です。2025年11月〜2026年2月に開催された LLM-jp 主催のコンペ「FT-LLM 2026」の自由形タスクに参加し、LLM-jp-4 8B をベースにした日本語音声 LLM を開発しました",
+        "headline": "LiteLLM Adaptive Routerを検証する（後編）：学習シグナルと運用上の注意",
+        "description": "はじめに この記事は前後編の後編です。前編では、Adaptive Routerによる分類、Beta分布からの品質サンプル、モデルスコア、重み、min_quality_tier を扱いました。 後編では、会話からモデルごとの品質を学習する条件と、運用時に注意が必要な動作を検証します",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-10-26T13:54:50",
-        "dateModified": "2026-11-01T21:46:38.568208",
+        "datePublished": "2026-11-10T14:30:35",
+        "dateModified": "2026-11-11T04:57:58.685977",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9469.html"
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "学生2人で日本語音声LLMを作り、FT-LLM 2026 自由形タスクで1位を獲得した話",
+                "name": "LiteLLM Adaptive Routerを検証する（後編）：学習シグナルと運用上の注意",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_9469.html"
             }
         ]
@@ -114,19 +114,19 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">学生2人で日本語音声LLMを作り、FT-LLM 2026 自由形タスクで1位を獲得した話</li>
+                <li aria-current="page">LiteLLM Adaptive Routerを検証する（後編）：学習シグナルと運用上の注意</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>学生2人で日本語音声LLMを作り、FT-LLM 2026 自由形タスクで1位を獲得した話</h1>
+                <h1>LiteLLM Adaptive Routerを検証する（後編）：学習シグナルと運用上の注意</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/ayutaso/articles/ftllm2026-ja-speech-llm" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/aws_japan/articles/4399262cf00559" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-10-26T13:54:50">
-                        公開: 2026-10-26T13:54:50
+                    <time datetime="2026-11-10T14:30:35">
+                        公開: 2026-11-10T14:30:35
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
@@ -140,12 +140,30 @@
                 
                 <div class="article-body">
                     はじめに
-東京都立大学のあゆ（@aya172957）です。2025年11月〜2026年2月に開催された LLM-jp 主催のコンペ「FT-LLM 2026」の自由形タスクに参加し、LLM-jp-4 8B をベースにした日本語音声 LLM を開発しました。NLP2026 のワークショップでの発表において、自由形タスク1位として表彰していただきました。国産 LLM をベースにした、音声で指示できるオープンなモデルとしては、私たちが調べた限りで初めての成果となります。
-半年以上前のことですが、今年もFT-LLMコンペが開催されるようなので、参加記録を残そうと思います。今の自分から見ると未熟...
+この記事は前後編の後編です。前編では、Adaptive Routerによる分類、Beta分布からの品質サンプル、モデルスコア、重み、min_quality_tier を扱いました。
+
+後編では、会話からモデルごとの品質を学習する条件と、運用時に注意が必要な動作を検証します。
+
+ 後編でわかったことのまとめ
+
+
+
+項目
+結果
+
+
+
+
+モデル選択の学習方法
+次のターンの user 発話と、応答間の類似度を評価する。user の反応は直前の応答モデルへ反映される。セッションIDがない短い会話では学習しない
+
+
+日本語の扱い
+「ありがとう」「やっぱりいいです」は学習に使用されなかっ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/ayutaso/articles/ftllm2026-ja-speech-llm" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/aws_japan/articles/4399262cf00559" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -222,16 +240,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_3147.html">
+                    <a href="Zennのトレンド_734.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">最近の E2E 戦略（2026 年 10 月現在）</span>
+                        <span class="nav-title">LiteLLM Adaptive Router を検証する（前編）：モデル選択と学習の仕組み</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Publickey_1707.html">
+                    <a href="気になる記になる_3519.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AWSとGoogle Cloudが「PyTorch」のAWS Trainium、Google Clo...</span>
+                        <span class="nav-title">OLED搭載｢iPad Air｣はやはり2027年前半に発売か</span>
                     </a>
                 </div>
             </div>
@@ -244,53 +262,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2934.html">
-                        <h3>compact の使い方、間違えるとトークン代 2.75 倍？ Claude Code で測ってわかった 5 つの結論【...</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">AI エージェントのトークン代を節約するには、どうすればよいでしょうか。 1 つの方法は、プロンプトキャッシュを上手に使うことです。プロンプトキャッシュは、前の問い合わせと先頭が同じ部分を提供元のサー...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_2516.html">
-                        <h3>【みのるん式】Claude Code仕事術を読んだら、自分のモノレポの答え合わせになりました！</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに こんにちは。 最近職場でもボソボソ音声入力をしているすずきです。 みのるんさん(@minorun365)の『［みのるん式］ビジネスパーソンのためのClaude Code仕事術』を読み「これは...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5052.html">
-                        <h3>【未来を解説】AIでエンジニア格差を生み出す質とスピードの考え方</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに こんにちは、Watanabe Jin(@Sicut_study)です。 AIエージェントによる開発が当たり前になり、多くの現場でスピードを求められるようになりました。 しかし、便利になったと...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_371.html">
-                        <h3>AIに証明を書かせてセキュアに開発する言語 Tauto をリリースしました！</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに AIにコードを書いてもらうのが当たり前になってきました。 でも、こんなモヤモヤはありませんか？ AIが書いたコード、差分を全部読むのはもう限界 テストは通っている。でも テストを書いていない...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_3463.html">
-                        <h3>強力な冷却性能は店舗スタッフのお墨付き！ 大型ディスプレーとVRMファンを備えたCORSAIRの水冷CPUクーラーが登場...</h3>
+                    <a href="ASCII_jp__トップ_3944.html">
+                        <h3>Notion AI、チャット記録漏えいの可能性　委託先に不正アクセス</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">大阪・日本橋のPCパーツショップ「ドスパラ大阪・なんば店」を取材しました。店舗スタッフ・金山魁利さんオススメの製品は、水冷ヘッドに大型ディスプレーとVRMファンを備えたCORSAIRの簡易水冷CPUク...</p>
+                        <p class="related-summary">Notionは11月9日、AI処理の委託先であるFireworks AIが不正アクセスを受け、「Notion AI」のチャット記録の一部が第三者に閲覧された可能性があると公表した。.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_7819.html">
+                        <h3>テレビやゲーム機もAIで保護　Wi-Fi 7対応ルーター2製品、11月中旬発売</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">5Gbps WANに対応し、標準モデルは21,800円。テレビやゲーム機も保護するAIセキュリティ「F-Secure SENSE」搭載モデルも用意する。. Wi-Fi 7対応ルーター2製品が11月中旬...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_9672.html">
+                        <h3>PROTOCORE、「AI駆動ホームページ」の先行導入企業3社を募集。公開後の発信から商談準備までを支援</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">PROTOCORE、「AI駆動ホームページ」の先行導入企業3社を募集。公開後の発信から商談準備までを支援.</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_6038.html">
+                        <h3>脳内メモをすべてテキスト化。指輪型AIレコーダー「Vocci」が最強のライフログ端末だった</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">指輪型のAIレコーダー「Vocci」の試用レビューです。ボタン操作でいつでも録音できるため、取材の録り逃しがなくなり、日常のアイデアメモも手軽に残せます。MCP連携での検索や、音声だけで続く家計簿など...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_2607.html">
+                        <h3>「AIくさい」なぜSNSで批判過熱</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
                     </a>
                 </article>
             </div>

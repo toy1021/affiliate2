@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた | 日本のテックニュース速報</title>
-    <meta name="description" content="階層ナビゲーション型RAGとは 「階層ナビゲーション型RAG」は、ベクトルDBを使わずに文書を探すRAGです。準備段階で文書の山から階層的な目次を自動で作っておき、質問が来たらLLMがその目次を上から順に辿って、答えが書かれていそうな文書を選びます">
-    <meta name="keywords" content="LLM">
+    <title>【備忘録】Transformerを数式レベルからnumpyのみで実装して理解する（②Backward Propagation編） | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 前回の記事（①Forward Propagation編）では、Transformerの各部品をnumpyだけで実装し、Forward Propagationが最後まで通ることを確認しました。最新のテクノロジー情報をお届けします。">
+    <meta name="keywords" content="AI">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた">
-    <meta property="og:description" content="階層ナビゲーション型RAGとは 「階層ナビゲーション型RAG」は、ベクトルDBを使わずに文書を探すRAGです。準備段階で文書の山から階層的な目次を自動で作っておき、質問が来たらLLMがその目次を上から順に辿って、答えが書かれていそうな文書を選びます">
+    <meta property="og:title" content="【備忘録】Transformerを数式レベルからnumpyのみで実装して理解する（②Backward Propagation編）">
+    <meta property="og:description" content="はじめに 前回の記事（①Forward Propagation編）では、Transformerの各部品をnumpyだけで実装し、Forward Propagationが最後まで通ることを確認しました。最新のテクノロジー情報をお届けします。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5643.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた">
-    <meta name="twitter:description" content="階層ナビゲーション型RAGとは 「階層ナビゲーション型RAG」は、ベクトルDBを使わずに文書を探すRAGです。準備段階で文書の山から階層的な目次を自動で作っておき、質問が来たらLLMがその目次を上から順に辿って、答えが書かれていそうな文書を選びます">
+    <meta name="twitter:title" content="【備忘録】Transformerを数式レベルからnumpyのみで実装して理解する（②Backward Propagation編）">
+    <meta name="twitter:description" content="はじめに 前回の記事（①Forward Propagation編）では、Transformerの各部品をnumpyだけで実装し、Forward Propagationが最後まで通ることを確認しました。最新のテクノロジー情報をお届けします。">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた",
-        "description": "階層ナビゲーション型RAGとは 「階層ナビゲーション型RAG」は、ベクトルDBを使わずに文書を探すRAGです。準備段階で文書の山から階層的な目次を自動で作っておき、質問が来たらLLMがその目次を上から順に辿って、答えが書かれていそうな文書を選びます",
+        "headline": "【備忘録】Transformerを数式レベルからnumpyのみで実装して理解する（②Backward Propagation編）",
+        "description": "はじめに 前回の記事（①Forward Propagation編）では、Transformerの各部品をnumpyだけで実装し、Forward Propagationが最後まで通ることを確認しました。最新のテクノロジー情報をお届けします。",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-10-16T02:30:05",
-        "dateModified": "2026-10-19T16:50:46.696375",
+        "datePublished": "2026-11-12T13:30:40",
+        "dateModified": "2026-11-13T19:17:42.209290",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5643.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5643.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["LLM"]
+        "keywords": ["AI"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた",
+                "name": "【備忘録】Transformerを数式レベルからnumpyのみで実装して理解する（②Backward Propagation編）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_5643.html"
             }
         ]
@@ -114,42 +114,37 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた</li>
+                <li aria-current="page">【備忘録】Transformerを数式レベルからnumpyのみで実装して理解する（②Backward...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>ベクトルDBを使わない「階層ナビゲーション型RAG」を作って、ベクトルDB版RAGと比較してみた</h1>
+                <h1>【備忘録】Transformerを数式レベルからnumpyのみで実装して理解する（②Backward Propagation編）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/aiforall/articles/8e1803396534de" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/matsu8/articles/a01ba3fc713e03" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-10-16T02:30:05">
-                        公開: 2026-10-16T02:30:05
+                    <time datetime="2026-11-12T13:30:40">
+                        公開: 2026-11-12T13:30:40
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">LLM</span>
+                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    階層ナビゲーション型RAGとは
-「階層ナビゲーション型RAG」は、ベクトルDBを使わずに文書を探すRAGです。準備段階で文書の山から階層的な目次を自動で作っておき、質問が来たらLLMがその目次を上から順に辿って、答えが書かれていそうな文書を選びます。質問のたびにベクトル検索をしない点が、一般的なベクトルDB版RAGとの違いです。
-この記事では、この仕組みを論文の手法(Corpus2Skill)を参考に自作し、ベクトルDB版RAGと同じデータ・同じ質問で比較しました。
-
- 結論
-
-28文書・20問の小規模な比較では、正答数は同等でした(どちらも20問中16問)。
-階層ナビゲーション型は...
+                    はじめに
+前回の記事（①Forward Propagation編）では、Transformerの各部品をnumpyだけで実装し、Forward Propagationが最後まで通ることを確認しました。今回はその続きとして、各部品のBack Propagation（誤差逆伝播法）を実装し、損失から全てのパラメータまで勾配が流れることを確認していきます。
+実装している途中で、「こういう学習内容のまとめは、AIの普及であまり価値がなくなるのでは？」とも思いました。忘れたことはその都度AIに聞けば教えてくれますし、AIの方がその時点での完璧な答えをすぐに出してくれるからです。なので、時間をか...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/aiforall/articles/8e1803396534de" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/matsu8/articles/a01ba3fc713e03" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -161,16 +156,6 @@
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">LLM - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -226,16 +211,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_6928.html">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_5348.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">有名 OSS が PR を閉じはじめた。何が起きていて、どう向き合うか</span>
+                        <span class="nav-title">選挙ポスターAI作成? 戸惑いの声</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_6358.html">
+                    <a href="Qiita_-_人気の記事_8631.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">技術書を年に数冊しか買わない自分に、O&#39;Reillyのサブスク年$150は割に合うか（ACM経由で契...</span>
+                        <span class="nav-title">お漏らししまくりの今だからこそIAPを再度推していく</span>
                     </a>
                 </div>
             </div>
@@ -248,53 +233,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_5324.html">
-                        <h3>QommonsAI活用研修を兵庫県豊岡市（ひょうごけん とよおかし）で実施 - 条例案作成の現場で考える、生成AIの使い...</h3>
+                    <a href="Zennのトレンド_899.html">
+                        <h3>困ったらAIにすぐ聞く3年目エンジニアが社会人になって読んだ技術書 10冊.</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">QommonsAI活用研修を兵庫県豊岡市（ひょうごけん とよおかし）で実施 - 条例案作成の現場で考える、生成AIの使い分け.</p>
+                        <p class="related-summary">いつの間にか新卒3年目になり,バックエンドエンジニアとしてAIエージェントの基盤開発に携わっています. 最近では困ったことがあったらAIに聞くことが多く,朝から晩までAIと会話していることもあります....</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_6893.html">
-                        <h3>QommonsAI活用研修を兵庫県川西市（ひょうごけん かわにしし）で実施 - 「もっとQommonsAIを学びたい」職...</h3>
+                    <a href="気になる記になる_4928.html">
+                        <h3>栃木レザー採用 &amp; 型崩れし難いAirTag ホルダー付コンパクトウォレット「MinZ Leather Card Wal...</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">ASCII.jp － トップ</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">QommonsAI活用研修を兵庫県川西市（ひょうごけん かわにしし）で実施 - 「もっとQommonsAIを学びたい」職員の声から見えた、実務活用の広がり.</p>
+                        <p class="related-summary">本日、アシカンが、繊維が極限まで詰まった「栃木レザー」を採用したAirTag ホルダー付コンパクトウォレット「MinZ® Leather Card Wallet Pro for AirTag」を発売し...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_1859.html">
-                        <h3>AIは言葉も料理も理解していない？ - 近年の画像生成AI -</h3>
+                    <a href="Qiita_-_人気の記事_8679.html">
+                        <h3>Claude Fable 5.2はOpusの単価2倍、でも1タスクは約半額!? Mythos5.2との違いと使いどころ</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">Qiita - 人気の記事</span>
                         </div>
-                        <p class="related-summary">最近多いAI広告 飲食店のメニューからスーパーのポスター、SNSのレシピ投稿に至るまで、AIによって生成・補正された料理の画像を見かけない日はなくなりました。😣 私も最近は外に出るたびに生成物に出会い...</p>
+                        <p class="related-summary">みなさん、こんにちは。株式会社ulusageの技術ブログ生成AIです。 Claude CodeでOpusに何度か聞いても、原因が分からない。そこでFable 5. 2に切り替えるとして、気になるのは「...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6500.html">
-                        <h3>PostgreSQLで遅いSQLの実行計画を自動で取得しNew Relicで確認する - auto_explainの活用...</h3>
+                    <a href="Zennのトレンド_7317.html">
+                        <h3>フィーチャーチームに配属された新卒エンジニアのAIに振り回されない「AI活用」</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">PostgreSQLで遅いSQLの実測情報付き実行計画をauto_explainを用いて自動で取得し、New Relicで確認する方法について紹介します。 はじめに データベースのパフォーマンストラブ...</p>
+                        <p class="related-summary">はじめに こんにちは、新卒4期生（2026年新卒）の武内です。光陰矢の如しとはよく言ったもので、4ヶ月の研修を経て実際の現場に配属されて、あっという間に3ヶ月(!?)が経とうとしています。 この記事で...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_6319.html">
-                        <h3>Claude Code × Figma MCP で作ったデザインを別のAIに検査させる — デザインのグラフエンジニアリ...</h3>
+                    <a href="Zennのトレンド_1420.html">
+                        <h3>最強オープンウェイトモデル Kimi-K3.1-Pro をセルフホストして独自ベンチで比べてみた</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="source">Zennのトレンド</span>
                         </div>
-                        <p class="related-summary">Claude Codeで完璧なFigmaを出力させたい Claude Codeに「この画面、Figmaに起こして」と頼むと、Figma上に数分でフレームが出てきます。 ただ、一見して完成品でもデザイナ...</p>
+                        <p class="related-summary">1-Pro は、中国のベンチャー企業 Moonshot AI が開発したオープンウェイトの大規模言語モデルです。サイズは 2. 8T-A104B と 2026/11/12 時点で公開されている主要なモ...</p>
                     </a>
                 </article>
             </div>

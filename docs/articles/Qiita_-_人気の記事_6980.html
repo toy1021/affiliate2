@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OCI Data Catalog 第4回：Data LakeとADBのRDBMS、Vector Storeを統合し、Select AIとRAGでLakehouseを検索してみた | 日本のテックニュース速報</title>
-    <meta name="description" content="■ はじめに こんにちは。 OCI Data Catalogシリーズとして、これまで次の内容を実施しました。 回 内容 第1回 Object Storage上のCSV、ParquetファイルをOCI Data Catalogへハーベスト 第2回 Ora.">
-    <meta name="keywords" content="AI">
+    <title>社長の一言は重い。RAGにも忖度させてみた（重み付け検索） | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 皆さんこんな経験ありませんか？ 新人の頃に正しいことを言っても誰も賛同してくれないのに、同じことを社長が言うと全員が賛同する。理不尽ですよねー人間は「誰が言ったか」で情報に重みを付けています。じゃあRAGはどうか？チャンクは全部平等で社長の決定事項も新人のつぶ.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="OCI Data Catalog 第4回：Data LakeとADBのRDBMS、Vector Storeを統合し、Select AIとRAGでLakehouseを検索してみた">
-    <meta property="og:description" content="■ はじめに こんにちは。 OCI Data Catalogシリーズとして、これまで次の内容を実施しました。 回 内容 第1回 Object Storage上のCSV、ParquetファイルをOCI Data Catalogへハーベスト 第2回 Ora.">
+    <meta property="og:title" content="社長の一言は重い。RAGにも忖度させてみた（重み付け検索）">
+    <meta property="og:description" content="はじめに 皆さんこんな経験ありませんか？ 新人の頃に正しいことを言っても誰も賛同してくれないのに、同じことを社長が言うと全員が賛同する。理不尽ですよねー人間は「誰が言ったか」で情報に重みを付けています。じゃあRAGはどうか？チャンクは全部平等で社長の決定事項も新人のつぶ.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6980.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="OCI Data Catalog 第4回：Data LakeとADBのRDBMS、Vector Storeを統合し、Select AIとRAGでLakehouseを検索してみた">
-    <meta name="twitter:description" content="■ はじめに こんにちは。 OCI Data Catalogシリーズとして、これまで次の内容を実施しました。 回 内容 第1回 Object Storage上のCSV、ParquetファイルをOCI Data Catalogへハーベスト 第2回 Ora.">
+    <meta name="twitter:title" content="社長の一言は重い。RAGにも忖度させてみた（重み付け検索）">
+    <meta name="twitter:description" content="はじめに 皆さんこんな経験ありませんか？ 新人の頃に正しいことを言っても誰も賛同してくれないのに、同じことを社長が言うと全員が賛同する。理不尽ですよねー人間は「誰が言ったか」で情報に重みを付けています。じゃあRAGはどうか？チャンクは全部平等で社長の決定事項も新人のつぶ.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "OCI Data Catalog 第4回：Data LakeとADBのRDBMS、Vector Storeを統合し、Select AIとRAGでLakehouseを検索してみた",
-        "description": "■ はじめに こんにちは。 OCI Data Catalogシリーズとして、これまで次の内容を実施しました。 回 内容 第1回 Object Storage上のCSV、ParquetファイルをOCI Data Catalogへハーベスト 第2回 Ora.",
+        "headline": "社長の一言は重い。RAGにも忖度させてみた（重み付け検索）",
+        "description": "はじめに 皆さんこんな経験ありませんか？ 新人の頃に正しいことを言っても誰も賛同してくれないのに、同じことを社長が言うと全員が賛同する。理不尽ですよねー人間は「誰が言ったか」で情報に重みを付けています。じゃあRAGはどうか？チャンクは全部平等で社長の決定事項も新人のつぶ.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-17T21:29:14",
-        "dateModified": "2026-08-19T01:14:44.115782",
+        "datePublished": "2026-11-14T15:30:41",
+        "dateModified": "2026-11-15T22:33:17.588062",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6980.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6980.html",
-        "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "AI・機械学習",
-                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "OCI Data Catalog 第4回：Data LakeとADBのRDBMS、Vector Storeを統合し、Select AIとRAGでLakehouseを検索してみた",
+                "name": "社長の一言は重い。RAGにも忖度させてみた（重み付け検索）",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_6980.html"
             }
         ]
@@ -113,47 +113,35 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">OCI Data Catalog 第4回：Data LakeとADBのRDBMS、Vector St...</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">社長の一言は重い。RAGにも忖度させてみた（重み付け検索）</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>OCI Data Catalog 第4回：Data LakeとADBのRDBMS、Vector Storeを統合し、Select AIとRAGでLakehouseを検索してみた</h1>
+                <h1>社長の一言は重い。RAGにも忖度させてみた（重み付け検索）</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/shirok/items/6d67f981b547f181d644?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-08-17T21:29:14">
-                        公開: 2026-08-17T21:29:14
+                    <span class="source">出典: <a href="https://qiita.com/kikuziro/items/43b360420d0cdcbf190c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-11-14T15:30:41">
+                        公開: 2026-11-14T15:30:41
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">AI</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    ■ はじめに
-こんにちは。
-OCI Data Catalogシリーズとして、これまで次の内容を実施しました。
-
-回
-内容
-
-第1回
-Object Storage上のCSV、ParquetファイルをOCI Data Catalogへハーベスト
-
-第2回
-Ora...
+                    はじめに
+皆さんこんな経験ありませんか？
+新人の頃に正しいことを言っても誰も賛同してくれないのに、同じことを社長が言うと全員が賛同する。理不尽ですよねー人間は「誰が言ったか」で情報に重みを付けています。じゃあRAGはどうか？チャンクは全部平等で社長の決定事項も新人のつぶ...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/shirok/items/6d67f981b547f181d644?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/kikuziro/items/43b360420d0cdcbf190c?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,50 +150,25 @@ Ora...
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>AI・機械学習関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">AI - Amazon検索結果</div>
-                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
+                                    <div class="product-title">テクノロジー - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでテクノロジーに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="ガジェット - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">機械学習 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
+                                    <div class="product-title">ガジェット - Amazon検索結果</div>
+                                    <div class="product-description">Amazonでガジェットに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -220,16 +183,16 @@ Ora...
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Zennのトレンド_2005.html">
+                    <a href="iPhone_Mania_8746.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">Markdownノートを日本語で全文検索できるCLI「mikke」を作った</span>
+                        <span class="nav-title">Appleクリスマスギフト2026デザインのオリジナル壁紙が制作公開〜全18種類</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_6225.html">
+                    <a href="Qiita_-_人気の記事_4214.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">AIが書いた日本語に、ハングルやキリル文字が紛れ込む。CP932で検出する【コピペ用スクリプト】</span>
+                        <span class="nav-title">【Vitest + RTL】Reactアプリをテストする</span>
                     </a>
                 </div>
             </div>
@@ -242,53 +205,53 @@ Ora...
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7964.html">
-                        <h3>「あなたはAIエージェントに買い物を任せたいですか」 Visaが調査--消費者の回答は</h3>
+                    <a href="ASCII_jp__トップ_1710.html">
+                        <h3>Xiaomi 18 Pro Max実機登場！ 背面ディスプレーに最速スナドラ、ライカカメラと楽しすぎるスマホの巻：スマホ...</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ビザ・ワールドワイド・ジャパンは8月17日、オンラインでの買い物にAIやAIエージェントをどこまで任せられるかを尋ねた消費者調査の結果を発表した。AIを活用した購買体験への関心は高まる一方、購入判断や...</p>
+                        <p class="related-summary">今回はなんと！ 正式発表直前のシャオミの新ハイエンドモデル「Xiaomi 18 Pro Max」の実機が登場。最速スナドラにデュアル2億画素のライカカメラ、背面ディスプレー、カメラ部がフラットなデザイ...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9185.html">
-                        <h3>ソフトバンク系、AIイヤホン「GLIDiC AI +u Buds」一般販売　会議や商談も要約</h3>
+                    <a href="ASCII_jp__トップ_1037.html">
+                        <h3>自作PCトーク『ジサトラKTU』生放送～RTX Spark搭載デスクトップPCの実力を検証！ノートPC版とどう違うの？～</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">SB C&amp;Sは8月18日、AIイヤホン「GLIDiC AI +u Buds」を一般発売した。会議や通話をワンプッシュで録音し、AIが文字起こしと要約を行い、「次の一手」まで助言するのが特徴だ。同日から...</p>
+                        <p class="related-summary">RTX Spark搭載デスクトップPCの実力を検証！ノートPC版とどう違うの？ 木曜20:00から放送スタート！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9579.html">
-                        <h3>FCNT、メモリ高騰下でも10万円切りハイエンドスマホ「arrows Alpha2」--8月27日発売</h3>
+                    <a href="ASCII_jp__トップ_9294.html">
+                        <h3>「アスキーグルメNEWS」生放送（2026年11月20日号）</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">FCNTは8月27日、arrowsシリーズ最上位スマートフォン「arrows Alpha2」を発売する。AI需要によるメモリ価格高騰が続く中、部材調達と製造の見直しでメモリを除く原価を前モデル比10％...</p>
+                        <p class="related-summary">巷で話題のおいしいグルメ情報を生放送でご紹介します。ぜひ、お昼ごはんを楽しみながらどうぞ！.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_1325.html">
-                        <h3>OpenAI、AIの開発ペースを一時減速　最新モデルの強化学習を2週間停止　暴走リスクの高まりで</h3>
+                    <a href="ASCII_jp__トップ_942.html">
+                        <h3>RTX 5080・メモリー64GB搭載PCが8万5000円引き！ パソコンショップSEVEN、11月16日限定セール</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">OpenAIは米国時間8月18日、最先端AIモデルの開発ペースを一時的に緩めたと明らかにした。提供を予定している最新モデルの強化学習（RL）訓練を2週間止め、計画していた最大規模のRL訓練は今も保留に...</p>
+                        <p class="related-summary">パソコンショップSEVENが11月16日0時～23時59分に24時間限定セールを開催。RTX 5080・メモリー64GB搭載PCが8万5000円引き、Ryzen 9 9950X＋RX 9070 XT搭...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_4049.html">
-                        <h3>「ティーン向けChatGPT」登場、依存リスクを軽減し学習を支援</h3>
+                    <a href="ASCII_jp__トップ_8510.html">
+                        <h3>大きさも性能も“ちょうどいい”！ スリムなマウスのデスクトップPCが3万円引き</h3>
                         <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">OpenAIは、若年層による生成AIツールの利用をめぐって懸念が高まる中、「ティーン向けChatGPT」の提供を開始したと発表した。.</p>
+                        <p class="related-summary">省スペースなスリムボディに、Ryzen 5プロセッサー、16GBメモリー、500GB SSDを搭載した「mouse SH-A5A01」。普段使いや事務作業に“ちょうどいい”デスクトップPCが、今なら3...</p>
                     </a>
                 </article>
             </div>

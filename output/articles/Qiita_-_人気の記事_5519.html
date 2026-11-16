@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【SQL入門②】SQL Server Expressとは？無料でSQLを学べる環境を準備しよう | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに 前回はSQLとデータベースの基本について紹介しました。 初めて読む方は、まずはこちらの記事からご覧いただくことをおすすめします。 👉 前回の記事 【SQL入門①】初めて学ぶSQL！データベースの基礎からわかりやすく解説 今回は、実際にSQLを学習するための環境と.">
-    <meta name="keywords" content="本">
+    <title>PostgreSQLとFastAPIで作る、状態遷移を守る更新APIと履歴テーブル | 日本のテックニュース速報</title>
+    <meta name="description" content="解決したい問題 配送や案件の一覧画面を作ると、更新APIで必ず同じ問題が出ます。「配達済」から「出発」へ戻るような不正な遷移と、二人が同時に更新したときの上書きです。さらに「誰がいつ変えたか」も残す必要があります。 この記事では、遷移ルールを表で持ち、更新と履歴の記録を1.">
+    <meta name="keywords" content="テクノロジー,ニュース,IT">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="【SQL入門②】SQL Server Expressとは？無料でSQLを学べる環境を準備しよう">
-    <meta property="og:description" content="はじめに 前回はSQLとデータベースの基本について紹介しました。 初めて読む方は、まずはこちらの記事からご覧いただくことをおすすめします。 👉 前回の記事 【SQL入門①】初めて学ぶSQL！データベースの基礎からわかりやすく解説 今回は、実際にSQLを学習するための環境と.">
+    <meta property="og:title" content="PostgreSQLとFastAPIで作る、状態遷移を守る更新APIと履歴テーブル">
+    <meta property="og:description" content="解決したい問題 配送や案件の一覧画面を作ると、更新APIで必ず同じ問題が出ます。「配達済」から「出発」へ戻るような不正な遷移と、二人が同時に更新したときの上書きです。さらに「誰がいつ変えたか」も残す必要があります。 この記事では、遷移ルールを表で持ち、更新と履歴の記録を1.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5519.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【SQL入門②】SQL Server Expressとは？無料でSQLを学べる環境を準備しよう">
-    <meta name="twitter:description" content="はじめに 前回はSQLとデータベースの基本について紹介しました。 初めて読む方は、まずはこちらの記事からご覧いただくことをおすすめします。 👉 前回の記事 【SQL入門①】初めて学ぶSQL！データベースの基礎からわかりやすく解説 今回は、実際にSQLを学習するための環境と.">
+    <meta name="twitter:title" content="PostgreSQLとFastAPIで作る、状態遷移を守る更新APIと履歴テーブル">
+    <meta name="twitter:description" content="解決したい問題 配送や案件の一覧画面を作ると、更新APIで必ず同じ問題が出ます。「配達済」から「出発」へ戻るような不正な遷移と、二人が同時に更新したときの上書きです。さらに「誰がいつ変えたか」も残す必要があります。 この記事では、遷移ルールを表で持ち、更新と履歴の記録を1.">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "【SQL入門②】SQL Server Expressとは？無料でSQLを学べる環境を準備しよう",
-        "description": "はじめに 前回はSQLとデータベースの基本について紹介しました。 初めて読む方は、まずはこちらの記事からご覧いただくことをおすすめします。 👉 前回の記事 【SQL入門①】初めて学ぶSQL！データベースの基礎からわかりやすく解説 今回は、実際にSQLを学習するための環境と.",
+        "headline": "PostgreSQLとFastAPIで作る、状態遷移を守る更新APIと履歴テーブル",
+        "description": "解決したい問題 配送や案件の一覧画面を作ると、更新APIで必ず同じ問題が出ます。「配達済」から「出発」へ戻るような不正な遷移と、二人が同時に更新したときの上書きです。さらに「誰がいつ変えたか」も残す必要があります。 この記事では、遷移ルールを表で持ち、更新と履歴の記録を1.",
         "author": {
             "@type": "Organization",
             "name": "Qiita - 人気の記事"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-14T00:08:39",
-        "dateModified": "2026-08-14T20:32:01.891375",
+        "datePublished": "2026-11-16T00:00:17",
+        "dateModified": "2026-11-16T14:59:03.839790",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5519.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5519.html",
-        "articleSection": "その他",
-        "keywords": ["本"]
+        "articleSection": "テクノロジー",
+        "keywords": []
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "その他",
-                "item": "https://toy1021.github.io/affiliate2/#category=その他"
+                "name": "テクノロジー",
+                "item": "https://toy1021.github.io/affiliate2/#category=テクノロジー"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "【SQL入門②】SQL Server Expressとは？無料でSQLを学べる環境を準備しよう",
+                "name": "PostgreSQLとFastAPIで作る、状態遷移を守る更新APIと履歴テーブル",
                 "item": "https://toy1021.github.io/affiliate2/articles/Qiita - 人気の記事_5519.html"
             }
         ]
@@ -113,41 +113,35 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=その他">その他</a></li>
-                <li aria-current="page">【SQL入門②】SQL Server Expressとは？無料でSQLを学べる環境を準備しよう</li>
+                <li><a href="../#category=テクノロジー">テクノロジー</a></li>
+                <li aria-current="page">PostgreSQLとFastAPIで作る、状態遷移を守る更新APIと履歴テーブル</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>【SQL入門②】SQL Server Expressとは？無料でSQLを学べる環境を準備しよう</h1>
+                <h1>PostgreSQLとFastAPIで作る、状態遷移を守る更新APIと履歴テーブル</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://qiita.com/nt-izumi/items/d44254523fdb260ae92d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
-                    <span class="category">カテゴリ: その他</span>
-                    <time datetime="2026-08-14T00:08:39">
-                        公開: 2026-08-14T00:08:39
+                    <span class="source">出典: <a href="https://qiita.com/takumi_engineer/items/5a2dffdff4af6e9f45ce?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener">Qiita - 人気の記事</a></span>
+                    <span class="category">カテゴリ: テクノロジー</span>
+                    <time datetime="2026-11-16T00:00:17">
+                        公開: 2026-11-16T00:00:17
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約1分で読めます</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag">本</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    はじめに
-前回はSQLとデータベースの基本について紹介しました。
-初めて読む方は、まずはこちらの記事からご覧いただくことをおすすめします。
-👉 前回の記事
-【SQL入門①】初めて学ぶSQL！データベースの基礎からわかりやすく解説
-今回は、実際にSQLを学習するための環境と...
+                    解決したい問題
+配送や案件の一覧画面を作ると、更新APIで必ず同じ問題が出ます。「配達済」から「出発」へ戻るような不正な遷移と、二人が同時に更新したときの上書きです。さらに「誰がいつ変えたか」も残す必要があります。
+この記事では、遷移ルールを表で持ち、更新と履歴の記録を1...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://qiita.com/nt-izumi/items/d44254523fdb260ae92d?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://qiita.com/takumi_engineer/items/5a2dffdff4af6e9f45ce?utm_campaign=popular_items&amp;utm_medium=feed&amp;utm_source=popular_items" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -156,24 +150,9 @@
             <aside class="related-products">
                 <h2>🛒 この記事に関連するおすすめ商品</h2>
                 
-                <div class="affiliate-section">
-                    <h3>記事内容に関連する商品</h3>
-                    <div class="affiliate-grid">
-                        <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
-                                <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
-                                    <div class="product-price">価格を確認</div>
-                                    <div class="platform-badge">Amazon</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>その他関連のおすすめ</h3>
+                    <h3>テクノロジー関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
                             <a href="https://www.amazon.co.jp/s?k=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="テクノロジー - Amazon検索結果をAmazonで購入">
@@ -204,16 +183,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_2511.html">
+                    <a href="Qiita_-_人気の記事_2110.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【SQL入門①】初めて学ぶSQL！データベースの基礎からわかりやすく解説</span>
+                        <span class="nav-title">日報mdをどの画面からもワンボタン表示！ Raycast × Obsidian</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Qiita_-_人気の記事_8853.html">
+                    <a href="気になる記になる_997.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">【AWS入門】EC2の購入オプションを実際に試算したら、スポットが最安じゃなかった話</span>
+                        <span class="nav-title">次世代XBOXこと｢Project Helix｣は”PCゲームもプレイできるコンソール”に——担当幹...</span>
                     </a>
                 </div>
             </div>
@@ -226,53 +205,52 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4396.html">
-                        <h3>消費税を上げるか下げるか、その前に ― 財源幻想から考える国家OSのリファクタリング : システム設計視点の行動経済学 ...</h3>
+                    <a href="Publickey_3889.html">
+                        <h3>軽量なマイクロVMでネイティブよりアプリを高速起動できる「Hyperlight-Unikraft」登場</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">user: 「システム設計視点の行動経済学」、第15回を始めましょう。今回は消費税と所得税について深掘りしたいと思いますが、その前にまず前回の復習として、 『払った分だけ返ってくる』は本当？ ― 年金...</p>
+                        <p class="related-summary">Cloud Native Computing Foundationは、Linuxアプリケーションを再コンパイルや再ビルドすることなくそのまま、Unikernelのような軽量かつセキュアな実行環境で仮想...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="ASCII_jp__トップ_2934.html">
-                        <h3>「まだJKぜんぜんイケるじゃん！」　大泉 凜が制服＆雪原で大はしゃぎする2nd DVDの魅力を語る</h3>
+                    <a href="Publickey_7684.html">
+                        <h3>Node.jsとnpmをWebブラウザ上で実行可能にする「OpenVessel」、神戸ソフトがオープンソースで公開</h3>
                         <div class="related-meta">
-                            <span class="category">その他</span>
+                            <span class="category">テクノロジー</span>
+                            <span class="source">Publickey</span>
+                        </div>
+                        <p class="related-summary">jsに対応したフレームワークなどが実行できる「OpenVessel」をオープンソースで公開しました。 OpenVesselは、Webブラ. jsとパッケージマネージャのnpm、AstroなどのNode...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="気になる記になる_1622.html">
+                        <h3>Insta360、中国でカラー電子ペーパーを搭載した小型のデジタルフォトフレーム「Insta360 Toast」を発売</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">気になる、記になる…</span>
+                        </div>
+                        <p class="related-summary">Insta360が、中国でカラー電子ペーパーを搭載したデジタルフォトフレーム「Insta360 Toast」を発表・発売しました。 「Insta360 Toast」は「E Ink Spectra 6」...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Yahoo_ニュース・トピックス_-_IT_892.html">
+                        <h3>卵サンドつかむ客動画炎上 店説明</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
+                            <span class="source">Yahoo!ニュース・トピックス - IT</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_656.html">
+                        <h3>レノボのノートPCが、まさかの“49%オフ”で販売されているんですが……</h3>
+                        <div class="related-meta">
+                            <span class="category">テクノロジー</span>
                             <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">キャピキャピした可愛い女の子に見えて、本音は包み隠さずにしゃべるキャラクターが話題の大泉 凜さんが、2nd DVD「雪とおりんとキミと」の発売記念イベントを7月26日、ソフマップAKIBA アミューズ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="ASCII_jp__トップ_2893.html">
-                        <h3>KJ TECH japanから日本専用顔認証機器販売開始</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">ASCII.jp － トップ</span>
-                        </div>
-                        <p class="related-summary">KJ TECH japanから日本専用顔認証機器販売開始.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5472.html">
-                        <h3>【SQL入門③】無料でSQL Server Expressをインストール！初心者向け導入手順</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに SQL Serverを学びたいけれど、「何をインストールすればいいのかわからない」と悩んでいませんか？ 本記事では、無料で利用できるSQL Server Express をWindowsにイ...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Qiita_-_人気の記事_8853.html">
-                        <h3>【AWS入門】EC2の購入オプションを実際に試算したら、スポットが最安じゃなかった話</h3>
-                        <div class="related-meta">
-                            <span class="category">その他</span>
-                            <span class="source">Qiita - 人気の記事</span>
-                        </div>
-                        <p class="related-summary">はじめに 直近、AWS認定ソリューションアーキテクト – アソシエイト（SAA）の勉強をするにあたり、EC2について改めて調べました。 過去の業務ではLambda・S3・DynamoDBといったサーバ...</p>
+                        <p class="related-summary">レノボ・ジャパンが「BLACK FRIDAY ThinkPadセール」を開催中。 対象モデルの「ThinkPad X1 Carbon Gen 13」は、まさかの“49%オフ”に！.</p>
                     </a>
                 </article>
             </div>

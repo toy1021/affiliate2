@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】 | 日本のテックニュース速報</title>
-    <meta name="description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
-    <meta name="keywords" content="本">
+    <title>CLAUDE.md や SKILL.md のルールを Turtle で書き、ルールの書き間違いや矛盾を lint で検査してみた話 | 日本のテックニュース速報</title>
+    <meta name="description" content="Claude Code では、エージェントに守ってほしい決まりを CLAUDE. md に書いておくと、エージェントはそれを読んで作業します。私も最初はこうしたルールを普通の Markdown で書いていました">
+    <meta name="keywords" content="Claude">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】">
-    <meta property="og:description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
+    <meta property="og:title" content="CLAUDE.md や SKILL.md のルールを Turtle で書き、ルールの書き間違いや矛盾を lint で検査してみた話">
+    <meta property="og:description" content="Claude Code では、エージェントに守ってほしい決まりを CLAUDE. md に書いておくと、エージェントはそれを読んで作業します。私も最初はこうしたルールを普通の Markdown で書いていました">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7012.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】">
-    <meta name="twitter:description" content="! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです">
+    <meta name="twitter:title" content="CLAUDE.md や SKILL.md のルールを Turtle で書き、ルールの書き間違いや矛盾を lint で検査してみた話">
+    <meta name="twitter:description" content="Claude Code では、エージェントに守ってほしい決まりを CLAUDE. md に書いておくと、エージェントはそれを読んで作業します。私も最初はこうしたルールを普通の Markdown で書いていました">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】",
-        "description": "! この記事はシリーズの第3部です。 第1部: メモリレイアウトの観察 第2部: MIR・LLVM IR・ASMを追う 第3部: コンパイラ内部を読む（本記事） 第4部: ニッチ最適化の実践パターン はじめに こんにちは、moriです",
+        "headline": "CLAUDE.md や SKILL.md のルールを Turtle で書き、ルールの書き間違いや矛盾を lint で検査してみた話",
+        "description": "Claude Code では、エージェントに守ってほしい決まりを CLAUDE. md に書いておくと、エージェントはそれを読んで作業します。私も最初はこうしたルールを普通の Markdown で書いていました",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,16 +48,16 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-08-10T04:00:05",
-        "dateModified": "2026-08-11T05:09:51.295128",
+        "datePublished": "2026-11-19T14:13:57",
+        "dateModified": "2026-11-20T18:23:04.513684",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7012.html"
         },
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7012.html",
-        "articleSection": "プログラミング",
-        "keywords": ["本"]
+        "articleSection": "AI・機械学習",
+        "keywords": ["Claude"]
     }
     </script>
     
@@ -76,13 +76,13 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "プログラミング",
-                "item": "https://toy1021.github.io/affiliate2/#category=プログラミング"
+                "name": "AI・機械学習",
+                "item": "https://toy1021.github.io/affiliate2/#category=AI・機械学習"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】",
+                "name": "CLAUDE.md や SKILL.md のルールを Turtle で書き、ルールの書き間違いや矛盾を lint で検査してみた話",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_7012.html"
             }
         ]
@@ -113,56 +113,37 @@
         <nav class="breadcrumb" aria-label="パンくずナビゲーション">
             <ol>
                 <li><a href="../">ホーム</a></li>
-                <li><a href="../#category=プログラミング">プログラミング</a></li>
-                <li aria-current="page">型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】</li>
+                <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
+                <li aria-current="page">CLAUDE.md や SKILL.md のルールを Turtle で書き、ルールの書き間違いや矛盾...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>型の表現力はタダ: Rustのニッチ最適化を追う【第3部: コンパイラ内部を読む】</h1>
+                <h1>CLAUDE.md や SKILL.md のルールを Turtle で書き、ルールの書き間違いや矛盾を lint で検査してみた話</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/fast/articles/44f261437d706c" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
-                    <span class="category">カテゴリ: プログラミング</span>
-                    <time datetime="2026-08-10T04:00:05">
-                        公開: 2026-08-10T04:00:05
+                    <span class="source">出典: <a href="https://zenn.dev/hma2moto/articles/turtle-agent-rules-pros-cons" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="category">カテゴリ: AI・機械学習</span>
+                    <time datetime="2026-11-19T14:13:57">
+                        公開: 2026-11-19T14:13:57
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">本</span>
+                    <span class="tag">Claude</span>
                 </div>
             </header>
 
             <div class="article-content">
                 
                 <div class="article-body">
-                    !
-この記事はシリーズの第3部です。
-
-
-第1部: メモリレイアウトの観察
-
-
-第2部: MIR・LLVM IR・ASMを追う
-
-
-第3部: コンパイラ内部を読む（本記事）
-
-第4部: ニッチ最適化の実践パターン
-
-
-
- はじめに
-こんにちは、moriです。
-ファスト株式会社にてRustを用いてデスクトップアプリケーション・バックエンドの開発を行っています。
-第1部では Option&lt;NonZeroU8&gt; が u8 と同じ1バイトになることをメモリから直接観察しました。
-第2部では MIR・LLVM IR・ASM を段階的に追いかけ、Option&lt;NonZeroU8&amp;g...
+                    Claude Code では、エージェントに守ってほしい決まりを CLAUDE.md や SKILL.md に書いておくと、エージェントはそれを読んで作業します。私も最初はこうしたルールを普通の Markdown で書いていました。ところがルールが増えるにつれて、どの行がどのルールの例外か、同じ行為を別の場所で禁じていないか、なぜそのルールがあるのかが、読み返さないと分からなくなりました。
+YAML や JSON も考えましたが、「mustWrite は must の一種」のような、ルールに使う語どうしの関係まで決まった書き方で書ける形式は見つからず、Turtle という構文を試すことに...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/fast/articles/44f261437d706c" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/hma2moto/articles/turtle-agent-rules-pros-cons" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -175,30 +156,30 @@
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%9C%AC&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="本 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=Claude&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="Claude - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">本 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで本に関連する商品をチェック</div>
+                                    <div class="product-title">Claude - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでClaudeに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item featured">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -208,23 +189,23 @@
                 </div>
                 
                 <div class="affiliate-section category-recs">
-                    <h3>プログラミング関連のおすすめ</h3>
+                    <h3>AI・機械学習関連のおすすめ</h3>
                     <div class="affiliate-grid compact">
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="プログラミング - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">プログラミング - Amazon検索結果</div>
-                                    <div class="product-description">Amazonでプログラミングに関連する商品をチェック</div>
+                                    <div class="product-title">AI - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでAIに関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
                             </a>
                         </div>
                         <div class="affiliate-item">
-                            <a href="https://www.amazon.co.jp/s?k=%E6%8A%80%E8%A1%93%E6%9B%B8&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="技術書 - Amazon検索結果をAmazonで購入">
+                            <a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="機械学習 - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
-                                    <div class="product-title">技術書 - Amazon検索結果</div>
-                                    <div class="product-description">Amazonで技術書に関連する商品をチェック</div>
+                                    <div class="product-title">機械学習 - Amazon検索結果</div>
+                                    <div class="product-description">Amazonで機械学習に関連する商品をチェック</div>
                                     <div class="product-price">価格を確認</div>
                                     <div class="platform-badge">Amazon</div>
                                 </div>
@@ -239,16 +220,16 @@
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_627.html">
+                    <a href="気になる記になる_8176.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">BedrockのOpenAIモデルでWeb検索が使えるようになったので、Tavilyと⽐べてみた</span>
+                        <span class="nav-title">NothingのAI専用デバイスの製品デザインが明らかに</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="iPhone_Mania_1400.html">
+                    <a href="Qiita_-_人気の記事_6187.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">セラミック復活や丸型も！？Apple WatchとiPhone Ultra刷新計画</span>
+                        <span class="nav-title">[AWS] 徹底比較！ OpenSearch Memory vs AgentCore Memory</span>
                     </a>
                 </div>
             </div>
@@ -261,53 +242,53 @@
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="iPhone_Mania_1404.html">
-                        <h3>iPhone発売20周年モデル開発中止情報は誤り？オールガラス案のみ破棄との見方</h3>
+                    <a href="ASCII_jp__トップ_2946.html">
+                        <h3>17万5460円のASUS一体型PC、何が入ってる？ Office 2年分に16GBメモリ、1TB SSDまで！</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">iPhone Mania</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">Jefferiesのアナリスト、エディソン・リー氏が、iPhone発売20周年モデルの開発は中止されたと指摘したことについて、各方面から「その指摘は誤りで、開発は継続している」との反論が出ています。 ...</p>
+                        <p class="related-summary">8型一体型PC「V400 AiO V440VAK」がAmazonでタイムセール対象。参考価格184,800円から5％オフの175,460円で販売中。Core 5 210H、16GBメモリ、1TB SS...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4862.html">
-                        <h3>「後回しにしたら詰んでいた」を防ぐ。待ち時間で決めるタスクの優先順位</h3>
+                    <a href="気になる記になる_2684.html">
+                        <h3>｢Ear 3 Pro｣? それとも予告済みのAI専用デバイス??——Nothingが謎の新製品を12月8日に発表へ</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">気になる、記になる…</span>
                         </div>
-                        <p class="related-summary">はじめまして。株式会社PRUMでエンジニアをしている、すもも🍑です 日々、プログラミング学習や実務の中で、つまずきやすいポイントや 考え方を整理して発信しています。 PRUMについて気になった方は、コ...</p>
+                        <p class="related-summary">Nothingが、現地時間12月8日に何らかの新製品を発表することを予告しています。 上記画像がその予告と共に公開されたティザー画像で、「その瞬間を見逃すな。すべては記録されている。」といったニュアン...</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Zennのトレンド_5262.html">
-                        <h3>Next.js + Cloudflareで「サボる」ためのWebツール集を個人開発した</h3>
+                    <a href="ASCII_jp__トップ_1697.html">
+                        <h3>薄くて美しい、しかもAI対応！ レノボ「Yoga Slim 7a Gen 11」は仕事にも普段使いにも</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Zennのトレンド</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">個人開発で neglegere（ネグレゲレ） というWebサービスを作っています。 https://neglegere. com/ コンセプトは、 地味に時間を取られる作業を少しだけ任せて、大事なとこ...</p>
+                        <p class="related-summary">事務系や軽めのグラフィック系タスクに対応できるPCが欲しい。そんな人にお勧めしたいのがレノボの「Yoga Slim 7a Gen 11」だ。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_5748.html">
-                        <h3>簡易ヘリコプター操縦ゲームを日本語プログラミング言語Mind９で作りました。</h3>
+                    <a href="ASCII_jp__トップ_4949.html">
+                        <h3>800FPダウンで軽くて暖かい！ 収納袋付きで持ち運びも便利なTAIONのインナーダウン</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">ヘリコプター操縦ゲームです。 日本語プログラミング言語 Mind9(Windowsのみ対応)で作りました。 使用方法は、ソースコード先頭に書いています。 コンパイル・実行にはMind9 基本セット（無...</p>
+                        <p class="related-summary">jpでタイオンの「インナーダウンジャケット クルーネックボタン」が販売中です。日本発のブランドで、高い保温性を確保した防寒対策に重宝する一着です。.</p>
                     </a>
                 </article>
                 <article class="related-item">
-                    <a href="Qiita_-_人気の記事_4854.html">
-                        <h3>新人エンジニアにとって大切なことは技術力だけではない話</h3>
+                    <a href="ASCII_jp__トップ_4444.html">
+                        <h3>総務省後援「ASPIC AI・クラウドアワード2026」で、ミライAIがAI支援業務系ASP・SaaS部門「AX貢献賞」...</h3>
                         <div class="related-meta">
-                            <span class="category">プログラミング</span>
-                            <span class="source">Qiita - 人気の記事</span>
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
                         </div>
-                        <p class="related-summary">エンジニアにとって大切なことって何だろう？ 新人エンジニアやソフトウェアエンジニアとして成長していく中で、「エンジニアにとって大切なことは何か」と考える場面は多いと思います。この記事では、私が3年目ま...</p>
+                        <p class="related-summary">総務省後援「ASPIC AI・クラウドアワード2026」で、ミライAIがAI支援業務系ASP・SaaS部門「AX貢献賞」を受賞.</p>
                     </a>
                 </article>
             </div>

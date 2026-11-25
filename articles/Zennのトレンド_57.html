@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った | 日本のテックニュース速報</title>
-    <meta name="description" content="はじめに AI 時代になって、コードを「書く」コストはずいぶん下がりました。 その一方で、「読む・理解する」コストはむしろ上がっている気がしています。 AI が一気に生成した大量の Markdown、巨大な PR の diff、初見のリポジトリ、長い設計メモや仕様書……">
-    <meta name="keywords" content="AI">
+    <title>Corpus2Skillに近づけた「階層ナビゲーション型RAG」と、ベクトルDB版RAGを「どの段階で失敗したか」まで比べてみた | 日本のテックニュース速報</title>
+    <meta name="description" content="はじめに 前回の記事では、ベクトルDBを使わずにLLMが目次を辿って文書を探す「階層ナビゲーション型RAG」を、Corpus2Skillを参考に自作し、ベクトルDB版RAGと比べました。28文書・20問の比較で、正答数は同等という結果でした">
+    <meta name="keywords" content="LLM">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った">
-    <meta property="og:description" content="はじめに AI 時代になって、コードを「書く」コストはずいぶん下がりました。 その一方で、「読む・理解する」コストはむしろ上がっている気がしています。 AI が一気に生成した大量の Markdown、巨大な PR の diff、初見のリポジトリ、長い設計メモや仕様書……">
+    <meta property="og:title" content="Corpus2Skillに近づけた「階層ナビゲーション型RAG」と、ベクトルDB版RAGを「どの段階で失敗したか」まで比べてみた">
+    <meta property="og:description" content="はじめに 前回の記事では、ベクトルDBを使わずにLLMが目次を辿って文書を探す「階層ナビゲーション型RAG」を、Corpus2Skillを参考に自作し、ベクトルDB版RAGと比べました。28文書・20問の比較で、正答数は同等という結果でした">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://toy1021.github.io/affiliate2/articles/Zennのトレンド_57.html">
     <meta property="og:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った">
-    <meta name="twitter:description" content="はじめに AI 時代になって、コードを「書く」コストはずいぶん下がりました。 その一方で、「読む・理解する」コストはむしろ上がっている気がしています。 AI が一気に生成した大量の Markdown、巨大な PR の diff、初見のリポジトリ、長い設計メモや仕様書……">
+    <meta name="twitter:title" content="Corpus2Skillに近づけた「階層ナビゲーション型RAG」と、ベクトルDB版RAGを「どの段階で失敗したか」まで比べてみた">
+    <meta name="twitter:description" content="はじめに 前回の記事では、ベクトルDBを使わずにLLMが目次を辿って文書を探す「階層ナビゲーション型RAG」を、Corpus2Skillを参考に自作し、ベクトルDB版RAGと比べました。28文書・20問の比較で、正答数は同等という結果でした">
     <meta name="twitter:image" content="https://toy1021.github.io/affiliate2/og-image.svg">
     
     <!-- Canonical URL -->
@@ -34,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った",
-        "description": "はじめに AI 時代になって、コードを「書く」コストはずいぶん下がりました。 その一方で、「読む・理解する」コストはむしろ上がっている気がしています。 AI が一気に生成した大量の Markdown、巨大な PR の diff、初見のリポジトリ、長い設計メモや仕様書……",
+        "headline": "Corpus2Skillに近づけた「階層ナビゲーション型RAG」と、ベクトルDB版RAGを「どの段階で失敗したか」まで比べてみた",
+        "description": "はじめに 前回の記事では、ベクトルDBを使わずにLLMが目次を辿って文書を探す「階層ナビゲーション型RAG」を、Corpus2Skillを参考に自作し、ベクトルDB版RAGと比べました。28文書・20問の比較で、正答数は同等という結果でした",
         "author": {
             "@type": "Organization",
             "name": "Zennのトレンド"
@@ -48,8 +48,8 @@
                 "url": "https://toy1021.github.io/affiliate2/og-image.svg"
             }
         },
-        "datePublished": "2026-06-15T12:15:48",
-        "dateModified": "2026-06-17T22:02:28.579711",
+        "datePublished": "2026-11-25T02:35:47",
+        "dateModified": "2026-11-25T21:09:35.075588",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_57.html"
@@ -57,7 +57,7 @@
         "image": "https://toy1021.github.io/affiliate2/og-image.svg",
         "url": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_57.html",
         "articleSection": "AI・機械学習",
-        "keywords": ["AI"]
+        "keywords": ["LLM"]
     }
     </script>
     
@@ -82,7 +82,7 @@
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った",
+                "name": "Corpus2Skillに近づけた「階層ナビゲーション型RAG」と、ベクトルDB版RAGを「どの段階で失敗したか」まで比べてみた",
                 "item": "https://toy1021.github.io/affiliate2/articles/Zennのトレンド_57.html"
             }
         ]
@@ -114,24 +114,24 @@
             <ol>
                 <li><a href="../">ホーム</a></li>
                 <li><a href="../#category=AI・機械学習">AI・機械学習</a></li>
-                <li aria-current="page">AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った</li>
+                <li aria-current="page">Corpus2Skillに近づけた「階層ナビゲーション型RAG」と、ベクトルDB版RAGを「どの段階...</li>
             </ol>
         </nav>
 
         <main id="main-content" role="main">
         <article class="article-detail" itemscope itemtype="https://schema.org/NewsArticle">
             <header class="article-header">
-                <h1>AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った</h1>
+                <h1>Corpus2Skillに近づけた「階層ナビゲーション型RAG」と、ベクトルDB版RAGを「どの段階で失敗したか」まで比べてみた</h1>
                 <div class="article-meta">
-                    <span class="source">出典: <a href="https://zenn.dev/hataluck/articles/0752919b305a9f" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
+                    <span class="source">出典: <a href="https://zenn.dev/aiforall/articles/133752ce2d97ad" target="_blank" rel="nofollow noopener">Zennのトレンド</a></span>
                     <span class="category">カテゴリ: AI・機械学習</span>
-                    <time datetime="2026-06-15T12:15:48">
-                        公開: 2026-06-15T12:15:48
+                    <time datetime="2026-11-25T02:35:47">
+                        公開: 2026-11-25T02:35:47
                     </time>
                     <span class="reading-time" aria-label="推定読了時間">📖 約2分で読めます</span>
                 </div>
                 <div class="article-tags">
-                    <span class="tag">AI</span>
+                    <span class="tag">LLM</span>
                 </div>
             </header>
 
@@ -139,18 +139,17 @@
                 
                 <div class="article-body">
                     はじめに
-AI 時代になって、コードを「書く」コストはずいぶん下がりました。
-その一方で、「読む・理解する」コストはむしろ上がっている気がしています。
-AI が一気に生成した大量の Markdown、巨大な PR の diff、初見のリポジトリ、長い設計メモや仕様書……。
-こうした「理解しないといけない対象」の量と速度が増えて、認知負荷の高まりがあちこちで叫ばれていますよね。
-もちろん「AI に要約させればいい」のですが、これにも地味な不満がありました。
+前回の記事では、ベクトルDBを使わずにLLMが目次を辿って文書を探す「階層ナビゲーション型RAG」を、Corpus2Skillを参考に自作し、ベクトルDB版RAGと比べました。28文書・20問の比較で、正答数は同等という結果でした。
 
-出てくる見せ方が毎回似偏る（AI 臭い文章）。箇条書きのテキスト、など。
-あとで別の角度から見たくなると、また同じ対象を丸ごと ...
+この記事を公開したあと、次のコメントをいただきました。
+
+正解文書への到達と、回答に必要な箇所を渡せたかを分けた分析が参考になりました。次に比較するなら、各問の必須根拠を短いスパンで付与し、8,000文字への切り詰め後に残った根拠の割合も見ると、ナビゲーションと証拠選択の失敗をさらに切り分けられそうです。
+
+前回の実装は、Corpus2Ski...
                 </div>
                 
                 <div class="article-actions">
-                    <a href="https://zenn.dev/hataluck/articles/0752919b305a9f" target="_blank" rel="nofollow noopener" class="read-more-btn">
+                    <a href="https://zenn.dev/aiforall/articles/133752ce2d97ad" target="_blank" rel="nofollow noopener" class="read-more-btn">
                         元記事を読む
                     </a>
                 </div>
@@ -162,6 +161,16 @@ AI が一気に生成した大量の Markdown、巨大な PR の diff、初見�
                 <div class="affiliate-section">
                     <h3>記事内容に関連する商品</h3>
                     <div class="affiliate-grid">
+                        <div class="affiliate-item featured">
+                            <a href="https://www.amazon.co.jp/s?k=LLM&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="LLM - Amazon検索結果をAmazonで購入">
+                                <div class="product-info">
+                                    <div class="product-title">LLM - Amazon検索結果</div>
+                                    <div class="product-description">AmazonでLLMに関連する商品をチェック</div>
+                                    <div class="product-price">価格を確認</div>
+                                    <div class="platform-badge">Amazon</div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="affiliate-item featured">
                             <a href="https://www.amazon.co.jp/s?k=AI&amp;tag=toy1021-22&amp;linkCode=ur2&amp;linkId=amazon_search" target="_blank" rel="nofollow noopener sponsored" aria-label="AI - Amazon検索結果をAmazonで購入">
                                 <div class="product-info">
@@ -217,16 +226,16 @@ AI が一気に生成した大量の Markdown、巨大な PR の diff、初見�
         <nav class="article-navigation">
             <div class="nav-links">
                 <div class="nav-prev">
-                    <a href="Qiita_-_人気の記事_7303.html">
+                    <a href="気になる記になる_5057.html">
                         <span class="nav-label">前の記事</span>
-                        <span class="nav-title">【PHP】PHP最大の問題点はこれだ！！</span>
+                        <span class="nav-title">Insta360が｢ブラックフライデーセール｣をスタート——ジンバルカメラ｢Luna｣シリーズが最大...</span>
                     </a>
                 </div>
                 
                 <div class="nav-next">
-                    <a href="Zennのトレンド_6091.html">
+                    <a href="iPhone_Mania_1058.html">
                         <span class="nav-label">次の記事</span>
-                        <span class="nav-title">M365 Copilot で実践するハーネス エンジニアリングのループ</span>
+                        <span class="nav-title">iPhone15 Proは最大8.3万円で下取り！今買い替えるべき？</span>
                     </a>
                 </div>
             </div>
@@ -239,53 +248,53 @@ AI が一気に生成した大量の Markdown、巨大な PR の diff、初見�
             <h2>関連記事</h2>
             <div class="related-grid">
                 <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_202.html">
-                        <h3>Claude高額プラン、利用上限「20倍」はウソ？ Anthropicに集団訴訟</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">人工知能（AI）企業Anthropicが、AIアシスタント「Claude」の利用上限についてプラン加入者に誤解を与えているとして、集団訴訟に直面している。.</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_9591.html">
-                        <h3>AIを使ったサイバー攻撃「黒船襲来より怖い」--孫正義が危機感　OpenAIと対抗サービス発表</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">ソフトバンクグループとOpenAIの合弁会社「SB OAI Japan合同会社」は6月16日、AIを使ったサイバー攻撃から国内の重要インフラを守るサービス「Patching as a Service（...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_7155.html">
-                        <h3>Sakana AI、初の商用プロダクト「Sakana Marlin」発表　人間のリサーチ業務を代行</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">Sakana AIは6月15日、同社初の商用プロダクトとなる自律型リサーチアシスタント「Sakana Marlin（サカナ・マーリン）」の提供を始めた。調査テーマを指示すると、最大約8時間にわたって自...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="CNET_Japan_最新情報総合_120.html">
-                        <h3>SNSもAIもなし、コモドールが「デジタルデトックス」特化の折りたたみ携帯端末を発表</h3>
-                        <div class="related-meta">
-                            <span class="category">AI・機械学習</span>
-                            <span class="source">CNET Japan 最新情報　総合</span>
-                        </div>
-                        <p class="related-summary">史上最も売れたデスクトップPC「コモドール 64」を手がけた企業が帰ってきた。そしてCommodoreが新たに発表した製品は、その名にふさわしくレトロな雰囲気を漂わせる、「デジタルデトックス」をうたう...</p>
-                    </a>
-                </article>
-                <article class="related-item">
-                    <a href="Publickey_733.html">
-                        <h3>あなたのAWSのコストの問題がどこにあるか、AIが教えてくれる「AWS FinOps Agent」パブリックプレビュー開...</h3>
+                    <a href="Publickey_2617.html">
+                        <h3>MCPに新機能「Skills over MCP」登場。ツールとの接続だけでなく使い方のスキルもMCP経由で提供</h3>
                         <div class="related-meta">
                             <span class="category">AI・機械学習</span>
                             <span class="source">Publickey</span>
                         </div>
-                        <p class="related-summary">Amazon Web Services（AWS）は、使用中のAWSのコストに関する質問や、コストに異常が発生した場合にその原因を調査して特定してくれる「AWS FinOps Agent」のパブリックプ...</p>
+                        <p class="related-summary">AIエージェントと外部ツールを接続する業界標準となっているMCP（Model Context Protocol）に、新機能として「Skills over MCP」がβ版として追加されました。 Skil...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="Qiita_-_人気の記事_7987.html">
+                        <h3>VS Code 1.148：エージェント専用の Dev Container と Sandbox profiles。「隔離...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">Qiita - 人気の記事</span>
+                        </div>
+                        <p class="related-summary">はじめに こんにちは！VSCode/GitHubオタクのMicrosoft Student Ambassador/Github Copilot User Group Japan運営のロホマン シャヒン...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_6412.html">
+                        <h3>軽くて小さくて強い!? つかみ持ち・つまみ持ち特化の軽量ゲーミングマウスが17％オフ</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">jpにて、ATTACK SHARKのゲーミングマウス「ATTACK SHARK F1 AIR」が販売中だ。参考価格は9899円だが、執筆時点では17％オフの8216円で購入できる（11月25日時点）。...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_2150.html">
+                        <h3>メインPCに欲しい32GBメモリ＋1TB SSDを持ち歩く。約1.24kgのAcer製有機ELノートが約2万5000円安...</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">Acerの14型ノートPC「Swift Go 14 AI（SFG14-75-A73Z）」がAmazonで割引対象。過去価格257,100円から10％オフの230,888円で販売中。32GBメモリ、1T...</p>
+                    </a>
+                </article>
+                <article class="related-item">
+                    <a href="ASCII_jp__トップ_4471.html">
+                        <h3>持ち運べるクリエイターPC！ 約1.14kgの「DAIV Z4」が頼もしすぎる</h3>
+                        <div class="related-meta">
+                            <span class="category">AI・機械学習</span>
+                            <span class="source">ASCII.jp － トップ</span>
+                        </div>
+                        <p class="related-summary">クリエイター向けの性能を出先でも使いたい。そんな人にお勧めのノートPCが、mouseの「DAIV Z4-A9A01SR-B」だ。.</p>
                     </a>
                 </article>
             </div>
